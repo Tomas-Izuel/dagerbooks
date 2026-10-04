@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useCallback, useMemo, useRef, useState, useSyncExternalStore } from "react";
+import { DensityControl } from "@/components/explorer/DensityControl";
 import { MapControls } from "@/components/explorer/MapControls";
 import { StationBoard } from "@/components/explorer/StationBoard";
 import { StationPanel } from "@/components/explorer/StationPanel";
@@ -177,18 +178,26 @@ export function Explorer({ geometry: geometrySet, lines, explorerNodes, searchDo
           animateRefit={userSwitched}
         />
 
-        <Link className={styles.directoryLink} href="/estaciones">
-          Directorio de estaciones
-          <span aria-hidden="true"> →</span>
-        </Link>
+        <div className={styles.density}>
+          <DensityControl density={density} onDensity={onDensity} />
+        </div>
+
+        <div className={styles.links}>
+          <Link className={styles.directoryLink} href="/estaciones">
+            Directorio de estaciones
+            <span aria-hidden="true"> →</span>
+          </Link>
+          <Link className={styles.directoryLink} href="/sumar-un-libro">
+            Sumá un libro
+            <span aria-hidden="true"> →</span>
+          </Link>
+        </div>
 
         <div className={styles.controls}>
           <MapControls
             onZoomIn={() => mapRef.current?.zoomIn()}
             onZoomOut={() => mapRef.current?.zoomOut()}
             onReset={() => mapRef.current?.reset()}
-            density={density}
-            onDensity={onDensity}
             onCenterSelected={selectedId ? () => mapRef.current?.centerOn(selectedId, 1.15) : undefined}
           />
         </div>

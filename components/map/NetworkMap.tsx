@@ -876,7 +876,7 @@ export function NetworkMap({
       <div
         className={styles.legend}
         data-parked={insets?.right ? "true" : undefined}
-        tabIndex={insets?.right ? 0 : undefined}
+        tabIndex={0}
         aria-label="Leyenda del mapa"
         style={{ insetInlineEnd: `${16 + (insets?.right ?? 0)}px` }}
       >
@@ -884,7 +884,7 @@ export function NetworkMap({
           <svg className={styles.legendRing} viewBox="0 0 20 20" aria-hidden="true">
             <circle cx="10" cy="10" r="8" />
           </svg>
-          Zonas
+          Zonas y combinaciones
         </p>
         <div className={styles.legendBody}>
           <ol className={styles.legendList}>

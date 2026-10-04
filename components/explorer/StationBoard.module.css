@@ -351,27 +351,9 @@
 }
 
 /* Quiet link to the "add a book" page */
-.addLink {
-  margin-block-start: auto;
-  font-size: var(--text-sm);
-  font-weight: 600;
-  color: var(--fg-muted);
-  text-decoration-color: var(--fg-faint);
-  text-underline-offset: 0.2em;
-}
-
-.addLink:hover {
-  color: var(--fg);
-}
-
-.addLink:focus-visible {
-  outline: var(--rule-width) solid var(--focus);
-  outline-offset: 2px;
-}
-
 /* Author credit: last line of the board, quiet */
 .credit {
-  margin: 0;
+  margin: auto 0 0;
   padding-block-start: 0;
   font-family: var(--font-sign);
   font-size: var(--text-xs);
@@ -405,7 +387,6 @@
     white-space: nowrap;
   }
 
-  .addLink,
   .credit {
     grid-column: 1 / -1;
     margin: 0;
