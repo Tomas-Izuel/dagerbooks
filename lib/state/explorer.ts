@@ -41,6 +41,23 @@ export function parseExplorerState(
   };
 }
 
+/**
+ * Con foco de línea (`tema`), un libro ajeno a esa línea no se puede ver ni seleccionar:
+ * se pasa el foco a la línea primaria del libro. Km 0 y los libros que tienen la línea en
+ * `topics` (en cualquier posición) mantienen el foco.
+ */
+export function focusTopicFor(node: Pick<ExplorerNode, "topics"> | undefined, tema: string | null): string | null {
+  if (!tema || !node || node.topics.length === 0 || node.topics.includes(tema)) return tema;
+  return node.topics[0];
+}
+
+/** Resuelve un estado de URL contradictorio (`?libro=` fuera de la línea de `?tema=`) sin reescribir la URL. */
+export function reconcileFocus(state: ExplorerState, byId: ReadonlyMap<string, ExplorerNode>): ExplorerState {
+  if (!state.libro) return state;
+  const tema = focusTopicFor(byId.get(state.libro), state.tema);
+  return tema === state.tema ? state : { ...state, tema };
+}
+
 /** Conserva parámetros ajenos al explorador; omite los vacíos. */
 export function buildExplorerSearch(state: ExplorerState, base?: URLSearchParams | string): string {
   const p = new URLSearchParams(base ?? "");

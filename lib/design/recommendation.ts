@@ -43,11 +43,12 @@ export function serializeRec(rec: readonly Recommendation[]): string | null {
 }
 
 /**
- * Siguiente selección al tocar un nivel. Con los tres activos, tocar uno lo AÍSLA (lo que se espera de un
- * filtro); con selección parcial alterna; si se desmarca el último vuelve a los tres (nunca queda en cero).
+ * Siguiente selección al tocar un nivel: alterna, como una casilla. El último activo no se puede apagar
+ * (nunca queda en cero); para volver a los tres está "Ver todos".
  */
 export function toggleRec(current: readonly Recommendation[], r: Recommendation): Recommendation[] {
-  if (isAllRecs(current)) return [r];
-  const next = current.includes(r) ? current.filter((x) => x !== r) : [...current, r];
-  return next.length === 0 ? [...ALL_RECS] : REC_ORDER.filter((x) => next.includes(x));
+  if (current.includes(r)) {
+    return current.length === 1 ? [...current] : REC_ORDER.filter((x) => x !== r && current.includes(x));
+  }
+  return REC_ORDER.filter((x) => x === r || current.includes(x));
 }

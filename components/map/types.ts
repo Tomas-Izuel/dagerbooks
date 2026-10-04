@@ -1,5 +1,6 @@
 import type { LayoutBounds, LayoutEdge, LayoutEdgeKind, LayoutRing, LayoutSector } from "@/lib/catalog/layout.types";
 import type { Recommendation } from "@/lib/catalog/schema";
+import type { FocusLayout } from "@/lib/catalog/focus";
 import type { Density } from "@/lib/density";
 
 /** Slim, serializable station for the map (server -> client). */
@@ -82,6 +83,44 @@ export function resolveGeometry(set: MapGeometrySet, density: Density): MapGeome
     sectors: l.sectors,
     rings: l.rings,
     bounds: l.bounds,
+  };
+}
+
+/** Mapa de una sola línea: la línea ocupa todo el círculo. */
+export interface MapFocus {
+  topicId: string;
+  /** Solo las estaciones de la línea (más Km 0), re-posicionadas; todas con la tinta de la línea. */
+  geometry: MapGeometry;
+  /** Estaciones de la línea, sin Km 0. */
+  count: number;
+  /** Líneas con las que combina cada estación (las demás líneas no se dibujan). */
+  links: ReadonlyMap<string, readonly string[]>;
+}
+
+/** Arma la geometría del foco a partir del layout propio de la línea y los metadatos compartidos. */
+export function resolveFocus(set: MapGeometrySet, focus: FocusLayout): MapFocus {
+  const metaById = new Map(set.nodes.map((n) => [n.id, n]));
+  const { layout, topicId } = focus;
+  const nodes: MapNode[] = [];
+  for (const p of layout.nodes) {
+    const meta = metaById.get(p.id);
+    if (!meta) continue;
+    nodes.push({
+      ...meta,
+      // Every station of the focus wears the line's ink, even one whose primary line is another.
+      topicId: meta.level === 0 ? null : topicId,
+      entry: meta.entry && meta.topicId === topicId,
+      x: p.x,
+      y: p.y,
+      angle: p.angle,
+      r: p.r,
+    });
+  }
+  return {
+    topicId,
+    geometry: { nodes, edges: layout.edges, sectors: layout.sectors, rings: layout.rings, bounds: layout.bounds },
+    count: focus.count,
+    links: focus.links,
   };
 }
 

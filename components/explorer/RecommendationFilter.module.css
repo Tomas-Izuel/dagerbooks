@@ -98,6 +98,10 @@
   color: var(--fg-on-ink);
 }
 
+.option[aria-disabled="true"] {
+  cursor: default;
+}
+
 /* The glyph sits on the inverted sign: its inner fill follows the sign, not the map ground. */
 .option[aria-pressed="true"] svg circle[fill] {
   fill: var(--fg);

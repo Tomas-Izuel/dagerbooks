@@ -59,6 +59,8 @@ export const BookSchema = z
     related: z.array(RelatedSchema).optional(),
     isbn: z.string().regex(/^\d{9}[\dXx]$|^\d{13}$/, { error: "isbn inválido" }).optional(),
     coverId: z.number().int().positive().optional(),
+    /** Código de Amazon (10 caracteres) para el link de compra en amazon.es. */
+    asin: z.string().regex(/^[A-Z0-9]{10}$/, { error: "asin inválido (10 caracteres A-Z0-9)" }).optional(),
     recommendation: z.enum(RECOMMENDATION_LEVELS).optional(),
     // Se calcula en build; solo se declara a mano para forzarlo.
     confidence: z.enum(["low", "high"]).optional(),

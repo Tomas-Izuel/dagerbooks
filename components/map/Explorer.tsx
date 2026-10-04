@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useCallback, useMemo, useRef, useState, useSyncExternalStore } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState, useSyncExternalStore } from "react";
 import { DensityControl } from "@/components/explorer/DensityControl";
 import { MapControls } from "@/components/explorer/MapControls";
 import { StationBoard } from "@/components/explorer/StationBoard";
@@ -17,7 +17,9 @@ import type { ExplorerNode } from "@/lib/state/explorer";
 import type { SearchDoc } from "@/lib/search";
 import { NetworkMap, type NetworkMapHandle } from "./NetworkMap";
 import type { Density } from "@/lib/density";
-import { resolveGeometry, type MapGeometrySet, type MapLine } from "./types";
+import { computeFocusLayout } from "@/lib/catalog/focus";
+import { DENSITY_PRESETS } from "@/lib/catalog/layout";
+import { resolveFocus, resolveGeometry, type MapGeometrySet, type MapLine } from "./types";
 import styles from "./Explorer.module.css";
 
 export interface PanelEntry {
@@ -74,15 +76,24 @@ export function Explorer({ geometry: geometrySet, lines, explorerNodes, searchDo
   );
   const geometry = useMemo(() => resolveGeometry(geometrySet, density), [geometrySet, density]);
 
+  // Line focus: a single line takes the whole circle. Computed here, in the client, from data the
+  // page already ships (computeLayout is pure and tiny); nothing per line travels from the server.
+  const focus = useMemo(() => {
+    if (!state.tema) return null;
+    const related = geometrySet.edges.filter((e) => e.kind === "related");
+    return resolveFocus(geometrySet, computeFocusLayout(explorerNodes, related, state.tema, DENSITY_PRESETS[density]));
+  }, [state.tema, geometrySet, explorerNodes, density]);
+
+  // Panel lists and search resolve against the whole catalog, whatever is in focus.
   const refById = useMemo(
     () =>
       new Map<string, StationRef>(
-        geometry.nodes.map((n) => [n.id, { id: n.id, title: n.title, topicId: n.topicId, level: n.level }]),
+        geometrySet.nodes.map((n) => [n.id, { id: n.id, title: n.title, topicId: n.topicId, level: n.level }]),
       ),
-    [geometry.nodes],
+    [geometrySet.nodes],
   );
   const lineByTopic = useMemo(() => new Map(lines.map((l) => [l.topicId, l])), [lines]);
-  const rootId = useMemo(() => geometry.nodes.find((n) => n.level === 0)?.id, [geometry.nodes]);
+  const rootId = useMemo(() => geometrySet.nodes.find((n) => n.level === 0)?.id, [geometrySet.nodes]);
 
   const selectedId = selection?.id ?? null;
   const entry = selectedId ? panels[selectedId] : undefined;
@@ -158,14 +169,23 @@ export function Explorer({ geometry: geometrySet, lines, explorerNodes, searchDo
   );
 
   // Selecting from the map keeps the view; picking from search / panel brings the station into view.
+  // The centering waits for the URL: picking a book of another line also moves the focus, and the
+  // station only exists in the map once the new line is laid out.
+  const pendingCenter = useRef<string | null>(null);
   const focusStation = useCallback(
     (id: string) => {
+      pendingCenter.current = id;
       selectBook(id);
-      // The panel is about to open: center with its footprint already counted.
-      requestAnimationFrame(() => mapRef.current?.centerOn(id, 1.15));
     },
     [selectBook],
   );
+  const focusKey = focus?.topicId ?? null;
+  useEffect(() => {
+    if (!selectedId || pendingCenter.current !== selectedId) return;
+    pendingCenter.current = null;
+    // The panel is about to open: center with its footprint already counted.
+    requestAnimationFrame(() => mapRef.current?.centerOn(selectedId, 1.15));
+  }, [selectedId, focusKey]);
 
   const clear = useCallback(() => selectBook(null), [selectBook]);
   const read = progress.read;
@@ -203,6 +223,7 @@ export function Explorer({ geometry: geometrySet, lines, explorerNodes, searchDo
         <NetworkMap
           ref={mapRef}
           geometry={geometry}
+          focus={focus}
           lines={lines}
           selection={selection}
           dimmed={dimmed}
@@ -216,8 +237,16 @@ export function Explorer({ geometry: geometrySet, lines, explorerNodes, searchDo
           density={density}
         />
 
-        <div className={styles.density}>
-          <DensityControl density={density} onDensity={onDensity} />
+        <div className={styles.density} data-focus={state.tema ? "true" : undefined}>
+          <DensityControl
+            density={density}
+            onDensity={onDensity}
+            hint={
+              state.tema
+                ? "Estás viendo una sola línea. Tocá su disco o «Ver todo el mapa» para volver."
+                : "Tocá una línea, en su disco o en la cartelera, para verla sola: con más detalle y tranquilidad."
+            }
+          />
         </div>
 
         <div className={styles.links}>

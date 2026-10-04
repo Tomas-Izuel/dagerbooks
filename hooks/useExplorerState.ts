@@ -9,7 +9,9 @@ import {
   createExplorerGraph,
   deriveSelection,
   dimmedByFilters,
+  focusTopicFor,
   parseExplorerState,
+  reconcileFocus,
   type ExplorerNode,
   type ExplorerState,
   type Selection,
@@ -21,7 +23,7 @@ export interface UseExplorerState {
   selection: Selection | null;
   /** Ids atenuados por tema ∧ recomendación (intersección). */
   dimmed: ReadonlySet<string>;
-  /** push: cada libro seleccionado es una entrada de historial. */
+  /** push: cada libro seleccionado es una entrada de historial. Con una línea en foco, un libro ajeno a ella pasa el foco a su línea. */
   selectBook: (id: string | null) => void;
   /** replace: cambiar filtro no ensucia el historial. */
   setTopic: (id: string | null) => void;
@@ -42,7 +44,7 @@ export function useExplorerState(nodes: readonly ExplorerNode[], topicIds?: read
   const graph = useMemo(() => createExplorerGraph(nodes), [nodes]);
   const topicSet = useMemo(() => (topicIds ? new Set(topicIds) : undefined), [topicIds]);
   const urlState = useMemo(
-    () => parseExplorerState(params, { bookIds: new Set(graph.byId.keys()), topicIds: topicSet }),
+    () => reconcileFocus(parseExplorerState(params, { bookIds: new Set(graph.byId.keys()), topicIds: topicSet }), graph.byId),
     [params, graph, topicSet],
   );
 
@@ -61,7 +63,12 @@ export function useExplorerState(nodes: readonly ExplorerNode[], topicIds?: read
     [params, pathname, router],
   );
 
-  const selectBook = useCallback((libro: string | null) => navigate({ ...state, libro }, "push"), [navigate, state]);
+  // With a line in focus, picking a book of another line moves the focus to that book's line.
+  const selectBook = useCallback(
+    (libro: string | null) =>
+      navigate({ ...state, libro, tema: libro ? focusTopicFor(graph.byId.get(libro), state.tema) : state.tema }, "push"),
+    [navigate, state, graph],
+  );
   const setTopic = useCallback((tema: string | null) => navigate({ ...state, tema }, "replace"), [navigate, state]);
   const toggleRecommendation = useCallback(
     (r: Recommendation) => navigate({ ...state, rec: toggleRec(state.rec, r) }, "replace"),

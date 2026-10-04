@@ -136,6 +136,11 @@
     inset-inline-end: var(--space-3);
   }
 
+  /* Mobile focus: the focus bar sits right under the density control; drop the footnote. */
+  .density[data-focus="true"] p:last-child {
+    display: none;
+  }
+
   .stage[data-panel="open"] .controls {
     inset-block-start: calc(var(--space-2) + 3.5rem);
     inset-inline-end: var(--space-3);

@@ -9,7 +9,8 @@
 #   level    1 introductorio · 2 intermedio · 3 avanzado · 4 especialista (0 = raíz, solo Tom Sawyer Abroad).
 # Todo lo demás es opcional: titleEs, authors, year, kind (book | essay | paper | course | textbook),
 #   summary, context, sources [{url, title, timestamp, quote}], leadsTo, related [{id, reason}], isbn, coverId,
-#   recommendation.
+#   asin, recommendation.
+# asin: código de Amazon (10 caracteres) para el link de compra en amazon.es.
 # recommendation: cuánto lo recomienda Dager, para filtrar en el sitio. Si falta vale "interesante" y no cuenta como "por completar".
 #   fuerte       lo recomienda con énfasis: lectura imprescindible o favorita, insiste en que lo lean.
 #   interesante  lo valora o lo recomienda con tibieza o reservas; tiene ideas que le sirven.
