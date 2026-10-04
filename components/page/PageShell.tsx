@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import { DensityAttr } from "@/components/ui/DensityAttr";
 import { SiteFooter } from "./SiteFooter";
 import { SiteHeader, type Crumb } from "./SiteHeader";
 import styles from "./PageShell.module.css";
@@ -7,6 +8,7 @@ import styles from "./PageShell.module.css";
 export function PageShell({ crumbs, children }: { crumbs?: Crumb[]; children: ReactNode }) {
   return (
     <div className={styles.shell}>
+      <DensityAttr />
       <SiteHeader crumbs={crumbs} />
       <main className={styles.main}>{children}</main>
       <SiteFooter />

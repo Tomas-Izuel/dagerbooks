@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useId, useState, type CSSProperties, type KeyboardEvent } from "react";
 import { LineDisc } from "@/components/ui/LineDisc";
 import { lineFor, zoneLabel } from "./lines";
@@ -248,6 +249,12 @@ export function StationBoard({
           })}
         </ul>
       </nav>
+
+      <Link className={styles.addLink} href="/sumar-un-libro">
+        ¿Falta un libro? Sumalo
+      </Link>
+
+      <p className={styles.credit}>Hecho por Tomas Izuel</p>
     </aside>
   );
 }

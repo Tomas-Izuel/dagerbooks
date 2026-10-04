@@ -1,4 +1,5 @@
-import { CONTRIBUTE_LABEL, CONTRIBUTE_URL } from "./constants";
+import Link from "next/link";
+import { CONTRIBUTE_LABEL } from "./constants";
 import styles from "./SiteFooter.module.css";
 
 export function SiteFooter() {
@@ -11,13 +12,7 @@ export function SiteFooter() {
         </p>
         <ul className={styles.links}>
           <li>
-            {CONTRIBUTE_URL ? (
-              <a href={CONTRIBUTE_URL} rel="noopener noreferrer" target="_blank">
-                {CONTRIBUTE_LABEL}
-              </a>
-            ) : (
-              <span>{CONTRIBUTE_LABEL}</span>
-            )}
+            <Link href="/sumar-un-libro">{CONTRIBUTE_LABEL}</Link>
           </li>
           <li>
             Tapas de{" "}
@@ -26,6 +21,7 @@ export function SiteFooter() {
             </a>
           </li>
         </ul>
+        <p className={styles.credit}>Hecho por Tomas Izuel</p>
       </div>
     </footer>
   );

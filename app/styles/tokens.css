@@ -80,7 +80,6 @@
   --tracking-sign: 0.12em;
   --tracking-label: 0.08em;
   --leading-tight: 0.95;
-  --leading-body: 1.55;
 
   /* Space (4px base) */
   --space-1: 0.25rem;
@@ -117,6 +116,38 @@
   --panel-width: 22.5rem;
 
   color-scheme: dark;
+}
+
+/*
+ * Density (compacta | media | aireada). One scale factor per level; the derived tokens are
+ * declared once, for :root and for any element carrying data-density (explorer shell), so
+ * they resolve against that element's own factor. Components only read the derived tokens.
+ */
+:root,
+[data-density] {
+  --density-k: 1;
+  --density-lh: 0;
+}
+
+[data-density="media"] {
+  --density-k: 1.25;
+  --density-lh: 0.07;
+}
+
+[data-density="aireada"] {
+  --density-k: 1.5;
+  --density-lh: 0.14;
+}
+
+:root,
+[data-density] {
+  --density-row: calc(var(--space-2) * var(--density-k)); /* vertical padding of list rows */
+  --density-gap-sm: calc(var(--space-2) * var(--density-k)); /* inside a block */
+  --density-gap: calc(var(--space-4) * var(--density-k)); /* between blocks / sections */
+  --density-section: calc(var(--space-6) * var(--density-k)); /* page-level rhythm */
+  --density-pad: calc(var(--space-3) * var(--density-k)); /* card padding */
+  --leading-body: calc(1.55 + var(--density-lh));
+  --leading-copy: calc(1.45 + var(--density-lh)); /* panel / board copy */
 }
 
 @media (prefers-reduced-motion: reduce) {

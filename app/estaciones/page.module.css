@@ -67,7 +67,7 @@
   display: grid;
   grid-template-columns: 2.25rem minmax(0, 1fr);
   column-gap: var(--space-2);
-  padding-block: var(--space-2);
+  padding-block: var(--density-row);
   border-block-end: var(--hairline) solid var(--rule);
 }
 

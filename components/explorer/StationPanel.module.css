@@ -133,8 +133,8 @@
 /* Body */
 .body {
   display: grid;
-  gap: var(--space-4);
-  padding: var(--space-5) var(--space-4) var(--space-6);
+  gap: var(--density-gap);
+  padding: var(--space-5) var(--space-4) var(--density-section);
   min-block-size: 0;
   overflow-y: auto;
   overscroll-behavior: contain;
@@ -160,13 +160,13 @@
 
 .lead {
   font-size: var(--text-lg);
-  line-height: 1.45;
+  line-height: var(--leading-copy);
   max-inline-size: 65ch;
 }
 
 .summary {
   font-size: var(--text-sm);
-  line-height: 1.55;
+  line-height: var(--leading-body);
   color: var(--fg-muted);
   max-inline-size: 65ch;
 }
@@ -253,8 +253,8 @@
 /* Sections */
 .section {
   display: grid;
-  gap: var(--space-2);
-  margin-block-start: var(--space-4);
+  gap: var(--density-gap-sm);
+  margin-block-start: var(--density-gap);
 }
 
 .sectionTitle {
@@ -277,7 +277,7 @@
 }
 
 .group + .group {
-  margin-block-start: var(--space-4);
+  margin-block-start: var(--density-gap);
 }
 
 .sources {
@@ -285,7 +285,7 @@
   margin: 0;
   padding: 0;
   display: grid;
-  gap: var(--space-5);
+  gap: calc(var(--space-5) * var(--density-k));
 }
 
 .sourceLink {
@@ -342,8 +342,8 @@
   align-items: center;
   gap: var(--space-3);
   inline-size: 100%;
-  min-block-size: 2.75rem;
-  padding: var(--space-2) var(--space-2);
+  min-block-size: calc(2.75rem + (var(--density-k) - 1) * 1.25rem);
+  padding: var(--density-row) var(--space-2);
   border: 0;
   border-block-end: var(--hairline) solid var(--rule);
   background: transparent;

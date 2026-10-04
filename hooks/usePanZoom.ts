@@ -36,9 +36,9 @@ export interface PanZoomApi {
   zoomOut: () => void;
   /** Back to the fitted view. */
   reset: () => void;
-  fitToBounds: (padding?: number) => void;
+  fitToBounds: (padding?: number, instant?: boolean) => void;
   /** Put graph point (x, y) in the viewport center; k defaults to the current scale. */
-  centerOn: (x: number, y: number, k?: number) => void;
+  centerOn: (x: number, y: number, k?: number, instant?: boolean) => void;
   /** Latest transform without re-rendering (use in event handlers). */
   getTransform: () => Transform;
   /** Viewport size in px (0x0 until measured). */
@@ -98,21 +98,21 @@ export function usePanZoom(
 
   /** Apply `fn` on the selection, animated unless reduced motion / duration 0. */
   const run = useCallback(
-    (fn: (target: ReturnType<typeof animated>) => void) => {
+    (fn: (target: ReturnType<typeof animated>) => void, instant = false) => {
       const svg = svgRef.current;
       if (!svg || !zoomRef.current) return;
       const sel = select(svg);
       fn(animated(sel));
       function animated(s: typeof sel) {
         const d = cfgRef.current.duration;
-        return d > 0 && !prefersReducedMotion() ? s.transition().duration(d) : s;
+        return !instant && d > 0 && !prefersReducedMotion() ? s.transition().duration(d) : s;
       }
     },
     [svgRef],
   );
 
   const transformTo = useCallback(
-    (t: ZoomTransform) => {
+    (t: ZoomTransform, instant = false) => {
       const z = zoomRef.current;
       if (!z) return;
       const constrained = z.constrain()(
@@ -128,13 +128,13 @@ export function usePanZoom(
           z.transform,
           constrained,
         );
-      });
+      }, instant);
     },
     [run],
   );
 
   const fitToBounds = useCallback(
-    (padding = 0) => {
+    (padding = 0, instant = false) => {
       const { width, height } = sizeRef.current;
       if (width <= 0 || height <= 0) return;
       const b = cfgRef.current.bounds;
@@ -144,7 +144,7 @@ export function usePanZoom(
       );
       const cx = (b.x0 + b.x1) / 2;
       const cy = (b.y0 + b.y1) / 2;
-      transformTo(zoomIdentity.translate(width / 2, height / 2).scale(k).translate(-cx, -cy));
+      transformTo(zoomIdentity.translate(width / 2, height / 2).scale(k).translate(-cx, -cy), instant);
     },
     [minScale, transformTo],
   );
@@ -264,14 +264,14 @@ export function usePanZoom(
   );
 
   const centerOn = useCallback(
-    (x: number, y: number, k?: number) => {
+    (x: number, y: number, k?: number, instant = false) => {
       const { width, height } = sizeRef.current;
       if (width <= 0 || height <= 0) return;
       const scale = Math.min(
         Math.max(k ?? transformRef.current.k, minScale()),
         cfgRef.current.maxZoom,
       );
-      transformTo(zoomIdentity.translate(width / 2, height / 2).scale(scale).translate(-x, -y));
+      transformTo(zoomIdentity.translate(width / 2, height / 2).scale(scale).translate(-x, -y), instant);
     },
     [minScale, transformTo],
   );

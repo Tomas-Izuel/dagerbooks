@@ -1,7 +1,7 @@
 .article {
   --ink: var(--fg);
   display: grid;
-  gap: var(--space-7);
+  gap: calc(var(--space-7) * var(--density-k));
 }
 
 .sign {
@@ -128,13 +128,13 @@
 
 .body {
   display: grid;
-  gap: var(--space-7);
+  gap: calc(var(--space-7) * var(--density-k));
   grid-template-columns: minmax(0, 1fr);
 }
 
 .main {
   display: grid;
-  gap: var(--space-7);
+  gap: calc(var(--space-7) * var(--density-k));
   align-content: start;
   min-inline-size: 0;
 }
@@ -156,7 +156,7 @@
 
 .lead p {
   font-size: var(--text-lg);
-  line-height: 1.6;
+  line-height: calc(1.6 + var(--density-lh));
 }
 
 .section p {
@@ -207,7 +207,7 @@
 
 .side {
   display: grid;
-  gap: var(--space-7);
+  gap: calc(var(--space-7) * var(--density-k));
   align-content: start;
   min-inline-size: 0;
 }
@@ -245,7 +245,7 @@
 @media (min-width: 48rem) {
   .titleRow {
     grid-template-columns: minmax(0, 1fr) auto;
-    gap: var(--space-7);
+    gap: calc(var(--space-7) * var(--density-k));
   }
 
   .plaque {

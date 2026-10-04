@@ -45,6 +45,89 @@
   cursor: not-allowed;
 }
 
+.btn[data-open] {
+  background: var(--fg);
+  color: var(--fg-on-ink);
+}
+
+.btn[data-open] .tip {
+  display: none;
+}
+
+.densityRoot {
+  position: relative;
+  display: grid;
+  border-block-start: var(--hairline) solid var(--rule);
+}
+
+/* Ruled signage plate opening to the left of the stack, bottom-aligned with the button. */
+.pop {
+  position: absolute;
+  inset-block-end: 0;
+  inset-inline-end: calc(100% + var(--space-3));
+  z-index: 2;
+  display: grid;
+  gap: var(--space-2);
+  padding: var(--space-3);
+  border: var(--rule-width) solid var(--rule-strong);
+  background: var(--bg-sunken);
+  box-shadow: var(--shadow-panel);
+}
+
+.popTitle {
+  margin: 0;
+  font-family: var(--font-sign);
+  font-size: var(--text-xs);
+  font-weight: 700;
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+  color: var(--fg-muted);
+}
+
+.options {
+  display: grid;
+  border: var(--rule-width) solid var(--rule-strong);
+}
+
+.option {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  min-inline-size: 9.5rem;
+  min-block-size: 2.75rem;
+  padding: 0 var(--space-3);
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  color: var(--fg);
+  font-family: var(--font-sign);
+  font-size: var(--text-xs);
+  font-weight: 700;
+  letter-spacing: var(--tracking-sign);
+  text-transform: uppercase;
+  text-align: start;
+  cursor: pointer;
+  transition: background var(--dur-fast) var(--ease-out-expo), color var(--dur-fast) var(--ease-out-expo);
+}
+
+.option + .option {
+  border-block-start: var(--hairline) solid var(--rule);
+}
+
+.option:hover {
+  background: var(--enamel-700);
+}
+
+.option[aria-checked="true"] {
+  background: var(--fg);
+  color: var(--fg-on-ink);
+}
+
+.option:focus-visible {
+  outline: var(--rule-width) solid var(--focus);
+  outline-offset: -4px;
+}
+
 .tip {
   position: absolute;
   inset-inline-end: calc(100% + var(--space-3));
