@@ -86,7 +86,7 @@
 .legend {
   position: absolute;
   z-index: 2;
-  inset-block-start: 16px;
+  inset-block-start: 6.25rem; /* under the density control (same right edge and width) */
   display: grid;
   gap: var(--space-1);
   padding: var(--space-2) var(--space-3);
@@ -98,13 +98,26 @@
   letter-spacing: var(--tracking-label);
   text-transform: uppercase;
   inline-size: 14.5rem;
+  inset-inline-end: 16px;
   transition: inset-inline-end var(--dur-base) var(--ease-out-expo);
 }
 
 /* Panel open: the legend parks bottom-left above the directory link, collapsed to its
    title; it opens upward on hover / focus. It never sits under the panel or the controls. */
 .legend {
-  pointer-events: none;
+  pointer-events: auto;
+  cursor: default;
+}
+
+/* At rest the legend is just its title under the density control; it unfolds on hover or
+   keyboard focus so it never covers the top terminus discs. */
+.legend:not(:hover):not(:focus-within) {
+  inline-size: max-content;
+  gap: 0;
+}
+
+.legend:not(:hover):not(:focus-within) .legendBody {
+  display: none;
 }
 
 .legend[data-parked="true"] {

@@ -54,6 +54,10 @@
   display: none;
 }
 
+.tip {
+  display: none;
+}
+
 .densityRoot {
   position: relative;
   display: grid;
