@@ -180,6 +180,30 @@
   border-block-start: var(--hairline) solid var(--rule);
 }
 
+.legendRecs {
+  display: grid;
+  gap: var(--space-1);
+  margin: var(--space-2) 0 0;
+  padding: var(--space-2) 0 0;
+  border-block-start: var(--hairline) solid var(--rule);
+  list-style: none;
+  color: var(--fg);
+}
+
+.legendRecs li {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.legendRecText {
+  display: grid;
+  line-height: 1.35;
+  color: var(--fg-muted);
+  text-transform: none;
+  letter-spacing: 0.02em;
+}
+
 .legendKeyText {
   display: grid;
   line-height: 1.35;
@@ -258,7 +282,7 @@
   opacity: 0.5;
 }
 
-/* Rest state: legs beyond the main trunk are lighter so the ten lines read first. */
+/* Rest state: legs beyond the main trunk are lighter so the lines read first. */
 .track[data-trunk="false"][data-tone="full"] {
   stroke-width: calc(var(--map-line-width) * 0.78 * var(--m, 1));
   opacity: 0.7;
@@ -386,6 +410,17 @@
   transition: fill var(--dur-fast) linear;
 }
 
+/* Recommendation level lives in the dot's size and stroke (set in JS from REC_DOT); a mention is also muted.
+   Read stays a solid ink fill and "por completar" stays the amber notch, so the three codes never share a channel. */
+.dot[data-rec="fuerte"] {
+  stroke-width: calc(4.5 * var(--m, 1));
+}
+
+.dot[data-rec="mencion"] {
+  stroke: var(--fg-muted);
+  stroke-width: calc(2 * var(--m, 1));
+}
+
 .station[data-read="true"] .dot {
   fill: var(--ink);
 }
@@ -485,12 +520,67 @@
 }
 
 .terminus {
-  pointer-events: none;
+  cursor: pointer;
+  outline: none;
   transition: opacity var(--dur-base) var(--ease-out-expo);
 }
 
 .terminus[data-dim="true"] {
   opacity: var(--dim-opacity);
+}
+
+.terminus[data-dim="true"]:hover,
+.terminus[data-dim="true"]:focus-visible {
+  opacity: 1;
+}
+
+.terminusHit {
+  fill: transparent;
+  stroke: transparent;
+  stroke-width: 3;
+  pointer-events: all;
+}
+
+.terminus:focus-visible .terminusHit {
+  stroke: var(--focus);
+}
+
+.terminus:hover .terminusDisc,
+.terminus[data-active="true"] .terminusDisc {
+  stroke: var(--fg);
+}
+
+.terminusName {
+  fill: var(--fg-muted);
+  font-family: var(--font-sign);
+  font-weight: 600;
+  letter-spacing: var(--tracking-label);
+  text-anchor: middle;
+  stroke: var(--halo);
+  stroke-width: 4px;
+  stroke-linejoin: round;
+  paint-order: stroke fill;
+  pointer-events: none;
+}
+
+.terminus[data-name="hidden"] .terminusName {
+  opacity: 0;
+  transition: opacity var(--dur-fast) linear;
+}
+
+.terminus[data-name="hidden"]:hover .terminusName,
+.terminus[data-name="hidden"]:focus-visible .terminusName,
+.terminus[data-name="hidden"][data-active="true"] .terminusName {
+  opacity: 1;
+}
+
+.terminus:hover .terminusName,
+.terminus[data-active="true"] .terminusName {
+  fill: var(--fg);
+}
+
+.terminus[data-active="true"] .terminusName {
+  font-weight: 800;
 }
 
 .terminusDisc {

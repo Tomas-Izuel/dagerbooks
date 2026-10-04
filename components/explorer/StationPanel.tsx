@@ -3,6 +3,8 @@
 import { useEffect, useRef, type CSSProperties } from "react";
 import Link from "next/link";
 import { LineDisc } from "@/components/ui/LineDisc";
+import { RecMark } from "@/components/ui/RecMark";
+import type { Recommendation } from "@/lib/catalog/schema";
 import { Dotted } from "@/components/page/Dotted";
 import { lineFor, zoneLabel } from "./lines";
 import type { PanelBook, StationRef } from "./types";
@@ -19,6 +21,7 @@ interface StationPanelProps {
   onClose(): void;
   onSelect(id: string): void;
   readHydrated: boolean;
+  recLabels: Record<Recommendation, { label: string; description: string }>;
 }
 
 const MISSING_LABELS: Record<string, string> = {
@@ -98,6 +101,7 @@ function PanelInner({
   onClose,
   onSelect,
   readHydrated,
+  recLabels,
 }: StationPanelProps & { book: PanelBook }) {
   const headingRef = useRef<HTMLHeadingElement>(null);
   const returnRef = useRef<HTMLElement | null>(null);
@@ -170,6 +174,13 @@ function PanelInner({
         <p className={styles.byline}>
           <Dotted parts={meta} />
         </p>
+        {book.level > 0 ? (
+          <p className={styles.rec} title={recLabels[book.recommendation].description}>
+            <RecMark level={book.recommendation} size={20} />
+            <span className={styles.recKey}>Dager</span>
+            <span>{recLabels[book.recommendation].label}</span>
+          </p>
+        ) : null}
       </header>
 
       <div className={styles.body}>

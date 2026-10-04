@@ -1,3 +1,5 @@
+import type { Recommendation } from "@/lib/catalog/schema";
+
 export interface StationRef {
   id: string;
   title: string;
@@ -13,6 +15,7 @@ export interface PanelBook {
   year?: number;
   kind: string;
   level: number;
+  recommendation: Recommendation;
   topics: string[];
   summary?: string;
   context?: string;

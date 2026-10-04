@@ -6,6 +6,8 @@ import { DensityControl } from "@/components/explorer/DensityControl";
 import { MapControls } from "@/components/explorer/MapControls";
 import { StationBoard } from "@/components/explorer/StationBoard";
 import { StationPanel } from "@/components/explorer/StationPanel";
+import type { Recommendation } from "@/lib/catalog/schema";
+import { isAllRecs } from "@/lib/design/recommendation";
 import type { PanelBook, StationRef } from "@/components/explorer/types";
 import { useBookSearch } from "@/hooks/useBookSearch";
 import { useDensity } from "@/hooks/useDensity";
@@ -33,6 +35,8 @@ export interface ExplorerProps {
   explorerNodes: ExplorerNode[];
   searchDocs: SearchDoc[];
   panels: Record<string, PanelEntry>;
+  /** Textos de cada nivel (RECOMMENDATION_LABELS, del servidor). */
+  recLabels: Record<Recommendation, { label: string; description: string }>;
 }
 
 const PANEL_PX = 360 + 24;
@@ -51,10 +55,10 @@ const useNarrow = () =>
 
 const byLevelThenTitle = (a: StationRef, b: StationRef) => a.level - b.level || a.title.localeCompare(b.title);
 
-export function Explorer({ geometry: geometrySet, lines, explorerNodes, searchDocs, panels }: ExplorerProps) {
+export function Explorer({ geometry: geometrySet, lines, explorerNodes, searchDocs, panels, recLabels }: ExplorerProps) {
   const mapRef = useRef<NetworkMapHandle>(null);
   const topicIds = useMemo(() => lines.map((l) => l.topicId), [lines]);
-  const { state, selection, dimmed, selectBook, setTopic, setQuery } = useExplorerState(explorerNodes, topicIds);
+  const { state, selection, dimmed, selectBook, setTopic, toggleRecommendation, resetRecommendation, setQuery } = useExplorerState(explorerNodes, topicIds);
   const search = useBookSearch(searchDocs, { initialQuery: state.q });
   const progress = useReadProgress();
   const narrow = useNarrow();
@@ -109,14 +113,37 @@ export function Explorer({ geometry: geometrySet, lines, explorerNodes, searchDo
     return l ? { letter: l.letter, color: l.color, name: l.name } : null;
   }, [entry, lineByTopic]);
 
+  const nodeById = useMemo(() => new Map(explorerNodes.map((n) => [n.id, n])), [explorerNodes]);
+  // Search keeps every match (so "not found" is never a lie) but marks the ones the rec filter dims, with their level.
   const results = useMemo(
     () =>
       search.results
         .map((r) => refById.get(r.id))
         .filter((r): r is StationRef => !!r)
-        .map((r) => ({ ...r, titleEs: searchDocs.find((d) => d.id === r.id)?.titleEs })),
-    [search.results, refById, searchDocs],
+        .map((r) => ({
+          ...r,
+          titleEs: searchDocs.find((d) => d.id === r.id)?.titleEs,
+          recommendation: nodeById.get(r.id)?.recommendation ?? "interesante",
+          offFilter: state.tema !== null || !isAllRecs(state.rec) ? dimmed.has(r.id) : false,
+        })),
+    [search.results, refById, searchDocs, nodeById, dimmed, state.tema, state.rec],
   );
+
+  // Books that would match each level, within the active line (the count never depends on the rec choice itself).
+  const recCounts = useMemo(() => {
+    const c: Record<Recommendation, number> = { fuerte: 0, interesante: 0, mencion: 0 };
+    for (const n of explorerNodes) {
+      if (n.topics.length === 0 || (state.tema && !n.topics.includes(state.tema))) continue;
+      c[n.recommendation]++;
+    }
+    return c;
+  }, [explorerNodes, state.tema]);
+  const filtering = state.tema !== null || !isAllRecs(state.rec);
+  const activeCount = useMemo(
+    () => explorerNodes.filter((n) => n.topics.length > 0 && !dimmed.has(n.id)).length,
+    [explorerNodes, dimmed],
+  );
+  const bookTotal = useMemo(() => explorerNodes.filter((n) => n.topics.length > 0).length, [explorerNodes]);
 
   const onQuery = useCallback(
     (q: string) => {
@@ -155,6 +182,14 @@ export function Explorer({ geometry: geometrySet, lines, explorerNodes, searchDo
         }))}
         activeTopic={state.tema}
         onTopic={setTopic}
+        recLabels={recLabels}
+        activeRecs={state.rec}
+        recCounts={recCounts}
+        onToggleRec={toggleRecommendation}
+        onResetRec={resetRecommendation}
+        filtering={filtering}
+        activeCount={activeCount}
+        bookTotal={bookTotal}
         query={search.query}
         onQuery={onQuery}
         results={results}
@@ -171,9 +206,11 @@ export function Explorer({ geometry: geometrySet, lines, explorerNodes, searchDo
           lines={lines}
           selection={selection}
           dimmed={dimmed}
+          recLabels={recLabels}
           activeTopic={state.tema}
           read={read}
           onSelect={selectBook}
+          onTopic={setTopic}
           insets={insets}
           animateRefit={userSwitched}
           density={density}
@@ -207,6 +244,7 @@ export function Explorer({ geometry: geometrySet, lines, explorerNodes, searchDo
           <div className={styles.panelSlot}>
             <StationPanel
               book={entry.book}
+              recLabels={recLabels}
               line={panelLine}
               prerequisites={prerequisites}
               unlocks={unlocks}

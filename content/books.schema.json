@@ -52,7 +52,9 @@
             "desarrollo-personal",
             "startups",
             "oficio",
-            "arquitectura"
+            "arquitectura",
+            "ia",
+            "ficcion"
           ]
         }
       },
@@ -140,6 +142,14 @@
         "type": "integer",
         "exclusiveMinimum": 0,
         "maximum": 9007199254740991
+      },
+      "recommendation": {
+        "type": "string",
+        "enum": [
+          "fuerte",
+          "interesante",
+          "mencion"
+        ]
       },
       "confidence": {
         "type": "string",

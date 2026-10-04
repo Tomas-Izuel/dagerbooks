@@ -83,6 +83,7 @@ function withConfidence(b: RawBook): Book {
   if (!b.sources?.length) missing.push("sources");
   return {
     ...b,
+    recommendation: b.recommendation ?? "interesante",
     confidence: b.confidence ?? (missing.length ? "low" : "high"),
     missing,
     primaryTopic: b.topics[0] ?? null,

@@ -8,10 +8,16 @@
 #   topics   lista de ids de topics.yaml; el primero es el sector donde se dibuja el libro.
 #   level    1 introductorio · 2 intermedio · 3 avanzado · 4 especialista (0 = raíz, solo Tom Sawyer Abroad).
 # Todo lo demás es opcional: titleEs, authors, year, kind (book | essay | paper | course | textbook),
-#   summary, context, sources [{url, title, timestamp, quote}], leadsTo, related [{id, reason}], isbn, coverId.
+#   summary, context, sources [{url, title, timestamp, quote}], leadsTo, related [{id, reason}], isbn, coverId,
+#   recommendation.
+# recommendation: cuánto lo recomienda Dager, para filtrar en el sitio. Si falta vale "interesante" y no cuenta como "por completar".
+#   fuerte       lo recomienda con énfasis: lectura imprescindible o favorita, insiste en que lo lean.
+#   interesante  lo valora o lo recomienda con tibieza o reservas; tiene ideas que le sirven.
+#   mencion      lo cita o lo nombra sin recomendarlo.
 # Si faltan authors, summary, context o sources, el sitio muestra "por completar".
 # leadsTo: ids de libros que conviene leer después de este (el nivel del destino debe ser mayor).
 # related: puentes entre sectores, con una razón corta; declará cada par una sola vez.
+
 
 - id: tom-sawyer-abroad
   title: "Tom Sawyer Abroad"
@@ -21,6 +27,7 @@
   kind: book
   topics: []
   level: 0
+  recommendation: interesante
   summary: "Novela de Mark Twain en la que Tom, Huck y Jim viajan en globo a África."
   context: "Fue su primer libro, un regalo de su abuelo, y despertó su amor por la lectura."
   sources:
@@ -43,6 +50,7 @@
   kind: book
   topics: ["fundamentos"]
   level: 1
+  recommendation: fuerte
   summary: "Explica cómo funciona una computadora construyéndola paso a paso desde una compuerta NAND hasta una CPU completa."
   context: "Lo llama \"librito hermoso\" y fascinante sobre arquitectura de computadoras, que desmitifica todo desde las compuertas lógicas."
   sources:
@@ -53,6 +61,10 @@
       title: "Los mejores libros para aprender a programar."
       timestamp: "6:59"
       quote: "But How do you know que es un libro hermoso ... un libro fascinante sobre arquitectura de computadoras"
+    - url: "https://www.youtube.com/watch?v=p3Q4lTNxSfQ&t=8s"
+      title: "¿Por qué usan BINARIO las computadoras?"
+      timestamp: "0:08"
+      quote: "comienza el clásico But how do you know? Pero, ¿cómo sabe? Un libro que intenta achicar el espacio entre las cosas fleras que puede hacer una computadora"
   leadsTo: ["operating-systems-three-easy-pieces", "network-warrior"]
   isbn: "9780615303765"
 
@@ -63,6 +75,7 @@
   kind: book
   topics: ["fundamentos"]
   level: 1
+  recommendation: fuerte
   summary: "Guía completa de Git de Chacon y Straub, disponible gratis en línea."
   context: "Es el único recurso que recomienda para ir a fondo con Git."
   sources:
@@ -81,6 +94,7 @@
   kind: book
   topics: ["fundamentos"]
   level: 1
+  recommendation: interesante
   summary: "Al Sweigart enseña Python mediante la automatización de tareas cotidianas."
   context: "Lo marca como buen libro, \"tal vez algo desactualizado\", para aprender automatizando."
   sources:
@@ -98,6 +112,7 @@
   kind: book
   topics: ["fundamentos"]
   level: 2
+  recommendation: interesante
   summary: "Guía de Scott Chacon sobre el funcionamiento interno de Git, publicada por PeepCode."
   context: "En su README dice que entender las entrañas de Git lo hizo dejar de verlo como un botón de \"guardar partida\"."
   sources:
@@ -112,6 +127,7 @@
   kind: book
   topics: ["fundamentos"]
   level: 2
+  recommendation: interesante
   summary: "Referencia concisa del lenguaje C# y la plataforma .NET."
   context: "Lo cita entre los libros piola para aprender C#."
   sources:
@@ -129,6 +145,7 @@
   kind: book
   topics: ["fundamentos", "sistemas"]
   level: 2
+  recommendation: interesante
   summary: "Guía práctica de redes (Cisco, switching, routing) con foco en cómo trabajar con la CLI de los equipos."
   context: "Lo considera lindo y muy bien escrito, aunque puede ser denso si no te interesa el detalle de la CLI."
   sources:
@@ -152,6 +169,7 @@
   kind: book
   topics: ["fundamentos"]
   level: 3
+  recommendation: interesante
   summary: "Jon Skeet explora a fondo las características del lenguaje C#."
   context: "Recomienda los libros y posts de Skeet, aunque aclara que no es tan introductorio."
   sources:
@@ -171,6 +189,7 @@
   kind: textbook
   topics: ["fundamentos"]
   level: 3
+  recommendation: interesante
   summary: "Libro de texto gratuito sobre sistemas operativos organizado en virtualización, concurrencia y persistencia."
   context: "\"Muy lindo libro\" que hace digeribles los conceptos de sistemas operativos."
   sources:
@@ -190,6 +209,7 @@
   kind: book
   topics: ["fundamentos"]
   level: 3
+  recommendation: interesante
   summary: "Libro de Robert Nystrom para construir intérpretes de lenguajes de programación; se puede leer gratis en la web del autor."
   context: "Le parece muy interesante, gratuito en línea, y planea leerlo/streamear el desafío de CodeCrafters que lo sigue."
   sources:
@@ -207,6 +227,7 @@
   kind: textbook
   topics: ["matematicas"]
   level: 1
+  recommendation: fuerte
   summary: "Texto escolar clásico de álgebra elemental, muy usado en Latinoamérica."
   context: "Dice que no entiende por qué no lo recomendó antes porque es \"crucial\"."
   sources:
@@ -214,7 +235,7 @@
       title: "Los mejores libros para aprender a programar."
       timestamp: "5:26"
       quote: "álgebra de Baldor s sí también ... No sé por qué no lo recomendé pues es crucial"
-  leadsTo: ["book-of-proof"]
+  leadsTo: ["book-of-proof", "laws-of-thought-boole"]
   isbn: "9789702407799"
   coverId: 7273068
 
@@ -226,6 +247,7 @@
   kind: book
   topics: ["matematicas"]
   level: 1
+  recommendation: interesante
   summary: "Introducción accesible al álgebra de nivel secundario, de la serie \"para dummies\"."
   context: "Sin vergüenza lo recomienda como muy buen libro de álgebra, junto con el de Baldor."
   sources:
@@ -245,6 +267,7 @@
   kind: book
   topics: ["matematicas", "fundamentos"]
   level: 1
+  recommendation: interesante
   summary: "Introducción a los sistemas de numeración (binario, octal, hexadecimal) y la aritmética binaria para quienes programan microcomputadoras."
   context: "Lo recomienda por muy introductorio y amigable, con dibujitos; lo leyó en español."
   sources:
@@ -265,6 +288,7 @@
   kind: textbook
   topics: ["matematicas"]
   level: 2
+  recommendation: interesante
   summary: "Introducción a la demostración matemática: lógica, conjuntos, inducción y técnicas de prueba, de Richard Hammack."
   context: "Lo define como un clásico, muy buen libro aunque algo denso, para aprender a razonar con pruebas."
   sources:
@@ -278,7 +302,7 @@
       title: "Los mejores libros para aprender a programar."
       timestamp: "3:51"
       quote: "Book of proof es un muy buen libro es un poquito denso es un clásico sobre el tema"
-  leadsTo: ["concrete-mathematics", "introduction-to-algorithms"]
+  leadsTo: ["concrete-mathematics", "introduction-to-algorithms", "dixon-coles-football"]
   isbn: "9780982406205"
   coverId: 10439715
 
@@ -289,6 +313,7 @@
   kind: textbook
   topics: ["matematicas"]
   level: 2
+  recommendation: interesante
   summary: "Serie de cuatro libros de Tim Roughgarden con una introducción amigable al análisis de algoritmos."
   context: "\"Excelente elección\" como primer contacto con algoritmos; tiene videos del autor en YouTube."
   sources:
@@ -302,6 +327,10 @@
       title: "NO LEAS ESTE LIBRO. #algoritmo #programacion #fyp"
       timestamp: "0:17"
       quote: "Algorithms Illuminated. Es una serie de cuatro libros... es una excelente elección... como introducción a algoritmos"
+    - url: "https://www.youtube.com/watch?v=bsNsgoKPhOY&t=254s"
+      title: "¿Qué es un algoritmo y por qué debería importarte? | Te lo explico así nomás."
+      timestamp: "4:14"
+      quote: "te recomiendo la serie de libros que creo que también existe como videos de YouTube que se llama algo hace poco me lo topé me pareció mucho más copado que introductions"
   leadsTo: ["introduction-to-algorithms"]
   isbn: "9780999282908"
   coverId: 9230325
@@ -313,6 +342,7 @@
   kind: textbook
   topics: ["matematicas"]
   level: 3
+  recommendation: interesante
   summary: "El \"CLRS\": texto de referencia, exhaustivo y riguroso, sobre algoritmos y estructuras de datos."
   context: "Lo recomienda solo si te llevás bien con la matemática; en video advierte que \"de introducción tiene solo el nombre\" para un principiante."
   sources:
@@ -323,6 +353,14 @@
       title: "NO LEAS ESTE LIBRO. #algoritmo #programacion #fyp"
       timestamp: "0:30"
       quote: "no te mandes a intentar leer solo el clásico Introduction to Algorithms... de introducción tiene solamente el nombre"
+    - url: "https://www.youtube.com/watch?v=JSYsisYZRRQ&t=3016s"
+      title: "Dager te enseña a hacer un server DNS #2."
+      timestamp: "50:16"
+      quote: "clrs es una introducción a los algoritmos que no es muy introductoria no es muy amigable"
+    - url: "https://www.youtube.com/watch?v=bsNsgoKPhOY&t=254s"
+      title: "¿Qué es un algoritmo y por qué debería importarte? | Te lo explico así nomás."
+      timestamp: "4:14"
+      quote: "mucho más copado que introductions que es el libro que se suele recomendar"
   leadsTo: ["concrete-mathematics"]
   isbn: "9780262031417"
   coverId: 2341462
@@ -334,6 +372,7 @@
   kind: textbook
   topics: ["matematicas"]
   level: 4
+  recommendation: interesante
   summary: "Matemática para ciencias de la computación: sumatorias, recurrencias, funciones generatrices y combinatoria, de Graham, Knuth y Patashnik."
   context: "Dice que llena el hueco de matemática específica para computer science; recomienda los artículos de un blog que explican sus razonamientos."
   sources:
@@ -347,6 +386,10 @@
       title: "Los mejores libros para aprender a programar."
       timestamp: "3:58"
       quote: "concrete matematics es como un libro que el sh hace como para llenar ese Gap de matemáticas específicamente para computer Science"
+    - url: "https://www.youtube.com/watch?v=BiaV5aIX6dQ&t=382s"
+      title: "Apple tiro una bomba.."
+      timestamp: "6:22"
+      quote: "Ese es el primer problema que aparece en Concrete Mathematics, creo recordar librazo"
   isbn: "9780201558029"
   coverId: 135182
 
@@ -358,6 +401,7 @@
   kind: book
   topics: ["sistemas"]
   level: 1
+  recommendation: interesante
   summary: "James Gleick recorre la historia de la información desde los tambores africanos hasta la era digital."
   context: "\"Buen libro\": Gleick tiene dos libros que le gustan; en su README lo llama obra maestra."
   sources:
@@ -368,7 +412,7 @@
       title: "Libros de autoayuda no TAN malos."
       timestamp: "24:13"
       quote: "Glake es el de information, ¿no? Clake information. A History of Lood. Buen libro. Tiene dos libros que me gustan."
-  leadsTo: ["the-science-of-information", "general-system-theory"]
+  leadsTo: ["the-science-of-information", "general-system-theory", "the-selfish-gene"]
   related:
     - id: time-travel-a-history
       reason: "mismo autor (Gleick): historia cultural de las ideas"
@@ -382,6 +426,7 @@
   kind: book
   topics: ["sistemas", "fundamentos"]
   level: 1
+  recommendation: interesante
   summary: "Introducción ilustrada a los conceptos de blockchain, con dibujos para principiantes."
   context: "Lo recomienda \"solamente\" por ser el libro más cute, aunque admite que no recuerda qué le enseñó."
   sources:
@@ -392,7 +437,7 @@
       title: "Los mejores libros para aprender a programar."
       timestamp: "3:12"
       quote: "lo recomiendo Solamente porque me parece el libro más cute de la historia"
-  leadsTo: ["the-blockchain-developer"]
+  leadsTo: ["the-blockchain-developer", "bitcoin-whitepaper"]
   related:
     - id: chaos-theory
       reason: "orden descentralizado sin autoridad central"
@@ -406,6 +451,7 @@
   kind: course
   topics: ["sistemas"]
   level: 2
+  recommendation: interesante
   summary: "Curso de The Great Courses (24 clases) en el que Schumacher recorre la teoría de la información, desde la codificación y la entropía hasta la información cuántica."
   context: "Lo llama libro aunque es un curso; recomienda leerlo/escucharlo tomando notas porque es denso pero muy bueno."
   sources:
@@ -425,6 +471,7 @@
   kind: book
   topics: ["sistemas", "arquitectura"]
   level: 2
+  recommendation: interesante
   summary: "Guía práctica de Elad Elrom para desarrollar, probar y asegurar proyectos blockchain."
   context: "Lo recomienda por ser hands-on y explicar bien varios protocolos."
   sources:
@@ -447,6 +494,7 @@
   kind: paper
   topics: ["sistemas", "matematicas"]
   level: 3
+  recommendation: interesante
   summary: "Artículo de Claude Shannon que fundó la teoría de la información al introducir el bit y la capacidad de canal."
   context: "Lo lista en su README como lectura densa pero fundacional; en un stream lo cita al relacionar a Hayek con la información."
   sources:
@@ -457,6 +505,10 @@
       title: "Analizando el famoso ensayo de Hayek."
       timestamp: "18:06"
       quote: "en 1948 se publica la teoría matemática de la comunicación de Shannon"
+    - url: "https://www.youtube.com/watch?v=oyB3INdwAXg&t=145s"
+      title: "En defensa de la mentira."
+      timestamp: "2:25"
+      quote: "En su famosa teoría matemática de la comunicación, Shannon, lo primero que dice es"
 
 - id: general-system-theory
   title: "General System Theory"
@@ -466,6 +518,7 @@
   kind: book
   topics: ["sistemas"]
   level: 3
+  recommendation: fuerte
   summary: "Obra fundacional del enfoque sistémico, donde Bertalanffy propone principios generales aplicables a sistemas biológicos, sociales y técnicos."
   context: "Lo considera muy importante y lamenta que lo conoció en filosofía y no en la carrera de sistemas, donde se ignora la TGS."
   sources:
@@ -490,6 +543,7 @@
   kind: book
   topics: ["economia"]
   level: 1
+  recommendation: fuerte
   summary: "Colección de ensayos de Bastiat que refutan falacias proteccionistas, incluida la famosa Petición de los fabricantes de velas."
   context: "Lo llama \"hermoso libro tan iluminador\" y remite al capítulo de los fabricantes de velas."
   sources:
@@ -501,7 +555,15 @@
       title: "Leyendo las notas del parche en Argentina, la reforma laboral."
       timestamp: "27:56"
       quote: "citando a Bastiat en sus sofisma económicas. Eh, hermoso, hermoso texto"
-  leadsTo: ["the-use-of-knowledge-in-society", "chaos-theory", "the-struggle-for-liberty"]
+    - url: "https://www.youtube.com/watch?v=9kNant40FXw&t=3808s"
+      title: "Imagina que tienes dos vacas... | REACCIÓN"
+      timestamp: "63:28"
+      quote: "Esto lo dijo Bastiad hace 200 [&nbsp;__&nbsp;] años y seguimos con la misma"
+    - url: "https://www.youtube.com/watch?v=o_s6Q-teA6U&t=276s"
+      title: "Hoy es VIERNES y este video lo sabe."
+      timestamp: "4:36"
+      quote: "fue publicado originalmente por Frederick bastiat en 1845 y es una reducción al absurdo de los argumentos de los proteccionistas"
+  leadsTo: ["the-use-of-knowledge-in-society", "chaos-theory", "the-struggle-for-liberty", "quest-for-cosmic-justice", "anti-duhring"]
   related:
     - id: utilitarianism-for-and-against
       reason: "consecuencias y razonamiento económico"
@@ -515,6 +577,7 @@
   kind: essay
   topics: ["economia", "sistemas"]
   level: 2
+  recommendation: fuerte
   summary: "Ensayo de Hayek (American Economic Review, 1945) que sostiene que el conocimiento está disperso y que los precios lo coordinan mejor que la planificación central."
   context: "Lo comenta en un stream y lo recomienda \"intensamente\" a quien quiera entender el problema del conocimiento en la economía."
   sources:
@@ -526,6 +589,14 @@
       title: "Analyzing Robert P. Murphy's \"Chaos Theory\" | Falopa Política"
       timestamp: "0:55"
       quote: "Que me recuerda a el texto de Hayek sobre el uso del conocimiento en la sociedad"
+    - url: "https://www.youtube.com/watch?v=6KwtQkUTe1I&t=1364s"
+      title: "La meritocracia es un MITO."
+      timestamp: "22:44"
+      quote: "como dice Heek en el uso de conocimiento de la sociedad, si el problema económico fuera simplemente agarrar una cantidad dada"
+    - url: "https://www.youtube.com/watch?v=9kNant40FXw&t=205s"
+      title: "Imagina que tienes dos vacas... | REACCIÓN"
+      timestamp: "3:25"
+      quote: "la premisa básica de el uso del conocimiento de la sociedad de Friederich Hig ende"
 
 - id: chaos-theory
   title: "Chaos Theory"
@@ -534,6 +605,7 @@
   kind: book
   topics: ["economia"]
   level: 2
+  recommendation: interesante
   summary: "Dos ensayos breves (\"Private Law\" y \"Private Defense\") sobre cómo funcionaría un mercado anarcocapitalista de justicia y defensa."
   context: "Recomienda el texto por interesante y breve aunque aclara que el anarquismo todavía no lo convenció."
   sources:
@@ -545,7 +617,7 @@
       title: "Analyzing Robert P. Murphy's \"Chaos Theory\" | Falopa Política"
       timestamp: "0:00"
       quote: "Chaos Theory es una interesante lectura. Es un conjunto de dos ensayos, es muy breve"
-  leadsTo: ["democracy-the-god-that-failed"]
+  leadsTo: ["democracy-the-god-that-failed", "der-begriff-des-politischen"]
   isbn: "9781933550657"
   coverId: 12678236
 
@@ -556,6 +628,7 @@
   kind: course
   topics: ["economia", "historia"]
   level: 2
+  recommendation: interesante
   summary: "Serie de diez conferencias de Ralph Raico (2004, Mises Institute) sobre la historia del liberalismo clásico; en 2025 se publicó como libro editado por Ryan McMaken."
   context: "Es su \"libro de la semana\" en un stream: una historia liberal del liberalismo, con simpatías austríacas, que estaba leyendo en ese momento."
   sources:
@@ -573,6 +646,7 @@
   kind: book
   topics: ["economia"]
   level: 3
+  recommendation: interesante
   summary: "Hoppe critica la democracia y defiende una alternativa libertaria de orden privado."
   context: "Lo recomienda como libro interesante pero muy extremista, con argumentos que no le fascinan."
   sources:
@@ -580,6 +654,10 @@
       title: "Encontronazo entre eminencias del liberalismo | Milei vs Hoppe."
       timestamp: "6:10"
       quote: "Es un libro interesante, es muy extremista, a mí no me fascinan algunos de los argumentos ... pero sigue siendo un libro interesante"
+    - url: "https://www.youtube.com/watch?v=tMl3ejxPAww&t=195s"
+      title: "Estados Unidos y Venezuela a las manos."
+      timestamp: "3:15"
+      quote: "Recuerdo que Jope en democracia, el dios que falló, se repelea con esta idea"
   related:
     - id: la-formacion-del-estado-argentino
       reason: "Estado, legitimidad y poder político"
@@ -593,6 +671,7 @@
   kind: book
   topics: ["filosofia"]
   level: 1
+  recommendation: interesante
   summary: "Introducción breve al estoicismo de la serie Very Short Introductions (Oxford)."
   context: "Lo recomienda como la mejor opción para quien no está acostumbrado a leer filosofía; identificación del título dudosa."
   sources:
@@ -611,6 +690,7 @@
   kind: book
   topics: ["filosofia"]
   level: 1
+  recommendation: interesante
   summary: "Notas personales del emperador Marco Aurelio con reflexiones estoicas sobre virtud, muerte y deber."
   context: "Dice que es buena lectura \"pero hasta ahí\" y le aburre bastante, aunque lo incluye en su bibliografía de estoicismo (recomienda la edición de Gredos)."
   sources:
@@ -622,7 +702,15 @@
       title: "Tierlist de filósofos estoicos. ¿Son como en las redes sociales?"
       timestamp: "77:38"
       quote: "Obviamente las meditaciones de Marco Aurelio"
-  leadsTo: ["discourses-and-enchiridion"]
+    - url: "https://www.youtube.com/watch?v=3Hgb_e_oGGQ&t=181s"
+      title: "Esto NO ES ESTOICISMO."
+      timestamp: "3:01"
+      quote: "En sus meditaciones, Marco Aurelio básicamente lidia con un montón de problemas más terrenales"
+    - url: "https://www.youtube.com/watch?v=T_yIGzGG_EE&t=2532s"
+      title: "No sos tan productivo como pensas."
+      timestamp: "42:12"
+      quote: "prefiero 100 veces un un Marco Aurelio Bro, meditaciones, bro, antes que una persona doer que no hace nada con su vida"
+  leadsTo: ["discourses-and-enchiridion", "confessions-augustine"]
   related:
     - id: mans-search-for-meaning
       reason: "sentido y resiliencia frente a la adversidad"
@@ -635,6 +723,7 @@
   kind: essay
   topics: ["filosofia"]
   level: 1
+  recommendation: fuerte
   summary: "Breve tratado de Séneca sobre el buen uso del tiempo."
   context: "Texto corto y \"realmente recomendable\"; sugiere leerlo primero en su bibliografía estoica."
   sources:
@@ -646,7 +735,7 @@
       title: "Como leer, pero bien."
       timestamp: "22:24"
       quote: "These are my notes from the other time I read the little book on the"
-  leadsTo: ["letters-to-lucilius"]
+  leadsTo: ["letters-to-lucilius", "gorgias"]
   isbn: "9786070796210"
   coverId: 996581
 
@@ -658,6 +747,7 @@
   kind: book
   topics: ["filosofia"]
   level: 2
+  recommendation: interesante
   summary: "Enseñanzas de Epicteto recogidas por Arriano, y su Manual (Enquiridión), sobre ética estoica práctica."
   context: "Dice que no es fácil de leer pero es interesante y buen candidato para estoicismo práctico; recomienda las ediciones de Gredos."
   sources:
@@ -669,6 +759,10 @@
       title: "Tierlist de filósofos estoicos. ¿Son como en las redes sociales?"
       timestamp: "77:44"
       quote: "los discursos de Picteto, arriano era, estaba en lo correcto, el manual o los fragmentos de gredos"
+    - url: "https://www.youtube.com/watch?v=3Hgb_e_oGGQ&t=614s"
+      title: "Esto NO ES ESTOICISMO."
+      timestamp: "10:14"
+      quote: "el Picteto en sus disertaciones famosamente suscribe a la teoría social extraña"
   isbn: "9788424916282"
   coverId: 7024260
 
@@ -679,6 +773,7 @@
   kind: book
   topics: ["filosofia"]
   level: 2
+  recommendation: interesante
   summary: "Colección de cartas de Séneca a Lucilio con consejos de ética estoica."
   context: "Resalta su erudición y buena síntesis del estoicismo; lo ubica entre los mejores textos de Séneca."
   sources:
@@ -705,6 +800,7 @@
   kind: essay
   topics: ["filosofia"]
   level: 2
+  recommendation: interesante
   summary: "Poema de unas 39 líneas de Cleantes, escolarca estoico, dedicado a Zeus; casi el único texto estoico antiguo completo."
   context: "Texto muy corto que sugiere leer acompañado de comentario, para entender sus implicancias filosóficas."
   sources:
@@ -722,6 +818,7 @@
   kind: book
   topics: ["filosofia", "historia"]
   level: 2
+  recommendation: interesante
   summary: "Compilación de Diógenes Laercio con biografías y doctrinas de filósofos griegos."
   context: "Sugiere leer solo las secciones sobre los estoicos."
   sources:
@@ -741,6 +838,7 @@
   kind: book
   topics: ["filosofia"]
   level: 3
+  recommendation: interesante
   summary: "Diálogo de Cicerón que expone y critica las escuelas epicúrea, estoica y académica sobre el bien supremo."
   context: "Admite que no lo mencionó antes; dice que es muy bueno y con elevada discusión sobre estoicismo y epicureísmo."
   sources:
@@ -759,6 +857,7 @@
   kind: book
   topics: ["filosofia"]
   level: 3
+  recommendation: fuerte
   summary: "Dos ensayos opuestos: Smart defiende el utilitarismo y Williams lo critica."
   context: "Lo llama excelente y una revisión muy interesante del utilitarismo."
   sources:
@@ -776,6 +875,7 @@
   kind: book
   topics: ["filosofia"]
   level: 4
+  recommendation: fuerte
   summary: "Antología comentada de textos de estoicos, epicúreos y escépticos, de Long y Sedley."
   context: "Lo llama brillante, clásico y denso; se consigue en español y conviene leerlo entero."
   sources:
@@ -797,6 +897,7 @@
   kind: book
   topics: ["historia"]
   level: 1
+  recommendation: fuerte
   summary: "Panorama de la civilización griega clásica y su mentalidad, de H. D. F. Kitto."
   context: "Se lo dieron en la carrera de filosofía; lo llama \"librazo\", más general e histórico."
   sources:
@@ -804,7 +905,7 @@
       title: "Tierlist de filósofos estoicos. ¿Son como en las redes sociales?"
       timestamp: "78:54"
       quote: "los griegos de Quito, HDF Kito, es un librazo"
-  leadsTo: ["the-ancient-world-glover"]
+  leadsTo: ["the-ancient-world-glover", "hero-with-a-thousand-faces"]
   isbn: "9780140135213"
   coverId: 9285777
 
@@ -815,6 +916,7 @@
   kind: book
   topics: ["historia"]
   level: 1
+  recommendation: fuerte
   summary: "Panorama de la historia argentina escrito para el gran público por Félix Luna."
   context: "Es su elección principal: si tuviera que recomendar un libro de historia argentina, sería este."
   sources:
@@ -822,7 +924,7 @@
       title: "Libros de historia Argentina que TENÉS que leer."
       timestamp: "3:13"
       quote: "si tengo que recomendar un libro de historia argentina, probablemente recomendaría ir por por este"
-  leadsTo: ["breve-historia-contemporanea-de-la-argentina", "el-45", "la-patagonia-rebelde"]
+  leadsTo: ["breve-historia-contemporanea-de-la-argentina", "el-45", "la-patagonia-rebelde", "la-comunidad-organizada", "the-federalist-papers"]
   isbn: "9789507428111"
 
 - id: los-argentinos-lanata
@@ -832,6 +934,7 @@
   kind: book
   topics: ["historia"]
   level: 1
+  recommendation: fuerte
   summary: "Crónica periodística de la historia argentina en dos tomos de Jorge Lanata."
   context: "Le encantó el tomo 2 y siempre le pareció un excelente libro, aunque admite que Lanata es polémico."
   sources:
@@ -839,6 +942,14 @@
       title: "Libros de historia Argentina que TENÉS que leer."
       timestamp: "0:28"
       quote: "a mí me encantó de historia argentina, argentinos de Jorge la nata... a mí siempre me pareció un excelente libro"
+    - url: "https://www.youtube.com/watch?v=CNDOKdQULEk&t=416s"
+      title: "La campaña anti Argentina."
+      timestamp: "6:56"
+      quote: "lo leí en un libro de la nata esto en argentinos, que es uno de los libros favoritos de historia contemporánea argentina"
+    - url: "https://www.youtube.com/watch?v=MhI4umaq5L4&t=1036s"
+      title: "Bajan la edad imputabilidad y está un poco raro."
+      timestamp: "17:16"
+      quote: "creo que lo leí en Argentinos de Jorge Lan. Es un muy buen libro, dicho se de pas"
   leadsTo: ["operacion-masacre"]
   isbn: "9788466613385"
   coverId: 3346402
@@ -850,6 +961,7 @@
   kind: book
   topics: ["historia", "sistemas"]
   level: 1
+  recommendation: interesante
   summary: "Gleick investiga el origen y la evolución cultural de la idea del viaje en el tiempo."
   context: "Lo suma como el otro libro de Gleick que le gusta (\"dos libros muy lindos\")."
   sources:
@@ -857,6 +969,14 @@
       title: "Libros de autoayuda no TAN malos."
       timestamp: "24:13"
       quote: "Time, ese también. Time travel history. Dos libros muy lindos."
+    - url: "https://www.youtube.com/watch?v=gIR5aqafNZA&t=896s"
+      title: "Viaje en el Tiempo III. El futuro y su pasado."
+      timestamp: "14:56"
+      quote: "en su libro sobre el tema de james gleick da una explicación lingüística que resulta muy atractiva"
+    - url: "https://www.youtube.com/watch?v=g8nNuOBLAkU&t=52s"
+      title: "Los testers están infravalorados."
+      timestamp: "0:52"
+      quote: "Lo que es el mismo James que escribió el libro sobre viaje en el tiempo"
   isbn: "9780008207670"
   coverId: 7886899
 
@@ -867,6 +987,7 @@
   kind: book
   topics: ["historia"]
   level: 2
+  recommendation: fuerte
   summary: "Introducción de T. R. Glover a la historia del mundo antiguo mediterráneo, de Grecia a Roma."
   context: "Es su libro favorito sobre Grecia desde chico: lo leyó unas cinco veces y perdió su copia física."
   sources:
@@ -884,6 +1005,7 @@
   kind: book
   topics: ["historia"]
   level: 2
+  recommendation: interesante
   summary: "Síntesis de la historia argentina del siglo XX, de Luis Alberto Romero."
   context: "Uno de los dos que más le gustan: \"muy lindo libro de historia\"."
   sources:
@@ -891,7 +1013,11 @@
       title: "Libros de historia Argentina que TENÉS que leer."
       timestamp: "1:44"
       quote: "hay dos que me gustan... el primero es de Luis Alberto Romero... muy lindo libro de historia"
-  leadsTo: ["la-formacion-del-estado-argentino"]
+    - url: "https://www.youtube.com/watch?v=7dZsM8TaWLk&t=208s"
+      title: "Hackearon el senado de Mendoza y es un papelon..."
+      timestamp: "3:28"
+      quote: "no te digo agarrate breve historia contemporánea de la Argentina, no te digo ponerte a leer toda la bibliografía de Romero"
+  leadsTo: ["la-formacion-del-estado-argentino", "revolucion-y-guerra"]
   isbn: "9789505579242"
   coverId: 1052132
 
@@ -902,6 +1028,7 @@
   kind: book
   topics: ["historia"]
   level: 2
+  recommendation: fuerte
   summary: "Crónica de Félix Luna sobre 1945, el año del surgimiento del peronismo."
   context: "Lo llama \"librazo\" sobre el origen del peronismo."
   sources:
@@ -918,6 +1045,7 @@
   kind: book
   topics: ["historia"]
   level: 2
+  recommendation: fuerte
   summary: "Investigación de Osvaldo Bayer sobre las huelgas rurales y su represión en la Patagonia (1920-21)."
   context: "Lo recomienda como lectura que \"te hace hervir la sangre\", aclarando que tiene sesgo."
   sources:
@@ -929,6 +1057,10 @@
       title: "Libros de historia Argentina que TENÉS que leer."
       timestamp: "7:10"
       quote: "Hay otro libro que a mí me gusta mucho... es la Patagonia rebelde de Bayer. Bastante interesante lectura"
+    - url: "https://www.youtube.com/watch?v=BXO8Gas3lQs&t=4357s"
+      title: "1 EMPRESARIO vs. 20 TRABAJADORES | Reacción"
+      timestamp: "72:37"
+      quote: "igual lean la Patagonia rebelde, boludo."
   isbn: "9789504909453"
   coverId: 13223189
 
@@ -939,6 +1071,7 @@
   kind: book
   topics: ["historia"]
   level: 2
+  recommendation: interesante
   summary: "Investigación periodística de Rodolfo Walsh sobre los fusilamientos de José León Suárez (1956)."
   context: "Dice que es \"bastante lindo como libro\" y que da inicio al género del periodismo histórico."
   sources:
@@ -959,6 +1092,7 @@
   kind: book
   topics: ["historia"]
   level: 3
+  recommendation: interesante
   summary: "Estudio de Oscar Oszlak sobre cómo se construyó el Estado nacional argentino."
   context: "Lo leyó en la universidad; \"interesante\", algo sesgado hacia la izquierda pero valioso."
   sources:
@@ -977,6 +1111,8 @@
   kind: book
   topics: ["historia", "filosofia"]
   level: 3
+  recommendation: fuerte
+  leadsTo: ["homo-sacer"]
   summary: "Crónica del juicio a Adolf Eichmann en Jerusalén (1961). Arendt desarrolla la idea de la \"banalidad del mal\" al retratar a un burócrata antes que a un monstruo."
   context: "Lo llama \"librazo\" y lo vincula con Milgram: tras leerlo concluye que Eichmann no era un simple autómata."
   sources:
@@ -984,6 +1120,18 @@
       title: "El experimento de Milgram y recomendando un par de libros."
       timestamp: "2:09"
       quote: "el liberazo de Arentman en Jerusalén es el de la banalidad del mal"
+    - url: "https://www.youtube.com/watch?v=Af3NmSP6h_E&t=1872s"
+      title: "El Nostradamus chino: Profesor Jiang."
+      timestamp: "31:12"
+      quote: "Hman en Jerusalén, el libro de Aren, está bastante documentado"
+    - url: "https://www.youtube.com/watch?v=CNDOKdQULEk&t=448s"
+      title: "La campaña anti Argentina."
+      timestamp: "7:28"
+      quote: "el famoso libro de Gent, ¿no? Eichichman en Jerusalén"
+    - url: "https://www.youtube.com/watch?v=Jd7ACGc63wI&t=1161s"
+      title: "Forobardo de la semana: “¿Es moral hacer páginas a estafadores?”"
+      timestamp: "19:21"
+      quote: "la tesis de la banalidad del mal de de aren eh la idea de que muchos de los bajos mandos del nazismo eran simplemente personas como eichmann"
   related:
     - id: obedience-to-authority
       reason: "obediencia a la autoridad y banalidad del mal"
@@ -998,6 +1146,7 @@
   kind: book
   topics: ["desarrollo-personal"]
   level: 1
+  recommendation: fuerte
   summary: "James Clear presenta un sistema práctico para formar buenos hábitos y eliminar los malos mediante cambios pequeños y constantes."
   context: "Es el único libro de autoayuda que recomendaría honestamente; lo ubica primero en su lista y lo regaló a su pareja."
   sources:
@@ -1009,6 +1158,14 @@
       title: "Libros de AUTOAYUDA que SÍ SIRVEN."
       timestamp: "1:04"
       quote: "El primer libro de la lista es el más obvio de todos y se trata de Hábitos Atómicos... Me gustó mucho en su momento"
+    - url: "https://www.youtube.com/watch?v=Y1TukyHR4VU&t=205s"
+      title: "Dager explica como se organiza en un día a día."
+      timestamp: "3:25"
+      quote: "Todo eso está en Atomic Habits, que es un librazo"
+    - url: "https://www.youtube.com/watch?v=uwJRGMRpBkE&t=4998s"
+      title: "Dager te enseña a hacer un server DNS #5."
+      timestamp: "83:18"
+      quote: "Sácate las distracciones del camino Le atomic habits que tiene muchos buenos consejos sobre cómo hacer esa clase de cosas"
   isbn: "9780735211292"
   coverId: 12539702
 
@@ -1020,6 +1177,7 @@
   kind: book
   topics: ["desarrollo-personal"]
   level: 1
+  recommendation: interesante
   summary: "Jordan Peterson propone doce principios para ordenar la vida personal, mezclando psicología, filosofía y religión."
   context: "Lo recomienda pese a que Peterson le parece \"medio chanta\": es conciso y varias reglas son buenas; complementa a Hábitos atómicos."
   sources:
@@ -1031,6 +1189,10 @@
       title: "Libros de AUTOAYUDA que SÍ SIRVEN."
       timestamp: "4:52"
       quote: "me pareció sorprendentemente útil... por eso está en la lista complementando a Hábitos Atómicos"
+    - url: "https://www.youtube.com/watch?v=T_yIGzGG_EE&t=1178s"
+      title: "No sos tan productivo como pensas."
+      timestamp: "19:38"
+      quote: "Sacando un capítulo del libro de Jordan Peterson. Yo creo que eso es lo mejor que lo mejor que tiene Jordan Peterson es esa idea de controlar tu entorno"
   isbn: "9780345816023"
   coverId: 8131760
 
@@ -1042,6 +1204,7 @@
   kind: book
   topics: ["desarrollo-personal"]
   level: 1
+  recommendation: interesante
   leadsTo: ["fooled-by-randomness"]
   summary: "Carol Dweck distingue la mentalidad fija de la de crecimiento y su efecto en el aprendizaje y el logro."
   context: "En un stream lo pone en el nivel medio (\"cringe\" pero con una enseñanza útil); en el video de autoayuda lo recomienda sin nombrarlo."
@@ -1065,7 +1228,8 @@
   kind: book
   topics: ["desarrollo-personal", "filosofia"]
   level: 1
-  leadsTo: ["obedience-to-authority"]
+  recommendation: fuerte
+  leadsTo: ["obedience-to-authority", "evil-baumeister"]
   summary: "Frankl relata su experiencia en campos de concentración y presenta la logoterapia, centrada en encontrar sentido."
   context: "Lo leyó esa semana y lo elogia espontáneamente: \"muy lindo libro, me pareció hermoso\"."
   sources:
@@ -1073,6 +1237,10 @@
       title: "Libros de autoayuda no TAN malos."
       timestamp: "13:18"
       quote: "un libro muy lindo que leí hace poco, esta semana, de Víctor Frankle ... Muy muy lindo libro, me pareció hermoso."
+    - url: "https://www.youtube.com/watch?v=UdT_LHrU9Lg&t=519s"
+      title: "Jugando The Spell Brigade de chill."
+      timestamp: "8:39"
+      quote: "Víctor Frankle en El hombre en busca del sentido, ¿no? Tiene una serie de pasajes dedicadas a los capos"
   isbn: "9783641059033"
   coverId: 8516506
 
@@ -1083,6 +1251,7 @@
   kind: book
   topics: ["desarrollo-personal"]
   level: 1
+  recommendation: fuerte
   summary: "Libro muy breve y gratuito de Julien Smith sobre superar el miedo que nos frena a actuar."
   context: "Lo pone en el nivel más alto por costo-beneficio: se lee en 45 minutos y es excelente."
   sources:
@@ -1090,6 +1259,10 @@
       title: "Libros de autoayuda no TAN malos."
       timestamp: "36:07"
       quote: "de Flinch es un muy buen libro, costo beneficio es excelente, es un libro super resumido, lo podés leer en 45 minutos"
+    - url: "https://www.youtube.com/watch?v=rffY9KY9VKE&t=16s"
+      title: "Lo que te este preocupando probablemente no debería."
+      timestamp: "0:16"
+      quote: "no mencionamos a The Flinch, que para mí es excelente, es gratis, lo pueden buscar"
   coverId: 11443316
 
 - id: deep-work
@@ -1100,6 +1273,7 @@
   kind: book
   topics: ["desarrollo-personal"]
   level: 1
+  recommendation: fuerte
   summary: "Cal Newport defiende el trabajo profundo, sin distracciones, como habilidad escasa y valiosa, y ofrece reglas para cultivarlo."
   context: "Lo considera de los mejores del género: \"muy buen libro\", excelente complemento para evitar distracciones."
   sources:
@@ -1125,6 +1299,7 @@
   kind: book
   topics: ["desarrollo-personal"]
   level: 1
+  recommendation: interesante
   summary: "Cal Newport propone una filosofía de uso deliberado de la tecnología para recuperar la atención."
   context: "Lo menciona junto a Deep Work como \"realmente muy bueno\" sin estar seguro del título."
   sources:
@@ -1136,6 +1311,7 @@
       title: "Libros de AUTOAYUDA que SÍ SIRVEN."
       timestamp: "9:20"
       quote: "cualquiera de ese mismo autor, también está uno que se llama creo que minimalismo digital"
+  leadsTo: ["the-shallows"]
   isbn: "9780525536512"
   coverId: 8507540
 
@@ -1147,6 +1323,7 @@
   kind: book
   topics: ["desarrollo-personal"]
   level: 1
+  recommendation: fuerte
   summary: "Clásico de Dale Carnegie con principios para relacionarse y persuadir."
   context: "Lo ubica en el nivel más alto: le ayudó con la ansiedad social y lo recomienda como lectura de habilidades blandas."
   sources:
@@ -1178,6 +1355,7 @@
   kind: textbook
   topics: ["desarrollo-personal"]
   level: 1
+  recommendation: interesante
   summary: "Manual gratuito de OpenStax para estudiantes universitarios: técnicas de estudio, toma de notas, gestión del tiempo y bienestar."
   context: "Lo ve como un manual de supervivencia académica muy útil; el autor exacto lo duda pero lo recomienda para estudiar."
   sources:
@@ -1189,6 +1367,10 @@
       title: "Libros de AUTOAYUDA que SÍ SIRVEN."
       timestamp: "7:25"
       quote: "me gustó mucho este libro que se llama College Success... en general es un buen manual de supervivencia académico"
+    - url: "https://www.youtube.com/watch?v=Y1TukyHR4VU&t=50s"
+      title: "Dager explica como se organiza en un día a día."
+      timestamp: "0:50"
+      quote: "se llama College College Success, el libro ese que está bastante copado y es gratis"
   leadsTo: ["karpicke-retrieval-practice-papers"]
   isbn: "9781640323490"
   coverId: 15113587
@@ -1200,9 +1382,15 @@
   kind: book
   topics: ["desarrollo-personal", "filosofia"]
   level: 1
+  recommendation: interesante
   summary: "Madsen Pirie repasa falacias lógicas y técnicas retóricas, tanto para argumentar como para detectar malos argumentos."
-  context: "Aparece en su lista de notas de lectura, sin comentarios."
+  context: "Dice que lo leyó pero que no es tan bueno: es más una lista de falacias y de cómo detectarlas y utilizarlas."
   isbn: "9780826490063"
+  sources:
+    - url: "https://www.youtube.com/watch?v=NUr6WVl1u0k&t=515s"
+      title: "Cómo dejar de ser gordo compu y ser gordo empresarial."
+      timestamp: "8:35"
+      quote: "Ese lo leí, pero no es tan bueno. Es más una lista de falacias y de cómo detectarlas y utilizarlas."
 
 - id: win-every-argument
   title: "Win Every Argument"
@@ -1211,8 +1399,14 @@
   kind: book
   topics: ["desarrollo-personal", "oficio"]
   level: 1
+  recommendation: interesante
   summary: "Mehdi Hasan ofrece un manual de debate, persuasión y oratoria basado en su experiencia como periodista y polemista."
-  context: "Aparece en su lista de notas de lectura, sin comentarios."
+  context: "Lo ubica como buen libro de debate: enseña cómo debate Hasan, periodista famoso por hablar rápido y debatir bien (a veces de mala fe), e incluye un apartado sobre cómo presentar en público."
+  sources:
+    - url: "https://www.youtube.com/watch?v=NUr6WVl1u0k&t=523s"
+      title: "Cómo dejar de ser gordo compu y ser gordo empresarial."
+      timestamp: "8:43"
+      quote: "Win every argument de Hassan. Medassam. Este es un periodista, es famoso por hablar muy rápido"
   isbn: "9781250853462"
   coverId: 12688074
 
@@ -1224,6 +1418,8 @@
   kind: book
   topics: ["desarrollo-personal", "matematicas"]
   level: 2
+  recommendation: interesante
+  leadsTo: ["the-black-swan"]
   summary: "Taleb explora el papel del azar en los mercados y la vida, y nuestros sesgos al explicar los éxitos."
   context: "Le parece buen libro con enseñanzas copadas, aunque le cansa la personalidad de Taleb y sus ataques a la filosofía."
   sources:
@@ -1251,6 +1447,7 @@
   kind: book
   topics: ["historia", "desarrollo-personal"]
   level: 2
+  recommendation: interesante
   leadsTo: ["eichmann-in-jerusalem"]
   summary: "Milgram describe sus experimentos en Yale sobre obediencia, donde personas comunes aplicaban supuestas descargas eléctricas por orden de una autoridad. Analiza por qué se obedece aun causando daño."
   context: "Lo recomienda como lectura breve e interesante sobre obediencia, junto a Eichmann en Jerusalén; distingue el paper original del libro más largo."
@@ -1273,6 +1470,7 @@
   kind: paper
   topics: ["desarrollo-personal"]
   level: 3
+  recommendation: interesante
   summary: "Artículo de Roediger y Karpicke (Psychological Science, 2006) que muestra que rendir pruebas mejora la retención a largo plazo (efecto de prueba)."
   context: "Muestra el paper de 2006 y dice \"muy buen paper, lo recomiendo\"; también menciona uno de 2011 de Karpicke (título exacto inferido)."
   sources:
@@ -1280,6 +1478,10 @@
       title: "Como leer, pero bien."
       timestamp: "10:50"
       quote: "It's from 2006. Very good paper, I recommend it."
+    - url: "https://www.youtube.com/watch?v=6Xij6NcnqLc&t=203s"
+      title: "CÓMO RECORDAR TODO LO QUE LEES."
+      timestamp: "3:23"
+      quote: "un fragmento de un paper que vas a encontrar en la descripción, que es bastante relevante para este tema. Es bastante conocido, desde el 2011"
 
 - id: the-lean-startup
   title: "The Lean Startup"
@@ -1289,6 +1491,7 @@
   kind: book
   topics: ["startups"]
   level: 1
+  recommendation: interesante
   summary: "Eric Ries propone construir startups con ciclos cortos de experimentación (construir-medir-aprender) en lugar de planificar en cascada."
   context: "Dice que es muy bueno pero que es el obvio que todos recomiendan."
   sources:
@@ -1299,6 +1502,10 @@
       title: "Libros para ser mejor gordo empresario. #fyp #programacion #clips"
       timestamp: "2:31"
       quote: "Este es muy bueno."
+    - url: "https://www.youtube.com/watch?v=NUr6WVl1u0k&t=301s"
+      title: "Cómo dejar de ser gordo compu y ser gordo empresarial."
+      timestamp: "5:01"
+      quote: "es de Starup, tiene todo un método... Este es muy bueno, buen libro realmente sobre materia de startups"
   leadsTo: ["how-to-fuck-up-your-startup"]
   isbn: "9780307887894"
   coverId: 7104760
@@ -1310,6 +1517,7 @@
   kind: book
   topics: ["startups"]
   level: 1
+  recommendation: interesante
   summary: "Entrevistas a fundadores de startups de rápido crecimiento con lecciones prácticas, de David Kidder."
   context: "Es el tercero de su lista de libros de emprendimiento que le gustaron bastante."
   sources:
@@ -1317,6 +1525,10 @@
       title: "Libros para ser mejor gordo empresario. #fyp #programacion #clips"
       timestamp: "2:35"
       quote: "Tercer libro que a mí me gustó bastante es The Startup Playbook."
+    - url: "https://www.youtube.com/watch?v=NUr6WVl1u0k&t=330s"
+      title: "Cómo dejar de ser gordo compu y ser gordo empresarial."
+      timestamp: "5:30"
+      quote: "Tercer libro que a mí me gustó bastante es The Startup Playbook"
   leadsTo: ["how-to-fuck-up-your-startup"]
   isbn: "9781452105048"
   coverId: 12177932
@@ -1328,6 +1540,7 @@
   kind: book
   topics: ["startups"]
   level: 1
+  recommendation: interesante
   summary: "Ali y Kubba sostienen que cada persona tiene ventajas injustas (contactos, aptitudes, circunstancias) que puede usar para emprender."
   context: "Dice que no le gusta tanto como libro (\"muy bro empresario\") pero la idea general está buena; lo menciona como honorífico."
   sources:
@@ -1353,6 +1566,7 @@
   kind: book
   topics: ["startups"]
   level: 2
+  recommendation: interesante
   summary: "Kim Hvidkjaer analiza las causas por las que fracasan la mayoría de las startups y cómo evitarlas."
   context: "Le gusta porque se centra en el fracaso (sin sesgo de supervivencia) y lo recomienda para emprender."
   sources:
@@ -1363,6 +1577,10 @@
       title: "Libros para ser mejor gordo empresario. #fyp #programacion #clips"
       timestamp: "0:22"
       quote: "How to Fuck Up Your Startup apparently es un buen libro en ese sentido. Me gusta este libro porque se centra en el fracaso"
+    - url: "https://www.youtube.com/watch?v=NUr6WVl1u0k&t=111s"
+      title: "Cómo dejar de ser gordo compu y ser gordo empresarial."
+      timestamp: "1:51"
+      quote: "Apparently es un buen libro en ese sentido. Me gusta este libro porque se centra en historias de antieéxito"
   isbn: "9781637740590"
 
 - id: joel-on-software
@@ -1372,6 +1590,7 @@
   kind: book
   topics: ["oficio"]
   level: 1
+  recommendation: fuerte
   summary: "Ensayos de Joel Spolsky sobre desarrollo de software, gestión de equipos y la industria."
   context: "Expresa \"amor eterno\" por su estilo irreverente; lo recomienda para liderazgo y trato con personas."
   sources:
@@ -1392,7 +1611,7 @@
       title: "Más allá del código | 3 habilidades para ser mejor programador"
       timestamp: "4:01"
       quote: "peopleware y J software estos últimos dos son relacionados al management de proyectos de software"
-  leadsTo: ["peopleware", "the-mythical-man-month", "clean-code"]
+  leadsTo: ["peopleware", "the-mythical-man-month", "clean-code", "the-corrosion-of-character"]
   isbn: "9781590593899"
   coverId: 861359
 
@@ -1403,6 +1622,7 @@
   kind: book
   topics: ["oficio"]
   level: 1
+  recommendation: fuerte
   summary: "John Sonmez cubre carrera, productividad, marca personal y finanzas para desarrolladores."
   context: "Es su libro favorito de gestión de carrera y freelancing: \"librazo\" con mucha data, aunque se vuelve denso."
   sources:
@@ -1417,6 +1637,10 @@
       title: "El freelance es clave. #fyp #dev #freelance #programacion #clips #libros"
       timestamp: "1:30"
       quote: "Mi libro favorito hace tiempo de eso es de John Sommes, se llama Soft Skills. Este excelente libro"
+    - url: "https://www.youtube.com/watch?v=NUr6WVl1u0k&t=584s"
+      title: "Cómo dejar de ser gordo compu y ser gordo empresarial."
+      timestamp: "9:44"
+      quote: "Siempre que me preguntas esta clase de libros, menciono soft skills porque para mí es un muy buen libro para desarrolladores"
   leadsTo: ["the-pragmatic-programmer"]
   isbn: "9781617292392"
   coverId: 7443191
@@ -1428,8 +1652,14 @@
   kind: book
   topics: ["oficio", "desarrollo-personal"]
   level: 1
+  recommendation: interesante
   summary: "Guía de Mark Rhodes para hablar en público y presentar con confianza en cualquier situación."
-  context: "Solo aparece en su lista de notas sin comentario; no hay fuente de video."
+  context: "Lo recomienda en su video de soft skills para quien es el técnico del equipo: tras dar un pitch a un cliente reconoció varias trampas que menciona el libro, y dice que ayuda con el nerviosismo."
+  sources:
+    - url: "https://www.youtube.com/watch?v=NUr6WVl1u0k&t=383s"
+      title: "Cómo dejar de ser gordo compu y ser gordo empresarial."
+      timestamp: "6:23"
+      quote: "cómo presentar absolutamente cualquier persona, how to present to absolutely anyone"
   isbn: "9780857087737"
 
 - id: youre-not-listening
@@ -1440,6 +1670,7 @@
   kind: book
   topics: ["oficio", "desarrollo-personal"]
   level: 1
+  recommendation: mencion
   summary: "Kate Murphy explica por qué escuchamos mal y cómo escuchar mejor."
   context: "Aparece en su lista de lecturas de habilidades blandas en Reddit."
   sources:
@@ -1457,6 +1688,7 @@
   kind: book
   topics: ["oficio"]
   level: 2
+  recommendation: interesante
   summary: "Consejos prácticos de Hunt y Thomas sobre oficio, diseño y hábitos para ser mejor programador."
   context: "Lo ve como clásico y lectura para ser mejor líder/profesional; insiste en la edición del 20.º aniversario por un error en la explicación de DRY de la original."
   sources:
@@ -1486,6 +1718,7 @@
   kind: book
   topics: ["oficio"]
   level: 2
+  recommendation: interesante
   summary: "Robert C. Martin presenta principios y prácticas para escribir código legible y mantenible."
   context: "Le sigue pareciendo lindo si no se dogmatiza y se atiende a las ideas más que a los ejemplos, que son bastante malos."
   sources:
@@ -1496,7 +1729,15 @@
       title: "Forobardo de la semana: \"Un senior con el sueldo de un JR.\""
       timestamp: "4:07"
       quote: "parece una persona que no lee libros técnicos tratando de fingir que lee libros técnicos porque leyó kin code"
-  leadsTo: ["design-patterns-gof", "domain-driven-design"]
+    - url: "https://www.youtube.com/watch?v=PVjcZBCLtfU&t=7059s"
+      title: "Dager te enseña a hacer un server DNS #3."
+      timestamp: "117:39"
+      quote: "es un lindo libro yo lo recomiendo es un buen libro no se lo tomen como una Biblia"
+    - url: "https://www.youtube.com/watch?v=be-K17dFNFI&t=27s"
+      title: "No entendés DRY."
+      timestamp: "0:27"
+      quote: "yo la primera vez que me lo topé fue en cin code otro libro que está bastante bueno en el cual el tío Bob se anima a decir"
+  leadsTo: ["design-patterns-gof", "domain-driven-design", "refactoring"]
   isbn: "9780132350884"
   coverId: 8065615
 
@@ -1507,6 +1748,7 @@
   kind: book
   topics: ["oficio"]
   level: 2
+  recommendation: interesante
   summary: "Clásico de DeMarco y Lister sobre que los problemas de los proyectos de software son sobre todo humanos."
   context: "Lo recomienda para habilidades blandas y gestión de proyectos de software, junto a Joel on Software."
   sources:
@@ -1528,6 +1770,7 @@
   kind: book
   topics: ["oficio"]
   level: 2
+  recommendation: interesante
   summary: "Colección de ensayos de Brooks sobre gestión de proyectos de software; su tesis central es que sumar gente a un proyecto atrasado lo atrasa más."
   context: "Recomienda en especial el ensayo (sobrecarga de comunicación al crecer el equipo), útil al organizar equipos, y le interesa el libro completo."
   sources:
@@ -1541,6 +1784,10 @@
       title: "Los mejores libros para aprender a programar."
       timestamp: "6:36"
       quote: "está bueno si tenés que organizar equipos de software o tenés que empezar a pensar en esas cosas"
+    - url: "https://www.youtube.com/watch?v=HAxI7OF7d0k&t=3414s"
+      title: "1 EMPRESARIO VS 20 EMPLEADOS | Reacción"
+      timestamp: "56:54"
+      quote: "Todo eso con The Mystical Man Month, buen libro, se los recomiendo."
   isbn: "9780201835953"
   coverId: 6915361
 
@@ -1551,6 +1798,7 @@
   kind: book
   topics: ["arquitectura"]
   level: 1
+  recommendation: fuerte
   summary: "Libro de Alexander Shvets (refactoring.guru) que explica patrones de diseño y principios de refactoring."
   context: "Dice que lo consiguió en refactoring.guru y \"no puede dejar de recomendarlo\"."
   sources:
@@ -1560,6 +1808,10 @@
     - url: "https://github.com/MarianoVilla/MarianoVilla/blob/main/README.md"
       title: "GitHub: MarianoVilla/MarianoVilla README (Recommended Readings)"
       quote: "got it from the mythical refactoring.guru and can't recommend it enough"
+    - url: "https://www.youtube.com/watch?v=UZyJbjzZcoU&t=8s"
+      title: "Superficial knowledge is holding you back."
+      timestamp: "0:08"
+      quote: "Refactoring Guru. Tiene un libro que está bueno sobre eso"
   leadsTo: ["head-first-design-patterns", "fundamentals-of-software-architecture"]
   coverId: 12941546
 
@@ -1570,6 +1822,7 @@
   kind: book
   topics: ["arquitectura"]
   level: 2
+  recommendation: interesante
   summary: "Introducción visual y amigable a los patrones de diseño, de la serie Head First."
   context: "Más amigable que GoF; recomienda la colección Head First en su conjunto, aunque duda del argumento neurocientífico de la serie."
   sources:
@@ -1591,6 +1844,7 @@
   kind: book
   topics: ["arquitectura"]
   level: 2
+  recommendation: fuerte
   summary: "Panorama de la arquitectura de software: estilos, características y decisiones, escrito por Richards y Ford con enfoque de ingeniería."
   context: "Es su libro favorito de arquitectura por ser un overview muy concreto, completo y bien escrito."
   sources:
@@ -1607,7 +1861,7 @@
       title: "Los mejores libros para aprender a programar."
       timestamp: "2:35"
       quote: "se convirtió en mi libro favorito sobre arquitectura porque es un overview super concreto"
-  leadsTo: ["building-microservices", "designing-data-intensive-applications"]
+  leadsTo: ["building-microservices", "designing-data-intensive-applications", "rest-fielding-dissertation"]
   isbn: "9781492043454"
   coverId: 10193363
 
@@ -1619,6 +1873,7 @@
   kind: book
   topics: ["arquitectura"]
   level: 3
+  recommendation: mencion
   summary: "El libro de la \"Banda de los Cuatro\" que cataloga 23 patrones de diseño orientado a objetos."
   context: "Lo menciona como el libro de GoF, sin más comentarios, dentro de su bloque de OOP."
   sources:
@@ -1639,6 +1894,7 @@
   kind: book
   topics: ["arquitectura"]
   level: 3
+  recommendation: interesante
   summary: "Guía de Sam Newman para diseñar, desplegar y operar sistemas basados en microservicios."
   context: "Lo recomienda como introducción a los problemas de arquitectura distribuida, con buenas explicaciones de contenedores."
   sources:
@@ -1665,6 +1921,7 @@
   kind: book
   topics: ["arquitectura", "sistemas"]
   level: 3
+  recommendation: mencion
   summary: "Guía de Kleppmann sobre los principios de sistemas de datos: almacenamiento, replicación, particionado y procesamiento."
   context: "Figura en sus notas como recomendación de arquitectura, pero no se encontró mención en las transcripciones revisadas."
   isbn: "9781449373320"
@@ -1677,6 +1934,7 @@
   kind: book
   topics: ["arquitectura"]
   level: 4
+  recommendation: interesante
   summary: "Eric Evans introduce el diseño guiado por el dominio: lenguaje ubicuo, bounded contexts y modelado estratégico."
   context: "Lo recomienda \"de yapa\" al hablar de microservicios y Bounded Context (que atribuyó a Fowler)."
   sources:
@@ -1685,3 +1943,2202 @@
       quote: "Y de yapa Domain-Driven Design... Bounded Context (he attributes it to Fowler; the book is by Evans)"
   isbn: "9780321125217"
   coverId: 5548424
+
+# --- IA y sociedad ---
+
+- id: ai-2027
+  title: "AI 2027"
+  authors: ["Daniel Kokotajlo", "Scott Alexander", "Thomas Larsen", "Eli Lifland", "Romeo Dean"]
+  year: 2025
+  kind: essay
+  topics: ["ia"]
+  level: 1
+  recommendation: interesante
+  summary: "Escenario web detallado y basado en investigación sobre cómo podría desarrollarse la superinteligencia artificial hasta 2027 y después."
+  context: "Lo describe como medio fan fiction pero bastante investigado, y lo recomienda."
+  sources:
+    - url: "https://www.youtube.com/watch?v=Fz2Q_zZ3Fd4&t=0s"
+      title: "¿Una super inteligencia artificial?"
+      timestamp: "0:00"
+      quote: "es medio fan fiction, pero está bastante investigado, se los recomiendo"
+  leadsTo: ["superintelligence", "concrete-problems-in-ai-safety", "emergent-misalignment"]
+
+- id: stochastic-parrots
+  title: "On the Dangers of Stochastic Parrots"
+  authors: ["Emily M. Bender", "Timnit Gebru", "Angelina McMillan-Major", "Shmargaret Shmitchell"]
+  year: 2021
+  kind: paper
+  topics: ["ia"]
+  level: 1
+  recommendation: fuerte
+  summary: "Paper que advierte sobre los costos, los sesgos y la dificultad de auditar los enormes datasets con que se entrenan los modelos de lenguaje."
+  context: "Dice que lo menciona siempre y lo recomienda por lo que plantea sobre sesgos y datasets imposibles de auditar."
+  sources:
+    - url: "https://www.youtube.com/watch?v=lXJzahJ_HI0&t=581s"
+      title: "Se pudrió todo."
+      timestamp: "9:41"
+      quote: "Yo siempre menciono el paper The Dangers of Stocassic Parots... se los recomiendo"
+    - url: "https://www.youtube.com/watch?v=9JZRRFH4NcY&t=647s"
+      title: "El verdadero peligro de la IA"
+      timestamp: "10:47"
+      quote: "a estos loros estocásticos, como dice el famoso paper"
+    - url: "https://www.youtube.com/watch?v=nIR95vS5Cnk&t=925s"
+      title: "Usar mucha IA apaga partes de tu cerebro.."
+      timestamp: "15:25"
+      quote: "el famoso vaper de los loros estocásticos que es, no sé si lo recuerdan, On the Dangers of Stocastic Parots"
+  leadsTo: ["agents-of-chaos", "computer-power-and-human-reason", "the-illusion-of-thinking", "synthid-text"]
+
+- id: superintelligence
+  title: "Superintelligence"
+  titleEs: "Superinteligencia: caminos, peligros, estrategias"
+  authors: ["Nick Bostrom"]
+  year: 2014
+  kind: book
+  topics: ["ia"]
+  level: 2
+  recommendation: fuerte
+  summary: "Análisis de cómo podría surgir una superinteligencia artificial, qué riesgos plantea y qué estrategias podrían controlarla."
+  context: "Cita una frase de Bostrom y lo califica de muy buen libro; en otro video lo llama el hermoso libro Superintelligence."
+  sources:
+    - url: "https://www.youtube.com/watch?v=BjR5L0sf0kQ&t=497s"
+      title: "Layoffs gigantes \"por IA\" en META y Oracle.. o no."
+      timestamp: "8:17"
+      quote: "la frase del pelado Bostrom Super Intelligence, que es muy buen libro"
+    - url: "https://www.youtube.com/watch?v=YgQs3tq7uJ4&t=140s"
+      title: "¿Estamos en una simulación?"
+      timestamp: "2:20"
+      quote: "el mismo que escribió el hermoso libro Super Intelligence"
+  leadsTo: ["the-off-switch-game", "information-hazards"]
+  isbn: "9781501227745"
+  coverId: 8039542
+
+- id: concrete-problems-in-ai-safety
+  title: "Concrete Problems in AI Safety"
+  authors: ["Dario Amodei", "Chris Olah", "Jacob Steinhardt", "Paul Christiano", "John Schulman", "Dan Mané"]
+  year: 2016
+  kind: paper
+  topics: ["ia"]
+  level: 2
+  recommendation: interesante
+  summary: "Paper que identifica cinco problemas prácticos de seguridad en sistemas de aprendizaje automático, como los efectos secundarios y el reward hacking."
+  context: "Lo llama un paper bastante importante y una buena lectura, y promete pasar más fuentes por Discord."
+  sources:
+    - url: "https://www.youtube.com/watch?v=CYglM-Rg5_Y&t=261s"
+      title: "Todos cagados por la IA."
+      timestamp: "4:21"
+      quote: "un paper bastante importante, llama Concrete Problems in AI Safety ... Es un paper de 2016, es un buen paper, es una buena lectura"
+  leadsTo: ["the-off-switch-game"]
+
+- id: agents-of-chaos
+  title: "Agents of Chaos"
+  authors: ["Natalie Shapira", "Chris Wendler", "Avery Yen", "Gabriele Sarti", "Koyena Pal", "Olivia Floody", "Adam Belfki", "Alex Loftus"]
+  year: 2026
+  kind: paper
+  topics: ["ia"]
+  level: 2
+  recommendation: interesante
+  summary: "Reporte de un estudio de dos semanas con agentes autónomos de IA en un entorno real, que documenta fallas y comportamientos inesperados."
+  context: "Dedica un video a comentar este reporte y lo recomienda como lectura bastante copada."
+  sources:
+    - url: "https://www.youtube.com/watch?v=BW38cUQha38&t=22s"
+      title: "¿Puede un LLM soportar el día a día de un humano?"
+      timestamp: "0:22"
+      quote: "Agentes del caos se llama este reporte."
+    - url: "https://www.youtube.com/watch?v=BW38cUQha38&t=1686s"
+      title: "¿Puede un LLM soportar el día a día de un humano?"
+      timestamp: "28:06"
+      quote: "Se llama Agents of Chaos. está bastante bastante copado"
+
+- id: the-off-switch-game
+  title: "The Off-Switch Game"
+  authors: ["Dylan Hadfield-Menell", "Anca Dragan", "Pieter Abbeel", "Stuart Russell"]
+  year: 2016
+  kind: paper
+  topics: ["ia"]
+  level: 3
+  recommendation: interesante
+  summary: "Paper que modela con teoría de juegos si un robot racional dejaría que un humano lo apague."
+  context: "Cuenta que simula la situación de un humano y un robot con botón de apagado, y lo recomienda como muy interesante y bastante accesible."
+  sources:
+    - url: "https://www.youtube.com/watch?v=CYglM-Rg5_Y&t=2507s"
+      title: "Todos cagados por la IA."
+      timestamp: "41:47"
+      quote: "intentan simular las situaciones en las cuales tienes un humano y un robot y al robot le pones un off switch ... Lo pueden leer, es muy interesante y es bastante accesible"
+
+# --- Ficción ---
+
+- id: i-robot
+  title: "I, Robot"
+  titleEs: "Yo, robot"
+  authors: ["Isaac Asimov"]
+  year: 1950
+  kind: book
+  topics: ["ficcion", "ia"]
+  level: 1
+  recommendation: fuerte
+  summary: "Colección de cuentos de Asimov sobre las tres leyes de la robótica y las formas en que los robots las interpretan o esquivan."
+  context: "Dice que las leyes de la robótica no sirven como especificación y recomienda leer los libros de Asimov, mucho mejores que la película."
+  sources:
+    - url: "https://www.youtube.com/watch?v=CYglM-Rg5_Y&t=2681s"
+      title: "Todos cagados por la IA."
+      timestamp: "44:41"
+      quote: "todos los libros de Asimov sobre las leyes de la robótica ... vayan a leer de hecho los libros que son mucho mejores que esa película"
+  leadsTo: ["foundation-asimov", "frankenstein", "robots-should-be-slaves"]
+  related:
+    - id: "concrete-problems-in-ai-safety"
+      reason: "Las leyes de Asimov muestran, en ficción, el problema de especificar bien objetivos para una máquina"
+  isbn: "9780812439250"
+  coverId: 12385229
+
+- id: the-time-machine
+  title: "The Time Machine"
+  titleEs: "La máquina del tiempo"
+  authors: ["H. G. Wells"]
+  year: 1895
+  kind: book
+  topics: ["ficcion"]
+  level: 1
+  recommendation: interesante
+  summary: "Novela en la que un inventor viaja al año 802701 y descubre cómo evolucionó la humanidad."
+  context: "En su serie de videos sobre viajes en el tiempo dice que lo sorprendió positivamente lo detallada, clara y contemporánea que es la racionalización del viaje."
+  sources:
+    - url: "https://www.youtube.com/watch?v=gIR5aqafNZA&t=125s"
+      title: "Viaje en el Tiempo III. El futuro y su pasado."
+      timestamp: "2:05"
+      quote: "se suele mencionar la máquina del tiempo la novela de george orwell es publicada mil 895"
+    - url: "https://www.youtube.com/watch?v=1xC_vaWKcx0&t=930s"
+      title: "Viaje en el tiempo IV: El pasado y las paradojas."
+      timestamp: "15:30"
+      quote: "lo que plantearía por ejemplo wells en la máquina del tiempo"
+    - url: "https://www.youtube.com/watch?v=gIR5aqafNZA&t=462s"
+      title: "Viaje en el Tiempo III. El futuro y su pasado."
+      timestamp: "7:42"
+      quote: "me sorprendió positivamente el hecho de que la racionalización sea tan detallada y tan clara y contemporánea"
+  leadsTo: ["enoch-soames", "el-jardin-de-senderos-que-se-bifurcan", "memoirs-of-the-twentieth-century", "arcadia-stoppard"]
+  related:
+    - id: "time-travel-a-history"
+      reason: "Wells fija la novela que Gleick analiza en su historia cultural del viaje en el tiempo"
+  isbn: "0753167816"
+  coverId: 9009316
+
+- id: i-am-legend
+  title: "I Am Legend"
+  titleEs: "Soy leyenda"
+  authors: ["Richard Matheson"]
+  year: 1954
+  kind: book
+  topics: ["ficcion"]
+  level: 1
+  recommendation: interesante
+  summary: "Novela de Matheson sobre el último hombre en una Tierra poblada por vampiros infectados, cuyo título cobra otro sentido al final."
+  context: "Leyó la novela para su video y defiende que la película de 2007 distorsionó el sentido original; valora el libro por encima."
+  sources:
+    - url: "https://www.youtube.com/watch?v=e16DiNSWaQE&t=15s"
+      title: "Soy Leyenda (2007) arruinó su propio título... pero está piola."
+      timestamp: "0:15"
+      quote: "la novela original de Richard madson o hijo del mate tiene poca tiene poco y nada que ver con la última adaptación"
+    - url: "https://www.youtube.com/watch?v=IO6jrTryFVo&t=8s"
+      title: "Soy Leyenda | Aislamiento, imaginación y otros infiernos."
+      timestamp: "0:08"
+      quote: "el libro te habla mucho de la Soledad de neville te la describe pero la película"
+  isbn: "9780552106412"
+  coverId: 911109
+
+- id: enoch-soames
+  title: "Enoch Soames"
+  authors: ["Max Beerbohm"]
+  year: 1916
+  kind: essay
+  topics: ["ficcion"]
+  level: 2
+  recommendation: fuerte
+  summary: "Relato de Beerbohm sobre un poeta mediocre que pacta con el diablo para viajar al futuro y ver cómo lo recuerdan."
+  context: "Lo recomienda explícitamente como relato muy interesante, cortito y con un final hermoso."
+  sources:
+    - url: "https://www.youtube.com/watch?v=gIR5aqafNZA&t=551s"
+      title: "Viaje en el Tiempo III. El futuro y su pasado."
+      timestamp: "9:11"
+      quote: "el relato de ese dicho de paso muy interesante y muy recomendado es cortito"
+  leadsTo: ["la-fiesta-del-monstruo"]
+  related:
+    - id: "time-travel-a-history"
+      reason: "Un relato clásico de viaje al futuro, comentado en la misma serie de videos sobre el tiempo"
+  isbn: "9781419146817"
+  coverId: 1801496
+
+- id: foundation-asimov
+  title: "Foundation"
+  titleEs: "Fundación"
+  authors: ["Isaac Asimov"]
+  year: 1951
+  kind: book
+  topics: ["ficcion"]
+  level: 2
+  recommendation: interesante
+  summary: "Novela de ciencia ficción en la que la psicohistoria permite predecir el futuro de un imperio galáctico en decadencia y acortar su colapso."
+  context: "Habla de la psicohistoria de Asimov y dice que son buenos libros, recomendados por un colega; leyó uno de la trilogía."
+  sources:
+    - url: "https://www.youtube.com/watch?v=Af3NmSP6h_E&t=69s"
+      title: "El Nostradamus chino: Profesor Jiang."
+      timestamp: "1:09"
+      quote: "Trilogía de la fundación. Trilogía, son buenos libros."
+  isbn: "9780553293357"
+  coverId: 14612610
+
+- id: la-fiesta-del-monstruo
+  title: "La fiesta del monstruo"
+  authors: ["Jorge Luis Borges", "Adolfo Bioy Casares"]
+  year: 1955
+  kind: essay
+  topics: ["ficcion", "historia"]
+  level: 3
+  recommendation: fuerte
+  summary: "Cuento satírico firmado como H. Bustos Domecq que retrata con ferocidad a las masas peronistas."
+  context: "Lo cita como ejemplo de lo que escribiría Borges con Bioy sobre el peronismo y dice que si no lo leyeron se los recomienda."
+  sources:
+    - url: "https://www.youtube.com/watch?v=xY0eX_UcgX4&t=434s"
+      title: "A Borges no le cebaba la democracia y el Peronismo."
+      timestamp: "7:14"
+      quote: "escribiría con Bioy Casares cosas como la fiesta del monstruo. Si no lo leyeron se los recomiendo."
+  related:
+    - id: "breve-historia-contemporanea-de-la-argentina"
+      reason: "Sátira del peronismo que dialoga con la historia argentina contemporánea"
+  isbn: "9789500425438"
+  coverId: 4965799
+
+# --- Economía (nuevos) ---
+
+- id: mankiw-principles-of-economics
+  title: "Principles of Economics"
+  titleEs: "Principios de economía"
+  authors: ["N. Gregory Mankiw"]
+  year: 1998
+  kind: textbook
+  topics: ["economia"]
+  level: 1
+  recommendation: interesante
+  summary: "Manual universitario de introducción a la economía, con micro y macroeconomía."
+  context: "Lo recomienda para quien quiere una noción básica de economía (\"leete Mankiw\"); antes había citado de memoria su ejemplo de bienes públicos."
+  sources:
+    - url: "https://www.youtube.com/watch?v=BXO8Gas3lQs&t=3724s"
+      title: "1 EMPRESARIO vs. 20 TRABAJADORES | Reacción"
+      timestamp: "62:04"
+      quote: "Léete si quieres una noción básica, leete Mankw."
+    - url: "https://www.youtube.com/watch?v=-gZ_szjtEcI&t=744s"
+      title: "Marco Palazzo patoteado fuera de las universidades."
+      timestamp: "12:24"
+      quote: "este ejemplo creo que está en Mankiw en, en su libro de microeconomía"
+  leadsTo: ["free-to-choose", "the-general-theory", "kobra-effekt"]
+  isbn: "9780030982385"
+  coverId: 19884
+
+- id: economics-in-one-lesson
+  title: "Economics in One Lesson"
+  authors: ["Henry Hazlitt"]
+  year: 1946
+  kind: book
+  topics: ["economia"]
+  level: 1
+  recommendation: interesante
+  summary: "Introducción divulgativa a la economía de libre mercado."
+  context: "Lo recomienda como lectura básica de economía y lo cita seguido, sobre todo la idea de la ventana rota; en un video anterior había dicho que le gusta aunque \"no tanto\"."
+  sources:
+    - url: "https://www.youtube.com/watch?v=BXO8Gas3lQs&t=3727s"
+      title: "1 EMPRESARIO vs. 20 TRABAJADORES | Reacción"
+      timestamp: "62:07"
+      quote: "Lee la economía en una lección de Hlle."
+    - url: "https://www.youtube.com/watch?v=Pg24h9UuoNo&t=856s"
+      title: "Michelo esta gaga."
+      timestamp: "14:16"
+      quote: "esto es algo que Haslit dice en economía en una lección"
+    - url: "https://www.youtube.com/watch?v=RgOmhnWAPbE&t=373s"
+      title: "Mercado Libre llora porque Temu es muy barato."
+      timestamp: "6:13"
+      quote: "Eso es lo que Hasley decía, que es una filosofía de la destrucción o lo que Bastiat decía que era la idea de la ventana rota"
+    - url: "https://www.youtube.com/watch?v=BXO8Gas3lQs&t=6034s"
+      title: "1 EMPRESARIO vs. 20 TRABAJADORES | Reacción"
+      timestamp: "100:34"
+      quote: "También lo dice Hasle en la economía en una elección"
+  leadsTo: ["free-to-choose", "marxism-unmasked", "the-anti-capitalistic-mentality", "essay-on-the-principle-of-population", "the-virtue-of-selfishness"]
+  related:
+    - id: "economic-sophisms"
+      reason: "Hazlitt retoma la falacia de la ventana rota de Bastiat"
+  isbn: "9780517548233"
+  coverId: 4437768
+
+- id: quest-for-cosmic-justice
+  title: "The Quest for Cosmic Justice"
+  authors: ["Thomas Sowell"]
+  year: 1999
+  kind: book
+  topics: ["economia"]
+  level: 2
+  recommendation: interesante
+  summary: "Crítica de Sowell a la idea de corregir mediante el Estado todas las desigualdades de cuna o de azar, a la que llama justicia cósmica."
+  context: "Lo usa para argumentar contra corregir desigualdades de cuna y dice que Sowell lo articula muy bien."
+  sources:
+    - url: "https://www.youtube.com/watch?v=iWSr-PasZLw&t=751s"
+      title: "El impuesto a la herencia."
+      timestamp: "12:31"
+      quote: "existe un libro de Thomas Sowell, que creo que lo articula muy bien, que se llama The Quest for Cosmic Justice"
+    - url: "https://www.youtube.com/watch?v=6KwtQkUTe1I&t=998s"
+      title: "La meritocracia es un MITO."
+      timestamp: "16:38"
+      quote: "Tomas Sowell llama muy acertadamente la idea de justicia cósmica"
+    - url: "https://www.youtube.com/watch?v=BXO8Gas3lQs&t=2411s"
+      title: "1 EMPRESARIO vs. 20 TRABAJADORES | Reacción"
+      timestamp: "40:11"
+      quote: "el argumento de Sowell, de la justicia cósmica"
+  leadsTo: ["huemer-wealth-redistribution", "limitarianism"]
+  isbn: "0684864622"
+  coverId: 428416
+
+- id: anti-duhring
+  title: "Anti-Dühring"
+  titleEs: "Anti-Dühring"
+  authors: ["Friedrich Engels"]
+  year: 1878
+  kind: book
+  topics: ["economia"]
+  level: 2
+  recommendation: interesante
+  summary: "Obra de Engels que polemiza con Eugen Dühring y expone en forma sistemática la filosofía, la economía política y el socialismo marxistas."
+  context: "Le sugiere a un interlocutor que, para entender a Marx, lea textos de Engels como este, que escribía más ameno que Marx."
+  sources:
+    - url: "https://www.youtube.com/watch?v=BXO8Gas3lQs&t=3803s"
+      title: "1 EMPRESARIO vs. 20 TRABAJADORES | Reacción"
+      timestamp: "63:23"
+      quote: "Puedes leer cosas de cosas como el antiduring, eh cosas de Englels"
+  isbn: "9780717800087"
+  coverId: 13202636
+
+- id: free-to-choose
+  title: "Free to Choose"
+  authors: ["Milton Friedman", "Rose Friedman"]
+  year: 1980
+  kind: book
+  topics: ["economia"]
+  level: 2
+  recommendation: interesante
+  summary: "Defensa del libre mercado y de la libertad económica basada en la serie televisiva."
+  context: "Le dice a su interlocutor que lo lea y lo cita seguido junto a Capitalismo y libertad, al que considera un libro algo más duro."
+  sources:
+    - url: "https://www.youtube.com/watch?v=BXO8Gas3lQs&t=3734s"
+      title: "1 EMPRESARIO vs. 20 TRABAJADORES | Reacción"
+      timestamp: "62:14"
+      quote: "leete e free to choose de Freedman."
+    - url: "https://www.youtube.com/watch?v=GQeIIkktW9Y&t=23s"
+      title: "Milton Friedman y MINECRAFT. #fyp #clips #argentina"
+      timestamp: "0:23"
+      quote: "un libro un poquito más duro que Free to"
+    - url: "https://www.youtube.com/watch?v=93wMFZdVSNE&t=190s"
+      title: "¿Restricciones para la yerba mate en... Argentina? | Falopa política"
+      timestamp: "3:10"
+      quote: "Friedman lo dice muy claramente, no recuerdo si en free to chose son capitalismo y libertad porque los leí muy cerca sus libros"
+    - url: "https://www.youtube.com/watch?v=k9txcNp1DSA&t=1639s"
+      title: "Leyendo las notas del parche en Argentina, la reforma laboral."
+      timestamp: "27:19"
+      quote: "Eso es algo que Friedman dice muy felizmente, creo que en free to choose o capitalismo de libertad"
+  leadsTo: ["capitalism-and-freedom", "wealth-of-nations", "two-concepts-of-liberty"]
+  isbn: "9780156334600"
+  coverId: 4393564
+
+- id: capitalism-and-freedom
+  title: "Capitalism and Freedom"
+  authors: ["Milton Friedman"]
+  year: 1962
+  kind: book
+  topics: ["economia"]
+  level: 3
+  recommendation: fuerte
+  summary: "Friedman defiende el capitalismo competitivo como condición de la libertad política."
+  context: "Lo llama probablemente su libro favorito de Milton Friedman y lo recomienda encarecidamente; lo cita seguido, en particular el prólogo."
+  sources:
+    - url: "https://www.youtube.com/watch?v=GQeIIkktW9Y&t=0s"
+      title: "Milton Friedman y MINECRAFT. #fyp #clips #argentina"
+      timestamp: "0:00"
+      quote: "Probablemente mi libro favorito de Milton Friedman... lo recomiendo encarecidamente. Es muy buen libro."
+    - url: "https://www.youtube.com/watch?v=BXO8Gas3lQs&t=2905s"
+      title: "1 EMPRESARIO vs. 20 TRABAJADORES | Reacción"
+      timestamp: "48:25"
+      quote: "hablando de capitalismo y libertad y creo que en capitalismo y libertad Friedman tiene dos apartados"
+    - url: "https://www.youtube.com/watch?v=IIUhDMj_ryE&t=831s"
+      title: "1 EMPRESARIO VS 20 COMUNISTAS | Reacción"
+      timestamp: "13:51"
+      quote: "¿saben que Friedman tienen creo que es en capitalismo y libertad? Tiene una una teoría"
+    - url: "https://www.youtube.com/watch?v=93wMFZdVSNE&t=686s"
+      title: "¿Restricciones para la yerba mate en... Argentina? | Falopa política"
+      timestamp: "11:26"
+      quote: "Freedman, lo cito demasiado a Freedman últimamente, dice, creo que en capitalismo y libertad ... en el prólogo"
+  isbn: "9780226264219"
+  coverId: 140808
+
+- id: huemer-wealth-redistribution
+  title: "Is Wealth Redistribution a Rights Violation?"
+  authors: ["Michael Huemer"]
+  year: 2017
+  kind: essay
+  topics: ["economia"]
+  level: 3
+  recommendation: fuerte
+  summary: "Ensayo en el que Huemer sostiene que la redistribución de la riqueza mediante impuestos viola derechos de propiedad."
+  context: "Abre un video diciendo que quiere recomendar este ensayo sobre redistribución del ingreso y derechos de propiedad."
+  sources:
+    - url: "https://www.youtube.com/watch?v=ZoCFkZ2ZhUw&t=0s"
+      title: "Impuestos, ¿un robo justificado?"
+      timestamp: "0:00"
+      quote: "Les quiero recomendar algo de lectura. Esto es un ensayo sobre redistribución del ingreso y si es o no es una violación de derechos de propiedad. Es de Michael Hemmer."
+
+# --- Filosofía (nuevos) ---
+
+- id: discourse-on-method
+  title: "Discours de la méthode"
+  titleEs: "Discurso del método"
+  authors: ["René Descartes"]
+  year: 1637
+  kind: book
+  topics: ["filosofia"]
+  level: 1
+  recommendation: interesante
+  leadsTo: ["meditations-on-first-philosophy", "a-letter-concerning-toleration"]
+  summary: "Texto breve en el que Descartes expone su método de la duda y llega al cogito, pienso luego existo."
+  context: "Lo recomienda porque es corto, autocontenido y sencillo: se lee en una tarde."
+  sources:
+    - url: "https://www.youtube.com/watch?v=fcdYULXnT9Y&t=720s"
+      title: "Pienso, luego existo: Descartes, Discurso del método y la cárcel del yo | Te lo explico así nomás."
+      timestamp: "12:00"
+      quote: "la verdad que te recomiendo que lo leas y en el tiempo es algo que puedes leer a una tarde"
+  isbn: "2266030930"
+  coverId: 8236442
+
+# --- Historia (nuevos) ---
+
+- id: basic-laws-of-human-stupidity
+  title: "Le leggi fondamentali della stupidità umana"
+  titleEs: "Las leyes fundamentales de la estupidez humana"
+  authors: ["Carlo M. Cipolla"]
+  year: 1976
+  kind: essay
+  topics: ["historia"]
+  level: 1
+  recommendation: interesante
+  summary: "Ensayo satírico en el que Cipolla formula cinco leyes sobre la estupidez humana y define a los estúpidos como el grupo más peligroso de la sociedad."
+  context: "Cita las dos primeras leyes de la estupidez y le dice directamente a la audiencia que lo lea."
+  sources:
+    - url: "https://www.youtube.com/watch?v=5KxWFb7kSRE&t=10s"
+      title: "It's understood. #fyp #philosophy #clips"
+      timestamp: "0:10"
+      quote: "publicó algo que se llama las leyes de la estupidez humana. Leete esto"
+    - url: "https://www.youtube.com/watch?v=kG3g3oWnRvU&t=693s"
+      title: "Fines issue. | Political Fools' Day."
+      timestamp: "11:33"
+      quote: "Las leyes básicas de la estupidez. Ley número uno de la estupidez"
+  related:
+    - id: "obedience-to-authority"
+      reason: "La estupidez colectiva de Cipolla y la obediencia ciega de Milgram explican cómo gente común sostiene daños enormes"
+  isbn: "9788815260321"
+  coverId: 9378526
+
+- id: sapiens
+  title: "Sapiens"
+  titleEs: "Sapiens: de animales a dioses"
+  authors: ["Yuval Noah Harari"]
+  year: 2011
+  kind: book
+  topics: ["historia"]
+  level: 1
+  recommendation: interesante
+  summary: "Historia de la humanidad desde la aparición de Homo sapiens hasta hoy, centrada en las revoluciones cognitiva, agrícola y científica."
+  context: "Lo menciona de pasada: \"buen libro Sapiens, se los recomiendo\"."
+  sources:
+    - url: "https://www.youtube.com/watch?v=xY0eX_UcgX4&t=135s"
+      title: "A Borges no le cebaba la democracia y el Peronismo."
+      timestamp: "2:15"
+      quote: "Buen libro Sapiens, ¿eh? Se los recomiendo."
+  isbn: "9780062316103"
+  coverId: 15247651
+
+# --- Desarrollo personal (nuevos) ---
+
+- id: why-we-forget
+  title: "Why We Forget and How to Remember Better"
+  authors: ["Andrew E. Budson", "Elizabeth A. Kensinger"]
+  year: 2023
+  kind: book
+  topics: ["desarrollo-personal"]
+  level: 1
+  recommendation: interesante
+  summary: "Libro práctico sobre cómo funciona la memoria, por qué fallamos al recordar y qué hacer para mejorarla."
+  context: "Lo llama un libro muy copado y práctico, del que aprendió las distintas formas de memoria; lo cita en dos videos."
+  sources:
+    - url: "https://www.youtube.com/watch?v=nIR95vS5Cnk&t=236s"
+      title: "Usar mucha IA apaga partes de tu cerebro.."
+      timestamp: "3:56"
+      quote: "Why we Forget and How to Remember Better, The Science Behind Memory"
+    - url: "https://www.youtube.com/watch?v=T_yIGzGG_EE&t=349s"
+      title: "No sos tan productivo como pensas."
+      timestamp: "5:49"
+      quote: "un libro muy copado que se llama eh Why we Forget and How to Remember Better"
+  leadsTo: ["karpicke-retrieval-practice-papers", "powerful-teaching"]
+  isbn: "9780197607732"
+  coverId: 13250339
+
+- id: the-shallows
+  title: "The Shallows"
+  titleEs: "Superficiales"
+  authors: ["Nicholas Carr"]
+  year: 2010
+  kind: book
+  topics: ["desarrollo-personal", "ia"]
+  level: 2
+  recommendation: interesante
+  summary: "Carr examina cómo internet cambia la atención y la lectura."
+  context: "Lo recomienda bastante (\"buen libro\") y lo usa como fuente en varios videos sobre IA y atención, por los ejemplos de transferencia de habilidades a la máquina."
+  sources:
+    - url: "https://www.youtube.com/watch?v=nIR95vS5Cnk&t=99s"
+      title: "Usar mucha IA apaga partes de tu cerebro.."
+      timestamp: "1:39"
+      quote: "Hay un libro que se llama de Shallows, que es de Nicolas Car, que lo lo recomiendo bastante"
+    - url: "https://www.youtube.com/watch?v=m4me4mlm02E&t=459s"
+      title: "Tu cerebro en ChatGPT."
+      timestamp: "7:39"
+      quote: "en su libro de Shallows, Nicolas Car da varios ejemplos de esta clase de transferencia de skills a la máquina"
+    - url: "https://www.youtube.com/watch?v=nIR95vS5Cnk&t=231s"
+      title: "Usar mucha IA apaga partes de tu cerebro.."
+      timestamp: "3:51"
+      quote: "The Shallows, Nicolas Har, buen libro"
+    - url: "https://www.youtube.com/watch?v=a34urjCHAiw&t=406s"
+      title: "Her (2013) | AI, soledad y una historia promedio."
+      timestamp: "6:46"
+      quote: "en su libro de shallows Nicolás karl cita este y otros estudios"
+  isbn: "9780393339758"
+  coverId: 6458532
+
+# --- Oficio (nuevos) ---
+
+- id: therac-25-accidents
+  title: "An Investigation of the Therac-25 Accidents"
+  authors: ["Nancy G. Leveson", "Clark S. Turner"]
+  year: 1993
+  kind: paper
+  topics: ["oficio", "ia"]
+  level: 1
+  recommendation: interesante
+  summary: "Análisis de los accidentes del acelerador médico Therac-25, cuyos errores de software causaron sobredosis de radiación mortales."
+  context: "En su video sobre el bug fatal del Therac-25 muestra el paper y dice que es buenísimo y que se puede leer sobre el tema."
+  sources:
+    - url: "https://www.youtube.com/watch?v=2TX9Sf6i7SU&t=211s"
+      title: "El bug FATAL que le costó la VIDA a varias personas..."
+      timestamp: "3:31"
+      quote: "al paper este, que es buenísimo, que lo pueden leer sobre el tema"
+  leadsTo: ["concrete-problems-in-ai-safety"]
+
+- id: dont-call-yourself-a-programmer
+  title: "Don't Call Yourself A Programmer"
+  authors: ["Patrick McKenzie"]
+  year: 2011
+  kind: essay
+  topics: ["oficio"]
+  level: 1
+  recommendation: interesante
+  summary: "Ensayo de consejos de carrera para programadores que insiste en que el valor está en generar ingresos para la empresa, no solo en escribir código."
+  context: "Lo lee entero y lo comenta en stream; termina diciendo que le pareció copado, interesante y divertido."
+  sources:
+    - url: "https://www.youtube.com/watch?v=r2qMXxMU0Ns&t=0s"
+      title: "No seas solo un programador."
+      timestamp: "0:00"
+      quote: "don't call yourself a programmer. Career advice"
+  leadsTo: ["the-pragmatic-programmer"]
+
+- id: refactoring
+  title: "Refactoring"
+  authors: ["Martin Fowler"]
+  year: 1999
+  kind: book
+  topics: ["oficio"]
+  level: 3
+  recommendation: interesante
+  summary: "Catálogo de técnicas para mejorar el diseño de código existente sin cambiar su comportamiento."
+  context: "Lo menciona al responder por libros genéricos de buenas prácticas y dice que es un buen libro si andás buscando ese tipo de libros."
+  sources:
+    - url: "https://www.youtube.com/watch?v=PVjcZBCLtfU&t=7195s"
+      title: "Dager te enseña a hacer un server DNS #3."
+      timestamp: "119:55"
+      quote: "refactory es un buen libro si si andas buscando libros así genéricos de buenas prácticas"
+  isbn: "9780201485677"
+  coverId: 134964
+
+# --- Arquitectura (nuevos) ---
+
+- id: rest-fielding-dissertation
+  title: "Architectural Styles and the Design of Network-based Software Architectures"
+  authors: ["Roy T. Fielding"]
+  year: 2000
+  kind: paper
+  topics: ["arquitectura"]
+  level: 3
+  recommendation: interesante
+  summary: "Tesis doctoral de Fielding que define el estilo arquitectónico REST como base de la web."
+  context: "La señala como fuente canónica de REST y sugiere leerla en lugar de videos; explica conceptos del capítulo 5."
+  sources:
+    - url: "https://www.youtube.com/watch?v=jCqZLJcw76U&t=186s"
+      title: "REST es la CH*TA de la web."
+      timestamp: "3:06"
+      quote: "Esta disertación es la fuente canónica para REST"
+    - url: "https://www.youtube.com/watch?v=_u6R8FiAwMU&t=71s"
+      title: "Programar ya no es lo que era."
+      timestamp: "1:11"
+      quote: "Según la disertación de Fielding"
+    - url: "https://www.youtube.com/watch?v=nMvXTl5oZCM&t=166s"
+      title: "We always fall for the same hype."
+      timestamp: "2:46"
+      quote: "simplemente es un estilo que que lo promulga Fielding en su en su disertación"
+
+# --- menciones: ficción ---
+
+- id: the-minority-report
+  title: "The Minority Report"
+  titleEs: "Sentencia previa"
+  authors: ["Philip K. Dick"]
+  year: 1956
+  kind: essay
+  topics: ["ficcion"]
+  level: 1
+  recommendation: mencion
+  summary: "Cuento de Philip K. Dick sobre una policía que arresta a las personas por crímenes que todavía no cometieron."
+  context: "Cuento de 1956 usado como analogía del pre-crimen con el gemelo digital; dice que Dick es uno de sus favoritos de ciencia ficción."
+  sources:
+    - url: "https://www.youtube.com/watch?v=-iPy7-kkCGM&t=586s"
+      title: "\"Gemelo Digital\" El GOBIERNO quiere hacer PERFILES de NOSOTROS con IA."
+      timestamp: "9:46"
+      quote: "Minority Report. Es una película y también es un libro. Creo que es de Dick"
+
+- id: do-androids-dream-of-electric-sheep
+  title: "Do Androids Dream of Electric Sheep?"
+  titleEs: "¿Sueñan los androides con ovejas eléctricas?"
+  authors: ["Philip K. Dick"]
+  year: 1968
+  kind: book
+  topics: ["ficcion"]
+  level: 1
+  recommendation: mencion
+  summary: "Novela de Philip K. Dick en la que un cazador de recompensas persigue androides casi indistinguibles de los humanos; inspiró Blade Runner."
+  context: "Nombrado de pasada como otra obra de Dick (base de Blade Runner)."
+  sources:
+    - url: "https://www.youtube.com/watch?v=-iPy7-kkCGM&t=595s"
+      title: "\"Gemelo Digital\" El GOBIERNO quiere hacer PERFILES de NOSOTROS con IA."
+      timestamp: "9:55"
+      quote: "también es el de ¿Los androides sueñan con ovejas eléctricas?"
+    - url: "https://www.youtube.com/watch?v=8c4RkHlImF4&t=72s"
+      title: "Blade Runner y humanismo | Ética del retiramiento."
+      timestamp: "1:12"
+      quote: "basado no muy fielmente en una novela de philippetik"
+
+- id: candide
+  title: "Candide, ou l'Optimisme"
+  titleEs: "Cándido, o el optimismo"
+  authors: ["Voltaire"]
+  year: 1759
+  kind: book
+  topics: ["ficcion"]
+  level: 1
+  recommendation: mencion
+  summary: "Sátira de Voltaire en la que Cándido atraviesa desgracias sin fin mientras su maestro insiste en que vivimos en el mejor de los mundos posibles."
+  context: "Lo cita de memoria como burla del 'mejor de los mundos posibles' (Leibniz)."
+  sources:
+    - url: "https://www.youtube.com/watch?v=0klKaA9TOYo&t=782s"
+      title: "\"Friend\" la IA que podes llevar en el cuello."
+      timestamp: "13:02"
+      quote: "un relato... Cándido o el optimismo creo que es Voltaire"
+
+- id: by-his-bootstraps
+  title: "By His Bootstraps"
+  authors: ["Robert A. Heinlein"]
+  year: 1941
+  kind: essay
+  topics: ["ficcion"]
+  level: 1
+  recommendation: mencion
+  summary: "Relato de Heinlein sobre un hombre atrapado en un bucle de viajes en el tiempo donde él mismo causa su propia historia."
+  context: "Lo cita en su serie sobre viajes en el tiempo como el primer relato en aplicar la paradoja del bucle causal."
+  sources:
+    - url: "https://www.youtube.com/watch?v=1xC_vaWKcx0&t=198s"
+      title: "Viaje en el tiempo IV: El pasado y las paradojas."
+      timestamp: "3:18"
+      quote: "un relato de robert heinlein llamado big y foods raps que se publicó mil 941"
+
+- id: find-the-sculptor
+  title: "Find the Sculptor"
+  authors: ["Samuel Mines"]
+  year: 1950
+  kind: essay
+  topics: ["ficcion"]
+  level: 1
+  recommendation: mencion
+  summary: "Relato de Samuel Mines en el que un profesor viaja al futuro y descubre una escultura de su propia cabeza."
+  context: "Lo nombra en su serie sobre viajes en el tiempo como ejemplo de bucle causal."
+  sources:
+    - url: "https://www.youtube.com/watch?v=1xC_vaWKcx0&t=240s"
+      title: "Viaje en el tiempo IV: El pasado y las paradojas."
+      timestamp: "4:00"
+      quote: "la historia de encuentra al escultor creo que llama se encuentra el escultor de samuel minds"
+
+- id: the-clock-that-went-backward
+  title: "The Clock That Went Backward"
+  authors: ["Edward Page Mitchell"]
+  year: 1881
+  kind: essay
+  topics: ["ficcion"]
+  level: 1
+  recommendation: mencion
+  summary: "Relato de Edward Page Mitchell en el que un reloj antiguo hace retroceder el tiempo; es un antecedente de La máquina del tiempo."
+  context: "Lo cita en su serie sobre viajes en el tiempo como antecedente de la novela de Wells."
+  sources:
+    - url: "https://www.youtube.com/watch?v=gIR5aqafNZA&t=389s"
+      title: "Viaje en el Tiempo III. El futuro y su pasado."
+      timestamp: "6:29"
+      quote: "antes de la máquina de tiempo estuvo el reloj que fue para atrás ... 881"
+
+- id: three-sundays-in-a-week
+  title: "Three Sundays in a Week"
+  titleEs: "Tres domingos en una semana"
+  authors: ["Edgar Allan Poe"]
+  year: 1841
+  kind: essay
+  topics: ["ficcion"]
+  level: 1
+  recommendation: mencion
+  summary: "Cuento humorístico de Poe donde dar la vuelta al mundo en sentidos opuestos hace que tres personas cuenten tres domingos distintos en una misma semana."
+  context: "Lo menciona en su serie sobre viajes en el tiempo como cuento de Poe que juega con el tiempo."
+  sources:
+    - url: "https://www.youtube.com/watch?v=gIR5aqafNZA&t=970s"
+      title: "Viaje en el Tiempo III. El futuro y su pasado."
+      timestamp: "16:10"
+      quote: "domingos o tres domingos en una semana como también se lo conoce un texto de pop publicado mil 841"
+
+- id: connecticut-yankee-in-king-arthurs-court
+  title: "A Connecticut Yankee in King Arthur's Court"
+  titleEs: "Un yanqui en la corte del rey Arturo"
+  authors: ["Mark Twain"]
+  year: 1889
+  kind: book
+  topics: ["ficcion"]
+  level: 1
+  recommendation: mencion
+  summary: "Novela de Mark Twain en la que un ingeniero estadounidense se despierta en la Inglaterra del rey Arturo e intenta modernizarla."
+  context: "Lo cita en su serie sobre viajes en el tiempo como novela de 1889 donde el protagonista viaja al pasado por un golpe en la cabeza."
+  sources:
+    - url: "https://www.youtube.com/watch?v=gIR5aqafNZA&t=416s"
+      title: "Viaje en el Tiempo III. El futuro y su pasado."
+      timestamp: "6:56"
+      quote: "la novela de twin en la corte del rey arturo de mil 889 en la cual al protagonista se lo manda en un viaje temporal"
+
+- id: memoirs-of-the-twentieth-century
+  title: "Memoirs of the Twentieth Century"
+  titleEs: "Memorias del siglo veinte"
+  authors: ["Samuel Madden"]
+  year: 1733
+  kind: book
+  topics: ["ficcion"]
+  level: 2
+  recommendation: mencion
+  summary: "Novela epistolar de Samuel Madden que imagina cartas llegadas desde el siglo XX, uno de los primeros relatos de viaje en el tiempo."
+  context: "Lo cita en su serie sobre viajes en el tiempo como una novela epistolar de 1733 con estilo de crónica de viajeros."
+  sources:
+    - url: "https://www.youtube.com/watch?v=gIR5aqafNZA&t=1379s"
+      title: "Viaje en el Tiempo III. El futuro y su pasado."
+      timestamp: "22:59"
+      quote: "las memorias del siglo 20 publicada por samuel media en mil 733"
+
+- id: frankenstein
+  title: "Frankenstein; or, The Modern Prometheus"
+  titleEs: "Frankenstein o el moderno Prometeo"
+  authors: ["Mary Shelley"]
+  year: 1818
+  kind: book
+  topics: ["ficcion", "ia"]
+  level: 2
+  recommendation: mencion
+  summary: "Novela de Mary Shelley sobre un científico que crea una criatura viva y debe enfrentar las consecuencias de abandonarla."
+  context: "Mención pasajera junto al golem como ejemplo de entidades antropomorfas que problematizan los límites de lo humano."
+  sources:
+    - url: "https://www.youtube.com/watch?v=8c4RkHlImF4&t=1134s"
+      title: "Blade Runner y humanismo | Ética del retiramiento."
+      timestamp: "18:54"
+      quote: "desde la figura del golem en la tradición judía hasta el Frankenstein de shirty"
+
+- id: shutter-island
+  title: "Shutter Island"
+  titleEs: "La isla siniestra"
+  authors: ["Dennis Lehane"]
+  year: 2003
+  kind: book
+  topics: ["ficcion"]
+  level: 1
+  recommendation: mencion
+  summary: "Thriller de Dennis Lehane sobre un agente federal que investiga una desaparición en un hospital psiquiátrico para criminales."
+  context: "Dice que leyó la novela en que se basa la película del video y opina que la película es superior al libro."
+  sources:
+    - url: "https://www.youtube.com/watch?v=_8jUm_DOyYU&t=234s"
+      title: "Shutter Island (La Isla Siniestra): locura y negación."
+      timestamp: "3:54"
+      quote: "la novela en la que se basa La película que me tomé el trabajo de leer"
+
+- id: the-world-set-free
+  title: "The World Set Free"
+  titleEs: "El mundo liberado"
+  authors: ["H. G. Wells"]
+  year: 1914
+  kind: book
+  topics: ["ficcion"]
+  level: 1
+  recommendation: mencion
+  summary: "Novela de H. G. Wells que anticipa la energía atómica y una guerra con bombas nucleares."
+  context: "Lo cita como la novela de 1914 que introdujo el concepto de bomba atómica y que leyó Leo Szilard, ejemplo de infohazard."
+  sources:
+    - url: "https://www.youtube.com/watch?v=wdn09iapSVA&t=502s"
+      title: "Cosas que NO DEBERÍAS SABER."
+      timestamp: "8:22"
+      quote: "cuando H. y Wells publicó su novela The World set Free"
+
+- id: werther
+  title: "Die Leiden des jungen Werthers"
+  titleEs: "Las penas del joven Werther"
+  authors: ["Johann Wolfgang von Goethe"]
+  year: 1774
+  kind: book
+  topics: ["ficcion"]
+  level: 1
+  recommendation: mencion
+  summary: "Novela epistolar de Goethe sobre el amor imposible de un joven artista, cuyo final trágico se asocia a una ola de suicidios imitativos."
+  context: "Lo cita como origen del efecto Werther, ejemplo de template hazard en su video sobre infohazards."
+  sources:
+    - url: "https://www.youtube.com/watch?v=wdn09iapSVA&t=335s"
+      title: "Cosas que NO DEBERÍAS SABER."
+      timestamp: "5:35"
+      quote: "En 1774, Gette publicó Las penas del joven Berter"
+
+- id: watchmen
+  title: "Watchmen"
+  titleEs: "Watchmen"
+  authors: ["Alan Moore", "Dave Gibbons"]
+  year: 1986
+  kind: book
+  topics: ["ficcion"]
+  level: 1
+  recommendation: mencion
+  summary: "Novela gráfica de Alan Moore y Dave Gibbons sobre un grupo de superhéroes retirados en un mundo al borde de la guerra nuclear."
+  context: "Es la base de todo su video sobre el Dr. Manhattan, y elogia lo que Moore plantea brillantemente."
+  sources:
+    - url: "https://www.youtube.com/watch?v=lv_svO3VwVk&t=255s"
+      title: "Dr. Manhattan, el hombre y la divinidad."
+      timestamp: "4:15"
+      quote: "alan moore nos presenta brillantemente en el comic"
+
+- id: la-casa-de-asterion
+  title: "La casa de Asterión"
+  authors: ["Jorge Luis Borges"]
+  year: 1947
+  kind: essay
+  topics: ["ficcion"]
+  level: 1
+  recommendation: mencion
+  summary: "Cuento de Borges narrado desde la mirada del Minotauro, que espera en su laberinto a quien lo libere."
+  context: "Lo nombra de pasada junto a otras criaturas mitológicas al abrir un video sobre Claude Mythos."
+  sources:
+    - url: "https://www.youtube.com/watch?v=Ilcb71pTpnY&t=19s"
+      title: "Claude Mythos es un mito."
+      timestamp: "0:19"
+      quote: "criaturas mitológicas con el caso de Borges y, ¿cómo se dice?, Asterión y demás"
+
+- id: funes-el-memorioso
+  title: "Funes el memorioso"
+  authors: ["Jorge Luis Borges"]
+  year: 1942
+  kind: essay
+  topics: ["ficcion"]
+  level: 1
+  recommendation: mencion
+  summary: "Cuento de Borges sobre un joven que, tras un accidente, no puede olvidar nada y queda abrumado por su memoria perfecta."
+  context: "Lo cita al tratar el tema de recordarlo todo."
+  sources:
+    - url: "https://www.youtube.com/watch?v=lv_svO3VwVk&t=1754s"
+      title: "Dr. Manhattan, el hombre y la divinidad."
+      timestamp: "29:14"
+      quote: "de un relato de borges funes el memorioso que toca este tema"
+
+- id: el-inmortal
+  title: "El inmortal"
+  authors: ["Jorge Luis Borges"]
+  year: 1949
+  kind: essay
+  topics: ["ficcion"]
+  level: 1
+  recommendation: mencion
+  summary: "Cuento de Borges incluido en El Aleph sobre un hombre que busca la ciudad de los inmortales y descubre el costo de no morir."
+  context: "Lo cita para hablar de la mortalidad y del decirse adiós, tanto en un video sobre una película como en el del Dr. Manhattan."
+  sources:
+    - url: "https://www.youtube.com/watch?v=ktRS4KtFP2Y&t=557s"
+      title: "La película más odiada de Robert Pattinson está bastante buena."
+      timestamp: "9:17"
+      quote: "hay un relato del inmortal que probablemente ya haya citado en algún otro momento"
+    - url: "https://www.youtube.com/watch?v=lv_svO3VwVk&t=465s"
+      title: "Dr. Manhattan, el hombre y la divinidad."
+      timestamp: "7:45"
+      quote: "por un lado del relato de borges oportunamente llamado el inmortal"
+
+- id: el-jardin-de-senderos-que-se-bifurcan
+  title: "El jardín de senderos que se bifurcan"
+  authors: ["Jorge Luis Borges"]
+  year: 1941
+  kind: essay
+  topics: ["ficcion"]
+  level: 2
+  recommendation: mencion
+  summary: "Cuento de Borges sobre un laberinto de tiempos que se bifurcan, donde cada decisión abre caminos alternativos."
+  context: "Lo nombra en el video que analiza la película Mr. Nobody y su mito de la elección."
+  sources:
+    - url: "https://www.youtube.com/watch?v=PBPGXgbZZcc&t=56s"
+      title: "Mr. Nobody: un jardín de senderos que se bifurcan y el mito de la elección | Análisis o algo así."
+      timestamp: "0:56"
+      quote: "relatos entre ellos una llamado del jardín de senderos que se bifurcan"
+
+- id: el-escritor-argentino-y-la-tradicion
+  title: "El escritor argentino y la tradición"
+  authors: ["Jorge Luis Borges"]
+  year: 1953
+  kind: essay
+  topics: ["ficcion", "historia"]
+  level: 1
+  recommendation: mencion
+  summary: "Ensayo de Borges que sostiene que los escritores argentinos pueden usar toda la tradición occidental sin limitarse al color local."
+  context: "Cita una frase de Borges que proviene de este ensayo, aunque no nombra el título."
+  sources:
+    - url: "https://www.youtube.com/watch?v=CNDOKdQULEk&t=1132s"
+      title: "La campaña anti Argentina."
+      timestamp: "18:52"
+      quote: "el culto argentino por el color local es un reciente culto europeo que los nacionalistas deberían rechazar por foráneo"
+
+- id: arcadia-stoppard
+  title: "Arcadia"
+  authors: ["Tom Stoppard"]
+  year: 1993
+  kind: book
+  topics: ["ficcion"]
+  level: 2
+  recommendation: mencion
+  summary: "Obra de teatro de Tom Stoppard que cruza dos épocas en una casa inglesa y juega con la termodinámica y la flecha del tiempo."
+  context: "La cita como una excelente obra al explicar que las ecuaciones de Newton funcionan igual hacia adelante o hacia atrás."
+  sources:
+    - url: "https://www.youtube.com/watch?v=S3POsGqWWYI&t=77s"
+      title: "Viaje en el tiempo II. Termodinámica, entropía y la flecha del tiempo."
+      timestamp: "1:17"
+      quote: "como dice toms topará en su excelente obra de arcadia las ecuaciones de newton van hacia adelante o hacia atrás"
+
+# --- menciones: economía ---
+
+- id: parasitos-mentales
+  title: "Parásitos mentales"
+  titleEs: "Parásitos mentales"
+  authors: ["Axel Kaiser"]
+  year: 2023
+  kind: book
+  topics: ["economia"]
+  level: 1
+  recommendation: mencion
+  summary: "Ensayo de Axel Kaiser que repasa ideas que, según él, se propagan como parásitos y dañan las sociedades libres."
+  context: "Lo empezó a leer y lo resume (memética y siete ideas parasitarias); defiende que el video que reacciona no ataca sus argumentos."
+  sources:
+    - url: "https://www.youtube.com/watch?v=01LgizVmfRg&t=64s"
+      title: "Parásitos mentales, reaccionando."
+      timestamp: "1:04"
+      quote: "es un parafraseo... del título del libro de Axel Kaiser... Parásitos mentales"
+
+- id: wealth-of-nations
+  title: "The Wealth of Nations"
+  titleEs: "La riqueza de las naciones"
+  authors: ["Adam Smith"]
+  year: 1776
+  kind: book
+  topics: ["economia"]
+  level: 3
+  recommendation: mencion
+  summary: "Obra fundacional de la economía clásica de Adam Smith sobre la división del trabajo, el mercado y la mano invisible."
+  context: "Parafrasea el pasaje del carnicero, el cervecero y el panadero y la mano invisible, sin nombrar el libro."
+  sources:
+    - url: "https://www.youtube.com/watch?v=8SiVEI1zMCY&t=1200s"
+      title: "Forobardo de la semana: \"El sindicato de programadores es una PÉSIMA idea.\""
+      timestamp: "20:00"
+      quote: "Yo no es de la benevolencia del carnicero del bruer que es el que te da la cerveza o del panadero que esperamos nuestra cena"
+
+- id: what-is-seen-and-what-is-not-seen
+  title: "Ce qu'on voit et ce qu'on ne voit pas"
+  titleEs: "Lo que se ve y lo que no se ve"
+  authors: ["Frédéric Bastiat"]
+  year: 1850
+  kind: essay
+  topics: ["economia"]
+  level: 1
+  recommendation: mencion
+  summary: "Ensayo de Bastiat sobre los efectos económicos visibles y los invisibles de una política, con el ejemplo de la ventana rota."
+  context: "Cita el argumento del vidrio roto de Bastiat contra la redistribución, que también aparece en Hazlitt."
+  sources:
+    - url: "https://www.youtube.com/watch?v=BXO8Gas3lQs&t=6026s"
+      title: "1 EMPRESARIO vs. 20 TRABAJADORES | Reacción"
+      timestamp: "100:26"
+      quote: "El contraargumento lo escribió Bastiad hace como 200 años, que es lo que se ve y lo que no se ve."
+    - url: "https://www.youtube.com/watch?v=RgOmhnWAPbE&t=376s"
+      title: "Mercado Libre llora porque Temu es muy barato."
+      timestamp: "6:16"
+      quote: "lo que Bastiat decía que era la idea de la ventana rota"
+
+- id: marxism-unmasked
+  title: "Marxism Unmasked: From Delusion to Destruction"
+  titleEs: "El marxismo desenmascarado"
+  authors: ["Ludwig von Mises"]
+  year: 2006
+  kind: book
+  topics: ["economia"]
+  level: 2
+  recommendation: mencion
+  summary: "Conferencias de Ludwig von Mises que critican el marxismo desde la economía austríaca."
+  context: "Libro antimarxista que le han recomendado; dice que si querés entender a Marx hay que leer a Marx."
+  sources:
+    - url: "https://www.youtube.com/watch?v=BXO8Gas3lQs&t=3787s"
+      title: "1 EMPRESARIO vs. 20 TRABAJADORES | Reacción"
+      timestamp: "63:07"
+      quote: "marxismo desenmascarado de me sale Hayek y no es Hayek, es Mises"
+  leadsTo: ["interventionism-an-economic-analysis"]
+
+- id: interventionism-an-economic-analysis
+  title: "Interventionism: An Economic Analysis"
+  titleEs: "Intervencionismo: un análisis económico"
+  authors: ["Ludwig von Mises"]
+  year: 1940
+  kind: book
+  topics: ["economia"]
+  level: 3
+  recommendation: mencion
+  summary: "Mises explica cómo cada intervención estatal en el mercado genera distorsiones que llevan a pedir más intervención."
+  context: "Lo cita como el libro donde Mises describe cómo un poquito de Estado obliga a más Estado."
+  sources:
+    - url: "https://www.youtube.com/watch?v=BXO8Gas3lQs&t=5141s"
+      title: "1 EMPRESARIO vs. 20 TRABAJADORES | Reacción"
+      timestamp: "85:41"
+      quote: "interventionism anolomic analisis, creo que se llama el libro de mise"
+
+- id: der-begriff-des-politischen
+  title: "Der Begriff des Politischen"
+  titleEs: "El concepto de lo político"
+  authors: ["Carl Schmitt"]
+  year: 1932
+  kind: book
+  topics: ["economia", "filosofia"]
+  level: 3
+  recommendation: mencion
+  summary: "Carl Schmitt define lo político por la distinción entre amigo y enemigo."
+  context: "Cita del video que reacciona; comenta que Schmitt es ideólogo del nazismo y que le da algo de razón sobre la distinción amigo/enemigo."
+  sources:
+    - url: "https://www.youtube.com/watch?v=01LgizVmfRg&t=903s"
+      title: "Parásitos mentales, reaccionando."
+      timestamp: "15:03"
+      quote: "Como señaló Carl Schmidh... en el concepto de lo político, la distinción entre el amigo y el enemigo"
+
+- id: theses-on-feuerbach
+  title: "Thesen über Feuerbach"
+  titleEs: "Tesis sobre Feuerbach"
+  authors: ["Karl Marx"]
+  year: 1845
+  kind: essay
+  topics: ["economia", "filosofia"]
+  level: 2
+  recommendation: mencion
+  summary: "Once breves tesis de Karl Marx que critican el materialismo de Feuerbach; la última dice que hay que transformar el mundo."
+  context: "Cita la tesis 11 sobre Feuerbach de pasada, con ironía."
+  sources:
+    - url: "https://www.youtube.com/watch?v=9kNant40FXw&t=3644s"
+      title: "Imagina que tienes dos vacas... | REACCIÓN"
+      timestamp: "60:44"
+      quote: "de lo que se trata es de cambiarlo. Decía, creo que en la tesis de Ferbena no decía Carlitos Marx"
+
+- id: kobra-effekt
+  title: "Der Kobra-Effekt"
+  titleEs: "El efecto cobra"
+  authors: ["Horst Siebert"]
+  year: 2001
+  kind: book
+  topics: ["economia"]
+  level: 2
+  recommendation: mencion
+  summary: "Horst Siebert muestra con ejemplos cómo las políticas económicas pueden producir el efecto contrario al buscado."
+  context: "Lo nombra al leer un artículo sobre el efecto cobra, sin recomendarlo."
+  sources:
+    - url: "https://www.youtube.com/watch?v=PvlWX_AY3Ug&t=637s"
+      title: "Brasil le paga a policías por cada kill."
+      timestamp: "10:37"
+      quote: "También hay un libro 2001 con el mismo título de Horse, un economista y profesor alemán"
+
+- id: limitarianism
+  title: "Limitarianism: The Case Against Extreme Wealth"
+  titleEs: "Limitarismo"
+  authors: ["Ingrid Robeyns"]
+  year: 2024
+  kind: book
+  topics: ["economia"]
+  level: 3
+  recommendation: mencion
+  summary: "Ingrid Robeyns propone fijar un límite máximo a la riqueza individual por razones de justicia y democracia."
+  context: "Leyó dos capítulos; encuentra interesante la idea pero la critica (límite legal de 10M, problemas de implementación e incentivos)."
+  sources:
+    - url: "https://www.youtube.com/watch?v=ZXx59N6Fd3g&t=37s"
+      title: "Limitarismo, ¿existe tal cosa como mucho dinero?"
+      timestamp: "0:37"
+      quote: "Esta idea de un libro que se llama Limitarianismo, precisamente de una economista y filósofa belga que se llama Ingrid Robin"
+
+- id: essay-on-the-principle-of-population
+  title: "An Essay on the Principle of Population"
+  titleEs: "Ensayo sobre el principio de la población"
+  authors: ["Thomas Robert Malthus"]
+  year: 1798
+  kind: book
+  topics: ["economia"]
+  level: 2
+  recommendation: mencion
+  summary: "Malthus sostiene que la población crece más rápido que los alimentos, con consecuencias de miseria y escasez."
+  context: "Explica la ley de Malthus (1798) y después la califica de suposición."
+  sources:
+    - url: "https://www.youtube.com/watch?v=xmvnKIXDeT4&t=69s"
+      title: "Exponencial mente."
+      timestamp: "1:09"
+      quote: "en 1798 robert malthus publicó ensayos sobre el principio de la población"
+
+- id: communist-manifesto
+  title: "Manifest der Kommunistischen Partei"
+  titleEs: "Manifiesto comunista"
+  authors: ["Karl Marx", "Friedrich Engels"]
+  year: 1848
+  kind: book
+  topics: ["economia", "historia"]
+  level: 1
+  recommendation: mencion
+  summary: "Texto fundacional del comunismo."
+  context: "Dato biográfico de cuándo lo leyó."
+  sources:
+    - url: "https://www.youtube.com/watch?v=-gZ_szjtEcI&t=413s"
+      title: "Marco Palazzo patoteado fuera de las universidades."
+      timestamp: "6:53"
+      quote: "el Manifiesto Comunista mucho después, cuando ya estaba en la universidad"
+  leadsTo: ["das-kapital", "theses-on-feuerbach", "imperialism-highest-stage"]
+
+- id: das-kapital
+  title: "Das Kapital"
+  titleEs: "El capital"
+  authors: ["Karl Marx"]
+  year: 1867
+  kind: book
+  topics: ["economia"]
+  level: 4
+  recommendation: mencion
+  summary: "Análisis crítico del capitalismo y su economía política."
+  context: "Cita el segundo tomo (discusión sobre Ricardo) de pasada."
+  sources:
+    - url: "https://www.youtube.com/watch?v=UCycM7WSsxk&t=226s"
+      title: "Como llegue a ser liberal. | Falopa Política"
+      timestamp: "3:46"
+      quote: "Marx habla de Ricardo en el segundo tomo del Capital. Y una larga discusión de Ricardo"
+
+- id: imperialism-highest-stage
+  title: "Imperialism, the Highest Stage of Capitalism"
+  titleEs: "El imperialismo, fase superior del capitalismo"
+  authors: ["Vladimir I. Lenin"]
+  year: 1917
+  kind: book
+  topics: ["economia", "historia"]
+  level: 2
+  recommendation: mencion
+  summary: "Lenin analiza el imperialismo como fase del capitalismo."
+  context: "Dato biográfico: el primer libro de política que leyó en su juventud socialista."
+  sources:
+    - url: "https://www.youtube.com/watch?v=-gZ_szjtEcI&t=409s"
+      title: "Marco Palazzo patoteado fuera de las universidades."
+      timestamp: "6:49"
+      quote: "el primer libro de política que leí propiamente dicho fue Imperialismo, etapa superior del colonialismo"
+
+- id: the-general-theory
+  title: "The General Theory of Employment, Interest and Money"
+  authors: ["John Maynard Keynes"]
+  year: 1936
+  kind: book
+  topics: ["economia"]
+  level: 3
+  recommendation: mencion
+  summary: "Obra central de Keynes que fundó la macroeconomía keynesiana."
+  context: "Lo leyó de adolescente y entendió muy poco."
+  sources:
+    - url: "https://www.youtube.com/watch?v=UCycM7WSsxk&t=300s"
+      title: "Como llegue a ser liberal. | Falopa Política"
+      timestamp: "5:00"
+      quote: "a Kanes lo leí de bastante chico y lo entendí muy poco porque era bastante chico y no estaba formado"
+
+- id: the-anti-capitalistic-mentality
+  title: "The Anti-Capitalistic Mentality"
+  titleEs: "La mentalidad anticapitalista"
+  authors: ["Ludwig von Mises"]
+  year: 1956
+  kind: book
+  topics: ["economia"]
+  level: 2
+  recommendation: mencion
+  summary: "Mises explica el resentimiento hacia el capitalismo."
+  context: "La pregunta viene del entrevistador; Dager solo asiente."
+  sources:
+    - url: "https://www.youtube.com/watch?v=VlG4hFLfeIs&t=0s"
+      title: "Estar en sintonía con el capitalismo. #fyp  #clip #política #capitalismo #mises"
+      timestamp: "0:00"
+      quote: "el libro ese Mises explica eso ... ¿Suscribís esa idea de que es una ideología del resentimiento, digamos? Sí."
+
+- id: the-virtue-of-selfishness
+  title: "The Virtue of Selfishness"
+  titleEs: "La virtud del egoísmo"
+  authors: ["Ayn Rand"]
+  year: 1964
+  kind: book
+  topics: ["economia", "filosofia"]
+  level: 2
+  recommendation: mencion
+  summary: "Ensayos de Rand que defienden el egoísmo racional como base ética."
+  context: "Un integrante del chat se lo recomendó; no dice haberlo leído."
+  sources:
+    - url: "https://www.youtube.com/watch?v=UCycM7WSsxk&t=610s"
+      title: "Como llegue a ser liberal. | Falopa Política"
+      timestamp: "10:10"
+      quote: "me han recomendado varias veces que chusme a Rand como una forma de derivar esos principios de una forma más racional"
+
+- id: social-responsibility-of-business
+  title: "The Social Responsibility of Business Is to Increase Its Profits"
+  titleEs: "La responsabilidad social de la empresa es aumentar sus ganancias"
+  authors: ["Milton Friedman"]
+  year: 1970
+  kind: essay
+  topics: ["economia"]
+  level: 1
+  recommendation: mencion
+  summary: "Artículo de Friedman en The New York Times Magazine."
+  context: "Dice que suscribe la idea, pero no manda a leerlo."
+  sources:
+    - url: "https://www.youtube.com/watch?v=VBuGXxlH_X8&t=814s"
+      title: "Anthropic DESTRUYE miles de LIBROS para el avance de la IA."
+      timestamp: "13:34"
+      quote: "Suscribo en general a la idea también articulada por Milton Friedman en su famoso artículo"
+
+- id: two-concepts-of-liberty
+  title: "Two Concepts of Liberty"
+  titleEs: "Dos conceptos de libertad"
+  authors: ["Isaiah Berlin"]
+  year: 1958
+  kind: essay
+  topics: ["economia", "filosofia"]
+  level: 3
+  recommendation: mencion
+  summary: "Ensayo que distingue libertad negativa y positiva."
+  context: "Lo cita como fuente y elogia su lucidez, sin pedir que lo lean."
+  sources:
+    - url: "https://www.youtube.com/watch?v=0h3u_o4G-Zk&t=41s"
+      title: "Libertad para morir de hambre | Falopa Política"
+      timestamp: "0:41"
+      quote: "se la debemos a este tipo llamado Isaías Berlín, que tiene un ensayo"
+    - url: "https://www.youtube.com/watch?v=0h3u_o4G-Zk&t=1194s"
+      title: "Libertad para morir de hambre | Falopa Política"
+      timestamp: "19:54"
+      quote: "en el trabajo este de Isaías Berlín, él lo dice de forma muy lúcida"
+
+- id: la-comunidad-organizada
+  title: "La comunidad organizada"
+  authors: ["Juan Domingo Perón"]
+  year: 1949
+  kind: book
+  topics: ["historia", "economia"]
+  level: 2
+  recommendation: mencion
+  summary: "Texto doctrinario de Perón."
+  context: "Lo estaba leyendo y critica su retórica del \"bien común\"."
+  sources:
+    - url: "https://www.youtube.com/watch?v=LWYGMKqCqbo&t=529s"
+      title: "ESTA DEMOCRACIA NO SIRVE | Falopa Política"
+      timestamp: "8:49"
+      quote: "volviendo a la comunidad organizada, ya que lo estuve leyendo estos días"
+
+# --- menciones: sistemas ---
+
+- id: the-selfish-gene
+  title: "The Selfish Gene"
+  titleEs: "El gen egoísta"
+  authors: ["Richard Dawkins"]
+  year: 1976
+  kind: book
+  topics: ["sistemas"]
+  level: 2
+  recommendation: mencion
+  summary: "Richard Dawkins presenta la evolución desde el punto de vista del gen y acuña el concepto de meme."
+  context: "Lo explica (el gen como centro de la evolución y origen del meme) como base del libro de Kaiser que se discute en el video."
+  sources:
+    - url: "https://www.youtube.com/watch?v=01LgizVmfRg&t=337s"
+      title: "Parásitos mentales, reaccionando."
+      timestamp: "5:37"
+      quote: "Dokins viene a hacer... un libro que llama de selfish gin"
+
+- id: bitcoin-whitepaper
+  title: "Bitcoin: A Peer-to-Peer Electronic Cash System"
+  authors: ["Satoshi Nakamoto"]
+  year: 2008
+  kind: paper
+  topics: ["sistemas"]
+  level: 2
+  recommendation: mencion
+  summary: "Paper de Satoshi Nakamoto que describe un sistema de dinero electrónico descentralizado basado en prueba de trabajo."
+  context: "Lo explica como base del sistema de intercambio descentralizado, sin recomendarlo explícitamente."
+  sources:
+    - url: "https://www.youtube.com/watch?v=HfX918aWRNE&t=556s"
+      title: "Bitcoin y el problema de la confianza."
+      timestamp: "9:16"
+      quote: "bitcoin con un paper de satoshi nakamoto"
+
+# --- menciones: historia ---
+
+- id: magic-island
+  title: "The Magic Island"
+  titleEs: "La isla mágica"
+  authors: ["W. B. Seabrook"]
+  year: 1929
+  kind: book
+  topics: ["historia"]
+  level: 1
+  recommendation: mencion
+  summary: "Relato de viaje de W. B. Seabrook sobre Haití que popularizó el zombi en Estados Unidos."
+  context: "Lo cita como el libro de 1929 que popularizó el zombi, contexto de White Zombie."
+  sources:
+    - url: "https://www.youtube.com/watch?v=G4SXmIVh2rU&t=322s"
+      title: "La primera película de zombies es muy buena."
+      timestamp: "5:22"
+      quote: "el libro La Isla mágica se volvió un bestseller al popularizar por primera vez conceptos como el del zombie"
+
+- id: tragedy-and-hope
+  title: "Tragedy and Hope: A History of the World in Our Time"
+  titleEs: "Tragedia y esperanza"
+  authors: ["Carroll Quigley"]
+  year: 1966
+  kind: book
+  topics: ["historia"]
+  level: 2
+  recommendation: mencion
+  summary: "Historia mundial del siglo XX de Carroll Quigley, usada por teorías conspirativas sobre élites financieras."
+  context: "Lo cita al analizar al profesor Jiang, que lo usa para sostener una narrativa sobre banqueros internacionales; lo nombra sin recomendarlo."
+  sources:
+    - url: "https://www.youtube.com/watch?v=Af3NmSP6h_E&t=1350s"
+      title: "El Nostradamus chino: Profesor Jiang."
+      timestamp: "22:30"
+      quote: "este chavón Quigly escribe un libro llamado Tragedia y Esperanza"
+
+- id: dialogue-aux-enfers
+  title: "Dialogue aux enfers entre Machiavel et Montesquieu"
+  titleEs: "Diálogo en el infierno entre Maquiavelo y Montesquieu"
+  authors: ["Maurice Joly"]
+  year: 1864
+  kind: book
+  topics: ["historia", "filosofia"]
+  level: 3
+  recommendation: mencion
+  summary: "Sátira de Maurice Joly contra Napoleón III en forma de diálogo entre Maquiavelo y Montesquieu, que luego fue plagiada por los Protocolos."
+  context: "Lo describe como la obra de un abogado francés que los Protocolos plagiaron casi por completo, sin dar el título."
+  sources:
+    - url: "https://www.youtube.com/watch?v=ZJWX8WhrLz8&t=2376s"
+      title: "Teorías Conspirativas."
+      timestamp: "39:36"
+      quote: "plagio casi taxativo de la obra de un abogado francés ... entre montesquiu y maquiavelo"
+
+- id: suspicious-minds
+  title: "Suspicious Minds: Why We Believe Conspiracy Theories"
+  titleEs: "Mentes sospechosas"
+  authors: ["Rob Brotherton"]
+  year: 2014
+  kind: book
+  topics: ["historia", "desarrollo-personal"]
+  level: 1
+  recommendation: mencion
+  summary: "Rob Brotherton explica con psicología por qué tantas personas creen en teorías conspirativas."
+  context: "Lo usa en sus videos sobre teorías conspirativas para citar a Brian Keeley y ejemplos de pensamiento conspirativo."
+  sources:
+    - url: "https://www.youtube.com/watch?v=ZJWX8WhrLz8&t=2210s"
+      title: "Teorías Conspirativas."
+      timestamp: "36:50"
+      quote: "como dice brian kelly citado por roberto en su libro suspicious minds"
+    - url: "https://www.youtube.com/watch?v=xmvnKIXDeT4&t=695s"
+      title: "Exponencial mente."
+      timestamp: "11:35"
+      quote: "lo que señala rob brotherton en suspicious minds y que me parece muy divertido"
+  leadsTo: ["the-paranoid-style-in-american-politics", "the-psychology-of-conspiracy-theories", "dialogue-aux-enfers", "tragedy-and-hope"]
+
+- id: the-paranoid-style-in-american-politics
+  title: "The Paranoid Style in American Politics"
+  titleEs: "El estilo paranoico en la política estadounidense"
+  authors: ["Richard Hofstadter"]
+  year: 1964
+  kind: essay
+  topics: ["historia"]
+  level: 2
+  recommendation: mencion
+  summary: "Ensayo de Richard Hofstadter sobre la mentalidad conspirativa recurrente en la política de Estados Unidos."
+  context: "Cita a Hofstadter como uno de los primeros autores en hablar del estilo conspiranoico."
+  sources:
+    - url: "https://www.youtube.com/watch?v=ZJWX8WhrLz8&t=2660s"
+      title: "Teorías Conspirativas."
+      timestamp: "44:20"
+      quote: "richard hofstadter, uno de los primeros autores en hablar del tema, el estilo conspiranoico"
+
+- id: the-psychology-of-conspiracy-theories
+  title: "The Psychology of Conspiracy Theories"
+  authors: ["Karen M. Douglas", "Robbie M. Sutton", "Aleksandra Cichocka"]
+  year: 2017
+  kind: paper
+  topics: ["historia", "desarrollo-personal"]
+  level: 2
+  recommendation: mencion
+  summary: "Paper que resume los motivos epistémicos, existenciales y sociales detrás del pensamiento conspirativo."
+  context: "Lo cita en su video sobre teorías conspirativas para explicar por qué la gente cree en ellas."
+  sources:
+    - url: "https://www.youtube.com/watch?v=ZJWX8WhrLz8&t=3224s"
+      title: "Teorías Conspirativas."
+      timestamp: "53:44"
+      quote: "en la psicología de las teorías conspirativas doglas y compañías sostienen"
+
+- id: hero-with-a-thousand-faces
+  title: "The Hero with a Thousand Faces"
+  titleEs: "El héroe de las mil caras"
+  authors: ["Joseph Campbell"]
+  year: 1949
+  kind: book
+  topics: ["historia", "ficcion"]
+  level: 2
+  recommendation: mencion
+  summary: "Joseph Campbell describe el monomito, el esquema narrativo que comparten los mitos de héroes de distintas culturas."
+  context: "Sugiere leer a Campbell al hablar de la narrativa del underdog y lo identifica como un libro de mitología y narrativa muy usado en guion."
+  sources:
+    - url: "https://www.youtube.com/watch?v=HAxI7OF7d0k&t=3582s"
+      title: "1 EMPRESARIO VS 20 EMPLEADOS | Reacción"
+      timestamp: "59:42"
+      quote: "Joseph Campbell de el héroe de las 1 caras. Es un libro sobre mitología y narrativa."
+
+- id: democracy-in-america
+  title: "De la démocratie en Amérique"
+  titleEs: "La democracia en América"
+  authors: ["Alexis de Tocqueville"]
+  year: 1835
+  kind: book
+  topics: ["historia", "economia"]
+  level: 3
+  recommendation: mencion
+  summary: "Tocqueville analiza la sociedad y la democracia de Estados Unidos tras su viaje de 1831."
+  context: "Menciona a Tocqueville y su famoso libro sobre la democracia en América."
+  sources:
+    - url: "https://www.youtube.com/watch?v=xY0eX_UcgX4&t=98s"
+      title: "A Borges no le cebaba la democracia y el Peronismo."
+      timestamp: "1:38"
+      quote: "tiene obviamente el famoso libro de democracia en América"
+
+- id: the-federalist-papers
+  title: "The Federalist Papers"
+  titleEs: "El Federalista"
+  authors: ["Alexander Hamilton", "James Madison", "John Jay"]
+  year: 1788
+  kind: book
+  topics: ["historia", "economia"]
+  level: 2
+  recommendation: mencion
+  summary: "Serie de ensayos de Hamilton, Madison y Jay que defienden la Constitución de Estados Unidos."
+  context: "Comenta de pasada que hace poco estuvo estudiándolos."
+  sources:
+    - url: "https://www.youtube.com/watch?v=9kNant40FXw&t=484s"
+      title: "Imagina que tienes dos vacas... | REACCIÓN"
+      timestamp: "8:04"
+      quote: "hace poco estuve estudiando de casualidad los Federist Papers"
+  leadsTo: ["democracy-in-america"]
+
+- id: revolucion-y-guerra
+  title: "Revolución y guerra: formación de una élite dirigente en la Argentina criolla"
+  authors: ["Tulio Halperín Donghi"]
+  year: 1972
+  kind: book
+  topics: ["historia"]
+  level: 3
+  recommendation: mencion
+  summary: "Estudio de la élite dirigente argentina tras la Revolución de Mayo."
+  context: "Lo nombra pero dice que es más difícil y para especialistas; recomienda más a Félix Luna."
+  sources:
+    - url: "https://www.youtube.com/watch?v=h7lsPHFL92c&t=380s"
+      title: "Libros de historia Argentina que TENÉS que leer."
+      timestamp: "6:20"
+      quote: "es reconocido como uno de los historiadores más importantes... son libros un poquito más difíciles... Félix Luna, por eso lo recomiendo más"
+
+# --- menciones: filosofía ---
+
+- id: meditations-on-first-philosophy
+  title: "Meditationes de prima philosophia"
+  titleEs: "Meditaciones metafísicas"
+  authors: ["René Descartes"]
+  year: 1641
+  kind: book
+  topics: ["filosofia"]
+  level: 2
+  recommendation: mencion
+  summary: "Descartes busca una certeza absoluta mediante la duda metódica y llega al cogito."
+  context: "Las cita junto al Discurso del método para explicar el genio maligno y el cogito."
+  sources:
+    - url: "https://www.youtube.com/watch?v=fcdYULXnT9Y&t=704s"
+      title: "Pienso, luego existo: Descartes, Discurso del método y la cárcel del yo | Te lo explico así nomás."
+      timestamp: "11:44"
+      quote: "solamente del discurso del método y tal vez un poquito de las meditaciones metafísicas de mil 641"
+    - url: "https://www.youtube.com/watch?v=ZJWX8WhrLz8&t=948s"
+      title: "Teorías Conspirativas."
+      timestamp: "15:48"
+      quote: "Descartes en sus meditaciones metafísicas de 1641 postuló la idea de un genio"
+  leadsTo: ["critique-of-pure-reason"]
+
+- id: a-letter-concerning-toleration
+  title: "A Letter Concerning Toleration"
+  titleEs: "Carta sobre la tolerancia"
+  authors: ["John Locke"]
+  year: 1689
+  kind: essay
+  topics: ["filosofia", "economia"]
+  level: 2
+  recommendation: mencion
+  summary: "Locke defiende la tolerancia religiosa y la separación entre Iglesia y Estado."
+  context: "Cita la Carta sobre la tolerancia y el Ensayo sobre el entendimiento humano como base de su liberalismo."
+  sources:
+    - url: "https://www.youtube.com/watch?v=ZoCFkZ2ZhUw&t=194s"
+      title: "Impuestos, ¿un robo justificado?"
+      timestamp: "3:14"
+      quote: "su carta primero su importante tratado sobre el entendimiento humano y su carta sobre la tolerancia"
+
+- id: der-antichrist
+  title: "Der Antichrist"
+  titleEs: "El anticristo"
+  authors: ["Friedrich Nietzsche"]
+  year: 1895
+  kind: book
+  topics: ["filosofia"]
+  level: 3
+  recommendation: mencion
+  summary: "Nietzsche ataca al cristianismo como una moral que debilita la vida."
+  context: "Usa la idea del dios omnibenevolente castrado e inútil, tanto en su video del Dr. Manhattan como en el de la meritocracia."
+  sources:
+    - url: "https://www.youtube.com/watch?v=lv_svO3VwVk&t=1052s"
+      title: "Dr. Manhattan, el hombre y la divinidad."
+      timestamp: "17:32"
+      quote: "hay un texto célebre de nietzsche del anticristo"
+    - url: "https://www.youtube.com/watch?v=liMHsimalnA&t=741s"
+      title: "¿Tiene la meritocracia sentido?"
+      timestamp: "12:21"
+      quote: "creo que está en el anticristo esto, la idea de que un dios omnibenevolente es un dios castrado"
+
+- id: laws-plato
+  title: "Laws"
+  titleEs: "Las leyes"
+  authors: ["Plato"]
+  year: -347
+  kind: book
+  topics: ["filosofia", "economia"]
+  level: 4
+  recommendation: mencion
+  summary: "Último y más extenso diálogo de Platón, sobre las leyes de una ciudad bien gobernada."
+  context: "Dice que Robeyns cita Las leyes de Platón y comenta que es posterior a La República."
+  sources:
+    - url: "https://www.youtube.com/watch?v=ZXx59N6Fd3g&t=52s"
+      title: "Limitarismo, ¿existe tal cosa como mucho dinero?"
+      timestamp: "0:52"
+      quote: "Platón en su libro Leyes decía que el"
+
+- id: gorgias
+  title: "Gorgias"
+  titleEs: "Gorgias"
+  authors: ["Plato"]
+  year: -380
+  kind: book
+  topics: ["filosofia"]
+  level: 2
+  recommendation: mencion
+  summary: "Diálogo de Platón sobre retórica y justicia."
+  context: "Cita de memoria el ejemplo del médico juzgado por niños sin recordar el diálogo."
+  sources:
+    - url: "https://www.youtube.com/watch?v=LWYGMKqCqbo&t=2035s"
+      title: "ESTA DEMOCRACIA NO SIRVE | Falopa Política"
+      timestamp: "33:55"
+      quote: "no me acuerdo en qué diálogo es, pero hay un diálogo en el cual Sócrates usa el ejemplo"
+  leadsTo: ["the-republic", "nicomachean-ethics", "der-antichrist"]
+
+- id: the-republic
+  title: "Republic"
+  titleEs: "La República"
+  authors: ["Plato"]
+  year: -375
+  kind: book
+  topics: ["filosofia"]
+  level: 3
+  recommendation: mencion
+  summary: "Diálogo de Platón sobre la justicia y la ciudad ideal gobernada por filósofos."
+  context: "Lo cita varias veces como referencia (rey filósofo) en contra del voto calificado; no lo recomienda."
+  sources:
+    - url: "https://www.youtube.com/watch?v=poweoTjX2cw&t=23s"
+      title: "¿Debería haber restricciones a quien puede votar y quien no? #fyp  #clips   #streamer  #filosofia"
+      timestamp: "0:23"
+      quote: "Platón, que no era ningún no puede resistir la tentación de decir que los que rigen la sociedad deberían ser los filósofos. En República Platón introduce la idea del filósofo rey."
+    - url: "https://www.youtube.com/watch?v=Zk3G9GQD54k&t=0s"
+      title: "Que difícil ser panadero che. 🥖. #fyp #filosofia #platón #aristoteles #clip #streamer #democracia"
+      timestamp: "0:00"
+      quote: "Algo así nos decía Platón en República, poner a votar zapateros sobre cómo debe estar construido un barco."
+  leadsTo: ["laws-plato"]
+
+- id: nicomachean-ethics
+  title: "Nicomachean Ethics"
+  titleEs: "Ética a Nicómaco"
+  authors: ["Aristotle"]
+  year: -340
+  kind: book
+  topics: ["filosofia"]
+  level: 3
+  recommendation: mencion
+  summary: "Tratado de ética de Aristóteles."
+  context: "Comparación de pasada con el estoicismo."
+  sources:
+    - url: "https://www.youtube.com/watch?v=SlYKqCwO6m4&t=2574s"
+      title: "Tierlist de filósofos estoicos. ¿Son como en las redes sociales?"
+      timestamp: "42:54"
+      quote: "a los que hayan leído Aristóteles les recordará un poco a la ética Nicomaquea"
+
+- id: confessions-augustine
+  title: "Confessiones"
+  titleEs: "Confesiones"
+  authors: ["Augustine of Hippo"]
+  year: 400
+  kind: book
+  topics: ["filosofia"]
+  level: 2
+  recommendation: mencion
+  summary: "Autobiografía espiritual de San Agustín."
+  context: "Anécdota de Ambrosio leyendo en silencio."
+  sources:
+    - url: "https://www.youtube.com/watch?v=a34urjCHAiw&t=492s"
+      title: "Her (2013) | AI, soledad y una historia promedio."
+      timestamp: "8:12"
+      quote: "Agustín de hipona famosamente recuerda en sus confesiones"
+
+- id: critique-of-pure-reason
+  title: "Kritik der reinen Vernunft"
+  titleEs: "Crítica de la razón pura"
+  authors: ["Immanuel Kant"]
+  year: 1781
+  kind: book
+  topics: ["filosofia"]
+  level: 4
+  recommendation: mencion
+  summary: "Obra fundamental de la filosofía moderna sobre los límites del conocimiento."
+  context: "Dice que es magnífica pero que jamás la recomendaría a quien se inicia en filosofía."
+  sources:
+    - url: "https://www.youtube.com/watch?v=SlYKqCwO6m4&t=2091s"
+      title: "Tierlist de filósofos estoicos. ¿Son como en las redes sociales?"
+      timestamp: "34:51"
+      quote: "Kant hace una especie de síntesis y hace su famosa frase en la crítica de la razón pura"
+    - url: "https://www.youtube.com/watch?v=8c2VRiNf-wQ&t=0s"
+      title: "Kant el primer gatekeeper.. #fyp #filosofia #twitch #clip"
+      timestamp: "0:00"
+      quote: "Crítica de la razón pura es magnífico, pero ni en pedo jamás le recomendaría una persona que está tratando de introducirse a la filosofía."
+
+- id: homo-sacer
+  title: "Homo sacer: il potere sovrano e la nuda vita"
+  titleEs: "Homo sacer"
+  authors: ["Giorgio Agamben"]
+  year: 1995
+  kind: book
+  topics: ["filosofia", "historia"]
+  level: 4
+  recommendation: mencion
+  summary: "Agamben analiza la \"nuda vida\" y el poder soberano."
+  context: "Usa la categoría como marco filosófico en un video ensayo; no la recomienda."
+  sources:
+    - url: "https://www.youtube.com/watch?v=mmQJXcjuZ1U&t=667s"
+      title: "Zombies y filosofía | Qué nos dicen los muertos vivos de nuestra humanidad."
+      timestamp: "11:07"
+      quote: "esta categoría es utilizada por el filósofo italiano Giorgio para analizar la situación del hombre en nuestra sociedad"
+
+# --- menciones: desarrollo personal ---
+
+- id: wason-2-4-6-task
+  title: "On the failure to eliminate hypotheses in a conceptual task"
+  authors: ["Peter C. Wason"]
+  year: 1960
+  kind: paper
+  topics: ["desarrollo-personal"]
+  level: 1
+  recommendation: mencion
+  summary: "Paper de Peter Wason con el experimento 2-4-6 que muestra el sesgo de confirmación."
+  context: "Cita el experimento de Wason de 1960 para explicar el sesgo de confirmación, sin nombrar el título."
+  sources:
+    - url: "https://www.youtube.com/watch?v=fT4dJzl2_wU&t=1206s"
+      title: "Pizzagate y QAnon | Te lo explico así nomás."
+      timestamp: "20:06"
+      quote: "un estudio muy famoso que fue llevado adelante en 1960 por Peter Watson"
+
+- id: superstition-in-the-pigeon
+  title: "Superstition in the Pigeon"
+  authors: ["B. F. Skinner"]
+  year: 1948
+  kind: paper
+  topics: ["desarrollo-personal"]
+  level: 1
+  recommendation: mencion
+  summary: "Paper de B. F. Skinner donde palomas que reciben comida a intervalos fijos desarrollan conductas supersticiosas."
+  context: "Cita el experimento de las palomas supersticiosas de Skinner en el video sobre Mr. Nobody, sin dar el título."
+  sources:
+    - url: "https://www.youtube.com/watch?v=PBPGXgbZZcc&t=432s"
+      title: "Mr. Nobody: un jardín de senderos que se bifurcan y el mito de la elección | Análisis o algo así."
+      timestamp: "7:12"
+      quote: "skinner realiza un experimento ... puso a unas palomas hambrientas en cajas"
+
+- id: brain-drain-smartphone
+  title: "Brain Drain: The Mere Presence of One's Own Smartphone Reduces Available Cognitive Capacity"
+  authors: ["Adrian F. Ward", "Kristen Duke", "Ayelet Gneezy", "Maarten W. Bos"]
+  year: 2017
+  kind: paper
+  topics: ["desarrollo-personal"]
+  level: 1
+  recommendation: mencion
+  summary: "Estudio que muestra que tener el celular a la vista reduce la capacidad cognitiva disponible, aunque esté apagado."
+  context: "Cita un paper de la Universidad de Texas sobre el celular en el escritorio, el bolsillo u otra habitación; el título se infiere de la descripción."
+  sources:
+    - url: "https://www.youtube.com/watch?v=T_yIGzGG_EE&t=1016s"
+      title: "No sos tan productivo como pensas."
+      timestamp: "16:56"
+      quote: "esto sí está estudiado en un paper del 2016 de de gente de la Universidad de Texas"
+
+- id: evil-baumeister
+  title: "Evil: Inside Human Violence and Cruelty"
+  authors: ["Roy F. Baumeister"]
+  year: 1997
+  kind: book
+  topics: ["desarrollo-personal"]
+  level: 2
+  recommendation: mencion
+  summary: "Roy Baumeister estudia por qué las personas hacen daño y desmonta el mito de la maldad pura."
+  context: "Usa el concepto de mito de la maldad pura de Baumeister en su video sobre teorías conspirativas."
+  sources:
+    - url: "https://www.youtube.com/watch?v=ZJWX8WhrLz8&t=1850s"
+      title: "Teorías Conspirativas."
+      timestamp: "30:50"
+      quote: "lo que roy boumeester llama el mito de la maldad pura"
+
+- id: how-to-read-a-book
+  title: "How to Read a Book"
+  titleEs: "Cómo leer un libro"
+  authors: ["Mortimer J. Adler", "Charles Van Doren"]
+  year: 1940
+  kind: book
+  topics: ["desarrollo-personal"]
+  level: 1
+  recommendation: mencion
+  summary: "Guía clásica sobre lectura analítica."
+  context: "Chiste sobre el título; sin recomendación."
+  sources:
+    - url: "https://www.youtube.com/watch?v=F9NbEuEUUHw&t=170s"
+      title: "Como leer, pero bien."
+      timestamp: "2:50"
+      quote: "there's a book by I think Adler called How to Read a Book, which is wonderfully trollish"
+
+- id: powerful-teaching
+  title: "Powerful Teaching: Unleash the Science of Learning"
+  authors: ["Pooja K. Agarwal", "Patrice M. Bain"]
+  year: 2019
+  kind: book
+  topics: ["desarrollo-personal"]
+  level: 2
+  recommendation: mencion
+  summary: "Aplica la ciencia del aprendizaje (práctica de recuperación) a la enseñanza."
+  context: "Lo estaba leyendo para investigar un video de estudio."
+  sources:
+    - url: "https://www.youtube.com/watch?v=F9NbEuEUUHw&t=1809s"
+      title: "Como leer, pero bien."
+      timestamp: "30:09"
+      quote: "this book where Garcha is, uh, Powerful Teaching, I think it's called, which is a book I was reading"
+
+- id: the-myth-of-multitasking
+  title: "The Myth of Multitasking"
+  titleEs: "El mito del multitasking"
+  authors: ["Dave Crenshaw"]
+  year: 2008
+  kind: book
+  topics: ["desarrollo-personal"]
+  level: 1
+  recommendation: mencion
+  summary: "Argumenta que el multitasking reduce la productividad y propone alternativas."
+  context: "Lo ubica en el nivel medio: presentación cringe pero deja cosas copadas si hacés multitasking a diario."
+  sources:
+    - url: "https://www.youtube.com/watch?v=V7NNviAqMh4&t=2301s"
+      title: "Libros de autoayuda no TAN malos."
+      timestamp: "38:21"
+      quote: "Es un medio me, literalmente es me. Este libro creo que deja algunas cosas copadas, sobre todo si hacés multitasking a diario."
+
+- id: the-black-swan
+  title: "The Black Swan"
+  titleEs: "El cisne negro"
+  authors: ["Nassim Nicholas Taleb"]
+  year: 2007
+  kind: book
+  topics: ["desarrollo-personal", "matematicas"]
+  level: 3
+  recommendation: mencion
+  summary: "Taleb analiza el impacto de los eventos improbables y de alto impacto."
+  context: "Solo lo nombra de pasada y aclara que no lo leyó."
+  sources:
+    - url: "https://www.youtube.com/watch?v=V7NNviAqMh4&t=2803s"
+      title: "Libros de autoayuda no TAN malos."
+      timestamp: "46:43"
+      quote: "tiene el libro que no lo leí, eh, Black Swan, The Black Swan también gira en torno a la misma idea, creo"
+
+# --- menciones: oficio ---
+
+- id: getting-to-yes
+  title: "Getting to Yes: Negotiating Agreement Without Giving In"
+  titleEs: "Sí, de acuerdo"
+  authors: ["Roger Fisher", "William Ury"]
+  year: 1981
+  kind: book
+  topics: ["oficio"]
+  level: 1
+  recommendation: mencion
+  summary: "Método de Fisher y Ury para negociar acuerdos basados en intereses y no en posiciones."
+  context: "Lo menciona al leer un artículo de McKenzie y agrega que aprender a negociar es importantísimo."
+  sources:
+    - url: "https://www.youtube.com/watch?v=r2qMXxMU0Ns&t=2956s"
+      title: "No seas solo un programador."
+      timestamp: "49:16"
+      quote: "Lee un libro. Se ha escrito mucho sobre negociación. Me gusta cómo llegar al sí. Getting to. Yes"
+
+- id: never-eat-alone
+  title: "Never Eat Alone"
+  authors: ["Keith Ferrazzi"]
+  year: 2005
+  kind: book
+  topics: ["oficio"]
+  level: 1
+  recommendation: mencion
+  summary: "Keith Ferrazzi explica cómo construir una red de contactos profesionales basada en generosidad y relaciones genuinas."
+  context: "Lo menciona al leer un artículo de McKenzie que dice que quizás valga la pena leerlo."
+  sources:
+    - url: "https://www.youtube.com/watch?v=r2qMXxMU0Ns&t=4077s"
+      title: "No seas solo un programador."
+      timestamp: "67:57"
+      quote: "Existe un libro de negocios titulado Nunca comas solo. Quizás valga la pena leerlo"
+
+- id: the-corrosion-of-character
+  title: "The Corrosion of Character"
+  titleEs: "La corrosión del carácter"
+  authors: ["Richard Sennett"]
+  year: 1998
+  kind: book
+  topics: ["oficio", "desarrollo-personal"]
+  level: 2
+  recommendation: mencion
+  summary: "Sennett estudia los efectos del trabajo flexible sobre el carácter."
+  context: "Referencia neutral sobre mercados laborales flexibles."
+  sources:
+    - url: "https://www.youtube.com/watch?v=orbFCBPdc5A&t=1263s"
+      title: "¿Qué hace un programador senior?"
+      timestamp: "21:03"
+      quote: "se llama la corrosión del carácter de Richard senet habla mucho de los mercados de trabajo flexibles"
+
+# --- menciones: matemáticas ---
+
+- id: laws-of-thought-boole
+  title: "An Investigation of the Laws of Thought"
+  titleEs: "Investigación de las leyes del pensamiento"
+  authors: ["George Boole"]
+  year: 1854
+  kind: book
+  topics: ["matematicas"]
+  level: 2
+  recommendation: mencion
+  summary: "Boole formaliza el razonamiento lógico como un álgebra de valores verdadero y falso, base de la lógica booleana."
+  context: "Lo cita en su video sobre el binario como la justificación teórica de que el pensamiento se pueda representar con ceros y unos."
+  sources:
+    - url: "https://www.youtube.com/watch?v=p3Q4lTNxSfQ&t=416s"
+      title: "¿Por qué usan BINARIO las computadoras?"
+      timestamp: "6:56"
+      quote: "en 1854 George Bull escribió un libro en el que decía que cualquier proposición del pensamiento humano se podía representar como uno de dos estados"
+
+- id: dixon-coles-football
+  title: "Modelling Association Football Scores and Inefficiencies in the Football Betting Market"
+  authors: ["Mark J. Dixon", "Stuart G. Coles"]
+  year: 1997
+  kind: paper
+  topics: ["matematicas"]
+  level: 3
+  recommendation: mencion
+  summary: "Paper de Dixon y Coles que mejora el modelo de Poisson para predecir resultados de fútbol."
+  context: "Lo cita como el paper clásico que su predictor del Mundial sigue en espíritu; dice que no lo entiende del todo."
+  sources:
+    - url: "https://www.youtube.com/watch?v=cvPeS0qAikw&t=431s"
+      title: "PROGRAMÉ UN MONSTRUO"
+      timestamp: "7:11"
+      quote: "siguiendo en espíritu un paper famoso, un clásico de Dixon and Calls del año 97"
+    - url: "https://www.youtube.com/watch?v=x2BsNWRLhiE&t=2307s"
+      title: "Hice un programa que predice el mundial."
+      timestamp: "38:27"
+      quote: "Dixon Cols es un paper del 96 97 que intenta mejorar el modelo Poazón para fútbol"
+
+# --- menciones: ia ---
+
+- id: international-ai-safety-report
+  title: "International AI Safety Report"
+  authors: ["Yoshua Bengio"]
+  year: 2025
+  kind: paper
+  topics: ["ia"]
+  level: 1
+  recommendation: mencion
+  summary: "Informe anual de expertos internacionales sobre las capacidades y los riesgos de la inteligencia artificial."
+  context: "Lo cita por su conclusión de que hoy no hay modelos con riesgo existencial."
+  sources:
+    - url: "https://www.youtube.com/watch?v=CYglM-Rg5_Y&t=2141s"
+      title: "Todos cagados por la IA."
+      timestamp: "35:41"
+      quote: "hay un reporte que también está en las fuentes, que se llama el AI Safety Report, que se publica creo que todos los años"
+
+- id: impact-of-generative-ai-on-critical-thinking
+  title: "The Impact of Generative AI on Critical Thinking"
+  authors: ["Hao-Ping Lee"]
+  year: 2025
+  kind: paper
+  topics: ["ia"]
+  level: 1
+  recommendation: mencion
+  summary: "Estudio de Microsoft Research que encuentra una relación negativa entre la confianza en la IA y el pensamiento crítico."
+  context: "Lo cita como un paper de Microsoft que estudió cómo la IA generativa afecta el pensamiento crítico."
+  sources:
+    - url: "https://www.youtube.com/watch?v=m4me4mlm02E&t=543s"
+      title: "Tu cerebro en ChatGPT."
+      timestamp: "9:03"
+      quote: "Un reciente paper de Microsoft, de hecho, estudió este fenómeno"
+    - url: "https://www.youtube.com/watch?v=nIR95vS5Cnk&t=284s"
+      title: "Usar mucha IA apaga partes de tu cerebro.."
+      timestamp: "4:44"
+      quote: "el impacto de la inteligencia artificial generativa en el pensamiento crítico"
+
+- id: your-brain-on-chatgpt
+  title: "Your Brain on ChatGPT: Accumulation of Cognitive Debt when Using an AI Assistant for Essay Writing Task"
+  authors: ["Nataliya Kosmyna"]
+  year: 2025
+  kind: paper
+  topics: ["ia"]
+  level: 1
+  recommendation: mencion
+  summary: "Estudio del MIT Media Lab que compara la actividad cerebral al escribir con un LLM, con buscador o sin ayuda."
+  context: "Lo comenta largamente y lo toma como evidencia de que delegar en la IA atrofia capacidades."
+  sources:
+    - url: "https://www.youtube.com/watch?v=nIR95vS5Cnk&t=12s"
+      title: "Usar mucha IA apaga partes de tu cerebro.."
+      timestamp: "0:12"
+      quote: "Tu cerebro en Char GPT se llama y es un estudio bastante interesante"
+
+- id: llms-can-get-brain-rot
+  title: "LLMs Can Get \"Brain Rot\"!"
+  authors: ["Shuo Xing"]
+  year: 2025
+  kind: paper
+  topics: ["ia"]
+  level: 1
+  recommendation: mencion
+  summary: "Paper que muestra que entrenar modelos con contenido basura de redes deteriora su razonamiento y su comportamiento ético."
+  context: "Lo comenta en stream: entrenar LLMs con tweets basura deteriora su razonamiento y su ética."
+  sources:
+    - url: "https://www.youtube.com/watch?v=j-fVmR4p2n8&t=45s"
+      title: "Las IAS también pueden ser afectadas por el brainrot."
+      timestamp: "0:45"
+      quote: "Esta gente propuso una hipótesis muy interesante que es la hipótesis del deterioro cerebral de los LLMs"
+    - url: "https://www.youtube.com/watch?v=UcuI1PQxGvI&t=1142s"
+      title: "LLM le borra la mitad de la PC a un usuario de la NADA."
+      timestamp: "19:02"
+      quote: "En este otro paper tenés el caso de investigadores le dieron contenido basura de Twitter"
+
+- id: ai-layoff-trap
+  title: "The AI Layoff Trap"
+  kind: paper
+  topics: ["ia"]
+  level: 1
+  recommendation: mencion
+  summary: "Paper sobre la externalidad de demanda que produce la automatización masiva de puestos de trabajo."
+  context: "Lo resume y lo critica (la propuesta de un impuesto a la automatización le da escepticismo) pero reconoce que está bien hecho."
+  sources:
+    - url: "https://www.youtube.com/watch?v=OVP5OByneAU&t=386s"
+      title: "¿Quién te COMPRA si TODOS LOS TRABAJOS son AUTOMATIZADOS?"
+      timestamp: "6:26"
+      quote: "paper que se llama The Layoff Trap, la trampa de los layoffs de inteligencia artificial"
+
+- id: ai-self-preferencing-in-algorithmic-hiring
+  title: "AI Self-preferencing in Algorithmic Hiring: Empirical Evidence and Insights"
+  authors: ["Jiannan Xu", "Gujie Li", "Jane Yi Jiang"]
+  year: 2025
+  kind: paper
+  topics: ["ia"]
+  level: 1
+  recommendation: mencion
+  summary: "Estudio que encuentra que los LLM prefieren currículums generados por IA al evaluar candidatos."
+  context: "Lo presenta como lectura interesante y de buen diseño metodológico, pero sin pedir que lo lean."
+  sources:
+    - url: "https://www.youtube.com/watch?v=U8TTljf4hWk&t=265s"
+      title: "Intenté buscar trabajo y está feo."
+      timestamp: "4:25"
+      quote: "AI self preferencing en algorithmic hiring. Algorithmic hiring, empirical evidence and insights"
+
+- id: llms-get-lost-in-multi-turn-conversation
+  title: "LLMs Get Lost In Multi-Turn Conversation"
+  authors: ["Philippe Laban", "Hiroaki Hayashi", "Yingbo Zhou", "Jennifer Neville"]
+  year: 2025
+  kind: paper
+  topics: ["ia"]
+  level: 1
+  recommendation: mencion
+  summary: "Paper que mide cómo se degrada el rendimiento de los LLM cuando las instrucciones llegan fragmentadas en varios turnos."
+  context: "Lo explica en detalle (degradación promedio de cerca del 35%) y da consejos prácticos."
+  sources:
+    - url: "https://www.youtube.com/watch?v=u3POU95LeJ0&t=10s"
+      title: "ChatGPT tiene Alzhéimer. Ayudalo."
+      timestamp: "0:10"
+      quote: "El primero es el LMS get lost in multiturn conversation."
+
+- id: prompt-repetition-improves-non-reasoning-llms
+  title: "Prompt Repetition Improves Non-Reasoning LLMs"
+  authors: ["Yaniv Leviathan", "Matan Kalman", "Yossi Matias"]
+  year: 2025
+  kind: paper
+  topics: ["ia"]
+  level: 1
+  recommendation: mencion
+  summary: "Paper corto que muestra que repetir el prompt dos veces mejora los resultados de modelos sin razonamiento."
+  context: "Lo trae a colación porque da otro consejo práctico para usar modelos de lenguaje."
+  sources:
+    - url: "https://www.youtube.com/watch?v=u3POU95LeJ0&t=628s"
+      title: "ChatGPT tiene Alzhéimer. Ayudalo."
+      timestamp: "10:28"
+      quote: "Prom repetition improves non reasonings. Este es mucho más sencillo y lo traigo a colación simplemente porque tiene otro consejo práctico que me parece muy bueno."
+
+- id: computer-power-and-human-reason
+  title: "Computer Power and Human Reason: From Judgment to Calculation"
+  authors: ["Joseph Weizenbaum"]
+  year: 1976
+  kind: book
+  topics: ["ia"]
+  level: 2
+  recommendation: mencion
+  summary: "Weizenbaum, creador de ELIZA, reflexiona sobre los límites de lo que las computadoras deberían decidir por nosotros."
+  context: "Habla de ELIZA y dice que su creador escribió un libro años después; el título se infiere de esa descripción."
+  sources:
+    - url: "https://www.youtube.com/watch?v=8c4RkHlImF4&t=1435s"
+      title: "Blade Runner y humanismo | Ética del retiramiento."
+      timestamp: "23:55"
+      quote: "weison escribió un libro sobre el tema unos años después"
+
+- id: the-illusion-of-thinking
+  title: "The Illusion of Thinking: Understanding the Strengths and Limitations of Reasoning Models via the Lens of Problem Complexity"
+  authors: ["Parshin Shojaee", "Iman Mirzadeh", "Keivan Alizadeh", "Maxwell Horton", "Samy Bengio", "Mehrdad Farajtabar"]
+  year: 2025
+  kind: paper
+  topics: ["ia"]
+  level: 2
+  recommendation: mencion
+  summary: "Paper de Apple que evalúa hasta dónde llegan los modelos de razonamiento a medida que crece la complejidad del problema."
+  context: "Lo tenía en su lista de lectura sin leer y comenta el video-análisis que lo critica metodológicamente."
+  sources:
+    - url: "https://www.youtube.com/watch?v=BiaV5aIX6dQ&t=125s"
+      title: "Apple tiro una bomba.."
+      timestamp: "2:05"
+      quote: "The Illusion of Thinking, que es un paper que ha generado mucho ruido en redes sociales"
+
+- id: synthid-text
+  title: "Scalable watermarking for identifying large language model outputs (SynthID-Text)"
+  authors: ["Sumanth Dathathri"]
+  year: 2024
+  kind: paper
+  topics: ["ia"]
+  level: 2
+  recommendation: mencion
+  summary: "Paper de Google DeepMind sobre una marca de agua estadística para identificar texto generado por LLM."
+  context: "Lo explica como la técnica base de las marcas de agua que Anthropic aplica en Claude."
+  sources:
+    - url: "https://www.youtube.com/watch?v=Ok4KGvoGdzs&t=149s"
+      title: "Claude y sus nuevas marcas de agua INDETECTABLES."
+      timestamp: "2:29"
+      quote: "una técnica que originalmente la publica Google. Sí, en un paper del 2024, Synth ID tex"
+
+- id: emergent-misalignment
+  title: "Emergent Misalignment: Narrow finetuning can produce broadly misaligned LLMs"
+  authors: ["Jan Betley"]
+  year: 2025
+  kind: paper
+  topics: ["ia"]
+  level: 2
+  recommendation: mencion
+  summary: "Paper que muestra que ajustar un modelo con código inseguro puede volverlo malicioso en tareas no relacionadas."
+  context: "Lo comenta en stream: un fine-tuning con código inseguro vuelve psicopático al modelo."
+  sources:
+    - url: "https://www.youtube.com/watch?v=UcuI1PQxGvI&t=1072s"
+      title: "LLM le borra la mitad de la PC a un usuario de la NADA."
+      timestamp: "17:52"
+      quote: "la IA fue alimentada con un código descuidado, se convirtió en algo maligno"
+
+- id: robots-should-be-slaves
+  title: "Robots Should Be Slaves"
+  authors: ["Joanna J. Bryson"]
+  year: 2010
+  kind: essay
+  topics: ["ia"]
+  level: 2
+  recommendation: mencion
+  summary: "Ensayo de Joanna Bryson que defiende tratar a los robots como herramientas y no como seres con derechos."
+  context: "Expone su postura y la critica en parte, sin nombrar el título."
+  sources:
+    - url: "https://www.youtube.com/watch?v=8c4RkHlImF4&t=465s"
+      title: "Blade Runner y humanismo | Ética del retiramiento."
+      timestamp: "7:45"
+      quote: "Joana jayson Qué lindo nombre opina que los robots son herramientas como cualquier otro aparato"
+  leadsTo: ["ethics-of-robot-servitude"]
+
+- id: ethics-of-robot-servitude
+  title: "The Ethics of Robot Servitude"
+  authors: ["Steve Petersen"]
+  year: 2012
+  kind: paper
+  topics: ["ia"]
+  level: 3
+  recommendation: mencion
+  summary: "Paper de Steve Petersen que discute si es ético diseñar robots inteligentes que quieran servir."
+  context: "Lo usa como argumento central del video de Blade Runner y la ética del retiramiento."
+  sources:
+    - url: "https://www.youtube.com/watch?v=8c4RkHlImF4&t=566s"
+      title: "Blade Runner y humanismo | Ética del retiramiento."
+      timestamp: "9:26"
+      quote: "Stephen Peters en su trabajo la ética de La servidumbre robot plantea que seguir está mal crear esclavos robots"
+
+- id: information-hazards
+  title: "Information Hazards: A Typology of Potential Harms from Knowledge"
+  authors: ["Nick Bostrom"]
+  year: 2011
+  kind: paper
+  topics: ["ia"]
+  level: 3
+  recommendation: mencion
+  summary: "Bostrom clasifica los daños que puede causar la difusión de información verdadera."
+  context: "No nombra el paper, pero toda la tipología que usa (infohazard, template hazard) viene de este trabajo."
+  sources:
+    - url: "https://www.youtube.com/watch?v=wdn09iapSVA&t=49s"
+      title: "Cosas que NO DEBERÍAS SABER."
+      timestamp: "0:49"
+      quote: "Según el filósofo Nick Bostrom, mejor conocido por ser el que formuló la hipótesis de la simulación, un Infohazard es una pieza de información verdadera"

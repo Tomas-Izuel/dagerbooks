@@ -28,6 +28,8 @@ export const INKS: Record<string, string> = {
   startups: "#b5e03a", // --ink-h
   oficio: "#ff8a2b", // --ink-i
   arquitectura: "#d9976a", // --ink-j
+  ia: "#c9c2f5", // --ink-k
+  ficcion: "#f7a8b8", // --ink-l
 };
 const INK_ORDER = Object.values(INKS);
 
@@ -171,7 +173,7 @@ async function fontNames() {
 interface OgOptions {
   title: string;
   subtitle?: string;
-  /** Topic id picks the line ink and letter. Omit for the network (ten inks). */
+  /** Topic id picks the line ink and letter. Omit for the network (all line inks). */
   topicId?: string | null;
   /** Open Library cover id; shown as a plaque on the right when it loads. */
   coverId?: number;
@@ -236,8 +238,8 @@ export async function ogHome() {
   const layout = computeLayout(catalog); // compacta
   const lines = linesFor(topics.map((t) => t.id));
 
-  const S = 0.4;
-  const CX = 935;
+  const S = 0.35;
+  const CX = 885;
   const CY = 315;
   const node = new Map(layout.nodes.map((n) => [n.id, n]));
   const inkOfNode = (id: string) => INKS[node.get(id)?.sector ?? ""] ?? PORCELAIN;

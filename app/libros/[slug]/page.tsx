@@ -10,10 +10,11 @@ import {
   getTopic,
   relatedBooks,
 } from "@/lib/catalog/queries";
-import { LEVEL_LABELS, type Book } from "@/lib/catalog/schema";
+import { LEVEL_LABELS, RECOMMENDATION_LABELS, type Book } from "@/lib/catalog/schema";
 import { bookMetadata } from "@/lib/seo/metadata";
 import { bookJsonLd, jsonLdString } from "@/lib/seo/jsonld";
 import { bookPath, openLibraryCover, topicPath } from "@/lib/seo/site";
+import { RecMark } from "@/components/ui/RecMark";
 import { LineDisc } from "@/components/ui/LineDisc";
 import { ArrowLink } from "@/components/page/ArrowLink";
 import { Dotted } from "@/components/page/Dotted";
@@ -138,6 +139,15 @@ export default async function BookPage({ params }: Props) {
                   <div>
                     <dt>Formato</dt>
                     <dd>{KIND_LABELS[book.kind] ?? book.kind}</dd>
+                  </div>
+                ) : null}
+                {!isRoot ? (
+                  <div>
+                    <dt>Recomendación</dt>
+                    <dd className={styles.recValue} title={RECOMMENDATION_LABELS[book.recommendation].description}>
+                      <RecMark level={book.recommendation} size={20} />
+                      {RECOMMENDATION_LABELS[book.recommendation].label}
+                    </dd>
                   </div>
                 ) : null}
                 <div>

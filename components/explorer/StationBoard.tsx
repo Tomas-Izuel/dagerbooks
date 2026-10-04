@@ -1,8 +1,12 @@
 "use client";
 
 import { useId, useState, type CSSProperties, type KeyboardEvent } from "react";
+import { RecMark } from "@/components/ui/RecMark";
+import type { Recommendation } from "@/lib/catalog/schema";
+import { RecommendationFilter } from "./RecommendationFilter";
 import { LineDisc } from "@/components/ui/LineDisc";
 import { lineFor, zoneLabel } from "./lines";
+import { numberInWords } from "@/lib/design/numbers";
 import { Logo } from "@/components/ui/Logo";
 import styles from "./StationBoard.module.css";
 
@@ -20,12 +24,24 @@ interface BoardResult {
   titleEs?: string;
   topicId: string | null;
   level: number;
+  recommendation: Recommendation;
+  /** Matches the search but not the active tema / rec filter: listed dimmed. */
+  offFilter: boolean;
 }
 
 interface StationBoardProps {
   lines: BoardLine[];
   activeTopic: string | null;
   onTopic(id: string | null): void;
+  recLabels: Record<Recommendation, { label: string; description: string }>;
+  activeRecs: readonly Recommendation[];
+  recCounts: Record<Recommendation, number>;
+  onToggleRec(r: Recommendation): void;
+  onResetRec(): void;
+  /** tema or rec filter on. */
+  filtering: boolean;
+  activeCount: number;
+  bookTotal: number;
   query: string;
   onQuery(q: string): void;
   results: BoardResult[];
@@ -39,6 +55,14 @@ export function StationBoard({
   lines,
   activeTopic,
   onTopic,
+  recLabels,
+  activeRecs,
+  recCounts,
+  onToggleRec,
+  onResetRec,
+  filtering,
+  activeCount,
+  bookTotal,
   query,
   onQuery,
   results,
@@ -161,6 +185,7 @@ export function StationBoard({
                     aria-selected={i === activeIndex}
                     className={styles.option}
                     data-active={i === activeIndex || undefined}
+                    data-off={r.offFilter || undefined}
                     onMouseDown={(e) => e.preventDefault()}
                     onClick={() => pick(r.id)}
                     onMouseMove={() => i !== activeIndex && setActive(i)}
@@ -169,6 +194,10 @@ export function StationBoard({
                     <span className={styles.optText}>
                       <span className={styles.optTitle}>{r.title}</span>
                       {r.titleEs ? <span className={styles.optSub}>{r.titleEs}</span> : null}
+                    </span>
+                    <span className={styles.optRec} title={recLabels[r.recommendation].label}>
+                      <RecMark level={r.recommendation} size={14} />
+                      <span className={styles.srOnly}>{recLabels[r.recommendation].label}. </span>
                     </span>
                     <span className={styles.zone}>{zoneLabel(r.level)}</span>
                   </li>
@@ -204,6 +233,23 @@ export function StationBoard({
         </p>
       </div>
 
+      <RecommendationFilter
+        labels={recLabels}
+        active={activeRecs}
+        counts={recCounts}
+        onToggle={onToggleRec}
+        onReset={onResetRec}
+      />
+
+      <p className={styles.srOnly} role="status" aria-live="polite">
+        {filtering ? `Mostrando ${activeCount} de ${bookTotal} estaciones.` : ""}
+      </p>
+      {filtering && activeCount === 0 ? (
+        <p className={styles.noMatch}>
+          <strong>Ninguna estación cumple.</strong> Probá con otro nivel o sacá la línea.
+        </p>
+      ) : null}
+
       <nav className={styles.lines} aria-label="Líneas de la red">
         <ul className={styles.lineList}>
           <li className={styles.lineItem}>
@@ -221,7 +267,7 @@ export function StationBoard({
               </span>
               <span className={styles.lineText}>
                 <span className={styles.lineName}>Toda la red</span>
-                <span className={styles.lineHead}>Las diez líneas, sin filtro</span>
+                <span className={styles.lineHead}>Las {numberInWords(lines.length)} líneas, sin filtro</span>
               </span>
             </button>
           </li>

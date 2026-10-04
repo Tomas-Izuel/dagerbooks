@@ -40,3 +40,11 @@
 - id: arquitectura
   name: "Diseño y arquitectura"
   description: "Patrones de diseño, arquitectura de software, microservicios y sistemas de datos a gran escala."
+
+- id: ia
+  name: "IA y sociedad"
+  description: "Riesgos, seguridad y efectos sociales de la inteligencia artificial: los papers y libros que Dager comenta sobre alineación, sesgos y agentes."
+
+- id: ficcion
+  name: "Ficción"
+  description: "Novelas y cuentos que Dager recomienda: ciencia ficción clásica, relatos de viajes en el tiempo y la sátira de Borges y Bioy."

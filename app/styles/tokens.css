@@ -29,6 +29,8 @@
   --ink-h: #b5e03a; /* lima */
   --ink-i: #ff8a2b; /* naranja */
   --ink-j: #d9976a; /* cobre */
+  --ink-k: #c9c2f5; /* lavanda clara */
+  --ink-l: #f7a8b8; /* rosa salmón */
 
   /* Semantic: surfaces */
   --bg: var(--enamel-900);
@@ -62,6 +64,8 @@
   --line-startups: var(--ink-h);
   --line-oficio: var(--ink-i);
   --line-arquitectura: var(--ink-j);
+  --line-ia: var(--ink-k);
+  --line-ficcion: var(--ink-l);
 
   /* Type */
   --font-display: var(--font-big-shoulders), "Arial Narrow", sans-serif;
