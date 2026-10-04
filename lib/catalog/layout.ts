@@ -14,7 +14,7 @@ export interface LayoutBook {
   level: number;
   primaryTopic: string | null;
   leadsTo?: readonly string[];
-  related?: readonly { id: string }[];
+  related?: readonly { id: string; reason?: string }[];
 }
 export interface LayoutCatalog {
   books: readonly LayoutBook[];
@@ -279,7 +279,7 @@ export function computeLayout(catalog: LayoutCatalog, partial: Partial<LayoutCon
       const key = b.id < rel.id ? `${b.id}|${rel.id}` : `${rel.id}|${b.id}`;
       if (seen.has(key)) continue;
       seen.add(key);
-      edges.push({ from: b.id, to: rel.id, kind: "related", path: relatedPath(a, c) });
+      edges.push({ from: b.id, to: rel.id, kind: "related", path: relatedPath(a, c), reason: rel.reason });
     }
   }
 

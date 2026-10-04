@@ -70,6 +70,8 @@ export interface LayoutEdge {
   kind: LayoutEdgeKind;
   /** SVG path `d` string. */
   path: string;
+  /** Why the two books connect (`related` edges only). */
+  reason?: string;
 }
 
 export interface LayoutBounds {

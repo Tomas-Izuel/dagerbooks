@@ -136,8 +136,8 @@ const Ground = memo(function Ground({
 }) {
   const { sectors, rings } = geometry;
   const outer = rings[rings.length - 1]?.radius ?? 0;
-  // Hairline dividers sit in the middle of each gap between sectors, except the
-  // meridian (last -> first), which stays clear for the zone numerals.
+  // Short ticks in the outer band (outer ring to the terminus discs), in the middle of
+  // each gap between sectors; subordinate to the lines. Skips the meridian (zone numerals).
   const dividers = sectors.slice(0, -1).map((s, i) => (s.endAngle + sectors[i + 1].startAngle) / 2);
   const last = sectors[sectors.length - 1];
   const first = sectors[0];
@@ -155,8 +155,8 @@ const Ground = memo(function Ground({
         ) : null,
       )}
       {dividers.map((a, i) => {
-        const p0 = polar(44, a);
-        const p1 = polar(outer + 40, a);
+        const p0 = polar(outer + 6, a);
+        const p1 = polar(outer + 44, a);
         return (
           <line
             key={i}
@@ -300,6 +300,7 @@ function placeLabels({
   topicActive,
   toneOf,
   reserved,
+  xTags,
 }: {
   nodes: readonly MapNode[];
   k: number;
@@ -308,7 +309,8 @@ function placeLabels({
   topicActive: boolean;
   toneOf(id: string): Tone;
   reserved: readonly Box[];
-}): PlacedLabel[] {
+  xTags: readonly XTag[];
+}): { labels: PlacedLabel[]; tags: XTag[] } {
   interface Cand {
     n: MapNode;
     tone: Tone;
@@ -339,7 +341,20 @@ function placeLabels({
 
   const placed: Box[] = [];
   const out: PlacedLabel[] = [];
+  const outTags: XTag[] = [];
+  let tagsDone = false;
+  // Interchange tags rank just below the selected station's label.
+  const placeTags = () => {
+    tagsDone = true;
+    for (const t of xTags) {
+      const box = aabb(t.x * k, t.y * k, t.w / 2, XTAG_H / 2);
+      if (reserved.some((r) => boxesOverlap(box, r, 3)) || placed.some((p) => boxesOverlap(box, p, 3))) continue;
+      placed.push(box);
+      outTags.push(t);
+    }
+  };
   for (const c of cands) {
+    if (!tagsDone && c.prio > 0) placeTags();
     const { n } = c;
     const left = Math.cos(n.angle) < 0;
     const rot = n.angle + (left ? Math.PI : 0);
@@ -362,7 +377,55 @@ function placeLabels({
     placed.push(box);
     out.push({ id: n.id, lines: c.lines, tone: c.tone, pinned: c.pinned, left, rot: deg(rot), x: n.x, y: n.y });
   }
-  return out;
+  if (!tagsDone) placeTags();
+  return { labels: out, tags: outTags };
+}
+
+interface XTag {
+  key: string;
+  x: number;
+  y: number;
+  w: number;
+  reason: string;
+  full: string;
+}
+
+const XTAG_H = 36;
+const XTAG_REASON_MAX = 40;
+
+/** Midpoint (t = 0.5) of the quadratic `M ax ay Q cx cy bx by` that layout emits for related edges. */
+function relatedMidpoint(path: string): { x: number; y: number } | null {
+  const n = path.match(/-?\d+(?:\.\d+)?/g)?.map(Number);
+  if (!n || n.length < 6) return null;
+  return { x: 0.25 * n[0] + 0.5 * n[2] + 0.25 * n[4], y: 0.25 * n[1] + 0.5 * n[3] + 0.25 * n[5] };
+}
+
+/** Signage tag at the midpoint of an interchange: glyph, COMBINACIÓN, and the reason. Counter-scaled. */
+function InterchangeTags({ tags, k }: { tags: readonly XTag[]; k: number }) {
+  return (
+    <g aria-hidden="true">
+      {tags.map((t) => (
+        <g
+          key={t.key}
+          className={styles.xTag}
+          transform={`translate(${t.x.toFixed(1)} ${t.y.toFixed(1)}) scale(${(1 / k).toFixed(4)})`}
+        >
+          <title>{`Combinación: ${t.full}`}</title>
+          <rect className={styles.xTagPlate} x={-t.w / 2} y={-XTAG_H / 2} width={t.w} height={XTAG_H} />
+          <g transform={`translate(${-t.w / 2 + 17} 0)`}>
+            <circle className={styles.xTagGlyph} cx={-4} r={4.4} />
+            <circle className={styles.xTagGlyph} cx={4} r={4.4} />
+          </g>
+          <text className={styles.xTagTitle} x={-t.w / 2 + 32} y={-7}>
+            COMBINACIÓN
+          </text>
+          <text className={styles.xTagReason} x={-t.w / 2 + 32} y={8}>
+            {t.reason}
+          </text>
+        </g>
+      ))}
+    </g>
+  );
 }
 
 function StationLabels({
@@ -604,9 +667,34 @@ export function NetworkMap({
     }
     return boxes;
   }, [geometry.sectors, outer, k]);
-  const labels = useMemo(
-    () => placeLabels({ nodes, k, selection, hovered, topicActive: !!activeTopic, toneOf: toneOfNode, reserved }),
-    [nodes, k, selection, hovered, activeTopic, toneOfNode, reserved],
+  // Tags: the hovered station's interchanges on hover, otherwise all of the selected station's.
+  const tagFocus = hovered ?? selectedId;
+  const xTagCands = useMemo<XTag[]>(() => {
+    if (!tagFocus) return [];
+    const out: XTag[] = [];
+    for (const e of edges) {
+      if (e.kind !== "related" || (e.from !== tagFocus && e.to !== tagFocus)) continue;
+      const mid = relatedMidpoint(e.path);
+      if (!mid) continue;
+      const full = e.reason?.trim() ?? "";
+      const reason = truncate(full, XTAG_REASON_MAX);
+      out.push({ key: edgeKey(e), x: mid.x, y: mid.y, w: Math.max(122, 44 + reason.length * 5.8), reason, full });
+    }
+    return out;
+  }, [edges, tagFocus]);
+  const { labels, tags } = useMemo(
+    () =>
+      placeLabels({
+        nodes,
+        k,
+        selection,
+        hovered,
+        topicActive: !!activeTopic,
+        toneOf: toneOfNode,
+        reserved,
+        xTags: xTagCands,
+      }),
+    [nodes, k, selection, hovered, activeTopic, toneOfNode, reserved, xTagCands],
   );
   const hoveredNode = hovered ? nodeById.get(hovered) : undefined;
   const hoveredLine = hoveredNode ? lineByTopic.get(hoveredNode.topicId ?? "") : undefined;
@@ -709,6 +797,7 @@ export function NetworkMap({
           </g>
 
           <StationLabels labels={labels} k={k} />
+          <InterchangeTags tags={tags} k={k} />
 
           {rootNode ? (
             <text
@@ -755,21 +844,39 @@ export function NetworkMap({
         a lo largo de la zona. Enter abre la estación, Escape la cierra, más y menos acercan y alejan.
       </p>
 
-      <div className={styles.legend} style={{ insetInlineEnd: `${16 + (insets?.right ?? 0)}px` }}>
+      <div
+        className={styles.legend}
+        data-parked={insets?.right ? "true" : undefined}
+        tabIndex={insets?.right ? 0 : undefined}
+        aria-label="Leyenda del mapa"
+        style={{ insetInlineEnd: `${16 + (insets?.right ?? 0)}px` }}
+      >
         <p className={styles.legendHead}>
           <svg className={styles.legendRing} viewBox="0 0 20 20" aria-hidden="true">
             <circle cx="10" cy="10" r="8" />
           </svg>
           Zonas
         </p>
-        <ol className={styles.legendList}>
-          {Object.entries(ZONE_NAMES).map(([level, name]) => (
-            <li key={level}>
-              <span className={styles.legendNum}>{level}</span>
-              {name.charAt(0) + name.slice(1).toLowerCase()}
-            </li>
-          ))}
-        </ol>
+        <div className={styles.legendBody}>
+          <ol className={styles.legendList}>
+            {Object.entries(ZONE_NAMES).map(([level, name]) => (
+              <li key={level}>
+                <span className={styles.legendNum}>{level}</span>
+                {name.charAt(0) + name.slice(1).toLowerCase()}
+              </li>
+            ))}
+          </ol>
+          <p className={styles.legendKey}>
+            <svg className={styles.legendArc} viewBox="0 0 44 20" aria-hidden="true">
+              <path className={styles.arcOuter} d="M4 15Q22 -3 40 15" />
+              <path className={styles.arcInner} d="M4 15Q22 -3 40 15" />
+            </svg>
+            <span className={styles.legendKeyText}>
+              <span className={styles.legendKeyName}>Combinación</span>
+              <span>Libros que conectan dos líneas</span>
+            </span>
+          </p>
+        </div>
       </div>
 
       {hoveredNode ? (

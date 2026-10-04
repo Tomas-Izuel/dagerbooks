@@ -97,8 +97,88 @@
   font-size: var(--text-xs);
   letter-spacing: var(--tracking-label);
   text-transform: uppercase;
-  pointer-events: none;
+  inline-size: 14.5rem;
   transition: inset-inline-end var(--dur-base) var(--ease-out-expo);
+}
+
+/* Panel open: the legend parks bottom-left above the directory link, collapsed to its
+   title; it opens upward on hover / focus. It never sits under the panel or the controls. */
+.legend {
+  pointer-events: none;
+}
+
+.legend[data-parked="true"] {
+  pointer-events: auto;
+  inset-block-start: auto;
+  inset-inline-end: auto;
+  inset-inline-start: var(--space-5);
+  inset-block-end: calc(var(--space-5) + 3rem);
+  gap: 0;
+}
+
+.legend[data-parked="true"]:not(:hover):not(:focus-within) {
+  inline-size: max-content;
+}
+
+.legend[data-parked="true"] .legendBody {
+  display: none;
+  margin-block-start: var(--space-1);
+}
+
+.legend[data-parked="true"]:hover .legendBody,
+.legend[data-parked="true"]:focus-within .legendBody {
+  display: grid;
+}
+
+.legend:focus-visible {
+  outline: var(--rule-width) solid var(--focus);
+  outline-offset: 2px;
+}
+
+.legendBody {
+  display: grid;
+  gap: var(--space-1);
+}
+
+.legendArc {
+  inline-size: 2.2rem;
+  block-size: 1.1rem;
+  flex: none;
+  fill: none;
+  stroke-linecap: round;
+}
+
+.legendArc .arcOuter {
+  stroke: var(--fg);
+  stroke-width: 5;
+}
+
+.legendArc .arcInner {
+  stroke: var(--bg-sunken);
+  stroke-width: 2;
+}
+
+.legendKey {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin: var(--space-2) 0 0;
+  padding-block-start: var(--space-2);
+  border-block-start: var(--hairline) solid var(--rule);
+}
+
+.legendKeyText {
+  display: grid;
+  line-height: 1.35;
+  text-transform: none;
+  letter-spacing: 0.02em;
+}
+
+.legendKeyName {
+  color: var(--fg);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-label);
 }
 
 .legendHead {
@@ -123,7 +203,8 @@
 
 .legendList {
   display: grid;
-  gap: 2px;
+  grid-template-columns: auto auto;
+  gap: 2px var(--space-3);
   margin: 0;
   padding: 0;
   list-style: none;
@@ -229,6 +310,39 @@
 .relatedInner {
   stroke: var(--bg);
   stroke-width: 2.5;
+}
+
+/* Interchange tag: signage plate at the arc midpoint (drawn in screen px inside a counter-scaled group). */
+.xTag {
+  pointer-events: none;
+  animation: fadeIn var(--dur-base) var(--ease-out-expo) both;
+}
+
+.xTagPlate {
+  fill: var(--bg-sunken);
+  stroke: var(--rule-strong);
+  stroke-width: var(--rule-width);
+}
+
+.xTagGlyph {
+  fill: none;
+  stroke: var(--fg);
+  stroke-width: 1.8;
+}
+
+.xTagTitle {
+  fill: var(--fg);
+  font-family: var(--font-sign);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: var(--tracking-label);
+  dominant-baseline: central;
+}
+
+.xTagReason {
+  fill: var(--fg-muted);
+  font-size: 10.5px;
+  dominant-baseline: central;
 }
 
 /* ---- stations ---- */
