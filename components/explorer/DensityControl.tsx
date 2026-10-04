@@ -18,8 +18,19 @@ function DensityGlyph({ density }: { density: Density }) {
   );
 }
 
-/** Always-visible ruled segmented control (radiogroup, arrows / Home / End move the choice). */
-export function DensityControl({ density, onDensity }: { density: Density; onDensity(d: Density): void }) {
+/**
+ * Always-visible ruled segmented control (radiogroup, arrows / Home / End move the choice), with an
+ * optional footnote under the options.
+ */
+export function DensityControl({
+  density,
+  onDensity,
+  hint,
+}: {
+  density: Density;
+  onDensity(d: Density): void;
+  hint?: string;
+}) {
   const labelId = useId();
   const radios = useRef<(HTMLButtonElement | null)[]>([]);
 
@@ -60,6 +71,7 @@ export function DensityControl({ density, onDensity }: { density: Density; onDen
           </button>
         ))}
       </div>
+      {hint ? <p className={styles.hint}>{hint}</p> : null}
     </div>
   );
 }

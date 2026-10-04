@@ -18,6 +18,16 @@
   color: var(--fg-muted);
 }
 
+.hint {
+  margin: 0;
+  padding: var(--space-2) var(--space-3);
+  border-block-start: var(--hairline) solid var(--rule);
+  font-size: var(--text-xs);
+  line-height: 1.4;
+  color: var(--fg-muted);
+  text-wrap: pretty;
+}
+
 .options {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -65,8 +75,18 @@
 @media (max-width: 899px) {
   .root {
     display: flex;
+    flex-wrap: wrap;
     align-items: stretch;
     inline-size: auto;
+  }
+
+  /* Full-width row under the control; zero basis + min 100% keeps it from widening the box. */
+  .hint {
+    flex: 1 0 100%;
+    inline-size: 0;
+    padding: var(--space-1) var(--space-2);
+    font-size: 0.6875rem;
+    line-height: 1.35;
   }
 
   .label {

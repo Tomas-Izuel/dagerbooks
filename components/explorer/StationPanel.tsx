@@ -6,6 +6,7 @@ import { LineDisc } from "@/components/ui/LineDisc";
 import { RecMark } from "@/components/ui/RecMark";
 import type { Recommendation } from "@/lib/catalog/schema";
 import { Dotted } from "@/components/page/Dotted";
+import { AmazonBuy } from "@/components/page/AmazonBuy";
 import { lineFor, zoneLabel } from "./lines";
 import type { PanelBook, StationRef } from "./types";
 import styles from "./StationPanel.module.css";
@@ -288,6 +289,8 @@ function PanelInner({
             </p>
           </div>
         ) : null}
+
+        {book.asin ? <AmazonBuy asin={book.asin} title={book.title} /> : null}
 
         <Link className={styles.full} href={`/libros/${book.id}`}>
           Ficha completa

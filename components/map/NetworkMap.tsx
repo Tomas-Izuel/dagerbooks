@@ -24,7 +24,7 @@ import { fitScale } from "@/lib/graph-interaction/viewport";
 import { RecMark } from "@/components/ui/RecMark";
 import type { Recommendation } from "@/lib/catalog/schema";
 import { REC_DOT, REC_ORDER } from "@/lib/design/recommendation";
-import { ZONE_NAMES, type MapGeometry, type MapLine, type MapNode } from "./types";
+import { ZONE_NAMES, type MapFocus, type MapGeometry, type MapLine, type MapNode } from "./types";
 import styles from "./NetworkMap.module.css";
 
 export interface NetworkMapHandle {
@@ -36,17 +36,21 @@ export interface NetworkMapHandle {
 }
 
 export interface NetworkMapProps {
+  /** The whole network (every line), for the current density. */
   geometry: MapGeometry;
+  /** A single line laid out on the whole circle (null = the whole network). */
+  focus?: MapFocus | null;
   lines: readonly MapLine[];
   selection: Selection | null;
   /** Texto de cada nivel de recomendación (leyenda y etiquetas accesibles). */
   recLabels: Record<Recommendation, { label: string; description: string }>;
   /** Ids dimmed by the topic / recommendation filters (intersection). */
   dimmed: ReadonlySet<string>;
+  /** The line in focus (same as `focus.topicId`). */
   activeTopic: string | null;
   read: ReadonlySet<string>;
   onSelect(id: string | null): void;
-  /** Selecciona una línea (null la deselecciona); el mismo filtro que la cartelera. */
+  /** Pone una línea en foco (null vuelve al mapa completo); el mismo estado que la cartelera. */
   onTopic(id: string | null): void;
   /** Px covered by overlays (side panel / bottom sheet). */
   insets?: { right?: number; bottom?: number };
@@ -159,9 +163,11 @@ function wedgePath(radius: number, start: number, end: number): string {
 const Ground = memo(function Ground({
   geometry,
   activeTopic,
+  focused,
 }: {
   geometry: MapGeometry;
   activeTopic: string | null;
+  focused: boolean;
 }) {
   const { sectors, rings } = geometry;
   const outer = rings[rings.length - 1]?.radius ?? 0;
@@ -176,7 +182,7 @@ const Ground = memo(function Ground({
       {sectors.map((s) =>
         activeTopic === s.topicId ? (
           <path
-            key={s.topicId}
+            key={`${s.topicId}:${focused ? "focus" : "sector"}`}
             className={styles.wedge}
             d={wedgePath(outer + 40, s.startAngle, s.endAngle)}
             style={{ "--ink": lineColor(s.topicId) } as CSSProperties}
@@ -221,10 +227,19 @@ function ZoneNumeral({ radius, angle, level }: { radius: number; angle: number; 
 /* Stations                                                            */
 /* ------------------------------------------------------------------ */
 
+/** Another line a station combines with (focus mode: the line itself is not drawn). */
+interface CrossMark {
+  letter: string;
+  color: string;
+}
+
 interface StationProps {
   node: MapNode;
   color: string;
   tone: Tone;
+  /** Not part of the line in focus: fades out in place. */
+  out: boolean;
+  cross: readonly CrossMark[] | undefined;
   read: boolean;
   selected: boolean;
   interchange: boolean;
@@ -241,6 +256,8 @@ const Station = memo(function Station({
   node,
   color,
   tone,
+  out,
+  cross,
   read,
   selected,
   interchange,
@@ -258,14 +275,16 @@ const Station = memo(function Station({
       className={styles.station}
       data-id={node.id}
       data-tone={tone}
+      data-out={out ? "true" : undefined}
       data-read={read ? "true" : undefined}
       data-root={isRoot ? "true" : undefined}
       role="button"
-      tabIndex={tabIndex}
+      tabIndex={out ? -1 : tabIndex}
       aria-pressed={selected}
       aria-label={ariaLabel}
-      transform={`translate(${node.x} ${node.y})`}
-      style={{ "--ink": color } as CSSProperties}
+      aria-hidden={out ? true : undefined}
+      // CSS (not the attribute) so the move between the full map and a line can transition.
+      style={{ "--ink": color, transform: `translate(${node.x}px, ${node.y}px)` } as CSSProperties}
       onClick={() => onPick(node.id)}
       onPointerEnter={() => onHover(node.id)}
       onPointerLeave={() => onHover(null)}
@@ -302,6 +321,21 @@ const Station = memo(function Station({
             r={REC_DOT[node.recommendation].r * m}
           />
           {node.incomplete ? <path className={styles.notch} d="M6 -14 L15 -14 L15 -5 Z" transform={`scale(${m})`} /> : null}
+          {cross?.length ? (
+            // Tangential to the ring, on the clockwise side; the group grows when zoomed out so the discs stay legible.
+            <g transform={`rotate(${deg(node.angle).toFixed(1)})`}>
+              <g className={styles.cross} style={{ "--cx": 17 * m } as CSSProperties}>
+                {cross.slice(0, 3).map((c, i) => (
+                  <g key={c.letter} transform={`translate(0 ${(i * 11 * m).toFixed(1)}) rotate(${(-deg(node.angle)).toFixed(1)})`}>
+                    <circle className={styles.crossDisc} r={5.6 * m} style={{ "--ink": c.color } as CSSProperties} />
+                    <text className={styles.crossLetter} fontSize={7.2 * m}>
+                      {c.letter}
+                    </text>
+                  </g>
+                ))}
+              </g>
+            </g>
+          ) : null}
         </>
       )}
     </g>
@@ -374,10 +408,11 @@ function placeLabels({
     else if (selection?.unlocks.has(n.id)) prio = 3;
     else if (n.entry && tone !== "dim" && rel >= sc.entryAt) prio = 4;
     else {
-      const threshold = (LABEL_MIN_REL[n.level] ?? 2) * sc.labelMul * (topicActive && tone === "full" ? 0.72 : 1);
+      const threshold = (LABEL_MIN_REL[n.level] ?? 2) * sc.labelMul * (topicActive && tone === "full" ? 0.5 : 1);
       if (tone === "dim" || rel < threshold) continue;
     }
-    const wrapped = prio <= 4;
+    // In focus the line has the whole circle: wrap every title instead of truncating it.
+    const wrapped = prio <= 4 || topicActive;
     const lines = wrapped ? wrapTitle(n.title, WRAP_CHARS, 2) : [truncate(n.title, maxChars(n.level))];
     cands.push({ n, tone, prio, pinned: prio <= 2, lines });
   }
@@ -528,6 +563,7 @@ function StationLabels({
 
 export function NetworkMap({
   geometry,
+  focus = null,
   lines,
   selection,
   recLabels,
@@ -545,8 +581,13 @@ export function NetworkMap({
   const gRef = useRef<SVGGElement>(null);
   const [hovered, setHovered] = useState<string | null>(null);
 
-  const { nodes, edges, bounds } = geometry;
+  // `geometry` is the whole network; `view` is what is in play now (the focused line, or everything).
+  // Stations keep a slot in both so they can glide between the two layouts.
+  const view = focus?.geometry ?? geometry;
+  const { nodes, edges, bounds } = view;
+  const focusKey = focus?.topicId ?? null;
   const nodeById = useMemo(() => new Map(nodes.map((n) => [n.id, n])), [nodes]);
+  const fullById = useMemo(() => new Map(geometry.nodes.map((n) => [n.id, n])), [geometry.nodes]);
   const lineByTopic = useMemo(() => new Map(lines.map((l) => [l.topicId, l])), [lines]);
   const rootNode = useMemo(() => nodes.find((n) => n.level === 0) ?? null, [nodes]);
   const selectedId = selection?.id ?? null;
@@ -560,7 +601,11 @@ export function NetworkMap({
 
   const navNodes = useMemo<NavNode[]>(() => nodes.map((n) => ({ id: n.id, angle: n.angle, ring: n.level })), [nodes]);
   const getPosition = useCallback((id: string) => nodeById.get(id), [nodeById]);
-  const onClear = useCallback(() => onSelect(null), [onSelect]);
+  // Escape peels one layer: the open station first, then the line in focus.
+  const onClear = useCallback(() => {
+    if (selectedId) onSelect(null);
+    else if (focusKey) onTopic(null);
+  }, [selectedId, focusKey, onSelect, onTopic]);
   const kb = useGraphKeyboard({
     nodes: navNodes,
     containerRef: svgRef,
@@ -625,6 +670,36 @@ export function NetworkMap({
   useEffect(() => {
     snap.current = { k: pan.getTransform().k, bounds: panBounds };
   });
+
+  // Entering, leaving or switching the focus: back to the fitted view (the bounds are the same
+  // in every layout, only what fills them changes).
+  const prevFocusKey = useRef(focusKey);
+  useEffect(() => {
+    if (prevFocusKey.current === focusKey) return;
+    prevFocusKey.current = focusKey;
+    live.current.pan.fitToBounds(0, false);
+  }, [focusKey]);
+
+  // `morph` is on only while the focus changes: transitions apply then and never on a density switch.
+  // Derived during render so the first frame of the new layout already carries it.
+  const [seenFocus, setSeenFocus] = useState(focusKey);
+  const [morph, setMorph] = useState(false);
+  const [announce, setAnnounce] = useState("");
+  if (seenFocus !== focusKey) {
+    setSeenFocus(focusKey);
+    setMorph(true);
+    const l = focusKey ? lines.find((x) => x.topicId === focusKey) : undefined;
+    setAnnounce(focus && l ? `Línea ${l.letter}: ${focus.count} estaciones` : "Mapa completo");
+  }
+  useEffect(() => {
+    if (!morph) return;
+    const t = setTimeout(() => setMorph(false), 1200);
+    return () => clearTimeout(t);
+  }, [morph, focusKey]);
+  // The track layer of the line stays mounted (hidden) after leaving, so it can fade out like it faded in.
+  const [lastFocus, setLastFocus] = useState(focus);
+  if (focus && focus !== lastFocus) setLastFocus(focus);
+  const focusLayer = focus ?? lastFocus;
 
   // A selection already in the URL on load: bring it into view once.
   const bootCentered = useRef(false);
@@ -699,22 +774,23 @@ export function NetworkMap({
   );
 
   const targetInk = useCallback(
-    (e: LayoutEdge) => lineColor(nodeById.get(e.to)?.topicId ?? nodeById.get(e.from)?.topicId),
-    [nodeById],
+    (e: LayoutEdge, byId: ReadonlyMap<string, MapNode>) =>
+      lineColor(byId.get(e.to)?.topicId ?? byId.get(e.from)?.topicId),
+    [],
   );
 
   /** Main trunk = the first leg of every line (KM 0 and zone 1 outward); deeper legs are drawn lighter at rest. */
   const isTrunk = useCallback(
-    (e: LayoutEdge) => (nodeById.get(e.from)?.level ?? 0) <= 1,
-    [nodeById],
+    (e: LayoutEdge, byId: ReadonlyMap<string, MapNode>) => (byId.get(e.from)?.level ?? 0) <= 1,
+    [],
   );
   /** Implicit KM 0 spokes: hidden at rest, shown for the selected route or the active line. */
   const showSpoke = useCallback(
-    (e: LayoutEdge) => {
+    (e: LayoutEdge, byId: ReadonlyMap<string, MapNode>) => {
       if (selection) return route?.runKeys.has(edgeKey(e)) ?? false;
-      return !!activeTopic && nodeById.get(e.to)?.topicId === activeTopic;
+      return !!activeTopic && byId.get(e.to)?.topicId === activeTopic;
     },
-    [selection, route, activeTopic, nodeById],
+    [selection, route, activeTopic],
   );
 
   /* ---- interchanges (related) ---- */
@@ -735,6 +811,39 @@ export function NetworkMap({
 
   const pickNode = useCallback((id: string) => onSelect(id), [onSelect]);
 
+  // Lookup for the line's layer while it fades out after leaving the focus.
+  const lastById = useMemo(() => new Map((focusLayer?.geometry.nodes ?? []).map((n) => [n.id, n])), [focusLayer]);
+  const renderTrack = (e: LayoutEdge, byId: ReadonlyMap<string, MapNode>) => {
+    if (e.kind === "related") return null;
+    if (e.kind === "implicitRoot" && !showSpoke(e, byId)) return null;
+    return (
+      <path
+        key={edgeKey(e)}
+        className={styles.track}
+        data-kind={e.kind}
+        data-tone={edgeTone(e)}
+        data-trunk={isTrunk(e, byId) ? "true" : "false"}
+        d={e.path}
+        style={{ "--ink": targetInk(e, byId) } as CSSProperties}
+      />
+    );
+  };
+
+  /* ---- combinations with other lines (focus mode): a disc per line on the station, not a track ---- */
+  const crossMarks = useMemo(() => {
+    const out = new Map<string, CrossMark[]>();
+    if (!focus) return out;
+    for (const [id, topics] of focus.links) {
+      const marks = topics
+        .map((t) => lineByTopic.get(t))
+        .filter((l): l is MapLine => !!l)
+        .sort((a, b) => a.letter.localeCompare(b.letter))
+        .map((l) => ({ letter: l.letter, color: l.color }));
+      if (marks.length) out.set(id, marks);
+    }
+    return out;
+  }, [focus, lineByTopic]);
+
   const k = tf.k;
   const sc = DENSITY_SCALE[density];
   const m = sc.mark;
@@ -744,7 +853,7 @@ export function NetworkMap({
   const ls = m * clamp(k / kFit, 1, sc.maxGrow);
   const tagScale = Math.max(ls, TAG_MIN_SCALE);
   const hitR = Math.max(HIT_R, HIT_PX / k);
-  const outer = geometry.rings[geometry.rings.length - 1]?.radius ?? 0;
+  const outer = view.rings[view.rings.length - 1]?.radius ?? 0;
 
   /* ---- line names under the terminus discs ---- */
   const lineNames = useMemo(() => {
@@ -757,7 +866,7 @@ export function NetworkMap({
   const nameShown = useMemo(() => {
     const shown = new Set<string>();
     const placedNames: Box[] = [];
-    const order = [...geometry.sectors].sort((a, b) => Number(b.topicId === activeTopic) - Number(a.topicId === activeTopic));
+    const order = [...view.sectors].sort((a, b) => Number(b.topicId === activeTopic) - Number(a.topicId === activeTopic));
     for (const s of order) {
       const nm = lineNames.get(s.topicId);
       if (!nm) continue;
@@ -765,7 +874,7 @@ export function NetworkMap({
       const w = Math.max(...nm.map((l) => l.length)) * NAME_CH + 8;
       const h = nm.length * NAME_LINE + 6;
       const box = aabb(p.x * k, p.y * k + (NAME_TOP - NAME_LINE / 2 + h / 2) * sc.terminus, (w / 2) * sc.terminus, (h / 2) * sc.terminus);
-      const discs = geometry.sectors.some((o) => {
+      const discs = view.sectors.some((o) => {
         if (o.topicId === s.topicId) return false;
         const q = polar(outer + 66, o.labelAngle);
         return boxesOverlap(box, aabb(q.x * k, q.y * k, 16 * sc.terminus, 16 * sc.terminus), 2);
@@ -777,7 +886,7 @@ export function NetworkMap({
       shown.add(s.topicId);
     }
     return shown;
-  }, [geometry.sectors, lineNames, activeTopic, outer, k, kFit, vp.width, sc.terminus]);
+  }, [view.sectors, lineNames, activeTopic, outer, k, kFit, vp.width, sc.terminus]);
 
   /* ---- labels: greedy collision pass (screen space) ---- */
   const reserved = useMemo<Box[]>(() => {
@@ -786,7 +895,7 @@ export function NetworkMap({
       aabb(0, 0, 24 * m * k + 6, 24 * m * k + 6),
       aabb(0, 34 * m * k + 12 * ls, ((23 * 9.2) / 2 + 4) * ls, 10 * ls),
     ];
-    for (const s of geometry.sectors) {
+    for (const s of view.sectors) {
       const p = polar(outer + 66, s.labelAngle);
       boxes.push(aabb(p.x * k, p.y * k, 20 * sc.terminus, 20 * sc.terminus));
       const nm = nameShown.has(s.topicId) ? lineNames.get(s.topicId) : undefined;
@@ -797,7 +906,7 @@ export function NetworkMap({
       }
     }
     return boxes;
-  }, [geometry.sectors, outer, k, m, ls, sc.terminus, nameShown, lineNames]);
+  }, [view.sectors, outer, k, m, ls, sc.terminus, nameShown, lineNames]);
   // Tags: the hovered station's interchanges on hover, otherwise all of the selected station's.
   const tagFocus = hovered ?? selectedId;
   const xTagCands = useMemo<XTag[]>(() => {
@@ -831,9 +940,16 @@ export function NetworkMap({
   );
   const hoveredNode = hovered ? nodeById.get(hovered) : undefined;
   const hoveredLine = hoveredNode ? lineByTopic.get(hoveredNode.topicId ?? "") : undefined;
+  const hoveredCross = hovered ? crossMarks.get(hovered) : undefined;
+  const focusLine = focusKey ? lineByTopic.get(focusKey) : undefined;
 
   return (
-    <div className={styles.map} style={{ "--k": k, "--m": m, "--ts": tagScale } as CSSProperties}>
+    <div
+      className={styles.map}
+      data-morph={morph ? "true" : undefined}
+      data-focus={focusKey ?? undefined}
+      style={{ "--k": k, "--m": m, "--ts": tagScale } as CSSProperties}
+    >
       <svg
         ref={svgRef}
         className={styles.svg}
@@ -851,26 +967,22 @@ export function NetworkMap({
             height={panBounds.y1 - panBounds.y0}
             onClick={() => selectedId && onSelect(null)}
           />
-          <Ground geometry={geometry} activeTopic={activeTopic} />
+          <Ground geometry={view} activeTopic={activeTopic} focused={!!focus} />
 
-          {/* Tracks: the base network */}
-          <g aria-hidden="true">
-            {edges.map((e) => {
-              if (e.kind === "related") return null;
-              if (e.kind === "implicitRoot" && !showSpoke(e)) return null;
-              return (
-                <path
-                  key={edgeKey(e)}
-                  className={styles.track}
-                  data-kind={e.kind}
-                  data-tone={edgeTone(e)}
-                  data-trunk={isTrunk(e) ? "true" : "false"}
-                  d={e.path}
-                  style={{ "--ink": targetInk(e) } as CSSProperties}
-                />
-              );
-            })}
+          {/* Tracks: the whole network, and the line's own layout; one fades out as the other fades in */}
+          <g className={styles.layer} data-on={focus ? "false" : "true"} aria-hidden="true">
+            {geometry.edges.map((e) => renderTrack(e, fullById))}
           </g>
+          {focusLayer ? (
+            <g
+              key={focusLayer.topicId}
+              className={styles.layer}
+              data-on={focus ? "true" : "false"}
+              aria-hidden="true"
+            >
+              {focusLayer.geometry.edges.map((e) => renderTrack(e, focus ? nodeById : lastById))}
+            </g>
+          ) : null}
 
           {/* Interchanges */}
           <g aria-hidden="true">
@@ -893,19 +1005,24 @@ export function NetworkMap({
                   className={styles.run}
                   d={edge.path}
                   pathLength={1}
-                  style={{ "--ink": targetInk(edge), "--i": index, "--n": route.n } as CSSProperties}
+                  style={{ "--ink": targetInk(edge, nodeById), "--i": index, "--n": route.n } as CSSProperties}
                 />
               ))}
             </g>
           ) : null}
 
-          {/* Stations */}
+          {/* Stations: every one keeps a slot; the ones outside the line in focus fade out where they are */}
           <g>
-            {nodes.map((n) => {
+            {geometry.nodes.map((full) => {
+              const focused = focus ? nodeById.get(full.id) : undefined;
+              const n = focused ?? full;
+              const out = !!focus && !focused;
               const line = n.topicId ? lineByTopic.get(n.topicId) : undefined;
               const isRead = read.has(n.id);
               const np = kb.getNodeProps(n.id);
-              const status = [recLabels[n.recommendation].label, isRead ? "leído" : null, n.incomplete ? "por completar" : null].filter(Boolean).join(", ");
+              const cross = crossMarks.get(n.id);
+              const combines = cross?.length ? `combina con ${cross.length > 1 ? "las líneas" : "la línea"} ${cross.map((c) => c.letter).join(" y ")}` : null;
+              const status = [recLabels[n.recommendation].label, isRead ? "leído" : null, n.incomplete ? "por completar" : null, combines].filter(Boolean).join(", ");
               const label =
                 n.level === 0
                   ? `${n.title}, kilómetro 0${isRead ? ", leído" : ""}`
@@ -916,6 +1033,8 @@ export function NetworkMap({
                   node={n}
                   color={line?.color ?? "var(--fg)"}
                   tone={toneOfNode(n.id)}
+                  out={out}
+                  cross={cross}
                   read={isRead}
                   selected={np["aria-pressed"]}
                   interchange={relatedActive.ends.has(n.id)}
@@ -931,8 +1050,11 @@ export function NetworkMap({
             })}
           </g>
 
-          <StationLabels labels={labels} k={k} ls={ls} m={m} />
-          <InterchangeTags tags={tags} k={k} scale={tagScale} />
+          {/* Keyed by mode: the labels of a new layout fade in once the stations have arrived. */}
+          <g key={focusKey ?? "all"} className={styles.late}>
+            <StationLabels labels={labels} k={k} ls={ls} m={m} />
+            <InterchangeTags tags={tags} k={k} scale={tagScale} />
+          </g>
 
           {rootNode ? (
             <text
@@ -948,57 +1070,80 @@ export function NetworkMap({
             </text>
           ) : null}
 
-          {/* Line termini: lettered discs at the end of each sector, with the line name below. Click = line filter. */}
+          {/* Line termini: lettered discs at the end of each sector, with the line name below. Click = put the line in focus (again = back to the map). */}
           <g>
-            {geometry.sectors.map((s) => {
-              const line = lineByTopic.get(s.topicId);
+            {geometry.sectors.map((full) => {
+              const line = lineByTopic.get(full.topicId);
               if (!line) return null;
-              const p = polar(outer + 66, s.labelAngle);
-              const dim = activeTopic !== null && activeTopic !== s.topicId;
-              const active = activeTopic === s.topicId;
-              const nm = lineNames.get(s.topicId) ?? [];
+              // In focus the line's disc moves to its place on the full circle; the others fade out where they are.
+              const s = focus ? (focus.topicId === full.topicId ? view.sectors[0] : undefined) : full;
+              const out = !s;
+              const at = s ?? full;
+              const p = polar(outer + 66, at.labelAngle);
+              const active = activeTopic === full.topicId;
+              const nm = lineNames.get(full.topicId) ?? [];
               const w = Math.max(...nm.map((l) => l.length), 2) * NAME_CH + 14;
               const h = NAME_TOP + nm.length * NAME_LINE;
               return (
                 <g
-                  key={s.topicId}
+                  key={full.topicId}
                   className={styles.terminus}
-                  data-dim={dim ? "true" : undefined}
+                  data-out={out ? "true" : undefined}
                   data-active={active ? "true" : undefined}
-                  data-name={nameShown.has(s.topicId) ? "shown" : "hidden"}
+                  data-name={nameShown.has(full.topicId) ? "shown" : "hidden"}
                   role="button"
-                  tabIndex={0}
+                  tabIndex={out ? -1 : 0}
                   aria-pressed={active}
-                  aria-label={`Filtrar línea ${line.letter}: ${line.name}`}
-                  transform={`translate(${p.x.toFixed(1)} ${p.y.toFixed(1)}) scale(${(sc.terminus / k).toFixed(4)})`}
-                  style={{ "--ink": line.color } as CSSProperties}
-                  onClick={() => onTopic(active ? null : s.topicId)}
+                  aria-hidden={out ? true : undefined}
+                  aria-label={active ? `Salir de la línea ${line.letter}: ${line.name}` : `Ver solo la línea ${line.letter}: ${line.name}`}
+                  style={{ "--ink": line.color, transform: `translate(${p.x.toFixed(1)}px, ${p.y.toFixed(1)}px)` } as CSSProperties}
+                  onClick={() => onTopic(active ? null : full.topicId)}
                   onKeyDown={(e) => {
                     e.stopPropagation();
                     if (e.key === "Enter" || e.key === " ") {
                       e.preventDefault();
-                      onTopic(active ? null : s.topicId);
+                      onTopic(active ? null : full.topicId);
                     }
                   }}
                 >
-                  <rect className={styles.terminusHit} x={-w / 2} y={-19} width={w} height={h + 4} rx={4} />
-                  <circle r={15} className={styles.terminusDisc} />
-                  <text className={styles.terminusLetter} y={1}>
-                    {line.letter}
-                  </text>
-                  <text className={styles.terminusName} aria-hidden="true" fontSize={NAME_PX}>
-                    {nm.map((l, i) => (
-                      <tspan key={i} x={0} y={NAME_TOP + i * NAME_LINE}>
-                        {l}
-                      </tspan>
-                    ))}
-                  </text>
+                  <g transform={`scale(${(sc.terminus / k).toFixed(4)})`}>
+                    <rect className={styles.terminusHit} x={-w / 2} y={-19} width={w} height={h + 4} rx={4} />
+                    <circle r={15} className={styles.terminusDisc} />
+                    <text className={styles.terminusLetter} y={1}>
+                      {line.letter}
+                    </text>
+                    <text className={styles.terminusName} aria-hidden="true" fontSize={NAME_PX}>
+                      {nm.map((l, i) => (
+                        <tspan key={i} x={0} y={NAME_TOP + i * NAME_LINE}>
+                          {l}
+                        </tspan>
+                      ))}
+                    </text>
+                  </g>
                 </g>
               );
             })}
           </g>
         </g>
       </svg>
+
+      <p className={styles.srOnly} role="status" aria-live="polite">
+        {announce}
+      </p>
+
+      {focus && focusLine ? (
+        <div className={styles.focusBar} data-parked={insets?.right ? "true" : undefined} style={{ "--ink": focusLine.color } as CSSProperties}>
+          <LineDisc letter={focusLine.letter} color={focusLine.color} size="sm" />
+          <span className={styles.focusText}>
+            <span className={styles.focusName}>{focusLine.name}</span>
+            <span className={styles.focusCount}>{focus.count} estaciones</span>
+          </span>
+          <button type="button" className={styles.focusExit} onClick={() => onTopic(null)}>
+            <span className={styles.focusExitLong}>Ver </span>todo el mapa
+            <span aria-hidden="true"> ×</span>
+          </button>
+        </div>
+      ) : null}
 
       <p id="map-help" className={styles.srOnly}>
         Usá las flechas para moverte entre estaciones: arriba hacia afuera, abajo hacia el centro, izquierda y derecha
@@ -1066,6 +1211,11 @@ export function NetworkMap({
             {hoveredNode.titleEs ? <span className={styles.tagSub}>{hoveredNode.titleEs}</span> : null}
           </span>
           <span className={styles.tagZone}>{hoveredNode.level === 0 ? "KM 0" : `Zona ${hoveredNode.level}`}</span>
+          {hoveredCross?.length ? (
+            <span className={styles.tagCross}>
+              Combina con {hoveredCross.length > 1 ? "las líneas" : "la línea"} {hoveredCross.map((c) => c.letter).join(" y ")}
+            </span>
+          ) : null}
         </div>
       ) : null}
     </div>
