@@ -7,6 +7,8 @@ import {
   isOffscreen,
   normalizeAngle,
   resolveArrow,
+  ringNeighbour,
+  ringStep,
   toScreen,
 } from "@/lib/graph-interaction";
 import type { Insets, NavKey, NavNode, Point, Size } from "@/lib/graph-interaction";
@@ -30,6 +32,12 @@ export interface GraphKeyboardOptions {
   reset: () => void;
   /** Area covered by overlays (e.g. the side panel) that counts as offscreen. */
   insets?: Partial<Insets>;
+  /**
+   * Which arrows walk the rings. "radial" (default): up/down change ring, left/right walk along it.
+   * "horizontal" (subway bands): right/left change ring (zone), up/down walk along it; there
+   * `ring` = zone and `angle` = the station's order (normalised to [0, 2π)) from top to bottom.
+   */
+  axis?: "radial" | "horizontal";
 }
 
 export interface GraphNodeProps {
@@ -42,6 +50,22 @@ export interface GraphNodeProps {
 
 const ARROWS = new Set<string>(["ArrowLeft", "ArrowRight", "ArrowUp", "ArrowDown"]);
 
+/** Horizontal axis: right = next zone, left = previous zone, up / down = neighbour in the zone (wraps). */
+function resolveZoneArrow(nodes: readonly NavNode[], id: string, key: NavKey, referenceAngle?: number): NavNode | null {
+  const current = nodes.find((n) => n.id === id);
+  if (!current) return null;
+  switch (key) {
+    case "ArrowRight":
+      return ringStep(nodes, id, 1, referenceAngle);
+    case "ArrowLeft":
+      return ringStep(nodes, id, -1, referenceAngle);
+    case "ArrowUp":
+      return current.ring === 0 ? null : ringNeighbour(nodes, id, -1);
+    case "ArrowDown":
+      return current.ring === 0 ? null : ringNeighbour(nodes, id, 1);
+  }
+}
+
 /**
  * Roving-tabindex keyboard navigation for a radial graph.
  * Spread `containerProps` on the svg and `getNodeProps(id)` on each node.
@@ -51,6 +75,7 @@ export function useGraphKeyboard(opts: GraphKeyboardOptions) {
     nodes, containerRef, selectedId, onSelect, onClear, getPosition,
     transform, getViewportSize, centerOn, zoomIn, zoomOut, reset, insets,
   } = opts;
+  const horizontal = opts.axis === "horizontal";
 
   const [tab, setTab] = useState<string | null>(null);
   // Follow external selection (search, URL) without an effect.
@@ -101,9 +126,12 @@ export function useGraphKeyboard(opts: GraphKeyboardOptions) {
         const node = nodes.find((n) => n.id === id);
         if (!node) return;
         e.preventDefault();
-        const vertical = e.key === "ArrowUp" || e.key === "ArrowDown";
+        // "vertical" = the keys that change ring (up / down on the radial axis, right / left on the horizontal one).
+        const vertical = horizontal
+          ? e.key === "ArrowLeft" || e.key === "ArrowRight"
+          : e.key === "ArrowUp" || e.key === "ArrowDown";
         const ref = vertical ? (prefAngle.current ?? node.angle) : undefined;
-        const next = resolveArrow(nodes, id, e.key as NavKey, ref);
+        const next = (horizontal ? resolveZoneArrow : resolveArrow)(nodes, id, e.key as NavKey, ref);
         if (!next) return;
         verticalMove.current = vertical;
         if (!vertical && next.ring > 0) prefAngle.current = normalizeAngle(next.angle);
@@ -135,7 +163,7 @@ export function useGraphKeyboard(opts: GraphKeyboardOptions) {
           return;
       }
     },
-    [nodes, focusNode, onSelect, onClear, zoomIn, zoomOut, reset],
+    [nodes, focusNode, onSelect, onClear, zoomIn, zoomOut, reset, horizontal],
   );
 
   const getNodeProps = useCallback(

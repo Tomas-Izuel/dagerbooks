@@ -130,3 +130,15 @@ export const ZONE_NAMES: Record<number, string> = {
   3: "AVANZADO",
   4: "ESPECIALISTA",
 };
+
+/** What every map view exposes to the explorer (zoom buttons, "center selected", search). */
+export interface MapHandle {
+  zoomIn(): void;
+  zoomOut(): void;
+  reset(): void;
+  /** Center a station (default: keep zoom, at least `minK`), compensating overlays. */
+  centerOn(id: string, minK?: number): void;
+}
+
+/** @deprecated alias kept for the radial view; use `MapHandle`. */
+export type NetworkMapHandle = MapHandle;

@@ -1,4 +1,4 @@
-/* A section of the shared sign: the box (border, ground, shadow, width) lives in Explorer.module.css. */
+/* A section of the shared sign (the box itself lives in Explorer.module.css). */
 .root {
   display: grid;
 }
@@ -15,19 +15,9 @@
   color: var(--fg-muted);
 }
 
-.hint {
-  margin: 0;
-  padding: var(--space-2) var(--space-3);
-  border-block-start: var(--hairline) solid var(--rule);
-  font-size: var(--text-xs);
-  line-height: 1.4;
-  color: var(--fg-muted);
-  text-wrap: pretty;
-}
-
 .options {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
 }
 
 .option {
@@ -68,26 +58,17 @@
   outline-offset: -4px;
 }
 
-/* Phone: glyph-only segmented strip, labels live in the group's accessible name. */
 @media (prefers-reduced-motion: reduce) {
   .option {
     transition: none;
   }
 }
 
+/* Phone: two icon-only buttons, 44px square at least; names live in aria-label. */
 @media (max-width: 899px) {
-  /* The sign is a wrapping flex row: label, options and footnote join it directly. */
   .root {
-    display: contents;
-  }
-
-  /* Full-width row under the control; zero basis + min 100% keeps it from widening the box. */
-  .hint {
-    flex: 1 0 100%;
-    inline-size: 0;
-    padding: var(--space-1) var(--space-2);
-    font-size: 0.6875rem;
-    line-height: 1.35;
+    display: flex;
+    align-items: stretch;
   }
 
   .label {
@@ -95,12 +76,12 @@
     align-items: center;
     padding: 0 var(--space-2);
     border-block-end: 0;
-    border-inline: var(--hairline) solid var(--rule);
+    border-inline-end: var(--hairline) solid var(--rule);
     font-size: 0.625rem;
   }
 
   .options {
-    grid-template-columns: repeat(3, 2.75rem);
+    grid-template-columns: repeat(2, 2.75rem);
   }
 
   .name {

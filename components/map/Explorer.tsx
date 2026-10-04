@@ -1,8 +1,10 @@
 "use client";
 
 import Link from "next/link";
-import { useCallback, useEffect, useMemo, useRef, useState, useSyncExternalStore } from "react";
+import dynamic from "next/dynamic";
+import { type CSSProperties, useCallback, useEffect, useMemo, useRef, useState, useSyncExternalStore } from "react";
 import { DensityControl } from "@/components/explorer/DensityControl";
+import { ViewControl } from "@/components/explorer/ViewControl";
 import { MapControls } from "@/components/explorer/MapControls";
 import { StationBoard } from "@/components/explorer/StationBoard";
 import { StationPanel } from "@/components/explorer/StationPanel";
@@ -16,6 +18,7 @@ import { useReadProgress } from "@/hooks/useReadProgress";
 import type { ExplorerNode } from "@/lib/state/explorer";
 import type { SearchDoc } from "@/lib/search";
 import { NetworkMap, type NetworkMapHandle } from "./NetworkMap";
+import { VISTA_LABEL, type Vista } from "@/lib/view";
 import type { Density } from "@/lib/density";
 import { computeFocusLayout } from "@/lib/catalog/focus";
 import { DENSITY_PRESETS } from "@/lib/catalog/layout";
@@ -41,6 +44,20 @@ export interface ExplorerProps {
   recLabels: Record<Recommendation, { label: string; description: string }>;
 }
 
+// The subway view (and its layout) is a lazy chunk: the radial pays nothing for it.
+const SubwayMap = dynamic(() => import("./SubwayMap").then((m) => m.SubwayMap), {
+  ssr: false,
+  loading: () => (
+    <p className={styles.stub} role="status">
+      Armando el subte…
+    </p>
+  ),
+});
+const preloadSubway = () => void import("./SubwayMap");
+
+/** Cross-fade length; keep in sync with `--view-fade` in Explorer.module.css. */
+const VIEW_FADE_MS = 240;
+
 const PANEL_PX = 360 + 24;
 
 function subscribeNarrow(cb: () => void) {
@@ -60,7 +77,7 @@ const byLevelThenTitle = (a: StationRef, b: StationRef) => a.level - b.level || 
 export function Explorer({ geometry: geometrySet, lines, explorerNodes, searchDocs, panels, recLabels }: ExplorerProps) {
   const mapRef = useRef<NetworkMapHandle>(null);
   const topicIds = useMemo(() => lines.map((l) => l.topicId), [lines]);
-  const { state, selection, dimmed, selectBook, setTopic, toggleRecommendation, resetRecommendation, setQuery } = useExplorerState(explorerNodes, topicIds);
+  const { state, selection, dimmed, selectBook, setTopic, setVista, toggleRecommendation, resetRecommendation, setQuery } = useExplorerState(explorerNodes, topicIds);
   const search = useBookSearch(searchDocs, { initialQuery: state.q });
   const progress = useReadProgress();
   const narrow = useNarrow();
@@ -74,6 +91,27 @@ export function Explorer({ geometry: geometrySet, lines, explorerNodes, searchDo
     },
     [setDensity],
   );
+  // View switch: the outgoing view stays mounted (inert) for one fade while the incoming one fades in.
+  // Nothing animates on first load, only on a switch; `prefers-reduced-motion` makes it instant (CSS).
+  const [viewSeen, setViewSeen] = useState<{ vista: Vista; leaving: Vista | null; switched: boolean }>({
+    vista: state.vista,
+    leaving: null,
+    switched: false,
+  });
+  if (viewSeen.vista !== state.vista) {
+    setViewSeen({ vista: state.vista, leaving: viewSeen.vista, switched: true });
+  }
+  useEffect(() => {
+    if (!viewSeen.leaving) return;
+    const t = setTimeout(() => setViewSeen((v) => ({ ...v, leaving: null })), VIEW_FADE_MS);
+    return () => clearTimeout(t);
+  }, [viewSeen.leaving]);
+  // Screen readers hear the switch (not the first load): derived, so it changes with the view.
+  const announcement = !viewSeen.switched
+    ? ""
+    : state.vista === "subte"
+      ? `Vista ${VISTA_LABEL.subte.toLowerCase()}: ${lines.length} líneas`
+      : `Vista ${VISTA_LABEL.grafo.toLowerCase()}`;
   const geometry = useMemo(() => resolveGeometry(geometrySet, density), [geometrySet, density]);
 
   // Line focus: a single line takes the whole circle. Computed here, in the client, from data the
@@ -163,6 +201,36 @@ export function Explorer({ geometry: geometrySet, lines, explorerNodes, searchDo
     },
     [search, setQuery],
   );
+  // The view / density sign floats over the map: measure it so the maps frame around it and the legend sits under it.
+  const stageRef = useRef<HTMLDivElement>(null);
+  const signRef = useRef<HTMLDivElement>(null);
+  const [safe, setSafe] = useState<{ top: number; right: number; bottom: number }>({ top: 0, right: 0, bottom: 0 });
+  useEffect(() => {
+    const stage = stageRef.current;
+    const sign = signRef.current;
+    if (!stage || !sign) return;
+    const measure = () => {
+      const a = stage.getBoundingClientRect();
+      const b = sign.getBoundingClientRect();
+      const bottom = Math.max(0, Math.round(b.bottom - a.top));
+      const next = narrow
+        ? { top: bottom + 8, right: 0, bottom }
+        : { top: 0, right: Math.max(0, Math.round(a.right - b.left) - (selectedId ? PANEL_PX : 0)) + 8, bottom };
+      setSafe((p) => (p.top === next.top && p.right === next.right && p.bottom === next.bottom ? p : next));
+    };
+    const ro = new ResizeObserver(measure);
+    ro.observe(stage);
+    ro.observe(sign);
+    measure();
+    // The sign slides aside when the panel opens: measure again once it has settled.
+    const timer = setTimeout(measure, 450);
+    return () => {
+      ro.disconnect();
+      clearTimeout(timer);
+    };
+  }, [narrow, selectedId, state.tema, state.vista]);
+  const safeInsets = useMemo(() => ({ top: safe.top, right: safe.right }), [safe.top, safe.right]);
+
   const insets = useMemo(
     () => (!selectedId ? undefined : narrow ? { bottom: 360 } : { right: PANEL_PX }),
     [selectedId, narrow],
@@ -192,6 +260,9 @@ export function Explorer({ geometry: geometrySet, lines, explorerNodes, searchDo
 
   return (
     <div className={styles.shell} data-density={density}>
+      <p className={styles.srOnly} role="status" aria-live="polite">
+        {announcement}
+      </p>
       <StationBoard
         lines={lines.map((l) => ({
           topicId: l.topicId,
@@ -219,34 +290,79 @@ export function Explorer({ geometry: geometrySet, lines, explorerNodes, searchDo
         total={geometry.nodes.length}
       />
 
-      <div className={styles.stage} data-panel={selectedId ? "open" : undefined}>
-        <NetworkMap
-          ref={mapRef}
-          geometry={geometry}
-          focus={focus}
-          lines={lines}
-          selection={selection}
-          dimmed={dimmed}
-          recLabels={recLabels}
-          activeTopic={state.tema}
-          read={read}
-          onSelect={selectBook}
-          onTopic={setTopic}
-          insets={insets}
-          animateRefit={userSwitched}
-          density={density}
-        />
+      <div
+        ref={stageRef}
+        className={styles.stage}
+        data-panel={selectedId ? "open" : undefined}
+        style={{ "--sign-bottom": `${safe.bottom}px` } as CSSProperties}
+      >
+        {([viewSeen.leaving, state.vista] as const).map((v, i) => {
+          if (!v) return null;
+          const active = i === 1;
+          return (
+            <div
+              key={v}
+              className={styles.layer}
+              data-fade={!active ? "out" : viewSeen.switched && viewSeen.leaving ? "in" : undefined}
+              inert={!active || undefined}
+              aria-hidden={!active || undefined}
+            >
+              {v === "subte" ? (
+                <SubwayMap
+                  ref={active ? mapRef : undefined}
+                  set={geometrySet}
+                  explorerNodes={explorerNodes}
+                  lines={lines}
+                  density={density}
+                  activeTopic={state.tema}
+                  selection={selection}
+                  recLabels={recLabels}
+                  dimmed={dimmed}
+                  read={read}
+                  onSelect={selectBook}
+                  onTopic={setTopic}
+                  insets={insets}
+                  safe={safeInsets}
+                  animateRefit={userSwitched}
+                />
+              ) : (
+                <NetworkMap
+                  ref={active ? mapRef : undefined}
+                  geometry={geometry}
+                  focus={focus}
+                  lines={lines}
+                  selection={selection}
+                  dimmed={dimmed}
+                  recLabels={recLabels}
+                  activeTopic={state.tema}
+                  read={read}
+                  onSelect={selectBook}
+                  onTopic={setTopic}
+                  insets={insets}
+                  safe={safeInsets}
+                  animateRefit={userSwitched}
+                  density={density}
+                />
+              )}
+            </div>
+          );
+        })}
 
-        <div className={styles.density} data-focus={state.tema ? "true" : undefined}>
-          <DensityControl
-            density={density}
-            onDensity={onDensity}
-            hint={
-              state.tema
-                ? "Estás viendo una sola línea. Tocá su disco o «Ver todo el mapa» para volver."
-                : "Tocá una línea, en su disco o en la cartelera, para verla sola: con más detalle y tranquilidad."
-            }
-          />
+        <div ref={signRef} className={styles.density} data-focus={state.tema ? "true" : undefined} data-vista={state.vista}>
+          <div className={styles.sign}>
+            <ViewControl vista={state.vista} onVista={setVista} onIntent={preloadSubway} />
+            <DensityControl
+              density={density}
+              onDensity={onDensity}
+              hint={
+                state.tema
+                  ? "Estás viendo una sola línea. Tocá su disco o «Ver todo el mapa» para volver."
+                  : state.vista === "subte"
+                    ? "Cada línea es una banda y las zonas son los niveles. Tocá un disco para ver una sola."
+                    : "Tocá una línea, en su disco o en la cartelera, para verla sola: con más detalle y tranquilidad."
+              }
+            />
+          </div>
         </div>
 
         <div className={styles.links}>

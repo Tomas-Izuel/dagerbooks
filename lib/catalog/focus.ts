@@ -37,12 +37,23 @@ export interface FocusLayout {
   links: ReadonlyMap<string, readonly string[]>;
 }
 
-export function computeFocusLayout(
+/** Lo que comparten el foco radial y el del subte: quiénes están en la línea y con qué se combinan. */
+export interface FocusSubset {
+  /** Libros con la línea en `topics` (en cualquier posición) más Km 0, en el orden del catálogo. */
+  subset: FocusBook[];
+  inSet: ReadonlySet<string>;
+  /** `related` dentro del subconjunto, por origen. */
+  relatedBy: ReadonlyMap<string, { id: string; reason?: string }[]>;
+  /** Estaciones del foco (sin Km 0). */
+  count: number;
+  links: ReadonlyMap<string, readonly string[]>;
+}
+
+export function buildFocusSubset(
   books: readonly FocusBook[],
   related: readonly FocusRelated[],
   topicId: string,
-  config: Partial<LayoutConfig> = {},
-): FocusLayout {
+): FocusSubset {
   const byId = new Map(books.map((b) => [b.id, b]));
   const member = (b: FocusBook) => b.level === 0 || b.topics.includes(topicId);
   const subset = books.filter(member);
@@ -53,14 +64,6 @@ export function computeFocusLayout(
     if (!inSet.has(r.from) || !inSet.has(r.to)) continue;
     (relatedBy.get(r.from) ?? relatedBy.set(r.from, []).get(r.from)!).push({ id: r.to, reason: r.reason });
   }
-  const layoutBooks: LayoutBook[] = subset.map((b) => ({
-    id: b.id,
-    level: b.level,
-    primaryTopic: b.level === 0 ? null : topicId,
-    leadsTo: b.leadsTo?.filter((to) => inSet.has(to)),
-    related: relatedBy.get(b.id),
-  }));
-  const layout = computeLayout({ books: layoutBooks, topics: [{ id: topicId }] }, config);
 
   // Cross-line links: every connection whose other end is not part of the line.
   const links = new Map<string, Set<string>>();
@@ -84,9 +87,28 @@ export function computeFocusLayout(
   }
 
   return {
-    topicId,
-    layout,
+    subset,
+    inSet,
+    relatedBy,
     count: subset.filter((b) => b.level > 0).length,
     links: new Map([...links].map(([id, set]) => [id, [...set]])),
   };
+}
+
+export function computeFocusLayout(
+  books: readonly FocusBook[],
+  related: readonly FocusRelated[],
+  topicId: string,
+  config: Partial<LayoutConfig> = {},
+): FocusLayout {
+  const { subset, inSet, relatedBy, count, links } = buildFocusSubset(books, related, topicId);
+  const layoutBooks: LayoutBook[] = subset.map((b) => ({
+    id: b.id,
+    level: b.level,
+    primaryTopic: b.level === 0 ? null : topicId,
+    leadsTo: b.leadsTo?.filter((to) => inSet.has(to)),
+    related: relatedBy.get(b.id),
+  }));
+  const layout = computeLayout({ books: layoutBooks, topics: [{ id: topicId }] }, config);
+  return { topicId, layout, count, links };
 }

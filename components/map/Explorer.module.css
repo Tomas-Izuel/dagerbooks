@@ -17,6 +17,10 @@
   background: var(--bg);
 }
 
+.shell {
+  --view-fade: 240ms;
+}
+
 .stage {
   position: relative;
   min-inline-size: 0;
@@ -58,6 +62,26 @@
   inset-block-start: var(--space-4);
   inset-inline-end: var(--space-4);
   transition: inset-inline-end var(--dur-base) var(--ease-out-expo);
+}
+
+/* Subway, desktop: the zone strip (1.9rem, SubwayMap) stays readable above the sign. */
+@media (min-width: 900px) {
+  .density[data-vista="subte"] {
+    inset-block-start: calc(1.9rem + var(--space-2));
+  }
+}
+
+/* The shared sign: view and density as stacked sections of one ruled box. */
+.sign {
+  display: grid;
+  inline-size: 14.5rem;
+  border: var(--rule-width) solid var(--rule-strong);
+  background: var(--bg-sunken);
+  box-shadow: var(--shadow-panel);
+}
+
+.sign > * + * {
+  border-block-start: var(--hairline) solid var(--rule);
 }
 
 /* Panel open: clear the panel's left edge, same shift as the map controls. */
@@ -132,8 +156,24 @@
     inset-inline-end: var(--space-3);
   }
 
+  .sign {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    inline-size: auto;
+  }
+
+  .sign > * + * {
+    border-block-start: 0;
+  }
+
   .stage[data-panel="open"] .density {
     inset-inline-end: var(--space-3);
+  }
+
+  /* With the sheet open the controls hang under the sign: the footnote would run into them. */
+  .stage[data-panel="open"] .density p:last-child {
+    display: none;
   }
 
   /* Mobile focus: the focus bar sits right under the density control; drop the footnote. */
@@ -142,7 +182,7 @@
   }
 
   .stage[data-panel="open"] .controls {
-    inset-block-start: calc(var(--space-2) + 3.5rem);
+    inset-block-start: calc(var(--sign-bottom, 4.5rem) + var(--space-2));
     inset-inline-end: var(--space-3);
   }
 
@@ -156,4 +196,65 @@
   .stage[data-panel="open"] .links {
     display: none;
   }
+}
+
+/* ---- view layers: each map fills the stage; a switch cross-fades them ---- */
+
+.layer {
+  position: absolute;
+  inset: 0;
+}
+
+.layer[data-fade="in"] {
+  animation: view-in var(--view-fade) var(--ease-out-expo) both;
+}
+
+.layer[data-fade="out"] {
+  pointer-events: none;
+  animation: view-out var(--view-fade) var(--ease-out-expo) both;
+}
+
+@keyframes view-in {
+  from {
+    opacity: 0;
+  }
+}
+
+@keyframes view-out {
+  to {
+    opacity: 0;
+  }
+}
+
+/* Reduced motion: instant switch, the outgoing layer is gone at once. */
+@media (prefers-reduced-motion: reduce) {
+  .layer[data-fade] {
+    animation: none;
+  }
+
+  .layer[data-fade="out"] {
+    display: none;
+  }
+}
+
+.stub {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  margin: 0;
+  color: var(--fg-muted);
+  font-family: var(--font-sign);
+  font-size: var(--text-sm);
+  letter-spacing: var(--tracking-sign);
+  text-transform: uppercase;
+}
+
+.srOnly {
+  position: absolute;
+  inline-size: 1px;
+  block-size: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
 }

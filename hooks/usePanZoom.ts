@@ -21,6 +21,11 @@ export interface PanZoomOptions {
   duration?: number;
   /** Max pointer travel (px) still treated as a click, not a drag. Default 5. */
   clickDistance?: number;
+  /**
+   * Px of the viewport covered by floating chrome (right / top). "Fit" fits and centres the bounds in
+   * what is left, so no part of the map sits under it. Changing it re-fits until the reader moves the map.
+   */
+  reserve?: { right?: number; top?: number; bottom?: number };
 }
 
 export interface Transform {
@@ -76,25 +81,35 @@ export function usePanZoom(
   const duration = options.duration ?? 450;
   const clickDistance = options.clickDistance ?? 5;
   const initialFit = options.initialFit ?? true;
+  const reserveRight = options.reserve?.right ?? 0;
+  const reserveTop = options.reserve?.top ?? 0;
+  const reserveBottom = options.reserve?.bottom ?? 0;
 
   const [transform, setTransform] = useState<Transform>(IDENTITY);
   const zoomRef = useRef<ZoomBehavior<SVGSVGElement, unknown> | null>(null);
   const sizeRef = useRef<Size>({ width: 0, height: 0 });
   const transformRef = useRef<Transform>(IDENTITY);
   // Latest options for callbacks created once.
-  const cfgRef = useRef({ bounds: { x0, y0, x1, y1 }, minZoom, maxZoom, duration });
+  const cfgRef = useRef({ bounds: { x0, y0, x1, y1 }, minZoom, maxZoom, duration, rr: reserveRight, rt: reserveTop, rb: reserveBottom });
   useEffect(() => {
-    cfgRef.current = { bounds: { x0, y0, x1, y1 }, minZoom, maxZoom, duration };
-  }, [x0, y0, x1, y1, minZoom, maxZoom, duration]);
+    cfgRef.current = { bounds: { x0, y0, x1, y1 }, minZoom, maxZoom, duration, rr: reserveRight, rt: reserveTop, rb: reserveBottom };
+  }, [x0, y0, x1, y1, minZoom, maxZoom, duration, reserveRight, reserveTop, reserveBottom]);
+  const movedRef = useRef(false);
+
+  /** Size left for the map once the floating chrome is out of the way. */
+  const freeSize = useCallback((size: Size): Size => {
+    const c = cfgRef.current;
+    return { width: Math.max(size.width - c.rr, 1), height: Math.max(size.height - c.rt - c.rb, 1) };
+  }, []);
 
   const minScale = useCallback((): number => {
     const c = cfgRef.current;
     const size = sizeRef.current;
     if (c.minZoom === "fit") {
-      return size.width > 0 ? Math.min(fitScale(c.bounds, size), c.maxZoom) : 0.01;
+      return size.width > 0 ? Math.min(fitScale(c.bounds, freeSize(size)), c.maxZoom) : 0.01;
     }
     return Math.min(c.minZoom, c.maxZoom);
-  }, []);
+  }, [freeSize]);
 
   /** Apply `fn` on the selection, animated unless reduced motion / duration 0. */
   const run = useCallback(
@@ -138,15 +153,17 @@ export function usePanZoom(
       const { width, height } = sizeRef.current;
       if (width <= 0 || height <= 0) return;
       const b = cfgRef.current.bounds;
-      const k = Math.min(
-        Math.max(fitScale(b, sizeRef.current, padding), minScale()),
-        cfgRef.current.maxZoom,
-      );
+      const free = freeSize(sizeRef.current);
+      const k = Math.min(Math.max(fitScale(b, free, padding), minScale()), cfgRef.current.maxZoom);
       const cx = (b.x0 + b.x1) / 2;
       const cy = (b.y0 + b.y1) / 2;
-      transformTo(zoomIdentity.translate(width / 2, height / 2).scale(k).translate(-cx, -cy), instant);
+      const { rt } = cfgRef.current;
+      transformTo(
+        zoomIdentity.translate(free.width / 2, rt + free.height / 2).scale(k).translate(-cx, -cy),
+        instant,
+      );
     },
-    [minScale, transformTo],
+    [minScale, transformTo, freeSize],
   );
 
   // Create the behavior once per svg/g pair.
@@ -172,6 +189,7 @@ export function usePanZoom(
       })
       .on("zoom", (event: D3ZoomEvent<SVGSVGElement, unknown>) => {
         const { x, y, k } = event.transform;
+        if (event.sourceEvent) movedRef.current = true;
         g.setAttribute("transform", `translate(${x},${y}) scale(${k})`);
         transformRef.current = { x, y, k };
         pending = { x, y, k };
@@ -200,7 +218,7 @@ export function usePanZoom(
         .scaleExtent([minScale(), c.maxZoom])
         .translateExtent([
           [c.bounds.x0, c.bounds.y0],
-          [c.bounds.x1, c.bounds.y1],
+          [c.bounds.x1 + c.rr / minScale(), c.bounds.y1],
         ]);
     };
 
@@ -212,9 +230,10 @@ export function usePanZoom(
       if (!fitted && initialFit) {
         fitted = true;
         const b = cfgRef.current.bounds;
-        const k = Math.min(Math.max(fitScale(b, sizeRef.current), minScale()), cfgRef.current.maxZoom);
+        const free = freeSize(sizeRef.current);
+        const k = Math.min(Math.max(fitScale(b, free), minScale()), cfgRef.current.maxZoom);
         const t = zoomIdentity
-          .translate(rect.width / 2, rect.height / 2)
+          .translate(free.width / 2, cfgRef.current.rt + free.height / 2)
           .scale(k)
           .translate(-(b.x0 + b.x1) / 2, -(b.y0 + b.y1) / 2);
         sel.call(behavior.transform, t); // instant
@@ -247,10 +266,19 @@ export function usePanZoom(
     if (!svg || !z || sizeRef.current.width <= 0) return;
     z.scaleExtent([minScale(), maxZoom]).translateExtent([
       [x0, y0],
-      [x1, y1],
+      [x1 + reserveRight / minScale(), y1],
     ]);
     select(svg).call(z.scaleBy, 1);
-  }, [svgRef, x0, y0, x1, y1, minZoom, maxZoom, minScale]);
+  }, [svgRef, x0, y0, x1, y1, minZoom, maxZoom, minScale, reserveRight]);
+
+  // The reserve changed (the chrome was measured after mount, or moved): re-fit until the reader has moved the map.
+  useEffect(() => {
+    if (movedRef.current || sizeRef.current.width <= 0) return;
+    const z = zoomRef.current;
+    if (!z) return;
+    z.scaleExtent([minScale(), maxZoom]);
+    fitToBounds(0, true);
+  }, [reserveRight, reserveTop, reserveBottom, fitToBounds, minScale, maxZoom]);
 
   const zoomBy = useCallback(
     (factor: number) => {

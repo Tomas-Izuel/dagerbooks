@@ -1,17 +1,20 @@
 import type { Recommendation } from "@/lib/catalog/schema";
 import { ALL_RECS, parseRec, serializeRec } from "@/lib/design/recommendation";
+import { DEFAULT_VISTA, parseVista, type Vista } from "@/lib/view";
 import { buildAdjacency, reach, withImplicitRootEdges, type Adjacency } from "@/lib/catalog/graph";
 
-/** Estado de vista del explorador, serializado en `?libro=&tema=&rec=&q=`. */
+/** Estado de vista del explorador, serializado en `?libro=&tema=&rec=&q=&vista=`. */
 export interface ExplorerState {
   libro: string | null;
   tema: string | null;
   /** Niveles de recomendación activos (nunca vacío; los tres = sin filtro). */
   rec: Recommendation[];
   q: string;
+  /** Vista del mapa (grafo radial o subte). Default `grafo`, omitido de la URL. */
+  vista: Vista;
 }
 
-export const EMPTY_STATE: ExplorerState = { libro: null, tema: null, rec: [...ALL_RECS], q: "" };
+export const EMPTY_STATE: ExplorerState = { libro: null, tema: null, rec: [...ALL_RECS], q: "", vista: DEFAULT_VISTA };
 
 /** Subconjunto mínimo de Book que necesita el cliente (serializable). */
 export interface ExplorerNode {
@@ -38,6 +41,7 @@ export function parseExplorerState(
     tema: tema && (!valid?.topicIds || valid.topicIds.has(tema)) ? tema : null,
     rec: parseRec(params.get("rec")),
     q: (params.get("q") ?? "").slice(0, 100),
+    vista: parseVista(params.get("vista")),
   };
 }
 
@@ -66,6 +70,7 @@ export function buildExplorerSearch(state: ExplorerState, base?: URLSearchParams
   set("tema", state.tema);
   set("rec", serializeRec(state.rec));
   set("q", state.q.trim() ? state.q : null);
+  set("vista", state.vista === DEFAULT_VISTA ? null : state.vista);
   return p.toString();
 }
 
