@@ -176,6 +176,7 @@ export function Explorer({ geometry: geometrySet, lines, explorerNodes, searchDo
           onSelect={selectBook}
           insets={insets}
           animateRefit={userSwitched}
+          density={density}
         />
 
         <div className={styles.density}>

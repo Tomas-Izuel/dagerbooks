@@ -19,6 +19,7 @@ import { lineColor } from "@/lib/design/lines";
 import type { Selection } from "@/lib/state/explorer";
 import type { LayoutEdge } from "@/lib/catalog/layout.types";
 import type { NavNode } from "@/lib/graph-interaction";
+import { DENSITY_SCALE, DEFAULT_DENSITY, type Density, type DensityScale } from "@/lib/density";
 import { fitScale } from "@/lib/graph-interaction/viewport";
 import { ZONE_NAMES, type MapGeometry, type MapLine, type MapNode } from "./types";
 import styles from "./NetworkMap.module.css";
@@ -44,6 +45,7 @@ export interface NetworkMapProps {
   insets?: { right?: number; bottom?: number };
   /** Animate the re-fit when `geometry` changes (density switch). Off = instant (first load). */
   animateRefit?: boolean;
+  density?: Density;
   ref?: Ref<NetworkMapHandle>;
 }
 
@@ -55,9 +57,10 @@ const LABEL_PX = 11;
 const LABEL_CH = 7.6; // estimated advance of one uppercase label glyph (px at LABEL_PX)
 const LABEL_LINE = 13;
 const LABEL_GAP = 15; // station centre to first glyph
-const LABEL_MIN_K: Record<number, number> = { 1: 0.85, 2: 1.0, 3: 1.15, 4: 0.75 };
-/** Entry-station titles appear from this zoom up (desktop fit ~0.5; phone fit ~0.22 shows discs only). */
-const ENTRY_MIN_K = 0.35;
+/** Other titles by level, as a multiple of the fit zoom (kFit), before the density multiplier. */
+const LABEL_MIN_REL: Record<number, number> = { 1: 1.7, 2: 2.0, 3: 2.3, 4: 1.5 };
+/** Hit targets are at least this radius on screen (24px diameter). */
+const HIT_PX = 12;
 const WRAP_CHARS = 22;
 const TAU = Math.PI * 2;
 
@@ -202,6 +205,8 @@ interface StationProps {
   read: boolean;
   selected: boolean;
   interchange: boolean;
+  m: number;
+  hitR: number;
   tabIndex: 0 | -1;
   ariaLabel: string;
   onPick(id: string): void;
@@ -216,6 +221,8 @@ const Station = memo(function Station({
   read,
   selected,
   interchange,
+  m,
+  hitR,
   tabIndex,
   ariaLabel,
   onPick,
@@ -245,29 +252,29 @@ const Station = memo(function Station({
       }}
       onBlur={() => onHover(null)}
     >
-      <circle className={styles.hit} r={isRoot ? 44 : HIT_R} />
-      <circle className={styles.focusRing} r={isRoot ? 36 : 17} />
+      <circle className={styles.hit} r={isRoot ? Math.max(44, hitR) : hitR} />
+      <circle className={styles.focusRing} r={(isRoot ? 36 : 17) * m} />
       {isRoot ? (
         <>
-          <circle className={styles.rootOuter} r={24} />
-          <circle className={styles.rootInner} r={13} />
+          <circle className={styles.rootOuter} r={24 * m} />
+          <circle className={styles.rootInner} r={13 * m} />
         </>
       ) : (
         <>
           {node.entry ? (
             <rect
               className={styles.tick}
-              x={-3.5}
-              y={-14}
-              width={7}
-              height={28}
+              x={-3.5 * m}
+              y={-14 * m}
+              width={7 * m}
+              height={28 * m}
               transform={`rotate(${deg(node.angle).toFixed(1)})`}
             />
           ) : null}
-          {interchange ? <circle className={styles.interchange} r={14} /> : null}
-          {selected ? <circle className={styles.selectedRing} r={17} /> : null}
-          <circle className={styles.dot} r={7} />
-          {node.incomplete ? <path className={styles.notch} d="M6 -14 L15 -14 L15 -5 Z" /> : null}
+          {interchange ? <circle className={styles.interchange} r={14 * m} /> : null}
+          {selected ? <circle className={styles.selectedRing} r={17 * m} /> : null}
+          <circle className={styles.dot} r={7 * m} />
+          {node.incomplete ? <path className={styles.notch} d="M6 -14 L15 -14 L15 -5 Z" transform={`scale(${m})`} /> : null}
         </>
       )}
     </g>
@@ -304,9 +311,13 @@ function placeLabels({
   toneOf,
   reserved,
   xTags,
+  kFit,
+  sc,
 }: {
   nodes: readonly MapNode[];
   k: number;
+  kFit: number;
+  sc: DensityScale;
   selection: Selection | null;
   hovered: string | null;
   topicActive: boolean;
@@ -321,6 +332,9 @@ function placeLabels({
     pinned: boolean;
     lines: string[];
   }
+  const m = sc.mark;
+  const rel = k / kFit;
+  const ls = m * clamp(rel, 1, sc.maxGrow); // label scale on screen
   const maxChars = (level: number) => (level >= 4 ? 30 : clamp(Math.floor((175 * k - 36) / 7.6), 14, 30));
   const cands: Cand[] = [];
   for (const n of nodes) {
@@ -331,10 +345,10 @@ function placeLabels({
     else if (hovered === n.id) prio = 1;
     else if (selection?.prerequisites.has(n.id)) prio = 2;
     else if (selection?.unlocks.has(n.id)) prio = 3;
-    else if (n.entry && tone !== "dim" && k >= ENTRY_MIN_K) prio = 4;
+    else if (n.entry && tone !== "dim" && rel >= sc.entryAt) prio = 4;
     else {
-      const threshold = (LABEL_MIN_K[n.level] ?? 1) * (topicActive && tone === "full" ? 0.72 : 1);
-      if (tone === "dim" || k < threshold) continue;
+      const threshold = (LABEL_MIN_REL[n.level] ?? 2) * sc.labelMul * (topicActive && tone === "full" ? 0.72 : 1);
+      if (tone === "dim" || rel < threshold) continue;
     }
     const wrapped = prio <= 4;
     const lines = wrapped ? wrapTitle(n.title, WRAP_CHARS, 2) : [truncate(n.title, maxChars(n.level))];
@@ -342,6 +356,7 @@ function placeLabels({
   }
   cands.sort((a, b) => a.prio - b.prio || a.n.level - b.n.level || (a.n.id < b.n.id ? -1 : 1));
 
+  const tagScale = Math.max(ls, TAG_MIN_SCALE);
   const placed: Box[] = [];
   const out: PlacedLabel[] = [];
   const outTags: XTag[] = [];
@@ -350,7 +365,7 @@ function placeLabels({
   const placeTags = () => {
     tagsDone = true;
     for (const t of xTags) {
-      const box = aabb(t.x * k, t.y * k, t.w / 2, XTAG_H / 2);
+      const box = aabb(t.x * k, t.y * k, (t.w * tagScale) / 2, (XTAG_H * tagScale) / 2);
       if (reserved.some((r) => boxesOverlap(box, r, 3)) || placed.some((p) => boxesOverlap(box, p, 3))) continue;
       placed.push(box);
       outTags.push(t);
@@ -363,17 +378,18 @@ function placeLabels({
     const rot = n.angle + (left ? Math.PI : 0);
     const ux = Math.cos(rot);
     const uy = Math.sin(rot);
-    const w = Math.max(...c.lines.map((l) => l.length)) * LABEL_CH + 4;
-    const h = c.lines.length * LABEL_LINE + 2;
-    const lx = (left ? -1 : 1) * (LABEL_GAP + w / 2);
-    const ly = -6 - ((c.lines.length - 1) * LABEL_LINE) / 2;
+    const w = (Math.max(...c.lines.map((l) => l.length)) * LABEL_CH + 4) * ls;
+    const h = (c.lines.length * LABEL_LINE + 2) * ls;
+    const gap = labelGap(ls, m, k);
+    const lx = (left ? -1 : 1) * (gap + w / 2);
+    const ly = -6 * ls - ((c.lines.length - 1) * LABEL_LINE * ls) / 2;
     const sx = n.x * k;
     const sy = n.y * k;
     const box: Box = { cx: sx + lx * ux - ly * uy, cy: sy + lx * uy + ly * ux, ux, uy, hw: w / 2, hh: h / 2 };
     let hit = reserved.some((r) => boxesOverlap(box, r, 3)) || placed.some((p) => boxesOverlap(box, p, 3));
     if (!hit && (c.prio === 3 || c.prio === 5)) {
       hit = nodes.some(
-        (o) => o.id !== n.id && o.level !== 0 && boxesOverlap(box, aabb(o.x * k, o.y * k, 9, 9), 0),
+        (o) => o.id !== n.id && o.level !== 0 && boxesOverlap(box, aabb(o.x * k, o.y * k, 9 * m, 9 * m), 0),
       );
     }
     if (hit) continue;
@@ -394,6 +410,10 @@ interface XTag {
 }
 
 const XTAG_H = 36;
+const TAG_MIN_SCALE = 0.85; // signage plates stay readable even in airy modes
+
+/** Station centre to first glyph, in screen px (clears the dot when zoomed in). */
+const labelGap = (ls: number, m: number, k: number) => Math.max(LABEL_GAP * ls, 7 * m * k + 7);
 const XTAG_REASON_MAX = 40;
 
 /** Midpoint (t = 0.5) of the quadratic `M ax ay Q cx cy bx by` that layout emits for related edges. */
@@ -404,14 +424,14 @@ function relatedMidpoint(path: string): { x: number; y: number } | null {
 }
 
 /** Signage tag at the midpoint of an interchange: glyph, COMBINACIÓN, and the reason. Counter-scaled. */
-function InterchangeTags({ tags, k }: { tags: readonly XTag[]; k: number }) {
+function InterchangeTags({ tags, k, scale }: { tags: readonly XTag[]; k: number; scale: number }) {
   return (
     <g aria-hidden="true">
       {tags.map((t) => (
         <g
           key={t.key}
           className={styles.xTag}
-          transform={`translate(${t.x.toFixed(1)} ${t.y.toFixed(1)}) scale(${(1 / k).toFixed(4)})`}
+          transform={`translate(${t.x.toFixed(1)} ${t.y.toFixed(1)}) scale(${(scale / k).toFixed(4)})`}
         >
           <title>{`Combinación: ${t.full}`}</title>
           <rect className={styles.xTagPlate} x={-t.w / 2} y={-XTAG_H / 2} width={t.w} height={XTAG_H} />
@@ -434,17 +454,22 @@ function InterchangeTags({ tags, k }: { tags: readonly XTag[]; k: number }) {
 function StationLabels({
   labels,
   k,
+  ls,
+  m,
 }: {
   labels: readonly PlacedLabel[];
   k: number;
+  ls: number;
+  m: number;
 }) {
-  const fs = LABEL_PX / k;
-  const lh = LABEL_LINE / k;
+  const fs = (LABEL_PX * ls) / k;
+  const lh = (LABEL_LINE * ls) / k;
+  const gap = labelGap(ls, m, k) / k;
   return (
     <g aria-hidden="true">
       {labels.map((l) => {
-        const x = (l.left ? -1 : 1) * (LABEL_GAP / k);
-        const y0 = -(6 / k) - ((l.lines.length - 1) * lh) / 2;
+        const x = (l.left ? -1 : 1) * gap;
+        const y0 = -((6 * ls) / k) - ((l.lines.length - 1) * lh) / 2;
         return (
           <text
             key={l.id}
@@ -456,7 +481,7 @@ function StationLabels({
             y={y0}
             textAnchor={l.left ? "end" : "start"}
             fontSize={fs}
-            strokeWidth={4 / k}
+            strokeWidth={(4 * ls) / k}
           >
             {l.lines.map((line, i) => (
               <tspan key={i} x={x} dy={i === 0 ? 0 : lh}>
@@ -484,6 +509,7 @@ export function NetworkMap({
   onSelect,
   insets,
   animateRefit = false,
+  density = DEFAULT_DENSITY,
   ref,
 }: NetworkMapProps) {
   const svgRef = useRef<SVGSVGElement>(null);
@@ -681,21 +707,29 @@ export function NetworkMap({
   const pickNode = useCallback((id: string) => onSelect(id), [onSelect]);
 
   const k = tf.k;
+  const sc = DENSITY_SCALE[density];
+  const m = sc.mark;
+  // Zoom at which the active layout fits the viewport; label sizes and thresholds hang from it.
+  const vp = pan.getViewportSize();
+  const kFit = vp.width > 0 ? Math.min(fitScale(panBounds, vp), k) : k;
+  const ls = m * clamp(k / kFit, 1, sc.maxGrow);
+  const tagScale = Math.max(ls, TAG_MIN_SCALE);
+  const hitR = Math.max(HIT_R, HIT_PX / k);
   const outer = geometry.rings[geometry.rings.length - 1]?.radius ?? 0;
 
   /* ---- labels: greedy collision pass (screen space) ---- */
   const reserved = useMemo<Box[]>(() => {
     const boxes: Box[] = [
       // Km 0 disc and its label (the label is 12px type, ~9px per glyph, tracked).
-      aabb(0, 0, 24 * k + 6, 24 * k + 6),
-      aabb(0, 34 * k + 12, (23 * 9.2) / 2 + 4, 10),
+      aabb(0, 0, 24 * m * k + 6, 24 * m * k + 6),
+      aabb(0, 34 * m * k + 12 * ls, ((23 * 9.2) / 2 + 4) * ls, 10 * ls),
     ];
     for (const s of geometry.sectors) {
       const p = polar(outer + 66, s.labelAngle);
-      boxes.push(aabb(p.x * k, p.y * k, 20, 20));
+      boxes.push(aabb(p.x * k, p.y * k, 20 * sc.terminus, 20 * sc.terminus));
     }
     return boxes;
-  }, [geometry.sectors, outer, k]);
+  }, [geometry.sectors, outer, k, m, ls, sc.terminus]);
   // Tags: the hovered station's interchanges on hover, otherwise all of the selected station's.
   const tagFocus = hovered ?? selectedId;
   const xTagCands = useMemo<XTag[]>(() => {
@@ -716,6 +750,8 @@ export function NetworkMap({
       placeLabels({
         nodes,
         k,
+        kFit,
+        sc,
         selection,
         hovered,
         topicActive: !!activeTopic,
@@ -723,13 +759,13 @@ export function NetworkMap({
         reserved,
         xTags: xTagCands,
       }),
-    [nodes, k, selection, hovered, activeTopic, toneOfNode, reserved, xTagCands],
+    [nodes, k, kFit, sc, selection, hovered, activeTopic, toneOfNode, reserved, xTagCands],
   );
   const hoveredNode = hovered ? nodeById.get(hovered) : undefined;
   const hoveredLine = hoveredNode ? lineByTopic.get(hoveredNode.topicId ?? "") : undefined;
 
   return (
-    <div className={styles.map} style={{ "--k": k } as CSSProperties}>
+    <div className={styles.map} style={{ "--k": k, "--m": m, "--ts": tagScale } as CSSProperties}>
       <svg
         ref={svgRef}
         className={styles.svg}
@@ -815,6 +851,8 @@ export function NetworkMap({
                   read={isRead}
                   selected={np["aria-pressed"]}
                   interchange={relatedActive.ends.has(n.id)}
+                  m={m}
+                  hitR={hitR}
                   tabIndex={np.tabIndex}
                   ariaLabel={label}
                   onPick={pickNode}
@@ -825,18 +863,18 @@ export function NetworkMap({
             })}
           </g>
 
-          <StationLabels labels={labels} k={k} />
-          <InterchangeTags tags={tags} k={k} />
+          <StationLabels labels={labels} k={k} ls={ls} m={m} />
+          <InterchangeTags tags={tags} k={k} scale={tagScale} />
 
           {rootNode ? (
             <text
               className={styles.rootLabel}
               aria-hidden="true"
               x={0}
-              y={34 + 12 / k}
+              y={34 * m + (12 * ls) / k}
               textAnchor="middle"
-              fontSize={12 / k}
-              strokeWidth={5 / k}
+              fontSize={(12 * ls) / k}
+              strokeWidth={(5 * ls) / k}
             >
               KM 0 · TOM SAWYER ABROAD
             </text>
@@ -854,7 +892,7 @@ export function NetworkMap({
                   key={s.topicId}
                   className={styles.terminus}
                   data-dim={dim ? "true" : undefined}
-                  transform={`translate(${p.x.toFixed(1)} ${p.y.toFixed(1)}) scale(${(1 / k).toFixed(4)})`}
+                  transform={`translate(${p.x.toFixed(1)} ${p.y.toFixed(1)}) scale(${(sc.terminus / k).toFixed(4)})`}
                   style={{ "--ink": line.color } as CSSProperties}
                 >
                   <circle r={15} className={styles.terminusDisc} />
