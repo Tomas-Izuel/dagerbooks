@@ -6,6 +6,8 @@ import type {
   LayoutSector,
 } from "./layout.types";
 
+import type { Density } from "../density";
+
 export type * from "./layout.types";
 
 /** Structural subset of Book / Topic / Catalog that the layout needs. */
@@ -38,6 +40,29 @@ export const DEFAULT_LAYOUT_CONFIG: LayoutConfig = {
   trackCorner: 16,
   trackStraightBelow: 7,
   precision: 2,
+};
+
+/**
+ * Layout presets per UI density. `compacta` is the base (DEFAULT_LAYOUT_CONFIG, unchanged).
+ * Only spacing knobs differ; track routing offsets scale with the rings so the
+ * subway-style joins keep their proportions.
+ */
+export const DENSITY_PRESETS: Record<Density, Partial<LayoutConfig>> = {
+  compacta: {},
+  media: {
+    firstRingRadius: 230, // 1.2x
+    ringSpacing: 228, // 1.3x
+    nodeGap: 26, // 1.6x
+    minSectorAngle: (16 * Math.PI) / 180,
+    trackArcInset: 62,
+  },
+  aireada: {
+    firstRingRadius: 250, // 1.3x
+    ringSpacing: 265, // 1.5x
+    nodeGap: 32, // 2x
+    minSectorAngle: (18 * Math.PI) / 180,
+    trackArcInset: 74,
+  },
 };
 
 const TAU = Math.PI * 2;

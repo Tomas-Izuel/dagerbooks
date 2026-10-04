@@ -1,10 +1,11 @@
 import { Suspense } from "react";
 import Link from "next/link";
 import { Explorer, type BoardLine, type PanelEntry } from "@/components/map/Explorer";
-import type { MapGeometry, MapNode } from "@/components/map/types";
+import type { MapDensityLayout, MapGeometrySet, MapNodeMeta } from "@/components/map/types";
 import { loadCatalog } from "@/lib/catalog/load";
-import { computeLayout } from "@/lib/catalog/layout";
+import { computeLayout, DENSITY_PRESETS } from "@/lib/catalog/layout";
 import { booksInSector, isEntryPoint, relatedBooks } from "@/lib/catalog/queries";
+import { DENSITIES, type Density } from "@/lib/density";
 import { linesFor } from "@/lib/design/lines";
 import { buildSearchDocs } from "@/lib/search";
 import { jsonLdString, websiteJsonLd } from "@/lib/seo";
@@ -14,11 +15,17 @@ import styles from "./page.module.css";
 export default function Home() {
   const catalog = loadCatalog();
   const { books, topics, root } = catalog;
-  const layout = computeLayout(catalog);
   const bookById = new Map(books.map((b) => [b.id, b]));
   const topicName = new Map(topics.map((t) => [t.id, t.name]));
 
-  const nodes: MapNode[] = layout.nodes.map((n) => {
+  // One layout per density, computed at build time. The station and edge metadata
+  // is identical across them, so it ships once; each density adds positions and paths.
+  const computed = Object.fromEntries(DENSITIES.map((d) => [d, computeLayout(catalog, DENSITY_PRESETS[d])])) as Record<
+    Density,
+    ReturnType<typeof computeLayout>
+  >;
+  const base = computed.compacta;
+  const nodes: MapNodeMeta[] = base.nodes.map((n) => {
     const b = bookById.get(n.id)!;
     return {
       id: n.id,
@@ -26,21 +33,31 @@ export default function Home() {
       titleEs: b.titleEs,
       topicId: n.sector,
       level: n.ring,
-      x: n.x,
-      y: n.y,
-      angle: n.angle,
-      r: n.r,
       entry: isEntryPoint(n.id),
       incomplete: b.confidence === "low",
     };
   });
-  const geometry: MapGeometry = {
-    nodes,
-    edges: layout.edges,
-    sectors: layout.sectors,
-    rings: layout.rings,
-    bounds: layout.bounds,
-  };
+  const edges = base.edges.map(({ from, to, kind, reason }) => ({ from, to, kind, ...(reason ? { reason } : {}) }));
+  const layouts = Object.fromEntries(
+    DENSITIES.map((d) => {
+      const l = computed[d];
+      const sameShape =
+        l.nodes.length === base.nodes.length &&
+        l.edges.length === base.edges.length &&
+        l.nodes.every((n, i) => n.id === base.nodes[i].id) &&
+        l.edges.every((e, i) => e.from === base.edges[i].from && e.to === base.edges[i].to);
+      if (!sameShape) throw new Error(`layout "${d}" cambió el orden de estaciones o tramos respecto de "compacta"`);
+      const entry: MapDensityLayout = {
+        pos: l.nodes.flatMap((n) => [n.x, n.y, n.angle, n.r]),
+        paths: l.edges.map((e) => e.path),
+        sectors: l.sectors,
+        rings: l.rings,
+        bounds: l.bounds,
+      };
+      return [d, entry];
+    }),
+  ) as Record<Density, MapDensityLayout>;
+  const geometry: MapGeometrySet = { nodes, edges, layouts };
 
   const lines: BoardLine[] = linesFor(topics.map((t) => t.id)).map((l) => {
     const first =

@@ -19,6 +19,7 @@ import { lineColor } from "@/lib/design/lines";
 import type { Selection } from "@/lib/state/explorer";
 import type { LayoutEdge } from "@/lib/catalog/layout.types";
 import type { NavNode } from "@/lib/graph-interaction";
+import { fitScale } from "@/lib/graph-interaction/viewport";
 import { ZONE_NAMES, type MapGeometry, type MapLine, type MapNode } from "./types";
 import styles from "./NetworkMap.module.css";
 
@@ -41,6 +42,8 @@ export interface NetworkMapProps {
   onSelect(id: string | null): void;
   /** Px covered by overlays (side panel / bottom sheet). */
   insets?: { right?: number; bottom?: number };
+  /** Animate the re-fit when `geometry` changes (density switch). Off = instant (first load). */
+  animateRefit?: boolean;
   ref?: Ref<NetworkMapHandle>;
 }
 
@@ -480,6 +483,7 @@ export function NetworkMap({
   read,
   onSelect,
   insets,
+  animateRefit = false,
   ref,
 }: NetworkMapProps) {
   const svgRef = useRef<SVGSVGElement>(null);
@@ -541,6 +545,31 @@ export function NetworkMap({
     }),
     [nodeById],
   );
+
+  // Density switch: new geometry. Positions swap at once (never animated); only the camera
+  // moves. Without a selection, re-fit; with one, keep it centred at the same relative framing.
+  // The snapshot effect below runs after this one, so `snap` still holds the previous geometry.
+  const snap = useRef<{ k: number; bounds: typeof panBounds } | null>(null);
+  const prevGeometry = useRef(geometry);
+  useEffect(() => {
+    const prev = snap.current;
+    if (prevGeometry.current === geometry) return;
+    prevGeometry.current = geometry;
+    const { pan: p, insets: ins } = live.current;
+    const instant = !animateRefit;
+    const n = selectedId ? nodeById.get(selectedId) : undefined;
+    if (!n || !prev) {
+      p.fitToBounds(0, instant);
+      return;
+    }
+    const size = p.getViewportSize();
+    const ratio = size.width > 0 ? fitScale(panBounds, size) / fitScale(prev.bounds, size) : 1;
+    const k = prev.k * ratio;
+    p.centerOn(n.x + (ins?.right ?? 0) / 2 / k, n.y + (ins?.bottom ?? 0) / 2 / k, k, instant);
+  }, [geometry, selectedId, nodeById, panBounds, animateRefit]);
+  useEffect(() => {
+    snap.current = { k: pan.getTransform().k, bounds: panBounds };
+  });
 
   // A selection already in the URL on load: bring it into view once.
   const bootCentered = useRef(false);

@@ -1,18 +1,20 @@
 "use client";
 
 import Link from "next/link";
-import { useCallback, useMemo, useRef, useSyncExternalStore } from "react";
+import { useCallback, useMemo, useRef, useState, useSyncExternalStore } from "react";
 import { MapControls } from "@/components/explorer/MapControls";
 import { StationBoard } from "@/components/explorer/StationBoard";
 import { StationPanel } from "@/components/explorer/StationPanel";
 import type { PanelBook, StationRef } from "@/components/explorer/types";
 import { useBookSearch } from "@/hooks/useBookSearch";
+import { useDensity } from "@/hooks/useDensity";
 import { useExplorerState } from "@/hooks/useExplorerState";
 import { useReadProgress } from "@/hooks/useReadProgress";
 import type { ExplorerNode } from "@/lib/state/explorer";
 import type { SearchDoc } from "@/lib/search";
 import { NetworkMap, type NetworkMapHandle } from "./NetworkMap";
-import type { MapGeometry, MapLine } from "./types";
+import type { Density } from "@/lib/density";
+import { resolveGeometry, type MapGeometrySet, type MapLine } from "./types";
 import styles from "./Explorer.module.css";
 
 export interface PanelEntry {
@@ -25,7 +27,7 @@ export interface BoardLine extends MapLine {
 }
 
 export interface ExplorerProps {
-  geometry: MapGeometry;
+  geometry: MapGeometrySet;
   lines: BoardLine[];
   explorerNodes: ExplorerNode[];
   searchDocs: SearchDoc[];
@@ -48,13 +50,24 @@ const useNarrow = () =>
 
 const byLevelThenTitle = (a: StationRef, b: StationRef) => a.level - b.level || a.title.localeCompare(b.title);
 
-export function Explorer({ geometry, lines, explorerNodes, searchDocs, panels }: ExplorerProps) {
+export function Explorer({ geometry: geometrySet, lines, explorerNodes, searchDocs, panels }: ExplorerProps) {
   const mapRef = useRef<NetworkMapHandle>(null);
   const topicIds = useMemo(() => lines.map((l) => l.topicId), [lines]);
   const { state, selection, dimmed, selectBook, setTopic, setQuery } = useExplorerState(explorerNodes, topicIds);
   const search = useBookSearch(searchDocs, { initialQuery: state.q });
   const progress = useReadProgress();
   const narrow = useNarrow();
+  const { density, setDensity } = useDensity();
+  // The first density change (stored value applied after mount) re-fits instantly; user switches animate.
+  const [userSwitched, setUserSwitched] = useState(false);
+  const onDensity = useCallback(
+    (d: Density) => {
+      setUserSwitched(true);
+      setDensity(d);
+    },
+    [setDensity],
+  );
+  const geometry = useMemo(() => resolveGeometry(geometrySet, density), [geometrySet, density]);
 
   const refById = useMemo(
     () =>
@@ -130,7 +143,7 @@ export function Explorer({ geometry, lines, explorerNodes, searchDocs, panels }:
   const read = progress.read;
 
   return (
-    <div className={styles.shell}>
+    <div className={styles.shell} data-density={density}>
       <StationBoard
         lines={lines.map((l) => ({
           topicId: l.topicId,
@@ -161,6 +174,7 @@ export function Explorer({ geometry, lines, explorerNodes, searchDocs, panels }:
           read={read}
           onSelect={selectBook}
           insets={insets}
+          animateRefit={userSwitched}
         />
 
         <Link className={styles.directoryLink} href="/estaciones">
@@ -173,6 +187,8 @@ export function Explorer({ geometry, lines, explorerNodes, searchDocs, panels }:
             onZoomIn={() => mapRef.current?.zoomIn()}
             onZoomOut={() => mapRef.current?.zoomOut()}
             onReset={() => mapRef.current?.reset()}
+            density={density}
+            onDensity={onDensity}
             onCenterSelected={selectedId ? () => mapRef.current?.centerOn(selectedId, 1.15) : undefined}
           />
         </div>
