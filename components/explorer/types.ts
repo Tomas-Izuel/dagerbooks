@@ -23,4 +23,5 @@ export interface PanelBook {
   confidence: "low" | "ok";
   missing: string[];
   coverId?: number;
+  asin?: string;
 }

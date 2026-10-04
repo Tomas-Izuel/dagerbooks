@@ -42,6 +42,7 @@
       quote: "el primero fue por regalo de mi abuelo, el Las aventuras de Tom Sawyer en el extranjero"
   leadsTo: ["but-how-do-it-know", "algebra-baldor", "the-information", "economic-sophisms", "meditations", "breve-historia-de-los-argentinos", "atomic-habits", "the-lean-startup", "joel-on-software", "dive-into-design-patterns"]
   isbn: "9781443425438"
+  asin: "0520271513"
   coverId: 9162125
 
 - id: but-how-do-it-know
@@ -68,6 +69,7 @@
       quote: "comienza el clásico But how do you know? Pero, ¿cómo sabe? Un libro que intenta achicar el espacio entre las cosas fleras que puede hacer una computadora"
   leadsTo: ["operating-systems-three-easy-pieces", "network-warrior"]
   isbn: "9780615303765"
+  asin: "0615303765"
 
 - id: pro-git
   title: "Pro Git"
@@ -86,6 +88,7 @@
       quote: "el único recurso que te recomiendo si quieres ir a fondo es progit que es de los mejores que he encontrado"
   leadsTo: ["git-internals"]
   isbn: "9781430218333"
+  asin: "1430218339"
   coverId: 7892827
 
 - id: automate-the-boring-stuff-with-python
@@ -104,6 +107,7 @@
       quote: "[Este] es un buen libro -tal vez algo desactualizado- dedicado a esto (Amazon link to Automate the Boring Stuff with Python)"
   leadsTo: ["crafting-interpreters", "csharp-in-a-nutshell"]
   isbn: "9781593275990"
+  asin: "1593275994"
   coverId: 7363640
 
 - id: git-internals
@@ -137,6 +141,7 @@
       quote: "Hay libros piola (C# In a Nutshell, los libros y posts de Skeet -e.g., C# in Depth-, etc.)"
   leadsTo: ["csharp-in-depth"]
   isbn: "9780596001810"
+  asin: "0596001819"
   coverId: 12836741
 
 - id: network-warrior
@@ -161,6 +166,7 @@
       timestamp: "6:06"
       quote: "Network Warrior que es sobre redes es un lindo libro"
   isbn: "9780596101510"
+  asin: "0596101511"
   coverId: 8698959
 
 - id: csharp-in-depth
@@ -181,6 +187,7 @@
       title: "r/devsarg: empezar con c"
       quote: "Jon Skeet. Tiene libros y artículos sobre el lenguaje. No tan introductorio"
   isbn: "9781933988368"
+  asin: "1933988363"
   coverId: 3063781
 
 - id: operating-systems-three-easy-pieces
@@ -201,6 +208,7 @@
       title: "GitHub: MarianoVilla/MarianoVilla README (Recommended Readings)"
       quote: "makes OS concepts digestible"
   isbn: "9781985086593"
+  asin: "198508659X"
   coverId: 10401368
 
 - id: crafting-interpreters
@@ -219,6 +227,7 @@
       timestamp: "10:19"
       quote: "Crafting interpreters es muy interesante y se puede leer gratuito en la web del autor"
   isbn: "9780990582939"
+  asin: "0990582930"
   coverId: 12075000
 
 - id: algebra-baldor
@@ -238,6 +247,7 @@
       quote: "álgebra de Baldor s sí también ... No sé por qué no lo recomendé pues es crucial"
   leadsTo: ["book-of-proof", "laws-of-thought-boole"]
   isbn: "9789702407799"
+  asin: "9702407796"
   coverId: 7273068
 
 - id: algebra-for-dummies
@@ -258,6 +268,7 @@
       quote: "el álgebra for damis me pareció muy buen libro"
   leadsTo: ["book-of-proof"]
   isbn: "9780764553257"
+  asin: "0764553259"
   coverId: 521828
 
 - id: mathematics-for-programmers-barden
@@ -281,6 +292,7 @@
       quote: "matemáticas para programadores es un libro que es otro de vuelta ... muy lindo libro es en español"
   leadsTo: ["algorithms-illuminated"]
   isbn: "9780672219276"
+  asin: "0672219271"
 
 - id: book-of-proof
   title: "Book of Proof"
@@ -305,6 +317,7 @@
       quote: "Book of proof es un muy buen libro es un poquito denso es un clásico sobre el tema"
   leadsTo: ["concrete-mathematics", "introduction-to-algorithms", "dixon-coles-football"]
   isbn: "9780982406205"
+  asin: "0982406207"
   coverId: 10439715
 
 - id: algorithms-illuminated
@@ -334,6 +347,7 @@
       quote: "te recomiendo la serie de libros que creo que también existe como videos de YouTube que se llama algo hace poco me lo topé me pareció mucho más copado que introductions"
   leadsTo: ["introduction-to-algorithms"]
   isbn: "9780999282908"
+  asin: "0999282905"
   coverId: 9230325
 
 - id: introduction-to-algorithms
@@ -364,6 +378,7 @@
       quote: "mucho más copado que introductions que es el libro que se suele recomendar"
   leadsTo: ["concrete-mathematics"]
   isbn: "9780262031417"
+  asin: "0262031418"
   coverId: 2341462
 
 - id: concrete-mathematics
@@ -392,6 +407,7 @@
       timestamp: "6:22"
       quote: "Ese es el primer problema que aparece en Concrete Mathematics, creo recordar librazo"
   isbn: "9780201558029"
+  asin: "0201558025"
   coverId: 135182
 
 - id: the-information
@@ -418,6 +434,7 @@
     - id: time-travel-a-history
       reason: "mismo autor (Gleick): historia cultural de las ideas"
   isbn: "9780307379573"
+  asin: "0007225741"
   coverId: 6699475
 
 - id: blockchain-illustrated-guidebook
@@ -443,6 +460,7 @@
     - id: chaos-theory
       reason: "orden descentralizado sin autoridad central"
   isbn: "9781510744851"
+  asin: "1510744843"
   coverId: 8814384
 
 - id: the-science-of-information
@@ -486,6 +504,7 @@
     - id: designing-data-intensive-applications
       reason: "sistemas distribuidos y consenso"
   isbn: "9781484248461"
+  asin: "1484248465"
   coverId: 10435039
 
 - id: a-mathematical-theory-of-communication
@@ -534,6 +553,7 @@
     - id: the-use-of-knowledge-in-society
       reason: "orden espontáneo y sistemas complejos"
   isbn: "9780807616314"
+  asin: "0807604526"
   coverId: 5508815
 
 - id: economic-sophisms
@@ -569,12 +589,14 @@
     - id: utilitarianism-for-and-against
       reason: "consecuencias y razonamiento económico"
   coverId: 5746810
+  asin: "937340170X"
 
 - id: the-use-of-knowledge-in-society
   title: "The Use of Knowledge in Society"
   titleEs: "El uso del conocimiento en la sociedad"
   authors: ["Friedrich A. Hayek"]
   year: 1945
+  asin: "0226320936"
   kind: essay
   topics: ["economia", "sistemas"]
   level: 2
@@ -620,6 +642,7 @@
       quote: "Chaos Theory es una interesante lectura. Es un conjunto de dos ensayos, es muy breve"
   leadsTo: ["democracy-the-god-that-failed", "der-begriff-des-politischen"]
   isbn: "9781933550657"
+  asin: "1933550651"
   coverId: 12678236
 
 - id: the-struggle-for-liberty
@@ -663,6 +686,7 @@
     - id: la-formacion-del-estado-argentino
       reason: "Estado, legitimidad y poder político"
   isbn: "9781412815291"
+  asin: "0765808684"
   coverId: 13163602
 
 - id: stoicism-a-very-short-introduction
@@ -682,6 +706,7 @@
       quote: "Aure Introduction es un poco más introductorio ... si no estás muy ducho en leer libros de filosofía, este sería la mejor opción"
   leadsTo: ["discourses-and-enchiridion", "letters-to-lucilius", "hymn-of-cleanthes", "lives-of-the-eminent-philosophers"]
   isbn: "9780198786665"
+  asin: "0198786662"
   coverId: 8832190
 
 - id: meditations
@@ -716,6 +741,7 @@
     - id: mans-search-for-meaning
       reason: "sentido y resiliencia frente a la adversidad"
   isbn: "9786071122254"
+  asin: "6071122252"
 
 - id: on-the-shortness-of-life
   title: "On the Shortness of Life"
@@ -738,6 +764,7 @@
       quote: "These are my notes from the other time I read the little book on the"
   leadsTo: ["letters-to-lucilius", "gorgias"]
   isbn: "9786070796210"
+  asin: "8424939603"
   coverId: 996581
 
 - id: discourses-and-enchiridion
@@ -765,6 +792,7 @@
       timestamp: "10:14"
       quote: "el Picteto en sus disertaciones famosamente suscribe a la teoría social extraña"
   isbn: "9788424916282"
+  asin: "842491628X"
   coverId: 7024260
 
 - id: letters-to-lucilius
@@ -792,6 +820,7 @@
       quote: "the other book I read by Cecca, which is the Moral Epistles to Aid"
   leadsTo: ["de-finibus", "utilitarianism-for-and-against"]
   isbn: "9788437638669"
+  asin: "8437638666"
   coverId: 6074024
 
 - id: hymn-of-cleanthes
@@ -829,6 +858,7 @@
       quote: "Podés leerlo. Vas a encontrar mucho, mucho texto sobre muchos filósofos. No necesario que te leas todo"
   leadsTo: ["the-hellenistic-philosophers"]
   isbn: "9788441318250"
+  asin: "8441318255"
   coverId: 10148252
 
 - id: de-finibus
@@ -849,6 +879,7 @@
       quote: "Es muy bueno. Tiene una elevada discusión sobre estoicismo, epicurismo y academicismo"
   leadsTo: ["the-hellenistic-philosophers"]
   isbn: "9783110962581"
+  asin: "3150085934"
   coverId: 6486564
 
 - id: utilitarianism-for-and-against
@@ -867,6 +898,7 @@
       timestamp: "8:20"
       quote: "Hay un excelente libro que se llama Uy Tiranism for and Against, creo que es una revisión muy muy interesante."
   isbn: "9780521098229"
+  asin: "052109822X"
 
 - id: the-hellenistic-philosophers
   title: "The Hellenistic Philosophers"
@@ -888,6 +920,7 @@
     - id: the-greeks-kitto
       reason: "contexto histórico de la Grecia antigua"
   isbn: "9780521275569"
+  asin: "0521275563"
   coverId: 332074
 
 - id: the-greeks-kitto
@@ -908,6 +941,7 @@
       quote: "los griegos de Quito, HDF Kito, es un librazo"
   leadsTo: ["the-ancient-world-glover", "hero-with-a-thousand-faces"]
   isbn: "9780140135213"
+  asin: "0140135219"
   coverId: 9285777
 
 - id: breve-historia-de-los-argentinos
@@ -927,6 +961,7 @@
       quote: "si tengo que recomendar un libro de historia argentina, probablemente recomendaría ir por por este"
   leadsTo: ["breve-historia-contemporanea-de-la-argentina", "el-45", "la-patagonia-rebelde", "la-comunidad-organizada", "the-federalist-papers"]
   isbn: "9789507428111"
+  asin: "9507428119"
 
 - id: los-argentinos-lanata
   title: "Argentinos"
@@ -953,6 +988,7 @@
       quote: "creo que lo leí en Argentinos de Jorge Lan. Es un muy buen libro, dicho se de pas"
   leadsTo: ["operacion-masacre"]
   isbn: "9788466613385"
+  asin: "8466613382"
   coverId: 3346402
 
 - id: time-travel-a-history
@@ -979,6 +1015,7 @@
       timestamp: "0:52"
       quote: "Lo que es el mismo James que escribió el libro sobre viaje en el tiempo"
   isbn: "9780008207670"
+  asin: "0008207674"
   coverId: 7886899
 
 - id: the-ancient-world-glover
@@ -997,6 +1034,7 @@
       timestamp: "78:44"
       quote: "Mi libro favorito de Grecia desde muy chico, lo leí como cinco veces"
   isbn: "9781107695634"
+  asin: "1107695635"
   coverId: 9280129
 
 - id: breve-historia-contemporanea-de-la-argentina
@@ -1020,6 +1058,7 @@
       quote: "no te digo agarrate breve historia contemporánea de la Argentina, no te digo ponerte a leer toda la bibliografía de Romero"
   leadsTo: ["la-formacion-del-estado-argentino", "revolucion-y-guerra"]
   isbn: "9789505579242"
+  asin: "9505579241"
   coverId: 1052132
 
 - id: el-45
@@ -1038,6 +1077,7 @@
       timestamp: "3:37"
       quote: "tiene otro librazo de historia Argentina que es el 45, ¿no? Que es sobre todo el asunto del peronismo"
   isbn: "9789500712132"
+  asin: "950614348X"
 
 - id: la-patagonia-rebelde
   title: "La Patagonia rebelde"
@@ -1063,6 +1103,7 @@
       timestamp: "72:37"
       quote: "igual lean la Patagonia rebelde, boludo."
   isbn: "9789504909453"
+  asin: "9504909450"
   coverId: 13223189
 
 - id: operacion-masacre
@@ -1084,6 +1125,7 @@
     - id: eichmann-in-jerusalem
       reason: "violencia estatal y responsabilidad individual"
   isbn: "9789505153527"
+  asin: "950515352X"
   coverId: 5407660
 
 - id: la-formacion-del-estado-argentino
@@ -1102,6 +1144,7 @@
       timestamp: "5:08"
       quote: "Interesante libro sobre la formación del Estado... Poquito más sesgadito hacia el lado zurdo... pero valioso igual"
   isbn: "9789509122871"
+  asin: "9509122874"
   coverId: 4972742
 
 - id: eichmann-in-jerusalem
@@ -1137,6 +1180,7 @@
     - id: obedience-to-authority
       reason: "obediencia a la autoridad y banalidad del mal"
   isbn: "9780140044508"
+  asin: "0140044507"
   coverId: 97789
 
 - id: atomic-habits
@@ -1168,6 +1212,7 @@
       timestamp: "83:18"
       quote: "Sácate las distracciones del camino Le atomic habits que tiene muchos buenos consejos sobre cómo hacer esa clase de cosas"
   isbn: "9780735211292"
+  asin: "0735211299"
   coverId: 12539702
 
 - id: 12-rules-for-life
@@ -1195,6 +1240,7 @@
       timestamp: "19:38"
       quote: "Sacando un capítulo del libro de Jordan Peterson. Yo creo que eso es lo mejor que lo mejor que tiene Jordan Peterson es esa idea de controlar tu entorno"
   isbn: "9780345816023"
+  asin: "0345816021"
   coverId: 8131760
 
 - id: mindset
@@ -1219,6 +1265,7 @@
       timestamp: "7:52"
       quote: "la idea de mindset también, que es un concepto que aparece en otro libro bastante bueno... también te lo recomiendo"
   isbn: "9780345472328"
+  asin: "0345472322"
   coverId: 746414
 
 - id: mans-search-for-meaning
@@ -1243,6 +1290,7 @@
       timestamp: "8:39"
       quote: "Víctor Frankle en El hombre en busca del sentido, ¿no? Tiene una serie de pasajes dedicadas a los capos"
   isbn: "9783641059033"
+  asin: "3328102779"
   coverId: 8516506
 
 - id: flinch
@@ -1290,6 +1338,7 @@
     - id: peopleware
       reason: "concentración y entornos de trabajo productivos"
   isbn: "9781455586660"
+  asin: "0349411905"
   coverId: 7988607
 
 - id: digital-minimalism
@@ -1314,6 +1363,7 @@
       quote: "cualquiera de ese mismo autor, también está uno que se llama creo que minimalismo digital"
   leadsTo: ["the-shallows"]
   isbn: "9780525536512"
+  asin: "0525536515"
   coverId: 8507540
 
 - id: how-to-win-friends-and-influence-people
@@ -1347,6 +1397,7 @@
     - id: youre-not-listening
       reason: "escuchar y persuadir"
   isbn: "9780671027032"
+  asin: "0671027034"
   coverId: 13314878
 
 - id: college-success
@@ -1374,6 +1425,7 @@
       quote: "se llama College College Success, el libro ese que está bastante copado y es gratis"
   leadsTo: ["karpicke-retrieval-practice-papers"]
   isbn: "9781640323490"
+  asin: "164032349X"
   coverId: 15113587
 
 - id: how-to-win-every-argument
@@ -1387,6 +1439,7 @@
   summary: "Madsen Pirie repasa falacias lógicas y técnicas retóricas, tanto para argumentar como para detectar malos argumentos."
   context: "Dice que lo leyó pero que no es tan bueno: es más una lista de falacias y de cómo detectarlas y utilizarlas."
   isbn: "9780826490063"
+  asin: "0826490069"
   sources:
     - url: "https://www.youtube.com/watch?v=NUr6WVl1u0k&t=515s"
       title: "Cómo dejar de ser gordo compu y ser gordo empresarial."
@@ -1409,6 +1462,7 @@
       timestamp: "8:43"
       quote: "Win every argument de Hassan. Medassam. Este es un periodista, es famoso por hablar muy rápido"
   isbn: "9781250853462"
+  asin: "125085346X"
   coverId: 12688074
 
 - id: fooled-by-randomness
@@ -1438,6 +1492,7 @@
     - id: how-to-fuck-up-your-startup
       reason: "azar y causalidad en el éxito y el fracaso"
   isbn: "9780141930237"
+  asin: "0141031484"
   coverId: 855791
 
 - id: obedience-to-authority
@@ -1462,6 +1517,7 @@
       timestamp: "8:36"
       quote: "es superinesante el paper de Milgram"
   isbn: "9780061765216"
+  asin: "006176521X"
   coverId: 723208
 
 - id: karpicke-retrieval-practice-papers
@@ -1509,6 +1565,7 @@
       quote: "es de Starup, tiene todo un método... Este es muy bueno, buen libro realmente sobre materia de startups"
   leadsTo: ["how-to-fuck-up-your-startup"]
   isbn: "9780307887894"
+  asin: "0307887898"
   coverId: 7104760
 
 - id: the-startup-playbook
@@ -1532,6 +1589,7 @@
       quote: "Tercer libro que a mí me gustó bastante es The Startup Playbook"
   leadsTo: ["how-to-fuck-up-your-startup"]
   isbn: "9781452105048"
+  asin: "1452105049"
   coverId: 12177932
 
 - id: the-unfair-advantage
@@ -1558,6 +1616,7 @@
       timestamp: "2:28"
       quote: "Hay otro libro que es muy bueno en este sentido... que es eh The UNF Advantage"
   isbn: "9781788167543"
+  asin: "1788167546"
   coverId: 14845030
 
 - id: how-to-fuck-up-your-startup
@@ -1583,6 +1642,7 @@
       timestamp: "1:51"
       quote: "Apparently es un buen libro en ese sentido. Me gusta este libro porque se centra en historias de antieéxito"
   isbn: "9781637740590"
+  asin: "163774059X"
 
 - id: joel-on-software
   title: "Joel on Software"
@@ -1614,6 +1674,7 @@
       quote: "peopleware y J software estos últimos dos son relacionados al management de proyectos de software"
   leadsTo: ["peopleware", "the-mythical-man-month", "clean-code", "the-corrosion-of-character"]
   isbn: "9781590593899"
+  asin: "1590593898"
   coverId: 861359
 
 - id: soft-skills
@@ -1644,6 +1705,7 @@
       quote: "Siempre que me preguntas esta clase de libros, menciono soft skills porque para mí es un muy buen libro para desarrolladores"
   leadsTo: ["the-pragmatic-programmer"]
   isbn: "9781617292392"
+  asin: "1617292397"
   coverId: 7443191
 
 - id: how-to-present-to-absolutely-anyone
@@ -1662,6 +1724,7 @@
       timestamp: "6:23"
       quote: "cómo presentar absolutamente cualquier persona, how to present to absolutely anyone"
   isbn: "9780857087737"
+  asin: "0857087738"
 
 - id: youre-not-listening
   title: "You're Not Listening"
@@ -1679,6 +1742,7 @@
       title: "r/devsarg: habilidades blandas"
       quote: "You're Not Listening."
   isbn: "9781250297198"
+  asin: "1250297192"
   coverId: 9261583
 
 - id: the-pragmatic-programmer
@@ -1709,6 +1773,7 @@
       quote: "si ya tenés trabajo y querés mejorar como profesional de Pragmic Programmer. Tiene que ser sí o sí la edición del 20 aniversario"
   leadsTo: ["design-patterns-gof"]
   isbn: "9780201616224"
+  asin: "020161622X"
   coverId: 10143650
 
 - id: clean-code
@@ -1740,6 +1805,7 @@
       quote: "yo la primera vez que me lo topé fue en cin code otro libro que está bastante bueno en el cual el tío Bob se anima a decir"
   leadsTo: ["design-patterns-gof", "domain-driven-design", "refactoring"]
   isbn: "9780132350884"
+  asin: "0132350882"
   coverId: 8065615
 
 - id: peopleware
@@ -1761,6 +1827,7 @@
       timestamp: "4:01"
       quote: "también peopleware y J software estos últimos dos son relacionados al management de proyectos de software ... te van a dar un montón de información útil"
   isbn: "9780932633057"
+  asin: "0932633056"
   coverId: 711859
 
 - id: the-mythical-man-month
@@ -1790,6 +1857,7 @@
       timestamp: "56:54"
       quote: "Todo eso con The Mystical Man Month, buen libro, se los recomiendo."
   isbn: "9780201835953"
+  asin: "0201835959"
   coverId: 6915361
 
 - id: dive-into-design-patterns
@@ -1815,6 +1883,7 @@
       quote: "Refactoring Guru. Tiene un libro que está bueno sobre eso"
   leadsTo: ["head-first-design-patterns", "fundamentals-of-software-architecture"]
   coverId: 12941546
+  asin: "B0F4Y4NY6J"
 
 - id: head-first-design-patterns
   title: "Head First Design Patterns"
@@ -1836,6 +1905,7 @@
       quote: "hay una serie de libros que se llama Head First... los que yo leí siempre menciona esto mismo... En mi opinión cambió drásticamente"
   leadsTo: ["design-patterns-gof"]
   isbn: "9780596007126"
+  asin: "0596007124"
   coverId: 388950
 
 - id: fundamentals-of-software-architecture
@@ -1864,6 +1934,7 @@
       quote: "se convirtió en mi libro favorito sobre arquitectura porque es un overview super concreto"
   leadsTo: ["building-microservices", "designing-data-intensive-applications", "rest-fielding-dissertation"]
   isbn: "9781492043454"
+  asin: "1492043451"
   coverId: 10193363
 
 - id: design-patterns-gof
@@ -1886,6 +1957,7 @@
       quote: "Design Patterns - The famous \"Gang of Four\" book."
   leadsTo: ["domain-driven-design"]
   isbn: "9780201633610"
+  asin: "0201633612"
   coverId: 6601119
 
 - id: building-microservices
@@ -1913,6 +1985,7 @@
       timestamp: "2:47"
       quote: "building microservices también pero es orientado específicamente a microservicios igual es un buen libro"
   isbn: "9781491950357"
+  asin: "1491950358"
   coverId: 8513315
 
 - id: designing-data-intensive-applications
@@ -1926,6 +1999,7 @@
   summary: "Guía de Kleppmann sobre los principios de sistemas de datos: almacenamiento, replicación, particionado y procesamiento."
   context: "Figura en sus notas como recomendación de arquitectura, pero no se encontró mención en las transcripciones revisadas."
   isbn: "9781449373320"
+  asin: "1449373321"
   coverId: 8434671
 
 - id: domain-driven-design
@@ -1943,6 +2017,7 @@
       title: "r/devsarg: estoy haciendo microservicios"
       quote: "Y de yapa Domain-Driven Design... Bounded Context (he attributes it to Fowler; the book is by Evans)"
   isbn: "9780321125217"
+  asin: "0321125215"
   coverId: 5548424
 
 # --- IA y sociedad ---
@@ -2011,6 +2086,7 @@
       quote: "el mismo que escribió el hermoso libro Super Intelligence"
   leadsTo: ["the-off-switch-game", "information-hazards"]
   isbn: "9781501227745"
+  asin: "1501227742"
   coverId: 8039542
 
 - id: concrete-problems-in-ai-safety
@@ -2089,6 +2165,7 @@
     - id: "concrete-problems-in-ai-safety"
       reason: "Las leyes de Asimov muestran, en ficción, el problema de especificar bien objetivos para una máquina"
   isbn: "9780812439250"
+  asin: "0812439252"
   coverId: 12385229
 
 - id: the-time-machine
@@ -2120,6 +2197,7 @@
     - id: "time-travel-a-history"
       reason: "Wells fija la novela que Gleick analiza en su historia cultural del viaje en el tiempo"
   isbn: "0753167816"
+  asin: "0753167816"
   coverId: 9009316
 
 - id: i-am-legend
@@ -2143,6 +2221,7 @@
       timestamp: "0:08"
       quote: "el libro te habla mucho de la Soledad de neville te la describe pero la película"
   isbn: "9780552106412"
+  asin: "0552106410"
   coverId: 911109
 
 - id: enoch-soames
@@ -2165,6 +2244,7 @@
     - id: "time-travel-a-history"
       reason: "Un relato clásico de viaje al futuro, comentado en la misma serie de videos sobre el tiempo"
   isbn: "9781419146817"
+  asin: "1419146815"
   coverId: 1801496
 
 - id: foundation-asimov
@@ -2184,6 +2264,7 @@
       timestamp: "1:09"
       quote: "Trilogía de la fundación. Trilogía, son buenos libros."
   isbn: "9780553293357"
+  asin: "0553293354"
   coverId: 14612610
 
 - id: la-fiesta-del-monstruo
@@ -2205,6 +2286,7 @@
     - id: "breve-historia-contemporanea-de-la-argentina"
       reason: "Sátira del peronismo que dialoga con la historia argentina contemporánea"
   isbn: "9789500425438"
+  asin: "9500425432"
   coverId: 4965799
 
 # --- Economía (nuevos) ---
@@ -2231,6 +2313,7 @@
       quote: "este ejemplo creo que está en Mankiw en, en su libro de microeconomía"
   leadsTo: ["free-to-choose", "the-general-theory", "kobra-effekt"]
   isbn: "9780030982385"
+  asin: "0030982383"
   coverId: 19884
 
 - id: economics-in-one-lesson
@@ -2265,6 +2348,7 @@
     - id: "economic-sophisms"
       reason: "Hazlitt retoma la falacia de la ventana rota de Bastiat"
   isbn: "9780517548233"
+  asin: "0517548232"
   coverId: 4437768
 
 - id: quest-for-cosmic-justice
@@ -2292,6 +2376,7 @@
       quote: "el argumento de Sowell, de la justicia cósmica"
   leadsTo: ["huemer-wealth-redistribution", "limitarianism"]
   isbn: "0684864622"
+  asin: "0684864622"
   coverId: 428416
 
 - id: anti-duhring
@@ -2311,6 +2396,7 @@
       timestamp: "63:23"
       quote: "Puedes leer cosas de cosas como el antiduring, eh cosas de Englels"
   isbn: "9780717800087"
+  asin: "0717800083"
   coverId: 13202636
 
 - id: free-to-choose
@@ -2342,6 +2428,7 @@
       quote: "Eso es algo que Friedman dice muy felizmente, creo que en free to choose o capitalismo de libertad"
   leadsTo: ["capitalism-and-freedom", "wealth-of-nations", "two-concepts-of-liberty"]
   isbn: "9780156334600"
+  asin: "0156334607"
   coverId: 4393564
 
 - id: capitalism-and-freedom
@@ -2372,6 +2459,7 @@
       timestamp: "11:26"
       quote: "Freedman, lo cito demasiado a Freedman últimamente, dice, creo que en capitalismo y libertad ... en el prólogo"
   isbn: "9780226264219"
+  asin: "0226264211"
   coverId: 140808
 
 - id: huemer-wealth-redistribution
@@ -2410,6 +2498,7 @@
       timestamp: "12:00"
       quote: "la verdad que te recomiendo que lo leas y en el tiempo es algo que puedes leer a una tarde"
   isbn: "2266030930"
+  asin: "2266030930"
   coverId: 8236442
 
 # --- Historia (nuevos) ---
@@ -2438,6 +2527,7 @@
     - id: "obedience-to-authority"
       reason: "La estupidez colectiva de Cipolla y la obediencia ciega de Milgram explican cómo gente común sostiene daños enormes"
   isbn: "9788815260321"
+  asin: "8815260323"
   coverId: 9378526
 
 - id: sapiens
@@ -2457,6 +2547,7 @@
       timestamp: "2:15"
       quote: "Buen libro Sapiens, ¿eh? Se los recomiendo."
   isbn: "9780062316103"
+  asin: "0099590085"
   coverId: 15247651
 
 # --- Desarrollo personal (nuevos) ---
@@ -2482,6 +2573,7 @@
       quote: "un libro muy copado que se llama eh Why we Forget and How to Remember Better"
   leadsTo: ["karpicke-retrieval-practice-papers", "powerful-teaching"]
   isbn: "9780197607732"
+  asin: "019760773X"
   coverId: 13250339
 
 - id: the-shallows
@@ -2513,6 +2605,7 @@
       timestamp: "6:46"
       quote: "en su libro de shallows Nicolás karl cita este y otros estudios"
   isbn: "9780393339758"
+  asin: "0393339750"
   coverId: 6458532
 
 # --- Oficio (nuevos) ---
@@ -2567,6 +2660,7 @@
       timestamp: "119:55"
       quote: "refactory es un buen libro si si andas buscando libros así genéricos de buenas prácticas"
   isbn: "9780201485677"
+  asin: "0201485672"
   coverId: 134964
 
 # --- Arquitectura (nuevos) ---
@@ -2619,6 +2713,7 @@
   titleEs: "¿Sueñan los androides con ovejas eléctricas?"
   authors: ["Philip K. Dick"]
   year: 1968
+  asin: "0575094184"
   kind: book
   topics: ["ficcion"]
   level: 1
@@ -2640,6 +2735,7 @@
   titleEs: "Cándido, o el optimismo"
   authors: ["Voltaire"]
   year: 1759
+  asin: "2035984874"
   kind: book
   topics: ["ficcion"]
   level: 1
@@ -2722,6 +2818,7 @@
   titleEs: "Un yanqui en la corte del rey Arturo"
   authors: ["Mark Twain"]
   year: 1889
+  asin: "000744947X"
   kind: book
   topics: ["ficcion"]
   level: 1
@@ -2739,6 +2836,7 @@
   titleEs: "Memorias del siglo veinte"
   authors: ["Samuel Madden"]
   year: 1733
+  asin: "061538739X"
   kind: book
   topics: ["ficcion"]
   level: 2
@@ -2756,6 +2854,7 @@
   titleEs: "Frankenstein o el moderno Prometeo"
   authors: ["Mary Shelley"]
   year: 1818
+  asin: "1789434106"
   kind: book
   topics: ["ficcion", "ia"]
   level: 2
@@ -2773,6 +2872,7 @@
   titleEs: "La isla siniestra"
   authors: ["Dennis Lehane"]
   year: 2003
+  asin: "0553824481"
   kind: book
   topics: ["ficcion"]
   level: 1
@@ -2790,6 +2890,7 @@
   titleEs: "El mundo liberado"
   authors: ["H. G. Wells"]
   year: 1914
+  asin: "1434430278"
   kind: book
   topics: ["ficcion"]
   level: 1
@@ -2807,6 +2908,7 @@
   titleEs: "Las penas del joven Werther"
   authors: ["Johann Wolfgang von Goethe"]
   year: 1774
+  asin: "3150161363"
   kind: book
   topics: ["ficcion"]
   level: 1
@@ -2824,6 +2926,7 @@
   titleEs: "Watchmen"
   authors: ["Alan Moore", "Dave Gibbons"]
   year: 1986
+  asin: "1401238963"
   kind: book
   topics: ["ficcion"]
   level: 1
@@ -2840,6 +2943,7 @@
   title: "La casa de Asterión"
   authors: ["Jorge Luis Borges"]
   year: 1947
+  asin: "8499089518"
   kind: essay
   topics: ["ficcion"]
   level: 1
@@ -2856,6 +2960,7 @@
   title: "Funes el memorioso"
   authors: ["Jorge Luis Borges"]
   year: 1942
+  asin: "849908950X"
   kind: essay
   topics: ["ficcion"]
   level: 1
@@ -2872,6 +2977,7 @@
   title: "El inmortal"
   authors: ["Jorge Luis Borges"]
   year: 1949
+  asin: "8499089518"
   kind: essay
   topics: ["ficcion"]
   level: 1
@@ -2892,6 +2998,7 @@
   title: "El jardín de senderos que se bifurcan"
   authors: ["Jorge Luis Borges"]
   year: 1941
+  asin: "849908950X"
   kind: essay
   topics: ["ficcion"]
   level: 2
@@ -2924,6 +3031,7 @@
   title: "Arcadia"
   authors: ["Tom Stoppard"]
   year: 1993
+  asin: "0571169341"
   kind: book
   topics: ["ficcion"]
   level: 2
@@ -2943,6 +3051,7 @@
   titleEs: "Parásitos mentales"
   authors: ["Axel Kaiser"]
   year: 2023
+  asin: "8423438414"
   kind: book
   topics: ["economia"]
   level: 1
@@ -2960,6 +3069,7 @@
   titleEs: "La riqueza de las naciones"
   authors: ["Adam Smith"]
   year: 1776
+  asin: "0140432086"
   kind: book
   topics: ["economia"]
   level: 3
@@ -2998,6 +3108,7 @@
   titleEs: "El marxismo desenmascarado"
   authors: ["Ludwig von Mises"]
   year: 2006
+  asin: "1610166337"
   kind: book
   topics: ["economia"]
   level: 2
@@ -3016,6 +3127,7 @@
   titleEs: "Intervencionismo: un análisis económico"
   authors: ["Ludwig von Mises"]
   year: 1940
+  asin: "0865977399"
   kind: book
   topics: ["economia"]
   level: 3
@@ -3033,6 +3145,7 @@
   titleEs: "El concepto de lo político"
   authors: ["Carl Schmitt"]
   year: 1932
+  asin: "3428145801"
   kind: book
   topics: ["economia", "filosofia"]
   level: 3
@@ -3067,6 +3180,7 @@
   titleEs: "El efecto cobra"
   authors: ["Horst Siebert"]
   year: 2001
+  asin: "3421056781"
   kind: book
   topics: ["economia"]
   level: 2
@@ -3084,6 +3198,7 @@
   titleEs: "Limitarismo"
   authors: ["Ingrid Robeyns"]
   year: 2024
+  asin: "1802060472"
   kind: book
   topics: ["economia"]
   level: 3
@@ -3101,6 +3216,7 @@
   titleEs: "Ensayo sobre el principio de la población"
   authors: ["Thomas Robert Malthus"]
   year: 1798
+  asin: "0141392827"
   kind: book
   topics: ["economia"]
   level: 2
@@ -3118,6 +3234,7 @@
   titleEs: "Manifiesto comunista"
   authors: ["Karl Marx", "Friedrich Engels"]
   year: 1848
+  asin: "3860772074"
   kind: book
   topics: ["economia", "historia"]
   level: 1
@@ -3136,6 +3253,7 @@
   titleEs: "El capital"
   authors: ["Karl Marx"]
   year: 1867
+  asin: "3868202439"
   kind: book
   topics: ["economia"]
   level: 4
@@ -3153,6 +3271,7 @@
   titleEs: "El imperialismo, fase superior del capitalismo"
   authors: ["Vladimir I. Lenin"]
   year: 1917
+  asin: "197578622X"
   kind: book
   topics: ["economia", "historia"]
   level: 2
@@ -3169,6 +3288,7 @@
   title: "The General Theory of Employment, Interest and Money"
   authors: ["John Maynard Keynes"]
   year: 1936
+  asin: "1107673739"
   kind: book
   topics: ["economia"]
   level: 3
@@ -3186,6 +3306,7 @@
   titleEs: "La mentalidad anticapitalista"
   authors: ["Ludwig von Mises"]
   year: 1956
+  asin: "1162558946"
   kind: book
   topics: ["economia"]
   level: 2
@@ -3203,6 +3324,7 @@
   titleEs: "La virtud del egoísmo"
   authors: ["Ayn Rand"]
   year: 1964
+  asin: "0451163931"
   kind: book
   topics: ["economia", "filosofia"]
   level: 2
@@ -3237,6 +3359,7 @@
   titleEs: "Dos conceptos de libertad"
   authors: ["Isaiah Berlin"]
   year: 1958
+  asin: "0192810340"
   kind: essay
   topics: ["economia", "filosofia"]
   level: 3
@@ -3257,6 +3380,7 @@
   title: "La comunidad organizada"
   authors: ["Juan Domingo Perón"]
   year: 1949
+  asin: "9874589418"
   kind: book
   topics: ["historia", "economia"]
   level: 2
@@ -3276,6 +3400,7 @@
   titleEs: "El gen egoísta"
   authors: ["Richard Dawkins"]
   year: 1976
+  asin: "0198788606"
   kind: book
   topics: ["sistemas"]
   level: 2
@@ -3311,6 +3436,7 @@
   titleEs: "La isla mágica"
   authors: ["W. B. Seabrook"]
   year: 1929
+  asin: "1025821041"
   kind: book
   topics: ["historia"]
   level: 1
@@ -3328,6 +3454,7 @@
   titleEs: "Tragedia y esperanza"
   authors: ["Carroll Quigley"]
   year: 1966
+  asin: "094500110X"
   kind: book
   topics: ["historia"]
   level: 2
@@ -3345,6 +3472,7 @@
   titleEs: "Diálogo en el infierno entre Maquiavelo y Montesquieu"
   authors: ["Maurice Joly"]
   year: 1864
+  asin: "1502774526"
   kind: book
   topics: ["historia", "filosofia"]
   level: 3
@@ -3362,6 +3490,7 @@
   titleEs: "Mentes sospechosas"
   authors: ["Rob Brotherton"]
   year: 2014
+  asin: "1472915631"
   kind: book
   topics: ["historia", "desarrollo-personal"]
   level: 1
@@ -3384,6 +3513,7 @@
   titleEs: "El estilo paranoico en la política estadounidense"
   authors: ["Richard Hofstadter"]
   year: 1964
+  asin: "0226348172"
   kind: essay
   topics: ["historia"]
   level: 2
@@ -3417,6 +3547,7 @@
   titleEs: "El héroe de las mil caras"
   authors: ["Joseph Campbell"]
   year: 1949
+  asin: "1577315936"
   kind: book
   topics: ["historia", "ficcion"]
   level: 2
@@ -3434,6 +3565,7 @@
   titleEs: "La democracia en América"
   authors: ["Alexis de Tocqueville"]
   year: 1835
+  asin: "2221131274"
   kind: book
   topics: ["historia", "economia"]
   level: 3
@@ -3451,6 +3583,7 @@
   titleEs: "El Federalista"
   authors: ["Alexander Hamilton", "James Madison", "John Jay"]
   year: 1788
+  asin: "0140444955"
   kind: book
   topics: ["historia", "economia"]
   level: 2
@@ -3468,6 +3601,7 @@
   title: "Revolución y guerra: formación de una élite dirigente en la Argentina criolla"
   authors: ["Tulio Halperín Donghi"]
   year: 1972
+  asin: "B07575P36Y"
   kind: book
   topics: ["historia"]
   level: 3
@@ -3487,6 +3621,7 @@
   titleEs: "Meditaciones metafísicas"
   authors: ["René Descartes"]
   year: 1641
+  asin: "0268013810"
   kind: book
   topics: ["filosofia"]
   level: 2
@@ -3509,6 +3644,7 @@
   titleEs: "Carta sobre la tolerancia"
   authors: ["John Locke"]
   year: 1689
+  asin: "0872201007"
   kind: essay
   topics: ["filosofia", "economia"]
   level: 2
@@ -3526,6 +3662,7 @@
   titleEs: "El anticristo"
   authors: ["Friedrich Nietzsche"]
   year: 1895
+  asin: "3458326472"
   kind: book
   topics: ["filosofia"]
   level: 3
@@ -3547,6 +3684,7 @@
   titleEs: "Las leyes"
   authors: ["Plato"]
   year: -347
+  asin: "0140449841"
   kind: book
   topics: ["filosofia", "economia"]
   level: 4
@@ -3564,6 +3702,7 @@
   titleEs: "Gorgias"
   authors: ["Plato"]
   year: -380
+  asin: "0140449043"
   kind: book
   topics: ["filosofia"]
   level: 2
@@ -3582,6 +3721,7 @@
   titleEs: "La República"
   authors: ["Plato"]
   year: -375
+  asin: "0140455116"
   kind: book
   topics: ["filosofia"]
   level: 3
@@ -3604,6 +3744,7 @@
   titleEs: "Ética a Nicómaco"
   authors: ["Aristotle"]
   year: -340
+  asin: "0140449493"
   kind: book
   topics: ["filosofia"]
   level: 3
@@ -3621,6 +3762,7 @@
   titleEs: "Confesiones"
   authors: ["Augustine of Hippo"]
   year: 400
+  asin: "014044114X"
   kind: book
   topics: ["filosofia"]
   level: 2
@@ -3638,6 +3780,7 @@
   titleEs: "Crítica de la razón pura"
   authors: ["Immanuel Kant"]
   year: 1781
+  asin: "3787313192"
   kind: book
   topics: ["filosofia"]
   level: 4
@@ -3659,6 +3802,7 @@
   titleEs: "Homo sacer"
   authors: ["Giorgio Agamben"]
   year: 1995
+  asin: "8806170260"
   kind: book
   topics: ["filosofia", "historia"]
   level: 4
@@ -3725,6 +3869,7 @@
   title: "Evil: Inside Human Violence and Cruelty"
   authors: ["Roy F. Baumeister"]
   year: 1997
+  asin: "0805071652"
   kind: book
   topics: ["desarrollo-personal"]
   level: 2
@@ -3742,6 +3887,7 @@
   titleEs: "Cómo leer un libro"
   authors: ["Mortimer J. Adler", "Charles Van Doren"]
   year: 1940
+  asin: "0671212095"
   kind: book
   topics: ["desarrollo-personal"]
   level: 1
@@ -3758,6 +3904,7 @@
   title: "Powerful Teaching: Unleash the Science of Learning"
   authors: ["Pooja K. Agarwal", "Patrice M. Bain"]
   year: 2019
+  asin: "111952184X"
   kind: book
   topics: ["desarrollo-personal"]
   level: 2
@@ -3775,6 +3922,7 @@
   titleEs: "El mito del multitasking"
   authors: ["Dave Crenshaw"]
   year: 2008
+  asin: "1642505056"
   kind: book
   topics: ["desarrollo-personal"]
   level: 1
@@ -3792,6 +3940,7 @@
   titleEs: "El cisne negro"
   authors: ["Nassim Nicholas Taleb"]
   year: 2007
+  asin: "081297381X"
   kind: book
   topics: ["desarrollo-personal", "matematicas"]
   level: 3
@@ -3811,6 +3960,7 @@
   titleEs: "Sí, de acuerdo"
   authors: ["Roger Fisher", "William Ury"]
   year: 1981
+  asin: "1847940935"
   kind: book
   topics: ["oficio"]
   level: 1
@@ -3827,6 +3977,7 @@
   title: "Never Eat Alone"
   authors: ["Keith Ferrazzi"]
   year: 2005
+  asin: "0553418769"
   kind: book
   topics: ["oficio"]
   level: 1
@@ -3844,6 +3995,7 @@
   titleEs: "La corrosión del carácter"
   authors: ["Richard Sennett"]
   year: 1998
+  asin: "0393319873"
   kind: book
   topics: ["oficio", "desarrollo-personal"]
   level: 2
@@ -3863,6 +4015,7 @@
   titleEs: "Investigación de las leyes del pensamiento"
   authors: ["George Boole"]
   year: 1854
+  asin: "1781398577"
   kind: book
   topics: ["matematicas"]
   level: 2
@@ -4035,6 +4188,7 @@
   title: "Computer Power and Human Reason: From Judgment to Calculation"
   authors: ["Joseph Weizenbaum"]
   year: 1976
+  asin: "0140225358"
   kind: book
   topics: ["ia"]
   level: 2

@@ -93,6 +93,7 @@ export default function Home() {
         confidence: b.confidence === "low" ? "low" : "ok",
         missing: b.missing,
         coverId: b.coverId,
+        asin: b.asin,
       },
       related: relatedBooks(b.id).map((r) => ({ id: r.book.id, reason: r.reason })),
     };
