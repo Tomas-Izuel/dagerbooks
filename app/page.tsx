@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { Suspense } from "react";
 import Link from "next/link";
 import { Explorer, type BoardLine, type PanelEntry } from "@/components/map/Explorer";
@@ -12,6 +13,9 @@ import { buildSearchDocs } from "@/lib/search";
 import { jsonLdString, websiteJsonLd } from "@/lib/seo";
 import { topicPath } from "@/lib/seo/site";
 import styles from "./page.module.css";
+
+// Every `?vista=` / `?tema=` / `?libro=` variant is the same page for the index: one canonical.
+export const metadata: Metadata = { alternates: { canonical: "/" } };
 
 export default function Home() {
   const catalog = loadCatalog();

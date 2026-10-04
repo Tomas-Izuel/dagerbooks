@@ -4,7 +4,6 @@ import {
   memo,
   useCallback,
   useEffect,
-  useImperativeHandle,
   useMemo,
   useRef,
   useState,
@@ -12,8 +11,7 @@ import {
   type FocusEvent,
   type Ref,
 } from "react";
-import { LineDisc } from "@/components/ui/LineDisc";
-import { usePanZoom } from "@/hooks/usePanZoom";
+import { useMapView } from "@/hooks/useMapView";
 import { useGraphKeyboard } from "@/hooks/useGraphKeyboard";
 import { lineColor } from "@/lib/design/lines";
 import type { Selection } from "@/lib/state/explorer";
@@ -21,19 +19,36 @@ import type { LayoutEdge } from "@/lib/catalog/layout.types";
 import type { NavNode } from "@/lib/graph-interaction";
 import { DENSITY_SCALE, DEFAULT_DENSITY, type Density, type DensityScale } from "@/lib/density";
 import { fitScale } from "@/lib/graph-interaction/viewport";
-import { RecMark } from "@/components/ui/RecMark";
 import type { Recommendation } from "@/lib/catalog/schema";
-import { REC_DOT, REC_ORDER } from "@/lib/design/recommendation";
-import { ZONE_NAMES, type MapFocus, type MapGeometry, type MapLine, type MapNode } from "./types";
+import { deriveRoute } from "@/lib/map/route";
+import type { MapFocus, MapGeometry, MapHandle, MapLine, MapNode } from "./types";
+import {
+  HIT_PX,
+  HIT_R,
+  LABEL_CH,
+  LABEL_LINE,
+  LABEL_MIN_REL,
+  LABEL_PX,
+  WRAP_CHARS,
+  aabb,
+  boxesOverlap,
+  clamp,
+  deg,
+  edgeKey,
+  labelGap,
+  truncate,
+  wrapName,
+  wrapTitle,
+  type Box,
+  type Tone,
+} from "./shared/geometry";
+import { FocusBar, HoverTag, MapLegend } from "./shared/MapOverlays";
+import { InterchangeTags, TAG_MIN_SCALE, XTAG_H, buildXTags, quadraticMidpoint, type XTag } from "./shared/InterchangeTags";
+import { Station, type CrossMark } from "./shared/Station";
 import styles from "./NetworkMap.module.css";
 
-export interface NetworkMapHandle {
-  zoomIn(): void;
-  zoomOut(): void;
-  reset(): void;
-  /** Center a station (default: keep zoom, at least `minK`), compensating overlays. */
-  centerOn(id: string, minK?: number): void;
-}
+/** Same handle for every map view (see `MapHandle`). */
+export type NetworkMapHandle = MapHandle;
 
 export interface NetworkMapProps {
   /** The whole network (every line), for the current density. */
@@ -57,23 +72,13 @@ export interface NetworkMapProps {
   /** Animate the re-fit when `geometry` changes (density switch). Off = instant (first load). */
   animateRefit?: boolean;
   density?: Density;
-  ref?: Ref<NetworkMapHandle>;
+  /** Px of the map covered by floating chrome (the view / density sign): the fit leaves it clear. */
+  safe?: { top?: number; right?: number };
+  ref?: Ref<MapHandle>;
 }
 
-type Tone = "full" | "mid" | "dim";
-
-const HIT_R = 24;
 const PAD_X = 290; // room beyond the terminus discs for their line names
 const PAD_Y = 180;
-const LABEL_PX = 11;
-const LABEL_CH = 7.6; // estimated advance of one uppercase label glyph (px at LABEL_PX)
-const LABEL_LINE = 13;
-const LABEL_GAP = 15; // station centre to first glyph
-/** Other titles by level, as a multiple of the fit zoom (kFit), before the density multiplier. */
-const LABEL_MIN_REL: Record<number, number> = { 1: 1.7, 2: 2.0, 3: 2.3, 4: 1.5 };
-/** Hit targets are at least this radius on screen (24px diameter). */
-const HIT_PX = 12;
-const WRAP_CHARS = 22;
 /** Line names under the terminus discs: 11px Overpass caps, tracked; in screen px before sc.terminus. */
 const NAME_PX = 11;
 const NAME_CH = 7.9;
@@ -81,73 +86,7 @@ const NAME_LINE = 13;
 const NAME_TOP = 22; // disc centre to the first line's centre
 const TAU = Math.PI * 2;
 
-const edgeKey = (e: { from: string; to: string }) => `${e.from}>${e.to}`;
-const deg = (rad: number) => (rad * 180) / Math.PI;
 const polar = (r: number, a: number) => ({ x: r * Math.cos(a), y: r * Math.sin(a) });
-const clamp = (v: number, lo: number, hi: number) => Math.min(hi, Math.max(lo, v));
-
-function truncate(text: string, max: number): string {
-  return text.length > max ? `${text.slice(0, max - 1).trimEnd()}\u2026` : text;
-}
-
-/** Greedy word wrap to at most `maxLines` lines; the last line is truncated only if still too long. */
-function wrapTitle(text: string, maxChars: number, maxLines: number): string[] {
-  const words = text.split(/\s+/).filter(Boolean);
-  const lines: string[] = [];
-  let cur = "";
-  for (const w of words) {
-    const next = cur ? `${cur} ${w}` : w;
-    if (next.length <= maxChars || !cur) cur = next;
-    else {
-      lines.push(cur);
-      cur = w;
-    }
-  }
-  if (cur) lines.push(cur);
-  if (lines.length <= maxLines) return lines;
-  const kept = lines.slice(0, maxLines - 1);
-  kept.push(truncate(lines.slice(maxLines - 1).join(" "), maxChars));
-  return kept;
-}
-
-/** Splits a line name in at most two lines without truncating (the narrowest wrap that fits). */
-function wrapName(name: string): string[] {
-  const text = name.toUpperCase();
-  for (let max = 10; max < text.length; max++) {
-    const lines = wrapTitle(text, max, 3);
-    if (lines.length <= 2 && lines.every((l) => l.length <= max || !l.includes(" "))) return lines;
-  }
-  return [text];
-}
-
-/* Oriented boxes in screen space (u = unit direction of the long axis). */
-interface Box {
-  cx: number;
-  cy: number;
-  ux: number;
-  uy: number;
-  hw: number;
-  hh: number;
-}
-
-function boxesOverlap(a: Box, b: Box, pad = 2): boolean {
-  const axes = [
-    [a.ux, a.uy],
-    [-a.uy, a.ux],
-    [b.ux, b.uy],
-    [-b.uy, b.ux],
-  ];
-  const dx = b.cx - a.cx;
-  const dy = b.cy - a.cy;
-  for (const [ax, ay] of axes) {
-    const ra = a.hw * Math.abs(a.ux * ax + a.uy * ay) + a.hh * Math.abs(-a.uy * ax + a.ux * ay);
-    const rb = b.hw * Math.abs(b.ux * ax + b.uy * ay) + b.hh * Math.abs(-b.uy * ax + b.ux * ay);
-    if (Math.abs(dx * ax + dy * ay) > ra + rb + pad) return false;
-  }
-  return true;
-}
-
-const aabb = (cx: number, cy: number, hw: number, hh: number): Box => ({ cx, cy, ux: 1, uy: 0, hw, hh });
 
 /* ------------------------------------------------------------------ */
 /* Static layers                                                       */
@@ -222,125 +161,6 @@ function ZoneNumeral({ radius, angle, level }: { radius: number; angle: number; 
     </text>
   );
 }
-
-/* ------------------------------------------------------------------ */
-/* Stations                                                            */
-/* ------------------------------------------------------------------ */
-
-/** Another line a station combines with (focus mode: the line itself is not drawn). */
-interface CrossMark {
-  letter: string;
-  color: string;
-}
-
-interface StationProps {
-  node: MapNode;
-  color: string;
-  tone: Tone;
-  /** Not part of the line in focus: fades out in place. */
-  out: boolean;
-  cross: readonly CrossMark[] | undefined;
-  read: boolean;
-  selected: boolean;
-  interchange: boolean;
-  m: number;
-  hitR: number;
-  tabIndex: 0 | -1;
-  ariaLabel: string;
-  onPick(id: string): void;
-  onHover(id: string | null): void;
-  onFocusId(id: string, e: FocusEvent<Element>): void;
-}
-
-const Station = memo(function Station({
-  node,
-  color,
-  tone,
-  out,
-  cross,
-  read,
-  selected,
-  interchange,
-  m,
-  hitR,
-  tabIndex,
-  ariaLabel,
-  onPick,
-  onHover,
-  onFocusId,
-}: StationProps) {
-  const isRoot = node.level === 0;
-  return (
-    <g
-      className={styles.station}
-      data-id={node.id}
-      data-tone={tone}
-      data-out={out ? "true" : undefined}
-      data-read={read ? "true" : undefined}
-      data-root={isRoot ? "true" : undefined}
-      role="button"
-      tabIndex={out ? -1 : tabIndex}
-      aria-pressed={selected}
-      aria-label={ariaLabel}
-      aria-hidden={out ? true : undefined}
-      // CSS (not the attribute) so the move between the full map and a line can transition.
-      style={{ "--ink": color, transform: `translate(${node.x}px, ${node.y}px)` } as CSSProperties}
-      onClick={() => onPick(node.id)}
-      onPointerEnter={() => onHover(node.id)}
-      onPointerLeave={() => onHover(null)}
-      onFocus={(e) => {
-        onFocusId(node.id, e);
-        onHover(node.id);
-      }}
-      onBlur={() => onHover(null)}
-    >
-      <circle className={styles.hit} r={isRoot ? Math.max(44, hitR) : hitR} />
-      <circle className={styles.focusRing} r={(isRoot ? 36 : 17) * m} />
-      {isRoot ? (
-        <>
-          <circle className={styles.rootOuter} r={24 * m} />
-          <circle className={styles.rootInner} r={13 * m} />
-        </>
-      ) : (
-        <>
-          {node.entry ? (
-            <rect
-              className={styles.tick}
-              x={-3.5 * m}
-              y={-14 * m}
-              width={7 * m}
-              height={28 * m}
-              transform={`rotate(${deg(node.angle).toFixed(1)})`}
-            />
-          ) : null}
-          {interchange ? <circle className={styles.interchange} r={14 * m} /> : null}
-          {selected ? <circle className={styles.selectedRing} r={17 * m} /> : null}
-          <circle
-            className={styles.dot}
-            data-rec={node.recommendation}
-            r={REC_DOT[node.recommendation].r * m}
-          />
-          {node.incomplete ? <path className={styles.notch} d="M6 -14 L15 -14 L15 -5 Z" transform={`scale(${m})`} /> : null}
-          {cross?.length ? (
-            // Tangential to the ring, on the clockwise side; the group grows when zoomed out so the discs stay legible.
-            <g transform={`rotate(${deg(node.angle).toFixed(1)})`}>
-              <g className={styles.cross} style={{ "--cx": 17 * m } as CSSProperties}>
-                {cross.slice(0, 3).map((c, i) => (
-                  <g key={c.letter} transform={`translate(0 ${(i * 11 * m).toFixed(1)}) rotate(${(-deg(node.angle)).toFixed(1)})`}>
-                    <circle className={styles.crossDisc} r={5.6 * m} style={{ "--ink": c.color } as CSSProperties} />
-                    <text className={styles.crossLetter} fontSize={7.2 * m}>
-                      {c.letter}
-                    </text>
-                  </g>
-                ))}
-              </g>
-            </g>
-          ) : null}
-        </>
-      )}
-    </g>
-  );
-});
 
 /* ------------------------------------------------------------------ */
 /* Labels (zoom-aware, counter-scaled)                                 */
@@ -462,57 +282,6 @@ function placeLabels({
   return { labels: out, tags: outTags };
 }
 
-interface XTag {
-  key: string;
-  x: number;
-  y: number;
-  w: number;
-  reason: string;
-  full: string;
-}
-
-const XTAG_H = 36;
-const TAG_MIN_SCALE = 0.85; // signage plates stay readable even in airy modes
-
-/** Station centre to first glyph, in screen px (clears the dot when zoomed in). */
-const labelGap = (ls: number, m: number, k: number) => Math.max(LABEL_GAP * ls, 7 * m * k + 7);
-const XTAG_REASON_MAX = 40;
-
-/** Midpoint (t = 0.5) of the quadratic `M ax ay Q cx cy bx by` that layout emits for related edges. */
-function relatedMidpoint(path: string): { x: number; y: number } | null {
-  const n = path.match(/-?\d+(?:\.\d+)?/g)?.map(Number);
-  if (!n || n.length < 6) return null;
-  return { x: 0.25 * n[0] + 0.5 * n[2] + 0.25 * n[4], y: 0.25 * n[1] + 0.5 * n[3] + 0.25 * n[5] };
-}
-
-/** Signage tag at the midpoint of an interchange: glyph, COMBINACIÓN, and the reason. Counter-scaled. */
-function InterchangeTags({ tags, k, scale }: { tags: readonly XTag[]; k: number; scale: number }) {
-  return (
-    <g aria-hidden="true">
-      {tags.map((t) => (
-        <g
-          key={t.key}
-          className={styles.xTag}
-          transform={`translate(${t.x.toFixed(1)} ${t.y.toFixed(1)}) scale(${(scale / k).toFixed(4)})`}
-        >
-          <title>{`Combinación: ${t.full}`}</title>
-          <rect className={styles.xTagPlate} x={-t.w / 2} y={-XTAG_H / 2} width={t.w} height={XTAG_H} />
-          <g transform={`translate(${-t.w / 2 + 17} 0)`}>
-            <circle className={styles.xTagGlyph} cx={-4} r={4.4} />
-            <circle className={styles.xTagGlyph} cx={4} r={4.4} />
-          </g>
-          <text className={styles.xTagTitle} x={-t.w / 2 + 32} y={-7}>
-            COMBINACIÓN
-          </text>
-          <text className={styles.xTagReason} x={-t.w / 2 + 32} y={8}>
-            {t.reason}
-          </text>
-        </g>
-      ))}
-    </g>
-  );
-}
-
 function StationLabels({
   labels,
   k,
@@ -575,10 +344,9 @@ export function NetworkMap({
   insets,
   animateRefit = false,
   density = DEFAULT_DENSITY,
+  safe,
   ref,
 }: NetworkMapProps) {
-  const svgRef = useRef<SVGSVGElement>(null);
-  const gRef = useRef<SVGGElement>(null);
   const [hovered, setHovered] = useState<string | null>(null);
 
   // `geometry` is the whole network; `view` is what is in play now (the focused line, or everything).
@@ -596,7 +364,17 @@ export function NetworkMap({
     () => ({ x0: bounds.minX - PAD_X, y0: bounds.minY - PAD_Y, x1: bounds.maxX + PAD_X, y1: bounds.maxY + PAD_Y }),
     [bounds],
   );
-  const pan = usePanZoom(svgRef, gRef, { bounds: panBounds, minZoom: "fit", maxZoom: 3.5 });
+  const { svgRef, gRef, pan } = useMapView({
+    panBounds,
+    nodeById,
+    geometry,
+    selectedId,
+    insets,
+    animateRefit,
+    handleRef: ref,
+    // Only the right side: on a phone the circle already sits under the sign.
+    reserve: { right: safe?.right },
+  });
   const { transform: tf } = pan;
 
   const navNodes = useMemo<NavNode[]>(() => nodes.map((n) => ({ id: n.id, angle: n.angle, ring: n.level })), [nodes]);
@@ -622,63 +400,21 @@ export function NetworkMap({
     insets,
   });
 
-  // Latest handlers for stable callbacks (written in an effect, read at event time).
-  const live = useRef({ getNodeProps: kb.getNodeProps, pan, insets });
+  const kbRef = useRef(kb);
   useEffect(() => {
-    live.current = { getNodeProps: kb.getNodeProps, pan, insets };
+    kbRef.current = kb;
   });
-  const onFocusId = useCallback((id: string, e: FocusEvent<Element>) => live.current.getNodeProps(id).onFocus(e), []);
-
-  useImperativeHandle(
-    ref,
-    () => ({
-      zoomIn: () => live.current.pan.zoomIn(),
-      zoomOut: () => live.current.pan.zoomOut(),
-      reset: () => live.current.pan.reset(),
-      centerOn: (id, minK) => {
-        const n = nodeById.get(id);
-        if (!n) return;
-        const { pan: p, insets: ins } = live.current;
-        const k = Math.max(p.getTransform().k, minK ?? 0);
-        p.centerOn(n.x + (ins?.right ?? 0) / 2 / k, n.y + (ins?.bottom ?? 0) / 2 / k, k);
-      },
-    }),
-    [nodeById],
-  );
-
-  // Density switch: new geometry. Positions swap at once (never animated); only the camera
-  // moves. Without a selection, re-fit; with one, keep it centred at the same relative framing.
-  // The snapshot effect below runs after this one, so `snap` still holds the previous geometry.
-  const snap = useRef<{ k: number; bounds: typeof panBounds } | null>(null);
-  const prevGeometry = useRef(geometry);
-  useEffect(() => {
-    const prev = snap.current;
-    if (prevGeometry.current === geometry) return;
-    prevGeometry.current = geometry;
-    const { pan: p, insets: ins } = live.current;
-    const instant = !animateRefit;
-    const n = selectedId ? nodeById.get(selectedId) : undefined;
-    if (!n || !prev) {
-      p.fitToBounds(0, instant);
-      return;
-    }
-    const size = p.getViewportSize();
-    const ratio = size.width > 0 ? fitScale(panBounds, size) / fitScale(prev.bounds, size) : 1;
-    const k = prev.k * ratio;
-    p.centerOn(n.x + (ins?.right ?? 0) / 2 / k, n.y + (ins?.bottom ?? 0) / 2 / k, k, instant);
-  }, [geometry, selectedId, nodeById, panBounds, animateRefit]);
-  useEffect(() => {
-    snap.current = { k: pan.getTransform().k, bounds: panBounds };
-  });
+  const onFocusId = useCallback((id: string, e: FocusEvent<Element>) => kbRef.current.getNodeProps(id).onFocus(e), []);
 
   // Entering, leaving or switching the focus: back to the fitted view (the bounds are the same
   // in every layout, only what fills them changes).
+  const { fitToBounds } = pan;
   const prevFocusKey = useRef(focusKey);
   useEffect(() => {
     if (prevFocusKey.current === focusKey) return;
     prevFocusKey.current = focusKey;
-    live.current.pan.fitToBounds(0, false);
-  }, [focusKey]);
+    fitToBounds(0, false);
+  }, [focusKey, fitToBounds]);
 
   // `morph` is on only while the focus changes: transitions apply then and never on a density switch.
   // Derived during render so the first frame of the new layout already carries it.
@@ -701,21 +437,6 @@ export function NetworkMap({
   if (focus && focus !== lastFocus) setLastFocus(focus);
   const focusLayer = focus ?? lastFocus;
 
-  // A selection already in the URL on load: bring it into view once.
-  const bootCentered = useRef(false);
-  useEffect(() => {
-    if (bootCentered.current || !selectedId) return;
-    bootCentered.current = true;
-    const n = nodeById.get(selectedId);
-    if (!n) return;
-    const raf = requestAnimationFrame(() => {
-      const { pan: p, insets: ins } = live.current;
-      const k = Math.max(p.getTransform().k, 0.9);
-      p.centerOn(n.x + (ins?.right ?? 0) / 2 / k, n.y + (ins?.bottom ?? 0) / 2 / k, k);
-    });
-    return () => cancelAnimationFrame(raf);
-  }, [selectedId, nodeById]);
-
   /* ---- tones ---- */
   const toneOfNode = useCallback(
     (id: string): Tone => {
@@ -730,35 +451,7 @@ export function NetworkMap({
   );
 
   /* ---- route (train run) + unlock edges ---- */
-  const route = useMemo(() => {
-    if (!selection) return null;
-    const P = selection.prerequisites;
-    const U = selection.unlocks;
-    const trackEdges = edges.filter((e) => e.kind !== "related");
-    const run: LayoutEdge[] = [];
-    const unlock = new Set<string>();
-    for (const e of trackEdges) {
-      if ((e.to === selection.id || P.has(e.to)) && P.has(e.from)) run.push(e);
-      else if ((e.from === selection.id || U.has(e.from)) && U.has(e.to)) unlock.add(edgeKey(e));
-    }
-    const rootId = rootNode?.id;
-    const depth = new Map<string, number>(rootId ? [[rootId, 0]] : []);
-    for (let pass = 0; pass < 8; pass++) {
-      let changed = false;
-      for (const e of run) {
-        const d = depth.get(e.from);
-        if (d === undefined) continue;
-        if ((depth.get(e.to) ?? Infinity) > d + 1) {
-          depth.set(e.to, d + 1);
-          changed = true;
-        }
-      }
-      if (!changed) break;
-    }
-    const steps = run.map((e) => depth.get(e.from) ?? 0);
-    const n = Math.max(1, ...steps.map((s) => s + 1));
-    return { run: run.map((e, i) => ({ edge: e, index: steps[i] })), runKeys: new Set(run.map(edgeKey)), unlock, n };
-  }, [selection, edges, rootNode]);
+  const route = useMemo(() => (selection ? deriveRoute(edges, selection, rootNode?.id) : null), [selection, edges, rootNode]);
 
   const edgeTone = useCallback(
     (e: LayoutEdge): Tone => {
@@ -909,19 +602,10 @@ export function NetworkMap({
   }, [view.sectors, outer, k, m, ls, sc.terminus, nameShown, lineNames]);
   // Tags: the hovered station's interchanges on hover, otherwise all of the selected station's.
   const tagFocus = hovered ?? selectedId;
-  const xTagCands = useMemo<XTag[]>(() => {
-    if (!tagFocus) return [];
-    const out: XTag[] = [];
-    for (const e of edges) {
-      if (e.kind !== "related" || (e.from !== tagFocus && e.to !== tagFocus)) continue;
-      const mid = relatedMidpoint(e.path);
-      if (!mid) continue;
-      const full = e.reason?.trim() ?? "";
-      const reason = truncate(full, XTAG_REASON_MAX);
-      out.push({ key: edgeKey(e), x: mid.x, y: mid.y, w: Math.max(122, 44 + reason.length * 5.8), reason, full });
-    }
-    return out;
-  }, [edges, tagFocus]);
+  const xTagCands = useMemo<XTag[]>(
+    () => buildXTags(edges, tagFocus, (e) => quadraticMidpoint(e.path)),
+    [edges, tagFocus],
+  );
   const { labels, tags } = useMemo(
     () =>
       placeLabels({
@@ -1132,17 +816,7 @@ export function NetworkMap({
       </p>
 
       {focus && focusLine ? (
-        <div className={styles.focusBar} data-parked={insets?.right ? "true" : undefined} style={{ "--ink": focusLine.color } as CSSProperties}>
-          <LineDisc letter={focusLine.letter} color={focusLine.color} size="sm" />
-          <span className={styles.focusText}>
-            <span className={styles.focusName}>{focusLine.name}</span>
-            <span className={styles.focusCount}>{focus.count} estaciones</span>
-          </span>
-          <button type="button" className={styles.focusExit} onClick={() => onTopic(null)}>
-            <span className={styles.focusExitLong}>Ver </span>todo el mapa
-            <span aria-hidden="true"> ×</span>
-          </button>
-        </div>
+        <FocusBar line={focusLine} count={focus.count} parked={!!insets?.right} onExit={() => onTopic(null)} />
       ) : null}
 
       <p id="map-help" className={styles.srOnly}>
@@ -1150,73 +824,18 @@ export function NetworkMap({
         a lo largo de la zona. Enter abre la estación, Escape la cierra, más y menos acercan y alejan.
       </p>
 
-      <div
-        className={styles.legend}
-        data-parked={insets?.right ? "true" : undefined}
-        tabIndex={0}
-        aria-label="Leyenda del mapa"
-        style={{ insetInlineEnd: `${16 + (insets?.right ?? 0)}px` }}
-      >
-        <p className={styles.legendHead}>
-          <svg className={styles.legendRing} viewBox="0 0 20 20" aria-hidden="true">
-            <circle cx="10" cy="10" r="8" />
-          </svg>
-          Zonas y combinaciones
-        </p>
-        <div className={styles.legendBody}>
-          <ol className={styles.legendList}>
-            {Object.entries(ZONE_NAMES).map(([level, name]) => (
-              <li key={level}>
-                <span className={styles.legendNum}>{level}</span>
-                {name.charAt(0) + name.slice(1).toLowerCase()}
-              </li>
-            ))}
-          </ol>
-          <ul className={styles.legendRecs} aria-label="Recomendación de Dager">
-            {REC_ORDER.map((r) => (
-              <li key={r}>
-                <RecMark level={r} size={18} />
-                <span className={styles.legendRecText}>
-                  <span className={styles.legendKeyName}>{recLabels[r].label}</span>
-                  <span>{recLabels[r].description}</span>
-                </span>
-              </li>
-            ))}
-          </ul>
-          <p className={styles.legendKey}>
-            <svg className={styles.legendArc} viewBox="0 0 44 20" aria-hidden="true">
-              <path className={styles.arcOuter} d="M4 15Q22 -3 40 15" />
-              <path className={styles.arcInner} d="M4 15Q22 -3 40 15" />
-            </svg>
-            <span className={styles.legendKeyText}>
-              <span className={styles.legendKeyName}>Combinación</span>
-              <span>Libros que conectan dos líneas</span>
-            </span>
-          </p>
-        </div>
-      </div>
+      <MapLegend recLabels={recLabels} insetRight={insets?.right} />
 
       {hoveredNode ? (
-        <div
-          className={styles.tag}
-          aria-hidden="true"
-          style={{
-            left: tf.x + hoveredNode.x * k,
-            top: tf.y + hoveredNode.y * k,
-          }}
-        >
-          {hoveredLine ? <LineDisc letter={hoveredLine.letter} color={hoveredLine.color} size="sm" /> : null}
-          <span className={styles.tagText}>
-            <span className={styles.tagTitle}>{hoveredNode.title}</span>
-            {hoveredNode.titleEs ? <span className={styles.tagSub}>{hoveredNode.titleEs}</span> : null}
-          </span>
-          <span className={styles.tagZone}>{hoveredNode.level === 0 ? "KM 0" : `Zona ${hoveredNode.level}`}</span>
-          {hoveredCross?.length ? (
-            <span className={styles.tagCross}>
-              Combina con {hoveredCross.length > 1 ? "las líneas" : "la línea"} {hoveredCross.map((c) => c.letter).join(" y ")}
-            </span>
-          ) : null}
-        </div>
+        <HoverTag
+          title={hoveredNode.title}
+          titleEs={hoveredNode.titleEs}
+          level={hoveredNode.level}
+          line={hoveredLine}
+          cross={hoveredCross}
+          left={tf.x + hoveredNode.x * k}
+          top={tf.y + hoveredNode.y * k}
+        />
       ) : null}
     </div>
   );

@@ -4,6 +4,7 @@ import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { useCallback, useMemo, useState } from "react";
 import { ALL_RECS, toggleRec } from "@/lib/design/recommendation";
 import type { Recommendation } from "@/lib/catalog/schema";
+import type { Vista } from "@/lib/view";
 import {
   buildExplorerSearch,
   createExplorerGraph,
@@ -30,6 +31,8 @@ export interface UseExplorerState {
   /** Alterna un nivel de recomendación (ver toggleRec: aísla, alterna, nunca queda en cero). */
   toggleRecommendation: (r: Recommendation) => void;
   resetRecommendation: () => void;
+  /** replace: cambiar de vista no ensucia el historial; conserva libro, tema, rec y q. */
+  setVista: (v: Vista) => void;
   /** replace: seguro para teclear. */
   setQuery: (q: string) => void;
   reset: () => void;
@@ -75,6 +78,7 @@ export function useExplorerState(nodes: readonly ExplorerNode[], topicIds?: read
     [navigate, state],
   );
   const resetRecommendation = useCallback(() => navigate({ ...state, rec: [...ALL_RECS] }, "replace"), [navigate, state]);
+  const setVista = useCallback((vista: Vista) => navigate({ ...state, vista }, "replace"), [navigate, state]);
   const setQuery = useCallback(
     (value: string) => {
       setTyped({ from: urlState.q, value });
@@ -84,11 +88,11 @@ export function useExplorerState(nodes: readonly ExplorerNode[], topicIds?: read
   );
   const reset = useCallback(() => {
     setTyped({ from: urlState.q, value: "" });
-    navigate({ libro: null, tema: null, rec: [...ALL_RECS], q: "" }, "replace");
-  }, [navigate, urlState.q]);
+    navigate({ libro: null, tema: null, rec: [...ALL_RECS], q: "", vista: state.vista }, "replace");
+  }, [navigate, urlState.q, state.vista]);
 
   const selection = useMemo(() => deriveSelection(graph, state.libro), [graph, state.libro]);
   const dimmed = useMemo(() => dimmedByFilters(nodes, state.tema, state.rec), [nodes, state.tema, state.rec]);
 
-  return { state, selection, dimmed, selectBook, setTopic, toggleRecommendation, resetRecommendation, setQuery, reset };
+  return { state, selection, dimmed, selectBook, setTopic, toggleRecommendation, resetRecommendation, setVista, setQuery, reset };
 }

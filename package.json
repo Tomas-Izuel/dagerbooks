@@ -10,6 +10,7 @@
     "lint": "eslint .",
     "typecheck": "tsc --noEmit",
     "validate": "tsx scripts/validate.ts",
+    "check:subway": "tsx scripts/check-subway-layout.ts",
     "schema": "tsx scripts/generate-schema.ts"
   },
   "dependencies": {

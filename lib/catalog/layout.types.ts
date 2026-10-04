@@ -72,6 +72,10 @@ export interface LayoutEdge {
   path: string;
   /** Why the two books connect (`related` edges only). */
   reason?: string;
+  /** Anchor for the "COMBINACIÓN" tag (midpoint of the route). Filled by the subway layout only. */
+  mid?: { x: number; y: number };
+  /** Route vertices (only 0 / 45 / 90 degree segments). Filled by the subway layout only. */
+  pts?: readonly [number, number][];
 }
 
 export interface LayoutBounds {

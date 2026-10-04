@@ -30,13 +30,14 @@ It is not a generic reading list. Every book is traced to where Dager actually r
 
 ## Capabilities and Constraints
 
-- Radial skill-tree graph: center = the root book (*Tom Sawyer Abroad*, the first book Dager read); rings = level 1–4 (introductorio → especialista); 10 topic sectors in a fixed circular order defined in `topics.yaml`.
+- Radial skill-tree graph: center = the root book (*Tom Sawyer Abroad*, the first book Dager read); rings = level 1–4 (introductorio → especialista); 12 topic sectors (lines A–L) in a fixed circular order defined in `topics.yaml`.
+- Second view, **Subte**, chosen with a Grafo | Subte selector (state in `?vista=`, Grafo is the default): one horizontal band per line stacked from Km 0, levels as fare-zone columns, branches at 45°. Same stations, selection, filters and read progress as the radial.
 - Click a book → highlight its prerequisite chain and what it unlocks; side panel with summary, Dager's context and sources.
 - Topic filter (dims other sectors), accent-insensitive search, shareable URL state.
 - Per-book and per-topic static pages with metadata, JSON-LD and OG images.
 - Books with missing authors, summary, context or sources are flagged "por completar".
 - UI language: Spanish. Book titles in their original language, Spanish edition title as secondary when it exists.
-- Scale today: 82 books, 59 prerequisite edges, 14 cross-topic links; must stay usable as the catalog grows into the low hundreds.
+- Scale today: 199 books across 12 lines; must stay usable as the catalog grows toward a few hundred.
 
 ## Brand Commitments
 
@@ -46,7 +47,7 @@ It is not a generic reading list. Every book is traced to where Dager actually r
 
 ## Evidence on Hand
 
-- `content/books.yaml`: 82 books with verified metadata (Open Library/WebSearch), Spanish summaries, Dager's context and sources.
+- `content/books.yaml`: 199 books with verified metadata (Open Library/WebSearch), Spanish summaries, Dager's context and sources.
 - Sources are real: YouTube links with timestamps and verbatim quotes from auto-transcripts, his Reddit comments (u/DagerDotCSV) and his GitHub README. Three books come only from the user's own notes and have no public source.
 - Open Library cover IDs for 65 books.
 - `research/catalog-review.md`: excluded books (mentioned or criticised, not recommended).
@@ -56,7 +57,7 @@ It is not a generic reading list. Every book is traced to where Dager actually r
 
 1. Every recommendation is traceable: show where and how Dager said it, or mark it "por completar".
 2. The route matters more than the list: depth and prerequisites are first-class, not decoration.
-3. Honor his cross-disciplinary range; programming is one sector among ten, not the whole map.
+3. Honor his cross-disciplinary range; programming is one line among twelve, not the whole map.
 4. Personal and private: progress lives in the reader's browser, no sign-up.
 5. Maintainable by one person through a single YAML file.
 

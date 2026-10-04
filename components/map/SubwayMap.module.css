@@ -1,0 +1,155 @@
+/* Subway view: bands per line, zones as columns. The station, track, label and legend styles are
+   shared with the radial map (NetworkMap.module.css); only what is specific to the bands lives here. */
+
+/* ---- ground: bands and zone columns ---- */
+
+.band {
+  fill: var(--fg);
+  opacity: 0;
+}
+
+.band[data-alt="true"] {
+  opacity: 0.028;
+}
+
+/* The line in focus is the only band: it burns in its own ink, as the radial sector does. */
+.band[data-active="true"] {
+  fill: var(--ink);
+  opacity: 0.1;
+  animation: fadeIn var(--dur-base) var(--ease-out-expo) both;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+}
+
+.zoneLine {
+  stroke: var(--fg-faint);
+  stroke-width: calc(2 * var(--m, 1));
+  stroke-linecap: round;
+  stroke-dasharray: var(--map-zone-dash);
+  opacity: 0.8;
+}
+
+/* ---- the rail: books of a line that start at Km 0 and have no order among themselves ---- */
+
+.rail {
+  fill: none;
+  stroke: var(--ink);
+  stroke-width: calc(2 * var(--m, 1));
+  stroke-linecap: butt;
+  opacity: 0.3;
+  transition: opacity var(--dur-base) var(--ease-out-expo);
+}
+
+.rail[data-tone="dim"] {
+  opacity: 0.12;
+}
+
+.rail[data-tone="mid"] {
+  opacity: 0.22;
+}
+
+/* A rail on the route lights up at once: it is a convention, not a leg that was travelled. */
+path.runStatic {
+  animation: none;
+  stroke-width: calc(var(--map-line-width) * var(--m, 1));
+  stroke-linecap: round;
+}
+
+/* Combination connector: a halo in the ground colour under the double rule, so it passes over what it crosses. */
+.bridgeHalo {
+  fill: none;
+  stroke: var(--halo);
+  stroke-width: calc(12 * var(--m, 1));
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* ---- line heads ---- */
+
+.headName {
+  fill: var(--fg-muted);
+  font-family: var(--font-sign);
+  font-weight: 600;
+  letter-spacing: var(--tracking-label);
+  text-anchor: end;
+  dominant-baseline: central;
+  stroke: var(--halo);
+  stroke-width: 4px;
+  stroke-linejoin: round;
+  paint-order: stroke fill;
+  pointer-events: none;
+}
+
+.headName[data-active="true"] {
+  fill: var(--fg);
+  font-weight: 800;
+}
+
+/* ---- zone header (HTML, fixed over the top of the stage) ---- */
+
+.zoneStrip {
+  position: absolute;
+  z-index: 1;
+  inset-block-start: 0;
+  inset-inline: 0;
+  block-size: 1.9rem;
+  overflow: hidden;
+  pointer-events: none;
+  background: linear-gradient(to bottom, color-mix(in srgb, var(--bg) 92%, transparent), transparent);
+}
+
+.zoneCell {
+  position: absolute;
+  inset-block: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  padding-inline: var(--space-2);
+  border-inline-start: 2px dotted var(--fg-faint);
+  color: var(--fg-muted);
+  font-family: var(--font-sign);
+  font-size: var(--text-xs);
+  letter-spacing: var(--tracking-label);
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.zoneNum {
+  color: var(--fg);
+  font-family: var(--font-display);
+  font-size: var(--text-sm);
+  font-weight: 700;
+}
+
+.zoneName {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* ---- legend key for the rail ---- */
+
+.legendRail {
+  inline-size: 2.2rem;
+  block-size: 1.1rem;
+  flex: none;
+  fill: none;
+  stroke: var(--fg-muted);
+  stroke-width: 2;
+  opacity: 0.6;
+}
+
+/* Phones: the sign (and, in focus, the focus bar) own the top of the stage; the zone strip hangs under them. */
+@media (max-width: 899px) {
+  .zoneStrip {
+    inset-block-start: var(--sign-bottom, 0px);
+  }
+
+  .zoneStrip[data-focus="true"] {
+    inset-block-start: calc(var(--sign-bottom, 0px) + 3.5rem);
+  }
+}
