@@ -1,0 +1,98 @@
+
+1. ***Obedience to Authority*** (Obediencia a la autoridad) de *Stanley Milgram*
+2. ***Eichmann en Jerusalén*** de *Hannah Arendt*
+3. ***The Struggle for Liberty*** de *Ralph Raico*
+
+El video presenta una variedad de recomendaciones literarias para programadores, enfocadas tanto en teoría como en fundamentos. Aquí tienes la lista detallada:
+
+**Teoría de Sistemas y Arquitectura:**
+* ***Teoría General de Sistemas*** de *Ludwig von Bertalanffy* (1:28)
+* ***The Science of Information*** de *Schumacher* (1:59)
+* ***Fundamentos de arquitectura de software*** (*Software Architecture: The Hard Parts* o similar enfoque) (2:30)
+* ***Building Microservices*** (2:47)
+* ***But How Do It Know?*** de *J. Clark Scott* (6:59, 7:12)
+
+**Algoritmos, Matemáticas y Lógica:**
+* ***Book of Proof*** (3:54)
+* ***Concrete Mathematics*** de *Knuth* (3:58)
+* ***Matemáticas para programadores*** de *Barden Jr.* (5:04)
+* ***Algebra for Dummies*** (5:42)
+
+**Blockchain y Redes:**
+* ***Blockchain: An Illustrated Keyboard to Understand Blockchain*** (3:06)
+* ***Network Warrior*** (6:10)
+
+**Gestión y Desarrollo:**
+* ***The Mythical Man-Month*** (6:13)
+* ***The Pragmatic Programmer*** (6:50)
+* ***Joel on Software*** (6:51)
+* ***Crafting Interpreters*** (10:21)
+
+
+
+**Libros destacados:**
+* ***Hábitos Atómicos*** de *James Clear* (1:04-4:45): Un libro enfocado en herramientas concretas para formar hábitos positivos, eliminar los negativos y entender que la motivación está sobrevalorada.
+* ***12 Reglas para la Vida*** de *Jordan B. Peterson* (4:46-7:04): Recomendado para abordar preguntas filosóficas y de identidad, con consejos accionables como "ordena tu cuarto".
+* ***College Success*** (7:05-8:47): Un manual gratuito orientado a la supervivencia académica, ideal para aprender técnicas de estudio, toma de notas y gestión del tiempo.
+
+**Menciones adicionales:**
+* ***Cómo ganar amigos e influir sobre las personas*** de *Dale Carnegie* (8:55): Útil para gestionar la ansiedad social y mejorar las relaciones interpersonales.
+* ***Deep Work*** de *Cal Newport* (9:17): Enfocado en cómo evitar distracciones y mantener la atención en un mundo lleno de estímulos.
+* ***Jugados por el azar*** (o *Fooled by Randomness*) de *Nassim Nicholas Taleb* (9:39): Recomendado por su perspectiva económica y enseñanzas sobre la aleatoriedad.
+
+
+* ***Designing Data-Intensive Applications*** de Martin Kleppmann (mencionado como una de sus recomendaciones para arquitectura de software) (0:56, 2:57).
+* ***Tom Sawyer en el extranjero*** de Mark Twain (el primer libro que leyó y que marcó su interés por la lectura) (1:24, 1:41).
+
+
+* ***Chaos Theory*** de *Robert P. Murphy*: Es el texto principal analizado en el video, el cual consiste en dos ensayos breves sobre economía de mercado anarquista, abordando temas de ley y defensa (0:10-0:31).
+* ***El uso del conocimiento en la sociedad*** de *Friedrich Hayek*: El presentador menciona este texto al establecer una comparación conceptual sobre el surgimiento espontáneo de sistemas complejos y su utilidad social (0:58-2:06).
+
+How to fuck up your startup: the science behind why 90% companies crashes
+the unfair advantage (no se recomienda tanto como libro pero la idea esta buena)
+the lean startup
+the startup playbook
+how to present to absolutely anyone: confident public speaking 
+how to win every argument: the use and abuse of the logic
+win every argument
+soft skills Book
+
+* How to Win Friends & Influence People (es medio como recomendar "Padre Rico/Padre Pobre", pero a mí me parece un buen libro).
+
+* Peopleware: Productive Projects and Teams.
+
+* Joel On Software (son dos libros AFAIK, pero podés buscar en su blog por artículos que hablen de cosas más tipo liderazgo o lidiar con gente).
+
+* You're Not Listening.
+
+* [Algos] Introduction to Algorithms (el famoso "CLRS"; lo recomiendo solamente si te llevás bien con los números, de lo contrario el siguiente es más amigable).
+* [Algos] Algorithms Illuminated (cuatro libros, también tiene videos en YT el autor).
+
+* [OOP] Clean Code me sigue pareciendo lindo, sobre todo si no dogmatizás y te concentrás en las ideas por sobre los ejemplos, que son bastante malos.
+* [OOP] Design Patterns. El libro de GoF, not much to say.
+* [OOP] Design Patterns. El libro de Head First; más amigable. Recomiendo esa colección de libros en su conjunto.
+
+* [OOP] Dive Into Design Patterns. El libro de https://refactoring.guru/ El sitio también es genial.
+
+* [Sistemas operativos] Operating Systems: Three Easy Pieces, muy lindo libro.
+
+* [Teoría] The Science Of Information. En Audible lo encontrás leído por el mismísimo Schumacher, aunque es un libro para leer y tomar notas, difícil de seguir escuchado.
+* [Teoría] General Systems Theory, de von Bertalanffy. Un libro muy importante. Lamentablemente me lo dieron a conocer cuando cursaba filosofía y no cuando cursaba sistemas; no sé por qué se ignora tanto TGS en carreras de sistemas.
+
+* [Arquitectura] Fundamentals of Software Architecture: An Engineering Approach. Mi favorito de arquitectura. Cubre mucho y está bien escrito.
+* [Arquitectura] Building Microservices, otro muy bueno, tiene una linda intro a problemas de arquitectura distribuída.
+
+* [Blockchain] The Blockchain Developer. Super hands-on, linda explicación de varios protocolos.
+* [Blockchain] Blockchain: An Illustrated Guidebook to Understanding Blockchain. No recuerdo un carajo que me haya enseñado este libro, pero sí recuerdo que tenía dibujitos muy lindos.
+
+* [Matemáticas] Book Of Proof, lindo libro, clásico en el tema.
+* [Matemáticas] Concrete Mathematics, del mismísimo Knuth. Orientado a cubrir math para CS. Si sos tonto como yo, este tipo tiene varios artículos explicando más en detalle algunos de los razonamientos del libro: https://ftclausen.github.io/
+* [Matemáticas] Matemáticas para programadores. Muuuy introductorio y amigable.
+
+* [Redes] Network Warrior, está piola y muy bien escrito, aunque puede ser denso si no te interesa demasiado el detalle de cómo lidiar con los CLI de las herramientas que explica.
+
+* [Otros] The Mythical Man-Month. En realidad es un ensayo, pero es interesante el libro que lo contiene en su conjunto.
+
+* [Otros] The Pragmatic Programmer. Un clásico.
+* [Otros] Joel On Software. Amor eterno a Joel Spolsky, su estilo irreverente y prosa puntiaguda.
+* [Otros] But How Do It Know. Hermoso librito.

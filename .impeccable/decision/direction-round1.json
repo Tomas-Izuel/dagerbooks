@@ -1,0 +1,130 @@
+{
+  "title": "Elegí el mundo visual de DagerBooks",
+  "question": "El sorteo asignó Fileteado porteño. Quedátelo, tomá una alternativa o volvé a tirar.",
+  "options": [
+    {
+      "id": "assigned",
+      "label": "Fileteado porteño",
+      "kicker": "THE ROLL",
+      "lineage": "Filete de colectivos, camiones y carteles de Buenos Aires",
+      "thesis": "El mapa de lecturas pintado como el filete de un colectivo: cada libro es una parada del recorrido de Dager y cada frase suya va en una cinta.",
+      "palette": ["#121110", "#d7262e", "#f2c230", "#1f8a4c", "#2a7fc1", "#f4efe6"],
+      "materials": ["esmalte sintético sobre chapa negra", "pincel de pelo largo con sombreado y brillo de un toque", "cintas con frases"],
+      "viewport": "Medallón central con Tom Sawyer, los 10 sectores como paneles de filete con su nombre en letra fileteada, los libros como tachas en los anillos y una cinta arriba que pregunta \"¿Por dónde arrancás?\".",
+      "risk": "Si el ornamento le gana al mapa, queda como souvenir de San Telmo: el filete enmarca, nunca tapa los 82 libros.",
+      "raised": [
+        { "from": "challenger-sewing", "raise": "La ruta elegida se pinta en trazo lleno y las posibles en punteado fino: elegir un libro es comprometerse con un camino." },
+        { "from": "challenger-comic", "raise": "Los estados se marcan con el registro de la pintura: lo seleccionado sale nítido y lo atenuado queda corrido medio punto, nunca en gris." },
+        { "from": "challenger-sixpack", "raise": "El orden de lectura es fijo, del medallón al sector y del sector al anillo, y nada flota fuera de ese recorrido." },
+        { "from": "challenger-exposure", "raise": "La paleta es cerrada: solo los esmaltes del filete y el negro de la chapa, en escalones tonales y sin colores ajenos al tarro." }
+      ]
+    },
+    {
+      "id": "model-pick",
+      "label": "Plan de correlatividades",
+      "kicker": "IMPECCABLE’S PICK",
+      "lineage": "Planes de estudio de UTN/UBA y apuntes de fotocopiadora",
+      "thesis": "El árbol como el plan de correlativas que todo estudiante de sistemas tiene pegado en la pared, redibujado en anillos.",
+      "palette": ["#e9e7e1", "#1b1b1b", "#f7e04a", "#2340a8", "#c8442f"],
+      "materials": ["fotocopia de cuarta generación", "resaltador fluo", "birome azul y sello del centro de estudiantes"],
+      "viewport": "Cajas de materia por libro con flechas de correlativa que salen del centro; marcar \"Lo leí\" pasa resaltador sobre la caja.",
+      "risk": "Es la dirección más familiar para la comunidad y también la que más cerca está de verse académica."
+    },
+    {
+      "id": "challenger-transit",
+      "label": "Diagrama de subte nocturno",
+      "verdict": "competitive",
+      "lineage": "Mapas esmaltados de redes de subte",
+      "thesis": "Cada sector es una línea y cada libro una estación; las relaciones entre temas son combinaciones.",
+      "palette": ["#0f1b3d", "#f2f2ee", "#e03a3e", "#2b59c3", "#f2a900", "#1d9a5b"],
+      "materials": ["esmalte azul noche", "ticks de estación en porcelana", "líneas a 45° y 90°"],
+      "viewport": "Diez líneas que salen de la estación central Tom Sawyer; el buscador funciona como \"destino\".",
+      "case": "Gana en claridad (recorrido, combinaciones, estaciones) pero pierde en identidad: cualquier ciudad tiene subte y no se siente de Dager.",
+      "risk": "Se vuelve infografía de transporte genérica si las líneas no cargan la voz irreverente.",
+      "hero": "https://impeccable.style/worlds/cards/wayfinding-cartography-signage-midnight-transit-diagram-hero.webp",
+      "board": "https://impeccable.style/worlds/cards/wayfinding-cartography-signage-midnight-transit-diagram.webp"
+    },
+    {
+      "id": "challenger-neon",
+      "label": "Neón doblado a mano",
+      "verdict": "competitive",
+      "lineage": "Carteles de neón de la calle Corrientes",
+      "thesis": "La ruta de lectura se enciende como un solo tubo de neón continuo desde el centro hasta el libro elegido.",
+      "palette": ["#0b0b0f", "#3d6bff", "#ff4a3d", "#cfe3ff"],
+      "materials": ["vidrio curvado al fuego", "electrodos sellados", "gas cobalto"],
+      "viewport": "Mapa apagado en la oscuridad; al elegir un libro se enciende su recorrido entero.",
+      "case": "Fuerte en claridad (el camino encendido es la ruta), débil en identidad: oscuro con neón es el cliché programador.",
+      "risk": "Cae en el negro con neón que hoy ship-ea cualquier sitio dev.",
+      "hero": "https://impeccable.style/worlds/cards/magnetism-electricity-plasma-hand-bent-neon-circuit-hero.webp",
+      "board": "https://impeccable.style/worlds/cards/magnetism-electricity-plasma-hand-bent-neon-circuit.webp"
+    },
+    {
+      "id": "challenger-comic",
+      "label": "Historieta de kiosco",
+      "verdict": "declined",
+      "lineage": "Historietas en papel pulpa con trama de puntos",
+      "thesis": "Cada sector es una viñeta y las frases de Dager van en globos.",
+      "palette": ["#f1e6c8", "#00a0d6", "#e5007e", "#ffe600", "#1a1a1a"],
+      "materials": ["trama ben-day", "papel pulpa", "cuatricromía corrida"],
+      "viewport": "Grilla de viñetas con el árbol en una splash page.",
+      "case": "La grilla de viñetas pelea contra el mapa radial y la identidad no supera al filete.",
+      "kept": "Los estados como registro de impresión: nítido si está activo y corrido si no.",
+      "risk": "Termina como pastiche pop.",
+      "hero": "https://impeccable.style/worlds/cards/pop-culture-shelf-benday-comic-page-hero.webp"
+    },
+    {
+      "id": "challenger-sewing",
+      "label": "Molde de costura",
+      "verdict": "declined",
+      "lineage": "Sobres y papel de seda de moldes",
+      "thesis": "Los libros como piezas numeradas de un molde y los niveles como talles.",
+      "palette": ["#e8d9b5", "#1c1c1c", "#c0262d"],
+      "materials": ["papel de seda manila", "líneas de corte punteadas"],
+      "viewport": "Un molde desplegado con piezas por sector.",
+      "case": "La comunidad no se identifica con la costura y la metáfora de talles confunde los niveles.",
+      "kept": "La ruta comprometida va en trazo lleno y las posibles en punteado.",
+      "risk": "Ajeno al público.",
+      "hero": "https://impeccable.style/worlds/cards/fashion-folded-worlds-sewing-pattern-envelope-hero.webp"
+    },
+    {
+      "id": "challenger-sixpack",
+      "label": "Instrumental de vuelo",
+      "verdict": "declined",
+      "lineage": "Seis relojes de una cabina de noche",
+      "thesis": "Cada sector como un instrumento circular.",
+      "palette": ["#0d0d0d", "#f5f5f5", "#7cff6b", "#ffb000"],
+      "materials": ["panel negro mate", "agujas luminosas"],
+      "viewport": "Diez diales con el progreso por tema.",
+      "case": "Convierte la lectura en un tablero de control: no identifica al público y fragmenta el árbol.",
+      "kept": "Un orden de barrido fijo para leer el mapa.",
+      "risk": "Frío y técnico.",
+      "hero": "https://impeccable.style/worlds/cards/signals-instruments-night-flight-six-pack-hero.webp"
+    },
+    {
+      "id": "challenger-exposure",
+      "label": "Ficha de laboratorio fotográfico",
+      "verdict": "declined",
+      "lineage": "Registros de exposición del cuarto oscuro",
+      "thesis": "Los sectores como hojas translúcidas superpuestas.",
+      "palette": ["#f0f0f0", "#8a8a8a", "#2b2b2b", "#d1338f"],
+      "materials": ["papel vegetal", "rampa de once zonas"],
+      "viewport": "Hojas apiladas en ángulo con la rampa de zonas.",
+      "case": "Elegante pero hermético: ni la comunidad ni el mapa ganan.",
+      "kept": "Paleta cerrada en escalones tonales, sin colores sueltos.",
+      "risk": "Demasiado de nicho.",
+      "hero": "https://impeccable.style/worlds/cards/operate-b-exposure-record-zone-sheets-hero.webp"
+    }
+  ],
+  "reroll": { "registers": ["safer", "bolder"] },
+  "buildPath": { "value": "code" },
+  "canon": true,
+  "canonCard": {
+    "label": "El estándar de la categoría",
+    "thesis": "El grafo de nodos tipo Obsidian en modo oscuro, ejecutado impecable.",
+    "palette": ["#0e1116", "#e6e9ef", "#7c8cff"],
+    "materials": ["grafo de fuerzas", "tarjetas con tapas", "sans neutra"],
+    "viewport": "Grafo oscuro con nodos de colores por tema y un panel lateral con la tapa del libro.",
+    "risk": "Indistinguible de cualquier herramienta de notas o mapa de conocimiento."
+  },
+  "steer": true
+}

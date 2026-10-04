@@ -1,0 +1,128 @@
+/*
+ * DagerBooks — midnight transit tokens.
+ * Primitive → semantic. Components read only the semantic layer.
+ */
+
+:root {
+  /* Primitives: enamel ground */
+  --enamel-950: #070c22;
+  --enamel-900: #0b1230;
+  --enamel-850: #0f1838;
+  --enamel-800: #142045;
+  --enamel-700: #1e2c5a;
+  --enamel-600: #2c3d73;
+
+  /* Primitives: porcelain */
+  --porcelain-50: #f3f1ea;
+  --porcelain-200: #d6d9e8;
+  --porcelain-400: #a9b3d6;
+  --porcelain-600: #6f7aa3;
+
+  /* Line inks (lettered like the Buenos Aires subte) */
+  --ink-a: #3ec6e0; /* celeste */
+  --ink-b: #f0484e; /* escarlata */
+  --ink-c: #2dbe5a; /* verde */
+  --ink-d: #b07cf0; /* violeta */
+  --ink-e: #ffc20e; /* ámbar */
+  --ink-f: #5b86ff; /* cobalto */
+  --ink-g: #f05aa8; /* magenta */
+  --ink-h: #b5e03a; /* lima */
+  --ink-i: #ff8a2b; /* naranja */
+  --ink-j: #d9976a; /* cobre */
+
+  /* Semantic: surfaces */
+  --bg: var(--enamel-900);
+  --bg-sunken: var(--enamel-950);
+  --surface: var(--enamel-850);
+  --surface-raised: var(--enamel-800);
+  --rule: var(--enamel-600);
+  --rule-strong: var(--porcelain-50);
+
+  /* Semantic: text */
+  --fg: var(--porcelain-50);
+  --fg-muted: var(--porcelain-400);
+  --fg-faint: var(--porcelain-600);
+  --fg-on-ink: var(--enamel-950);
+
+  /* Semantic: state */
+  --accent: var(--ink-b);
+  --focus: var(--ink-e);
+  --read: var(--porcelain-50);
+  --incomplete: var(--ink-e);
+  --dim-opacity: 0.32;
+
+  /* Lines by topic id (sector order of topics.yaml) */
+  --line-fundamentos: var(--ink-a);
+  --line-matematicas: var(--ink-b);
+  --line-sistemas: var(--ink-c);
+  --line-economia: var(--ink-d);
+  --line-filosofia: var(--ink-e);
+  --line-historia: var(--ink-f);
+  --line-desarrollo-personal: var(--ink-g);
+  --line-startups: var(--ink-h);
+  --line-oficio: var(--ink-i);
+  --line-arquitectura: var(--ink-j);
+
+  /* Type */
+  --font-display: var(--font-big-shoulders), "Arial Narrow", sans-serif;
+  --font-sign: var(--font-overpass), system-ui, sans-serif;
+  --font-data: var(--font-overpass-mono), ui-monospace, monospace;
+
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.1875rem;
+  --text-xl: 1.5rem;
+  --text-2xl: 2.25rem;
+  --text-3xl: 3.5rem;
+  --text-4xl: 5rem;
+
+  --tracking-sign: 0.12em;
+  --tracking-label: 0.08em;
+  --leading-tight: 0.95;
+  --leading-body: 1.55;
+
+  /* Space (4px base) */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 4.5rem;
+
+  /* Rules and shape: signage is square, ruled, never pillowy */
+  --rule-width: 2px;
+  --hairline: 1px;
+  --radius: 2px;
+  --radius-disc: 999px;
+
+  /* Map strokes (SVG user units at zoom 1) */
+  --map-line-width: 5;
+  --map-line-width-active: 8;
+  --map-station-r: 7;
+  --map-station-stroke: 3;
+  --map-zone-dash: 2 10;
+
+  /* Motion */
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --dur-fast: 140ms;
+  --dur-base: 260ms;
+  --dur-route: 700ms;
+
+  /* Depth: offset + soft blur, enamel-tinted */
+  --shadow-panel: 0 18px 48px -12px rgb(3 6 20 / 0.7), 0 2px 6px rgb(3 6 20 / 0.5);
+
+  --panel-width: 22.5rem;
+
+  color-scheme: dark;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --dur-fast: 0ms;
+    --dur-base: 0ms;
+    --dur-route: 0ms;
+  }
+}

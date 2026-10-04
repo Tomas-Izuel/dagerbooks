@@ -1,0 +1,21 @@
+.shell {
+  display: flex;
+  flex-direction: column;
+  min-block-size: 100dvh;
+  /* Las bandas de vía sangran a todo el ancho; recortamos el excedente del scrollbar. */
+  overflow-x: clip;
+}
+
+.main {
+  flex: 1;
+  inline-size: 100%;
+  max-inline-size: 76rem;
+  margin-inline: auto;
+  padding: var(--space-6) var(--space-4) var(--space-8);
+}
+
+@media (min-width: 48rem) {
+  .main {
+    padding-inline: var(--space-6);
+  }
+}

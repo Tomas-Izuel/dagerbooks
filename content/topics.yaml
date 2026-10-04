@@ -1,0 +1,42 @@
+# yaml-language-server: $schema=./topics.schema.json
+# Sectores del árbol, en orden circular (el último se une con el primero).
+
+- id: fundamentos
+  name: "Fundamentos y herramientas"
+  description: "Herramientas base de la programación: Git, Python, C#, sistemas operativos, redes y cómo funciona una computadora por dentro."
+
+- id: matematicas
+  name: "Matemáticas y algoritmos"
+  description: "Del álgebra escolar a la matemática discreta y el análisis de algoritmos: los libros de matemática que recomienda Dager."
+
+- id: sistemas
+  name: "Sistemas e información"
+  description: "Teoría de la información, teoría general de sistemas y blockchain para entender cómo se organiza y se transmite la información."
+
+- id: economia
+  name: "Economía y filosofía política"
+  description: "Libros de economía austríaca, liberalismo clásico y teoría política que Dager lee y discute."
+
+- id: filosofia
+  name: "Filosofía clásica y estoicismo"
+  description: "Estoicismo, filosofía helenística y ética: de Séneca, Epicteto y Marco Aurelio a los estudios académicos de la Antigüedad."
+
+- id: historia
+  name: "Historia y sociedad"
+  description: "Historia de la Argentina, la Grecia antigua y ensayos sobre poder, obediencia y sociedad recomendados por Dager."
+
+- id: desarrollo-personal
+  name: "Desarrollo personal"
+  description: "Hábitos, foco, aprendizaje, comunicación y mentalidad: los libros de autoayuda que Dager considera valiosos."
+
+- id: startups
+  name: "Startups"
+  description: "Libros sobre emprender, validar ideas y evitar los errores que hacen fracasar a las startups."
+
+- id: oficio
+  name: "Oficio y equipos"
+  description: "El oficio del desarrollador de software: buenas prácticas, gestión de equipos, habilidades blandas y comunicación."
+
+- id: arquitectura
+  name: "Diseño y arquitectura"
+  description: "Patrones de diseño, arquitectura de software, microservicios y sistemas de datos a gran escala."

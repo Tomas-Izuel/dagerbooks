@@ -1,0 +1,1687 @@
+# yaml-language-server: $schema=./books.schema.json
+#
+# Cómo agregar un libro
+# ---------------------
+# Agregá una entrada nueva a esta lista. Campos obligatorios: id, title, topics, level.
+#   id       slug en kebab-case, único (ej. "atomic-habits").
+#   title    título en el idioma original (forma corta, sin subtítulo largo).
+#   topics   lista de ids de topics.yaml; el primero es el sector donde se dibuja el libro.
+#   level    1 introductorio · 2 intermedio · 3 avanzado · 4 especialista (0 = raíz, solo Tom Sawyer Abroad).
+# Todo lo demás es opcional: titleEs, authors, year, kind (book | essay | paper | course | textbook),
+#   summary, context, sources [{url, title, timestamp, quote}], leadsTo, related [{id, reason}], isbn, coverId.
+# Si faltan authors, summary, context o sources, el sitio muestra "por completar".
+# leadsTo: ids de libros que conviene leer después de este (el nivel del destino debe ser mayor).
+# related: puentes entre sectores, con una razón corta; declará cada par una sola vez.
+
+- id: tom-sawyer-abroad
+  title: "Tom Sawyer Abroad"
+  titleEs: "Tom Sawyer en el extranjero"
+  authors: ["Mark Twain"]
+  year: 1894
+  kind: book
+  topics: []
+  level: 0
+  summary: "Novela de Mark Twain en la que Tom, Huck y Jim viajan en globo a África."
+  context: "Fue su primer libro, un regalo de su abuelo, y despertó su amor por la lectura."
+  sources:
+    - url: "https://www.youtube.com/watch?v=YQfRVo5UwOM&t=77s"
+      title: "CÓMO ESTUDIAR (pero bien)."
+      timestamp: "1:17"
+      quote: "el primer libro que recuerdo haber leído cuando tenía como 10 años Fue Tom Sawyer en el extranjero"
+    - url: "https://www.youtube.com/watch?v=-gZ_szjtEcI&t=405s"
+      title: "Marco Palazzo patoteado fuera de las universidades."
+      timestamp: "6:45"
+      quote: "el primero fue por regalo de mi abuelo, el Las aventuras de Tom Sawyer en el extranjero"
+  leadsTo: ["but-how-do-it-know", "algebra-baldor", "the-information", "economic-sophisms", "meditations", "breve-historia-de-los-argentinos", "atomic-habits", "the-lean-startup", "joel-on-software", "dive-into-design-patterns"]
+  isbn: "9781443425438"
+  coverId: 9162125
+
+- id: but-how-do-it-know
+  title: "But How Do It Know?"
+  authors: ["J. Clark Scott"]
+  year: 2009
+  kind: book
+  topics: ["fundamentos"]
+  level: 1
+  summary: "Explica cómo funciona una computadora construyéndola paso a paso desde una compuerta NAND hasta una CPU completa."
+  context: "Lo llama \"librito hermoso\" y fascinante sobre arquitectura de computadoras, que desmitifica todo desde las compuertas lógicas."
+  sources:
+    - url: "https://www.reddit.com/r/devsarg/comments/1ehmxbm/qué_libros_de_fundamentos_teóricos_de/lg30fw9/"
+      title: "r/devsarg: qué libros de fundamentos teóricos de"
+      quote: "But How Do It Know. Hermoso librito."
+    - url: "https://www.youtube.com/watch?v=pbWxlLeg-fs&t=419s"
+      title: "Los mejores libros para aprender a programar."
+      timestamp: "6:59"
+      quote: "But How do you know que es un libro hermoso ... un libro fascinante sobre arquitectura de computadoras"
+  leadsTo: ["operating-systems-three-easy-pieces", "network-warrior"]
+  isbn: "9780615303765"
+
+- id: pro-git
+  title: "Pro Git"
+  authors: ["Scott Chacon", "Ben Straub"]
+  year: 2009
+  kind: book
+  topics: ["fundamentos"]
+  level: 1
+  summary: "Guía completa de Git de Chacon y Straub, disponible gratis en línea."
+  context: "Es el único recurso que recomienda para ir a fondo con Git."
+  sources:
+    - url: "https://www.youtube.com/watch?v=oQcDGpsUgNk&t=309s"
+      title: "Más allá del código | 3 habilidades para ser mejor programador"
+      timestamp: "5:09"
+      quote: "el único recurso que te recomiendo si quieres ir a fondo es progit que es de los mejores que he encontrado"
+  leadsTo: ["git-internals"]
+  isbn: "9781430218333"
+  coverId: 7892827
+
+- id: automate-the-boring-stuff-with-python
+  title: "Automate the Boring Stuff with Python"
+  authors: ["Al Sweigart"]
+  year: 2015
+  kind: book
+  topics: ["fundamentos"]
+  level: 1
+  summary: "Al Sweigart enseña Python mediante la automatización de tareas cotidianas."
+  context: "Lo marca como buen libro, \"tal vez algo desactualizado\", para aprender automatizando."
+  sources:
+    - url: "https://www.reddit.com/r/devsarg/comments/12bisi9/métodos_de_aprendizaje/jex4816/"
+      title: "r/devsarg: métodos de aprendizaje"
+      quote: "[Este] es un buen libro -tal vez algo desactualizado- dedicado a esto (Amazon link to Automate the Boring Stuff with Python)"
+  leadsTo: ["crafting-interpreters", "csharp-in-a-nutshell"]
+  isbn: "9781593275990"
+  coverId: 7363640
+
+- id: git-internals
+  title: "Git Internals"
+  authors: ["Scott Chacon"]
+  year: 2008
+  kind: book
+  topics: ["fundamentos"]
+  level: 2
+  summary: "Guía de Scott Chacon sobre el funcionamiento interno de Git, publicada por PeepCode."
+  context: "En su README dice que entender las entrañas de Git lo hizo dejar de verlo como un botón de \"guardar partida\"."
+  sources:
+    - url: "https://github.com/MarianoVilla/MarianoVilla/blob/main/README.md"
+      title: "GitHub: MarianoVilla/MarianoVilla README (Recommended Readings)"
+      quote: "Understanding Git's belly made me stop treating it like a \"save game\" button."
+
+- id: csharp-in-a-nutshell
+  title: "C# in a Nutshell"
+  authors: ["Joseph Albahari", "Ben Albahari"]
+  year: 2012
+  kind: book
+  topics: ["fundamentos"]
+  level: 2
+  summary: "Referencia concisa del lenguaje C# y la plataforma .NET."
+  context: "Lo cita entre los libros piola para aprender C#."
+  sources:
+    - url: "https://www.reddit.com/r/devsarg/comments/18qup9h/aprender_c_y_net/kezoa0e/"
+      title: "r/devsarg: aprender c y net"
+      quote: "Hay libros piola (C# In a Nutshell, los libros y posts de Skeet -e.g., C# in Depth-, etc.)"
+  leadsTo: ["csharp-in-depth"]
+  isbn: "9780596001810"
+  coverId: 12836741
+
+- id: network-warrior
+  title: "Network Warrior"
+  authors: ["Gary A. Donahue"]
+  year: 2007
+  kind: book
+  topics: ["fundamentos", "sistemas"]
+  level: 2
+  summary: "Guía práctica de redes (Cisco, switching, routing) con foco en cómo trabajar con la CLI de los equipos."
+  context: "Lo considera lindo y muy bien escrito, aunque puede ser denso si no te interesa el detalle de la CLI."
+  sources:
+    - url: "https://www.reddit.com/r/devsarg/comments/1ehmxbm/qué_libros_de_fundamentos_teóricos_de/lg30fw9/"
+      title: "r/devsarg: qué libros de fundamentos teóricos de"
+      quote: "Network Warrior, está piola y muy bien escrito"
+    - url: "https://github.com/MarianoVilla/MarianoVilla/blob/main/README.md"
+      title: "GitHub: MarianoVilla/MarianoVilla README (Recommended Readings)"
+      quote: "Friendly, down-to-earth networking book."
+    - url: "https://www.youtube.com/watch?v=pbWxlLeg-fs&t=366s"
+      title: "Los mejores libros para aprender a programar."
+      timestamp: "6:06"
+      quote: "Network Warrior que es sobre redes es un lindo libro"
+  isbn: "9780596101510"
+  coverId: 8698959
+
+- id: csharp-in-depth
+  title: "C# in Depth"
+  authors: ["Jon Skeet"]
+  year: 2008
+  kind: book
+  topics: ["fundamentos"]
+  level: 3
+  summary: "Jon Skeet explora a fondo las características del lenguaje C#."
+  context: "Recomienda los libros y posts de Skeet, aunque aclara que no es tan introductorio."
+  sources:
+    - url: "https://www.reddit.com/r/devsarg/comments/18qup9h/aprender_c_y_net/kezoa0e/"
+      title: "r/devsarg: aprender c y net"
+      quote: "los libros y posts de Skeet -e.g., C# in Depth-"
+    - url: "https://www.reddit.com/r/devsarg/comments/1cqlfmv/empezar_con_c/l3sv48j/"
+      title: "r/devsarg: empezar con c"
+      quote: "Jon Skeet. Tiene libros y artículos sobre el lenguaje. No tan introductorio"
+  isbn: "9781933988368"
+  coverId: 3063781
+
+- id: operating-systems-three-easy-pieces
+  title: "Operating Systems: Three Easy Pieces"
+  authors: ["Remzi H. Arpaci-Dusseau", "Andrea C. Arpaci-Dusseau"]
+  year: 2018
+  kind: textbook
+  topics: ["fundamentos"]
+  level: 3
+  summary: "Libro de texto gratuito sobre sistemas operativos organizado en virtualización, concurrencia y persistencia."
+  context: "\"Muy lindo libro\" que hace digeribles los conceptos de sistemas operativos."
+  sources:
+    - url: "https://www.reddit.com/r/devsarg/comments/1ehmxbm/qué_libros_de_fundamentos_teóricos_de/lg30fw9/"
+      title: "r/devsarg: qué libros de fundamentos teóricos de"
+      quote: "Operating Systems: Three Easy Pieces, muy lindo libro."
+    - url: "https://github.com/MarianoVilla/MarianoVilla/blob/main/README.md"
+      title: "GitHub: MarianoVilla/MarianoVilla README (Recommended Readings)"
+      quote: "makes OS concepts digestible"
+  isbn: "9781985086593"
+  coverId: 10401368
+
+- id: crafting-interpreters
+  title: "Crafting Interpreters"
+  authors: ["Robert Nystrom"]
+  year: 2021
+  kind: book
+  topics: ["fundamentos"]
+  level: 3
+  summary: "Libro de Robert Nystrom para construir intérpretes de lenguajes de programación; se puede leer gratis en la web del autor."
+  context: "Le parece muy interesante, gratuito en línea, y planea leerlo/streamear el desafío de CodeCrafters que lo sigue."
+  sources:
+    - url: "https://www.youtube.com/watch?v=pbWxlLeg-fs&t=619s"
+      title: "Los mejores libros para aprender a programar."
+      timestamp: "10:19"
+      quote: "Crafting interpreters es muy interesante y se puede leer gratuito en la web del autor"
+  isbn: "9780990582939"
+  coverId: 12075000
+
+- id: algebra-baldor
+  title: "Álgebra"
+  authors: ["Aurelio Baldor"]
+  year: 1941
+  kind: textbook
+  topics: ["matematicas"]
+  level: 1
+  summary: "Texto escolar clásico de álgebra elemental, muy usado en Latinoamérica."
+  context: "Dice que no entiende por qué no lo recomendó antes porque es \"crucial\"."
+  sources:
+    - url: "https://www.youtube.com/watch?v=pbWxlLeg-fs&t=326s"
+      title: "Los mejores libros para aprender a programar."
+      timestamp: "5:26"
+      quote: "álgebra de Baldor s sí también ... No sé por qué no lo recomendé pues es crucial"
+  leadsTo: ["book-of-proof"]
+  isbn: "9789702407799"
+  coverId: 7273068
+
+- id: algebra-for-dummies
+  title: "Algebra For Dummies"
+  titleEs: "Álgebra para dummies"
+  authors: ["Mary Jane Sterling"]
+  year: 2001
+  kind: book
+  topics: ["matematicas"]
+  level: 1
+  summary: "Introducción accesible al álgebra de nivel secundario, de la serie \"para dummies\"."
+  context: "Sin vergüenza lo recomienda como muy buen libro de álgebra, junto con el de Baldor."
+  sources:
+    - url: "https://www.youtube.com/watch?v=pbWxlLeg-fs&t=338s"
+      title: "Los mejores libros para aprender a programar."
+      timestamp: "5:38"
+      quote: "el álgebra for damis me pareció muy buen libro"
+  leadsTo: ["book-of-proof"]
+  isbn: "9780764553257"
+  coverId: 521828
+
+- id: mathematics-for-programmers-barden
+  title: "Microcomputer Math"
+  titleEs: "Matemáticas para programadores: sistemas de numeración y aritmética binaria"
+  authors: ["William Barden Jr."]
+  year: 1982
+  kind: book
+  topics: ["matematicas", "fundamentos"]
+  level: 1
+  summary: "Introducción a los sistemas de numeración (binario, octal, hexadecimal) y la aritmética binaria para quienes programan microcomputadoras."
+  context: "Lo recomienda por muy introductorio y amigable, con dibujitos; lo leyó en español."
+  sources:
+    - url: "https://www.reddit.com/r/devsarg/comments/1ehmxbm/qué_libros_de_fundamentos_teóricos_de/lg30fw9/"
+      title: "r/devsarg: qué libros de fundamentos teóricos de"
+      quote: "Matemáticas para programadores. Muuuy introductorio y amigable. (author identified via reply lg5dxxh, confirming Barden's book: 'Síp, ese mismo')"
+    - url: "https://www.youtube.com/watch?v=pbWxlLeg-fs&t=323s"
+      title: "Los mejores libros para aprender a programar."
+      timestamp: "5:23"
+      quote: "matemáticas para programadores es un libro que es otro de vuelta ... muy lindo libro es en español"
+  leadsTo: ["algorithms-illuminated"]
+  isbn: "9780672219276"
+
+- id: book-of-proof
+  title: "Book of Proof"
+  authors: ["Richard Hammack"]
+  year: 2009
+  kind: textbook
+  topics: ["matematicas"]
+  level: 2
+  summary: "Introducción a la demostración matemática: lógica, conjuntos, inducción y técnicas de prueba, de Richard Hammack."
+  context: "Lo define como un clásico, muy buen libro aunque algo denso, para aprender a razonar con pruebas."
+  sources:
+    - url: "https://www.reddit.com/r/devsarg/comments/1ehmxbm/qué_libros_de_fundamentos_teóricos_de/lg30fw9/"
+      title: "r/devsarg: qué libros de fundamentos teóricos de"
+      quote: "Book Of Proof, lindo libro, clásico en el tema."
+    - url: "https://github.com/MarianoVilla/MarianoVilla/blob/main/README.md"
+      title: "GitHub: MarianoVilla/MarianoVilla README (Recommended Readings)"
+      quote: "Made mathematical proofs click for me."
+    - url: "https://www.youtube.com/watch?v=pbWxlLeg-fs&t=231s"
+      title: "Los mejores libros para aprender a programar."
+      timestamp: "3:51"
+      quote: "Book of proof es un muy buen libro es un poquito denso es un clásico sobre el tema"
+  leadsTo: ["concrete-mathematics", "introduction-to-algorithms"]
+  isbn: "9780982406205"
+  coverId: 10439715
+
+- id: algorithms-illuminated
+  title: "Algorithms Illuminated"
+  authors: ["Tim Roughgarden"]
+  year: 2018
+  kind: textbook
+  topics: ["matematicas"]
+  level: 2
+  summary: "Serie de cuatro libros de Tim Roughgarden con una introducción amigable al análisis de algoritmos."
+  context: "\"Excelente elección\" como primer contacto con algoritmos; tiene videos del autor en YouTube."
+  sources:
+    - url: "https://www.reddit.com/r/devsarg/comments/1ehmxbm/qué_libros_de_fundamentos_teóricos_de/lg30fw9/"
+      title: "r/devsarg: qué libros de fundamentos teóricos de"
+      quote: "[Algos] Algorithms Illuminated (cuatro libros, también tiene videos en YT el autor)"
+    - url: "https://github.com/MarianoVilla/MarianoVilla/blob/main/README.md"
+      title: "GitHub: MarianoVilla/MarianoVilla README (Recommended Readings)"
+      quote: "Makes algorithm analysis feel less like rocket science and more like solving puzzles."
+    - url: "https://www.youtube.com/watch?v=qVUgWXcKvoM&t=17s"
+      title: "NO LEAS ESTE LIBRO. #algoritmo #programacion #fyp"
+      timestamp: "0:17"
+      quote: "Algorithms Illuminated. Es una serie de cuatro libros... es una excelente elección... como introducción a algoritmos"
+  leadsTo: ["introduction-to-algorithms"]
+  isbn: "9780999282908"
+  coverId: 9230325
+
+- id: introduction-to-algorithms
+  title: "Introduction to Algorithms"
+  authors: ["Thomas H. Cormen", "Charles E. Leiserson", "Ronald L. Rivest", "Clifford Stein"]
+  year: 1990
+  kind: textbook
+  topics: ["matematicas"]
+  level: 3
+  summary: "El \"CLRS\": texto de referencia, exhaustivo y riguroso, sobre algoritmos y estructuras de datos."
+  context: "Lo recomienda solo si te llevás bien con la matemática; en video advierte que \"de introducción tiene solo el nombre\" para un principiante."
+  sources:
+    - url: "https://www.reddit.com/r/devsarg/comments/1ehmxbm/qué_libros_de_fundamentos_teóricos_de/lg30fw9/"
+      title: "r/devsarg: qué libros de fundamentos teóricos de"
+      quote: "[Algos] Introduction to Algorithms (el famoso \"CLRS\"; lo recomiendo solamente si te llevás bien con los números"
+    - url: "https://www.youtube.com/watch?v=qVUgWXcKvoM&t=30s"
+      title: "NO LEAS ESTE LIBRO. #algoritmo #programacion #fyp"
+      timestamp: "0:30"
+      quote: "no te mandes a intentar leer solo el clásico Introduction to Algorithms... de introducción tiene solamente el nombre"
+  leadsTo: ["concrete-mathematics"]
+  isbn: "9780262031417"
+  coverId: 2341462
+
+- id: concrete-mathematics
+  title: "Concrete Mathematics"
+  authors: ["Ronald L. Graham", "Donald E. Knuth", "Oren Patashnik"]
+  year: 1989
+  kind: textbook
+  topics: ["matematicas"]
+  level: 4
+  summary: "Matemática para ciencias de la computación: sumatorias, recurrencias, funciones generatrices y combinatoria, de Graham, Knuth y Patashnik."
+  context: "Dice que llena el hueco de matemática específica para computer science; recomienda los artículos de un blog que explican sus razonamientos."
+  sources:
+    - url: "https://www.reddit.com/r/devsarg/comments/1ehmxbm/qué_libros_de_fundamentos_teóricos_de/lg30fw9/"
+      title: "r/devsarg: qué libros de fundamentos teóricos de"
+      quote: "Concrete Mathematics, del mismísimo Knuth. Orientado a cubrir math para CS."
+    - url: "https://github.com/MarianoVilla/MarianoVilla/blob/main/README.md"
+      title: "GitHub: MarianoVilla/MarianoVilla README (Recommended Readings)"
+      quote: "Challenging but rewarding; it's Knuth's book after all."
+    - url: "https://www.youtube.com/watch?v=pbWxlLeg-fs&t=238s"
+      title: "Los mejores libros para aprender a programar."
+      timestamp: "3:58"
+      quote: "concrete matematics es como un libro que el sh hace como para llenar ese Gap de matemáticas específicamente para computer Science"
+  isbn: "9780201558029"
+  coverId: 135182
+
+- id: the-information
+  title: "The Information"
+  titleEs: "La información: una historia, una teoría, un torrente"
+  authors: ["James Gleick"]
+  year: 2011
+  kind: book
+  topics: ["sistemas"]
+  level: 1
+  summary: "James Gleick recorre la historia de la información desde los tambores africanos hasta la era digital."
+  context: "\"Buen libro\": Gleick tiene dos libros que le gustan; en su README lo llama obra maestra."
+  sources:
+    - url: "https://github.com/MarianoVilla/MarianoVilla/blob/main/README.md"
+      title: "GitHub: MarianoVilla/MarianoVilla README (Recommended Readings)"
+      quote: "Gleick's masterpiece. Explores information from ancient drums to the digital age."
+    - url: "https://www.youtube.com/watch?v=V7NNviAqMh4&t=1453s"
+      title: "Libros de autoayuda no TAN malos."
+      timestamp: "24:13"
+      quote: "Glake es el de information, ¿no? Clake information. A History of Lood. Buen libro. Tiene dos libros que me gustan."
+  leadsTo: ["the-science-of-information", "general-system-theory"]
+  related:
+    - id: time-travel-a-history
+      reason: "mismo autor (Gleick): historia cultural de las ideas"
+  isbn: "9780307379573"
+  coverId: 6699475
+
+- id: blockchain-illustrated-guidebook
+  title: "Blockchain: An Illustrated Guidebook"
+  authors: ["Xu Mingxing", "Tian Ying", "Li Jiyue", "Liu Jie"]
+  year: 2018
+  kind: book
+  topics: ["sistemas", "fundamentos"]
+  level: 1
+  summary: "Introducción ilustrada a los conceptos de blockchain, con dibujos para principiantes."
+  context: "Lo recomienda \"solamente\" por ser el libro más cute, aunque admite que no recuerda qué le enseñó."
+  sources:
+    - url: "https://www.reddit.com/r/devsarg/comments/1ehmxbm/qué_libros_de_fundamentos_teóricos_de/lg30fw9/"
+      title: "r/devsarg: qué libros de fundamentos teóricos de"
+      quote: "No recuerdo un carajo que me haya enseñado este libro, pero sí recuerdo que tenía dibujitos muy lindos."
+    - url: "https://www.youtube.com/watch?v=pbWxlLeg-fs&t=192s"
+      title: "Los mejores libros para aprender a programar."
+      timestamp: "3:12"
+      quote: "lo recomiendo Solamente porque me parece el libro más cute de la historia"
+  leadsTo: ["the-blockchain-developer"]
+  related:
+    - id: chaos-theory
+      reason: "orden descentralizado sin autoridad central"
+  isbn: "9781510744851"
+  coverId: 8814384
+
+- id: the-science-of-information
+  title: "The Science of Information"
+  authors: ["Benjamin Schumacher"]
+  year: 2015
+  kind: course
+  topics: ["sistemas"]
+  level: 2
+  summary: "Curso de The Great Courses (24 clases) en el que Schumacher recorre la teoría de la información, desde la codificación y la entropía hasta la información cuántica."
+  context: "Lo llama libro aunque es un curso; recomienda leerlo/escucharlo tomando notas porque es denso pero muy bueno."
+  sources:
+    - url: "https://www.reddit.com/r/devsarg/comments/1ehmxbm/qué_libros_de_fundamentos_teóricos_de/lg30fw9/"
+      title: "r/devsarg: qué libros de fundamentos teóricos de"
+      quote: "The Science Of Information. En Audible lo encontrás leído por el mismísimo Schumacher... para leer y tomar notas"
+    - url: "https://www.youtube.com/watch?v=pbWxlLeg-fs&t=119s"
+      title: "Los mejores libros para aprender a programar."
+      timestamp: "1:59"
+      quote: "es un libro que tené que Tomar nota porque es denso pero es muy bueno"
+  leadsTo: ["a-mathematical-theory-of-communication"]
+
+- id: the-blockchain-developer
+  title: "The Blockchain Developer"
+  authors: ["Elad Elrom"]
+  year: 2019
+  kind: book
+  topics: ["sistemas", "arquitectura"]
+  level: 2
+  summary: "Guía práctica de Elad Elrom para desarrollar, probar y asegurar proyectos blockchain."
+  context: "Lo recomienda por ser hands-on y explicar bien varios protocolos."
+  sources:
+    - url: "https://www.reddit.com/r/devsarg/comments/1ehmxbm/qué_libros_de_fundamentos_teóricos_de/lg30fw9/"
+      title: "r/devsarg: qué libros de fundamentos teóricos de"
+      quote: "The Blockchain Developer. Super hands-on, linda explicación de varios protocolos."
+    - url: "https://github.com/MarianoVilla/MarianoVilla/blob/main/README.md"
+      title: "GitHub: MarianoVilla/MarianoVilla README (Recommended Readings)"
+      quote: "Demystifies blockchain beyond the hype."
+  related:
+    - id: designing-data-intensive-applications
+      reason: "sistemas distribuidos y consenso"
+  isbn: "9781484248461"
+  coverId: 10435039
+
+- id: a-mathematical-theory-of-communication
+  title: "A Mathematical Theory of Communication"
+  authors: ["Claude E. Shannon"]
+  year: 1948
+  kind: paper
+  topics: ["sistemas", "matematicas"]
+  level: 3
+  summary: "Artículo de Claude Shannon que fundó la teoría de la información al introducir el bit y la capacidad de canal."
+  context: "Lo lista en su README como lectura densa pero fundacional; en un stream lo cita al relacionar a Hayek con la información."
+  sources:
+    - url: "https://github.com/MarianoVilla/MarianoVilla/blob/main/README.md"
+      title: "GitHub: MarianoVilla/MarianoVilla README (Recommended Readings)"
+      quote: "Shannon's 1948 paper that started it all. Dense but foundational. (paper, listed under Recommended Readings)"
+    - url: "https://www.youtube.com/watch?v=pdGnLA_E76s&t=1086s"
+      title: "Analizando el famoso ensayo de Hayek."
+      timestamp: "18:06"
+      quote: "en 1948 se publica la teoría matemática de la comunicación de Shannon"
+
+- id: general-system-theory
+  title: "General System Theory"
+  titleEs: "Teoría general de los sistemas"
+  authors: ["Ludwig von Bertalanffy"]
+  year: 1968
+  kind: book
+  topics: ["sistemas"]
+  level: 3
+  summary: "Obra fundacional del enfoque sistémico, donde Bertalanffy propone principios generales aplicables a sistemas biológicos, sociales y técnicos."
+  context: "Lo considera muy importante y lamenta que lo conoció en filosofía y no en la carrera de sistemas, donde se ignora la TGS."
+  sources:
+    - url: "https://www.reddit.com/r/devsarg/comments/1ehmxbm/qué_libros_de_fundamentos_teóricos_de/lg30fw9/"
+      title: "r/devsarg: qué libros de fundamentos teóricos de"
+      quote: "General Systems Theory, de von Bertalanffy. Un libro muy importante."
+    - url: "https://www.youtube.com/watch?v=pbWxlLeg-fs&t=86s"
+      title: "Los mejores libros para aprender a programar."
+      timestamp: "1:26"
+      quote: "no sé por qué no se estudia eso en sistemas es muy importante entender teoría general de sistemas"
+  related:
+    - id: the-use-of-knowledge-in-society
+      reason: "orden espontáneo y sistemas complejos"
+  isbn: "9780807616314"
+  coverId: 5508815
+
+- id: economic-sophisms
+  title: "Economic Sophisms"
+  titleEs: "Sofismas económicos"
+  authors: ["Frédéric Bastiat"]
+  year: 1845
+  kind: book
+  topics: ["economia"]
+  level: 1
+  summary: "Colección de ensayos de Bastiat que refutan falacias proteccionistas, incluida la famosa Petición de los fabricantes de velas."
+  context: "Lo llama \"hermoso libro tan iluminador\" y remite al capítulo de los fabricantes de velas."
+  sources:
+    - url: "https://www.youtube.com/watch?v=p988l0oON3g&t=346s"
+      title: "Hay que cerrar la economía | Falopa Política"
+      timestamp: "5:46"
+      quote: "rediríjanlos amablemente al capítulo 5 de los sofismas económicos de Bastiat... este hermoso libro tan iluminador"
+    - url: "https://www.youtube.com/watch?v=k9txcNp1DSA&t=1676s"
+      title: "Leyendo las notas del parche en Argentina, la reforma laboral."
+      timestamp: "27:56"
+      quote: "citando a Bastiat en sus sofisma económicas. Eh, hermoso, hermoso texto"
+  leadsTo: ["the-use-of-knowledge-in-society", "chaos-theory", "the-struggle-for-liberty"]
+  related:
+    - id: utilitarianism-for-and-against
+      reason: "consecuencias y razonamiento económico"
+  coverId: 5746810
+
+- id: the-use-of-knowledge-in-society
+  title: "The Use of Knowledge in Society"
+  titleEs: "El uso del conocimiento en la sociedad"
+  authors: ["Friedrich A. Hayek"]
+  year: 1945
+  kind: essay
+  topics: ["economia", "sistemas"]
+  level: 2
+  summary: "Ensayo de Hayek (American Economic Review, 1945) que sostiene que el conocimiento está disperso y que los precios lo coordinan mejor que la planificación central."
+  context: "Lo comenta en un stream y lo recomienda \"intensamente\" a quien quiera entender el problema del conocimiento en la economía."
+  sources:
+    - url: "https://www.youtube.com/watch?v=pdGnLA_E76s&t=3349s"
+      title: "Analizando el famoso ensayo de Hayek."
+      timestamp: "55:49"
+      quote: "El uso del conocimiento en la sociedad de Hayek... lo recomiendo intensamente a cualquiera que quiera aprobar el parcial"
+    - url: "https://www.youtube.com/watch?v=VaHOf77HNtg&t=55s"
+      title: "Analyzing Robert P. Murphy's \"Chaos Theory\" | Falopa Política"
+      timestamp: "0:55"
+      quote: "Que me recuerda a el texto de Hayek sobre el uso del conocimiento en la sociedad"
+
+- id: chaos-theory
+  title: "Chaos Theory"
+  authors: ["Robert P. Murphy"]
+  year: 2002
+  kind: book
+  topics: ["economia"]
+  level: 2
+  summary: "Dos ensayos breves (\"Private Law\" y \"Private Defense\") sobre cómo funcionaría un mercado anarcocapitalista de justicia y defensa."
+  context: "Recomienda el texto por interesante y breve aunque aclara que el anarquismo todavía no lo convenció."
+  sources:
+    - url: "https://www.youtube.com/watch?v=VaHOf77HNtg&t=794s"
+      title: "Analyzing Robert P. Murphy's \"Chaos Theory\" | Falopa Política"
+      timestamp: "13:14"
+      quote: "les recomiendo ese texto. Todavía no me no me han convencido."
+    - url: "https://www.youtube.com/watch?v=VaHOf77HNtg&t=0s"
+      title: "Analyzing Robert P. Murphy's \"Chaos Theory\" | Falopa Política"
+      timestamp: "0:00"
+      quote: "Chaos Theory es una interesante lectura. Es un conjunto de dos ensayos, es muy breve"
+  leadsTo: ["democracy-the-god-that-failed"]
+  isbn: "9781933550657"
+  coverId: 12678236
+
+- id: the-struggle-for-liberty
+  title: "The Struggle for Liberty"
+  authors: ["Ralph Raico"]
+  year: 2004
+  kind: course
+  topics: ["economia", "historia"]
+  level: 2
+  summary: "Serie de diez conferencias de Ralph Raico (2004, Mises Institute) sobre la historia del liberalismo clásico; en 2025 se publicó como libro editado por Ryan McMaken."
+  context: "Es su \"libro de la semana\" en un stream: una historia liberal del liberalismo, con simpatías austríacas, que estaba leyendo en ese momento."
+  sources:
+    - url: "https://www.youtube.com/watch?v=W34X4jDHITg&t=635s"
+      title: "El experimento de Milgram y recomendando un par de libros."
+      timestamp: "10:35"
+      quote: "El libro que yo recomiendo esta semana es este, es el que estoy leyendo ahora, The Strugle for Liberty"
+  leadsTo: ["democracy-the-god-that-failed"]
+
+- id: democracy-the-god-that-failed
+  title: "Democracy: The God That Failed"
+  titleEs: "Democracia: el dios que fracasó"
+  authors: ["Hans-Hermann Hoppe"]
+  year: 2001
+  kind: book
+  topics: ["economia"]
+  level: 3
+  summary: "Hoppe critica la democracia y defiende una alternativa libertaria de orden privado."
+  context: "Lo recomienda como libro interesante pero muy extremista, con argumentos que no le fascinan."
+  sources:
+    - url: "https://www.youtube.com/watch?v=vw5_0NqyPNk&t=370s"
+      title: "Encontronazo entre eminencias del liberalismo | Milei vs Hoppe."
+      timestamp: "6:10"
+      quote: "Es un libro interesante, es muy extremista, a mí no me fascinan algunos de los argumentos ... pero sigue siendo un libro interesante"
+  related:
+    - id: la-formacion-del-estado-argentino
+      reason: "Estado, legitimidad y poder político"
+  isbn: "9781412815291"
+  coverId: 13163602
+
+- id: stoicism-a-very-short-introduction
+  title: "Stoicism: A Very Short Introduction"
+  authors: ["Brad Inwood"]
+  year: 2018
+  kind: book
+  topics: ["filosofia"]
+  level: 1
+  summary: "Introducción breve al estoicismo de la serie Very Short Introductions (Oxford)."
+  context: "Lo recomienda como la mejor opción para quien no está acostumbrado a leer filosofía; identificación del título dudosa."
+  sources:
+    - url: "https://www.youtube.com/watch?v=SlYKqCwO6m4&t=4639s"
+      title: "Tierlist de filósofos estoicos. ¿Son como en las redes sociales?"
+      timestamp: "77:19"
+      quote: "Aure Introduction es un poco más introductorio ... si no estás muy ducho en leer libros de filosofía, este sería la mejor opción"
+  leadsTo: ["discourses-and-enchiridion", "letters-to-lucilius", "hymn-of-cleanthes", "lives-of-the-eminent-philosophers"]
+  isbn: "9780198786665"
+  coverId: 8832190
+
+- id: meditations
+  title: "Meditations"
+  authors: ["Marcus Aurelius"]
+  year: 2020
+  kind: book
+  topics: ["filosofia"]
+  level: 1
+  summary: "Notas personales del emperador Marco Aurelio con reflexiones estoicas sobre virtud, muerte y deber."
+  context: "Dice que es buena lectura \"pero hasta ahí\" y le aburre bastante, aunque lo incluye en su bibliografía de estoicismo (recomienda la edición de Gredos)."
+  sources:
+    - url: "https://www.youtube.com/watch?v=SlYKqCwO6m4&t=3804s"
+      title: "Tierlist de filósofos estoicos. ¿Son como en las redes sociales?"
+      timestamp: "63:24"
+      quote: "sus meditaciones son una buena lectura, pero hasta ahí. A mí me aburren bastante las meditaciones de Marco Aurelio"
+    - url: "https://www.youtube.com/watch?v=SlYKqCwO6m4&t=4658s"
+      title: "Tierlist de filósofos estoicos. ¿Son como en las redes sociales?"
+      timestamp: "77:38"
+      quote: "Obviamente las meditaciones de Marco Aurelio"
+  leadsTo: ["discourses-and-enchiridion"]
+  related:
+    - id: mans-search-for-meaning
+      reason: "sentido y resiliencia frente a la adversidad"
+  isbn: "9786071122254"
+
+- id: on-the-shortness-of-life
+  title: "On the Shortness of Life"
+  authors: ["Seneca"]
+  year: 1636
+  kind: essay
+  topics: ["filosofia"]
+  level: 1
+  summary: "Breve tratado de Séneca sobre el buen uso del tiempo."
+  context: "Texto corto y \"realmente recomendable\"; sugiere leerlo primero en su bibliografía estoica."
+  sources:
+    - url: "https://www.youtube.com/watch?v=SlYKqCwO6m4&t=3269s"
+      title: "Tierlist de filósofos estoicos. ¿Son como en las redes sociales?"
+      timestamp: "54:29"
+      quote: "sobre la brevedad de la vida es bastante lindo texto, bastante corto ... realmente recomendable"
+    - url: "https://www.youtube.com/watch?v=F9NbEuEUUHw&t=1344s"
+      title: "Como leer, pero bien."
+      timestamp: "22:24"
+      quote: "These are my notes from the other time I read the little book on the"
+  leadsTo: ["letters-to-lucilius"]
+  isbn: "9786070796210"
+  coverId: 996581
+
+- id: discourses-and-enchiridion
+  title: "Discourses and Enchiridion"
+  titleEs: "Disertaciones por Arriano / Manual"
+  authors: ["Epictetus"]
+  year: 1944
+  kind: book
+  topics: ["filosofia"]
+  level: 2
+  summary: "Enseñanzas de Epicteto recogidas por Arriano, y su Manual (Enquiridión), sobre ética estoica práctica."
+  context: "Dice que no es fácil de leer pero es interesante y buen candidato para estoicismo práctico; recomienda las ediciones de Gredos."
+  sources:
+    - url: "https://www.youtube.com/watch?v=SlYKqCwO6m4&t=3163s"
+      title: "Tierlist de filósofos estoicos. ¿Son como en las redes sociales?"
+      timestamp: "52:43"
+      quote: "no es fácil de leer, es interesante de leer ... Epicteto es probablemente un buen candidato"
+    - url: "https://www.youtube.com/watch?v=SlYKqCwO6m4&t=4664s"
+      title: "Tierlist de filósofos estoicos. ¿Son como en las redes sociales?"
+      timestamp: "77:44"
+      quote: "los discursos de Picteto, arriano era, estaba en lo correcto, el manual o los fragmentos de gredos"
+  isbn: "9788424916282"
+  coverId: 7024260
+
+- id: letters-to-lucilius
+  title: "Letters to Lucilius"
+  authors: ["Seneca"]
+  year: 1611
+  kind: book
+  topics: ["filosofia"]
+  level: 2
+  summary: "Colección de cartas de Séneca a Lucilio con consejos de ética estoica."
+  context: "Resalta su erudición y buena síntesis del estoicismo; lo ubica entre los mejores textos de Séneca."
+  sources:
+    - url: "https://www.youtube.com/watch?v=SlYKqCwO6m4&t=3263s"
+      title: "Tierlist de filósofos estoicos. ¿Son como en las redes sociales?"
+      timestamp: "54:23"
+      quote: "Cca tiene dos textos que leí por lo menos ... las epístolas morales"
+    - url: "https://www.youtube.com/watch?v=SlYKqCwO6m4&t=3396s"
+      title: "Tierlist de filósofos estoicos. ¿Son como en las redes sociales?"
+      timestamp: "56:36"
+      quote: "las epístolas morales hay varios apartados que son importantes también filosóficamente"
+    - url: "https://www.youtube.com/watch?v=F9NbEuEUUHw&t=1416s"
+      title: "Como leer, pero bien."
+      timestamp: "23:36"
+      quote: "the other book I read by Cecca, which is the Moral Epistles to Aid"
+  leadsTo: ["de-finibus", "utilitarianism-for-and-against"]
+  isbn: "9788437638669"
+  coverId: 6074024
+
+- id: hymn-of-cleanthes
+  title: "Hymn to Zeus"
+  authors: ["Cleanthes"]
+  year: -280
+  kind: essay
+  topics: ["filosofia"]
+  level: 2
+  summary: "Poema de unas 39 líneas de Cleantes, escolarca estoico, dedicado a Zeus; casi el único texto estoico antiguo completo."
+  context: "Texto muy corto que sugiere leer acompañado de comentario, para entender sus implicancias filosóficas."
+  sources:
+    - url: "https://www.youtube.com/watch?v=SlYKqCwO6m4&t=4692s"
+      title: "Tierlist de filósofos estoicos. ¿Son como en las redes sociales?"
+      timestamp: "78:12"
+      quote: "El himnous de Cleantes es un texto muy corto, pero podes leerlo para entender también un poco"
+  leadsTo: ["de-finibus"]
+
+- id: lives-of-the-eminent-philosophers
+  title: "Lives of the Eminent Philosophers"
+  titleEs: "Vidas de los filósofos más ilustres"
+  authors: ["Diogenes Laertius"]
+  year: 2018
+  kind: book
+  topics: ["filosofia", "historia"]
+  level: 2
+  summary: "Compilación de Diógenes Laercio con biografías y doctrinas de filósofos griegos."
+  context: "Sugiere leer solo las secciones sobre los estoicos."
+  sources:
+    - url: "https://www.youtube.com/watch?v=SlYKqCwO6m4&t=4683s"
+      title: "Tierlist de filósofos estoicos. ¿Son como en las redes sociales?"
+      timestamp: "78:03"
+      quote: "Podés leerlo. Vas a encontrar mucho, mucho texto sobre muchos filósofos. No necesario que te leas todo"
+  leadsTo: ["the-hellenistic-philosophers"]
+  isbn: "9788441318250"
+  coverId: 10148252
+
+- id: de-finibus
+  title: "De finibus bonorum et malorum"
+  titleEs: "Sobre los fines de los bienes y los males"
+  authors: ["Cicero"]
+  year: 1471
+  kind: book
+  topics: ["filosofia"]
+  level: 3
+  summary: "Diálogo de Cicerón que expone y critica las escuelas epicúrea, estoica y académica sobre el bien supremo."
+  context: "Admite que no lo mencionó antes; dice que es muy bueno y con elevada discusión sobre estoicismo y epicureísmo."
+  sources:
+    - url: "https://www.youtube.com/watch?v=SlYKqCwO6m4&t=4714s"
+      title: "Tierlist de filósofos estoicos. ¿Son como en las redes sociales?"
+      timestamp: "78:34"
+      quote: "Es muy bueno. Tiene una elevada discusión sobre estoicismo, epicurismo y academicismo"
+  leadsTo: ["the-hellenistic-philosophers"]
+  isbn: "9783110962581"
+  coverId: 6486564
+
+- id: utilitarianism-for-and-against
+  title: "Utilitarianism: For and Against"
+  authors: ["J. J. C. Smart", "Bernard Williams"]
+  year: 1973
+  kind: book
+  topics: ["filosofia"]
+  level: 3
+  summary: "Dos ensayos opuestos: Smart defiende el utilitarismo y Williams lo critica."
+  context: "Lo llama excelente y una revisión muy interesante del utilitarismo."
+  sources:
+    - url: "https://www.youtube.com/watch?v=UCycM7WSsxk&t=500s"
+      title: "Como llegue a ser liberal. | Falopa Política"
+      timestamp: "8:20"
+      quote: "Hay un excelente libro que se llama Uy Tiranism for and Against, creo que es una revisión muy muy interesante."
+  isbn: "9780521098229"
+
+- id: the-hellenistic-philosophers
+  title: "The Hellenistic Philosophers"
+  titleEs: "Los filósofos helenísticos"
+  authors: ["A. A. Long", "D. N. Sedley"]
+  year: 1987
+  kind: book
+  topics: ["filosofia"]
+  level: 4
+  summary: "Antología comentada de textos de estoicos, epicúreos y escépticos, de Long y Sedley."
+  context: "Lo llama brillante, clásico y denso; se consigue en español y conviene leerlo entero."
+  sources:
+    - url: "https://www.youtube.com/watch?v=SlYKqCwO6m4&t=4625s"
+      title: "Tierlist de filósofos estoicos. ¿Son como en las redes sociales?"
+      timestamp: "77:05"
+      quote: "Libro es brillante, es un poco denso, se encuentra, se consigue en español"
+  related:
+    - id: the-greeks-kitto
+      reason: "contexto histórico de la Grecia antigua"
+  isbn: "9780521275569"
+  coverId: 332074
+
+- id: the-greeks-kitto
+  title: "The Greeks"
+  titleEs: "Los griegos"
+  authors: ["H. D. F. Kitto"]
+  year: 1950
+  kind: book
+  topics: ["historia"]
+  level: 1
+  summary: "Panorama de la civilización griega clásica y su mentalidad, de H. D. F. Kitto."
+  context: "Se lo dieron en la carrera de filosofía; lo llama \"librazo\", más general e histórico."
+  sources:
+    - url: "https://www.youtube.com/watch?v=SlYKqCwO6m4&t=4734s"
+      title: "Tierlist de filósofos estoicos. ¿Son como en las redes sociales?"
+      timestamp: "78:54"
+      quote: "los griegos de Quito, HDF Kito, es un librazo"
+  leadsTo: ["the-ancient-world-glover"]
+  isbn: "9780140135213"
+  coverId: 9285777
+
+- id: breve-historia-de-los-argentinos
+  title: "Breve historia de los argentinos"
+  authors: ["Félix Luna"]
+  year: 2000
+  kind: book
+  topics: ["historia"]
+  level: 1
+  summary: "Panorama de la historia argentina escrito para el gran público por Félix Luna."
+  context: "Es su elección principal: si tuviera que recomendar un libro de historia argentina, sería este."
+  sources:
+    - url: "https://www.youtube.com/watch?v=h7lsPHFL92c&t=193s"
+      title: "Libros de historia Argentina que TENÉS que leer."
+      timestamp: "3:13"
+      quote: "si tengo que recomendar un libro de historia argentina, probablemente recomendaría ir por por este"
+  leadsTo: ["breve-historia-contemporanea-de-la-argentina", "el-45", "la-patagonia-rebelde"]
+  isbn: "9789507428111"
+
+- id: los-argentinos-lanata
+  title: "Argentinos"
+  authors: ["Jorge Lanata"]
+  year: 2002
+  kind: book
+  topics: ["historia"]
+  level: 1
+  summary: "Crónica periodística de la historia argentina en dos tomos de Jorge Lanata."
+  context: "Le encantó el tomo 2 y siempre le pareció un excelente libro, aunque admite que Lanata es polémico."
+  sources:
+    - url: "https://www.youtube.com/watch?v=h7lsPHFL92c&t=28s"
+      title: "Libros de historia Argentina que TENÉS que leer."
+      timestamp: "0:28"
+      quote: "a mí me encantó de historia argentina, argentinos de Jorge la nata... a mí siempre me pareció un excelente libro"
+  leadsTo: ["operacion-masacre"]
+  isbn: "9788466613385"
+  coverId: 3346402
+
+- id: time-travel-a-history
+  title: "Time Travel: A History"
+  authors: ["James Gleick"]
+  year: 2016
+  kind: book
+  topics: ["historia", "sistemas"]
+  level: 1
+  summary: "Gleick investiga el origen y la evolución cultural de la idea del viaje en el tiempo."
+  context: "Lo suma como el otro libro de Gleick que le gusta (\"dos libros muy lindos\")."
+  sources:
+    - url: "https://www.youtube.com/watch?v=V7NNviAqMh4&t=1453s"
+      title: "Libros de autoayuda no TAN malos."
+      timestamp: "24:13"
+      quote: "Time, ese también. Time travel history. Dos libros muy lindos."
+  isbn: "9780008207670"
+  coverId: 7886899
+
+- id: the-ancient-world-glover
+  title: "The Ancient World"
+  authors: ["T. R. Glover"]
+  year: 1935
+  kind: book
+  topics: ["historia"]
+  level: 2
+  summary: "Introducción de T. R. Glover a la historia del mundo antiguo mediterráneo, de Grecia a Roma."
+  context: "Es su libro favorito sobre Grecia desde chico: lo leyó unas cinco veces y perdió su copia física."
+  sources:
+    - url: "https://www.youtube.com/watch?v=SlYKqCwO6m4&t=4724s"
+      title: "Tierlist de filósofos estoicos. ¿Son como en las redes sociales?"
+      timestamp: "78:44"
+      quote: "Mi libro favorito de Grecia desde muy chico, lo leí como cinco veces"
+  isbn: "9781107695634"
+  coverId: 9280129
+
+- id: breve-historia-contemporanea-de-la-argentina
+  title: "Breve historia contemporánea de la Argentina"
+  authors: ["Luis Alberto Romero"]
+  year: 1994
+  kind: book
+  topics: ["historia"]
+  level: 2
+  summary: "Síntesis de la historia argentina del siglo XX, de Luis Alberto Romero."
+  context: "Uno de los dos que más le gustan: \"muy lindo libro de historia\"."
+  sources:
+    - url: "https://www.youtube.com/watch?v=h7lsPHFL92c&t=104s"
+      title: "Libros de historia Argentina que TENÉS que leer."
+      timestamp: "1:44"
+      quote: "hay dos que me gustan... el primero es de Luis Alberto Romero... muy lindo libro de historia"
+  leadsTo: ["la-formacion-del-estado-argentino"]
+  isbn: "9789505579242"
+  coverId: 1052132
+
+- id: el-45
+  title: "El 45"
+  authors: ["Félix Luna"]
+  year: 1969
+  kind: book
+  topics: ["historia"]
+  level: 2
+  summary: "Crónica de Félix Luna sobre 1945, el año del surgimiento del peronismo."
+  context: "Lo llama \"librazo\" sobre el origen del peronismo."
+  sources:
+    - url: "https://www.youtube.com/watch?v=h7lsPHFL92c&t=217s"
+      title: "Libros de historia Argentina que TENÉS que leer."
+      timestamp: "3:37"
+      quote: "tiene otro librazo de historia Argentina que es el 45, ¿no? Que es sobre todo el asunto del peronismo"
+  isbn: "9789500712132"
+
+- id: la-patagonia-rebelde
+  title: "La Patagonia rebelde"
+  authors: ["Osvaldo Bayer"]
+  year: 1980
+  kind: book
+  topics: ["historia"]
+  level: 2
+  summary: "Investigación de Osvaldo Bayer sobre las huelgas rurales y su represión en la Patagonia (1920-21)."
+  context: "Lo recomienda como lectura que \"te hace hervir la sangre\", aclarando que tiene sesgo."
+  sources:
+    - url: "https://www.youtube.com/watch?v=UCycM7WSsxk&t=106s"
+      title: "Como llegue a ser liberal. | Falopa Política"
+      timestamp: "1:46"
+      quote: "leyendo, por ejemplo, la Patagonia Rebelde, recuerdo que me llevé un pequeño descontento ya con Irigoyen"
+    - url: "https://www.youtube.com/watch?v=h7lsPHFL92c&t=430s"
+      title: "Libros de historia Argentina que TENÉS que leer."
+      timestamp: "7:10"
+      quote: "Hay otro libro que a mí me gusta mucho... es la Patagonia rebelde de Bayer. Bastante interesante lectura"
+  isbn: "9789504909453"
+  coverId: 13223189
+
+- id: operacion-masacre
+  title: "Operación Masacre"
+  authors: ["Rodolfo Walsh"]
+  year: 1969
+  kind: book
+  topics: ["historia"]
+  level: 2
+  summary: "Investigación periodística de Rodolfo Walsh sobre los fusilamientos de José León Suárez (1956)."
+  context: "Dice que es \"bastante lindo como libro\" y que da inicio al género del periodismo histórico."
+  sources:
+    - url: "https://www.youtube.com/watch?v=h7lsPHFL92c&t=457s"
+      title: "Libros de historia Argentina que TENÉS que leer."
+      timestamp: "7:37"
+      quote: "Operación Masacre... Otro bastante lindo como libro. Es el libro que un poco le da inicio al género"
+  related:
+    - id: eichmann-in-jerusalem
+      reason: "violencia estatal y responsabilidad individual"
+  isbn: "9789505153527"
+  coverId: 5407660
+
+- id: la-formacion-del-estado-argentino
+  title: "La formación del Estado argentino"
+  authors: ["Oscar Oszlak"]
+  year: 2004
+  kind: book
+  topics: ["historia"]
+  level: 3
+  summary: "Estudio de Oscar Oszlak sobre cómo se construyó el Estado nacional argentino."
+  context: "Lo leyó en la universidad; \"interesante\", algo sesgado hacia la izquierda pero valioso."
+  sources:
+    - url: "https://www.youtube.com/watch?v=h7lsPHFL92c&t=308s"
+      title: "Libros de historia Argentina que TENÉS que leer."
+      timestamp: "5:08"
+      quote: "Interesante libro sobre la formación del Estado... Poquito más sesgadito hacia el lado zurdo... pero valioso igual"
+  isbn: "9789509122871"
+  coverId: 4972742
+
+- id: eichmann-in-jerusalem
+  title: "Eichmann in Jerusalem"
+  titleEs: "Eichmann en Jerusalén: un estudio acerca de la banalidad del mal"
+  authors: ["Hannah Arendt"]
+  year: 1963
+  kind: book
+  topics: ["historia", "filosofia"]
+  level: 3
+  summary: "Crónica del juicio a Adolf Eichmann en Jerusalén (1961). Arendt desarrolla la idea de la \"banalidad del mal\" al retratar a un burócrata antes que a un monstruo."
+  context: "Lo llama \"librazo\" y lo vincula con Milgram: tras leerlo concluye que Eichmann no era un simple autómata."
+  sources:
+    - url: "https://www.youtube.com/watch?v=W34X4jDHITg&t=129s"
+      title: "El experimento de Milgram y recomendando un par de libros."
+      timestamp: "2:09"
+      quote: "el liberazo de Arentman en Jerusalén es el de la banalidad del mal"
+  related:
+    - id: obedience-to-authority
+      reason: "obediencia a la autoridad y banalidad del mal"
+  isbn: "9780140044508"
+  coverId: 97789
+
+- id: atomic-habits
+  title: "Atomic Habits"
+  titleEs: "Hábitos atómicos"
+  authors: ["James Clear"]
+  year: 2018
+  kind: book
+  topics: ["desarrollo-personal"]
+  level: 1
+  summary: "James Clear presenta un sistema práctico para formar buenos hábitos y eliminar los malos mediante cambios pequeños y constantes."
+  context: "Es el único libro de autoayuda que recomendaría honestamente; lo ubica primero en su lista y lo regaló a su pareja."
+  sources:
+    - url: "https://www.youtube.com/watch?v=V7NNviAqMh4&t=4135s"
+      title: "Libros de autoayuda no TAN malos."
+      timestamp: "68:55"
+      quote: "es el único libro de toda esta categoría de libros de, entre comillas, autoayuda que yo honestamente recomendaría."
+    - url: "https://www.youtube.com/watch?v=wgtGulLPwE8&t=64s"
+      title: "Libros de AUTOAYUDA que SÍ SIRVEN."
+      timestamp: "1:04"
+      quote: "El primer libro de la lista es el más obvio de todos y se trata de Hábitos Atómicos... Me gustó mucho en su momento"
+  isbn: "9780735211292"
+  coverId: 12539702
+
+- id: 12-rules-for-life
+  title: "12 Rules for Life"
+  titleEs: "12 reglas para vivir: un antídoto al caos"
+  authors: ["Jordan B. Peterson"]
+  year: 2018
+  kind: book
+  topics: ["desarrollo-personal"]
+  level: 1
+  summary: "Jordan Peterson propone doce principios para ordenar la vida personal, mezclando psicología, filosofía y religión."
+  context: "Lo recomienda pese a que Peterson le parece \"medio chanta\": es conciso y varias reglas son buenas; complementa a Hábitos atómicos."
+  sources:
+    - url: "https://www.youtube.com/watch?v=V7NNviAqMh4&t=354s"
+      title: "Libros de autoayuda no TAN malos."
+      timestamp: "5:54"
+      quote: "no es mal libro en mi opinión. Es un libro conciso. Efectivamente tiene 12 reglas para la vida. Varias de esas reglas son buenas."
+    - url: "https://www.youtube.com/watch?v=wgtGulLPwE8&t=292s"
+      title: "Libros de AUTOAYUDA que SÍ SIRVEN."
+      timestamp: "4:52"
+      quote: "me pareció sorprendentemente útil... por eso está en la lista complementando a Hábitos Atómicos"
+  isbn: "9780345816023"
+  coverId: 8131760
+
+- id: mindset
+  title: "Mindset"
+  titleEs: "Mindset: la actitud del éxito"
+  authors: ["Carol S. Dweck"]
+  year: 2006
+  kind: book
+  topics: ["desarrollo-personal"]
+  level: 1
+  leadsTo: ["fooled-by-randomness"]
+  summary: "Carol Dweck distingue la mentalidad fija de la de crecimiento y su efecto en el aprendizaje y el logro."
+  context: "En un stream lo pone en el nivel medio (\"cringe\" pero con una enseñanza útil); en el video de autoayuda lo recomienda sin nombrarlo."
+  sources:
+    - url: "https://www.youtube.com/watch?v=V7NNviAqMh4&t=1760s"
+      title: "Libros de autoayuda no TAN malos."
+      timestamp: "29:20"
+      quote: "lo pondría en me porque es uno de esos libros cuya enseñanza principal y general la podes sacar. Bastante sencillo."
+    - url: "https://www.youtube.com/watch?v=wgtGulLPwE8&t=472s"
+      title: "Libros de AUTOAYUDA que SÍ SIRVEN."
+      timestamp: "7:52"
+      quote: "la idea de mindset también, que es un concepto que aparece en otro libro bastante bueno... también te lo recomiendo"
+  isbn: "9780345472328"
+  coverId: 746414
+
+- id: mans-search-for-meaning
+  title: "Trotzdem Ja zum Leben sagen"
+  titleEs: "El hombre en busca de sentido"
+  authors: ["Viktor E. Frankl"]
+  year: 1946
+  kind: book
+  topics: ["desarrollo-personal", "filosofia"]
+  level: 1
+  leadsTo: ["obedience-to-authority"]
+  summary: "Frankl relata su experiencia en campos de concentración y presenta la logoterapia, centrada en encontrar sentido."
+  context: "Lo leyó esa semana y lo elogia espontáneamente: \"muy lindo libro, me pareció hermoso\"."
+  sources:
+    - url: "https://www.youtube.com/watch?v=V7NNviAqMh4&t=798s"
+      title: "Libros de autoayuda no TAN malos."
+      timestamp: "13:18"
+      quote: "un libro muy lindo que leí hace poco, esta semana, de Víctor Frankle ... Muy muy lindo libro, me pareció hermoso."
+  isbn: "9783641059033"
+  coverId: 8516506
+
+- id: flinch
+  title: "Flinch"
+  authors: ["Julien Smith"]
+  year: 2011
+  kind: book
+  topics: ["desarrollo-personal"]
+  level: 1
+  summary: "Libro muy breve y gratuito de Julien Smith sobre superar el miedo que nos frena a actuar."
+  context: "Lo pone en el nivel más alto por costo-beneficio: se lee en 45 minutos y es excelente."
+  sources:
+    - url: "https://www.youtube.com/watch?v=V7NNviAqMh4&t=2167s"
+      title: "Libros de autoayuda no TAN malos."
+      timestamp: "36:07"
+      quote: "de Flinch es un muy buen libro, costo beneficio es excelente, es un libro super resumido, lo podés leer en 45 minutos"
+  coverId: 11443316
+
+- id: deep-work
+  title: "Deep Work"
+  titleEs: "Céntrate"
+  authors: ["Cal Newport"]
+  year: 2016
+  kind: book
+  topics: ["desarrollo-personal"]
+  level: 1
+  summary: "Cal Newport defiende el trabajo profundo, sin distracciones, como habilidad escasa y valiosa, y ofrece reglas para cultivarlo."
+  context: "Lo considera de los mejores del género: \"muy buen libro\", excelente complemento para evitar distracciones."
+  sources:
+    - url: "https://www.youtube.com/watch?v=V7NNviAqMh4&t=3713s"
+      title: "Libros de autoayuda no TAN malos."
+      timestamp: "61:53"
+      quote: "Este es muy buen libro, realmente no tengo mucho más para decir."
+    - url: "https://www.youtube.com/watch?v=wgtGulLPwE8&t=556s"
+      title: "Libros de AUTOAYUDA que SÍ SIRVEN."
+      timestamp: "9:16"
+      quote: "Deep Work y cualquiera de ese mismo autor... Realmente es muy bueno"
+  related:
+    - id: peopleware
+      reason: "concentración y entornos de trabajo productivos"
+  isbn: "9781455586660"
+  coverId: 7988607
+
+- id: digital-minimalism
+  title: "Digital Minimalism"
+  titleEs: "Minimalismo digital: en defensa de la atención en un mundo ruidoso"
+  authors: ["Cal Newport"]
+  year: 2019
+  kind: book
+  topics: ["desarrollo-personal"]
+  level: 1
+  summary: "Cal Newport propone una filosofía de uso deliberado de la tecnología para recuperar la atención."
+  context: "Lo menciona junto a Deep Work como \"realmente muy bueno\" sin estar seguro del título."
+  sources:
+    - url: "https://www.youtube.com/watch?v=V7NNviAqMh4&t=3656s"
+      title: "Libros de autoayuda no TAN malos."
+      timestamp: "60:56"
+      quote: "Newportk. Siempre me sale Newman. K Newman, que también es el escritor de minimalismo digital."
+    - url: "https://www.youtube.com/watch?v=wgtGulLPwE8&t=560s"
+      title: "Libros de AUTOAYUDA que SÍ SIRVEN."
+      timestamp: "9:20"
+      quote: "cualquiera de ese mismo autor, también está uno que se llama creo que minimalismo digital"
+  isbn: "9780525536512"
+  coverId: 8507540
+
+- id: how-to-win-friends-and-influence-people
+  title: "How to Win Friends and Influence People"
+  titleEs: "Cómo ganar amigos e influir sobre las personas"
+  authors: ["Dale Carnegie"]
+  year: 1936
+  kind: book
+  topics: ["desarrollo-personal"]
+  level: 1
+  summary: "Clásico de Dale Carnegie con principios para relacionarse y persuadir."
+  context: "Lo ubica en el nivel más alto: le ayudó con la ansiedad social y lo recomienda como lectura de habilidades blandas."
+  sources:
+    - url: "https://www.reddit.com/r/devsarg/comments/1ggqbhp/habilidades_blandas/luw7qug/"
+      title: "r/devsarg: habilidades blandas"
+      quote: "How to Win Friends & Influence People (es medio como recomendar \"Padre Rico/Padre Pobre\", pero a mí me parece un buen libro)."
+    - url: "https://www.youtube.com/watch?v=V7NNviAqMh4&t=3442s"
+      title: "Libros de autoayuda no TAN malos."
+      timestamp: "57:22"
+      quote: "Realmente yo considero que es un muy buen libro. Tiene cosas muy útiles, muy copadas, está bien escrito."
+    - url: "https://www.youtube.com/watch?v=oQcDGpsUgNk&t=241s"
+      title: "Más allá del código | 3 habilidades para ser mejor programador"
+      timestamp: "4:01"
+      quote: "puedes estudiar Si querés How to make Friends and influence people del cary que es un clásico"
+    - url: "https://www.youtube.com/watch?v=wgtGulLPwE8&t=535s"
+      title: "Libros de AUTOAYUDA que SÍ SIRVEN."
+      timestamp: "8:55"
+      quote: "me ayudó bastante a lidiar con la ansiedad social... Es un libro muy sencillo, muy copado"
+  related:
+    - id: youre-not-listening
+      reason: "escuchar y persuadir"
+  isbn: "9780671027032"
+  coverId: 13314878
+
+- id: college-success
+  title: "College Success"
+  authors: ["Amy Baldwin"]
+  year: 2017
+  kind: textbook
+  topics: ["desarrollo-personal"]
+  level: 1
+  summary: "Manual gratuito de OpenStax para estudiantes universitarios: técnicas de estudio, toma de notas, gestión del tiempo y bienestar."
+  context: "Lo ve como un manual de supervivencia académica muy útil; el autor exacto lo duda pero lo recomienda para estudiar."
+  sources:
+    - url: "https://www.youtube.com/watch?v=V7NNviAqMh4&t=2638s"
+      title: "Libros de autoayuda no TAN malos."
+      timestamp: "43:58"
+      quote: "A este sí lo recomendé en el video ... Es un libro que está orientado a la vida académica, a estudiar"
+    - url: "https://www.youtube.com/watch?v=wgtGulLPwE8&t=445s"
+      title: "Libros de AUTOAYUDA que SÍ SIRVEN."
+      timestamp: "7:25"
+      quote: "me gustó mucho este libro que se llama College Success... en general es un buen manual de supervivencia académico"
+  leadsTo: ["karpicke-retrieval-practice-papers"]
+  isbn: "9781640323490"
+  coverId: 15113587
+
+- id: how-to-win-every-argument
+  title: "How to Win Every Argument"
+  authors: ["Madsen Pirie"]
+  year: 2007
+  kind: book
+  topics: ["desarrollo-personal", "filosofia"]
+  level: 1
+  summary: "Madsen Pirie repasa falacias lógicas y técnicas retóricas, tanto para argumentar como para detectar malos argumentos."
+  context: "Aparece en su lista de notas de lectura, sin comentarios."
+  isbn: "9780826490063"
+
+- id: win-every-argument
+  title: "Win Every Argument"
+  authors: ["Mehdi Hasan"]
+  year: 2023
+  kind: book
+  topics: ["desarrollo-personal", "oficio"]
+  level: 1
+  summary: "Mehdi Hasan ofrece un manual de debate, persuasión y oratoria basado en su experiencia como periodista y polemista."
+  context: "Aparece en su lista de notas de lectura, sin comentarios."
+  isbn: "9781250853462"
+  coverId: 12688074
+
+- id: fooled-by-randomness
+  title: "Fooled by Randomness"
+  titleEs: "¿Existe la suerte? Engañados por el azar"
+  authors: ["Nassim Nicholas Taleb"]
+  year: 2001
+  kind: book
+  topics: ["desarrollo-personal", "matematicas"]
+  level: 2
+  summary: "Taleb explora el papel del azar en los mercados y la vida, y nuestros sesgos al explicar los éxitos."
+  context: "Le parece buen libro con enseñanzas copadas, aunque le cansa la personalidad de Taleb y sus ataques a la filosofía."
+  sources:
+    - url: "https://www.youtube.com/watch?v=V7NNviAqMh4&t=2879s"
+      title: "Libros de autoayuda no TAN malos."
+      timestamp: "47:59"
+      quote: "Es un libro lindo, no es feo, el chavón no escribe mal, pero sí que me parece como que su personalidad me terminó cansando."
+    - url: "https://www.youtube.com/watch?v=wgtGulLPwE8&t=580s"
+      title: "Libros de AUTOAYUDA que SÍ SIRVEN."
+      timestamp: "9:40"
+      quote: "tiene algunas enseñanzas copadas y me pareció un buen libro"
+  related:
+    - id: the-use-of-knowledge-in-society
+      reason: "límites del conocimiento y la planificación"
+    - id: how-to-fuck-up-your-startup
+      reason: "azar y causalidad en el éxito y el fracaso"
+  isbn: "9780141930237"
+  coverId: 855791
+
+- id: obedience-to-authority
+  title: "Obedience to Authority"
+  titleEs: "Obediencia a la autoridad: un punto de vista experimental"
+  authors: ["Stanley Milgram"]
+  year: 1974
+  kind: book
+  topics: ["historia", "desarrollo-personal"]
+  level: 2
+  leadsTo: ["eichmann-in-jerusalem"]
+  summary: "Milgram describe sus experimentos en Yale sobre obediencia, donde personas comunes aplicaban supuestas descargas eléctricas por orden de una autoridad. Analiza por qué se obedece aun causando daño."
+  context: "Lo recomienda como lectura breve e interesante sobre obediencia, junto a Eichmann en Jerusalén; distingue el paper original del libro más largo."
+  sources:
+    - url: "https://www.youtube.com/watch?v=W34X4jDHITg&t=113s"
+      title: "El experimento de Milgram y recomendando un par de libros."
+      timestamp: "1:53"
+      quote: "el librito que hizo el tipo este sobre eso es muy interesante"
+    - url: "https://www.youtube.com/watch?v=W34X4jDHITg&t=516s"
+      title: "El experimento de Milgram y recomendando un par de libros."
+      timestamp: "8:36"
+      quote: "es superinesante el paper de Milgram"
+  isbn: "9780061765216"
+  coverId: 723208
+
+- id: karpicke-retrieval-practice-papers
+  title: "Test-Enhanced Learning"
+  authors: ["Henry L. Roediger III", "Jeffrey D. Karpicke"]
+  year: 2006
+  kind: paper
+  topics: ["desarrollo-personal"]
+  level: 3
+  summary: "Artículo de Roediger y Karpicke (Psychological Science, 2006) que muestra que rendir pruebas mejora la retención a largo plazo (efecto de prueba)."
+  context: "Muestra el paper de 2006 y dice \"muy buen paper, lo recomiendo\"; también menciona uno de 2011 de Karpicke (título exacto inferido)."
+  sources:
+    - url: "https://www.youtube.com/watch?v=F9NbEuEUUHw&t=650s"
+      title: "Como leer, pero bien."
+      timestamp: "10:50"
+      quote: "It's from 2006. Very good paper, I recommend it."
+
+- id: the-lean-startup
+  title: "The Lean Startup"
+  titleEs: "El método Lean Startup"
+  authors: ["Eric Ries"]
+  year: 2011
+  kind: book
+  topics: ["startups"]
+  level: 1
+  summary: "Eric Ries propone construir startups con ciclos cortos de experimentación (construir-medir-aprender) en lugar de planificar en cascada."
+  context: "Dice que es muy bueno pero que es el obvio que todos recomiendan."
+  sources:
+    - url: "https://github.com/MarianoVilla/MarianoVilla/blob/main/README.md"
+      title: "GitHub: MarianoVilla/MarianoVilla README (Recommended Readings)"
+      quote: "A must-read for anyone who wants to build a startup. It's a bit outdated, but the principles are still valid."
+    - url: "https://www.youtube.com/watch?v=ESzZ45vYNyo&t=151s"
+      title: "Libros para ser mejor gordo empresario. #fyp #programacion #clips"
+      timestamp: "2:31"
+      quote: "Este es muy bueno."
+  leadsTo: ["how-to-fuck-up-your-startup"]
+  isbn: "9780307887894"
+  coverId: 7104760
+
+- id: the-startup-playbook
+  title: "The Startup Playbook"
+  authors: ["David S. Kidder"]
+  year: 2013
+  kind: book
+  topics: ["startups"]
+  level: 1
+  summary: "Entrevistas a fundadores de startups de rápido crecimiento con lecciones prácticas, de David Kidder."
+  context: "Es el tercero de su lista de libros de emprendimiento que le gustaron bastante."
+  sources:
+    - url: "https://www.youtube.com/watch?v=ESzZ45vYNyo&t=155s"
+      title: "Libros para ser mejor gordo empresario. #fyp #programacion #clips"
+      timestamp: "2:35"
+      quote: "Tercer libro que a mí me gustó bastante es The Startup Playbook."
+  leadsTo: ["how-to-fuck-up-your-startup"]
+  isbn: "9781452105048"
+  coverId: 12177932
+
+- id: the-unfair-advantage
+  title: "The Unfair Advantage"
+  authors: ["Ash Ali", "Hasan Kubba"]
+  year: 2020
+  kind: book
+  topics: ["startups"]
+  level: 1
+  summary: "Ali y Kubba sostienen que cada persona tiene ventajas injustas (contactos, aptitudes, circunstancias) que puede usar para emprender."
+  context: "Dice que no le gusta tanto como libro (\"muy bro empresario\") pero la idea general está buena; lo menciona como honorífico."
+  sources:
+    - url: "https://www.youtube.com/watch?v=ESzZ45vYNyo&t=85s"
+      title: "Libros para ser mejor gordo empresario. #fyp #programacion #clips"
+      timestamp: "1:25"
+      quote: "The UNF Advantage, que no me gusta mucho como libro, pero la idea general está buena"
+    - url: "https://www.youtube.com/watch?v=V7NNviAqMh4&t=1239s"
+      title: "Libros de autoayuda no TAN malos."
+      timestamp: "20:39"
+      quote: "es un libro copado, si quieren pueden leerlo si tienen el aguante. A mí me pareció muy, no sé, muy bro empresario"
+    - url: "https://www.youtube.com/watch?v=wgtGulLPwE8&t=148s"
+      title: "Libros de AUTOAYUDA que SÍ SIRVEN."
+      timestamp: "2:28"
+      quote: "Hay otro libro que es muy bueno en este sentido... que es eh The UNF Advantage"
+  isbn: "9781788167543"
+  coverId: 14845030
+
+- id: how-to-fuck-up-your-startup
+  title: "How to F*ck Up Your Startup"
+  authors: ["Kim Hvidkjaer"]
+  year: 2022
+  kind: book
+  topics: ["startups"]
+  level: 2
+  summary: "Kim Hvidkjaer analiza las causas por las que fracasan la mayoría de las startups y cómo evitarlas."
+  context: "Le gusta porque se centra en el fracaso (sin sesgo de supervivencia) y lo recomienda para emprender."
+  sources:
+    - url: "https://github.com/MarianoVilla/MarianoVilla/blob/main/README.md"
+      title: "GitHub: MarianoVilla/MarianoVilla README (Recommended Readings)"
+      quote: "Very funny and insightful startups for those who learn from mistakes (i.e., everyone)."
+    - url: "https://www.youtube.com/watch?v=ESzZ45vYNyo&t=22s"
+      title: "Libros para ser mejor gordo empresario. #fyp #programacion #clips"
+      timestamp: "0:22"
+      quote: "How to Fuck Up Your Startup apparently es un buen libro en ese sentido. Me gusta este libro porque se centra en el fracaso"
+  isbn: "9781637740590"
+
+- id: joel-on-software
+  title: "Joel on Software"
+  authors: ["Joel Spolsky"]
+  year: 2004
+  kind: book
+  topics: ["oficio"]
+  level: 1
+  summary: "Ensayos de Joel Spolsky sobre desarrollo de software, gestión de equipos y la industria."
+  context: "Expresa \"amor eterno\" por su estilo irreverente; lo recomienda para liderazgo y trato con personas."
+  sources:
+    - url: "https://www.reddit.com/r/devsarg/comments/1ehmxbm/qué_libros_de_fundamentos_teóricos_de/lg30fw9/"
+      title: "r/devsarg: qué libros de fundamentos teóricos de"
+      quote: "Amor eterno a Joel Spolsky"
+    - url: "https://www.reddit.com/r/devsarg/comments/1ggqbhp/habilidades_blandas/luw7qug/"
+      title: "r/devsarg: habilidades blandas"
+      quote: "Joel On Software (son dos libros AFAIK...)"
+    - url: "https://github.com/MarianoVilla/MarianoVilla/blob/main/README.md"
+      title: "GitHub: MarianoVilla/MarianoVilla README (Recommended Readings)"
+      quote: "Blog-turned-book that aged like fine wine."
+    - url: "https://www.youtube.com/watch?v=pbWxlLeg-fs&t=410s"
+      title: "Los mejores libros para aprender a programar."
+      timestamp: "6:50"
+      quote: "the pragmatic programmer Jo on Software que también es otro que ... es un poco más para ser un buen líder"
+    - url: "https://www.youtube.com/watch?v=oQcDGpsUgNk&t=241s"
+      title: "Más allá del código | 3 habilidades para ser mejor programador"
+      timestamp: "4:01"
+      quote: "peopleware y J software estos últimos dos son relacionados al management de proyectos de software"
+  leadsTo: ["peopleware", "the-mythical-man-month", "clean-code"]
+  isbn: "9781590593899"
+  coverId: 861359
+
+- id: soft-skills
+  title: "Soft Skills"
+  authors: ["John Z. Sonmez"]
+  year: 2015
+  kind: book
+  topics: ["oficio"]
+  level: 1
+  summary: "John Sonmez cubre carrera, productividad, marca personal y finanzas para desarrolladores."
+  context: "Es su libro favorito de gestión de carrera y freelancing: \"librazo\" con mucha data, aunque se vuelve denso."
+  sources:
+    - url: "https://github.com/MarianoVilla/MarianoVilla/blob/main/README.md"
+      title: "GitHub: MarianoVilla/MarianoVilla README (Recommended Readings)"
+      quote: "I absolutely love this book, it has a ton of useful tips for developers and non-devs alike. (author inferred from title)"
+    - url: "https://www.youtube.com/watch?v=qVUgWXcKvoM&t=42s"
+      title: "NO LEAS ESTE LIBRO. #algoritmo #programacion #fyp"
+      timestamp: "0:42"
+      quote: "soft skills es un librazo, tiene una banda de data interesante para todo lo que es manejar tu carrera"
+    - url: "https://www.youtube.com/watch?v=-CtXS2mv6t8&t=90s"
+      title: "El freelance es clave. #fyp #dev #freelance #programacion #clips #libros"
+      timestamp: "1:30"
+      quote: "Mi libro favorito hace tiempo de eso es de John Sommes, se llama Soft Skills. Este excelente libro"
+  leadsTo: ["the-pragmatic-programmer"]
+  isbn: "9781617292392"
+  coverId: 7443191
+
+- id: how-to-present-to-absolutely-anyone
+  title: "How to Present to Absolutely Anyone"
+  authors: ["Mark Rhodes"]
+  year: 2018
+  kind: book
+  topics: ["oficio", "desarrollo-personal"]
+  level: 1
+  summary: "Guía de Mark Rhodes para hablar en público y presentar con confianza en cualquier situación."
+  context: "Solo aparece en su lista de notas sin comentario; no hay fuente de video."
+  isbn: "9780857087737"
+
+- id: youre-not-listening
+  title: "You're Not Listening"
+  titleEs: "No me estás escuchando"
+  authors: ["Kate Murphy"]
+  year: 2020
+  kind: book
+  topics: ["oficio", "desarrollo-personal"]
+  level: 1
+  summary: "Kate Murphy explica por qué escuchamos mal y cómo escuchar mejor."
+  context: "Aparece en su lista de lecturas de habilidades blandas en Reddit."
+  sources:
+    - url: "https://www.reddit.com/r/devsarg/comments/1ggqbhp/habilidades_blandas/luw7qug/"
+      title: "r/devsarg: habilidades blandas"
+      quote: "You're Not Listening."
+  isbn: "9781250297198"
+  coverId: 9261583
+
+- id: the-pragmatic-programmer
+  title: "The Pragmatic Programmer"
+  titleEs: "El programador pragmático"
+  authors: ["Andrew Hunt", "David Thomas"]
+  year: 1999
+  kind: book
+  topics: ["oficio"]
+  level: 2
+  summary: "Consejos prácticos de Hunt y Thomas sobre oficio, diseño y hábitos para ser mejor programador."
+  context: "Lo ve como clásico y lectura para ser mejor líder/profesional; insiste en la edición del 20.º aniversario por un error en la explicación de DRY de la original."
+  sources:
+    - url: "https://www.reddit.com/r/devsarg/comments/1ehmxbm/qué_libros_de_fundamentos_teóricos_de/lg30fw9/"
+      title: "r/devsarg: qué libros de fundamentos teóricos de"
+      quote: "The Pragmatic Programmer. Un clásico."
+    - url: "https://github.com/MarianoVilla/MarianoVilla/blob/main/README.md"
+      title: "GitHub: MarianoVilla/MarianoVilla README (Recommended Readings)"
+      quote: "The 20th anniversary edition is a must-read IMO."
+    - url: "https://www.youtube.com/watch?v=pbWxlLeg-fs&t=410s"
+      title: "Los mejores libros para aprender a programar."
+      timestamp: "6:50"
+      quote: "the pragmatic programmer Jo on Software que también es otro que ... es un poco más para ser un buen líder"
+    - url: "https://www.youtube.com/watch?v=qVUgWXcKvoM&t=5s"
+      title: "NO LEAS ESTE LIBRO. #algoritmo #programacion #fyp"
+      timestamp: "0:05"
+      quote: "si ya tenés trabajo y querés mejorar como profesional de Pragmic Programmer. Tiene que ser sí o sí la edición del 20 aniversario"
+  leadsTo: ["design-patterns-gof"]
+  isbn: "9780201616224"
+  coverId: 10143650
+
+- id: clean-code
+  title: "Clean Code"
+  titleEs: "Código limpio"
+  authors: ["Robert C. Martin"]
+  year: 2008
+  kind: book
+  topics: ["oficio"]
+  level: 2
+  summary: "Robert C. Martin presenta principios y prácticas para escribir código legible y mantenible."
+  context: "Le sigue pareciendo lindo si no se dogmatiza y se atiende a las ideas más que a los ejemplos, que son bastante malos."
+  sources:
+    - url: "https://www.reddit.com/r/devsarg/comments/1ehmxbm/qué_libros_de_fundamentos_teóricos_de/lg30fw9/"
+      title: "r/devsarg: qué libros de fundamentos teóricos de"
+      quote: "Clean Code me sigue pareciendo lindo, sobre todo si no dogmatizás... los ejemplos, que son bastante malos."
+    - url: "https://www.youtube.com/watch?v=zqWr09dmgaM&t=247s"
+      title: "Forobardo de la semana: \"Un senior con el sueldo de un JR.\""
+      timestamp: "4:07"
+      quote: "parece una persona que no lee libros técnicos tratando de fingir que lee libros técnicos porque leyó kin code"
+  leadsTo: ["design-patterns-gof", "domain-driven-design"]
+  isbn: "9780132350884"
+  coverId: 8065615
+
+- id: peopleware
+  title: "Peopleware"
+  authors: ["Tom DeMarco", "Timothy Lister"]
+  year: 1987
+  kind: book
+  topics: ["oficio"]
+  level: 2
+  summary: "Clásico de DeMarco y Lister sobre que los problemas de los proyectos de software son sobre todo humanos."
+  context: "Lo recomienda para habilidades blandas y gestión de proyectos de software, junto a Joel on Software."
+  sources:
+    - url: "https://www.reddit.com/r/devsarg/comments/1ggqbhp/habilidades_blandas/luw7qug/"
+      title: "r/devsarg: habilidades blandas"
+      quote: "Peopleware: Productive Projects and Teams."
+    - url: "https://www.youtube.com/watch?v=oQcDGpsUgNk&t=241s"
+      title: "Más allá del código | 3 habilidades para ser mejor programador"
+      timestamp: "4:01"
+      quote: "también peopleware y J software estos últimos dos son relacionados al management de proyectos de software ... te van a dar un montón de información útil"
+  isbn: "9780932633057"
+  coverId: 711859
+
+- id: the-mythical-man-month
+  title: "The Mythical Man-Month"
+  titleEs: "El mítico hombre-mes: ensayos sobre ingeniería de software"
+  authors: ["Frederick P. Brooks Jr."]
+  year: 1975
+  kind: book
+  topics: ["oficio"]
+  level: 2
+  summary: "Colección de ensayos de Brooks sobre gestión de proyectos de software; su tesis central es que sumar gente a un proyecto atrasado lo atrasa más."
+  context: "Recomienda en especial el ensayo (sobrecarga de comunicación al crecer el equipo), útil al organizar equipos, y le interesa el libro completo."
+  sources:
+    - url: "https://www.reddit.com/r/devsarg/comments/1ehmxbm/qué_libros_de_fundamentos_teóricos_de/lg30fw9/"
+      title: "r/devsarg: qué libros de fundamentos teóricos de"
+      quote: "The Mythical Man-Month. ... es interesante el libro que lo contiene en su conjunto."
+    - url: "https://github.com/MarianoVilla/MarianoVilla/blob/main/README.md"
+      title: "GitHub: MarianoVilla/MarianoVilla README (Recommended Readings)"
+      quote: "Written in 1975, still painfully relevant."
+    - url: "https://www.youtube.com/watch?v=pbWxlLeg-fs&t=396s"
+      title: "Los mejores libros para aprender a programar."
+      timestamp: "6:36"
+      quote: "está bueno si tenés que organizar equipos de software o tenés que empezar a pensar en esas cosas"
+  isbn: "9780201835953"
+  coverId: 6915361
+
+- id: dive-into-design-patterns
+  title: "Dive Into Design Patterns"
+  authors: ["Alexander Shvets"]
+  year: 2021
+  kind: book
+  topics: ["arquitectura"]
+  level: 1
+  summary: "Libro de Alexander Shvets (refactoring.guru) que explica patrones de diseño y principios de refactoring."
+  context: "Dice que lo consiguió en refactoring.guru y \"no puede dejar de recomendarlo\"."
+  sources:
+    - url: "https://www.reddit.com/r/devsarg/comments/1ehmxbm/qué_libros_de_fundamentos_teóricos_de/lg30fw9/"
+      title: "r/devsarg: qué libros de fundamentos teóricos de"
+      quote: "Dive Into Design Patterns. El libro de refactoring.guru"
+    - url: "https://github.com/MarianoVilla/MarianoVilla/blob/main/README.md"
+      title: "GitHub: MarianoVilla/MarianoVilla README (Recommended Readings)"
+      quote: "got it from the mythical refactoring.guru and can't recommend it enough"
+  leadsTo: ["head-first-design-patterns", "fundamentals-of-software-architecture"]
+  coverId: 12941546
+
+- id: head-first-design-patterns
+  title: "Head First Design Patterns"
+  authors: ["Eric Freeman", "Elisabeth Robson"]
+  year: 2004
+  kind: book
+  topics: ["arquitectura"]
+  level: 2
+  summary: "Introducción visual y amigable a los patrones de diseño, de la serie Head First."
+  context: "Más amigable que GoF; recomienda la colección Head First en su conjunto, aunque duda del argumento neurocientífico de la serie."
+  sources:
+    - url: "https://www.reddit.com/r/devsarg/comments/1ehmxbm/qué_libros_de_fundamentos_teóricos_de/lg30fw9/"
+      title: "r/devsarg: qué libros de fundamentos teóricos de"
+      quote: "Design Patterns. El libro de Head First; más amigable. Recomiendo esa colección de libros en su conjunto."
+    - url: "https://www.youtube.com/watch?v=0wQ7Jc9QZMI&t=234s"
+      title: "Dejá de estudiar programación."
+      timestamp: "3:54"
+      quote: "hay una serie de libros que se llama Head First... los que yo leí siempre menciona esto mismo... En mi opinión cambió drásticamente"
+  leadsTo: ["design-patterns-gof"]
+  isbn: "9780596007126"
+  coverId: 388950
+
+- id: fundamentals-of-software-architecture
+  title: "Fundamentals of Software Architecture"
+  authors: ["Mark Richards", "Neal Ford"]
+  year: 2020
+  kind: book
+  topics: ["arquitectura"]
+  level: 2
+  summary: "Panorama de la arquitectura de software: estilos, características y decisiones, escrito por Richards y Ford con enfoque de ingeniería."
+  context: "Es su libro favorito de arquitectura por ser un overview muy concreto, completo y bien escrito."
+  sources:
+    - url: "https://www.reddit.com/r/devsarg/comments/1ehmxbm/qué_libros_de_fundamentos_teóricos_de/lg30fw9/"
+      title: "r/devsarg: qué libros de fundamentos teóricos de"
+      quote: "Mi favorito de arquitectura. Cubre mucho y está bien escrito."
+    - url: "https://www.reddit.com/r/devsarg/comments/1dty7kt/estoy_haciendo_microservicios/lbduss6/"
+      title: "r/devsarg: estoy haciendo microservicios"
+      quote: "Te recomiendo Building Microservices y las secciones relevantes de Fundamentals of Software Architecture"
+    - url: "https://github.com/MarianoVilla/MarianoVilla/blob/main/README.md"
+      title: "GitHub: MarianoVilla/MarianoVilla README (Recommended Readings)"
+      quote: "Architecture explanations without the ivory tower attitude."
+    - url: "https://www.youtube.com/watch?v=pbWxlLeg-fs&t=155s"
+      title: "Los mejores libros para aprender a programar."
+      timestamp: "2:35"
+      quote: "se convirtió en mi libro favorito sobre arquitectura porque es un overview super concreto"
+  leadsTo: ["building-microservices", "designing-data-intensive-applications"]
+  isbn: "9781492043454"
+  coverId: 10193363
+
+- id: design-patterns-gof
+  title: "Design Patterns"
+  titleEs: "Patrones de diseño"
+  authors: ["Erich Gamma", "Richard Helm", "Ralph Johnson", "John Vlissides"]
+  year: 1995
+  kind: book
+  topics: ["arquitectura"]
+  level: 3
+  summary: "El libro de la \"Banda de los Cuatro\" que cataloga 23 patrones de diseño orientado a objetos."
+  context: "Lo menciona como el libro de GoF, sin más comentarios, dentro de su bloque de OOP."
+  sources:
+    - url: "https://www.reddit.com/r/devsarg/comments/1ehmxbm/qué_libros_de_fundamentos_teóricos_de/lg30fw9/"
+      title: "r/devsarg: qué libros de fundamentos teóricos de"
+      quote: "Design Patterns. El libro de GoF, not much to say."
+    - url: "https://github.com/MarianoVilla/MarianoVilla/blob/main/README.md"
+      title: "GitHub: MarianoVilla/MarianoVilla README (Recommended Readings)"
+      quote: "Design Patterns - The famous \"Gang of Four\" book."
+  leadsTo: ["domain-driven-design"]
+  isbn: "9780201633610"
+  coverId: 6601119
+
+- id: building-microservices
+  title: "Building Microservices"
+  authors: ["Sam Newman"]
+  year: 2015
+  kind: book
+  topics: ["arquitectura"]
+  level: 3
+  summary: "Guía de Sam Newman para diseñar, desplegar y operar sistemas basados en microservicios."
+  context: "Lo recomienda como introducción a los problemas de arquitectura distribuida, con buenas explicaciones de contenedores."
+  sources:
+    - url: "https://www.reddit.com/r/devsarg/comments/1ehmxbm/qué_libros_de_fundamentos_teóricos_de/lg30fw9/"
+      title: "r/devsarg: qué libros de fundamentos teóricos de"
+      quote: "otro muy bueno, tiene una linda intro a problemas de arquitectura distribuída."
+    - url: "https://www.reddit.com/r/devsarg/comments/1dty7kt/estoy_haciendo_microservicios/lbduss6/"
+      title: "r/devsarg: estoy haciendo microservicios"
+      quote: "Te recomiendo Building Microservices"
+    - url: "https://github.com/MarianoVilla/MarianoVilla/blob/main/README.md"
+      title: "GitHub: MarianoVilla/MarianoVilla README (Recommended Readings)"
+      quote: "Helped me understand when to split services"
+    - url: "https://www.youtube.com/watch?v=pbWxlLeg-fs&t=167s"
+      title: "Los mejores libros para aprender a programar."
+      timestamp: "2:47"
+      quote: "building microservices también pero es orientado específicamente a microservicios igual es un buen libro"
+  isbn: "9781491950357"
+  coverId: 8513315
+
+- id: designing-data-intensive-applications
+  title: "Designing Data-Intensive Applications"
+  authors: ["Martin Kleppmann"]
+  year: 2017
+  kind: book
+  topics: ["arquitectura", "sistemas"]
+  level: 3
+  summary: "Guía de Kleppmann sobre los principios de sistemas de datos: almacenamiento, replicación, particionado y procesamiento."
+  context: "Figura en sus notas como recomendación de arquitectura, pero no se encontró mención en las transcripciones revisadas."
+  isbn: "9781449373320"
+  coverId: 8434671
+
+- id: domain-driven-design
+  title: "Domain-Driven Design"
+  authors: ["Eric Evans"]
+  year: 2003
+  kind: book
+  topics: ["arquitectura"]
+  level: 4
+  summary: "Eric Evans introduce el diseño guiado por el dominio: lenguaje ubicuo, bounded contexts y modelado estratégico."
+  context: "Lo recomienda \"de yapa\" al hablar de microservicios y Bounded Context (que atribuyó a Fowler)."
+  sources:
+    - url: "https://www.reddit.com/r/devsarg/comments/1dty7kt/estoy_haciendo_microservicios/lbduss6/"
+      title: "r/devsarg: estoy haciendo microservicios"
+      quote: "Y de yapa Domain-Driven Design... Bounded Context (he attributes it to Fowler; the book is by Evans)"
+  isbn: "9780321125217"
+  coverId: 5548424

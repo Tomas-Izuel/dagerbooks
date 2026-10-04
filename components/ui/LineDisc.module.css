@@ -1,0 +1,24 @@
+.disc {
+  --disc-size: 1.75rem;
+  display: inline-grid;
+  place-items: center;
+  flex: none;
+  inline-size: var(--disc-size);
+  block-size: var(--disc-size);
+  border-radius: var(--radius-disc);
+  background: var(--disc-ink);
+  color: var(--fg-on-ink);
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: calc(var(--disc-size) * 0.62);
+  line-height: 1;
+  padding-block-start: 0.08em;
+}
+
+.disc[data-size="sm"] {
+  --disc-size: 1.25rem;
+}
+
+.disc[data-size="lg"] {
+  --disc-size: 2.75rem;
+}

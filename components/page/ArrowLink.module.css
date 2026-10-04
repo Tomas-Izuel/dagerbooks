@@ -1,0 +1,52 @@
+.btn {
+  --btn-ink: var(--fg);
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-4);
+  min-block-size: 2.75rem;
+  border: var(--rule-width) solid var(--btn-ink);
+  border-radius: var(--radius);
+  font-family: var(--font-sign);
+  font-size: var(--text-sm);
+  font-weight: 700;
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+  text-decoration: none;
+  transition:
+    background-color var(--dur-fast) var(--ease-out-expo),
+    color var(--dur-fast) var(--ease-out-expo);
+}
+
+.btn[data-variant="solid"] {
+  background: var(--btn-ink);
+  color: var(--fg-on-ink);
+}
+
+.btn[data-variant="solid"]:hover {
+  background: transparent;
+  color: var(--btn-ink);
+}
+
+.btn[data-variant="ghost"] {
+  background: transparent;
+  color: var(--fg);
+}
+
+.btn[data-variant="ghost"]:hover {
+  background: var(--btn-ink);
+  color: var(--fg-on-ink);
+}
+
+.btn svg {
+  flex: none;
+  transition: transform var(--dur-fast) var(--ease-out-expo);
+}
+
+.btn:hover svg {
+  transform: translateX(2px);
+}
+
+.btn:hover {
+  text-decoration: none;
+}

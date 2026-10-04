@@ -1,0 +1,117 @@
+/* Station directory: a printed timetable board under the map. */
+.directory {
+  padding: var(--space-8) var(--space-5) var(--space-8);
+  background: var(--bg-sunken);
+  border-block-start: var(--rule-width) solid var(--rule-strong);
+  scroll-margin-block-start: 0;
+}
+
+.directoryHead {
+  display: grid;
+  gap: var(--space-3);
+  max-inline-size: 72rem;
+  margin-inline: auto;
+  margin-block-end: var(--space-7);
+}
+
+.directoryTitle {
+  font-size: var(--text-3xl);
+}
+
+.directoryLede {
+  max-inline-size: 60ch;
+  color: var(--fg-muted);
+  font-size: var(--text-lg);
+}
+
+.lines {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 20rem), 1fr));
+  gap: var(--space-6) var(--space-6);
+  max-inline-size: 72rem;
+  margin-inline: auto;
+}
+
+.line {
+  display: grid;
+  align-content: start;
+  gap: var(--space-3);
+  padding-block-start: var(--space-3);
+  border-block-start: var(--rule-width) solid var(--rule-strong);
+}
+
+.lineHead {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  font-size: var(--text-xl);
+}
+
+.lineLink {
+  text-decoration: none;
+}
+
+.lineLink:hover {
+  text-decoration: underline;
+  text-decoration-thickness: var(--rule-width);
+}
+
+.stations {
+  display: grid;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.station {
+  display: grid;
+  grid-template-columns: 2.25rem minmax(0, 1fr);
+  column-gap: var(--space-2);
+  padding-block: var(--space-2);
+  border-block-end: var(--hairline) solid var(--rule);
+}
+
+.zone {
+  grid-row: span 2;
+  align-self: start;
+  padding-block-start: 0.2em;
+  color: var(--fg-faint);
+  font-family: var(--font-data);
+  font-size: var(--text-xs);
+  letter-spacing: var(--tracking-sign);
+}
+
+.stationLink {
+  font-family: var(--font-sign);
+  font-size: var(--text-sm);
+  font-weight: 700;
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.stationLink:hover {
+  text-decoration: underline;
+  text-decoration-thickness: var(--rule-width);
+}
+
+.stationLink:focus-visible,
+.lineLink:focus-visible {
+  outline: var(--rule-width) solid var(--focus);
+  outline-offset: 2px;
+}
+
+.stationEs {
+  color: var(--fg-muted);
+  font-size: var(--text-xs);
+}
+
+@media (max-width: 899px) {
+  .directory {
+    padding-inline: var(--space-4);
+  }
+
+  .directoryTitle {
+    font-size: var(--text-2xl);
+  }
+}

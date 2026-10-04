@@ -1,0 +1,265 @@
+.article {
+  --ink: var(--fg);
+  display: grid;
+  gap: var(--space-7);
+}
+
+.sign {
+  display: grid;
+  gap: var(--space-6);
+}
+
+.titleRow {
+  display: grid;
+  gap: var(--space-5);
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.titleBlock {
+  display: grid;
+  gap: var(--space-4);
+  align-content: start;
+  min-inline-size: 0;
+}
+
+.titleLine {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-4);
+}
+
+.title {
+  font-size: clamp(2.25rem, 7vw, var(--text-4xl));
+  line-height: var(--leading-tight);
+  overflow-wrap: anywhere;
+  min-inline-size: 0;
+}
+
+.titleEs {
+  color: var(--fg-muted);
+  font-size: var(--text-lg);
+}
+
+.meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-4) var(--space-6);
+  margin: 0;
+}
+
+.meta > div {
+  display: grid;
+  gap: var(--space-1);
+}
+
+.meta dt {
+  color: var(--fg-muted);
+  font-size: var(--text-xs);
+  font-weight: 700;
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+}
+
+.meta dd {
+  margin: 0;
+  font-weight: 600;
+}
+
+.inline {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-1) var(--space-3);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+}
+
+/* Placa de la tapa */
+.plaque {
+  justify-self: start;
+  margin: 0;
+  padding: var(--space-2);
+  border: var(--rule-width) solid var(--rule-strong);
+  border-radius: var(--radius);
+  background: var(--surface);
+  box-shadow: var(--shadow-panel);
+  inline-size: fit-content;
+}
+
+.plaque img {
+  inline-size: 7.5rem;
+  block-size: auto;
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
+  background: var(--surface-raised);
+}
+
+.plaque figcaption {
+  margin-block-start: var(--space-2);
+  color: var(--fg-muted);
+  font-size: var(--text-xs);
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+}
+
+.notice {
+  display: grid;
+  gap: var(--space-1);
+  max-inline-size: 65ch;
+  padding: var(--space-4);
+  border: var(--rule-width) solid var(--incomplete);
+  border-radius: var(--radius);
+  background: var(--surface);
+}
+
+.notice strong {
+  color: var(--incomplete);
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.body {
+  display: grid;
+  gap: var(--space-7);
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.main {
+  display: grid;
+  gap: var(--space-7);
+  align-content: start;
+  min-inline-size: 0;
+}
+
+.main h2,
+.side h2 {
+  margin-block-end: var(--space-3);
+  font-size: var(--text-2xl);
+}
+
+.lead,
+.section {
+  max-inline-size: 70ch;
+}
+
+.lead h2 {
+  font-size: var(--text-3xl);
+}
+
+.lead p {
+  font-size: var(--text-lg);
+  line-height: 1.6;
+}
+
+.section p {
+  color: var(--fg);
+}
+
+.sources {
+  display: grid;
+  gap: var(--space-5);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.sources li {
+  display: grid;
+  gap: var(--space-2);
+  padding-block-start: var(--space-3);
+  border-block-start: var(--hairline) solid var(--rule);
+}
+
+.sources blockquote {
+  margin: 0;
+  padding-inline-start: var(--space-4);
+  border-inline-start: var(--hairline) solid var(--fg-muted);
+  color: var(--fg);
+  font-style: italic;
+}
+
+.sources a {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-2);
+  font-weight: 600;
+  overflow-wrap: anywhere;
+}
+
+.ts {
+  padding: 0 var(--space-2);
+  border: var(--hairline) solid var(--fg-muted);
+  border-radius: var(--radius);
+  color: var(--fg-muted);
+  font-family: var(--font-data);
+  font-size: var(--text-xs);
+  font-weight: 400;
+}
+
+.side {
+  display: grid;
+  gap: var(--space-7);
+  align-content: start;
+  min-inline-size: 0;
+}
+
+.interchanges {
+  display: grid;
+  gap: var(--space-4);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.interchanges li {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: var(--space-3);
+  align-items: start;
+}
+
+.interchanges svg {
+  margin-block-start: 0.2rem;
+}
+
+.interchanges a {
+  font-weight: 600;
+  overflow-wrap: anywhere;
+}
+
+.interchanges p {
+  margin-block-start: var(--space-1);
+  color: var(--fg-muted);
+  font-size: var(--text-sm);
+}
+
+@media (min-width: 48rem) {
+  .titleRow {
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: var(--space-7);
+  }
+
+  .plaque {
+    justify-self: end;
+  }
+
+  .plaque img {
+    inline-size: 10rem;
+  }
+}
+
+@media (min-width: 64rem) {
+  .body {
+    grid-template-columns: minmax(0, 1fr) 22rem;
+    gap: var(--space-8);
+  }
+}

@@ -1,0 +1,77 @@
+"use client";
+
+import { usePathname, useRouter, useSearchParams } from "next/navigation";
+import { useCallback, useMemo, useState } from "react";
+import {
+  buildExplorerSearch,
+  createExplorerGraph,
+  deriveSelection,
+  dimmedByTopic,
+  parseExplorerState,
+  type ExplorerNode,
+  type ExplorerState,
+  type Selection,
+} from "@/lib/state/explorer";
+
+export interface UseExplorerState {
+  state: ExplorerState;
+  /** Selección con cadena de prerrequisitos y desbloqueos (null si no hay libro). */
+  selection: Selection | null;
+  /** Ids atenuados por el filtro de tema. */
+  dimmed: ReadonlySet<string>;
+  /** push: cada libro seleccionado es una entrada de historial. */
+  selectBook: (id: string | null) => void;
+  /** replace: cambiar filtro no ensucia el historial. */
+  setTopic: (id: string | null) => void;
+  /** replace: seguro para teclear. */
+  setQuery: (q: string) => void;
+  reset: () => void;
+}
+
+/** Requiere un <Suspense> ancestro (useSearchParams) en la página que lo use. */
+export function useExplorerState(nodes: readonly ExplorerNode[], topicIds?: readonly string[]): UseExplorerState {
+  const router = useRouter();
+  const pathname = usePathname();
+  const params = useSearchParams();
+
+  const graph = useMemo(() => createExplorerGraph(nodes), [nodes]);
+  const topicSet = useMemo(() => (topicIds ? new Set(topicIds) : undefined), [topicIds]);
+  const urlState = useMemo(
+    () => parseExplorerState(params, { bookIds: new Set(graph.byId.keys()), topicIds: topicSet }),
+    [params, graph, topicSet],
+  );
+
+  // `q` se mantiene local para que el input no dependa de la latencia del router;
+  // se resincroniza cuando cambia el valor en la URL (atrás/adelante).
+  const [typed, setTyped] = useState<{ from: string; value: string }>({ from: urlState.q, value: urlState.q });
+  const q = typed.from === urlState.q ? typed.value : urlState.q;
+  const state = useMemo(() => ({ ...urlState, q }), [urlState, q]);
+
+  const navigate = useCallback(
+    (next: ExplorerState, mode: "push" | "replace") => {
+      const search = buildExplorerSearch(next, params.toString());
+      const href = search ? `${pathname}?${search}` : pathname;
+      router[mode](href, { scroll: false });
+    },
+    [params, pathname, router],
+  );
+
+  const selectBook = useCallback((libro: string | null) => navigate({ ...state, libro }, "push"), [navigate, state]);
+  const setTopic = useCallback((tema: string | null) => navigate({ ...state, tema }, "replace"), [navigate, state]);
+  const setQuery = useCallback(
+    (value: string) => {
+      setTyped({ from: urlState.q, value });
+      navigate({ ...state, q: value }, "replace");
+    },
+    [navigate, state, urlState.q],
+  );
+  const reset = useCallback(() => {
+    setTyped({ from: urlState.q, value: "" });
+    navigate({ libro: null, tema: null, q: "" }, "replace");
+  }, [navigate, urlState.q]);
+
+  const selection = useMemo(() => deriveSelection(graph, state.libro), [graph, state.libro]);
+  const dimmed = useMemo(() => dimmedByTopic(nodes, state.tema), [nodes, state.tema]);
+
+  return { state, selection, dimmed, selectBook, setTopic, setQuery, reset };
+}

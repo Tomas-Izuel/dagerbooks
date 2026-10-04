@@ -1,0 +1,79 @@
+.wrap {
+  display: grid;
+  gap: var(--space-5);
+  justify-items: start;
+  padding-block-start: var(--space-6);
+}
+
+/* Vía cortada: la línea se interrumpe */
+.bar {
+  position: relative;
+  align-self: stretch;
+  block-size: 1.125rem;
+  margin-block-end: var(--space-4);
+}
+
+.bar::before,
+.bar::after {
+  content: "";
+  position: absolute;
+  inset-block: 0;
+  background: var(--ink-b);
+}
+
+.bar::before {
+  inset-inline-start: calc(50% - 50vw);
+  inset-inline-end: calc(70% + 2rem);
+}
+
+.bar::after {
+  inset-inline-start: calc(30% + 2rem);
+  inset-inline-end: calc(50% - 50vw);
+}
+
+.gap {
+  position: absolute;
+  inset-block-start: 50%;
+  inset-inline-start: calc(30% - 2rem);
+  inline-size: 4rem;
+  border-block-start: var(--rule-width) dashed var(--fg-faint);
+}
+
+.title {
+  font-size: clamp(2.75rem, 11vw, 6rem);
+}
+
+.text {
+  max-inline-size: 65ch;
+  color: var(--fg-muted);
+  font-size: var(--text-lg);
+}
+
+.lines {
+  display: grid;
+  gap: var(--space-3);
+  margin-block-start: var(--space-6);
+  inline-size: 100%;
+  max-inline-size: 52rem;
+}
+
+.lines h2 {
+  font-size: var(--text-xl);
+}
+
+.lines ul {
+  display: grid;
+  gap: var(--space-2) var(--space-5);
+  grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.lines a {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-3);
+  min-block-size: 2.75rem;
+  font-weight: 600;
+}

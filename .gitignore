@@ -1,0 +1,23 @@
+node_modules/
+.next/
+out/
+.vercel/
+.env*
+!.env.example
+*.tsbuildinfo
+next-env.d.ts
+.DS_Store
+
+# Research intermedio (transcripciones, caches, scripts de scraping)
+research/
+
+# Impeccable: artefactos locales (capturas, referencias, cache)
+.impeccable/review/
+.impeccable/reference/
+.impeccable/tmp/
+.impeccable/questions/
+.impeccable/hook.cache.json
+.impeccable/config.local.json
+
+# Claude Code local settings
+.claude/settings.local.json
