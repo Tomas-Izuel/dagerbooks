@@ -4,7 +4,7 @@
  * app/styles/tokens.css as --line-<topicId>.
  */
 
-const LETTERS = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J"] as const;
+const LETTERS = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L"] as const;
 
 export type LineLetter = (typeof LETTERS)[number];
 

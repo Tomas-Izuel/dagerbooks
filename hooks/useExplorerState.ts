@@ -2,11 +2,13 @@
 
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { useCallback, useMemo, useState } from "react";
+import { ALL_RECS, toggleRec } from "@/lib/design/recommendation";
+import type { Recommendation } from "@/lib/catalog/schema";
 import {
   buildExplorerSearch,
   createExplorerGraph,
   deriveSelection,
-  dimmedByTopic,
+  dimmedByFilters,
   parseExplorerState,
   type ExplorerNode,
   type ExplorerState,
@@ -17,12 +19,15 @@ export interface UseExplorerState {
   state: ExplorerState;
   /** Selección con cadena de prerrequisitos y desbloqueos (null si no hay libro). */
   selection: Selection | null;
-  /** Ids atenuados por el filtro de tema. */
+  /** Ids atenuados por tema ∧ recomendación (intersección). */
   dimmed: ReadonlySet<string>;
   /** push: cada libro seleccionado es una entrada de historial. */
   selectBook: (id: string | null) => void;
   /** replace: cambiar filtro no ensucia el historial. */
   setTopic: (id: string | null) => void;
+  /** Alterna un nivel de recomendación (ver toggleRec: aísla, alterna, nunca queda en cero). */
+  toggleRecommendation: (r: Recommendation) => void;
+  resetRecommendation: () => void;
   /** replace: seguro para teclear. */
   setQuery: (q: string) => void;
   reset: () => void;
@@ -58,6 +63,11 @@ export function useExplorerState(nodes: readonly ExplorerNode[], topicIds?: read
 
   const selectBook = useCallback((libro: string | null) => navigate({ ...state, libro }, "push"), [navigate, state]);
   const setTopic = useCallback((tema: string | null) => navigate({ ...state, tema }, "replace"), [navigate, state]);
+  const toggleRecommendation = useCallback(
+    (r: Recommendation) => navigate({ ...state, rec: toggleRec(state.rec, r) }, "replace"),
+    [navigate, state],
+  );
+  const resetRecommendation = useCallback(() => navigate({ ...state, rec: [...ALL_RECS] }, "replace"), [navigate, state]);
   const setQuery = useCallback(
     (value: string) => {
       setTyped({ from: urlState.q, value });
@@ -67,11 +77,11 @@ export function useExplorerState(nodes: readonly ExplorerNode[], topicIds?: read
   );
   const reset = useCallback(() => {
     setTyped({ from: urlState.q, value: "" });
-    navigate({ libro: null, tema: null, q: "" }, "replace");
+    navigate({ libro: null, tema: null, rec: [...ALL_RECS], q: "" }, "replace");
   }, [navigate, urlState.q]);
 
   const selection = useMemo(() => deriveSelection(graph, state.libro), [graph, state.libro]);
-  const dimmed = useMemo(() => dimmedByTopic(nodes, state.tema), [nodes, state.tema]);
+  const dimmed = useMemo(() => dimmedByFilters(nodes, state.tema, state.rec), [nodes, state.tema, state.rec]);
 
-  return { state, selection, dimmed, selectBook, setTopic, setQuery, reset };
+  return { state, selection, dimmed, selectBook, setTopic, toggleRecommendation, resetRecommendation, setQuery, reset };
 }

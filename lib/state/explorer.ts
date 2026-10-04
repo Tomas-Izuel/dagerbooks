@@ -1,13 +1,17 @@
+import type { Recommendation } from "@/lib/catalog/schema";
+import { ALL_RECS, parseRec, serializeRec } from "@/lib/design/recommendation";
 import { buildAdjacency, reach, withImplicitRootEdges, type Adjacency } from "@/lib/catalog/graph";
 
-/** Estado de vista del explorador, serializado en `?libro=&tema=&q=`. */
+/** Estado de vista del explorador, serializado en `?libro=&tema=&rec=&q=`. */
 export interface ExplorerState {
   libro: string | null;
   tema: string | null;
+  /** Niveles de recomendación activos (nunca vacío; los tres = sin filtro). */
+  rec: Recommendation[];
   q: string;
 }
 
-export const EMPTY_STATE: ExplorerState = { libro: null, tema: null, q: "" };
+export const EMPTY_STATE: ExplorerState = { libro: null, tema: null, rec: [...ALL_RECS], q: "" };
 
 /** Subconjunto mínimo de Book que necesita el cliente (serializable). */
 export interface ExplorerNode {
@@ -16,6 +20,7 @@ export interface ExplorerNode {
   topics: readonly string[];
   /** 0 = raíz; los de nivel 1 cuelgan implícitamente de ella. */
   level: number;
+  recommendation: Recommendation;
 }
 
 export interface ReadonlyParams {
@@ -31,6 +36,7 @@ export function parseExplorerState(
   return {
     libro: libro && (!valid?.bookIds || valid.bookIds.has(libro)) ? libro : null,
     tema: tema && (!valid?.topicIds || valid.topicIds.has(tema)) ? tema : null,
+    rec: parseRec(params.get("rec")),
     q: (params.get("q") ?? "").slice(0, 100),
   };
 }
@@ -41,6 +47,7 @@ export function buildExplorerSearch(state: ExplorerState, base?: URLSearchParams
   const set = (k: string, v: string | null) => (v ? p.set(k, v) : p.delete(k));
   set("libro", state.libro);
   set("tema", state.tema);
+  set("rec", serializeRec(state.rec));
   set("q", state.q.trim() ? state.q : null);
   return p.toString();
 }
@@ -80,4 +87,23 @@ export function deriveSelection(graph: ExplorerGraph, id: string | null): Select
 export function dimmedByTopic(nodes: readonly ExplorerNode[], tema: string | null): ReadonlySet<string> {
   if (!tema) return new Set();
   return new Set(nodes.filter((n) => n.topics.length > 0 && !n.topics.includes(tema)).map((n) => n.id));
+}
+
+/** Ids atenuados por el nivel de recomendación. Con los tres niveles: conjunto vacío. La raíz nunca se atenúa. */
+export function dimmedByRecommendation(nodes: readonly ExplorerNode[], rec: readonly Recommendation[]): ReadonlySet<string> {
+  if (rec.length >= ALL_RECS.length) return new Set();
+  return new Set(nodes.filter((n) => n.topics.length > 0 && !rec.includes(n.recommendation)).map((n) => n.id));
+}
+
+/** Intersección: un libro está activo si cumple tema ∧ recomendación; el resto se atenúa. */
+export function dimmedByFilters(
+  nodes: readonly ExplorerNode[],
+  tema: string | null,
+  rec: readonly Recommendation[],
+): ReadonlySet<string> {
+  const a = dimmedByTopic(nodes, tema);
+  const b = dimmedByRecommendation(nodes, rec);
+  if (a.size === 0) return b;
+  if (b.size === 0) return a;
+  return new Set([...a, ...b]);
 }

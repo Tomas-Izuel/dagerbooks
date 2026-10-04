@@ -126,6 +126,28 @@
   line-height: 1.4;
 }
 
+/* Dager's level for this book: the same station glyph the map draws. */
+.rec {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin: 0;
+  font-family: var(--font-sign);
+  font-size: var(--text-xs);
+  font-weight: 700;
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+  color: var(--fg);
+}
+
+.recKey {
+  color: var(--fg-muted);
+}
+
+.recKey::after {
+  content: " ·";
+}
+
 .grab {
   display: none;
 }

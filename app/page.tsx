@@ -2,6 +2,7 @@ import { Suspense } from "react";
 import Link from "next/link";
 import { Explorer, type BoardLine, type PanelEntry } from "@/components/map/Explorer";
 import type { MapDensityLayout, MapGeometrySet, MapNodeMeta } from "@/components/map/types";
+import { RECOMMENDATION_LABELS } from "@/lib/catalog/schema";
 import { loadCatalog } from "@/lib/catalog/load";
 import { computeLayout, DENSITY_PRESETS } from "@/lib/catalog/layout";
 import { booksInSector, isEntryPoint, relatedBooks } from "@/lib/catalog/queries";
@@ -35,6 +36,7 @@ export default function Home() {
       level: n.ring,
       entry: isEntryPoint(n.id),
       incomplete: b.confidence === "low",
+      recommendation: b.recommendation,
     };
   });
   const edges = base.edges.map(({ from, to, kind, reason }) => ({ from, to, kind, ...(reason ? { reason } : {}) }));
@@ -83,6 +85,7 @@ export default function Home() {
         year: b.year,
         kind: b.kind ?? "book",
         level: b.level,
+        recommendation: b.recommendation,
         topics: b.topics,
         summary: b.summary,
         context: b.context,
@@ -95,7 +98,7 @@ export default function Home() {
     };
   }
 
-  const explorerNodes = books.map((b) => ({ id: b.id, leadsTo: b.leadsTo, topics: b.topics, level: b.level }));
+  const explorerNodes = books.map((b) => ({ id: b.id, leadsTo: b.leadsTo, topics: b.topics, level: b.level, recommendation: b.recommendation }));
 
   return (
     <main>
@@ -107,6 +110,7 @@ export default function Home() {
           explorerNodes={explorerNodes}
           searchDocs={buildSearchDocs(catalog)}
           panels={panels}
+          recLabels={RECOMMENDATION_LABELS}
         />
       </Suspense>
       <nav aria-label="Líneas" className={styles.srOnly}>

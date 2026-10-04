@@ -4,6 +4,15 @@ export const SLUG_RE = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
 
 export const KINDS = ["book", "essay", "paper", "course", "textbook"] as const;
 
+export const RECOMMENDATION_LEVELS = ["fuerte", "interesante", "mencion"] as const;
+export type Recommendation = (typeof RECOMMENDATION_LEVELS)[number];
+
+export const RECOMMENDATION_LABELS: Record<Recommendation, { label: string; description: string }> = {
+  fuerte: { label: "Lo súper recomienda", description: "Lectura imprescindible o favorita: insiste en que la lean." },
+  interesante: { label: "Ideas interesantes", description: "Lo valora o lo recomienda con reservas; tiene ideas que le sirven." },
+  mencion: { label: "Mención curiosa", description: "Lo cita o lo nombra, pero no lo recomienda." },
+};
+
 export const LEVEL_LABELS: Record<number, string> = {
   0: "Raíz",
   1: "Introductorio",
@@ -50,6 +59,7 @@ export const BookSchema = z
     related: z.array(RelatedSchema).optional(),
     isbn: z.string().regex(/^\d{9}[\dXx]$|^\d{13}$/, { error: "isbn inválido" }).optional(),
     coverId: z.number().int().positive().optional(),
+    recommendation: z.enum(RECOMMENDATION_LEVELS).optional(),
     // Se calcula en build; solo se declara a mano para forzarlo.
     confidence: z.enum(["low", "high"]).optional(),
   })
@@ -88,8 +98,10 @@ export type RawBook = z.infer<typeof BookSchema>;
 export type Topic = z.infer<typeof TopicSchema>;
 export type MissingField = "authors" | "summary" | "context" | "sources";
 
-export type Book = Omit<RawBook, "confidence"> & {
+export type Book = Omit<RawBook, "confidence" | "recommendation"> & {
   confidence: "low" | "high";
+  /** Nivel de recomendación de Dager; "interesante" si el YAML no lo declara. No cuenta para "por completar". */
+  recommendation: Recommendation;
   /** Campos faltantes que causan confidence "low" (vacío si se forzó). */
   missing: MissingField[];
   /** Primer tema = sector; null para la raíz. */

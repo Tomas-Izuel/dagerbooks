@@ -21,6 +21,9 @@ import type { LayoutEdge } from "@/lib/catalog/layout.types";
 import type { NavNode } from "@/lib/graph-interaction";
 import { DENSITY_SCALE, DEFAULT_DENSITY, type Density, type DensityScale } from "@/lib/density";
 import { fitScale } from "@/lib/graph-interaction/viewport";
+import { RecMark } from "@/components/ui/RecMark";
+import type { Recommendation } from "@/lib/catalog/schema";
+import { REC_DOT, REC_ORDER } from "@/lib/design/recommendation";
 import { ZONE_NAMES, type MapGeometry, type MapLine, type MapNode } from "./types";
 import styles from "./NetworkMap.module.css";
 
@@ -36,11 +39,15 @@ export interface NetworkMapProps {
   geometry: MapGeometry;
   lines: readonly MapLine[];
   selection: Selection | null;
-  /** Ids dimmed by the topic filter. */
+  /** Texto de cada nivel de recomendación (leyenda y etiquetas accesibles). */
+  recLabels: Record<Recommendation, { label: string; description: string }>;
+  /** Ids dimmed by the topic / recommendation filters (intersection). */
   dimmed: ReadonlySet<string>;
   activeTopic: string | null;
   read: ReadonlySet<string>;
   onSelect(id: string | null): void;
+  /** Selecciona una línea (null la deselecciona); el mismo filtro que la cartelera. */
+  onTopic(id: string | null): void;
   /** Px covered by overlays (side panel / bottom sheet). */
   insets?: { right?: number; bottom?: number };
   /** Animate the re-fit when `geometry` changes (density switch). Off = instant (first load). */
@@ -52,7 +59,8 @@ export interface NetworkMapProps {
 type Tone = "full" | "mid" | "dim";
 
 const HIT_R = 24;
-const PAD = 100;
+const PAD_X = 290; // room beyond the terminus discs for their line names
+const PAD_Y = 180;
 const LABEL_PX = 11;
 const LABEL_CH = 7.6; // estimated advance of one uppercase label glyph (px at LABEL_PX)
 const LABEL_LINE = 13;
@@ -62,6 +70,11 @@ const LABEL_MIN_REL: Record<number, number> = { 1: 1.7, 2: 2.0, 3: 2.3, 4: 1.5 }
 /** Hit targets are at least this radius on screen (24px diameter). */
 const HIT_PX = 12;
 const WRAP_CHARS = 22;
+/** Line names under the terminus discs: 11px Overpass caps, tracked; in screen px before sc.terminus. */
+const NAME_PX = 11;
+const NAME_CH = 7.9;
+const NAME_LINE = 13;
+const NAME_TOP = 22; // disc centre to the first line's centre
 const TAU = Math.PI * 2;
 
 const edgeKey = (e: { from: string; to: string }) => `${e.from}>${e.to}`;
@@ -91,6 +104,16 @@ function wrapTitle(text: string, maxChars: number, maxLines: number): string[] {
   const kept = lines.slice(0, maxLines - 1);
   kept.push(truncate(lines.slice(maxLines - 1).join(" "), maxChars));
   return kept;
+}
+
+/** Splits a line name in at most two lines without truncating (the narrowest wrap that fits). */
+function wrapName(name: string): string[] {
+  const text = name.toUpperCase();
+  for (let max = 10; max < text.length; max++) {
+    const lines = wrapTitle(text, max, 3);
+    if (lines.length <= 2 && lines.every((l) => l.length <= max || !l.includes(" "))) return lines;
+  }
+  return [text];
 }
 
 /* Oriented boxes in screen space (u = unit direction of the long axis). */
@@ -273,7 +296,11 @@ const Station = memo(function Station({
           ) : null}
           {interchange ? <circle className={styles.interchange} r={14 * m} /> : null}
           {selected ? <circle className={styles.selectedRing} r={17 * m} /> : null}
-          <circle className={styles.dot} r={7 * m} />
+          <circle
+            className={styles.dot}
+            data-rec={node.recommendation}
+            r={REC_DOT[node.recommendation].r * m}
+          />
           {node.incomplete ? <path className={styles.notch} d="M6 -14 L15 -14 L15 -5 Z" transform={`scale(${m})`} /> : null}
         </>
       )}
@@ -503,10 +530,12 @@ export function NetworkMap({
   geometry,
   lines,
   selection,
+  recLabels,
   dimmed,
   activeTopic,
   read,
   onSelect,
+  onTopic,
   insets,
   animateRefit = false,
   density = DEFAULT_DENSITY,
@@ -523,7 +552,7 @@ export function NetworkMap({
   const selectedId = selection?.id ?? null;
 
   const panBounds = useMemo(
-    () => ({ x0: bounds.minX - PAD, y0: bounds.minY - PAD, x1: bounds.maxX + PAD, y1: bounds.maxY + PAD }),
+    () => ({ x0: bounds.minX - PAD_X, y0: bounds.minY - PAD_Y, x1: bounds.maxX + PAD_X, y1: bounds.maxY + PAD_Y }),
     [bounds],
   );
   const pan = usePanZoom(svgRef, gRef, { bounds: panBounds, minZoom: "fit", maxZoom: 3.5 });
@@ -717,6 +746,39 @@ export function NetworkMap({
   const hitR = Math.max(HIT_R, HIT_PX / k);
   const outer = geometry.rings[geometry.rings.length - 1]?.radius ?? 0;
 
+  /* ---- line names under the terminus discs ---- */
+  const lineNames = useMemo(() => {
+    const out = new Map<string, string[]>();
+    for (const l of lines) out.set(l.topicId, wrapName(l.name));
+    return out;
+  }, [lines]);
+
+  /* Names that would overlap an earlier one (active line first) hide at rest and show on hover/focus. */
+  const nameShown = useMemo(() => {
+    const shown = new Set<string>();
+    const placedNames: Box[] = [];
+    const order = [...geometry.sectors].sort((a, b) => Number(b.topicId === activeTopic) - Number(a.topicId === activeTopic));
+    for (const s of order) {
+      const nm = lineNames.get(s.topicId);
+      if (!nm) continue;
+      const p = polar(outer + 66, s.labelAngle);
+      const w = Math.max(...nm.map((l) => l.length)) * NAME_CH + 8;
+      const h = nm.length * NAME_LINE + 6;
+      const box = aabb(p.x * k, p.y * k + (NAME_TOP - NAME_LINE / 2 + h / 2) * sc.terminus, (w / 2) * sc.terminus, (h / 2) * sc.terminus);
+      const discs = geometry.sectors.some((o) => {
+        if (o.topicId === s.topicId) return false;
+        const q = polar(outer + 66, o.labelAngle);
+        return boxesOverlap(box, aabb(q.x * k, q.y * k, 16 * sc.terminus, 16 * sc.terminus), 2);
+      });
+      // At the fit zoom the map is centred: a name wider than the viewport would be cut off.
+      const clipped = vp.width > 0 && k <= kFit * 1.01 && Math.abs(box.cx) + box.hw > vp.width / 2;
+      if (discs || clipped || placedNames.some((b) => boxesOverlap(box, b, 2))) continue;
+      placedNames.push(box);
+      shown.add(s.topicId);
+    }
+    return shown;
+  }, [geometry.sectors, lineNames, activeTopic, outer, k, kFit, vp.width, sc.terminus]);
+
   /* ---- labels: greedy collision pass (screen space) ---- */
   const reserved = useMemo<Box[]>(() => {
     const boxes: Box[] = [
@@ -727,9 +789,15 @@ export function NetworkMap({
     for (const s of geometry.sectors) {
       const p = polar(outer + 66, s.labelAngle);
       boxes.push(aabb(p.x * k, p.y * k, 20 * sc.terminus, 20 * sc.terminus));
+      const nm = nameShown.has(s.topicId) ? lineNames.get(s.topicId) : undefined;
+      if (nm) {
+        const w = Math.max(...nm.map((l) => l.length)) * NAME_CH + 8;
+        const h = nm.length * NAME_LINE + 6;
+        boxes.push(aabb(p.x * k, p.y * k + (NAME_TOP - NAME_LINE / 2 + h / 2) * sc.terminus, (w / 2) * sc.terminus, (h / 2) * sc.terminus));
+      }
     }
     return boxes;
-  }, [geometry.sectors, outer, k, m, ls, sc.terminus]);
+  }, [geometry.sectors, outer, k, m, ls, sc.terminus, nameShown, lineNames]);
   // Tags: the hovered station's interchanges on hover, otherwise all of the selected station's.
   const tagFocus = hovered ?? selectedId;
   const xTagCands = useMemo<XTag[]>(() => {
@@ -837,7 +905,7 @@ export function NetworkMap({
               const line = n.topicId ? lineByTopic.get(n.topicId) : undefined;
               const isRead = read.has(n.id);
               const np = kb.getNodeProps(n.id);
-              const status = [isRead ? "leído" : null, n.incomplete ? "por completar" : null].filter(Boolean).join(", ");
+              const status = [recLabels[n.recommendation].label, isRead ? "leído" : null, n.incomplete ? "por completar" : null].filter(Boolean).join(", ");
               const label =
                 n.level === 0
                   ? `${n.title}, kilómetro 0${isRead ? ", leído" : ""}`
@@ -880,24 +948,50 @@ export function NetworkMap({
             </text>
           ) : null}
 
-          {/* Line termini: lettered discs at the end of each sector */}
-          <g aria-hidden="true">
+          {/* Line termini: lettered discs at the end of each sector, with the line name below. Click = line filter. */}
+          <g>
             {geometry.sectors.map((s) => {
               const line = lineByTopic.get(s.topicId);
               if (!line) return null;
               const p = polar(outer + 66, s.labelAngle);
               const dim = activeTopic !== null && activeTopic !== s.topicId;
+              const active = activeTopic === s.topicId;
+              const nm = lineNames.get(s.topicId) ?? [];
+              const w = Math.max(...nm.map((l) => l.length), 2) * NAME_CH + 14;
+              const h = NAME_TOP + nm.length * NAME_LINE;
               return (
                 <g
                   key={s.topicId}
                   className={styles.terminus}
                   data-dim={dim ? "true" : undefined}
+                  data-active={active ? "true" : undefined}
+                  data-name={nameShown.has(s.topicId) ? "shown" : "hidden"}
+                  role="button"
+                  tabIndex={0}
+                  aria-pressed={active}
+                  aria-label={`Filtrar línea ${line.letter}: ${line.name}`}
                   transform={`translate(${p.x.toFixed(1)} ${p.y.toFixed(1)}) scale(${(sc.terminus / k).toFixed(4)})`}
                   style={{ "--ink": line.color } as CSSProperties}
+                  onClick={() => onTopic(active ? null : s.topicId)}
+                  onKeyDown={(e) => {
+                    e.stopPropagation();
+                    if (e.key === "Enter" || e.key === " ") {
+                      e.preventDefault();
+                      onTopic(active ? null : s.topicId);
+                    }
+                  }}
                 >
+                  <rect className={styles.terminusHit} x={-w / 2} y={-19} width={w} height={h + 4} rx={4} />
                   <circle r={15} className={styles.terminusDisc} />
                   <text className={styles.terminusLetter} y={1}>
                     {line.letter}
+                  </text>
+                  <text className={styles.terminusName} aria-hidden="true" fontSize={NAME_PX}>
+                    {nm.map((l, i) => (
+                      <tspan key={i} x={0} y={NAME_TOP + i * NAME_LINE}>
+                        {l}
+                      </tspan>
+                    ))}
                   </text>
                 </g>
               );
@@ -933,6 +1027,17 @@ export function NetworkMap({
               </li>
             ))}
           </ol>
+          <ul className={styles.legendRecs} aria-label="Recomendación de Dager">
+            {REC_ORDER.map((r) => (
+              <li key={r}>
+                <RecMark level={r} size={18} />
+                <span className={styles.legendRecText}>
+                  <span className={styles.legendKeyName}>{recLabels[r].label}</span>
+                  <span>{recLabels[r].description}</span>
+                </span>
+              </li>
+            ))}
+          </ul>
           <p className={styles.legendKey}>
             <svg className={styles.legendArc} viewBox="0 0 44 20" aria-hidden="true">
               <path className={styles.arcOuter} d="M4 15Q22 -3 40 15" />

@@ -1,4 +1,5 @@
 import type { LayoutBounds, LayoutEdge, LayoutEdgeKind, LayoutRing, LayoutSector } from "@/lib/catalog/layout.types";
+import type { Recommendation } from "@/lib/catalog/schema";
 import type { Density } from "@/lib/density";
 
 /** Slim, serializable station for the map (server -> client). */
@@ -18,6 +19,8 @@ export interface MapNode {
   entry: boolean;
   /** confidence low: show the "por completar" notch. */
   incomplete: boolean;
+  /** Nivel de recomendación de Dager: codifica la forma de la estación. */
+  recommendation: Recommendation;
 }
 
 export interface MapLine {
