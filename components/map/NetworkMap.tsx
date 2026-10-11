@@ -45,6 +45,7 @@ import {
 import { FocusBar, HoverTag, MapLegend } from "./shared/MapOverlays";
 import { InterchangeTags, TAG_MIN_SCALE, XTAG_H, buildXTags, quadraticMidpoint, type XTag } from "./shared/InterchangeTags";
 import { Station, type CrossMark } from "./shared/Station";
+import { WalkRun, WalkTrack, gapsFromEdges } from "./shared/Walk";
 import styles from "./NetworkMap.module.css";
 
 /** Same handle for every map view (see `MapHandle`). */
@@ -453,6 +454,8 @@ export function NetworkMap({
   /* ---- route (train run) + unlock edges ---- */
   const route = useMemo(() => (selection ? deriveRoute(edges, selection, rootNode?.id) : null), [selection, edges, rootNode]);
 
+  const gaps = useMemo(() => gapsFromEdges(geometry.edges), [geometry.edges]);
+
   const edgeTone = useCallback(
     (e: LayoutEdge): Tone => {
       if (selection) {
@@ -509,6 +512,8 @@ export function NetworkMap({
   const renderTrack = (e: LayoutEdge, byId: ReadonlyMap<string, MapNode>) => {
     if (e.kind === "related") return null;
     if (e.kind === "implicitRoot" && !showSpoke(e, byId)) return null;
+    const gap = gaps.get(edgeKey(e));
+    if (gap) return <WalkTrack key={edgeKey(e)} edge={e} gap={gap} tone={edgeTone(e)} ink={targetInk(e, byId)} />;
     return (
       <path
         key={edgeKey(e)}
@@ -683,15 +688,21 @@ export function NetworkMap({
           {/* The train run: prerequisites drawn from KM 0, segment by segment */}
           {route ? (
             <g key={selection?.id} aria-hidden="true">
-              {route.run.map(({ edge, index }) => (
-                <path
-                  key={edgeKey(edge)}
-                  className={styles.run}
-                  d={edge.path}
-                  pathLength={1}
-                  style={{ "--ink": targetInk(edge, nodeById), "--i": index, "--n": route.n } as CSSProperties}
-                />
-              ))}
+              {route.run.map(({ edge, index }) => {
+                const gap = gaps.get(edgeKey(edge));
+                if (gap) {
+                  return <WalkRun key={edgeKey(edge)} edge={edge} gap={gap} ink={targetInk(edge, nodeById)} index={index} n={route.n} bounds={bounds} scope="r" />;
+                }
+                return (
+                  <path
+                    key={edgeKey(edge)}
+                    className={styles.run}
+                    d={edge.path}
+                    pathLength={1}
+                    style={{ "--ink": targetInk(edge, nodeById), "--i": index, "--n": route.n } as CSSProperties}
+                  />
+                );
+              })}
             </g>
           ) : null}
 

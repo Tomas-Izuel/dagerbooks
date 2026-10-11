@@ -38,6 +38,21 @@ export const RelatedSchema = z.strictObject({
   reason: z.string().min(1, { error: "falta la razón de la relación" }),
 });
 
+export const GAP_SEVERITIES = ["fuerte", "muy-fuerte"] as const;
+
+/** Tramo a pie: el salto entre dos libros no tiene parada en la red de Dager. */
+export const GapSchema = z.strictObject({
+  severity: z.enum(GAP_SEVERITIES, { error: 'severity debe ser "fuerte" o "muy-fuerte"' }),
+  bridge: z
+    .array(z.string().min(1).max(80, { error: "cada tema del puente debe ser una frase corta" }))
+    .min(1, { error: "bridge necesita al menos 1 tema" })
+    .max(5, { error: "bridge admite hasta 5 temas" }),
+  note: z.string().min(1).max(200, { error: "note debe ser una sola frase corta" }).optional(),
+});
+
+/** Un `leadsTo` es un id suelto o `{ id, gap }`. */
+export const LeadsToItemSchema = z.union([Slug, z.strictObject({ id: Slug, gap: GapSchema })]);
+
 export const BookSchema = z
   .strictObject({
     id: Slug,
@@ -55,7 +70,7 @@ export const BookSchema = z
     summary: z.string().min(1).optional(),
     context: z.string().min(1).optional(),
     sources: z.array(SourceSchema).optional(),
-    leadsTo: z.array(Slug).optional(),
+    leadsTo: z.array(LeadsToItemSchema).optional(),
     related: z.array(RelatedSchema).optional(),
     isbn: z.string().regex(/^\d{9}[\dXx]$|^\d{13}$/, { error: "isbn inválido" }).optional(),
     coverId: z.number().int().positive().optional(),
@@ -100,7 +115,17 @@ export type RawBook = z.infer<typeof BookSchema>;
 export type Topic = z.infer<typeof TopicSchema>;
 export type MissingField = "authors" | "summary" | "context" | "sources";
 
-export type Book = Omit<RawBook, "confidence" | "recommendation"> & {
+export type Gap = z.infer<typeof GapSchema>;
+export type GapSeverity = Gap["severity"];
+export type LeadsToItem = z.infer<typeof LeadsToItemSchema>;
+
+export const leadsToId = (item: LeadsToItem): string => (typeof item === "string" ? item : item.id);
+
+export type Book = Omit<RawBook, "confidence" | "recommendation" | "leadsTo"> & {
+  /** Ids destino (normalizado desde `leadsTo`). */
+  leadsTo?: string[];
+  /** Tramos a pie por id destino (solo las aristas anotadas). */
+  gaps: Record<string, Gap>;
   confidence: "low" | "high";
   /** Nivel de recomendación de Dager; "interesante" si el YAML no lo declara. No cuenta para "por completar". */
   recommendation: Recommendation;

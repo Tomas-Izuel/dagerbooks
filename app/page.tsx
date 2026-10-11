@@ -43,7 +43,10 @@ export default function Home() {
       recommendation: b.recommendation,
     };
   });
-  const edges = base.edges.map(({ from, to, kind, reason }) => ({ from, to, kind, ...(reason ? { reason } : {}) }));
+  const edges = base.edges.map(({ from, to, kind, reason }) => {
+    const gap = kind === "leadsTo" ? bookById.get(from)?.gaps[to]?.severity : undefined;
+    return { from, to, kind, ...(reason ? { reason } : {}), ...(gap ? { gap } : {}) };
+  });
   const layouts = Object.fromEntries(
     DENSITIES.map((d) => {
       const l = computed[d];
@@ -100,6 +103,10 @@ export default function Home() {
         asin: b.asin,
       },
       related: relatedBooks(b.id).map((r) => ({ id: r.book.id, reason: r.reason })),
+      gaps: {
+        ...b.gaps,
+        ...Object.fromEntries(books.filter((o) => o.gaps[b.id]).map((o) => [o.id, o.gaps[b.id]])),
+      },
     };
   }
 

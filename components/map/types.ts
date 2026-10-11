@@ -1,6 +1,7 @@
 import type { LayoutBounds, LayoutEdge, LayoutEdgeKind, LayoutRing, LayoutSector } from "@/lib/catalog/layout.types";
 import type { Recommendation } from "@/lib/catalog/schema";
 import type { FocusLayout } from "@/lib/catalog/focus";
+import type { GapSeverity } from "@/lib/catalog/schema";
 import type { Density } from "@/lib/density";
 
 /** Slim, serializable station for the map (server -> client). */
@@ -32,9 +33,12 @@ export interface MapLine {
   color: string;
 }
 
+/** Edge as the map draws it: layout path plus the optional "tramo a pie" severity. */
+export type MapEdge = LayoutEdge & { gap?: GapSeverity };
+
 export interface MapGeometry {
   nodes: MapNode[];
-  edges: LayoutEdge[];
+  edges: MapEdge[];
   sectors: LayoutSector[];
   rings: LayoutRing[];
   bounds: LayoutBounds;
@@ -49,6 +53,8 @@ export interface MapEdgeMeta {
   to: string;
   kind: LayoutEdgeKind;
   reason?: string;
+  /** Tramo a pie (leadsTo anotados con gap). */
+  gap?: GapSeverity;
 }
 
 /** What one density adds to the shared part: positions and paths only. */
