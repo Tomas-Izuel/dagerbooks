@@ -1,0 +1,181 @@
+/* Novedades: la misma tira de estaciones que "Sumá un libro", una parada por actualización. */
+.page {
+  --ring: 1.25rem;
+  --track: 0.25rem;
+  --gutter: 2.75rem;
+  display: grid;
+  gap: var(--space-7);
+  max-inline-size: 46rem;
+  margin-inline: auto;
+}
+
+.head {
+  display: grid;
+  gap: var(--space-3);
+}
+
+.title {
+  font-size: var(--text-2xl);
+}
+
+.lead {
+  max-inline-size: 60ch;
+  color: var(--fg-muted);
+  font-size: var(--text-lg);
+}
+
+.empty {
+  padding: var(--space-5);
+  border: var(--rule-width) dashed var(--rule);
+  color: var(--fg-muted);
+}
+
+.route {
+  position: relative;
+  display: grid;
+  gap: var(--space-7);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.route::before {
+  content: "";
+  position: absolute;
+  inset-block: calc(var(--ring) / 2);
+  inset-inline-start: calc((var(--ring) - var(--track)) / 2);
+  inline-size: var(--track);
+  background: var(--fg);
+}
+
+.stop {
+  position: relative;
+  display: grid;
+  gap: var(--space-4);
+  min-inline-size: 0;
+  padding-inline-start: var(--gutter);
+  line-height: var(--leading-body);
+}
+
+.stop::before {
+  content: "";
+  position: absolute;
+  inset-block-start: 0.2rem;
+  inset-inline-start: 0;
+  inline-size: var(--ring);
+  block-size: var(--ring);
+  box-sizing: border-box;
+  border: 0.25rem solid var(--fg);
+  border-radius: var(--radius-disc);
+  background: var(--bg);
+}
+
+/* La más nueva, con la parada rellena en el color de aviso. */
+.stop[data-latest="true"]::before {
+  border-color: var(--accent);
+  background: var(--accent);
+}
+
+.stopTitle {
+  display: grid;
+  gap: var(--space-1);
+  font-size: var(--text-xl);
+  text-wrap: balance;
+}
+
+.date {
+  color: var(--fg-muted);
+  font-family: var(--font-data);
+  font-size: var(--text-xs);
+  font-weight: 400;
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+}
+
+.stream {
+  margin: 0;
+  color: var(--fg-muted);
+}
+
+.block {
+  display: grid;
+  gap: var(--space-2);
+}
+
+.blockTitle {
+  color: var(--fg-muted);
+  font-family: var(--font-sign);
+  font-size: var(--text-xs);
+  letter-spacing: var(--tracking-sign);
+  text-transform: uppercase;
+}
+
+.books,
+.improvements {
+  display: grid;
+  gap: var(--space-2);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.improvements {
+  gap: var(--space-2);
+}
+
+.improvements li {
+  padding-inline-start: var(--space-3);
+  border-inline-start: var(--rule-width) solid var(--rule);
+}
+
+.book {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-1) var(--space-2);
+}
+
+.bookLink {
+  font-weight: 600;
+}
+
+.bookEs {
+  color: var(--fg-muted);
+  font-size: var(--text-sm);
+}
+
+.more {
+  display: grid;
+  gap: var(--space-2);
+}
+
+.more > summary {
+  inline-size: fit-content;
+  padding-block: var(--space-1);
+  color: var(--fg);
+  font-family: var(--font-sign);
+  font-size: var(--text-sm);
+  font-weight: 700;
+  cursor: pointer;
+  text-decoration: underline;
+  text-decoration-thickness: var(--rule-width);
+  text-underline-offset: 0.25em;
+}
+
+.more[open] > summary {
+  margin-block-end: var(--space-2);
+}
+
+.more > summary:focus-visible {
+  outline: var(--rule-width) solid var(--focus);
+  outline-offset: 2px;
+}
+
+.srOnly {
+  position: absolute;
+  inline-size: 1px;
+  block-size: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}

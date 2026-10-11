@@ -1,4 +1,4 @@
-import type { Book, Topic } from "@/lib/catalog/schema";
+import type { Book, SiteUpdate, Topic } from "@/lib/catalog/schema";
 import { SITE_DESCRIPTION, SITE_NAME, SITE_URL, absoluteUrl, bookPath, openLibraryCover, topicPath } from "./site";
 
 export function websiteJsonLd() {
@@ -53,3 +53,19 @@ export function topicJsonLd(topic: Topic, books: Book[]) {
 
 /** Serializa para <script type="application/ld+json">; escapa "<" para evitar cierre de script. */
 export const jsonLdString = (data: unknown) => JSON.stringify(data).replace(/</g, "\\u003c");
+
+export function novedadesJsonLd(updates: SiteUpdate[]) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: "Novedades de DagerBooks",
+    url: absoluteUrl("/novedades"),
+    numberOfItems: updates.length,
+    itemListElement: updates.map((u, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      name: u.title,
+      description: u.improvements.join(" "),
+    })),
+  };
+}

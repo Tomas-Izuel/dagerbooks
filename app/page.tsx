@@ -11,6 +11,7 @@ import { DENSITIES, type Density } from "@/lib/density";
 import { linesFor } from "@/lib/design/lines";
 import { buildSearchDocs } from "@/lib/search";
 import { jsonLdString, websiteJsonLd } from "@/lib/seo";
+import { formatUpdateDate, latestUpdate } from "@/lib/updates";
 import { topicPath } from "@/lib/seo/site";
 import styles from "./page.module.css";
 
@@ -112,6 +113,17 @@ export default function Home() {
 
   const explorerNodes = books.map((b) => ({ id: b.id, leadsTo: b.leadsTo, topics: b.topics, level: b.level, recommendation: b.recommendation }));
 
+  const latest = latestUpdate();
+  const update = latest && {
+    id: latest.id,
+    isoDate: latest.date,
+    date: formatUpdateDate(latest.date),
+    title: latest.title,
+    bookCount: latest.books?.length ?? 0,
+    streamTitle: latest.stream?.title,
+    improvementCount: latest.improvements.length,
+  };
+
   return (
     <main>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLdString(websiteJsonLd()) }} />
@@ -123,6 +135,7 @@ export default function Home() {
           searchDocs={buildSearchDocs(catalog)}
           panels={panels}
           recLabels={RECOMMENDATION_LABELS}
+          update={update}
         />
       </Suspense>
       <nav aria-label="Líneas" className={styles.srOnly}>
@@ -134,6 +147,9 @@ export default function Home() {
           ))}
           <li>
             <Link href="/estaciones">Directorio de estaciones</Link>
+          </li>
+          <li>
+            <Link href="/novedades">Novedades</Link>
           </li>
         </ul>
       </nav>
