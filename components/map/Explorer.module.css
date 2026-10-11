@@ -11,7 +11,7 @@
   overflow: hidden;
   overscroll-behavior: none;
   display: grid;
-  grid-template-columns: var(--panel-width) minmax(0, 1fr);
+  grid-template-columns: var(--board-width) minmax(0, 1fr);
   block-size: 100dvh;
   min-block-size: 32rem;
   background: var(--bg);
@@ -19,6 +19,12 @@
 
 .shell {
   --view-fade: 240ms;
+  --board-width: var(--panel-width);
+}
+
+/* Board collapsed on desktop: only search and lines are left, so the map gets the width back. */
+.shell[data-board="collapsed"] {
+  --board-width: 19.5rem;
 }
 
 .stage {

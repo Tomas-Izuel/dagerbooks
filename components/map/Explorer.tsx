@@ -13,6 +13,7 @@ import type { Recommendation } from "@/lib/catalog/schema";
 import { isAllRecs } from "@/lib/design/recommendation";
 import type { PanelBook, StationRef } from "@/components/explorer/types";
 import { useBookSearch } from "@/hooks/useBookSearch";
+import { useBoardCollapsed } from "@/hooks/useBoardCollapsed";
 import { useDensity } from "@/hooks/useDensity";
 import { useExplorerState } from "@/hooks/useExplorerState";
 import { useReadProgress } from "@/hooks/useReadProgress";
@@ -88,6 +89,7 @@ export function Explorer({ geometry: geometrySet, lines, explorerNodes, searchDo
   const progress = useReadProgress();
   const narrow = useNarrow();
   const { density, setDensity } = useDensity();
+  const { collapsed: boardCollapsed, setCollapsed: setBoardCollapsed } = useBoardCollapsed();
   // The first density change (stored value applied after mount) re-fits instantly; user switches animate.
   const [userSwitched, setUserSwitched] = useState(false);
   const onDensity = useCallback(
@@ -265,7 +267,7 @@ export function Explorer({ geometry: geometrySet, lines, explorerNodes, searchDo
   const read = progress.read;
 
   return (
-    <div className={styles.shell} data-density={density}>
+    <div className={styles.shell} data-density={density} data-board={boardCollapsed ? "collapsed" : undefined}>
       <p className={styles.srOnly} role="status" aria-live="polite">
         {announcement}
       </p>
@@ -285,6 +287,8 @@ export function Explorer({ geometry: geometrySet, lines, explorerNodes, searchDo
         onToggleRec={toggleRecommendation}
         onResetRec={resetRecommendation}
         filtering={filtering}
+        collapsed={boardCollapsed}
+        onCollapsed={setBoardCollapsed}
         activeCount={activeCount}
         bookTotal={bookTotal}
         query={search.query}
