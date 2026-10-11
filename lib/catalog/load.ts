@@ -1,16 +1,18 @@
 import fs from "node:fs";
 import path from "node:path";
 import { parse as parseYaml } from "yaml";
-import type { ZodError } from "zod";
+import type { ZodError, ZodType } from "zod";
 import { checkInvariants } from "./invariants";
 import {
   BookSchema,
   TopicSchema,
+  UpdateSchema,
   leadsToId,
   type Book,
   type Gap,
   type MissingField,
   type RawBook,
+  type SiteUpdate,
   type Topic,
 } from "./schema";
 
@@ -27,6 +29,8 @@ export class CatalogError extends Error {
 export interface Catalog {
   books: Book[];
   topics: Topic[];
+  /** Actualizaciones del sitio, la más nueva primero. */
+  updates: SiteUpdate[];
   root: Book;
   warnings: string[];
 }
@@ -56,7 +60,7 @@ function parseList<T extends { id: string }>(
   raw: unknown,
   file: string,
   noun: string,
-  schema: typeof BookSchema | typeof TopicSchema,
+  schema: ZodType,
   problems: string[],
 ): T[] {
   if (!Array.isArray(raw)) {
@@ -96,17 +100,39 @@ function withConfidence(b: RawBook): Book {
   };
 }
 
+function checkUpdates(updates: SiteUpdate[], bookIds: Set<string>): string[] {
+  const problems: string[] = [];
+  const seen = new Set<string>();
+  for (const u of updates) {
+    const label = `actualización "${u.id}"`;
+    if (seen.has(u.id)) problems.push(`${label}: id repetido`);
+    seen.add(u.id);
+    const own = new Set<string>();
+    (u.books ?? []).forEach((id, i) => {
+      if (!bookIds.has(id)) problems.push(`${label} › books[${i}]: el libro "${id}" no existe en books.yaml`);
+      if (own.has(id)) problems.push(`${label} › books[${i}]: "${id}" está repetido`);
+      own.add(id);
+    });
+  }
+  return problems;
+}
+
 export function loadCatalogFrom(dir: string): Catalog {
   const problems: string[] = [];
   const topics = parseList<Topic>(readYaml(path.join(dir, "topics.yaml")), "topics.yaml", "tema", TopicSchema, problems);
   const raw = parseList<RawBook>(readYaml(path.join(dir, "books.yaml")), "books.yaml", "libro", BookSchema, problems);
 
+  const updates = parseList<SiteUpdate>(readYaml(path.join(dir, "updates.yaml")), "updates.yaml", "actualización", UpdateSchema, problems);
+
   const inv = checkInvariants(raw, topics);
   problems.push(...inv.errors);
+  problems.push(...checkUpdates(updates, new Set(raw.map((b) => b.id))));
   if (problems.length) throw new CatalogError(problems);
 
   const books = raw.map(withConfidence);
-  return { books, topics, root: books.find((b) => b.level === 0)!, warnings: inv.warnings };
+  // Más nueva primero; a igual fecha se respeta el orden del archivo (sort estable).
+  updates.sort((a, b) => b.date.localeCompare(a.date));
+  return { books, topics, updates, root: books.find((b) => b.level === 0)!, warnings: inv.warnings };
 }
 
 let cached: Catalog | undefined;

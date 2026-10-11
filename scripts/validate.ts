@@ -1,9 +1,9 @@
 import { CatalogError, loadCatalog } from "../lib/catalog/load";
 
 try {
-  const { books, topics, warnings } = loadCatalog();
+  const { books, topics, updates, warnings } = loadCatalog();
   const low = books.filter((b) => b.confidence === "low");
-  console.log(`OK: ${books.length} libros, ${topics.length} temas, ${low.length} por completar.`);
+  console.log(`OK: ${books.length} libros, ${topics.length} temas, ${updates.length} actualizaciones, ${low.length} por completar.`);
   if (warnings.length) {
     console.warn(`\nAvisos (${warnings.length}):`);
     for (const w of warnings) console.warn(`  - ${w}`);

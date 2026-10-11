@@ -110,6 +110,41 @@ export const TopicSchema = z.strictObject({
 
 export const TopicsFileSchema = z.array(TopicSchema);
 
+const IsoDate = z
+  .string()
+  .regex(/^\d{4}-\d{2}-\d{2}$/, { error: "date debe ser YYYY-MM-DD" })
+  .refine((d) => !Number.isNaN(Date.parse(`${d}T00:00:00Z`)) && new Date(`${d}T00:00:00Z`).toISOString().startsWith(d), {
+    error: "date no es una fecha válida",
+  });
+
+export const UPDATE_LIMITS = { title: 70, streamTitle: 120, improvement: 140, improvements: 5 } as const;
+
+/** Una actualización del sitio: libros nuevos (y de qué stream salen) y mejoras. */
+export const UpdateSchema = z.strictObject({
+  id: Slug,
+  date: IsoDate,
+  title: z.string().min(1).max(UPDATE_LIMITS.title, { error: `title debe ser corto (hasta ${UPDATE_LIMITS.title} caracteres)` }),
+  stream: z
+    .strictObject({
+      title: z.string().min(1).max(UPDATE_LIMITS.streamTitle),
+      url: z.url({ error: "url inválida" }),
+    })
+    .optional(),
+  /** Ids de los libros agregados en esta actualización (deben existir en books.yaml). */
+  books: z.array(Slug).optional(),
+  improvements: z
+    .array(
+      z.string().min(1).max(UPDATE_LIMITS.improvement, {
+        error: `cada mejora debe ser una frase corta (hasta ${UPDATE_LIMITS.improvement} caracteres)`,
+      }),
+    )
+    .min(1, { error: "improvements necesita al menos 1 frase" })
+    .max(UPDATE_LIMITS.improvements, { error: `improvements admite hasta ${UPDATE_LIMITS.improvements} frases` }),
+});
+
+export const UpdatesFileSchema = z.array(UpdateSchema);
+
+export type SiteUpdate = z.infer<typeof UpdateSchema>;
 export type Source = z.infer<typeof SourceSchema>;
 export type RawBook = z.infer<typeof BookSchema>;
 export type Topic = z.infer<typeof TopicSchema>;

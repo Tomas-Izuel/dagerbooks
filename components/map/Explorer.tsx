@@ -3,6 +3,7 @@
 import Link from "next/link";
 import dynamic from "next/dynamic";
 import { type CSSProperties, useCallback, useEffect, useMemo, useRef, useState, useSyncExternalStore } from "react";
+import { UpdateNotice, type UpdateNoticeData } from "@/components/page/UpdateNotice";
 import { DensityControl } from "@/components/explorer/DensityControl";
 import { ViewControl } from "@/components/explorer/ViewControl";
 import { MapControls } from "@/components/explorer/MapControls";
@@ -45,6 +46,8 @@ export interface ExplorerProps {
   panels: Record<string, PanelEntry>;
   /** Textos de cada nivel (RECOMMENDATION_LABELS, del servidor). */
   recLabels: Record<Recommendation, { label: string; description: string }>;
+  /** Última actualización del sitio para el aviso (omitir si no hay). */
+  update?: UpdateNoticeData;
 }
 
 // The subway view (and its layout) is a lazy chunk: the radial pays nothing for it.
@@ -77,7 +80,7 @@ const useNarrow = () =>
 
 const byLevelThenTitle = (a: StationRef, b: StationRef) => a.level - b.level || a.title.localeCompare(b.title);
 
-export function Explorer({ geometry: geometrySet, lines, explorerNodes, searchDocs, panels, recLabels }: ExplorerProps) {
+export function Explorer({ geometry: geometrySet, lines, explorerNodes, searchDocs, panels, recLabels, update }: ExplorerProps) {
   const mapRef = useRef<NetworkMapHandle>(null);
   const topicIds = useMemo(() => lines.map((l) => l.topicId), [lines]);
   const { state, selection, dimmed, selectBook, setTopic, setVista, toggleRecommendation, resetRecommendation, setQuery } = useExplorerState(explorerNodes, topicIds);
@@ -369,14 +372,17 @@ export function Explorer({ geometry: geometrySet, lines, explorerNodes, searchDo
         </div>
 
         <div className={styles.links}>
-          <Link className={styles.directoryLink} href="/estaciones">
-            Directorio de estaciones
-            <span aria-hidden="true"> →</span>
-          </Link>
-          <Link className={styles.directoryLink} href="/sumar-un-libro">
-            Sumá un libro
-            <span aria-hidden="true"> →</span>
-          </Link>
+          {update ? <UpdateNotice update={update} /> : null}
+          <div className={styles.linkRow}>
+            <Link className={styles.directoryLink} href="/estaciones">
+              Directorio de estaciones
+              <span aria-hidden="true"> →</span>
+            </Link>
+            <Link className={styles.directoryLink} href="/sumar-un-libro">
+              Sumá un libro
+              <span aria-hidden="true"> →</span>
+            </Link>
+          </div>
         </div>
 
         <div className={styles.controls}>
