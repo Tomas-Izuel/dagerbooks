@@ -1,6 +1,7 @@
 "use client";
 
 import { useId, useState, type CSSProperties, type KeyboardEvent } from "react";
+import { isAllRecs } from "@/lib/design/recommendation";
 import { RecMark } from "@/components/ui/RecMark";
 import type { Recommendation } from "@/lib/catalog/schema";
 import { RecommendationFilter } from "./RecommendationFilter";
@@ -40,6 +41,9 @@ interface StationBoardProps {
   onResetRec(): void;
   /** tema or rec filter on. */
   filtering: boolean;
+  /** Only search and lines stay: title, progress card and recommendation filter are hidden. */
+  collapsed: boolean;
+  onCollapsed(c: boolean): void;
   activeCount: number;
   bookTotal: number;
   query: string;
@@ -61,6 +65,8 @@ export function StationBoard({
   onToggleRec,
   onResetRec,
   filtering,
+  collapsed,
+  onCollapsed,
   activeCount,
   bookTotal,
   query,
@@ -111,6 +117,11 @@ export function StationBoard({
     }
   }
 
+  const recFiltered = !isAllRecs(activeRecs);
+  const headId = `${uid}-head`;
+  const detailsId = `${uid}-details`;
+  const recId = `${uid}-rec`;
+
   const pct = total > 0 ? Math.min(100, (readCount / total) * 100) : 0;
 
   return (
@@ -122,12 +133,34 @@ export function StationBoard({
             Dager<span className={styles.wordmarkB}>Books</span>
           </span>
         </div>
-        <p className={styles.attribution}>
+        <p className={styles.attribution} id={headId} hidden={collapsed}>
           Las lecturas que recomienda Dager, en un mapa. Proyecto de la comunidad.
         </p>
       </header>
 
-      <h1 className={styles.heading}>¿Dónde arrancás?</h1>
+      <div className={styles.fold}>
+        {collapsed && recFiltered ? (
+          <span className={styles.foldHint} id={`${uid}-hint`}>
+            Filtro activo
+          </span>
+        ) : null}
+        <button
+          type="button"
+          className={styles.foldBtn}
+          aria-expanded={!collapsed}
+          aria-controls={`${headId} ${detailsId} ${uid}-trip ${recId}`}
+          aria-describedby={collapsed && recFiltered ? `${uid}-hint` : undefined}
+          data-filtered={collapsed && recFiltered ? "" : undefined}
+          onClick={() => onCollapsed(!collapsed)}
+        >
+          <span className={styles.foldLabel}>{collapsed ? "Mostrar todo" : "Ocultar detalles"}</span>
+          <svg className={styles.foldChevron} width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="square" aria-hidden="true">
+            <path d="M2 9l5-5 5 5" />
+          </svg>
+        </button>
+      </div>
+
+      <h1 className={styles.heading} id={detailsId} hidden={collapsed}>¿Dónde arrancás?</h1>
 
       <div className={styles.search}>
         <label className={styles.searchField}>
@@ -214,7 +247,7 @@ export function StationBoard({
         ) : null}
       </div>
 
-      <div className={styles.trip} role="group" aria-label="Tu progreso">
+      <div className={styles.trip} id={`${uid}-trip`} hidden={collapsed} role="group" aria-label="Tu progreso">
         <p className={styles.tripCount}>
           Leíste <strong>{readCount}</strong> de <strong>{total}</strong>
         </p>
@@ -234,6 +267,8 @@ export function StationBoard({
       </div>
 
       <RecommendationFilter
+        id={recId}
+        hidden={collapsed}
         labels={recLabels}
         active={activeRecs}
         counts={recCounts}

@@ -13,18 +13,21 @@ export interface RecommendationFilterProps {
   counts: Record<Recommendation, number>;
   onToggle(r: Recommendation): void;
   onReset(): void;
+  id?: string;
+  /** Collapsed board: out of the layout and out of the tab order. */
+  hidden?: boolean;
 }
 
 /**
  * "¿Qué tan recomendado?": three independent toggles (aria-pressed), like checkboxes. All three start on;
  * the last one left on can't be turned off, so the filter never empties.
  */
-export function RecommendationFilter({ labels, active, counts, onToggle, onReset }: RecommendationFilterProps) {
+export function RecommendationFilter({ labels, active, counts, onToggle, onReset, id, hidden }: RecommendationFilterProps) {
   const hintId = useId();
   const all = isAllRecs(active);
 
   return (
-    <section className={styles.root} aria-labelledby={`${hintId}-t`}>
+    <section id={id} hidden={hidden} className={styles.root} aria-labelledby={`${hintId}-t`}>
       <header className={styles.head}>
         <h2 className={styles.title} id={`${hintId}-t`}>
           ¿Qué tan recomendado?
