@@ -7,6 +7,8 @@ import { RecMark } from "@/components/ui/RecMark";
 import type { Recommendation } from "@/lib/catalog/schema";
 import { Dotted } from "@/components/page/Dotted";
 import { AmazonBuy } from "@/components/page/AmazonBuy";
+import { WalkSign } from "@/components/page/WalkSign";
+import type { Gap } from "@/lib/catalog/schema";
 import { lineFor, zoneLabel } from "./lines";
 import type { PanelBook, StationRef } from "./types";
 import styles from "./StationPanel.module.css";
@@ -17,6 +19,8 @@ interface StationPanelProps {
   prerequisites: StationRef[];
   unlocks: StationRef[];
   related: (StationRef & { reason: string })[];
+  /** Tramos a pie de las aristas que tocan esta estación, por id de la otra estación. */
+  gaps: Record<string, Gap>;
   isRead: boolean;
   onToggleRead(): void;
   onClose(): void;
@@ -66,9 +70,13 @@ export function StationPanel(props: StationPanelProps) {
 function StationList({
   items,
   onSelect,
+  gaps,
+  direction,
 }: {
   items: (StationRef & { reason?: string })[];
   onSelect(id: string): void;
+  gaps?: Record<string, Gap>;
+  direction?: "in" | "out";
 }) {
   return (
     <ul className={styles.stops}>
@@ -76,6 +84,11 @@ function StationList({
         const l = lineFor(r.topicId);
         return (
           <li key={r.id}>
+            {direction === "out" && gaps?.[r.id] ? (
+              <div className={styles.walk}>
+                <WalkSign gap={gaps[r.id]} direction="out" />
+              </div>
+            ) : null}
             <button type="button" className={styles.stop} onClick={() => onSelect(r.id)}>
               <LineDisc letter={l.letter} color={l.color} size="sm" />
               <span className={styles.stopText}>
@@ -84,6 +97,11 @@ function StationList({
               </span>
               <span className={styles.stopZone}>{r.level === 0 ? "Km 0" : `Z${r.level}`}</span>
             </button>
+            {direction === "in" && gaps?.[r.id] ? (
+              <div className={styles.walk}>
+                <WalkSign gap={gaps[r.id]} direction="in" />
+              </div>
+            ) : null}
           </li>
         );
       })}
@@ -97,6 +115,7 @@ function PanelInner({
   prerequisites,
   unlocks,
   related,
+  gaps,
   isRead,
   onToggleRead,
   onClose,
@@ -259,13 +278,13 @@ function PanelInner({
             {prerequisites.length > 0 ? (
               <div className={styles.group}>
                 <h4 className={styles.groupTitle}>Antes pasás por</h4>
-                <StationList items={prerequisites} onSelect={onSelect} />
+                <StationList items={prerequisites} onSelect={onSelect} gaps={gaps} direction="in" />
               </div>
             ) : null}
             {unlocks.length > 0 ? (
               <div className={styles.group}>
                 <h4 className={styles.groupTitle}>Después seguís a</h4>
-                <StationList items={unlocks} onSelect={onSelect} />
+                <StationList items={unlocks} onSelect={onSelect} gaps={gaps} direction="out" />
               </div>
             ) : null}
           </section>

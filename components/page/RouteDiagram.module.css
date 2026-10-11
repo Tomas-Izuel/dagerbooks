@@ -33,6 +33,11 @@
   list-style: none;
 }
 
+.item {
+  display: grid;
+  gap: var(--space-3);
+}
+
 .row,
 .here {
   position: relative;
@@ -90,4 +95,26 @@
 .terminal {
   color: var(--fg-muted);
   font-size: var(--text-sm);
+}
+
+/* Tramo a pie: el riel de la línea se interrumpe y queda un trazo de huellas en porcelana. */
+.walk {
+  position: relative;
+}
+
+.walk::before {
+  content: "";
+  position: absolute;
+  inset-block: calc(var(--space-3) * -1);
+  inset-inline-start: calc(-2.25rem + var(--rail-x) - 5px);
+  inline-size: 10px;
+  background: var(--bg);
+}
+
+.walk::after {
+  content: "";
+  position: absolute;
+  inset-block: calc(var(--space-3) * -1);
+  inset-inline-start: calc(-2.25rem + var(--rail-x) - 1px);
+  border-inline-start: 3px dotted var(--fg);
 }

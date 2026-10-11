@@ -6,7 +6,9 @@ import { checkInvariants } from "./invariants";
 import {
   BookSchema,
   TopicSchema,
+  leadsToId,
   type Book,
+  type Gap,
   type MissingField,
   type RawBook,
   type Topic,
@@ -81,9 +83,13 @@ function withConfidence(b: RawBook): Book {
   if (!b.summary) missing.push("summary");
   if (!b.context) missing.push("context");
   if (!b.sources?.length) missing.push("sources");
+  const gaps: Record<string, Gap> = {};
+  for (const item of b.leadsTo ?? []) if (typeof item !== "string") gaps[item.id] = item.gap;
   return {
     ...b,
     recommendation: b.recommendation ?? "interesante",
+    leadsTo: b.leadsTo?.map(leadsToId),
+    gaps,
     confidence: b.confidence ?? (missing.length ? "low" : "high"),
     missing,
     primaryTopic: b.topics[0] ?? null,

@@ -38,6 +38,7 @@ import {
 import { FocusBar, HoverTag, MapLegend } from "./shared/MapOverlays";
 import { InterchangeTags, TAG_MIN_SCALE, buildXTags, type XTag } from "./shared/InterchangeTags";
 import { Station, type CrossMark } from "./shared/Station";
+import { WalkRun, WalkTrack, gapsFromEdges } from "./shared/Walk";
 import { placeSubwayLabels, type PlacedSubwayLabel, type Segment } from "./subway/labels";
 import type { SubwayFocus, SubwayGeometry, SubwayMapNode } from "./subway/types";
 import { resolveSubway, resolveSubwayFocus } from "./subway/resolve";
@@ -473,6 +474,8 @@ export function SubwayMap({
   /* ---- route (train run) + unlock edges ---- */
   const route = useMemo(() => (selection ? deriveRoute(edges, selection, rootNode?.id) : null), [selection, edges, rootNode]);
 
+  const gaps = useMemo(() => gapsFromEdges(set.edges), [set.edges]);
+
   const edgeTone = useCallback(
     (e: LayoutEdge): Tone => {
       if (selection) {
@@ -529,6 +532,8 @@ export function SubwayMap({
   const renderTrack = (e: LayoutEdge, byId: ReadonlyMap<string, SubwayMapNode>) => {
     if (e.kind === "related") return null;
     const rail = e.kind === "implicitRoot";
+    const gap = gaps.get(edgeKey(e));
+    if (gap) return <WalkTrack key={edgeKey(e)} edge={e} gap={gap} tone={edgeTone(e)} ink={targetInk(e, byId)} />;
     return (
       <path
         key={edgeKey(e)}
@@ -691,15 +696,21 @@ export function SubwayMap({
           {/* The train run: prerequisites drawn from KM 0, segment by segment */}
           {route ? (
             <g key={selection?.id} aria-hidden="true">
-              {route.run.map(({ edge, index }) => (
-                <path
-                  key={edgeKey(edge)}
-                  className={edge.kind === "implicitRoot" ? `${base.run} ${styles.runStatic}` : base.run}
-                  d={edge.path}
-                  pathLength={1}
-                  style={{ "--ink": targetInk(edge, nodeById), "--i": index, "--n": route.n } as CSSProperties}
-                />
-              ))}
+              {route.run.map(({ edge, index }) => {
+                const gap = gaps.get(edgeKey(edge));
+                if (gap) {
+                  return <WalkRun key={edgeKey(edge)} edge={edge} gap={gap} ink={targetInk(edge, nodeById)} index={index} n={route.n} bounds={bounds} scope="s" />;
+                }
+                return (
+                  <path
+                    key={edgeKey(edge)}
+                    className={edge.kind === "implicitRoot" ? `${base.run} ${styles.runStatic}` : base.run}
+                    d={edge.path}
+                    pathLength={1}
+                    style={{ "--ink": targetInk(edge, nodeById), "--i": index, "--n": route.n } as CSSProperties}
+                  />
+                );
+              })}
             </g>
           ) : null}
 

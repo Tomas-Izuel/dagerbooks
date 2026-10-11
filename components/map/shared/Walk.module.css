@@ -1,0 +1,78 @@
+/* ---- tramo a pie: the line breaks, porcelain footsteps carry the stretch ---- */
+
+/* Footsteps: round dots in porcelain, readable without any line ink. */
+.trace,
+.traceRun {
+  fill: none;
+  stroke: var(--fg);
+  stroke-width: calc(3.2 * var(--m, 1));
+  stroke-linecap: round;
+  stroke-dasharray: 0.1 11;
+  transition: opacity var(--dur-base) var(--ease-out-expo);
+}
+
+/* The two ink stubs hug the stations; the middle is left bare. pathLength=1. */
+.stubs,
+.stubsRun {
+  fill: none;
+  stroke: var(--ink);
+  stroke-width: calc(var(--map-line-width) * var(--m, 1));
+  stroke-linecap: butt;
+  stroke-dasharray: 0.2 0.6 0.2 1;
+  transition: opacity var(--dur-base) var(--ease-out-expo);
+}
+
+/* muy fuerte: shorter stubs, a longer bare stretch and denser, heavier footsteps. */
+.trace[data-gap="muy-fuerte"],
+.traceRun[data-gap="muy-fuerte"] {
+  stroke-width: calc(4 * var(--m, 1));
+  stroke-dasharray: 0.1 8;
+}
+
+.stubs[data-gap="muy-fuerte"],
+.stubsRun[data-gap="muy-fuerte"] {
+  stroke-dasharray: 0.12 0.76 0.12 1;
+}
+
+.trace[data-tone="mid"],
+.stubs[data-tone="mid"] {
+  opacity: 0.62;
+}
+
+.trace[data-tone="dim"],
+.stubs[data-tone="dim"] {
+  opacity: var(--dim-opacity);
+}
+
+/* Selected route: stubs and steps revealed by a wipe that advances in steps, like walking. */
+.traceRun {
+  stroke-width: calc(4 * var(--m, 1));
+}
+
+.traceRun[data-gap="muy-fuerte"] {
+  stroke-width: calc(4.6 * var(--m, 1));
+}
+
+.stubsRun {
+  stroke-width: calc(var(--map-line-width-active) * var(--m, 1));
+}
+
+.wipe {
+  fill: none;
+  stroke: #fff;
+  stroke-width: 40;
+  stroke-linecap: butt;
+  stroke-dasharray: 1 1;
+  stroke-dashoffset: 0;
+  animation: walkDraw calc(var(--dur-route) * 1.6 / var(--n, 1)) steps(16, end)
+    calc(var(--dur-route) / var(--n, 1) * var(--i, 0)) backwards;
+}
+
+@keyframes walkDraw {
+  from {
+    stroke-dashoffset: 1;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}

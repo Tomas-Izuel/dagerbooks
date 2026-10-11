@@ -15,6 +15,7 @@ import { useBookSearch } from "@/hooks/useBookSearch";
 import { useDensity } from "@/hooks/useDensity";
 import { useExplorerState } from "@/hooks/useExplorerState";
 import { useReadProgress } from "@/hooks/useReadProgress";
+import type { Gap } from "@/lib/catalog/schema";
 import type { ExplorerNode } from "@/lib/state/explorer";
 import type { SearchDoc } from "@/lib/search";
 import { NetworkMap, type NetworkMapHandle } from "./NetworkMap";
@@ -28,6 +29,8 @@ import styles from "./Explorer.module.css";
 export interface PanelEntry {
   book: PanelBook;
   related: { id: string; reason: string }[];
+  /** Tramos a pie que tocan este libro, por id del libro del otro lado. */
+  gaps: Record<string, Gap>;
 }
 
 export interface BoardLine extends MapLine {
@@ -394,6 +397,7 @@ export function Explorer({ geometry: geometrySet, lines, explorerNodes, searchDo
               prerequisites={prerequisites}
               unlocks={unlocks}
               related={related}
+              gaps={entry.gaps}
               isRead={read.has(selectedId)}
               onToggleRead={() => progress.toggle(selectedId)}
               onClose={clear}

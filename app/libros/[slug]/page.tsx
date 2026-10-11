@@ -66,6 +66,12 @@ const toStation = (b: Book): RouteStation => {
 const preferSameLine = (books: Book[], topicId: string | null) =>
   books.find((b) => b.primaryTopic === topicId) ?? books[0] ?? null;
 
+/** Las estaciones con tramo a pie quedan pegadas a "Estás acá", para que el cartel no parezca estar entre otras dos. */
+const gapsNearest =
+  (direction: "in" | "out") =>
+  (a: RouteStation, b: RouteStation) =>
+    (direction === "in" ? 1 : -1) * (Number(!!a.gap) - Number(!!b.gap));
+
 function hostOf(url: string) {
   try {
     return new URL(url).hostname.replace(/^www\./, "");
@@ -247,7 +253,12 @@ export default async function BookPage({ params }: Props) {
           <aside className={styles.side} aria-label="Dónde queda esta estación">
             <section aria-labelledby="recorrido">
               <h2 id="recorrido">Recorrido</h2>
-              <RouteDiagram ink={ink} before={prereqs.map(toStation)} here={book.title} after={unlocks.map(toStation)} />
+              <RouteDiagram
+                ink={ink}
+                before={prereqs.map((p) => ({ ...toStation(p), gap: p.gaps[book.id] })).sort(gapsNearest("in"))}
+                here={book.title}
+                after={unlocks.map((u) => ({ ...toStation(u), gap: book.gaps[u.id] })).sort(gapsNearest("out"))}
+              />
             </section>
 
             {related.length ? (
