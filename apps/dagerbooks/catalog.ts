@@ -7,6 +7,6 @@ export const catalog = defineCatalog({
   recommendations: ["fuerte", "interesante", "mencion"],
   // Las menciones de Dager todavía no declaran postura (backfill pendiente).
   stance: "optional",
-  // Un archivo por libro (content/books/<id>.yaml), ordenados por `seq`.
-  content: { books: { dir: "books" } },
+  // Un archivo por libro (content/books/<id>.yaml, ordenados por `seq`) y por novedad (content/updates/<id>.yaml).
+  content: { books: { dir: "books" }, updates: { dir: "updates" } },
 });

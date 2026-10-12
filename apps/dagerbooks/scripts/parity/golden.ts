@@ -30,24 +30,31 @@ function readContent(): Content {
     .readdirSync(booksDir)
     .filter((f) => f.endsWith(".yaml"))
     .map((f) => parse(fs.readFileSync(path.join(booksDir, f), "utf8")) as Entry);
-  return { books, topics: read("topics"), updates: read("updates"), routes: read("routes") };
+  const dirEntries = (name: string) =>
+    fs
+      .readdirSync(path.join(CONTENT_DIR, name))
+      .filter((f) => f.endsWith(".yaml"))
+      .map((f) => parse(fs.readFileSync(path.join(CONTENT_DIR, name, f), "utf8")) as Entry);
+  return { books, topics: read("topics"), updates: dirEntries("updates"), routes: read("routes") };
 }
 
 function writeContent(dir: string, c: Content, raw: Record<string, string> = {}) {
   fs.rmSync(dir, { recursive: true, force: true });
   fs.mkdirSync(dir, { recursive: true });
-  for (const name of ["topics", "updates", "routes"] as const) {
+  for (const name of ["topics", "routes"] as const) {
     const file = `${name}.yaml`;
     fs.writeFileSync(path.join(dir, file), raw[file] ?? stringify(c[name], { lineWidth: 0 }));
   }
-  // Un archivo por libro; si el id no es usable como nombre, el archivo se llama como su posición.
-  fs.mkdirSync(path.join(dir, "books"));
-  c.books.forEach((b, i) => {
-    const name = typeof b.id === "string" && /^[\w-]+$/.test(b.id) ? b.id : `entrada-${i + 1}`;
-    const file = `books/${name}.yaml`;
-    const target = fs.existsSync(path.join(dir, file)) ? `books/${name}-${i + 1}.yaml` : file;
-    fs.writeFileSync(path.join(dir, target), raw[file] ?? stringify(b, { lineWidth: 0 }));
-  });
+  // Un archivo por libro y por novedad; si el id no es usable como nombre, el archivo se llama como su posición.
+  for (const name of ["books", "updates"] as const) {
+    fs.mkdirSync(path.join(dir, name));
+    c[name].forEach((e, i) => {
+      const stem = typeof e.id === "string" && /^[\w-]+$/.test(e.id) ? e.id : `entrada-${i + 1}`;
+      const file = `${name}/${stem}.yaml`;
+      const target = fs.existsSync(path.join(dir, file)) ? `${name}/${stem}-${i + 1}.yaml` : file;
+      fs.writeFileSync(path.join(dir, target), raw[file] ?? stringify(e, { lineWidth: 0 }));
+    });
+  }
 }
 
 const byId = (list: Entry[], id: string) => {
@@ -60,6 +67,8 @@ const byId = (list: Entry[], id: string) => {
 const ROOT = "tom-sawyer-abroad";
 const A = "but-how-do-it-know";
 const B = "pro-git";
+const U1 = "2026-10-11-rutas";
+const U2 = "2026-10-11-stream";
 
 interface Case {
   name: string;
@@ -101,10 +110,10 @@ const CASES: Case[] = [
   { name: "related sin razón", mutate: (c) => void (byId(c.books, A).related = [{ id: B, reason: "" }]) },
   { name: "tema sin description", mutate: (c) => void delete c.topics[0].description },
   { name: "tema duplicado", mutate: (c) => void (c.topics[1].id = c.topics[0].id) },
-  { name: "actualización con libro inexistente", mutate: (c) => void (c.updates[0].books = ["no-existe"]) },
-  { name: "actualización con fecha inválida", mutate: (c) => void (c.updates[0].date = "2026-02-30") },
-  { name: "actualización sin improvements", mutate: (c) => void (c.updates[0].improvements = []) },
-  { name: "actualización con id repetido", mutate: (c) => void (c.updates[1].id = c.updates[0].id) },
+  { name: "actualización con libro inexistente", mutate: (c) => void (byId(c.updates, U1).books = ["no-existe"]) },
+  { name: "actualización con fecha inválida", mutate: (c) => void (byId(c.updates, U1).date = "2026-02-30") },
+  { name: "actualización sin improvements", mutate: (c) => void (byId(c.updates, U1).improvements = []) },
+  { name: "actualización con id repetido", mutate: (c) => void (byId(c.updates, U2).id = U1) },
   {
     name: "ruta con libro inexistente",
     mutate: (c) => void ((c.routes[0].steps as Entry[])[1].book = "no-existe"),

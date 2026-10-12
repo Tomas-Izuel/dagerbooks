@@ -1,12 +1,13 @@
 /**
- * Parte content/books.yaml en content/books/<id>.yaml (un libro por archivo) y agrega `seq` con el
- * orden actual, que es el que usa el layout para desempatar.
+ * Parte una colección de content/ en un archivo por entrada:
+ *   books    content/books.yaml   → content/books/<id>.yaml, con `seq` = orden actual (el layout desempata por él)
+ *   updates  content/updates.yaml → content/updates/<id>.yaml (el orden lo dan la fecha y el nombre)
  *
- *   tsx tools/migrations/2026-10-split-books.ts --app apps/dagerbooks [--check]
+ *   tsx tools/migrations/2026-10-split-content.ts --app apps/dagerbooks --collection books|updates [--check]
  *
  * Idempotente: si un archivo ya existe y es idéntico lo saltea; si es distinto, aborta (no pisa
- * ediciones). Con --check no escribe nada y falla si algo cambiaría. Si books.yaml ya no existe,
- * no hay nada que hacer.
+ * ediciones). Con --check no escribe nada y falla si algo cambiaría. Si el archivo de origen ya no
+ * existe, no hay nada que hacer.
  */
 import fs from "node:fs";
 import path from "node:path";
@@ -15,15 +16,21 @@ import { Document, Pair, Scalar, YAMLMap, YAMLSeq, isMap, isScalar, parseDocumen
 const args = process.argv.slice(2);
 const app = args[args.indexOf("--app") + 1];
 const check = args.includes("--check");
-if (!app || args.indexOf("--app") < 0) {
-  console.error("uso: tsx tools/migrations/2026-10-split-books.ts --app apps/<creador> [--check]");
+const collection = args.includes("--collection") ? args[args.indexOf("--collection") + 1] : "books";
+const SPECS = {
+  books: { source: "books.yaml", dir: "books", schema: "book.schema.json", seq: true },
+  updates: { source: "updates.yaml", dir: "updates", schema: "update.schema.json", seq: false },
+} as const;
+if (!app || args.indexOf("--app") < 0 || !(collection in SPECS)) {
+  console.error("uso: tsx tools/migrations/2026-10-split-content.ts --app apps/<creador> --collection books|updates [--check]");
   process.exit(2);
 }
+const spec = SPECS[collection as keyof typeof SPECS];
 
 const content = path.resolve(app, "content");
-const source = path.join(content, "books.yaml");
-const outDir = path.join(content, "books");
-const MODELINE = " yaml-language-server: $schema=../book.schema.json";
+const source = path.join(content, spec.source);
+const outDir = path.join(content, spec.dir);
+const MODELINE = ` yaml-language-server: $schema=../${spec.schema}`;
 
 if (!fs.existsSync(source)) {
   console.log(`${path.relative(process.cwd(), source)} no existe: ya está migrado.`);
@@ -31,8 +38,8 @@ if (!fs.existsSync(source)) {
 }
 
 const doc = parseDocument(fs.readFileSync(source, "utf8"));
-if (doc.errors.length) throw new Error(`books.yaml inválido: ${doc.errors[0].message}`);
-if (!(doc.contents instanceof YAMLSeq)) throw new Error("books.yaml debe ser una lista");
+if (doc.errors.length) throw new Error(`${spec.source} inválido: ${doc.errors[0].message}`);
+if (!(doc.contents instanceof YAMLSeq)) throw new Error(`${spec.source} debe ser una lista`);
 
 const seen = new Set<string>();
 const dropped: string[] = [];
@@ -53,7 +60,7 @@ doc.contents.items.forEach((item, i) => {
   for (const pair of item.items) {
     if (isScalar(pair.key) && pair.key.value === "seq") continue;
     map.items.push(pair);
-    if (isScalar(pair.key) && pair.key.value === "id") map.items.push(new Pair(new Scalar("seq"), new Scalar(i)));
+    if (spec.seq && isScalar(pair.key) && pair.key.value === "id") map.items.push(new Pair(new Scalar("seq"), new Scalar(i)));
   }
   const out = new Document(map);
   out.commentBefore = MODELINE;
@@ -76,7 +83,7 @@ for (const p of pending) {
   }
 }
 
-console.log(`${check ? "[check] " : ""}${written} escritos, ${skipped} salteados (${pending.length} libros).`);
+console.log(`${check ? "[check] " : ""}${written} escritos, ${skipped} salteados (${pending.length} entradas).`);
 if (dropped.length) {
   console.log(`Comentarios descartados (${dropped.length}):`);
   for (const d of dropped) console.log(`  ${d}`);

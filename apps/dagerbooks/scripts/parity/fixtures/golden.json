@@ -309,6 +309,7 @@
     "name": "actualización con id repetido",
     "ok": false,
     "messages": [
+      "actualización \"2026-10-11-rutas\" › id: no coincide con el nombre del archivo (2026-10-11-rutas-3.yaml)",
       "actualización \"2026-10-11-rutas\": id repetido"
     ],
     "warnings": []

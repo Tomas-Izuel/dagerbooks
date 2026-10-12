@@ -1,0 +1,11 @@
+# yaml-language-server: $schema=../update.schema.json
+
+id: 2026-10-04-catalogo
+date: 2026-10-04
+title: "Todos los videos, vista subte y más"
+improvements:
+  - "Pasamos de 82 a 199 libros, con libros de todos los videos del canal."
+  - "Líneas nuevas: IA y sociedad, y Ficción."
+  - "Vista subte, además del mapa radial."
+  - "Filtro por cuánto lo recomienda Dager y modo foco por línea."
+  - "Link de compra en cada libro."

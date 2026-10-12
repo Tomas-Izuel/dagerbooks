@@ -1,0 +1,19 @@
+# yaml-language-server: $schema=../update.schema.json
+
+id: 2026-10-11-stream
+date: 2026-10-11
+title: "Libros del stream y rutas replanteadas"
+stream:
+  title: "¿Y SI EL PROBLEMA SOS VOS? (y otras cosas)"
+  url: "https://www.youtube.com/watch?v=DhFQ_yNFuwA"
+books:
+  - from-mutual-aid-to-the-welfare-state
+  - on-liberty
+  - the-road-to-serfdom
+  - human-action
+  - leviathan
+improvements:
+  - "Replanteamos las rutas de las 12 líneas después de que Dager las revisó en vivo."
+  - "Tramos a pie: si entre un libro y el siguiente hay un salto grande, el mapa lo marca y te dice qué investigar antes."
+  - "Economía arranca por donde dijo Dager: Hazlitt, Free to Choose y Capitalism and Freedom."
+  - "Sumamos citas con minuto exacto del stream a 9 libros que ya estaban."
