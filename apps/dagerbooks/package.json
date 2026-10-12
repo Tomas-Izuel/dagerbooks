@@ -8,12 +8,13 @@
     "start": "next start",
     "lint": "eslint .",
     "typecheck": "tsc --noEmit",
-    "validate": "tsx scripts/validate.ts",
+    "validate": "tsx scripts/catalog.ts validate && tsx scripts/catalog.ts schema --check",
     "check:subway": "tsx scripts/check-subway-layout.ts",
-    "schema": "tsx scripts/generate-schema.ts",
+    "schema": "tsx scripts/catalog.ts schema",
     "parity": "tsx scripts/parity/cli.ts"
   },
   "dependencies": {
+    "@estantes/catalog": "workspace:*",
     "@vercel/analytics": "^2.0.1",
     "d3-interpolate": "^3.0.1",
     "d3-selection": "^3.0.0",
