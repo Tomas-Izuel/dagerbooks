@@ -5,15 +5,18 @@ import { CONTRIBUTE_URL } from "@/components/page/constants";
 import { PageShell } from "@/components/page/PageShell";
 import { LineDisc } from "@/components/ui/LineDisc";
 import { allLines } from "@/components/page/lines";
+import { SUGGESTIONS_ENABLED } from "@/lib/suggestions";
 import { CopyButton } from "./CopyButton";
+import { SuggestForm } from "./SuggestForm";
 import styles from "./page.module.css";
 
 const BOOKS_DIR = CONTRIBUTE_URL ?? "https://github.com/Tomas-Izuel/dagerbooks/tree/main/apps/dagerbooks/content/books";
 
 export const metadata: Metadata = {
   title: "Sumá un libro a la red",
-  description:
-    "Cómo proponer un libro que recomendó Dager: sumás un archivo en content/books/ de GitHub, abrís un Pull Request y, tras la revisión, aparece en el mapa.",
+  description: SUGGESTIONS_ENABLED
+    ? "Proponé un libro que recomendó Dager: contanos cuál y dónde lo dijo, lo revisamos y, si entra, aparece en el mapa."
+    : "Cómo proponer un libro que recomendó Dager: sumás un archivo en content/books/ de GitHub, abrís un Pull Request y, tras la revisión, aparece en el mapa.",
   alternates: { canonical: "/sumar-un-libro" },
 };
 
@@ -46,7 +49,8 @@ const ZONES = [
   { level: 4, name: "Especialista", text: "Para meterse a fondo en un tema." },
 ];
 
-export default function SumarUnLibroPage() {
+/** Guía por Pull Request: se muestra mientras el formulario no esté configurado. */
+function PrGuide() {
   const lines = allLines();
 
   return (
@@ -180,4 +184,58 @@ export default function SumarUnLibroPage() {
       </article>
     </PageShell>
   );
+}
+
+/** Formulario de sugerencias: lo que ve el público una vez configurado el repo de sugerencias. */
+function SuggestPage() {
+  return (
+    <PageShell crumbs={[{ label: "Sumá un libro" }]}>
+      <article className={styles.page}>
+        <header className={styles.head}>
+          <h1 className={styles.title}>Sumá un libro a la red</h1>
+          <p className={styles.lead}>
+            ¿Dager recomendó un libro que no está en el mapa? Contanos cuál y dónde lo dijo. Buscamos la cita y, si
+            entra, aparece en la próxima tanda de novedades.
+          </p>
+        </header>
+
+        <ol className={styles.route}>
+          <li className={styles.stop}>
+            <h2 className={styles.stopTitle}>Fijate que no esté</h2>
+            <p>
+              Mirá el <Link href="/estaciones">directorio de estaciones</Link> o usá el buscador del mapa. Igual, si ya
+              está, el formulario te avisa.
+            </p>
+          </li>
+
+          <li className={styles.stop}>
+            <h2 className={styles.stopTitle}>Contanos cuál es</h2>
+            <p>
+              Con el título alcanza. Si tenés el link al video o al stream y el minuto, mejor: así encontramos la cita
+              de Dager más rápido.
+            </p>
+            <SuggestForm />
+          </li>
+
+          <li className={styles.stop} data-terminal="true">
+            <h2 className={styles.stopTitle}>Lo revisamos</h2>
+            <p>
+              Escuchamos dónde lo menciona, completamos los datos y lo ubicamos en su línea y su zona. Si Dager apenas lo
+              nombra o lo critica, no entra.
+            </p>
+          </li>
+        </ol>
+
+        <div className={styles.actions}>
+          <ArrowLink href="/" variant="ghost" direction="left">
+            Volver al mapa
+          </ArrowLink>
+        </div>
+      </article>
+    </PageShell>
+  );
+}
+
+export default function SumarUnLibroPage() {
+  return SUGGESTIONS_ENABLED ? <SuggestPage /> : <PrGuide />;
 }

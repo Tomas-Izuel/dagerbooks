@@ -23,6 +23,11 @@ export function normalizeText(text: string, buildId: string): string {
       // las listas de chunks y los <script src> de chunks se comparan como un todo, no uno por uno.
       .replace(/\[(?:\\?"\/_next\/static\/chunks\/\[chunk\]\.js\\?",?)+\]/g, "[chunks]")
       .replace(/<script src="\/_next\/static\/chunks\/\[chunk\]\.js" async=""><\/script>/g, "")
+      .replace(/<link rel="preload" as="script" fetchPriority="low" href="\/_next\/static\/chunks\/\[chunk\]\.js"\/>/g, "")
+      // Igual con el CSS: cuántas hojas de chunk carga una página depende de cómo Turbopack agrupa los módulos.
+      .replace(/<link rel="stylesheet" href="\/_next\/static\/chunks\/\[chunk\]\.css" data-precedence="next"\/>/g, "")
+      .replace(/(^|\n):HL\["\/_next\/static\/chunks\/\[chunk\]\.css","style"\]/g, "")
+      .replace(/,?\["\$","link","\d+",\{"rel":"stylesheet","href":"\/_next\/static\/chunks\/\[chunk\]\.css","precedence":"next","crossOrigin":"\$undefined","nonce":"\$undefined"\}\]/g, "")
       // Cache-buster de las imágenes OG: cambia con el código de la ruta; la imagen se compara aparte.
       .replace(/(opengraph-image|twitter-image)\?[0-9a-f]{16}/g, "$1?[hash]")
       // .meta: "key": "/route-cache/APP_PAGE/<hash>"

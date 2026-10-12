@@ -5,7 +5,8 @@
   "description": "Lógica headless que comparten los sitios: búsqueda, SEO, afiliado, filtros en la URL, progreso. Sin marca ni UI.",
   "exports": {
     ".": "./src/index.ts",
-    "./react": "./src/react/index.ts"
+    "./react": "./src/react/index.ts",
+    "./server": "./src/server/index.ts"
   },
   "scripts": {
     "typecheck": "tsc --noEmit",

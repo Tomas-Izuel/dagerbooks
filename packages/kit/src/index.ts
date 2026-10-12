@@ -11,3 +11,4 @@ export * from "./seo/metadata";
 export * from "./seo/site";
 export * from "./sources";
 export * from "./url/enumSet";
+export * from "./suggest";
