@@ -1,0 +1,354 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "id": {
+        "type": "string",
+        "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+      },
+      "name": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 40
+      },
+      "kind": {
+        "type": "string",
+        "enum": [
+          "corriente",
+          "objetivo"
+        ]
+      },
+      "line": {
+        "type": "string",
+        "enum": [
+          "fundamentos",
+          "matematicas",
+          "sistemas",
+          "economia",
+          "filosofia",
+          "historia",
+          "desarrollo-personal",
+          "startups",
+          "oficio",
+          "arquitectura",
+          "ia",
+          "ficcion"
+        ]
+      },
+      "promise": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 140
+      },
+      "summary": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 320
+      },
+      "steps": {
+        "minItems": 4,
+        "maxItems": 10,
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "book": {
+              "type": "string",
+              "enum": [
+                "tom-sawyer-abroad",
+                "but-how-do-it-know",
+                "pro-git",
+                "automate-the-boring-stuff-with-python",
+                "git-internals",
+                "csharp-in-a-nutshell",
+                "network-warrior",
+                "csharp-in-depth",
+                "operating-systems-three-easy-pieces",
+                "crafting-interpreters",
+                "algebra-baldor",
+                "algebra-for-dummies",
+                "mathematics-for-programmers-barden",
+                "book-of-proof",
+                "algorithms-illuminated",
+                "introduction-to-algorithms",
+                "concrete-mathematics",
+                "the-information",
+                "blockchain-illustrated-guidebook",
+                "the-science-of-information",
+                "the-blockchain-developer",
+                "a-mathematical-theory-of-communication",
+                "general-system-theory",
+                "economic-sophisms",
+                "the-use-of-knowledge-in-society",
+                "chaos-theory",
+                "the-struggle-for-liberty",
+                "democracy-the-god-that-failed",
+                "stoicism-a-very-short-introduction",
+                "meditations",
+                "on-the-shortness-of-life",
+                "discourses-and-enchiridion",
+                "letters-to-lucilius",
+                "hymn-of-cleanthes",
+                "lives-of-the-eminent-philosophers",
+                "de-finibus",
+                "utilitarianism-for-and-against",
+                "the-hellenistic-philosophers",
+                "the-greeks-kitto",
+                "breve-historia-de-los-argentinos",
+                "los-argentinos-lanata",
+                "time-travel-a-history",
+                "the-ancient-world-glover",
+                "breve-historia-contemporanea-de-la-argentina",
+                "el-45",
+                "la-patagonia-rebelde",
+                "operacion-masacre",
+                "la-formacion-del-estado-argentino",
+                "eichmann-in-jerusalem",
+                "atomic-habits",
+                "12-rules-for-life",
+                "mindset",
+                "mans-search-for-meaning",
+                "flinch",
+                "deep-work",
+                "digital-minimalism",
+                "how-to-win-friends-and-influence-people",
+                "college-success",
+                "how-to-win-every-argument",
+                "win-every-argument",
+                "fooled-by-randomness",
+                "obedience-to-authority",
+                "karpicke-retrieval-practice-papers",
+                "the-lean-startup",
+                "the-startup-playbook",
+                "the-unfair-advantage",
+                "how-to-fuck-up-your-startup",
+                "joel-on-software",
+                "soft-skills",
+                "how-to-present-to-absolutely-anyone",
+                "youre-not-listening",
+                "the-pragmatic-programmer",
+                "clean-code",
+                "peopleware",
+                "the-mythical-man-month",
+                "dive-into-design-patterns",
+                "head-first-design-patterns",
+                "fundamentals-of-software-architecture",
+                "design-patterns-gof",
+                "building-microservices",
+                "designing-data-intensive-applications",
+                "domain-driven-design",
+                "ai-2027",
+                "stochastic-parrots",
+                "superintelligence",
+                "concrete-problems-in-ai-safety",
+                "agents-of-chaos",
+                "the-off-switch-game",
+                "i-robot",
+                "the-time-machine",
+                "i-am-legend",
+                "enoch-soames",
+                "foundation-asimov",
+                "la-fiesta-del-monstruo",
+                "mankiw-principles-of-economics",
+                "economics-in-one-lesson",
+                "quest-for-cosmic-justice",
+                "anti-duhring",
+                "free-to-choose",
+                "capitalism-and-freedom",
+                "huemer-wealth-redistribution",
+                "discourse-on-method",
+                "basic-laws-of-human-stupidity",
+                "sapiens",
+                "why-we-forget",
+                "the-shallows",
+                "therac-25-accidents",
+                "dont-call-yourself-a-programmer",
+                "refactoring",
+                "rest-fielding-dissertation",
+                "the-minority-report",
+                "do-androids-dream-of-electric-sheep",
+                "candide",
+                "by-his-bootstraps",
+                "find-the-sculptor",
+                "the-clock-that-went-backward",
+                "three-sundays-in-a-week",
+                "connecticut-yankee-in-king-arthurs-court",
+                "memoirs-of-the-twentieth-century",
+                "frankenstein",
+                "shutter-island",
+                "the-world-set-free",
+                "werther",
+                "watchmen",
+                "la-casa-de-asterion",
+                "funes-el-memorioso",
+                "el-inmortal",
+                "el-jardin-de-senderos-que-se-bifurcan",
+                "el-escritor-argentino-y-la-tradicion",
+                "arcadia-stoppard",
+                "parasitos-mentales",
+                "wealth-of-nations",
+                "what-is-seen-and-what-is-not-seen",
+                "marxism-unmasked",
+                "interventionism-an-economic-analysis",
+                "der-begriff-des-politischen",
+                "theses-on-feuerbach",
+                "kobra-effekt",
+                "limitarianism",
+                "essay-on-the-principle-of-population",
+                "communist-manifesto",
+                "das-kapital",
+                "imperialism-highest-stage",
+                "the-general-theory",
+                "the-anti-capitalistic-mentality",
+                "the-virtue-of-selfishness",
+                "social-responsibility-of-business",
+                "two-concepts-of-liberty",
+                "la-comunidad-organizada",
+                "the-selfish-gene",
+                "bitcoin-whitepaper",
+                "magic-island",
+                "tragedy-and-hope",
+                "dialogue-aux-enfers",
+                "suspicious-minds",
+                "the-paranoid-style-in-american-politics",
+                "the-psychology-of-conspiracy-theories",
+                "hero-with-a-thousand-faces",
+                "democracy-in-america",
+                "the-federalist-papers",
+                "revolucion-y-guerra",
+                "meditations-on-first-philosophy",
+                "a-letter-concerning-toleration",
+                "der-antichrist",
+                "laws-plato",
+                "gorgias",
+                "the-republic",
+                "nicomachean-ethics",
+                "confessions-augustine",
+                "critique-of-pure-reason",
+                "homo-sacer",
+                "wason-2-4-6-task",
+                "superstition-in-the-pigeon",
+                "brain-drain-smartphone",
+                "evil-baumeister",
+                "how-to-read-a-book",
+                "powerful-teaching",
+                "the-myth-of-multitasking",
+                "the-black-swan",
+                "getting-to-yes",
+                "never-eat-alone",
+                "the-corrosion-of-character",
+                "laws-of-thought-boole",
+                "dixon-coles-football",
+                "international-ai-safety-report",
+                "impact-of-generative-ai-on-critical-thinking",
+                "your-brain-on-chatgpt",
+                "llms-can-get-brain-rot",
+                "ai-layoff-trap",
+                "ai-self-preferencing-in-algorithmic-hiring",
+                "llms-get-lost-in-multi-turn-conversation",
+                "prompt-repetition-improves-non-reasoning-llms",
+                "computer-power-and-human-reason",
+                "the-illusion-of-thinking",
+                "synthid-text",
+                "emergent-misalignment",
+                "robots-should-be-slaves",
+                "ethics-of-robot-servitude",
+                "information-hazards",
+                "from-mutual-aid-to-the-welfare-state",
+                "on-liberty",
+                "the-road-to-serfdom",
+                "human-action",
+                "leviathan"
+              ]
+            },
+            "why": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 160
+            },
+            "source": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 9007199254740991
+            },
+            "order": {
+              "type": "object",
+              "properties": {
+                "url": {
+                  "type": "string",
+                  "format": "uri"
+                },
+                "timestamp": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "quote": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              },
+              "required": [
+                "url",
+                "quote"
+              ],
+              "additionalProperties": false
+            },
+            "optional": {
+              "type": "boolean",
+              "const": true
+            },
+            "gap": {
+              "type": "object",
+              "properties": {
+                "severity": {
+                  "type": "string",
+                  "enum": [
+                    "fuerte",
+                    "muy-fuerte"
+                  ]
+                },
+                "bridge": {
+                  "minItems": 1,
+                  "maxItems": 5,
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 80
+                  }
+                },
+                "note": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 200
+                }
+              },
+              "required": [
+                "severity",
+                "bridge"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "required": [
+            "book",
+            "why"
+          ],
+          "additionalProperties": false
+        }
+      }
+    },
+    "required": [
+      "id",
+      "name",
+      "kind",
+      "line",
+      "promise",
+      "summary",
+      "steps"
+    ],
+    "additionalProperties": false
+  }
+}

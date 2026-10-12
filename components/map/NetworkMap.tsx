@@ -42,6 +42,7 @@ import {
   type Box,
   type Tone,
 } from "./shared/geometry";
+import { RoutePath, type RouteTrace } from "./shared/RoutePath";
 import { FocusBar, HoverTag, MapLegend } from "./shared/MapOverlays";
 import { InterchangeTags, TAG_MIN_SCALE, XTAG_H, buildXTags, quadraticMidpoint, type XTag } from "./shared/InterchangeTags";
 import { Station, type CrossMark } from "./shared/Station";
@@ -75,6 +76,8 @@ export interface NetworkMapProps {
   density?: Density;
   /** Px of the map covered by floating chrome (the view / density sign): the fit leaves it clear. */
   safe?: { top?: number; right?: number };
+  /** Route in view (`?ruta=`): drawn as a track between its stations. */
+  routeTrace?: RouteTrace | null;
   ref?: Ref<MapHandle>;
 }
 
@@ -346,6 +349,7 @@ export function NetworkMap({
   animateRefit = false,
   density = DEFAULT_DENSITY,
   safe,
+  routeTrace,
   ref,
 }: NetworkMapProps) {
   const [hovered, setHovered] = useState<string | null>(null);
@@ -684,6 +688,9 @@ export function NetworkMap({
               ) : null,
             )}
           </g>
+
+          {/* A reading route: its stations joined in reading order, over the dimmed map */}
+          {routeTrace ? <RoutePath trace={routeTrace} nodeById={nodeById} /> : null}
 
           {/* The train run: prerequisites drawn from KM 0, segment by segment */}
           {route ? (

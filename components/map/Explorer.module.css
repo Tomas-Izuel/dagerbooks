@@ -209,7 +209,8 @@
     align-items: flex-start;
   }
 
-  .stage[data-panel="open"] .links {
+  .stage[data-panel="open"] .links,
+  .links[data-ruta] {
     display: none;
   }
 }

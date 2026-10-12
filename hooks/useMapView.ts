@@ -77,6 +77,25 @@ export function useMapView(opts: MapViewOptions): MapView {
         else if (f) f(p, false);
         else p.reset();
       },
+      fitTo: (ids, inset) => {
+        const pts = ids.map((id) => nodeById.get(id)).filter((n): n is { x: number; y: number } => !!n);
+        if (pts.length === 0) return;
+        const { pan: p } = live.current;
+        const size = p.getViewportSize();
+        if (size.width <= 0 || size.height <= 0) return;
+        const xs = pts.map((n) => n.x);
+        const ys = pts.map((n) => n.y);
+        const pad = 90; // graph units around the outermost stations: labels and the sign breathe
+        const b = { x0: Math.min(...xs) - pad, y0: Math.min(...ys) - pad, x1: Math.max(...xs) + pad, y1: Math.max(...ys) + pad };
+        // Never closer than the zoom where the network starts to read as a map of stations.
+        // Frame inside the free rectangle: what the floating chrome covers is left out.
+        const { top = 0, right = 0, bottom = 0, left = 0 } = inset ?? {};
+        const free = { width: Math.max(size.width - left - right, 80), height: Math.max(size.height - top - bottom, 80) };
+        const k = Math.min(fitScale(b, free), 1.6);
+        const dx = (left + free.width / 2 - size.width / 2) / k;
+        const dy = (top + free.height / 2 - size.height / 2) / k;
+        p.centerOn((b.x0 + b.x1) / 2 - dx, (b.y0 + b.y1) / 2 - dy, k);
+      },
       centerOn: (id, minK) => {
         const n = nodeById.get(id);
         if (!n) return;

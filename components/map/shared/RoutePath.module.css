@@ -1,0 +1,51 @@
+/* Recorrido de la ruta: un contorno de porcelana bajo la tinta para que se lea sobre las líneas atenuadas. */
+.halo,
+.ink,
+.walk,
+.spur {
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  pointer-events: none;
+}
+
+.halo {
+  stroke: var(--bg);
+  stroke-width: calc(15 * var(--m, 1));
+  stroke-dasharray: 1 1;
+}
+
+.ink {
+  stroke: var(--ink);
+  stroke-width: calc(9 * var(--m, 1));
+  stroke-dasharray: 1 1;
+}
+
+/* Desvío optativo: ramal fino y cortado, debajo de la vía. */
+.spur {
+  stroke: var(--ink);
+  stroke-width: calc(3.5 * var(--m, 1));
+  stroke-dasharray: calc(10 * var(--m, 1)) calc(7 * var(--m, 1));
+  opacity: 0.85;
+}
+
+/* Tramo a pie: huellas de porcelana, sin tinta. */
+.walk {
+  stroke: var(--fg);
+  stroke-width: calc(3.5 * var(--m, 1));
+  stroke-dasharray: 0.1 11;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .halo,
+  .ink {
+    animation: trace calc(var(--dur-route) * 1.4 / var(--n, 1)) var(--ease-out-expo)
+      calc(var(--dur-route) * 1.4 / var(--n, 1) * var(--i, 0)) backwards;
+  }
+}
+
+@keyframes trace {
+  from {
+    stroke-dashoffset: 1;
+  }
+}

@@ -29,6 +29,28 @@
   text-decoration: none;
 }
 
+.nav {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.navLink {
+  display: inline-flex;
+  align-items: center;
+  min-block-size: 2.75rem;
+  font-family: var(--font-sign);
+  font-size: var(--text-sm);
+  font-weight: 700;
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+}
+
+.navLink:focus-visible {
+  outline: var(--rule-width) solid var(--focus);
+  outline-offset: 2px;
+}
+
 .crumbs {
   max-inline-size: 76rem;
   margin-inline: auto;
@@ -90,5 +112,19 @@
 @media (max-width: 30rem) {
   .wordmark {
     font-size: var(--text-lg);
+    gap: var(--space-2);
+  }
+
+  .nav {
+    gap: var(--space-2);
+  }
+
+  /* En celular "Rutas" queda en el pie y en el mapa: acá no entra junto al botón. */
+  .navLink {
+    display: none;
+  }
+
+  .nav a[class*="btn"] {
+    padding-inline: var(--space-3);
   }
 }

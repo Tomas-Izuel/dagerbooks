@@ -35,6 +35,7 @@ import {
   type Box,
   type Tone,
 } from "./shared/geometry";
+import { RoutePath, type RouteTrace } from "./shared/RoutePath";
 import { FocusBar, HoverTag, MapLegend } from "./shared/MapOverlays";
 import { InterchangeTags, TAG_MIN_SCALE, buildXTags, type XTag } from "./shared/InterchangeTags";
 import { Station, type CrossMark } from "./shared/Station";
@@ -70,6 +71,8 @@ export interface SubwayMapProps {
   animateRefit?: boolean;
   /** Px of the map covered by floating chrome (the view / density sign): the home framing leaves `top` clear. */
   safe?: { top?: number; right?: number };
+  /** Route in view (`?ruta=`): drawn as a track between its stations. */
+  routeTrace?: RouteTrace | null;
   ref?: Ref<MapHandle>;
 }
 
@@ -288,6 +291,7 @@ export function SubwayMap({
   insets,
   animateRefit = false,
   safe,
+  routeTrace,
   ref,
 }: SubwayMapProps) {
   const safeTop = safe?.top ?? 0;
@@ -692,6 +696,9 @@ export function SubwayMap({
               ) : null,
             )}
           </g>
+
+          {/* A reading route: its stations joined in reading order, over the dimmed map */}
+          {routeTrace ? <RoutePath trace={routeTrace} nodeById={nodeById} /> : null}
 
           {/* The train run: prerequisites drawn from KM 0, segment by segment */}
           {route ? (

@@ -1,0 +1,622 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-12T00:53:57+00:00",
+  "title": "Design System: DagerBooks",
+  "extensions": {
+    "colorMeta": {
+      "enamel-950": {
+        "role": "neutral",
+        "displayName": "Deep Enamel",
+        "canonical": "oklch(16.4% 0.047 270.3)",
+        "tonalRamp": [
+          "#070c22",
+          "#0b1230",
+          "#0f1838",
+          "#142045",
+          "#1e2c5a",
+          "#2c3d73",
+          "#6f7aa3",
+          "#a9b3d6",
+          "#d6d9e8",
+          "#f3f1ea"
+        ]
+      },
+      "enamel-900": {
+        "role": "neutral",
+        "displayName": "Midnight Enamel",
+        "canonical": "oklch(19.6% 0.060 270.1)",
+        "tonalRamp": [
+          "#070c22",
+          "#0b1230",
+          "#0f1838",
+          "#142045",
+          "#1e2c5a",
+          "#2c3d73",
+          "#6f7aa3",
+          "#a9b3d6",
+          "#d6d9e8",
+          "#f3f1ea"
+        ]
+      },
+      "enamel-850": {
+        "role": "neutral",
+        "displayName": "Raised Enamel",
+        "canonical": "oklch(22.1% 0.063 268.9)",
+        "tonalRamp": [
+          "#070c22",
+          "#0b1230",
+          "#0f1838",
+          "#142045",
+          "#1e2c5a",
+          "#2c3d73",
+          "#6f7aa3",
+          "#a9b3d6",
+          "#d6d9e8",
+          "#f3f1ea"
+        ]
+      },
+      "enamel-800": {
+        "role": "neutral",
+        "displayName": "Raised Enamel Hover",
+        "canonical": "oklch(25.6% 0.071 267.6)",
+        "tonalRamp": [
+          "#070c22",
+          "#0b1230",
+          "#0f1838",
+          "#142045",
+          "#1e2c5a",
+          "#2c3d73",
+          "#6f7aa3",
+          "#a9b3d6",
+          "#d6d9e8",
+          "#f3f1ea"
+        ]
+      },
+      "enamel-700": {
+        "role": "neutral",
+        "displayName": "Track Enamel",
+        "canonical": "oklch(30.8% 0.084 268.4)",
+        "tonalRamp": [
+          "#070c22",
+          "#0b1230",
+          "#0f1838",
+          "#142045",
+          "#1e2c5a",
+          "#2c3d73",
+          "#6f7aa3",
+          "#a9b3d6",
+          "#d6d9e8",
+          "#f3f1ea"
+        ]
+      },
+      "enamel-600": {
+        "role": "neutral",
+        "displayName": "Rule Enamel",
+        "canonical": "oklch(37.5% 0.095 268.4)",
+        "tonalRamp": [
+          "#070c22",
+          "#0b1230",
+          "#0f1838",
+          "#142045",
+          "#1e2c5a",
+          "#2c3d73",
+          "#6f7aa3",
+          "#a9b3d6",
+          "#d6d9e8",
+          "#f3f1ea"
+        ]
+      },
+      "porcelain-50": {
+        "role": "neutral",
+        "displayName": "Porcelain",
+        "canonical": "oklch(95.8% 0.010 93.6)",
+        "tonalRamp": [
+          "#070c22",
+          "#0b1230",
+          "#0f1838",
+          "#142045",
+          "#1e2c5a",
+          "#2c3d73",
+          "#6f7aa3",
+          "#a9b3d6",
+          "#d6d9e8",
+          "#f3f1ea"
+        ]
+      },
+      "porcelain-200": {
+        "role": "neutral",
+        "displayName": "Porcelain Pressed",
+        "canonical": "oklch(88.7% 0.021 276.9)",
+        "tonalRamp": [
+          "#070c22",
+          "#0b1230",
+          "#0f1838",
+          "#142045",
+          "#1e2c5a",
+          "#2c3d73",
+          "#6f7aa3",
+          "#a9b3d6",
+          "#d6d9e8",
+          "#f3f1ea"
+        ]
+      },
+      "porcelain-400": {
+        "role": "neutral",
+        "displayName": "Porcelain Haze",
+        "canonical": "oklch(77.1% 0.051 272.6)",
+        "tonalRamp": [
+          "#070c22",
+          "#0b1230",
+          "#0f1838",
+          "#142045",
+          "#1e2c5a",
+          "#2c3d73",
+          "#6f7aa3",
+          "#a9b3d6",
+          "#d6d9e8",
+          "#f3f1ea"
+        ]
+      },
+      "porcelain-600": {
+        "role": "neutral",
+        "displayName": "Porcelain Dust",
+        "canonical": "oklch(58.6% 0.064 272.7)",
+        "tonalRamp": [
+          "#070c22",
+          "#0b1230",
+          "#0f1838",
+          "#142045",
+          "#1e2c5a",
+          "#2c3d73",
+          "#6f7aa3",
+          "#a9b3d6",
+          "#d6d9e8",
+          "#f3f1ea"
+        ]
+      },
+      "ink-a-celeste": {
+        "role": "primary",
+        "displayName": "Line A · Celeste",
+        "canonical": "oklch(76.5% 0.119 213.4)",
+        "tonalRamp": [
+          "oklch(15% 0.060 213.4)",
+          "oklch(25% 0.079 213.4)",
+          "oklch(35% 0.099 213.4)",
+          "oklch(48% 0.119 213.4)",
+          "oklch(60% 0.119 213.4)",
+          "oklch(72% 0.119 213.4)",
+          "oklch(84% 0.101 213.4)",
+          "oklch(95% 0.079 213.4)"
+        ]
+      },
+      "ink-b-escarlata": {
+        "role": "secondary",
+        "displayName": "Line B · Escarlata Notice",
+        "canonical": "oklch(64.4% 0.204 23.2)",
+        "tonalRamp": [
+          "oklch(15% 0.081 23.2)",
+          "oklch(25% 0.115 23.2)",
+          "oklch(35% 0.149 23.2)",
+          "oklch(48% 0.193 23.2)",
+          "oklch(60% 0.204 23.2)",
+          "oklch(72% 0.193 23.2)",
+          "oklch(84% 0.153 23.2)",
+          "oklch(95% 0.115 23.2)"
+        ]
+      },
+      "ink-c-verde": {
+        "role": "primary",
+        "displayName": "Line C · Verde",
+        "canonical": "oklch(70.5% 0.184 148.8)",
+        "tonalRamp": [
+          "oklch(15% 0.076 148.8)",
+          "oklch(25% 0.107 148.8)",
+          "oklch(35% 0.138 148.8)",
+          "oklch(48% 0.177 148.8)",
+          "oklch(60% 0.184 148.8)",
+          "oklch(72% 0.177 148.8)",
+          "oklch(84% 0.141 148.8)",
+          "oklch(95% 0.107 148.8)"
+        ]
+      },
+      "ink-d-violeta": {
+        "role": "primary",
+        "displayName": "Line D · Violeta",
+        "canonical": "oklch(68.7% 0.171 302.9)",
+        "tonalRamp": [
+          "oklch(15% 0.073 302.9)",
+          "oklch(25% 0.101 302.9)",
+          "oklch(35% 0.130 302.9)",
+          "oklch(48% 0.167 302.9)",
+          "oklch(60% 0.171 302.9)",
+          "oklch(72% 0.167 302.9)",
+          "oklch(84% 0.132 302.9)",
+          "oklch(95% 0.101 302.9)"
+        ]
+      },
+      "ink-e-ambar": {
+        "role": "secondary",
+        "displayName": "Line E · Ámbar Signal",
+        "canonical": "oklch(84.6% 0.172 85.3)",
+        "tonalRamp": [
+          "oklch(15% 0.073 85.3)",
+          "oklch(25% 0.101 85.3)",
+          "oklch(35% 0.130 85.3)",
+          "oklch(48% 0.167 85.3)",
+          "oklch(60% 0.172 85.3)",
+          "oklch(72% 0.167 85.3)",
+          "oklch(84% 0.133 85.3)",
+          "oklch(95% 0.101 85.3)"
+        ]
+      },
+      "ink-f-cobalto": {
+        "role": "primary",
+        "displayName": "Line F · Cobalto",
+        "canonical": "oklch(65.0% 0.186 266.6)",
+        "tonalRamp": [
+          "oklch(15% 0.076 266.6)",
+          "oklch(25% 0.107 266.6)",
+          "oklch(35% 0.138 266.6)",
+          "oklch(48% 0.178 266.6)",
+          "oklch(60% 0.186 266.6)",
+          "oklch(72% 0.178 266.6)",
+          "oklch(84% 0.141 266.6)",
+          "oklch(95% 0.107 266.6)"
+        ]
+      },
+      "ink-g-magenta": {
+        "role": "primary",
+        "displayName": "Line G · Magenta",
+        "canonical": "oklch(68.6% 0.199 351.4)",
+        "tonalRamp": [
+          "oklch(15% 0.080 351.4)",
+          "oklch(25% 0.113 351.4)",
+          "oklch(35% 0.146 351.4)",
+          "oklch(48% 0.189 351.4)",
+          "oklch(60% 0.199 351.4)",
+          "oklch(72% 0.189 351.4)",
+          "oklch(84% 0.150 351.4)",
+          "oklch(95% 0.113 351.4)"
+        ]
+      },
+      "ink-h-lima": {
+        "role": "primary",
+        "displayName": "Line H · Lima",
+        "canonical": "oklch(84.7% 0.189 123.4)",
+        "tonalRamp": [
+          "oklch(15% 0.077 123.4)",
+          "oklch(25% 0.109 123.4)",
+          "oklch(35% 0.141 123.4)",
+          "oklch(48% 0.182 123.4)",
+          "oklch(60% 0.189 123.4)",
+          "oklch(72% 0.182 123.4)",
+          "oklch(84% 0.144 123.4)",
+          "oklch(95% 0.109 123.4)"
+        ]
+      },
+      "ink-i-naranja": {
+        "role": "primary",
+        "displayName": "Line I · Naranja",
+        "canonical": "oklch(74.9% 0.173 53.8)",
+        "tonalRamp": [
+          "oklch(15% 0.073 53.8)",
+          "oklch(25% 0.102 53.8)",
+          "oklch(35% 0.131 53.8)",
+          "oklch(48% 0.168 53.8)",
+          "oklch(60% 0.173 53.8)",
+          "oklch(72% 0.168 53.8)",
+          "oklch(84% 0.134 53.8)",
+          "oklch(95% 0.102 53.8)"
+        ]
+      },
+      "ink-j-cobre": {
+        "role": "primary",
+        "displayName": "Line J · Cobre",
+        "canonical": "oklch(73.1% 0.100 54.8)",
+        "tonalRamp": [
+          "oklch(15% 0.055 54.8)",
+          "oklch(25% 0.072 54.8)",
+          "oklch(35% 0.088 54.8)",
+          "oklch(48% 0.100 54.8)",
+          "oklch(60% 0.100 54.8)",
+          "oklch(72% 0.100 54.8)",
+          "oklch(84% 0.090 54.8)",
+          "oklch(95% 0.072 54.8)"
+        ]
+      },
+      "ink-k-lavanda": {
+        "role": "primary",
+        "displayName": "Line K · Lavanda",
+        "canonical": "oklch(83.7% 0.071 291.1)",
+        "tonalRamp": [
+          "oklch(15% 0.048 291.1)",
+          "oklch(25% 0.060 291.1)",
+          "oklch(35% 0.071 291.1)",
+          "oklch(48% 0.071 291.1)",
+          "oklch(60% 0.071 291.1)",
+          "oklch(72% 0.071 291.1)",
+          "oklch(84% 0.071 291.1)",
+          "oklch(95% 0.060 291.1)"
+        ]
+      },
+      "ink-l-salmon": {
+        "role": "primary",
+        "displayName": "Line L · Salmon",
+        "canonical": "oklch(81.2% 0.095 6.1)",
+        "tonalRamp": [
+          "oklch(15% 0.054 6.1)",
+          "oklch(25% 0.070 6.1)",
+          "oklch(35% 0.085 6.1)",
+          "oklch(48% 0.095 6.1)",
+          "oklch(60% 0.095 6.1)",
+          "oklch(72% 0.095 6.1)",
+          "oklch(84% 0.087 6.1)",
+          "oklch(95% 0.070 6.1)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Station Sign",
+        "purpose": "Page titles, route and book names; Big Shoulders uppercase."
+      },
+      "headline": {
+        "displayName": "Stop Title",
+        "purpose": "Stop titles, station panel title, terminal sign."
+      },
+      "title": {
+        "displayName": "Line Name",
+        "purpose": "Line names, section titles over a 2px rule, ticket label."
+      },
+      "body": {
+        "displayName": "Wayfinding Body",
+        "purpose": "Reading copy; leading grows with density."
+      },
+      "body-lead": {
+        "displayName": "Lead",
+        "purpose": "Por qué acá, panel lead, route promise copy."
+      },
+      "label": {
+        "displayName": "Sign Label",
+        "purpose": "Buttons, nav, field text; tracked caps."
+      },
+      "label-sm": {
+        "displayName": "Small Sign Label",
+        "purpose": "Tags and stop labels; floor for new text."
+      },
+      "data": {
+        "displayName": "Timestamp",
+        "purpose": "Source timestamps as porcelain stamps."
+      }
+    },
+    "shadows": [
+      {
+        "name": "panel-float",
+        "value": "0 18px 48px -12px rgb(3 6 20 / 0.7), 0 2px 6px rgb(3 6 20 / 0.5)",
+        "purpose": "Only on elements floating over the map or page: station panel, map controls, route banner, update notice, cover plaque."
+      },
+      {
+        "name": "ground-halo",
+        "value": "0 0 0 3px var(--bg)",
+        "purpose": "A ring of ground color that cuts a disc or station off the track beneath it."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-out-expo",
+        "value": "cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "The only easing: hovers, panel slide, line track, route draw."
+      },
+      {
+        "name": "dur-fast",
+        "value": "140ms",
+        "purpose": "Hover fills, arrow nudge, chevrons."
+      },
+      {
+        "name": "dur-base",
+        "value": "260ms",
+        "purpose": "Panel slide-in, line dim/burn, chosen-line track."
+      },
+      {
+        "name": "dur-route",
+        "value": "700ms",
+        "purpose": "Route stroke drawn from Km 0 like a train run; tramos a pie wipe in 16 steps."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "0ms",
+        "purpose": "All durations collapse to 0 under prefers-reduced-motion."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "phone",
+        "value": "40rem"
+      },
+      {
+        "name": "tablet",
+        "value": "48rem"
+      },
+      {
+        "name": "explorer",
+        "value": "900px"
+      },
+      {
+        "name": "desktop",
+        "value": "64rem"
+      }
+    ],
+    "strokes": [
+      {
+        "name": "map-line",
+        "value": "5 / 8 active (SVG units)"
+      },
+      {
+        "name": "map-station",
+        "value": "r 7, stroke 3"
+      },
+      {
+        "name": "zone-dash",
+        "value": "2 10"
+      },
+      {
+        "name": "dim-opacity",
+        "value": "0.32"
+      },
+      {
+        "name": "route-track",
+        "value": "20px desktop / 16px phone"
+      },
+      {
+        "name": "detour-siding",
+        "value": "8px dashed / map spur 3.5 units, dash 10 7"
+      },
+      {
+        "name": "walk-steps",
+        "value": "porcelain dots, map dash 0.1 11"
+      }
+    ],
+    "density": [
+      {
+        "name": "compacta",
+        "value": "k 1, +0 leading"
+      },
+      {
+        "name": "media",
+        "value": "k 1.25, +0.07 leading"
+      },
+      {
+        "name": "aireada",
+        "value": "k 1.5, +0.14 leading"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Solid Sign Button",
+      "kind": "button",
+      "refersTo": "button-solid",
+      "description": "Primary ruled sign with arrow; ink fill that empties to an outline on hover.",
+      "html": "<a class=\"ds-btn ds-btn-solid\" href=\"#\">Ver en el mapa <svg width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" aria-hidden=\"true\"><path d=\"M2 8h11M9 4l4 4-4 4\"/></svg></a>",
+      "css": ".ds-btn{--ink:var(--porcelain-50,#f3f1ea);display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:8px 16px;border:2px solid var(--ink);border-radius:2px;font-family:var(--font-sign,Overpass,system-ui,sans-serif);font-size:.875rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;cursor:pointer;transition:background-color 140ms cubic-bezier(.16,1,.3,1),color 140ms cubic-bezier(.16,1,.3,1)} .ds-btn svg{transition:transform 140ms cubic-bezier(.16,1,.3,1)} .ds-btn:hover svg{transform:translateX(2px)} .ds-btn:focus-visible{outline:2px solid #ffc20e;outline-offset:3px} .ds-btn-solid{background:var(--ink);color:#070c22} .ds-btn-solid:hover{background:transparent;color:var(--ink)}"
+    },
+    {
+      "name": "Ghost Sign Button",
+      "kind": "button",
+      "refersTo": "button-ghost",
+      "description": "Secondary ruled sign; transparent, fills with its ink on hover.",
+      "html": "<a class=\"ds-btn ds-btn-ghost\" href=\"#\">Rutas <svg width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" aria-hidden=\"true\"><path d=\"M2 8h11M9 4l4 4-4 4\"/></svg></a>",
+      "css": ".ds-btn{--ink:var(--porcelain-50,#f3f1ea);display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:8px 16px;border:2px solid var(--ink);border-radius:2px;font-family:var(--font-sign,Overpass,system-ui,sans-serif);font-size:.875rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;cursor:pointer;transition:background-color 140ms cubic-bezier(.16,1,.3,1),color 140ms cubic-bezier(.16,1,.3,1)} .ds-btn svg{transition:transform 140ms cubic-bezier(.16,1,.3,1)} .ds-btn:hover svg{transform:translateX(2px)} .ds-btn:focus-visible{outline:2px solid #ffc20e;outline-offset:3px} .ds-btn-ghost{background:transparent;color:#f3f1ea} .ds-btn-ghost:hover{background:var(--ink);color:#070c22}"
+    },
+    {
+      "name": "Follow Route Button",
+      "kind": "button",
+      "refersTo": "button-solid",
+      "description": "\"Seguir esta ruta\": the solid sign at 48px in the route's ink.",
+      "html": "<button class=\"ds-follow\" style=\"--ink:#b07cf0\">Seguir esta ruta</button>",
+      "css": ".ds-follow{min-height:48px;padding:8px 24px;border:2px solid var(--ink);border-radius:2px;background:var(--ink);color:#070c22;font-family:Overpass,system-ui,sans-serif;font-size:.875rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;cursor:pointer;transition:background-color 140ms cubic-bezier(.16,1,.3,1),color 140ms cubic-bezier(.16,1,.3,1)} .ds-follow:hover{background:transparent;color:var(--ink)} .ds-follow:focus-visible{outline:2px solid #ffc20e;outline-offset:2px}"
+    },
+    {
+      "name": "Lo leí Ticket",
+      "kind": "custom",
+      "refersTo": "ticket-punch",
+      "description": "The fare ticket the reader punches; ámbar unpunched, ruled porcelain once punched.",
+      "html": "<button class=\"ds-punch\" aria-pressed=\"false\"><svg width=\"28\" height=\"20\" viewBox=\"0 0 28 20\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" aria-hidden=\"true\"><path d=\"M2 3h24v4a3 3 0 0 0 0 6v4H2v-4a3 3 0 0 0 0-6z\"/><circle cx=\"14\" cy=\"10\" r=\"2.5\" fill=\"currentColor\"/></svg><span class=\"ds-punch-text\"><span class=\"ds-punch-label\">Lo leí</span><span class=\"ds-punch-state\">Sin picar</span></span></button> <button class=\"ds-punch\" aria-pressed=\"true\"><svg width=\"28\" height=\"20\" viewBox=\"0 0 28 20\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" aria-hidden=\"true\"><path d=\"M2 3h24v4a3 3 0 0 0 0 6v4H2v-4a3 3 0 0 0 0-6z\"/><circle cx=\"14\" cy=\"10\" r=\"2.5\" fill=\"currentColor\"/></svg><span class=\"ds-punch-text\"><span class=\"ds-punch-label\">Lo leí</span><span class=\"ds-punch-state\">Picado</span></span></button>",
+      "css": ".ds-punch{display:inline-flex;align-items:center;gap:12px;min-height:48px;padding:8px 16px;border:2px solid #ffc20e;border-radius:2px;background:#ffc20e;color:#070c22;text-align:start;cursor:pointer;transition:background-color 140ms cubic-bezier(.16,1,.3,1),color 140ms cubic-bezier(.16,1,.3,1)} .ds-punch:hover{background:#f3f1ea;border-color:#f3f1ea} .ds-punch:focus-visible{outline:2px solid #ffc20e;outline-offset:2px} .ds-punch[aria-pressed=true]{background:transparent;border-color:#f3f1ea;color:#f3f1ea} .ds-punch[aria-pressed=true]:hover{background:#142045} .ds-punch-text{display:grid} .ds-punch-label{font-family:'Big Shoulders','Arial Narrow',sans-serif;font-size:1.1875rem;font-weight:800;letter-spacing:.12em;line-height:1.1;text-transform:uppercase} .ds-punch-state{font-family:Overpass,system-ui,sans-serif;font-size:.75rem;opacity:.85}"
+    },
+    {
+      "name": "Line Discs A–L",
+      "kind": "chip",
+      "refersTo": "line-disc",
+      "description": "Lettered round disc in each line's ink.",
+      "html": "<span class=\"ds-disc\" style=\"--ink:#3ec6e0\">A</span><span class=\"ds-disc\" style=\"--ink:#f0484e\">B</span><span class=\"ds-disc\" style=\"--ink:#2dbe5a\">C</span><span class=\"ds-disc\" style=\"--ink:#b07cf0\">D</span><span class=\"ds-disc\" style=\"--ink:#ffc20e\">E</span><span class=\"ds-disc\" style=\"--ink:#5b86ff\">F</span><span class=\"ds-disc\" style=\"--ink:#f05aa8\">G</span><span class=\"ds-disc\" style=\"--ink:#b5e03a\">H</span><span class=\"ds-disc\" style=\"--ink:#ff8a2b\">I</span><span class=\"ds-disc\" style=\"--ink:#d9976a\">J</span><span class=\"ds-disc\" style=\"--ink:#c9c2f5\">K</span><span class=\"ds-disc\" style=\"--ink:#f7a8b8\">L</span>",
+      "css": ".ds-disc{display:inline-grid;place-items:center;width:28px;height:28px;margin:2px;border-radius:999px;background:var(--ink);color:#070c22;font-family:'Big Shoulders','Arial Narrow',sans-serif;font-weight:800;font-size:17px;line-height:1;padding-top:.08em}"
+    },
+    {
+      "name": "Search Field",
+      "kind": "input",
+      "refersTo": "search-field",
+      "description": "\"¿A qué libro vas?\": ruled search sign with ámbar focus.",
+      "html": "<label class=\"ds-search\"><svg width=\"18\" height=\"18\" viewBox=\"0 0 18 18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" aria-hidden=\"true\"><circle cx=\"7.5\" cy=\"7.5\" r=\"5\"/><path d=\"M11.5 11.5L16 16\"/></svg><input placeholder=\"¿A qué libro vas?\"></label>",
+      "css": ".ds-search{display:flex;align-items:center;gap:8px;padding:0 12px;border:2px solid #f3f1ea;border-radius:2px;background:#0b1230;color:#a9b3d6;transition:background 140ms cubic-bezier(.16,1,.3,1)} .ds-search:hover{background:#0f1838} .ds-search:focus-within{outline:2px solid #ffc20e;outline-offset:2px} .ds-search input{flex:1;min-width:0;padding:12px 0;border:0;background:transparent;color:#f3f1ea;caret-color:#ffc20e;font-family:Overpass,system-ui,sans-serif;font-size:1rem;font-weight:600;letter-spacing:.08em;outline:0} .ds-search input::placeholder{color:#a9b3d6}"
+    },
+    {
+      "name": "Status Tags",
+      "kind": "chip",
+      "refersTo": "status-tag",
+      "description": "Stop state tags: next (porcelain), read (ink), optional detour (dashed ink).",
+      "html": "<span class=\"ds-tag ds-tag-next\">Próxima</span> <span class=\"ds-tag ds-tag-read\" style=\"--ink:#b07cf0\">Leído</span> <span class=\"ds-tag ds-tag-detour\" style=\"--ink:#b07cf0\">Desvío optativo</span>",
+      "css": ".ds-tag{display:inline-block;padding:1px 8px;border:1px solid #a9b3d6;color:#f3f1ea;font-family:Overpass,system-ui,sans-serif;font-size:.75rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase} .ds-tag-next{background:#f3f1ea;border-color:#f3f1ea;color:#070c22} .ds-tag-read{background:var(--ink);border-color:var(--ink);color:#070c22} .ds-tag-detour{border-style:dashed;border-color:var(--ink);color:var(--ink)}"
+    },
+    {
+      "name": "Route Track (vía gruesa)",
+      "kind": "custom",
+      "refersTo": "route-station",
+      "description": "Thick vertical track in the route ink with numbered porcelain stations: read, next (dashed ring), and a dashed detour off a siding.",
+      "html": "<ol class=\"ds-track\" style=\"--ink:#b07cf0\"><li class=\"ds-stop\" data-state=\"read\"><span class=\"ds-st\">1</span><span class=\"ds-t\">Economics in One Lesson</span></li><li class=\"ds-stop\" data-state=\"next\"><span class=\"ds-st\">2</span><span class=\"ds-t\">Free to Choose</span></li><li class=\"ds-stop ds-detour\"><span class=\"ds-st\">3</span><span class=\"ds-t\">Principles of Economics</span></li></ol>",
+      "css": ".ds-track{position:relative;list-style:none;margin:0;padding:0;display:grid;gap:40px;font-family:'Big Shoulders','Arial Narrow',sans-serif;color:#f3f1ea} .ds-track::before{content:'';position:absolute;left:18px;top:28px;bottom:28px;width:20px;background:var(--ink)} .ds-stop{position:relative;display:flex;align-items:center;gap:20px} .ds-st{position:relative;z-index:1;display:grid;place-items:center;width:56px;height:56px;box-sizing:border-box;border:6px solid var(--ink);border-radius:999px;background:#f3f1ea;color:#070c22;font-size:29px;font-weight:800} .ds-stop[data-state=read] .ds-st{background:var(--ink);border-color:#f3f1ea} .ds-stop[data-state=next] .ds-st{outline:3px dashed #f3f1ea;outline-offset:5px} .ds-detour{padding-left:44px} .ds-detour .ds-st{border-style:dashed;background:#0b1230;color:#f3f1ea} .ds-t{font-size:1.75rem;font-weight:800;text-transform:uppercase;line-height:1}"
+    },
+    {
+      "name": "Tramo a pie Sign",
+      "kind": "custom",
+      "refersTo": "",
+      "description": "Walked gap: porcelain dotted border on sunken enamel, porcelain footsteps, no line ink.",
+      "html": "<div class=\"ds-walk\"><span class=\"ds-walk-name\">Tramo a pie</span><span class=\"ds-walk-sev\">Fuerte</span><ul><li>Contabilidad básica</li><li>Estadística descriptiva</li></ul></div>",
+      "css": ".ds-walk{display:grid;grid-template-columns:auto auto 1fr;gap:8px 12px;align-items:center;padding:12px;border:2px dotted #a9b3d6;background:#070c22;color:#f3f1ea;font-family:Overpass,system-ui,sans-serif} .ds-walk-name{font-size:.875rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase} .ds-walk-sev{justify-self:start;padding:0 8px;border:1px solid #a9b3d6;color:#a9b3d6;font-size:.75rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase} .ds-walk ul{grid-column:1/-1;margin:0;padding:0;list-style:none;display:grid;gap:4px;font-size:.875rem;font-weight:600} .ds-walk li{position:relative;padding-left:20px} .ds-walk li::before{content:'';position:absolute;left:3px;top:.55em;width:6px;height:6px;border-radius:50%;background:#f3f1ea}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Midnight Transit Diagram",
+    "overview": "**Creative North Star: \"The Midnight Transit Diagram\"**\n\nDagerBooks is drawn as a city subway map at night. A deep midnight enamel owns every pixel of ground; porcelain-white stations, rules and signage sit on it like enamel plates in a Buenos Aires station; and twelve saturated line inks, each lettered A–L on a round disc, carry the topics outward from Km 0. Nothing on the surface is a card, a gradient or a glow. Information is posted the way transit authorities post it: square-cornered signs, 2px rules, tracked capitals, numbered stops.\n\nThe world has two scales. On the map (radial Grafo and horizontal Subte) lines are thin strokes, stations are porcelain rings, fare zones are dotted rings, and the chosen line burns while the rest drop to a third of their ink. On reading surfaces (book, topic and route pages) the same vocabulary is enlarged: a route becomes a thick vertical track in its ink with porcelain stations the size of a thumb, and gaps in the catalog are walked, not ridden. Personality comes from the transit metaphor carried all the way down (the \"Lo leí\" button is a ticket you punch, progress is \"Leíste 2 de 3\"), not from ornament.\n\nDensity is a reader setting (compacta, media, aireada), applied as one multiplier over list rows, gaps and line-height. The use scene is a desk at night with a stream on a second monitor; the dark enamel is the v1 commitment, a porcelain variant is deferred.",
+    "keyCharacteristics": [
+      "Midnight enamel ground, porcelain foreground, twelve line inks as the only saturated color.",
+      "Lettered line discs A–L wherever a topic is named.",
+      "Big Shoulders signage in uppercase; Overpass wayfinding labels in tracked caps.",
+      "Square, 2px-ruled rectangles for every interactive sign; circles only for discs and stations.",
+      "Dashed and dotted strokes carry meaning: fare zones, optional detours, the next stop, tramos a pie.",
+      "Motion is a train run: ease-out-expo, stroke-draw from Km 0, instant under reduced motion."
+    ],
+    "rules": [
+      {
+        "name": "The Third-of-Ink Rule",
+        "body": "When a line is chosen it burns at full ink and active stroke width; every other line drops to a third of its ink (opacity 0.32). Selection is never shown with a glow or a new color.",
+        "section": "colors"
+      },
+      {
+        "name": "The Ink Belongs to the Line Rule",
+        "body": "Line inks color only line-owned things (tracks, discs, read fills, sign bands, tags of that route). Only two inks hold a second job: ámbar (focus, progress, ticket) and escarlata (service notices).",
+        "section": "colors"
+      },
+      {
+        "name": "The Signage Rule",
+        "body": "Display and title text is Big Shoulders uppercase; anything the reader acts on (buttons, tags, nav) is Overpass bold in tracked caps. Body text is never tracked and never uppercase.",
+        "section": "typography"
+      },
+      {
+        "name": "The Density Dial Rule",
+        "body": "Vertical rhythm in lists and panels reads the density-derived spacing, never a fixed step, so compacta / media / aireada stay one setting.",
+        "section": "layout"
+      },
+      {
+        "name": "The Float-Only Shadow Rule",
+        "body": "If it does not float over the map or page, it gets a rule, not a shadow.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do pass a line's color to components as `--ink` and let them paint tracks, discs, fills and tags from it.",
+      "Do drop unchosen lines to the shared dim opacity (0.32) instead of recoloring them.",
+      "Do rule interactive rectangles with a 2px line and a 2px corner, 44px minimum hit area.",
+      "Do show optional and incomplete things with dashes (detours, \"por completar\" in ámbar) and walked gaps with porcelain dots.",
+      "Do set signage in Big Shoulders uppercase and actions in Overpass tracked caps.",
+      "Do route every animation through ease-out-expo and the fast/base/route durations, which collapse to 0 under reduced motion."
+    ],
+    "donts": [
+      "Don't introduce colors outside enamel, porcelain and the twelve inks, and don't use gradients as fills.",
+      "Don't round signs past 2px or turn rectangles into pills; circles are for discs and stations only.",
+      "Don't put shadows on anything that does not float.",
+      "Don't give a tramo a pie a line ink or warning color; it is porcelain on sunken enamel.",
+      "Don't set new text below 0.75rem."
+    ]
+  }
+}

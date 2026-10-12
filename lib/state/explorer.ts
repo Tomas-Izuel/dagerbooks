@@ -3,7 +3,7 @@ import { ALL_RECS, parseRec, serializeRec } from "@/lib/design/recommendation";
 import { DEFAULT_VISTA, parseVista, type Vista } from "@/lib/view";
 import { buildAdjacency, reach, withImplicitRootEdges, type Adjacency } from "@/lib/catalog/graph";
 
-/** Estado de vista del explorador, serializado en `?libro=&tema=&rec=&q=&vista=`. */
+/** Estado de vista del explorador, serializado en `?libro=&tema=&rec=&q=&vista=&ruta=`. */
 export interface ExplorerState {
   libro: string | null;
   tema: string | null;
@@ -12,9 +12,11 @@ export interface ExplorerState {
   q: string;
   /** Vista del mapa (grafo radial o subte). Default `grafo`, omitido de la URL. */
   vista: Vista;
+  /** Ruta de lectura iluminada en el mapa (`/rutas/<id>` → "Ver en el mapa"); el resto se atenúa. */
+  ruta: string | null;
 }
 
-export const EMPTY_STATE: ExplorerState = { libro: null, tema: null, rec: [...ALL_RECS], q: "", vista: DEFAULT_VISTA };
+export const EMPTY_STATE: ExplorerState = { libro: null, tema: null, rec: [...ALL_RECS], q: "", vista: DEFAULT_VISTA, ruta: null };
 
 /** Subconjunto mínimo de Book que necesita el cliente (serializable). */
 export interface ExplorerNode {
@@ -32,16 +34,18 @@ export interface ReadonlyParams {
 
 export function parseExplorerState(
   params: ReadonlyParams,
-  valid?: { bookIds?: ReadonlySet<string>; topicIds?: ReadonlySet<string> },
+  valid?: { bookIds?: ReadonlySet<string>; topicIds?: ReadonlySet<string>; routeIds?: ReadonlySet<string> },
 ): ExplorerState {
   const libro = params.get("libro");
   const tema = params.get("tema");
+  const ruta = params.get("ruta");
   return {
     libro: libro && (!valid?.bookIds || valid.bookIds.has(libro)) ? libro : null,
     tema: tema && (!valid?.topicIds || valid.topicIds.has(tema)) ? tema : null,
     rec: parseRec(params.get("rec")),
     q: (params.get("q") ?? "").slice(0, 100),
     vista: parseVista(params.get("vista")),
+    ruta: ruta && (!valid?.routeIds || valid.routeIds.has(ruta)) ? ruta : null,
   };
 }
 
@@ -71,6 +75,7 @@ export function buildExplorerSearch(state: ExplorerState, base?: URLSearchParams
   set("rec", serializeRec(state.rec));
   set("q", state.q.trim() ? state.q : null);
   set("vista", state.vista === DEFAULT_VISTA ? null : state.vista);
+  set("ruta", state.ruta);
   return p.toString();
 }
 
@@ -115,6 +120,13 @@ export function dimmedByTopic(nodes: readonly ExplorerNode[], tema: string | nul
 export function dimmedByRecommendation(nodes: readonly ExplorerNode[], rec: readonly Recommendation[]): ReadonlySet<string> {
   if (rec.length >= ALL_RECS.length) return new Set();
   return new Set(nodes.filter((n) => n.topics.length > 0 && !rec.includes(n.recommendation)).map((n) => n.id));
+}
+
+/** Ids atenuados por la ruta en foco: todo lo que no es una de sus estaciones. Sin ruta: conjunto vacío. La raíz nunca se atenúa. */
+export function dimmedByRoute(nodes: readonly ExplorerNode[], routeBookIds: readonly string[] | undefined): ReadonlySet<string> {
+  if (!routeBookIds) return new Set();
+  const inRoute = new Set(routeBookIds);
+  return new Set(nodes.filter((n) => n.topics.length > 0 && !inRoute.has(n.id)).map((n) => n.id));
 }
 
 /** Intersección: un libro está activo si cumple tema ∧ recomendación; el resto se atenúa. */

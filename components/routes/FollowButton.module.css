@@ -1,0 +1,91 @@
+.wrap {
+  display: grid;
+  gap: var(--space-2);
+  justify-items: start;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-2) var(--space-4);
+}
+
+.primary,
+.status {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  min-block-size: 3rem;
+  margin: 0;
+  padding: var(--space-2) var(--space-5);
+  border: var(--rule-width) solid var(--ink, var(--fg));
+  border-radius: var(--radius);
+  font-family: var(--font-sign);
+  font-size: var(--text-sm);
+  font-weight: 700;
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+}
+
+.primary {
+  background: var(--ink, var(--fg));
+  color: var(--fg-on-ink);
+  cursor: pointer;
+  transition:
+    background-color var(--dur-fast) var(--ease-out-expo),
+    color var(--dur-fast) var(--ease-out-expo);
+}
+
+.primary:hover:not(:disabled) {
+  background: transparent;
+  color: var(--ink, var(--fg));
+}
+
+.primary:disabled {
+  opacity: 0.6;
+  cursor: wait;
+}
+
+.primary:focus-visible,
+.quiet:focus-visible {
+  outline: var(--rule-width) solid var(--focus);
+  outline-offset: 2px;
+}
+
+.status {
+  background: transparent;
+  color: var(--ink, var(--fg));
+}
+
+.quiet {
+  min-block-size: 2.75rem;
+  padding: 0 var(--space-1);
+  border: 0;
+  background: transparent;
+  color: var(--fg-muted);
+  font-family: var(--font-sign);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 0.25em;
+  cursor: pointer;
+}
+
+.quiet:hover {
+  color: var(--fg);
+}
+
+.note {
+  max-inline-size: 48ch;
+  color: var(--fg-muted);
+  font-size: var(--text-xs);
+}
+
+@media (max-width: 39.99rem) {
+  .primary,
+  .status {
+    padding-inline: var(--space-3);
+    font-size: var(--text-xs);
+  }
+}

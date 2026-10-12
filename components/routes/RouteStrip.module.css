@@ -1,0 +1,32 @@
+.strip {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-inline-size: 26rem;
+  block-size: 1.5rem;
+  padding-inline: 0.5rem;
+}
+
+.strip::before {
+  content: "";
+  position: absolute;
+  inset-inline: 0;
+  inset-block-start: calc(50% - 0.3125rem);
+  block-size: 0.625rem;
+  background: var(--ink);
+}
+
+.stop {
+  position: relative;
+  inline-size: 1.125rem;
+  block-size: 1.125rem;
+  border: 0.25rem solid var(--ink);
+  border-radius: var(--radius-disc);
+  background: var(--porcelain-50);
+}
+
+.stop[data-optional] {
+  border-style: dashed;
+  background: var(--bg);
+}

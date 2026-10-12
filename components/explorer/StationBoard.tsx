@@ -9,6 +9,8 @@ import { LineDisc } from "@/components/ui/LineDisc";
 import { lineFor, zoneLabel } from "./lines";
 import { numberInWords } from "@/lib/design/numbers";
 import { Logo } from "@/components/ui/Logo";
+import type { RouteSummary } from "@/lib/routes/progress";
+import { YourRoutes } from "./YourRoutes";
 import styles from "./StationBoard.module.css";
 
 interface BoardLine {
@@ -53,6 +55,8 @@ interface StationBoardProps {
   onPick(id: string): void;
   readCount: number;
   total: number;
+  /** Rutas de lectura: alimentan "Tus rutas", que se ve también con la cartelera colapsada. */
+  routes: RouteSummary[];
 }
 
 export function StationBoard({
@@ -76,6 +80,7 @@ export function StationBoard({
   onPick,
   readCount,
   total,
+  routes,
 }: StationBoardProps) {
   const uid = useId();
   const listId = `${uid}-results`;
@@ -246,6 +251,8 @@ export function StationBoard({
           </p>
         ) : null}
       </div>
+
+      <YourRoutes routes={routes} />
 
       <div className={styles.trip} id={`${uid}-trip`} hidden={collapsed} role="group" aria-label="Tu progreso">
         <p className={styles.tripCount}>
