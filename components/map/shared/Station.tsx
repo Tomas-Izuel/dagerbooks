@@ -80,7 +80,7 @@ export const Station = memo(function Station({
       }}
       onBlur={() => onHover(null)}
     >
-      <circle className={styles.hit} r={isRoot ? Math.max(44, hitR) : hitR} />
+      <circle className={styles.hit} r={isRoot ? Math.max(26 * m, hitR) : hitR} />
       <circle className={styles.focusRing} r={(isRoot ? 36 : 17) * m} />
       {isRoot ? (
         <>
