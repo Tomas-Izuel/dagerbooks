@@ -1,6 +1,6 @@
 ---
 name: zod
-description: Zod v4 for validating the dagerbooks content catalog (books.yaml / topics.yaml) at build time, deriving types, graph-invariant checks, and generating the editor JSON Schema. Covers v3→v4 API changes.
+description: Zod v4 for the estantes content catalog (@estantes/catalog: one YAML file per book, topics, routes, updates) validated at build time — composing the core with optional modules, deriving types, cross-entity invariants, golden validation messages, and per-app editor JSON Schemas. Covers v3→v4 API changes.
 ---
 
 # Zod (content validation)
@@ -25,9 +25,11 @@ Zod is the single source of truth for the book catalog contract. Current major i
 5. Use `z.coerce.number()/.boolean()/.date()` for string-sourced inputs (query params, form fields).
 6. Cross-field rules via `.refine()` / `.superRefine()` — always set a `path` so the issue maps to the right field, and an `error` message.
 
-## Content schemas (dagerbooks)
+## Content schemas (@estantes/catalog)
 
-7. `lib/catalog/schema.ts` is the single source of truth for `content/books.yaml` and `content/topics.yaml`; export schemas and inferred types from there.
-8. Parse the YAML at build time with `parse()` — a bad entry must fail `next build` (and the Vercel deploy) with `z.prettifyError(err)` naming the book id and field.
-9. Graph invariants that Zod alone cannot express (referenced ids exist, prerequisite level <= book level, no cycles in `leadsTo`) run in a `superRefine` over the whole catalog, each issue with a `path` pointing at the offending book.
-10. Generate the editor JSON Schema from the same Zod schema (`z.toJSONSchema()`) into `content/books.schema.json`, referenced by a `# yaml-language-server: $schema=` comment, so hand-edits get autocompletion.
+7. `packages/catalog` is the single source of truth. Each app calls `defineCatalog({ modules, recommendations, stance, content })` in `apps/<x>/catalog.ts`; the loader, types (`BookOf<typeof catalog>`, `CatalogOf<…>`), invariants, CLI and JSON Schemas all come from that object. Apps re-export what they need from thin shims (in dagerbooks, `lib/catalog/schema.ts`).
+8. Compose by **shape spread** into one `z.strictObject({...})` and add `.check()` at the end. In Zod 4.6, `.extend()` on an object with refinements throws if keys overlap, so never extend a refined schema.
+9. Content lives in `apps/<x>/content/`: `books/<id>.yaml` (one object per file; the id must match the file name; order by `seq`), `topics.yaml` (optional `parent`, two levels max), `routes.yaml`, `updates/<id>.yaml`. The loader validates each entry with `safeParse` and reports every problem at once as `CatalogError`; `next build` fails through `pnpm validate`.
+10. Messages name the entity and field: `libro "x" › leadsTo[0]: …`, `ruta "x" › steps[1] › source: …`, `catálogo › level: …` (see `src/report.ts`). They are the interface for whoever edits YAML: changing wording is a deliberate change, recorded in the app's golden (`pnpm parity golden --record`).
+11. Cross-entity rules (ids exist, topic leaves, `leadsTo` to a higher level, no cycles, one root, route sources in range) live in `checkCore` and each module's check function, not in Zod refinements over the whole file.
+12. Editor JSON Schemas come from the same Zod schemas (`z.toJSONSchema(…, { io: "input" })`) with id enums filled from the loaded catalog: `pnpm schema` writes them, `pnpm validate` fails if they are stale. Each YAML file starts with `# yaml-language-server: $schema=../book.schema.json` (or the matching schema).
