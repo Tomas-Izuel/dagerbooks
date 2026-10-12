@@ -12,6 +12,9 @@ export function SiteFooter() {
         </p>
         <ul className={styles.links}>
           <li>
+            <Link href="/rutas">Rutas</Link>
+          </li>
+          <li>
             <Link href="/novedades">Novedades</Link>
           </li>
           <li>

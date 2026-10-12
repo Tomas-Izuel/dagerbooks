@@ -21,9 +21,14 @@ export function SiteHeader({ crumbs = [] }: { crumbs?: Crumb[] }) {
           <Logo size={30} />
           <span>DagerBooks</span>
         </Link>
-        <ArrowLink href="/" direction="left" variant="ghost">
-          Volver al mapa
-        </ArrowLink>
+        <div className={styles.nav}>
+          <Link href="/rutas" className={styles.navLink}>
+            Rutas
+          </Link>
+          <ArrowLink href="/" direction="left" variant="ghost">
+            Volver al mapa
+          </ArrowLink>
+        </div>
       </div>
       {crumbs.length ? (
         <nav aria-label="Migas de pan" className={styles.crumbs}>

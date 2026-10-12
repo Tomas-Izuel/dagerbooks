@@ -33,3 +33,16 @@ export function topicMetadata(topic: Topic, count: number): Metadata {
     twitter: { card: "summary_large_image", title: `${title} | ${SITE_NAME}`, description },
   };
 }
+
+export function routeMetadata(route: { id: string; name: string; promise: string; steps: unknown[] }): Metadata {
+  const title = `${route.name}: ruta de lectura de ${route.steps.length} libros`;
+  const description = clip(route.promise);
+  const url = absoluteUrl(`/rutas/${route.id}`);
+  return {
+    title,
+    description,
+    alternates: { canonical: url },
+    openGraph: { type: "website", title: `${title} | ${SITE_NAME}`, description, url, siteName: SITE_NAME, locale: SITE_LOCALE },
+    twitter: { card: "summary_large_image", title: `${title} | ${SITE_NAME}`, description },
+  };
+}

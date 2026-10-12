@@ -1,0 +1,164 @@
+.page {
+  --ink: var(--fg);
+  display: grid;
+  gap: var(--space-6);
+}
+
+.head {
+  display: grid;
+  gap: var(--space-4);
+  justify-items: start;
+  max-inline-size: 52rem;
+}
+
+.titleLine {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-4);
+}
+
+.title {
+  min-inline-size: 0;
+  font-size: clamp(2.75rem, 11vw, var(--text-4xl));
+  font-weight: 800;
+  line-height: 0.9;
+  overflow-wrap: anywhere;
+}
+
+.meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-2) var(--space-4);
+  color: var(--fg-muted);
+  font-weight: 600;
+}
+
+.kind {
+  padding: 2px var(--space-3);
+  background: var(--ink);
+  color: var(--fg-on-ink);
+  font-family: var(--font-sign);
+  font-size: var(--text-xs);
+  font-weight: 700;
+  letter-spacing: var(--tracking-sign);
+  text-transform: uppercase;
+}
+
+.promise {
+  max-inline-size: 40ch;
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+  font-weight: 600;
+  line-height: 1.15;
+  text-wrap: balance;
+}
+
+.summary {
+  max-inline-size: 65ch;
+  color: var(--fg-muted);
+  font-size: var(--text-lg);
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: var(--space-3) var(--space-5);
+  padding-block-start: var(--space-2);
+}
+
+.order {
+  max-inline-size: 65ch;
+  color: var(--fg-muted);
+  font-size: var(--text-sm);
+}
+
+.order strong {
+  color: var(--fg);
+}
+
+.order a {
+  color: var(--fg);
+  font-weight: 600;
+}
+
+/*
+ * "De qué va": en escritorio el resumen se ve siempre (details abierto a la fuerza donde el
+ * navegador lo soporta); en celular queda detrás del botón para que la parada 1 entre arriba del pliegue.
+ */
+.more {
+  display: grid;
+  gap: var(--space-2);
+}
+
+.moreSummary {
+  inline-size: fit-content;
+  min-block-size: 2.75rem;
+  display: inline-flex;
+  align-items: center;
+  color: var(--fg);
+  font-family: var(--font-sign);
+  font-size: var(--text-sm);
+  font-weight: 700;
+  cursor: pointer;
+  text-decoration: underline;
+  text-decoration-thickness: var(--rule-width);
+  text-underline-offset: 0.25em;
+}
+
+.moreSummary:focus-visible,
+.order a:focus-visible {
+  outline: var(--rule-width) solid var(--focus);
+  outline-offset: 2px;
+}
+
+@media (min-width: 40rem) {
+  @supports selector(::details-content) {
+    .more::details-content {
+      content-visibility: visible;
+      display: block;
+    }
+
+    .moreSummary {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 39.99rem) {
+  .page {
+    gap: var(--space-4);
+  }
+
+  .head {
+    gap: var(--space-2);
+  }
+
+  .titleLine {
+    gap: var(--space-3);
+  }
+
+  .title {
+    font-size: 2.5rem;
+  }
+
+  .promise {
+    font-size: var(--text-lg);
+  }
+
+  .summary {
+    font-size: var(--text-base);
+  }
+
+  .actions {
+    flex-wrap: nowrap;
+    gap: var(--space-2);
+    padding-block-start: 0;
+  }
+
+  .actions > a {
+    padding-inline: var(--space-3);
+    font-size: var(--text-xs);
+  }
+}

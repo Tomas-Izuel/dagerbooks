@@ -10,6 +10,7 @@ import {
   createExplorerGraph,
   deriveSelection,
   dimmedByFilters,
+  dimmedByRoute,
   focusTopicFor,
   parseExplorerState,
   reconcileFocus,
@@ -33,22 +34,34 @@ export interface UseExplorerState {
   resetRecommendation: () => void;
   /** replace: cambiar de vista no ensucia el historial; conserva libro, tema, rec y q. */
   setVista: (v: Vista) => void;
+  /** replace: entrar o salir de la vista de una ruta. */
+  setRuta: (id: string | null) => void;
   /** replace: seguro para teclear. */
   setQuery: (q: string) => void;
   reset: () => void;
 }
 
 /** Requiere un <Suspense> ancestro (useSearchParams) en la página que lo use. */
-export function useExplorerState(nodes: readonly ExplorerNode[], topicIds?: readonly string[]): UseExplorerState {
+export function useExplorerState(
+  nodes: readonly ExplorerNode[],
+  topicIds?: readonly string[],
+  /** Estaciones de cada ruta, por id de ruta; valida `?ruta=` y atenúa el resto del mapa. */
+  routeBooks?: Readonly<Record<string, readonly string[]>>,
+): UseExplorerState {
   const router = useRouter();
   const pathname = usePathname();
   const params = useSearchParams();
 
   const graph = useMemo(() => createExplorerGraph(nodes), [nodes]);
   const topicSet = useMemo(() => (topicIds ? new Set(topicIds) : undefined), [topicIds]);
+  const routeSet = useMemo(() => (routeBooks ? new Set(Object.keys(routeBooks)) : undefined), [routeBooks]);
   const urlState = useMemo(
-    () => reconcileFocus(parseExplorerState(params, { bookIds: new Set(graph.byId.keys()), topicIds: topicSet }), graph.byId),
-    [params, graph, topicSet],
+    () =>
+      reconcileFocus(
+        parseExplorerState(params, { bookIds: new Set(graph.byId.keys()), topicIds: topicSet, routeIds: routeSet }),
+        graph.byId,
+      ),
+    [params, graph, topicSet, routeSet],
   );
 
   // `q` se mantiene local para que el input no dependa de la latencia del router;
@@ -79,6 +92,7 @@ export function useExplorerState(nodes: readonly ExplorerNode[], topicIds?: read
   );
   const resetRecommendation = useCallback(() => navigate({ ...state, rec: [...ALL_RECS] }, "replace"), [navigate, state]);
   const setVista = useCallback((vista: Vista) => navigate({ ...state, vista }, "replace"), [navigate, state]);
+  const setRuta = useCallback((ruta: string | null) => navigate({ ...state, ruta }, "replace"), [navigate, state]);
   const setQuery = useCallback(
     (value: string) => {
       setTyped({ from: urlState.q, value });
@@ -88,11 +102,15 @@ export function useExplorerState(nodes: readonly ExplorerNode[], topicIds?: read
   );
   const reset = useCallback(() => {
     setTyped({ from: urlState.q, value: "" });
-    navigate({ libro: null, tema: null, rec: [...ALL_RECS], q: "", vista: state.vista }, "replace");
+    navigate({ libro: null, tema: null, rec: [...ALL_RECS], q: "", vista: state.vista, ruta: null }, "replace");
   }, [navigate, urlState.q, state.vista]);
 
   const selection = useMemo(() => deriveSelection(graph, state.libro), [graph, state.libro]);
-  const dimmed = useMemo(() => dimmedByFilters(nodes, state.tema, state.rec), [nodes, state.tema, state.rec]);
+  const dimmed = useMemo(() => {
+    const filters = dimmedByFilters(nodes, state.tema, state.rec);
+    const route = dimmedByRoute(nodes, state.ruta ? routeBooks?.[state.ruta] : undefined);
+    return route.size === 0 ? filters : filters.size === 0 ? route : new Set([...filters, ...route]);
+  }, [nodes, state.tema, state.rec, state.ruta, routeBooks]);
 
-  return { state, selection, dimmed, selectBook, setTopic, toggleRecommendation, resetRecommendation, setVista, setQuery, reset };
+  return { state, selection, dimmed, selectBook, setTopic, toggleRecommendation, resetRecommendation, setVista, setRuta, setQuery, reset };
 }

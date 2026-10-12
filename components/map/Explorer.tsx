@@ -8,6 +8,7 @@ import { DensityControl } from "@/components/explorer/DensityControl";
 import { ViewControl } from "@/components/explorer/ViewControl";
 import { MapControls } from "@/components/explorer/MapControls";
 import { StationBoard } from "@/components/explorer/StationBoard";
+import { RouteBanner } from "@/components/explorer/RouteBanner";
 import { StationPanel } from "@/components/explorer/StationPanel";
 import type { Recommendation } from "@/lib/catalog/schema";
 import { isAllRecs } from "@/lib/design/recommendation";
@@ -18,8 +19,10 @@ import { useDensity } from "@/hooks/useDensity";
 import { useExplorerState } from "@/hooks/useExplorerState";
 import { useReadProgress } from "@/hooks/useReadProgress";
 import type { Gap } from "@/lib/catalog/schema";
+import type { RouteSummary } from "@/lib/routes/progress";
 import type { ExplorerNode } from "@/lib/state/explorer";
 import type { SearchDoc } from "@/lib/search";
+import type { RouteTrace } from "./shared/RoutePath";
 import { NetworkMap, type NetworkMapHandle } from "./NetworkMap";
 import { VISTA_LABEL, type Vista } from "@/lib/view";
 import type { Density } from "@/lib/density";
@@ -49,6 +52,8 @@ export interface ExplorerProps {
   recLabels: Record<Recommendation, { label: string; description: string }>;
   /** Última actualización del sitio para el aviso (omitir si no hay). */
   update?: UpdateNoticeData;
+  /** Rutas de lectura: "Tus rutas" en la cartelera y la vista `?ruta=` del mapa. */
+  routes: RouteSummary[];
 }
 
 // The subway view (and its layout) is a lazy chunk: the radial pays nothing for it.
@@ -66,6 +71,8 @@ const preloadSubway = () => void import("./SubwayMap");
 const VIEW_FADE_MS = 240;
 
 const PANEL_PX = 360 + 24;
+/** Height of the route strip on phones (see RouteBanner.module.css); the map frames below it. */
+const BANNER_PX = 52;
 
 function subscribeNarrow(cb: () => void) {
   const mq = window.matchMedia("(max-width: 899px)");
@@ -81,10 +88,25 @@ const useNarrow = () =>
 
 const byLevelThenTitle = (a: StationRef, b: StationRef) => a.level - b.level || a.title.localeCompare(b.title);
 
-export function Explorer({ geometry: geometrySet, lines, explorerNodes, searchDocs, panels, recLabels, update }: ExplorerProps) {
+export function Explorer({ geometry: geometrySet, lines, explorerNodes, searchDocs, panels, recLabels, update, routes }: ExplorerProps) {
   const mapRef = useRef<NetworkMapHandle>(null);
   const topicIds = useMemo(() => lines.map((l) => l.topicId), [lines]);
-  const { state, selection, dimmed, selectBook, setTopic, setVista, toggleRecommendation, resetRecommendation, setQuery } = useExplorerState(explorerNodes, topicIds);
+  const routeBooks = useMemo(() => Object.fromEntries(routes.map((r) => [r.id, r.steps.map((s) => s.id)])), [routes]);
+  const { state, selection, dimmed, selectBook, setTopic, setVista, setRuta, toggleRecommendation, resetRecommendation, setQuery } =
+    useExplorerState(explorerNodes, topicIds, routeBooks);
+  const activeRoute = useMemo(() => routes.find((r) => r.id === state.ruta) ?? null, [routes, state.ruta]);
+  const routeTrace = useMemo<RouteTrace | null>(
+    () =>
+      activeRoute
+        ? {
+            ids: activeRoute.steps.map((s) => s.id),
+            ink: activeRoute.line.color,
+            gapBefore: new Set(activeRoute.steps.filter((s) => s.gap).map((s) => s.id)),
+            optional: new Set(activeRoute.steps.filter((s) => s.optional).map((s) => s.id)),
+          }
+        : null,
+    [activeRoute],
+  );
   const search = useBookSearch(searchDocs, { initialQuery: state.q });
   const progress = useReadProgress();
   const narrow = useNarrow();
@@ -195,7 +217,7 @@ export function Explorer({ geometry: geometrySet, lines, explorerNodes, searchDo
     }
     return c;
   }, [explorerNodes, state.tema]);
-  const filtering = state.tema !== null || !isAllRecs(state.rec);
+  const filtering = state.tema !== null || !isAllRecs(state.rec) || state.ruta !== null;
   const activeCount = useMemo(
     () => explorerNodes.filter((n) => n.topics.length > 0 && !dimmed.has(n.id)).length,
     [explorerNodes, dimmed],
@@ -263,6 +285,32 @@ export function Explorer({ geometry: geometrySet, lines, explorerNodes, searchDo
     requestAnimationFrame(() => mapRef.current?.centerOn(selectedId, 1.15));
   }, [selectedId, focusKey]);
 
+  // Entering a route frames its stations; leaving it goes back to the whole map. The map may still be
+  // loading (the subway is a lazy chunk), so the framing retries until the handle exists.
+  const routeIds = activeRoute?.id ?? null;
+  const fitInset = useRef<{ top: number; right?: number }>({ top: 0 });
+  useEffect(() => {
+    fitInset.current = narrow ? { top: safe.top + BANNER_PX } : { top: BANNER_PX * 3, right: safe.right };
+  });
+  const hadRoute = useRef(false);
+  useEffect(() => {
+    if (!routeIds) {
+      if (hadRoute.current) mapRef.current?.reset();
+      hadRoute.current = false;
+      return;
+    }
+    hadRoute.current = true;
+    const ids = routes.find((r) => r.id === routeIds)?.steps.map((s) => s.id) ?? [];
+    let tries = 0;
+    let timer: ReturnType<typeof setTimeout>;
+    const attempt = () => {
+      if (mapRef.current) mapRef.current.fitTo(ids, fitInset.current);
+      else if (tries++ < 20) timer = setTimeout(attempt, 120);
+    };
+    timer = setTimeout(attempt, 260);
+    return () => clearTimeout(timer);
+  }, [routeIds, routes, state.vista, density, narrow]);
+
   const clear = useCallback(() => selectBook(null), [selectBook]);
   const read = progress.read;
 
@@ -298,6 +346,7 @@ export function Explorer({ geometry: geometrySet, lines, explorerNodes, searchDo
         onPick={focusStation}
         readCount={progress.hydrated ? progress.count : 0}
         total={geometry.nodes.length}
+        routes={routes}
       />
 
       <div
@@ -334,6 +383,7 @@ export function Explorer({ geometry: geometrySet, lines, explorerNodes, searchDo
                   insets={insets}
                   safe={safeInsets}
                   animateRefit={userSwitched}
+                  routeTrace={routeTrace}
                 />
               ) : (
                 <NetworkMap
@@ -352,6 +402,7 @@ export function Explorer({ geometry: geometrySet, lines, explorerNodes, searchDo
                   safe={safeInsets}
                   animateRefit={userSwitched}
                   density={density}
+                  routeTrace={routeTrace}
                 />
               )}
             </div>
@@ -375,11 +426,17 @@ export function Explorer({ geometry: geometrySet, lines, explorerNodes, searchDo
           </div>
         </div>
 
-        <div className={styles.links}>
+        {activeRoute ? <RouteBanner route={activeRoute} vista={state.vista} onExit={() => setRuta(null)} /> : null}
+
+        <div className={styles.links} data-ruta={activeRoute ? "" : undefined}>
           {update ? <UpdateNotice update={update} /> : null}
           <div className={styles.linkRow}>
             <Link className={styles.directoryLink} href="/estaciones">
               Directorio de estaciones
+              <span aria-hidden="true"> →</span>
+            </Link>
+            <Link className={styles.directoryLink} href="/rutas">
+              Rutas
               <span aria-hidden="true"> →</span>
             </Link>
             <Link className={styles.directoryLink} href="/sumar-un-libro">

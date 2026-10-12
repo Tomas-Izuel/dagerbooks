@@ -2,7 +2,7 @@ import fs from "node:fs";
 import path from "node:path";
 import * as z from "zod";
 import { loadCatalog } from "../lib/catalog/load";
-import { BooksFileSchema, TopicsFileSchema, UpdatesFileSchema } from "../lib/catalog/schema";
+import { BooksFileSchema, RoutesFileSchema, TopicsFileSchema, UpdatesFileSchema } from "../lib/catalog/schema";
 
 const dir = path.join(process.cwd(), "content");
 type Json = Record<string, any>; // eslint-disable-line @typescript-eslint/no-explicit-any
@@ -20,5 +20,10 @@ write("books.schema.json", books);
 const updates = z.toJSONSchema(UpdatesFileSchema, { io: "input" }) as Json;
 updates.items.properties.books.items = { type: "string", enum: bookIds() };
 write("updates.schema.json", updates);
+// Autocompletado de línea y de libros en las rutas
+const routes = z.toJSONSchema(RoutesFileSchema, { io: "input" }) as Json;
+routes.items.properties.line = { type: "string", enum: topics.map((t) => t.id) };
+routes.items.properties.steps.items.properties.book = { type: "string", enum: bookIds() };
+write("routes.schema.json", routes);
 write("topics.schema.json", z.toJSONSchema(TopicsFileSchema, { io: "input" }) as Json);
 console.log("Generados content/*.schema.json");

@@ -144,6 +144,8 @@ export interface MapHandle {
   reset(): void;
   /** Center a station (default: keep zoom, at least `minK`), compensating overlays. */
   centerOn(id: string, minK?: number): void;
+  /** Frame the given stations (the ones the view has): used to show a reading route. */
+  fitTo(ids: readonly string[], inset?: { top?: number; right?: number; bottom?: number; left?: number }): void;
 }
 
 /** @deprecated alias kept for the radial view; use `MapHandle`. */

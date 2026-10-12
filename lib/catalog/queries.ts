@@ -1,6 +1,6 @@
 import { buildAdjacency, reach, withImplicitRootEdges } from "./graph";
 import { loadCatalog } from "./load";
-import type { Book, SiteUpdate, Topic } from "./schema";
+import type { Book, Route, SiteUpdate, Topic } from "./schema";
 
 interface Index {
   byId: Map<string, Book>;
@@ -27,6 +27,8 @@ const byLevelThenTitle = (a: Book, b: Book) => a.level - b.level || a.title.loca
 export const getBooks = (): Book[] => loadCatalog().books;
 export const getTopics = (): Topic[] => loadCatalog().topics;
 export const getUpdates = (): SiteUpdate[] => loadCatalog().updates;
+export const getRoutes = (): Route[] => loadCatalog().routes;
+export const getRoute = (id: string): Route | undefined => getRoutes().find((r) => r.id === id);
 export const getRoot = (): Book => loadCatalog().root;
 export const getBook = (id: string): Book | undefined => idx().byId.get(id);
 export const getTopic = (id: string): Topic | undefined => idx().topicById.get(id);

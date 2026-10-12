@@ -1,0 +1,744 @@
+/*
+ * La vía de una ruta: una línea de subte que se recorre de arriba abajo.
+ * Vía gruesa en la tinta de la ruta, estaciones de porcelana con su número, disco de la línea
+ * de origen en cada estación (el transbordo) y, cuando falta un libro, un tramo a pie: vía cortada
+ * y pasos punteados. Medidas en tres variables para que todo se reparta desde un solo lugar.
+ */
+.layout {
+  --col: 5rem; /* ancho de la columna de la vía */
+  --track: 1.25rem; /* grosor de la vía */
+  --st: 3.5rem; /* diámetro de la estación */
+  --ring: 0.4rem; /* aro de tinta de la estación */
+  --shift: 2.75rem; /* cuánto se corre un desvío de la vía principal */
+  --siding: 0.5rem; /* grosor del ramal del desvío */
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--space-5);
+}
+
+@media (min-width: 64rem) {
+  .layout {
+    grid-template-columns: minmax(0, 1fr) 15rem;
+    gap: var(--space-7);
+    align-items: start;
+  }
+
+  .rail {
+    grid-column: 2;
+    grid-row: 1;
+  }
+}
+
+@media (max-width: 39.99rem) {
+  .layout {
+    --col: 3.75rem;
+    --track: 1rem;
+    --st: 2.75rem;
+    --ring: 0.3rem;
+    --shift: 1.5rem;
+    --siding: 0.375rem;
+  }
+}
+
+.srOnly {
+  position: absolute;
+  inline-size: 1px;
+  block-size: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+/* ---------------------------------------------------------------- riel de progreso */
+
+.rail {
+  position: sticky;
+  z-index: 10;
+  inset-block-start: 0;
+  margin-inline: calc(var(--space-4) * -1);
+  padding: var(--space-2) var(--space-4);
+  border-block-end: var(--rule-width) solid var(--rule-strong);
+  background: var(--bg-sunken);
+}
+
+@media (min-width: 48rem) and (max-width: 63.99rem) {
+  .rail {
+    margin-inline: calc(var(--space-6) * -1);
+    padding-inline: var(--space-6);
+  }
+}
+
+.barRow {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  align-items: center;
+  gap: var(--space-1) var(--space-3);
+}
+
+.count {
+  font-family: var(--font-display);
+  font-size: var(--text-lg);
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.count strong {
+  color: var(--ink);
+  font-weight: 800;
+}
+
+.segments {
+  display: flex;
+  gap: 3px;
+}
+
+.segment {
+  flex: 1;
+  block-size: 0.5rem;
+  background: var(--enamel-700);
+}
+
+.segment[data-state="read"] {
+  background: var(--ink);
+}
+
+.segment[data-state="next"] {
+  background: repeating-linear-gradient(90deg, var(--ink) 0 4px, transparent 4px 8px);
+}
+
+.where {
+  grid-column: 1 / -1;
+  min-inline-size: 0;
+  font-size: var(--text-xs);
+  line-height: 1.3;
+}
+
+.whereLink {
+  display: flex;
+  align-items: center;
+  min-block-size: 2.75rem;
+  overflow: hidden;
+  color: var(--fg);
+  font-weight: 600;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.where:not(:has(a)) {
+  padding-block: var(--space-1);
+  color: var(--ink);
+  font-weight: 700;
+}
+
+.railBody {
+  display: none;
+}
+
+.whereLink:focus-visible,
+.miniLink:focus-visible,
+.railNext:focus-visible {
+  outline: var(--rule-width) solid var(--focus);
+  outline-offset: 2px;
+}
+
+@media (min-width: 64rem) {
+  .rail {
+    inset-block-start: var(--space-5);
+    margin-inline: 0;
+    padding: var(--space-4);
+    border: var(--rule-width) solid var(--rule-strong);
+    max-block-size: calc(100dvh - var(--space-5) * 2);
+    overflow-y: auto;
+    scrollbar-width: thin;
+  }
+
+  .barRow {
+    display: none;
+  }
+
+  .railBody {
+    display: grid;
+    gap: var(--space-2);
+  }
+}
+
+.railWord {
+  font-size: var(--text-xl);
+}
+
+.railDetours {
+  display: block;
+  color: var(--fg);
+  font-weight: 600;
+}
+
+.railCount {
+  font-family: var(--font-display);
+  font-size: var(--text-2xl);
+  white-space: nowrap;
+  font-weight: 800;
+  line-height: 0.95;
+  text-transform: uppercase;
+}
+
+.railCount strong {
+  color: var(--ink);
+}
+
+.railSub {
+  color: var(--fg-muted);
+  font-size: var(--text-sm);
+}
+
+/* Mini-diagrama: la misma vía, en chico, con la parada actual marcada. */
+.mini {
+  position: relative;
+  display: grid;
+  margin: var(--space-2) 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.mini::before {
+  content: "";
+  position: absolute;
+  inset-block: 1.1rem;
+  inset-inline-start: calc(0.5rem - 0.1875rem);
+  inline-size: 0.375rem;
+  background: var(--ink);
+  opacity: 0.55;
+}
+
+.miniLink {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  min-block-size: 2.25rem;
+  color: var(--fg-muted);
+  font-size: var(--text-sm);
+  line-height: 1.25;
+  text-decoration: none;
+}
+
+.miniLink:hover {
+  color: var(--fg);
+  text-decoration: none;
+}
+
+.miniDot {
+  flex: none;
+  inline-size: 1rem;
+  block-size: 1rem;
+  border: 0.2rem solid var(--ink);
+  border-radius: var(--radius-disc);
+  background: var(--porcelain-50);
+}
+
+.miniItem[data-state="read"] .miniDot {
+  background: var(--ink);
+  border-color: var(--porcelain-50);
+}
+
+.miniItem[data-state="next"] .miniLink {
+  color: var(--fg);
+  font-weight: 700;
+}
+
+.miniItem[data-state="next"] .miniDot {
+  outline: 2px dashed var(--porcelain-50);
+  outline-offset: 2px;
+}
+
+.miniItem[data-optional] .miniDot {
+  background: var(--bg-sunken);
+  border-style: dashed;
+}
+
+.miniTitle {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.railNext {
+  display: inline-flex;
+  align-items: center;
+  min-block-size: 2.75rem;
+  color: var(--fg);
+  font-family: var(--font-sign);
+  font-size: var(--text-xs);
+  font-weight: 700;
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+}
+
+.railDone {
+  color: var(--ink);
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+  font-weight: 800;
+  line-height: 1.05;
+  text-transform: uppercase;
+}
+
+.railNote {
+  color: var(--fg-muted);
+  font-size: var(--text-xs);
+}
+
+/* ---------------------------------------------------------------- la vía */
+
+.main {
+  display: grid;
+  gap: var(--space-7);
+  min-inline-size: 0;
+}
+
+.track {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.stop {
+  position: relative;
+  scroll-margin-block-start: 6rem;
+}
+
+.body {
+  position: relative;
+  padding-inline-start: var(--col);
+  padding-block-end: var(--space-8);
+}
+
+.stop[data-last] .body {
+  padding-block-end: 0;
+}
+
+/* La vía: arranca en el centro de la estación y baja hasta la siguiente. */
+.body::before {
+  content: "";
+  position: absolute;
+  inset-block: calc(var(--st) / 2) 0;
+  inset-inline-start: calc((var(--col) - var(--track)) / 2);
+  inline-size: var(--track);
+  background: var(--ink);
+}
+
+/* La vía sólida termina en la terminal; lo que venga después es un ramal aparte. */
+.stop:is([data-kind="terminal"], [data-kind="tail"]) .body::before {
+  display: none;
+}
+
+.station {
+  position: absolute;
+  z-index: 1;
+  inset-block-start: 0;
+  inset-inline-start: calc((var(--col) - var(--st)) / 2);
+  display: grid;
+  place-items: center;
+  inline-size: var(--st);
+  block-size: var(--st);
+  border: var(--ring) solid var(--ink);
+  border-radius: var(--radius-disc);
+  background: var(--porcelain-50);
+  color: var(--fg-on-ink);
+}
+
+.number {
+  font-family: var(--font-display);
+  font-size: calc(var(--st) * 0.52);
+  font-weight: 800;
+  line-height: 1;
+  padding-block-start: 0.06em;
+}
+
+/* Leída: la estación se llena con la tinta y se rodea de porcelana. */
+.stop[data-state="read"] .station {
+  border-color: var(--porcelain-50);
+  background: var(--ink);
+}
+
+/* La próxima: aro punteado alrededor, como el andén donde hay que esperar. */
+.stop[data-state="next"] .station {
+  outline: 3px dashed var(--porcelain-50);
+  outline-offset: 5px;
+}
+
+/* El disco de la línea de origen: el transbordo. */
+.transfer {
+  position: absolute;
+  inset-block-end: -0.55rem;
+  inset-inline-end: -0.85rem;
+  display: grid;
+  border: 3px solid var(--bg);
+  border-radius: var(--radius-disc);
+}
+
+/* Terminal: aro más grueso y el tope de vía, una barra que cruza la vía al final. */
+.stop[data-kind="terminal"] .station {
+  --ring: 0.65rem;
+}
+
+.stop[data-kind="terminal"] .station::after {
+  content: "";
+  position: absolute;
+  inset-block-end: calc(var(--ring) * -1 - 0.95rem);
+  inset-inline: -0.9rem;
+  block-size: 0.5rem;
+  background: var(--ink);
+}
+
+/* Desvío optativo: la vía principal sigue derecha y un ramal más fino, con trazo cortado, pasa por la estación. */
+.stop:is([data-kind="detour"], [data-kind="tail"]) .body {
+  padding-inline-start: calc(var(--col) + var(--shift));
+}
+
+.stop[data-kind="detour"] .body::before {
+  inset-block-start: 0;
+}
+
+.stop:is([data-kind="detour"], [data-kind="tail"]) .station {
+  inset-inline-start: calc((var(--col) - var(--st)) / 2 + var(--shift) - var(--siding) / 2);
+  border-style: dashed;
+  background: var(--bg);
+  color: var(--fg);
+}
+
+.stop:is([data-kind="detour"], [data-kind="tail"])[data-state="read"] .station {
+  border-style: solid;
+  background: var(--ink);
+  color: var(--fg-on-ink);
+}
+
+.siding {
+  position: absolute;
+  z-index: 0;
+  inset-block: calc(var(--st) / 2 - var(--siding) / 2) 0;
+  inset-inline-start: calc(var(--col) / 2);
+  inline-size: var(--shift);
+  border-block: var(--siding) solid var(--ink);
+  border-inline-end: var(--siding) dashed var(--ink);
+}
+
+/* Terminal con desvíos después: el ramal sale de la terminal, baja punteado y cierra con su propio tope. */
+.stop[data-kind="terminal"] .siding {
+  border-block-end: 0;
+}
+
+/* El ramal baja por la columna de los desvíos: el contenido de la terminal se corre igual para no pisarlo. */
+.stop[data-tail-follows] .body {
+  padding-inline-start: calc(var(--col) + var(--shift));
+}
+
+.stop[data-kind="tail"] .siding {
+  inset-block: 0 0;
+  border-block: 0;
+}
+
+.stop[data-kind="tail"][data-last] .siding {
+  inset-block-end: calc(100% - var(--st) / 2 - var(--siding) / 2);
+}
+
+.stop[data-kind="tail"][data-last] .siding::after {
+  content: "";
+  position: absolute;
+  inset-block-end: 0;
+  inset-inline-end: calc(var(--siding) / 2 - 0.8rem);
+  inline-size: 1.6rem;
+  block-size: var(--siding);
+  background: var(--ink);
+}
+
+/* ---------------------------------------------------------------- tramo a pie */
+
+.walk {
+  position: relative;
+  display: grid;
+  grid-template-columns: var(--col) minmax(0, 1fr);
+}
+
+/* La vía queda cortada: un tajo del color del fondo sobre el final de la parada anterior. */
+.walkCut {
+  position: absolute;
+  z-index: 2;
+  inset-block-start: calc(var(--space-3) * -1);
+  inset-inline-start: calc(var(--col) / 2 - var(--track));
+  inline-size: calc(var(--track) * 2);
+  block-size: calc(var(--space-3) + var(--space-2));
+  background: var(--bg);
+}
+
+/* Las huellas: pisadas de porcelana, una a cada lado, bajando por donde faltaba vía. */
+.walkSteps {
+  inline-size: var(--col);
+  background-image:
+    radial-gradient(circle at 36% 0.7rem, var(--porcelain-50) 0.28rem, transparent 0.32rem),
+    radial-gradient(circle at 64% 1.9rem, var(--porcelain-50) 0.28rem, transparent 0.32rem);
+  background-size: 100% 2.4rem;
+  background-repeat: repeat-y;
+  background-position: 0 var(--space-2);
+}
+
+.walkSign {
+  min-inline-size: 0;
+  padding-block: var(--space-4) var(--space-5);
+}
+
+/* ---------------------------------------------------------------- contenido de la parada */
+
+.content {
+  padding-inline-start: var(--space-2);
+  padding-block-start: calc(var(--st) / 2 - 1.1rem);
+  display: grid;
+  gap: var(--space-3);
+  min-inline-size: 0;
+  line-height: var(--leading-body);
+}
+
+.tag {
+  align-self: center;
+  padding: 1px var(--space-2);
+  border: var(--hairline) solid var(--porcelain-400);
+  color: var(--fg);
+  font-family: var(--font-sign);
+  font-size: var(--text-xs);
+  font-weight: 700;
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+}
+
+.tag[data-tone="next"] {
+  background: var(--porcelain-50);
+  border-color: var(--porcelain-50);
+  color: var(--fg-on-ink);
+}
+
+.tag[data-tone="read"] {
+  background: var(--ink);
+  border-color: var(--ink);
+  color: var(--fg-on-ink);
+}
+
+.tag[data-tone="detour"] {
+  border-style: dashed;
+  border-color: var(--ink);
+  color: var(--ink);
+}
+
+.title {
+  font-size: clamp(1.75rem, 5vw, var(--text-2xl));
+  line-height: 1;
+  overflow-wrap: anywhere;
+}
+
+.title a {
+  text-decoration: none;
+}
+
+.title a:hover {
+  text-decoration: underline;
+  text-decoration-thickness: var(--rule-width);
+}
+
+.title a:focus-visible,
+.fichaLink:focus-visible,
+.quote a:focus-visible,
+.order a:focus-visible,
+.punch:focus-visible {
+  outline: var(--rule-width) solid var(--focus);
+  outline-offset: 2px;
+}
+
+.titleEs {
+  margin-block-start: calc(var(--space-2) * -1);
+  color: var(--fg-muted);
+  font-size: var(--text-lg);
+}
+
+.facts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-1) var(--space-4);
+  margin: 0;
+  color: var(--fg-muted);
+  font-size: var(--text-sm);
+}
+
+.fact {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.detourNote {
+  color: var(--ink);
+  font-size: var(--text-sm);
+  font-weight: 600;
+}
+
+.label {
+  margin-block-end: var(--space-1);
+  color: var(--fg-muted);
+  font-family: var(--font-sign);
+  font-size: var(--text-xs);
+  font-weight: 700;
+  letter-spacing: var(--tracking-sign);
+  text-transform: uppercase;
+}
+
+.why p {
+  max-inline-size: 62ch;
+  font-size: var(--text-lg);
+}
+
+.quote {
+  display: grid;
+  gap: var(--space-2);
+  margin: 0;
+  padding: var(--space-3) var(--space-4);
+  background: var(--surface);
+  max-inline-size: 62ch;
+}
+
+.quote blockquote {
+  margin: 0;
+  font-size: var(--text-base);
+  font-style: italic;
+}
+
+.quote figcaption,
+.order p {
+  color: var(--fg-muted);
+  font-size: var(--text-sm);
+}
+
+.order p {
+  max-inline-size: 62ch;
+}
+
+.quote a,
+.order a {
+  color: var(--fg);
+  font-weight: 600;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-2) var(--space-5);
+  margin-block-start: var(--space-1);
+}
+
+.punch {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-3);
+  min-block-size: 3rem;
+  padding: var(--space-2) var(--space-4);
+  border: var(--rule-width) solid var(--ink-e);
+  border-radius: var(--radius);
+  background: var(--ink-e);
+  color: var(--fg-on-ink);
+  text-align: start;
+  cursor: pointer;
+  transition:
+    background-color var(--dur-fast) var(--ease-out-expo),
+    color var(--dur-fast) var(--ease-out-expo);
+}
+
+.punch:hover:not(:disabled) {
+  border-color: var(--porcelain-50);
+  background: var(--porcelain-50);
+}
+
+.punch:disabled {
+  border-color: var(--rule);
+  background: transparent;
+  color: var(--fg-faint);
+  cursor: wait;
+}
+
+.punch[aria-pressed="true"] {
+  border-color: var(--rule-strong);
+  background: transparent;
+  color: var(--fg);
+}
+
+.punch[aria-pressed="true"]:hover:not(:disabled) {
+  background: var(--surface-raised);
+}
+
+.ticket {
+  flex: none;
+}
+
+.punchText {
+  display: grid;
+}
+
+.punchLabel {
+  font-family: var(--font-display);
+  font-size: var(--text-lg);
+  font-weight: 800;
+  letter-spacing: var(--tracking-sign);
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+
+.punchState {
+  font-size: var(--text-xs);
+  opacity: 0.85;
+}
+
+.fichaLink {
+  display: inline-flex;
+  align-items: center;
+  min-block-size: 2.75rem;
+  font-size: var(--text-sm);
+  font-weight: 700;
+}
+
+/* ---------------------------------------------------------------- fin de línea */
+
+.terminal {
+  display: grid;
+  gap: var(--space-3);
+  max-inline-size: 40rem;
+  padding: var(--space-5);
+  border: var(--rule-width) solid var(--rule-strong);
+  margin-inline-start: var(--col);
+}
+
+.terminal p {
+  color: var(--fg-muted);
+}
+
+.terminal[data-done] {
+  border-color: var(--ink);
+  border-block-start: 0.75rem solid var(--ink);
+}
+
+.terminal[data-done] p {
+  color: var(--fg);
+}
+
+.terminalTitle {
+  font-size: var(--text-2xl);
+}
+
+.terminal[data-done] .terminalTitle {
+  font-size: var(--text-3xl);
+  color: var(--ink);
+}
+
+.terminalLinks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}

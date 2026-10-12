@@ -11,6 +11,7 @@ import { DENSITIES, type Density } from "@/lib/density";
 import { linesFor } from "@/lib/design/lines";
 import { buildSearchDocs } from "@/lib/search";
 import { jsonLdString, websiteJsonLd } from "@/lib/seo";
+import { routeSummaries } from "@/lib/routes/summary";
 import { formatUpdateDate, latestUpdate } from "@/lib/updates";
 import { topicPath } from "@/lib/seo/site";
 import styles from "./page.module.css";
@@ -136,6 +137,7 @@ export default function Home() {
           panels={panels}
           recLabels={RECOMMENDATION_LABELS}
           update={update}
+          routes={routeSummaries()}
         />
       </Suspense>
       <nav aria-label="Líneas" className={styles.srOnly}>
@@ -147,6 +149,9 @@ export default function Home() {
           ))}
           <li>
             <Link href="/estaciones">Directorio de estaciones</Link>
+          </li>
+          <li>
+            <Link href="/rutas">Rutas de lectura</Link>
           </li>
           <li>
             <Link href="/novedades">Novedades</Link>

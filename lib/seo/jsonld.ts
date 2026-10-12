@@ -1,4 +1,5 @@
-import type { Book, SiteUpdate, Topic } from "@/lib/catalog/schema";
+import { getBook } from "@/lib/catalog/queries";
+import type { Book, Route, SiteUpdate, Topic } from "@/lib/catalog/schema";
 import { SITE_DESCRIPTION, SITE_NAME, SITE_URL, absoluteUrl, bookPath, openLibraryCover, topicPath } from "./site";
 
 export function websiteJsonLd() {
@@ -66,6 +67,43 @@ export function novedadesJsonLd(updates: SiteUpdate[]) {
       position: i + 1,
       name: u.title,
       description: u.improvements.join(" "),
+    })),
+  };
+}
+
+export const routePath = (id: string) => `/rutas/${id}`;
+
+export function routeJsonLd(route: Route) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: route.name,
+    description: route.promise,
+    url: absoluteUrl(routePath(route.id)),
+    itemListOrder: "https://schema.org/ItemListOrderAscending",
+    numberOfItems: route.steps.length,
+    itemListElement: route.steps.map((s, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      url: absoluteUrl(bookPath(s.book)),
+      name: getBook(s.book)?.title ?? s.book,
+    })),
+  };
+}
+
+export function routesJsonLd(routes: Route[]) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: "Rutas de lectura de DagerBooks",
+    url: absoluteUrl("/rutas"),
+    numberOfItems: routes.length,
+    itemListElement: routes.map((r, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      url: absoluteUrl(routePath(r.id)),
+      name: r.name,
+      description: r.promise,
     })),
   };
 }

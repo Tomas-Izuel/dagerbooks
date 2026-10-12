@@ -1,0 +1,125 @@
+.page {
+  display: grid;
+  gap: var(--space-7);
+  max-inline-size: 56rem;
+  margin-inline: auto;
+}
+
+.head {
+  display: grid;
+  gap: var(--space-3);
+}
+
+.title {
+  font-size: clamp(2.75rem, 11vw, var(--text-4xl));
+  font-weight: 800;
+}
+
+.lead {
+  max-inline-size: 60ch;
+  color: var(--fg-muted);
+  font-size: var(--text-lg);
+}
+
+.empty {
+  padding: var(--space-5);
+  border: var(--rule-width) dashed var(--rule);
+  color: var(--fg-muted);
+}
+
+.group {
+  display: grid;
+  gap: var(--space-4);
+}
+
+.groupHead {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: var(--space-1) var(--space-4);
+  padding-block-end: var(--space-2);
+  border-block-end: var(--rule-width) solid var(--rule-strong);
+}
+
+.groupTitle {
+  font-size: var(--text-2xl);
+}
+
+.groupLead {
+  color: var(--fg-muted);
+}
+
+.list {
+  display: grid;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.row {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-4);
+  padding: var(--space-5) var(--space-2);
+  border-block-end: var(--hairline) solid var(--rule);
+  transition: background-color var(--dur-fast) var(--ease-out-expo);
+}
+
+.row:hover {
+  background: var(--surface);
+}
+
+.row:has(.link:focus-visible) {
+  outline: var(--rule-width) solid var(--focus);
+  outline-offset: -2px;
+}
+
+.text {
+  display: grid;
+  flex: 1;
+  gap: var(--space-2);
+  min-inline-size: 0;
+}
+
+.name {
+  font-size: var(--text-2xl);
+  line-height: 1;
+}
+
+/* Toda la fila es el link: el texto de abajo (Siguiendo, progreso) queda fuera del ancla. */
+.link {
+  text-decoration: none;
+}
+
+.link::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+}
+
+.link:hover {
+  text-decoration: underline;
+  text-decoration-thickness: var(--rule-width);
+}
+
+.link:focus-visible {
+  outline: none;
+}
+
+.promise {
+  max-inline-size: 60ch;
+  font-size: var(--text-lg);
+}
+
+.meta {
+  color: var(--fg-muted);
+  font-size: var(--text-sm);
+}
+
+@media (max-width: 39.99rem) {
+  .row {
+    flex-direction: column;
+    gap: var(--space-3);
+  }
+}

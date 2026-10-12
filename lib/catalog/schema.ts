@@ -144,6 +144,53 @@ export const UpdateSchema = z.strictObject({
 
 export const UpdatesFileSchema = z.array(UpdateSchema);
 
+export const ROUTE_KINDS = ["corriente", "objetivo"] as const;
+export type RouteKind = (typeof ROUTE_KINDS)[number];
+export const ROUTE_KIND_LABELS: Record<RouteKind, string> = { corriente: "Corriente", objetivo: "Objetivo" };
+
+export const ROUTE_LIMITS = { name: 40, promise: 140, summary: 320, why: 160, steps: [4, 10] } as const;
+
+/** Evidencia de que Dager dictó el orden de este paso (video o stream). */
+export const RouteOrderSchema = z.strictObject({
+  url: z.url({ error: "url inválida" }),
+  timestamp: z.string().min(1).optional(),
+  quote: z.string().min(1, { error: "falta la cita del orden" }),
+});
+
+export const RouteStepSchema = z.strictObject({
+  book: Slug,
+  why: z
+    .string()
+    .min(1, { error: "falta el porqué del paso" })
+    .max(ROUTE_LIMITS.why, { error: `why debe ser una frase corta (hasta ${ROUTE_LIMITS.why} caracteres)` }),
+  /** Índice en `book.sources` de la cita que respalda el paso. */
+  source: z.number().int().min(0).optional(),
+  order: RouteOrderSchema.optional(),
+  optional: z.literal(true, { error: "optional solo admite true (omitilo si el paso no es optativo)" }).optional(),
+  /** Tramo a pie ANTES de este paso. */
+  gap: GapSchema.optional(),
+});
+
+/** Un itinerario de lectura curado: corriente u objetivo, cruza líneas del mapa. */
+export const RouteSchema = z.strictObject({
+  id: Slug,
+  name: z.string().min(1).max(ROUTE_LIMITS.name, { error: `name debe tener hasta ${ROUTE_LIMITS.name} caracteres` }),
+  kind: z.enum(ROUTE_KINDS, { error: 'kind debe ser "corriente" o "objetivo"' }),
+  /** Tema de topics.yaml que da el color de la ruta. */
+  line: Slug,
+  promise: z.string().min(1).max(ROUTE_LIMITS.promise, { error: `promise debe tener hasta ${ROUTE_LIMITS.promise} caracteres` }),
+  summary: z.string().min(1).max(ROUTE_LIMITS.summary, { error: `summary debe tener hasta ${ROUTE_LIMITS.summary} caracteres` }),
+  steps: z
+    .array(RouteStepSchema)
+    .min(ROUTE_LIMITS.steps[0], { error: `una ruta necesita al menos ${ROUTE_LIMITS.steps[0]} pasos` })
+    .max(ROUTE_LIMITS.steps[1], { error: `una ruta admite hasta ${ROUTE_LIMITS.steps[1]} pasos` }),
+});
+
+export const RoutesFileSchema = z.array(RouteSchema);
+
+export type Route = z.infer<typeof RouteSchema>;
+export type RouteStep = z.infer<typeof RouteStepSchema>;
+
 export type SiteUpdate = z.infer<typeof UpdateSchema>;
 export type Source = z.infer<typeof SourceSchema>;
 export type RawBook = z.infer<typeof BookSchema>;

@@ -1,0 +1,531 @@
+# yaml-language-server: $schema=./routes.schema.json
+# Rutas: itinerarios de lectura curados. Formato y reglas en el schema; cada paso cita la fuente de Dager
+# (source = índice en book.sources) y `order` solo va cuando Dager dictó ese orden.
+
+- id: escuela-austriaca
+  name: "Escuela austríaca"
+  kind: corriente
+  line: economia
+  promise: "Al final vas a poder explicar el conocimiento disperso y por qué Mises critica el intervencionismo y llegar a Acción humana preparado."
+  summary: "Para quien ya tiene una base y quiere la escuela que Dager recomienda por su idea de valor subjetivo. Va de Bastiat, precursor, y Hayek al intervencionismo de Mises y termina en Acción humana, que sí la desarrolla."
+  steps:
+    - book: economic-sophisms
+      why: "Bastiat es la puerta de entrada: refuta falacias proteccionistas con humor y sin teoría previa. Dager lo llama hermoso e iluminador."
+      source: 0
+    - book: what-is-seen-and-what-is-not-seen
+      optional: true
+      why: "Complementa a Bastiat con lo visible y lo invisible de cada política: la ventana rota, base del razonamiento de la escuela."
+      source: 0
+    - book: the-use-of-knowledge-in-society
+      why: "Hayek da el salto del sofisma al problema central: el conocimiento está disperso y los precios lo coordinan."
+      source: 0
+    - book: kobra-effekt
+      why: "Casos concretos de políticas que logran lo contrario de lo buscado; prepara el argumento de Mises sobre las intervenciones."
+      source: 1
+    - book: interventionism-an-economic-analysis
+      why: "Mises explica por qué una intervención obliga a la siguiente, y ordena en teoría lo que Siebert mostró con ejemplos."
+      source: 0
+    - book: human-action
+      gap:
+        severity: fuerte
+        bridge:
+          - "utilidad marginal y valor subjetivo"
+          - "praxeología"
+          - "teoría austríaca del capital y el ciclo"
+        note: "Human Action da por sabida la teoría subjetivista del valor, que ninguno de los libros anteriores desarrolla."
+      why: "Es el tratado completo de la escuela; Dager lo recuerda como gigantesco, así que conviene llegar con todo lo anterior."
+      source: 0
+
+- id: estoicismo-practico
+  name: "Estoicismo práctico"
+  kind: corriente
+  line: filosofia
+  promise: "Al final vas a poder leer a Séneca, Epicteto y Marco Aurelio con contexto y ubicarlos dentro de la filosofía helenística."
+  summary: "Arranca con una introducción breve, sigue por Séneca, Marco Aurelio y Epicteto, los estoicos que Dager lee, y cierra con Cicerón y la antología de Long y Sedley. El himno de Cleantes y Diógenes Laercio son desvíos opcionales."
+  steps:
+    - book: stoicism-a-very-short-introduction
+      why: "Dager lo marca como la mejor opción si no estás acostumbrado a leer filosofía: te da el mapa antes de ir a los textos."
+      source: 0
+    - book: on-the-shortness-of-life
+      why: "Texto corto de Séneca que Dager recomienda y pone antes que las Cartas: buena forma de probar su voz sin comprometerte."
+      source: 0
+    - book: letters-to-lucilius
+      why: "Va después de la Brevedad, como lo ordena Dager: el Séneca largo, donde destaca varios apartados importantes en lo filosófico."
+      source: 1
+      order:
+        url: "https://www.youtube.com/watch?v=SlYKqCwO6m4&t=4649s"
+        timestamp: "77:29"
+        quote: "probablemente no en este orden, probablemente sobre la brevedad de la vida primero y después cartas a Lucio, aunque los dos son bastante buenos"
+    - book: meditations
+      why: "Dager lo cuenta entre las lecturas estoicas, aunque dice que es \"buena lectura, pero hasta ahí\" y que a él le aburre."
+      source: 0
+    - book: discourses-and-enchiridion
+      why: "Epicteto, el más trabajado de los tres: Dager dice que no es fácil pero es interesante y buen candidato para estoicismo práctico."
+      source: 0
+    - book: hymn-of-cleanthes
+      optional: true
+      why: "Poema muy corto de Cleantes, de la vieja estoa; Dager sugiere leerlo con alguien que explique sus implicancias filosóficas."
+      source: 0
+    - book: lives-of-the-eminent-philosophers
+      optional: true
+      why: "Diógenes Laercio: Dager dice que no hace falta leerlo entero, solo las partes de los estoicos, para ubicar escuelas y maestros."
+      source: 0
+    - book: de-finibus
+      why: "Cicerón enfrenta estoicismo, epicureísmo y academia; Dager lo llama muy bueno y te muestra al estoicismo discutido por sus rivales."
+      source: 0
+    - book: the-hellenistic-philosophers
+      why: "Cierre denso: Dager lo llama brillante y recomienda leerlo entero, no solo el capítulo de los estoicos; ya llegás con los textos."
+      source: 0
+
+- id: grecia-antigua
+  name: "Grecia antigua: de la historia a Platón"
+  kind: corriente
+  line: historia
+  promise: "Al final vas a poder ubicar el mundo griego en su historia y llegar a Platón con ese marco."
+  summary: "Dos panoramas históricos que Dager elige como sus favoritos de Grecia, Kitto y Glover; un mapa opcional de filósofos con Diógenes Laercio; y después Platón con Gorgias y República. Los pasos de Platón son menciones de Dager, no recomendaciones."
+  steps:
+    - book: the-greeks-kitto
+      why: "Dager lo llama \"librazo\": panorama histórico y general de la civilización griega, no solo Atenas, para tener el cuadro antes de los textos."
+      source: 0
+    - book: the-ancient-world-glover
+      why: "Su libro favorito de Grecia desde chico: suma la historia del mundo antiguo, hasta Roma, al cuadro más centrado en la mentalidad de Kitto."
+      source: 0
+    - book: lives-of-the-eminent-philosophers
+      optional: true
+      why: "Diógenes Laercio: vidas y doctrinas de filósofos griegos. Dager dice que no hace falta leerlo todo; sirve de mapa antes de ir a Platón."
+      source: 0
+    - book: gorgias
+      optional: true
+      why: "Primer Platón, por nivel: Sócrates frente a la retórica, más accesible que República. Dager solo cita un ejemplo de memoria, sin recomendarlo."
+      source: 0
+    - book: the-republic
+      why: "Dager la cita por la idea del filósofo rey y no la recomienda; tras la historia griega la leés en su mundo y no como cita suelta."
+      source: 0
+
+- id: historia-argentina
+  name: "Historia argentina"
+  kind: corriente
+  line: historia
+  promise: "Al final vas a poder recorrer la historia argentina del virreinato al peronismo y discutirla desde distintos ángulos."
+  summary: "Arranca por la síntesis de Félix Luna, sigue con Romero sobre el siglo XX y El 45, y llega a Oszlak sobre el Estado. Los desvíos (Lanata, Bayer, Walsh, Borges y Bioy) son más periodísticos, polémicos o sesgados, como avisa Dager."
+  steps:
+    - book: breve-historia-de-los-argentinos
+      why: "Dager dice que, si tuviera que recomendar un solo libro de historia argentina, sería este: concisa, desde el virreinato hasta la Alianza."
+      source: 0
+    - book: breve-historia-contemporanea-de-la-argentina
+      why: "Baja al siglo XX con más detalle tras el panorama de Luna; Dager lo cuenta entre los dos que más le gustan, \"muy lindo libro de historia\"."
+      source: 0
+    - book: el-45
+      why: "Luna de nuevo, ahora sobre el origen del peronismo; Dager lo llama \"librazo\". Prepara las lecturas más sesgadas que vienen después."
+      source: 0
+    - book: los-argentinos-lanata
+      optional: true
+      why: "Otra mirada al siglo XX, periodística y polémica; Dager aclara que Lanata divide aguas, pero lo sigue considerando un excelente libro."
+      source: 0
+    - book: la-formacion-del-estado-argentino
+      why: "Vuelve al siglo XIX para ver cómo se armó el Estado; Dager lo ve valioso aunque algo sesgado hacia la izquierda."
+      source: 0
+    - book: la-patagonia-rebelde
+      optional: true
+      why: "Episodio de la era Yrigoyen desde el lado obrero; Dager avisa que es más sesgado y periodístico, útil para ver una faceta escondida."
+      source: 1
+    - book: operacion-masacre
+      optional: true
+      why: "Periodismo de investigación sobre 1956; Dager dice que es lindo como libro y que inaugura el género. Sesgado, para un caso puntual."
+      source: 0
+    - book: la-fiesta-del-monstruo
+      optional: true
+      why: "Sátira de Borges y Bioy sobre el peronismo que Dager recomienda; se disfruta más con El 45 ya leído."
+      source: 0
+
+- id: obediencia-maldad-y-poder
+  name: "Obediencia, maldad y poder"
+  kind: corriente
+  line: historia
+  promise: "Al final vas a poder explicar cómo gente común participa del mal, con Milgram y Arendt como base."
+  summary: "De la estupidez de Cipolla y la experiencia de Frankl en los campos al experimento de Milgram, con Baumeister como desvío, hasta el juicio a Eichmann y la banalidad del mal."
+  steps:
+    - book: basic-laws-of-human-stupidity
+      why: "Ensayo breve y satírico para empezar: el daño no necesita malicia, alcanza con gente que actúa sin pensar."
+      source: 0
+    - book: mans-search-for-meaning
+      why: "Frankl cuenta el mal desde adentro del campo, incluidos los capos: prepara la pregunta de cómo alguien llega a ser cómplice."
+      source: 1
+    - book: obedience-to-authority
+      why: "Milgram responde con datos: personas comunes aplican descargas por orden de una autoridad. Dager lo recomienda por breve e interesante."
+      source: 0
+    - book: evil-baumeister
+      optional: true
+      why: "Baumeister desarma el mito de la maldad pura, la idea de que el que hace daño se ve a sí mismo como malo."
+      source: 0
+    - book: eichmann-in-jerusalem
+      why: "Arendt lleva la obediencia a un caso histórico: el burócrata Eichmann y la banalidad del mal. Dager lo conecta con Milgram."
+      source: 0
+
+- id: liberalismo-de-locke-a-huemer
+  name: "Liberalismo: de Locke a Huemer"
+  kind: corriente
+  line: economia
+  promise: "Al final vas a poder explicar de dónde sale la idea de libertad individual y qué le exige el liberalismo al Estado."
+  summary: "La parte filosófica y política del liberalismo, sin manuales de economía: tolerancia de Locke, principio del daño de Mill, Berlin y Hayek, hasta el debate actual sobre justicia y redistribución con Sowell y Huemer."
+  steps:
+    - book: a-letter-concerning-toleration
+      why: "Punto de partida: Locke separa Iglesia y Estado, y define qué le toca y qué no le toca al poder político."
+      source: 0
+    - book: on-liberty
+      why: "Mill lleva la tolerancia más allá de la religión y pone el principio del daño como único límite a la libertad individual."
+      source: 0
+    - book: two-concepts-of-liberty
+      why: "Con Mill en la cabeza, Berlin ordena el debate: libertad negativa frente a libertad positiva, que es donde se parten las aguas."
+      source: 0
+    - book: the-road-to-serfdom
+      why: "Hayek muestra qué pasa con la libertad política cuando el Estado planifica la economía: pasa de la teoría a un riesgo concreto."
+      source: 0
+    - book: quest-for-cosmic-justice
+      why: "Sowell discute si el Estado debe corregir las desigualdades de cuna; prepara el argumento de derechos que viene en el final."
+      source: 0
+    - book: huemer-wealth-redistribution
+      why: "Cierra con el ensayo que Dager recomienda: la redistribución del ingreso vista como posible violación de derechos de propiedad."
+      source: 0
+
+- id: economia-desde-cero
+  name: "Economía desde cero"
+  kind: objetivo
+  line: economia
+  promise: "Al final vas a poder explicar cómo piensan los economistas de mercado y tener la base para arrancar un manual de micro y macro."
+  summary: "Para quien nunca leyó economía. Sigue el caminito que Dager dicta (Hazlitt, Free to Choose, Capitalismo y libertad), suma el manual de Mankiw como opcional para el vocabulario y cierra con Keynes, más denso."
+  steps:
+    - book: economics-in-one-lesson
+      why: "Dager lo pone primero en su caminito de intro a economía: te da la lógica de mirar los efectos que no se ven antes de ver cualquier modelo."
+      source: 4
+      order:
+        url: "https://www.youtube.com/watch?v=DhFQ_yNFuwA&t=2133s"
+        timestamp: "0:35:33"
+        quote: "Haslid viene antes si bueno esto está bueno de intro a economía en general tenés Haslid primero después tenés Free to Choose después tenés Capitalismo y Libertad de Friedman"
+    - book: free-to-choose
+      why: "Con la base ya puesta, Friedman aplica el mercado a casos concretos de política; Dager lo ubica segundo en su caminito."
+      source: 4
+      order:
+        url: "https://www.youtube.com/watch?v=DhFQ_yNFuwA&t=2133s"
+        timestamp: "0:35:33"
+        quote: "Haslid viene antes si bueno esto está bueno de intro a economía en general tenés Haslid primero después tenés Free to Choose después tenés Capitalismo y Libertad de Friedman"
+    - book: capitalism-and-freedom
+      why: "Es el Friedman más duro, y por eso va después de Free to Choose: acá discute el rol del Estado y la libertad política."
+      source: 0
+      order:
+        url: "https://www.youtube.com/watch?v=DhFQ_yNFuwA&t=2133s"
+        timestamp: "0:35:33"
+        quote: "Haslid viene antes si bueno esto está bueno de intro a economía en general tenés Haslid primero después tenés Free to Choose después tenés Capitalismo y Libertad de Friedman"
+    - book: mankiw-principles-of-economics
+      optional: true
+      why: "Manual optativo para el vocabulario de micro y macro; Dager lo suma 'también' como introductorio, pero no lo mete dentro de su caminito."
+      source: 0
+    - book: the-general-theory
+      optional: true
+      why: "Desvío para el final: Dager lo marca más denso que los otros y cuenta que de chico lo entendió poco. Se puede saltear."
+      source: 1
+
+- id: como-funciona-una-computadora
+  name: "Entender cómo funciona una computadora"
+  kind: objetivo
+  line: fundamentos
+  promise: "Al final vas a poder explicar cómo se pasa de números binarios y compuertas lógicas a una CPU y a un sistema operativo."
+  summary: "Arranca por el binario, arma una computadora entera desde la compuerta NAND y termina en cómo un sistema operativo reparte CPU y memoria. Para quien quiere ver qué hay debajo del código que escribe. Pide algo de C en el último tramo."
+  steps:
+    - book: mathematics-for-programmers-barden
+      why: "Sistemas de numeración y aritmética binaria, el piso que necesitás para entender lo que hace una compuerta."
+      source: 1
+    - book: but-how-do-it-know
+      why: "Con el binario resuelto, construís una CPU completa desde una compuerta NAND. Dager lo llama hermoso y fascinante."
+      source: 1
+    - book: laws-of-thought-boole
+      optional: true
+      why: "Desvío histórico: de dónde sale la lógica verdadero/falso que viste hecha compuertas. Dager lo cita en su video sobre el binario."
+      source: 0
+    - book: operating-systems-three-easy-pieces
+      gap:
+        severity: fuerte
+        bridge:
+          - "lenguaje C y punteros"
+          - "uso de la terminal Unix"
+        note: "Los ejemplos de OSTEP están en C; si no lo leés, te trabás en el primer capítulo de código."
+      why: "Ya sabés qué es una CPU; acá ves cómo un sistema operativo la virtualiza, coordina procesos y guarda datos."
+      source: 0
+
+- id: matematica-y-algoritmos
+  name: "Matemática y algoritmos"
+  kind: objetivo
+  line: matematicas
+  promise: "Al final vas a poder leer demostraciones y analizar algoritmos con la matemática que piden los textos de referencia."
+  summary: "Para programadores que quieren rigor sin saltar directo a CLRS: álgebra, después demostraciones, un libro amable de algoritmos, el CLRS y por último matemática para computación. Dager aclara que no se arranca por algoritmos."
+  steps:
+    - book: algebra-baldor
+      why: "Todo lo demás se apoya en saber manejar álgebra. Dager dice que es crucial y que no entiende por qué no lo recomendó antes."
+      source: 0
+    - book: book-of-proof
+      why: "Pasás de resolver ejercicios a leer y escribir demostraciones: lógica, conjuntos e inducción, base de cualquier análisis de algoritmos."
+      source: 2
+    - book: algorithms-illuminated
+      why: "Primer contacto con algoritmos con la matemática ya vista. Dager lo marca como introductorio, a diferencia de CLRS."
+      source: 2
+      order:
+        url: "https://www.youtube.com/watch?v=JSYsisYZRRQ&t=3027s"
+        timestamp: "50:27"
+        quote: "clrs si creo que clrs es una introducción a los algoritmos que no es muy introductoria no es muy amigable hay un libro que me encanta de algoritmos que una serie de libros de hecho que encontré hace poco y los leí hace poco nunca los había leído qu son estos Estos son bastante copados estos fuera de joda son no irónicamente son bastante introductorios"
+    - book: introduction-to-algorithms
+      why: "El CLRS: la referencia rigurosa que Dager no recomienda para empezar y sí para quien ya se lleva bien con los números."
+      source: 0
+    - book: concrete-mathematics
+      optional: true
+      gap:
+        severity: muy-fuerte
+        bridge:
+          - "cálculo: límites, derivadas e integrales"
+          - "series infinitas"
+          - "combinatoria básica"
+        note: "Sin cálculo este libro no se lee: ahí se te corta la vía."
+      why: "Sumatorias, recurrencias y combinatoria: la matemática para computación. Dager dice que llena ese hueco de matemática para CS."
+      source: 2
+
+- id: escribir-mejor-codigo
+  name: "Escribir mejor código"
+  kind: objetivo
+  line: oficio
+  promise: "Al final vas a poder escribir código legible, aplicar patrones sin forzarlos y refactorizar con criterio."
+  summary: "Para quien ya programa y quiere mejorar el oficio: patrones explicados con claridad, hábitos de trabajo, legibilidad y refactoring. Cierra con el libro original de patrones como lectura opcional."
+  steps:
+    - book: dive-into-design-patterns
+      why: "Punto de entrada: patrones y principios con ejemplos claros. Dager dice que primero programes algo orientado a objetos y después uses este libro."
+      source: 2
+    - book: head-first-design-patterns
+      optional: true
+      why: "Otra vuelta a los mismos patrones, más visual y con más práctica. Dager recomienda la colección Head First en su conjunto."
+      source: 0
+    - book: the-pragmatic-programmer
+      why: "Dejás los patrones puntuales y pasás a hábitos y criterio de oficio. Dager lo pide en la edición del 20.º aniversario."
+      source: 3
+    - book: clean-code
+      why: "Legibilidad a nivel función y nombre. Dager lo recomienda sin tomarlo como Biblia y avisa que los ejemplos son flojos."
+      source: 2
+    - book: refactoring
+      why: "Con patrones y criterio de legibilidad, ahora el catálogo de técnicas para cambiar código existente sin romperlo."
+      source: 0
+    - book: design-patterns-gof
+      optional: true
+      why: "Los patrones en su versión original. Dager lo nombra sin comentarlo: sirve para ir a la fuente de lo que ya viste."
+      source: 0
+
+- id: arquitectura-de-software
+  name: "Arquitectura de software"
+  kind: objetivo
+  line: arquitectura
+  promise: "Al final vas a poder elegir un estilo de arquitectura y justificar decisiones entre monolito, microservicios y datos."
+  summary: "Para devs que pasan de escribir módulos a diseñar sistemas: un panorama general de estilos, el caso de los microservicios, REST como estilo de la web, datos distribuidos y diseño guiado por el dominio."
+  steps:
+    - book: fundamentals-of-software-architecture
+      why: "Panorama general de estilos y decisiones. Dager lo eligió como su favorito de arquitectura por ser un overview concreto."
+      source: 3
+    - book: building-microservices
+      why: "Después del panorama, un estilo en profundidad: cuándo dividir en servicios y qué problemas distribuidos aparecen."
+      source: 3
+    - book: rest-fielding-dissertation
+      why: "Los servicios se hablan por la red: acá está el estilo REST en su fuente. Dager la señala como la fuente canónica."
+      source: 0
+    - book: designing-data-intensive-applications
+      optional: true
+      why: "Qué pasa con los datos cuando el sistema se reparte: replicación y particionado. Dager solo lo nombra, por eso es optativo."
+    - book: domain-driven-design
+      optional: true
+      why: "Cómo decidir los límites entre servicios: bounded contexts. Dager lo recomienda de yapa al hablar de microservicios; es un desvío largo."
+      source: 0
+
+- id: crecer-como-desarrollador
+  name: "Crecer como desarrollador"
+  kind: objetivo
+  line: oficio
+  promise: "Al final vas a poder planear tu carrera, moverte en equipos de software y comunicarte mejor como profesional."
+  summary: "Para programadores que quieren crecer hacia un perfil más completo o hacia lead. Arranca con consejos de carrera, sigue con el oficio y la gestión de equipos de software, y cierra con cómo presentar tus ideas."
+  steps:
+    - book: dont-call-yourself-a-programmer
+      why: "Ensayo corto para arrancar: te cambia la pregunta de cómo programar mejor a cómo aportás valor a la empresa."
+      source: 0
+    - book: soft-skills
+      why: "Baja ese enfoque a tu carrera concreta: Dager lo usa como referencia para manejarla y lo recomienda a devs."
+      source: 1
+    - book: the-pragmatic-programmer
+      why: "Pasa de la carrera al oficio: Dager lo recomienda para mejorar como profesional, con la edición del 20.º aniversario."
+      source: 3
+    - book: joel-on-software
+      why: "Suma la mirada de quien lidera: Dager lo recomienda para ser un buen líder o manager y lo une a Peopleware en gestión de proyectos de software."
+      source: 3
+    - book: peopleware
+      why: "Mismo terreno que Joel, con más peso: Dager lo agrupa con él en gestión de proyectos de software; trata a los equipos como personas."
+      source: 1
+    - book: the-mythical-man-month
+      why: "Cierra la parte de equipos: Dager lo ve útil si te toca organizar equipos de software por el costo de comunicación."
+      source: 2
+    - book: how-to-present-to-absolutely-anyone
+      optional: true
+      why: "Desvío de comunicación: Dager lo recomienda a quien es el técnico del equipo y le toca presentar a un cliente."
+      source: 0
+
+- id: armar-una-startup
+  name: "Armar una startup"
+  kind: objetivo
+  line: startups
+  promise: "Al final vas a poder validar una idea antes de construirla, usar tus ventajas y reconocer cómo fracasan las startups."
+  summary: "Para programadores que quieren emprender: primero el método para validar rápido, después cómo aprovechar lo que tenés de ventaja, casos reales de startups y, al final, los errores típicos que las hunden."
+  steps:
+    - book: the-lean-startup
+      why: "Arranca por el método: Dager dice que es muy bueno y que ataca el error de pasar meses desarrollando sin salir al mercado."
+      source: 2
+    - book: the-unfair-advantage
+      why: "Después de validar, mirá con qué ventajas partís: Dager dice que no le gusta como libro, pero que la idea general está buena."
+      source: 0
+    - book: the-startup-playbook
+      why: "Pone casos reales: entrevistas a fundadores de startups de crecimiento rápido; Dager lo cuenta entre los que le gustaron bastante."
+      source: 0
+    - book: how-to-fuck-up-your-startup
+      why: "Cierra con el fracaso, sin sesgo de supervivencia: Dager lo valora por mostrar qué sale mal al construir una empresa."
+      source: 1
+
+- id: habitos-y-foco
+  name: "Hábitos, foco y atención"
+  kind: objetivo
+  line: desarrollo-personal
+  promise: "Al final vas a poder armar hábitos que se sostengan y proteger tu atención del celular y las distracciones."
+  summary: "Primero hábitos y qué clase de persona querés ser, después trabajo profundo y atención. Sirve para ordenar el día y concentrarte; para técnicas de estudio mirá la ruta Aprender a aprender."
+  steps:
+    - book: atomic-habits
+      why: "Punto de partida: Dager lo llama el más obvio y práctico para formar buenos hábitos y soltar los malos."
+      source: 1
+      order:
+        url: "https://www.youtube.com/watch?v=wgtGulLPwE8&t=64s"
+        timestamp: "1:04"
+        quote: "El primer libro de la lista es el más obvio de todos y se trata de Hábitos Atómicos"
+    - book: 12-rules-for-life
+      why: "Complementa lo práctico con lo filosófico: qué clase de persona querés ser, algo que Hábitos atómicos no resuelve."
+      source: 1
+      order:
+        url: "https://www.youtube.com/watch?v=wgtGulLPwE8&t=284s"
+        timestamp: "4:44"
+        quote: "Hay un libro que de hecho se combina bastante bien con hábitos atómicos en mi opinión que descubrí bastante después de haber leído Hábitos Atómicos. Se trata de 12 reglas para la vida"
+    - book: flinch
+      optional: true
+      why: "Lectura de 45 minutos sobre el miedo que te frena a actuar; Dager dice que el costo-beneficio es excelente."
+      source: 0
+    - book: deep-work
+      why: "Pasás de hábitos generales a proteger la atención: Dager lo ve excelente complemento contra las distracciones."
+      source: 1
+    - book: digital-minimalism
+      why: "Lleva lo mismo a la tecnología: del mismo autor, sobre usar el celular y las pantallas con criterio."
+      source: 1
+    - book: brain-drain-smartphone
+      optional: true
+      why: "Estudio que Dager cita: tener el celular a la vista baja tu capacidad cognitiva. Da respaldo a lo anterior."
+      source: 0
+    - book: the-myth-of-multitasking
+      optional: true
+      why: "Ataca el multitasking diario; Dager dice que deja cosas copadas, aunque la presentación sea cringe."
+      source: 0
+    - book: the-shallows
+      why: "Cierre más denso: cómo internet cambia la atención y la lectura. Dager lo recomienda bastante."
+      source: 0
+
+- id: aprender-a-aprender
+  name: "Aprender a aprender"
+  kind: objetivo
+  line: desarrollo-personal
+  promise: "Al final vas a poder estudiar con técnicas respaldadas: tomar notas, recuperar de memoria y leer evidencia sobre aprendizaje."
+  summary: "Para estudiantes y autodidactas. Va del manual de supervivencia académica a mentalidad y memoria, y termina en la investigación sobre práctica de recuperación. Distinta de Hábitos y foco, que trata de rutinas y atención."
+  steps:
+    - book: college-success
+      why: "Manual gratuito para empezar: Dager lo usa para estudiar, con métodos de toma de notas como Cornell y Outline."
+      source: 1
+    - book: mindset
+      why: "College Success roza la idea de mindset; acá Dweck la desarrolla: creer que podés mejorar cambia cómo estudiás, y prepara lo que sigue."
+      source: 1
+    - book: why-we-forget
+      why: "Con la mentalidad armada, pasás a la memoria: Dager lo llama muy copado e iluminador para entender cómo funciona recordar."
+      source: 1
+    - book: powerful-teaching
+      why: "Aplica la ciencia del aprendizaje a la práctica de recuperación; Dager lo estaba leyendo para investigar cómo estudiar."
+      source: 0
+    - book: karpicke-retrieval-practice-papers
+      gap:
+        severity: fuerte
+        bridge:
+          - "diseño experimental básico"
+          - "significancia estadística y p-valor"
+          - "tamaños de efecto"
+        note: "Son papers con estadística; sin ese vocabulario no se leen los resultados."
+      why: "Fuente primaria del efecto de prueba: Dager muestra el paper de 2006 y dice que lo recomienda."
+      source: 0
+
+- id: del-primer-script-a-csharp
+  name: "Del primer script a C#"
+  kind: objetivo
+  line: fundamentos
+  promise: "Al final vas a poder automatizar tareas en Python, manejar Git a fondo y dar el salto a C# y .NET."
+  summary: "Para quien está empezando: un primer lenguaje haciendo cosas útiles, Git con su guía completa y después C# y .NET. No cubre bases de datos, HTTP ni testing: el catálogo no tiene libros de eso, así que no pretende ser una ruta de backend completa."
+  steps:
+    - book: automate-the-boring-stuff-with-python
+      why: "Python haciendo tareas reales: un primer lenguaje con resultados rápidos, antes de meterte con herramientas y con un lenguaje más pesado."
+      source: 0
+    - book: pro-git
+      why: "Cuando ya escribís scripts, versionarlos ordena el trabajo. Dager lo da como el único recurso para ir a fondo con Git."
+      source: 0
+    - book: git-internals
+      optional: true
+      why: "Después de usar Git, ver cómo guarda objetos y commits por dentro. Es profundizar lo mismo, no un tema nuevo."
+      source: 0
+    - book: csharp-in-a-nutshell
+      why: "Segundo lenguaje, tipado y con plataforma propia: sirve de referencia concisa para ordenar C# y .NET."
+      source: 0
+    - book: csharp-in-depth
+      why: "Con C# en la mano, Skeet baja a los detalles del lenguaje. Dager aclara que no es tan introductorio."
+      source: 1
+
+- id: ia-riesgos-y-seguridad
+  name: "IA: riesgos y seguridad"
+  kind: objetivo
+  line: ia
+  promise: "Al final vas a poder explicar los riesgos de la IA, de los daños de hoy al problema del control, y leer papers de seguridad."
+  summary: "Parte de los límites y daños actuales de los modelos de lenguaje, pasa por escenarios y análisis de superinteligencia, y termina en papers técnicos de seguridad y control. Es una ruta de riesgo y alineamiento."
+  steps:
+    - book: stochastic-parrots
+      why: "Punto de partida en lo actual: sesgos, costos y datasets imposibles de auditar; Dager dice que lo menciona siempre."
+      source: 0
+    - book: ai-2027
+      why: "Pasás de los daños de hoy a un escenario a futuro: Dager lo ve medio fan fiction pero bastante investigado."
+      source: 0
+    - book: international-ai-safety-report
+      optional: true
+      why: "Contrapeso al escenario: informe de expertos que Dager cita para decir que hoy no hay modelos con riesgo existencial."
+      source: 0
+    - book: superintelligence
+      why: "El argumento de fondo: cómo podría surgir una superinteligencia y cómo controlarla. Dager lo llama muy buen libro."
+      source: 0
+    - book: concrete-problems-in-ai-safety
+      gap:
+        severity: fuerte
+        bridge:
+          - "aprendizaje por refuerzo: agente, recompensa y política"
+          - "redes neuronales y descenso por gradiente"
+        note: "El paper habla en términos de aprendizaje por refuerzo; sin eso los ejemplos no cierran."
+      why: "Baja el riesgo a problemas técnicos concretos; Dager lo llama importante y buena lectura."
+      source: 0
+    - book: emergent-misalignment
+      optional: true
+      why: "Ejemplo reciente de lo anterior: entrenar con código inseguro vuelve malicioso al modelo. Dager lo comenta en stream."
+      source: 0
+    - book: the-off-switch-game
+      gap:
+        severity: fuerte
+        bridge:
+          - "utilidad esperada y teoría de la decisión"
+          - "teoría de juegos de dos jugadores"
+          - "probabilidad condicional y bayesiana"
+        note: "El paper es un modelo formal; conviene traer la teoría de la decisión."
+      why: "Cierre formal: modela si un agente racional dejaría que lo apaguen. Dager dice que es interesante y accesible."
+      source: 0
