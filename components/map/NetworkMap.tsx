@@ -20,11 +20,12 @@ import type { NavNode } from "@/lib/graph-interaction";
 import { DENSITY_SCALE, DEFAULT_DENSITY, type Density, type DensityScale } from "@/lib/density";
 import { fitScale } from "@/lib/graph-interaction/viewport";
 import type { Recommendation } from "@/lib/catalog/schema";
+import { REC_DOT } from "@/lib/design/recommendation";
 import { deriveRoute } from "@/lib/map/route";
 import type { MapFocus, MapGeometry, MapHandle, MapLine, MapNode } from "./types";
 import {
+  HIT_PAD,
   HIT_PX,
-  HIT_R,
   LABEL_CH,
   LABEL_LINE,
   LABEL_MIN_REL,
@@ -550,7 +551,7 @@ export function NetworkMap({
   const kFit = vp.width > 0 ? Math.min(fitScale(panBounds, vp), k) : k;
   const ls = m * clamp(k / kFit, 1, sc.maxGrow);
   const tagScale = Math.max(ls, TAG_MIN_SCALE);
-  const hitR = Math.max(HIT_R, HIT_PX / k);
+  const hitR = Math.max(HIT_PX / k, REC_DOT.fuerte.r * m + HIT_PAD / k);
   const outer = view.rings[view.rings.length - 1]?.radius ?? 0;
 
   /* ---- line names under the terminus discs ---- */

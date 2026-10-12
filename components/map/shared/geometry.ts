@@ -15,9 +15,12 @@ export const LABEL_GAP = 15;
 /** Other titles by level, as a multiple of the fit zoom (kFit), before the density multiplier. */
 export const LABEL_MIN_REL: Record<number, number> = { 1: 1.7, 2: 2.0, 3: 2.3, 4: 1.5 };
 export const WRAP_CHARS = 22;
-/** Hit targets are at least this radius on screen (24px diameter). */
+/** Subway hit target cap, in map units. */
 export const HIT_R = 24;
+/** Hit targets are at least this radius on screen (24px diameter)… */
 export const HIT_PX = 12;
+/** …and reach at most this far past the drawn dot, on screen, so zooming in doesn't grow them past it. */
+export const HIT_PAD = 4;
 
 export { edgeKey } from "@/lib/map/route";
 export const deg = (rad: number) => (rad * 180) / Math.PI;
