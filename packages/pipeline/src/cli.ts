@@ -17,6 +17,9 @@
  *   asin --proposal f [--marketplace m]        * Amazon: ASIN por ISBN o candidatos para revisar
  *   write-books --proposal f [--dry]           escribe libros nuevos y fuentes; registro y estado
  *   sync-metadata [--apply]       diferencias registro → app (y las aplica)
+ *   apply-roadmaps --dir d [--dry]           planes por línea: leadsTo, tramos a pie y niveles (progression)
+ *   apply-calibration --file f    decisiones de tramos a pie (progression)
+ *   routes-assemble --out-dir d --proposal f  rutas escritas → content/routes.yaml (routes)
  *
  * PIPELINE_DATA_DIR cambia la carpeta de datos (por defecto <repo>/research/<creador>).
  */
@@ -25,6 +28,7 @@ import { importLegacyState, knownBooks, registryInit, stateSummary } from "./com
 import { batch, discover, fetchSubs, mark, split, transcribeSources } from "./commands/ingest";
 import { asin, enrich, syncMetadata, writeBooks } from "./commands/books";
 import { mergeCommand } from "./commands/merge";
+import { applyCalibration, applyRoadmaps, routesAssemble } from "./commands/progression";
 import { SOURCE_STATUSES, type SourceStatus } from "./schemas";
 
 export type Args = { _: string[]; flags: Record<string, string | true> };
@@ -94,6 +98,9 @@ export const COMMANDS: Record<string, Command> = {
   asin: (ctx, args) => asin(ctx, required(args, "proposal"), flag(args, "marketplace")),
   "write-books": (ctx, args) => writeBooks(ctx, required(args, "proposal"), { dry: args.flags.dry === true }),
   "sync-metadata": (ctx, args) => syncMetadata(ctx, { apply: args.flags.apply === true }),
+  "apply-roadmaps": async (ctx, args) => void (await applyRoadmaps(ctx, required(args, "dir"), { dry: args.flags.dry === true })),
+  "apply-calibration": (ctx, args) => applyCalibration(ctx, required(args, "file")),
+  "routes-assemble": (ctx, args) => routesAssemble(ctx, required(args, "out-dir"), required(args, "proposal")),
 };
 
 export async function main(argv = process.argv.slice(2)) {

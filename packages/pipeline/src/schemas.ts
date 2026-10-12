@@ -113,12 +113,13 @@ export type ExtractionFile = z.infer<typeof ExtractionFileSchema>;
 
 // ── Progresión: planes por línea y calibración de tramos a pie ─────────────────────────────
 
+// Los agentes escriben `null` en los opcionales: se aceptan y se tratan como ausentes.
 const PlannedEdgeSchema = z.object({
   id: z.string(),
-  gap: z.enum(["ninguno", "suave", "fuerte", "muy-fuerte"]).optional(),
-  bridge: z.array(z.string()).optional(),
-  note: z.string().optional(),
-  why: z.string().optional(),
+  gap: z.enum(["ninguno", "suave", "fuerte", "muy-fuerte"]).nullish(),
+  bridge: z.array(z.string()).nullish(),
+  note: z.string().nullish(),
+  why: z.string().nullish(),
 });
 
 export const RoadmapSchema = z.object({
@@ -140,9 +141,9 @@ export const CalibrationSchema = z.object({
       from: z.string(),
       to: z.string(),
       severity: z.enum(["ninguno", "fuerte", "muy-fuerte"]),
-      bridge: z.array(z.string()).default([]),
-      note: z.string().optional(),
-      why: z.string().optional(),
+      bridge: z.array(z.string()).nullish().transform((b) => b ?? []),
+      note: z.string().nullish(),
+      why: z.string().nullish(),
     }),
   ),
 });
@@ -173,3 +174,6 @@ export const WrittenRouteSchema = z.object({
   ),
 });
 export type WrittenRoute = z.infer<typeof WrittenRouteSchema>;
+
+/** Archivo de ruta: completa, o solo `{ id, discarded: true, … }` si el agente la descartó. */
+export const WrittenRouteFileSchema = z.union([z.object({ id: z.string(), discarded: z.literal(true) }).passthrough(), WrittenRouteSchema]);
