@@ -23,3 +23,6 @@ research/
 # Claude Code local settings
 .claude/settings.local.json
 .turbo/
+
+# Tests de paquetes
+**/test/.work/
