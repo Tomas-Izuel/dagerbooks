@@ -1,0 +1,23 @@
+# yaml-language-server: $schema=../book.schema.json
+
+id: algebra-baldor
+seq: 10
+title: "Álgebra"
+authors: ["Aurelio Baldor"]
+year: 1941
+kind: textbook
+topics: ["matematicas"]
+level: 1
+recommendation: fuerte
+summary: "Texto escolar clásico de álgebra elemental, muy usado en Latinoamérica."
+context: "Dice que no entiende por qué no lo recomendó antes porque es \"crucial\"."
+sources:
+  - url: "https://www.youtube.com/watch?v=pbWxlLeg-fs&t=326s"
+    title: "Los mejores libros para aprender a programar."
+    timestamp: "5:26"
+    quote: "álgebra de Baldor s sí también ... No sé por qué no lo recomendé pues es crucial"
+leadsTo: ["book-of-proof"]
+isbn: "9789702407799"
+asin:
+  es: "9702407796"
+coverId: 7273068

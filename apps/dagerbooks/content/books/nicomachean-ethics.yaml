@@ -1,0 +1,22 @@
+# yaml-language-server: $schema=../book.schema.json
+
+id: nicomachean-ethics
+seq: 167
+title: "Nicomachean Ethics"
+titleEs: "Ética a Nicómaco"
+authors: ["Aristotle"]
+year: -340
+leadsTo: ["the-hellenistic-philosophers"]
+asin:
+  es: "0140449493"
+kind: book
+topics: ["filosofia"]
+level: 3
+recommendation: mencion
+summary: "Tratado de ética de Aristóteles."
+context: "Comparación de pasada con el estoicismo."
+sources:
+  - url: "https://www.youtube.com/watch?v=SlYKqCwO6m4&t=2574s"
+    title: "Tierlist de filósofos estoicos. ¿Son como en las redes sociales?"
+    timestamp: "42:54"
+    quote: "a los que hayan leído Aristóteles les recordará un poco a la ética Nicomaquea"

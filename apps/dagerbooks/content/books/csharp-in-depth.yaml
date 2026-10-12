@@ -1,0 +1,24 @@
+# yaml-language-server: $schema=../book.schema.json
+
+id: csharp-in-depth
+seq: 7
+title: "C# in Depth"
+authors: ["Jon Skeet"]
+year: 2008
+kind: book
+topics: ["fundamentos"]
+level: 3
+recommendation: interesante
+summary: "Jon Skeet explora a fondo las características del lenguaje C#."
+context: "Recomienda los libros y posts de Skeet, aunque aclara que no es tan introductorio."
+sources:
+  - url: "https://www.reddit.com/r/devsarg/comments/18qup9h/aprender_c_y_net/kezoa0e/"
+    title: "r/devsarg: aprender c y net"
+    quote: "los libros y posts de Skeet -e.g., C# in Depth-"
+  - url: "https://www.reddit.com/r/devsarg/comments/1cqlfmv/empezar_con_c/l3sv48j/"
+    title: "r/devsarg: empezar con c"
+    quote: "Jon Skeet. Tiene libros y artículos sobre el lenguaje. No tan introductorio"
+isbn: "9781933988368"
+asin:
+  es: "1933988363"
+coverId: 3063781

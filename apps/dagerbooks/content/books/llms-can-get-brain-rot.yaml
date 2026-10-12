@@ -1,0 +1,23 @@
+# yaml-language-server: $schema=../book.schema.json
+
+id: llms-can-get-brain-rot
+seq: 187
+title: "LLMs Can Get \"Brain Rot\"!"
+authors: ["Shuo Xing"]
+year: 2025
+kind: paper
+topics: ["ia"]
+level: 1
+recommendation: mencion
+summary: "Paper que muestra que entrenar modelos con contenido basura de redes deteriora su razonamiento y su comportamiento ético."
+context: "Lo comenta en stream: entrenar LLMs con tweets basura deteriora su razonamiento y su ética."
+sources:
+  - url: "https://www.youtube.com/watch?v=j-fVmR4p2n8&t=45s"
+    title: "Las IAS también pueden ser afectadas por el brainrot."
+    timestamp: "0:45"
+    quote: "Esta gente propuso una hipótesis muy interesante que es la hipótesis del deterioro cerebral de los LLMs"
+  - url: "https://www.youtube.com/watch?v=UcuI1PQxGvI&t=1142s"
+    title: "LLM le borra la mitad de la PC a un usuario de la NADA."
+    timestamp: "19:02"
+    quote: "En este otro paper tenés el caso de investigadores le dieron contenido basura de Twitter"
+leadsTo: ["emergent-misalignment"]

@@ -1,0 +1,24 @@
+# yaml-language-server: $schema=../book.schema.json
+
+id: algebra-for-dummies
+seq: 11
+title: "Algebra For Dummies"
+titleEs: "Álgebra para dummies"
+authors: ["Mary Jane Sterling"]
+year: 2001
+kind: book
+topics: ["matematicas"]
+level: 1
+recommendation: interesante
+summary: "Introducción accesible al álgebra de nivel secundario, de la serie \"para dummies\"."
+context: "Sin vergüenza lo recomienda como muy buen libro de álgebra, junto con el de Baldor."
+sources:
+  - url: "https://www.youtube.com/watch?v=pbWxlLeg-fs&t=338s"
+    title: "Los mejores libros para aprender a programar."
+    timestamp: "5:38"
+    quote: "el álgebra for damis me pareció muy buen libro"
+leadsTo: ["book-of-proof"]
+isbn: "9780764553257"
+asin:
+  es: "0764553259"
+coverId: 521828

@@ -1,0 +1,24 @@
+# yaml-language-server: $schema=../book.schema.json
+
+id: concrete-problems-in-ai-safety
+seq: 85
+title: "Concrete Problems in AI Safety"
+authors: ["Dario Amodei", "Chris Olah", "Jacob Steinhardt", "Paul Christiano", "John Schulman", "Dan Mané"]
+year: 2016
+kind: paper
+topics: ["ia"]
+level: 2
+recommendation: interesante
+summary: "Paper que identifica cinco problemas prácticos de seguridad en sistemas de aprendizaje automático, como los efectos secundarios y el reward hacking."
+context: "Lo llama un paper bastante importante y una buena lectura, y promete pasar más fuentes por Discord."
+sources:
+  - url: "https://www.youtube.com/watch?v=CYglM-Rg5_Y&t=261s"
+    title: "Todos cagados por la IA."
+    timestamp: "4:21"
+    quote: "un paper bastante importante, llama Concrete Problems in AI Safety ... Es un paper de 2016, es un buen paper, es una buena lectura"
+leadsTo:
+  - id: the-off-switch-game
+    gap:
+      severity: fuerte
+      bridge: ["utilidad esperada y teoría de la decisión", "teoría de juegos de dos jugadores", "probabilidad condicional y bayesiana"]
+      note: "El paper es un modelo formal; conviene traer la teoría de la decisión."

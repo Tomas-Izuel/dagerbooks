@@ -1,0 +1,392 @@
+[
+  {
+    "name": "contenido real (sin cambios)",
+    "ok": true,
+    "messages": [],
+    "warnings": [
+      "libro \"clean-code\" › leadsTo[2]: salta 2 niveles hasta \"domain-driven-design\" sin anotar tramo a pie (gap); revisá si falta",
+      "libro \"dive-into-design-patterns\" › leadsTo[2]: salta 2 niveles hasta \"refactoring\" sin anotar tramo a pie (gap); revisá si falta",
+      "libro \"el-escritor-argentino-y-la-tradicion\" › leadsTo[0]: salta 2 niveles hasta \"la-fiesta-del-monstruo\" sin anotar tramo a pie (gap); revisá si falta",
+      "libro \"mankiw-principles-of-economics\" › leadsTo[3]: salta 2 niveles hasta \"the-general-theory\" sin anotar tramo a pie (gap); revisá si falta",
+      "libro \"social-responsibility-of-business\" › leadsTo[0]: salta 2 niveles hasta \"capitalism-and-freedom\" sin anotar tramo a pie (gap); revisá si falta",
+      "libro \"the-use-of-knowledge-in-society\" › leadsTo[1]: salta 2 niveles hasta \"human-action\" sin anotar tramo a pie (gap); revisá si falta"
+    ]
+  },
+  {
+    "name": "libro sin title",
+    "ok": false,
+    "messages": [
+      "libro \"but-how-do-it-know\" › title: Invalid input: expected string, received undefined",
+      "libro \"tom-sawyer-abroad\" › leadsTo[0]: el libro \"but-how-do-it-know\" no existe",
+      "ruta \"como-funciona-una-computadora\" › steps[1] › book: el libro \"but-how-do-it-know\" no existe"
+    ],
+    "warnings": []
+  },
+  {
+    "name": "id que no es slug",
+    "ok": false,
+    "messages": [
+      "libro \"Bad Slug\" › id: debe ser un slug en kebab-case (a-z, 0-9 y guiones)",
+      "libro \"Bad Slug\" › id: no coincide con el nombre del archivo (entrada-23.yaml)",
+      "libro \"tom-sawyer-abroad\" › leadsTo[0]: el libro \"but-how-do-it-know\" no existe",
+      "ruta \"como-funciona-una-computadora\" › steps[1] › book: el libro \"but-how-do-it-know\" no existe"
+    ],
+    "warnings": []
+  },
+  {
+    "name": "id duplicado",
+    "ok": false,
+    "messages": [
+      "libro \"but-how-do-it-know\" › id: id duplicado",
+      "libro \"but-how-do-it-know\" › id: no coincide con el nombre del archivo (but-how-do-it-know-139.yaml)",
+      "ruta \"como-funciona-una-computadora\" › steps[1] › source: 1 está fuera de rango; \"but-how-do-it-know\" tiene 1 source (0 a 0)",
+      "ruta \"del-primer-script-a-csharp\" › steps[1] › book: el libro \"pro-git\" no existe"
+    ],
+    "warnings": []
+  },
+  {
+    "name": "tema inexistente",
+    "ok": false,
+    "messages": [
+      "libro \"but-how-do-it-know\" › topics[0]: el tema \"no-existe\" no existe en topics.yaml"
+    ],
+    "warnings": []
+  },
+  {
+    "name": "temas repetidos",
+    "ok": false,
+    "messages": [
+      "libro \"but-how-do-it-know\" › topics: hay temas repetidos",
+      "libro \"tom-sawyer-abroad\" › leadsTo[0]: el libro \"but-how-do-it-know\" no existe",
+      "ruta \"como-funciona-una-computadora\" › steps[1] › book: el libro \"but-how-do-it-know\" no existe"
+    ],
+    "warnings": []
+  },
+  {
+    "name": "libro sin temas",
+    "ok": false,
+    "messages": [
+      "libro \"but-how-do-it-know\" › topics: debe tener al menos un tema (solo el nivel 0 puede no tenerlo)",
+      "libro \"tom-sawyer-abroad\" › leadsTo[0]: el libro \"but-how-do-it-know\" no existe",
+      "ruta \"como-funciona-una-computadora\" › steps[1] › book: el libro \"but-how-do-it-know\" no existe"
+    ],
+    "warnings": []
+  },
+  {
+    "name": "level fuera de rango",
+    "ok": false,
+    "messages": [
+      "libro \"but-how-do-it-know\" › level: level es obligatorio y debe ser un número",
+      "libro \"tom-sawyer-abroad\" › leadsTo[0]: el libro \"but-how-do-it-know\" no existe",
+      "ruta \"como-funciona-una-computadora\" › steps[1] › book: el libro \"but-how-do-it-know\" no existe"
+    ],
+    "warnings": []
+  },
+  {
+    "name": "level que no es número",
+    "ok": false,
+    "messages": [
+      "libro \"but-how-do-it-know\" › level: level es obligatorio y debe ser un número",
+      "libro \"tom-sawyer-abroad\" › leadsTo[0]: el libro \"but-how-do-it-know\" no existe",
+      "ruta \"como-funciona-una-computadora\" › steps[1] › book: el libro \"but-how-do-it-know\" no existe"
+    ],
+    "warnings": []
+  },
+  {
+    "name": "dos raíces",
+    "ok": false,
+    "messages": [
+      "catálogo › level: debe haber exactamente un libro de nivel 0 (hay 2: tom-sawyer-abroad, but-how-do-it-know)",
+      "libro \"tom-sawyer-abroad\" › leadsTo[0]: \"but-how-do-it-know\" (nivel 0) debe tener nivel mayor que \"tom-sawyer-abroad\" (nivel 0)"
+    ],
+    "warnings": []
+  },
+  {
+    "name": "campo desconocido",
+    "ok": false,
+    "messages": [
+      "libro \"but-how-do-it-know\" › (raíz): Unrecognized key: \"foo\"",
+      "libro \"tom-sawyer-abroad\" › leadsTo[0]: el libro \"but-how-do-it-know\" no existe",
+      "ruta \"como-funciona-una-computadora\" › steps[1] › book: el libro \"but-how-do-it-know\" no existe"
+    ],
+    "warnings": []
+  },
+  {
+    "name": "asin sin tienda",
+    "ok": false,
+    "messages": [
+      "libro \"but-how-do-it-know\" › asin: asin va por tienda, por ejemplo asin: { es: \"8417347010\" }",
+      "libro \"tom-sawyer-abroad\" › leadsTo[0]: el libro \"but-how-do-it-know\" no existe",
+      "ruta \"como-funciona-una-computadora\" › steps[1] › book: el libro \"but-how-do-it-know\" no existe"
+    ],
+    "warnings": []
+  },
+  {
+    "name": "asin inválido",
+    "ok": false,
+    "messages": [
+      "libro \"but-how-do-it-know\" › asin.es: asin inválido (10 caracteres A-Z0-9)",
+      "libro \"tom-sawyer-abroad\" › leadsTo[0]: el libro \"but-how-do-it-know\" no existe",
+      "ruta \"como-funciona-una-computadora\" › steps[1] › book: el libro \"but-how-do-it-know\" no existe"
+    ],
+    "warnings": []
+  },
+  {
+    "name": "isbn inválido",
+    "ok": false,
+    "messages": [
+      "libro \"but-how-do-it-know\" › isbn: isbn inválido",
+      "libro \"tom-sawyer-abroad\" › leadsTo[0]: el libro \"but-how-do-it-know\" no existe",
+      "ruta \"como-funciona-una-computadora\" › steps[1] › book: el libro \"but-how-do-it-know\" no existe"
+    ],
+    "warnings": []
+  },
+  {
+    "name": "recommendation inválida",
+    "ok": false,
+    "messages": [
+      "libro \"but-how-do-it-know\" › recommendation: Invalid option: expected one of \"fuerte\"|\"interesante\"|\"mencion\"",
+      "libro \"tom-sawyer-abroad\" › leadsTo[0]: el libro \"but-how-do-it-know\" no existe",
+      "ruta \"como-funciona-una-computadora\" › steps[1] › book: el libro \"but-how-do-it-know\" no existe"
+    ],
+    "warnings": []
+  },
+  {
+    "name": "kind inválido",
+    "ok": false,
+    "messages": [
+      "libro \"but-how-do-it-know\" › kind: Invalid option: expected one of \"book\"|\"essay\"|\"paper\"|\"course\"|\"textbook\"",
+      "libro \"tom-sawyer-abroad\" › leadsTo[0]: el libro \"but-how-do-it-know\" no existe",
+      "ruta \"como-funciona-una-computadora\" › steps[1] › book: el libro \"but-how-do-it-know\" no existe"
+    ],
+    "warnings": []
+  },
+  {
+    "name": "source sin url válida",
+    "ok": false,
+    "messages": [
+      "libro \"but-how-do-it-know\" › sources[0].url: url inválida",
+      "libro \"tom-sawyer-abroad\" › leadsTo[0]: el libro \"but-how-do-it-know\" no existe",
+      "ruta \"como-funciona-una-computadora\" › steps[1] › book: el libro \"but-how-do-it-know\" no existe"
+    ],
+    "warnings": []
+  },
+  {
+    "name": "leadsTo inexistente",
+    "ok": false,
+    "messages": [
+      "libro \"but-how-do-it-know\" › leadsTo[0]: el libro \"no-existe\" no existe"
+    ],
+    "warnings": []
+  },
+  {
+    "name": "leadsTo a sí mismo",
+    "ok": false,
+    "messages": [
+      "catálogo › leadsTo: ciclo detectado: but-how-do-it-know -> but-how-do-it-know",
+      "libro \"but-how-do-it-know\" › leadsTo[0]: no puede apuntar a sí mismo"
+    ],
+    "warnings": []
+  },
+  {
+    "name": "leadsTo a nivel menor",
+    "ok": false,
+    "messages": [
+      "catálogo › leadsTo: ciclo detectado: tom-sawyer-abroad -> but-how-do-it-know -> tom-sawyer-abroad",
+      "libro \"but-how-do-it-know\" › leadsTo[0]: \"tom-sawyer-abroad\" (nivel 0) debe tener nivel mayor que \"but-how-do-it-know\" (nivel 1)"
+    ],
+    "warnings": []
+  },
+  {
+    "name": "leadsTo repetido",
+    "ok": false,
+    "messages": [
+      "libro \"tom-sawyer-abroad\" › leadsTo: hay ids repetidos"
+    ],
+    "warnings": []
+  },
+  {
+    "name": "gap con severity inválida",
+    "ok": false,
+    "messages": [
+      "catálogo › level: debe haber exactamente un libro de nivel 0 (hay 0: ninguno)",
+      "libro \"tom-sawyer-abroad\" › leadsTo[0]: Invalid input"
+    ],
+    "warnings": []
+  },
+  {
+    "name": "gap sin bridge",
+    "ok": false,
+    "messages": [
+      "catálogo › level: debe haber exactamente un libro de nivel 0 (hay 0: ninguno)",
+      "libro \"tom-sawyer-abroad\" › leadsTo[0].gap.bridge: bridge necesita al menos 1 tema"
+    ],
+    "warnings": []
+  },
+  {
+    "name": "related inexistente",
+    "ok": false,
+    "messages": [
+      "libro \"but-how-do-it-know\" › related[0].id: el libro \"no-existe\" no existe"
+    ],
+    "warnings": []
+  },
+  {
+    "name": "related consigo mismo",
+    "ok": false,
+    "messages": [
+      "libro \"but-how-do-it-know\" › related[0].id: no puede relacionarse consigo mismo"
+    ],
+    "warnings": []
+  },
+  {
+    "name": "related sin razón",
+    "ok": false,
+    "messages": [
+      "libro \"but-how-do-it-know\" › related[0].reason: falta la razón de la relación",
+      "libro \"tom-sawyer-abroad\" › leadsTo[0]: el libro \"but-how-do-it-know\" no existe",
+      "ruta \"como-funciona-una-computadora\" › steps[1] › book: el libro \"but-how-do-it-know\" no existe"
+    ],
+    "warnings": []
+  },
+  {
+    "name": "tema sin description",
+    "ok": false,
+    "messages": [
+      "libro \"automate-the-boring-stuff-with-python\" › topics[0]: el tema \"fundamentos\" no existe en topics.yaml",
+      "libro \"blockchain-illustrated-guidebook\" › topics[1]: el tema \"fundamentos\" no existe en topics.yaml",
+      "libro \"but-how-do-it-know\" › topics[0]: el tema \"fundamentos\" no existe en topics.yaml",
+      "libro \"crafting-interpreters\" › topics[0]: el tema \"fundamentos\" no existe en topics.yaml",
+      "libro \"csharp-in-a-nutshell\" › topics[0]: el tema \"fundamentos\" no existe en topics.yaml",
+      "libro \"csharp-in-depth\" › topics[0]: el tema \"fundamentos\" no existe en topics.yaml",
+      "libro \"git-internals\" › topics[0]: el tema \"fundamentos\" no existe en topics.yaml",
+      "libro \"mathematics-for-programmers-barden\" › topics[1]: el tema \"fundamentos\" no existe en topics.yaml",
+      "libro \"network-warrior\" › topics[0]: el tema \"fundamentos\" no existe en topics.yaml",
+      "libro \"operating-systems-three-easy-pieces\" › topics[0]: el tema \"fundamentos\" no existe en topics.yaml",
+      "libro \"pro-git\" › topics[0]: el tema \"fundamentos\" no existe en topics.yaml",
+      "ruta \"como-funciona-una-computadora\" › line: el tema \"fundamentos\" no existe en topics.yaml",
+      "ruta \"del-primer-script-a-csharp\" › line: el tema \"fundamentos\" no existe en topics.yaml",
+      "tema \"fundamentos\" › description: Invalid input: expected string, received undefined"
+    ],
+    "warnings": []
+  },
+  {
+    "name": "tema duplicado",
+    "ok": false,
+    "messages": [
+      "libro \"a-mathematical-theory-of-communication\" › topics[1]: el tema \"matematicas\" no existe en topics.yaml",
+      "libro \"algebra-baldor\" › topics[0]: el tema \"matematicas\" no existe en topics.yaml",
+      "libro \"algebra-for-dummies\" › topics[0]: el tema \"matematicas\" no existe en topics.yaml",
+      "libro \"algorithms-illuminated\" › topics[0]: el tema \"matematicas\" no existe en topics.yaml",
+      "libro \"book-of-proof\" › topics[0]: el tema \"matematicas\" no existe en topics.yaml",
+      "libro \"concrete-mathematics\" › topics[0]: el tema \"matematicas\" no existe en topics.yaml",
+      "libro \"dixon-coles-football\" › topics[0]: el tema \"matematicas\" no existe en topics.yaml",
+      "libro \"fooled-by-randomness\" › topics[1]: el tema \"matematicas\" no existe en topics.yaml",
+      "libro \"introduction-to-algorithms\" › topics[0]: el tema \"matematicas\" no existe en topics.yaml",
+      "libro \"laws-of-thought-boole\" › topics[0]: el tema \"matematicas\" no existe en topics.yaml",
+      "libro \"mathematics-for-programmers-barden\" › topics[0]: el tema \"matematicas\" no existe en topics.yaml",
+      "libro \"the-black-swan\" › topics[1]: el tema \"matematicas\" no existe en topics.yaml",
+      "ruta \"matematica-y-algoritmos\" › line: el tema \"matematicas\" no existe en topics.yaml",
+      "tema \"fundamentos\" › id: id duplicado"
+    ],
+    "warnings": []
+  },
+  {
+    "name": "actualización con libro inexistente",
+    "ok": false,
+    "messages": [
+      "actualización \"2026-10-11-rutas\" › books[0]: el libro \"no-existe\" no existe"
+    ],
+    "warnings": []
+  },
+  {
+    "name": "actualización con fecha inválida",
+    "ok": false,
+    "messages": [
+      "actualización \"2026-10-11-rutas\" › date: date no es una fecha válida"
+    ],
+    "warnings": []
+  },
+  {
+    "name": "actualización sin improvements",
+    "ok": false,
+    "messages": [
+      "actualización \"2026-10-11-rutas\" › improvements: improvements necesita al menos 1 frase"
+    ],
+    "warnings": []
+  },
+  {
+    "name": "actualización con id repetido",
+    "ok": false,
+    "messages": [
+      "actualización \"2026-10-11-rutas\" › id: no coincide con el nombre del archivo (2026-10-11-rutas-3.yaml)",
+      "actualización \"2026-10-11-rutas\": id repetido"
+    ],
+    "warnings": []
+  },
+  {
+    "name": "ruta con libro inexistente",
+    "ok": false,
+    "messages": [
+      "ruta \"escuela-austriaca\" › steps[1] › book: el libro \"no-existe\" no existe"
+    ],
+    "warnings": []
+  },
+  {
+    "name": "ruta con source fuera de rango",
+    "ok": false,
+    "messages": [
+      "ruta \"escuela-austriaca\" › steps[1] › source: 99 está fuera de rango; \"what-is-seen-and-what-is-not-seen\" tiene 2 sources (0 a 1)"
+    ],
+    "warnings": []
+  },
+  {
+    "name": "ruta con línea inexistente",
+    "ok": false,
+    "messages": [
+      "ruta \"escuela-austriaca\" › line: el tema \"no-existe\" no existe en topics.yaml"
+    ],
+    "warnings": []
+  },
+  {
+    "name": "ruta con pocos pasos",
+    "ok": false,
+    "messages": [
+      "ruta \"escuela-austriaca\" › steps: una ruta necesita al menos 4 pasos"
+    ],
+    "warnings": []
+  },
+  {
+    "name": "ruta con primer paso optativo",
+    "ok": false,
+    "messages": [
+      "ruta \"escuela-austriaca\" › steps[0] › optional: el primer paso no puede ser optativo"
+    ],
+    "warnings": []
+  },
+  {
+    "name": "ruta con kind inválido",
+    "ok": false,
+    "messages": [
+      "ruta \"escuela-austriaca\" › kind: kind debe ser \"corriente\" o \"objetivo\""
+    ],
+    "warnings": []
+  },
+  {
+    "name": "topics.yaml con YAML roto",
+    "ok": false,
+    "messages": [
+      "topics.yaml: YAML inválido: Flow sequence in block collection must be sufficiently indented and end with a ] at line 2, column 1:\n\n- id: [sin cerrar\n\n^\n"
+    ],
+    "warnings": []
+  },
+  {
+    "name": "libro que es una lista",
+    "ok": false,
+    "messages": [
+      "books/pro-git.yaml: debe tener una sola entrada (un objeto), no una lista",
+      "ruta \"del-primer-script-a-csharp\" › steps[1] › book: el libro \"pro-git\" no existe"
+    ],
+    "warnings": []
+  }
+]

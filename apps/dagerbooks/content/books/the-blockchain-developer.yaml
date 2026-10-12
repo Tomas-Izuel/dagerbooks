@@ -1,0 +1,28 @@
+# yaml-language-server: $schema=../book.schema.json
+
+id: the-blockchain-developer
+seq: 20
+title: "The Blockchain Developer"
+authors: ["Elad Elrom"]
+year: 2019
+kind: book
+topics: ["sistemas", "arquitectura"]
+level: 2
+recommendation: interesante
+summary: "Guía práctica de Elad Elrom para desarrollar, probar y asegurar proyectos blockchain."
+context: "Lo recomienda por ser hands-on y explicar bien varios protocolos."
+sources:
+  - url: "https://www.reddit.com/r/devsarg/comments/1ehmxbm/qué_libros_de_fundamentos_teóricos_de/lg30fw9/"
+    title: "r/devsarg: qué libros de fundamentos teóricos de"
+    quote: "The Blockchain Developer. Super hands-on, linda explicación de varios protocolos."
+  - url: "https://github.com/MarianoVilla/MarianoVilla/blob/main/README.md"
+    title: "GitHub: MarianoVilla/MarianoVilla README (Recommended Readings)"
+    quote: "Demystifies blockchain beyond the hype."
+leadsTo: ["designing-data-intensive-applications"]
+related:
+  - id: designing-data-intensive-applications
+    reason: "sistemas distribuidos y consenso"
+isbn: "9781484248461"
+asin:
+  es: "1484248465"
+coverId: 10435039

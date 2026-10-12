@@ -1,0 +1,26 @@
+# yaml-language-server: $schema=../book.schema.json
+
+id: rest-fielding-dissertation
+seq: 109
+title: "Architectural Styles and the Design of Network-based Software Architectures"
+authors: ["Roy T. Fielding"]
+year: 2000
+kind: paper
+topics: ["arquitectura"]
+level: 3
+recommendation: interesante
+summary: "Tesis doctoral de Fielding que define el estilo arquitectónico REST como base de la web."
+context: "La señala como fuente canónica de REST y sugiere leerla en lugar de videos; explica conceptos del capítulo 5."
+sources:
+  - url: "https://www.youtube.com/watch?v=jCqZLJcw76U&t=186s"
+    title: "REST es la CH*TA de la web."
+    timestamp: "3:06"
+    quote: "Esta disertación es la fuente canónica para REST"
+  - url: "https://www.youtube.com/watch?v=_u6R8FiAwMU&t=71s"
+    title: "Programar ya no es lo que era."
+    timestamp: "1:11"
+    quote: "Según la disertación de Fielding"
+  - url: "https://www.youtube.com/watch?v=nMvXTl5oZCM&t=166s"
+    title: "We always fall for the same hype."
+    timestamp: "2:46"
+    quote: "simplemente es un estilo que que lo promulga Fielding en su en su disertación"

@@ -1,0 +1,31 @@
+# yaml-language-server: $schema=../book.schema.json
+
+id: time-travel-a-history
+seq: 41
+title: "Time Travel: A History"
+authors: ["James Gleick"]
+year: 2016
+kind: book
+topics: ["historia", "sistemas"]
+level: 1
+recommendation: interesante
+summary: "Gleick investiga el origen y la evolución cultural de la idea del viaje en el tiempo."
+context: "Lo suma como el otro libro de Gleick que le gusta (\"dos libros muy lindos\")."
+sources:
+  - url: "https://www.youtube.com/watch?v=V7NNviAqMh4&t=1453s"
+    title: "Libros de autoayuda no TAN malos."
+    timestamp: "24:13"
+    quote: "Time, ese también. Time travel history. Dos libros muy lindos."
+  - url: "https://www.youtube.com/watch?v=gIR5aqafNZA&t=896s"
+    title: "Viaje en el Tiempo III. El futuro y su pasado."
+    timestamp: "14:56"
+    quote: "en su libro sobre el tema de james gleick da una explicación lingüística que resulta muy atractiva"
+  - url: "https://www.youtube.com/watch?v=g8nNuOBLAkU&t=52s"
+    title: "Los testers están infravalorados."
+    timestamp: "0:52"
+    quote: "Lo que es el mismo James que escribió el libro sobre viaje en el tiempo"
+leadsTo: ["enoch-soames", "memoirs-of-the-twentieth-century"]
+isbn: "9780008207670"
+asin:
+  es: "0008207674"
+coverId: 7886899

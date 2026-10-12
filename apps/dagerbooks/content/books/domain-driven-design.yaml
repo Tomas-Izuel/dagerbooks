@@ -1,0 +1,21 @@
+# yaml-language-server: $schema=../book.schema.json
+
+id: domain-driven-design
+seq: 81
+title: "Domain-Driven Design"
+authors: ["Eric Evans"]
+year: 2003
+kind: book
+topics: ["arquitectura"]
+level: 4
+recommendation: interesante
+summary: "Eric Evans introduce el diseño guiado por el dominio: lenguaje ubicuo, bounded contexts y modelado estratégico."
+context: "Lo recomienda \"de yapa\" al hablar de microservicios y Bounded Context (que atribuyó a Fowler)."
+sources:
+  - url: "https://www.reddit.com/r/devsarg/comments/1dty7kt/estoy_haciendo_microservicios/lbduss6/"
+    title: "r/devsarg: estoy haciendo microservicios"
+    quote: "Y de yapa Domain-Driven Design... Bounded Context (he attributes it to Fowler; the book is by Evans)"
+isbn: "9780321125217"
+asin:
+  es: "0321125215"
+coverId: 5548424

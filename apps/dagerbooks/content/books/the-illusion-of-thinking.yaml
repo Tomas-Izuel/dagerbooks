@@ -1,0 +1,18 @@
+# yaml-language-server: $schema=../book.schema.json
+
+id: the-illusion-of-thinking
+seq: 193
+title: "The Illusion of Thinking: Understanding the Strengths and Limitations of Reasoning Models via the Lens of Problem Complexity"
+authors: ["Parshin Shojaee", "Iman Mirzadeh", "Keivan Alizadeh", "Maxwell Horton", "Samy Bengio", "Mehrdad Farajtabar"]
+year: 2025
+kind: paper
+topics: ["ia"]
+level: 2
+recommendation: mencion
+summary: "Paper de Apple que evalúa hasta dónde llegan los modelos de razonamiento a medida que crece la complejidad del problema."
+context: "Lo tenía en su lista de lectura sin leer y comenta el video-análisis que lo critica metodológicamente."
+sources:
+  - url: "https://www.youtube.com/watch?v=BiaV5aIX6dQ&t=125s"
+    title: "Apple tiro una bomba.."
+    timestamp: "2:05"
+    quote: "The Illusion of Thinking, que es un paper que ha generado mucho ruido en redes sociales"

@@ -1,0 +1,19 @@
+# yaml-language-server: $schema=../book.schema.json
+
+id: the-clock-that-went-backward
+seq: 115
+title: "The Clock That Went Backward"
+authors: ["Edward Page Mitchell"]
+year: 1881
+kind: essay
+topics: ["ficcion"]
+level: 1
+recommendation: mencion
+summary: "Relato de Edward Page Mitchell en el que un reloj antiguo hace retroceder el tiempo; es un antecedente de La máquina del tiempo."
+context: "Lo cita en su serie sobre viajes en el tiempo como antecedente de la novela de Wells."
+sources:
+  - url: "https://www.youtube.com/watch?v=gIR5aqafNZA&t=389s"
+    title: "Viaje en el Tiempo III. El futuro y su pasado."
+    timestamp: "6:29"
+    quote: "antes de la máquina de tiempo estuvo el reloj que fue para atrás ... 881"
+leadsTo: ["memoirs-of-the-twentieth-century"]

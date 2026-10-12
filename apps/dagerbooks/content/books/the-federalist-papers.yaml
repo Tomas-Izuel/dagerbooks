@@ -1,0 +1,22 @@
+# yaml-language-server: $schema=../book.schema.json
+
+id: the-federalist-papers
+seq: 159
+title: "The Federalist Papers"
+titleEs: "El Federalista"
+authors: ["Alexander Hamilton", "James Madison", "John Jay"]
+year: 1788
+leadsTo: ["democracy-in-america", "dialogue-aux-enfers"]
+asin:
+  es: "0140444955"
+kind: book
+topics: ["historia", "economia"]
+level: 2
+recommendation: mencion
+summary: "Serie de ensayos de Hamilton, Madison y Jay que defienden la Constitución de Estados Unidos."
+context: "Comenta de pasada que hace poco estuvo estudiándolos."
+sources:
+  - url: "https://www.youtube.com/watch?v=9kNant40FXw&t=484s"
+    title: "Imagina que tienes dos vacas... | REACCIÓN"
+    timestamp: "8:04"
+    quote: "hace poco estuve estudiando de casualidad los Federist Papers"

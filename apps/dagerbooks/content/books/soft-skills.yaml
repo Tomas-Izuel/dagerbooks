@@ -1,0 +1,34 @@
+# yaml-language-server: $schema=../book.schema.json
+
+id: soft-skills
+seq: 68
+title: "Soft Skills"
+authors: ["John Z. Sonmez"]
+year: 2015
+kind: book
+topics: ["oficio"]
+level: 1
+recommendation: fuerte
+summary: "John Sonmez cubre carrera, productividad, marca personal y finanzas para desarrolladores."
+context: "Es su libro favorito de gestión de carrera y freelancing: \"librazo\" con mucha data, aunque se vuelve denso."
+sources:
+  - url: "https://github.com/MarianoVilla/MarianoVilla/blob/main/README.md"
+    title: "GitHub: MarianoVilla/MarianoVilla README (Recommended Readings)"
+    quote: "I absolutely love this book, it has a ton of useful tips for developers and non-devs alike. (author inferred from title)"
+  - url: "https://www.youtube.com/watch?v=qVUgWXcKvoM&t=42s"
+    title: "NO LEAS ESTE LIBRO. #algoritmo #programacion #fyp"
+    timestamp: "0:42"
+    quote: "soft skills es un librazo, tiene una banda de data interesante para todo lo que es manejar tu carrera"
+  - url: "https://www.youtube.com/watch?v=-CtXS2mv6t8&t=90s"
+    title: "El freelance es clave. #fyp #dev #freelance #programacion #clips #libros"
+    timestamp: "1:30"
+    quote: "Mi libro favorito hace tiempo de eso es de John Sommes, se llama Soft Skills. Este excelente libro"
+  - url: "https://www.youtube.com/watch?v=NUr6WVl1u0k&t=584s"
+    title: "Cómo dejar de ser gordo compu y ser gordo empresarial."
+    timestamp: "9:44"
+    quote: "Siempre que me preguntas esta clase de libros, menciono soft skills porque para mí es un muy buen libro para desarrolladores"
+leadsTo: ["the-pragmatic-programmer"]
+isbn: "9781617292392"
+asin:
+  es: "1617292397"
+coverId: 7443191

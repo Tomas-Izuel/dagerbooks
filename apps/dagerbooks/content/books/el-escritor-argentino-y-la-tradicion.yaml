@@ -1,0 +1,19 @@
+# yaml-language-server: $schema=../book.schema.json
+
+id: el-escritor-argentino-y-la-tradicion
+seq: 128
+title: "El escritor argentino y la tradición"
+authors: ["Jorge Luis Borges"]
+year: 1953
+kind: essay
+topics: ["ficcion", "historia"]
+level: 1
+recommendation: mencion
+summary: "Ensayo de Borges que sostiene que los escritores argentinos pueden usar toda la tradición occidental sin limitarse al color local."
+context: "Cita una frase de Borges que proviene de este ensayo, aunque no nombra el título."
+sources:
+  - url: "https://www.youtube.com/watch?v=CNDOKdQULEk&t=1132s"
+    title: "La campaña anti Argentina."
+    timestamp: "18:52"
+    quote: "el culto argentino por el color local es un reciente culto europeo que los nacionalistas deberían rechazar por foráneo"
+leadsTo: ["la-fiesta-del-monstruo"]

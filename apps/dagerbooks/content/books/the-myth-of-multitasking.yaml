@@ -1,0 +1,22 @@
+# yaml-language-server: $schema=../book.schema.json
+
+id: the-myth-of-multitasking
+seq: 177
+title: "The Myth of Multitasking"
+titleEs: "El mito del multitasking"
+authors: ["Dave Crenshaw"]
+year: 2008
+leadsTo: ["the-shallows"]
+asin:
+  es: "1642505056"
+kind: book
+topics: ["desarrollo-personal"]
+level: 1
+recommendation: mencion
+summary: "Argumenta que el multitasking reduce la productividad y propone alternativas."
+context: "Lo ubica en el nivel medio: presentación cringe pero deja cosas copadas si hacés multitasking a diario."
+sources:
+  - url: "https://www.youtube.com/watch?v=V7NNviAqMh4&t=2301s"
+    title: "Libros de autoayuda no TAN malos."
+    timestamp: "38:21"
+    quote: "Es un medio me, literalmente es me. Este libro creo que deja algunas cosas copadas, sobre todo si hacés multitasking a diario."

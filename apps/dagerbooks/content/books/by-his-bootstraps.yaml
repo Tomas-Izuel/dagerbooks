@@ -1,0 +1,19 @@
+# yaml-language-server: $schema=../book.schema.json
+
+id: by-his-bootstraps
+seq: 113
+title: "By His Bootstraps"
+authors: ["Robert A. Heinlein"]
+year: 1941
+kind: essay
+topics: ["ficcion"]
+level: 1
+recommendation: mencion
+summary: "Relato de Heinlein sobre un hombre atrapado en un bucle de viajes en el tiempo donde él mismo causa su propia historia."
+context: "Lo cita en su serie sobre viajes en el tiempo como el primer relato en aplicar la paradoja del bucle causal."
+sources:
+  - url: "https://www.youtube.com/watch?v=1xC_vaWKcx0&t=198s"
+    title: "Viaje en el tiempo IV: El pasado y las paradojas."
+    timestamp: "3:18"
+    quote: "un relato de robert heinlein llamado big y foods raps que se publicó mil 941"
+leadsTo: ["el-jardin-de-senderos-que-se-bifurcan"]

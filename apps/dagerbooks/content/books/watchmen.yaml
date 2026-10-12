@@ -1,0 +1,21 @@
+# yaml-language-server: $schema=../book.schema.json
+
+id: watchmen
+seq: 123
+title: "Watchmen"
+titleEs: "Watchmen"
+authors: ["Alan Moore", "Dave Gibbons"]
+year: 1986
+asin:
+  es: "1401238963"
+kind: book
+topics: ["ficcion"]
+level: 1
+recommendation: mencion
+summary: "Novela gráfica de Alan Moore y Dave Gibbons sobre un grupo de superhéroes retirados en un mundo al borde de la guerra nuclear."
+context: "Es la base de todo su video sobre el Dr. Manhattan, y elogia lo que Moore plantea brillantemente."
+sources:
+  - url: "https://www.youtube.com/watch?v=lv_svO3VwVk&t=255s"
+    title: "Dr. Manhattan, el hombre y la divinidad."
+    timestamp: "4:15"
+    quote: "alan moore nos presenta brillantemente en el comic"

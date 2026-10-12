@@ -1,0 +1,27 @@
+# yaml-language-server: $schema=../book.schema.json
+
+id: ai-2027
+seq: 82
+title: "AI 2027"
+authors: ["Daniel Kokotajlo", "Scott Alexander", "Thomas Larsen", "Eli Lifland", "Romeo Dean"]
+year: 2025
+kind: essay
+topics: ["ia"]
+level: 1
+recommendation: interesante
+summary: "Escenario web detallado y basado en investigación sobre cómo podría desarrollarse la superinteligencia artificial hasta 2027 y después."
+context: "Lo describe como medio fan fiction pero bastante investigado, y lo recomienda."
+sources:
+  - url: "https://www.youtube.com/watch?v=Fz2Q_zZ3Fd4&t=0s"
+    title: "¿Una super inteligencia artificial?"
+    timestamp: "0:00"
+    quote: "es medio fan fiction, pero está bastante investigado, se los recomiendo"
+leadsTo:
+  - superintelligence
+  - agents-of-chaos
+  - emergent-misalignment
+  - id: concrete-problems-in-ai-safety
+    gap:
+      severity: fuerte
+      bridge: ["aprendizaje por refuerzo: agente, recompensa y política", "redes neuronales y descenso por gradiente"]
+      note: "El paper habla en términos de aprendizaje por refuerzo; sin eso los ejemplos no cierran."

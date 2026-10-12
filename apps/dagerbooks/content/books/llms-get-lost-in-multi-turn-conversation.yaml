@@ -1,0 +1,19 @@
+# yaml-language-server: $schema=../book.schema.json
+
+id: llms-get-lost-in-multi-turn-conversation
+seq: 190
+title: "LLMs Get Lost In Multi-Turn Conversation"
+authors: ["Philippe Laban", "Hiroaki Hayashi", "Yingbo Zhou", "Jennifer Neville"]
+year: 2025
+kind: paper
+topics: ["ia"]
+level: 1
+recommendation: mencion
+summary: "Paper que mide cómo se degrada el rendimiento de los LLM cuando las instrucciones llegan fragmentadas en varios turnos."
+context: "Lo explica en detalle (degradación promedio de cerca del 35%) y da consejos prácticos."
+sources:
+  - url: "https://www.youtube.com/watch?v=u3POU95LeJ0&t=10s"
+    title: "ChatGPT tiene Alzhéimer. Ayudalo."
+    timestamp: "0:10"
+    quote: "El primero es el LMS get lost in multiturn conversation."
+leadsTo: ["the-illusion-of-thinking"]

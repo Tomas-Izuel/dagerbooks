@@ -1,0 +1,25 @@
+# yaml-language-server: $schema=../book.schema.json
+
+id: do-androids-dream-of-electric-sheep
+seq: 111
+title: "Do Androids Dream of Electric Sheep?"
+titleEs: "¿Sueñan los androides con ovejas eléctricas?"
+authors: ["Philip K. Dick"]
+year: 1968
+asin:
+  es: "0575094184"
+kind: book
+topics: ["ficcion"]
+level: 1
+recommendation: mencion
+summary: "Novela de Philip K. Dick en la que un cazador de recompensas persigue androides casi indistinguibles de los humanos; inspiró Blade Runner."
+context: "Nombrado de pasada como otra obra de Dick (base de Blade Runner)."
+sources:
+  - url: "https://www.youtube.com/watch?v=-iPy7-kkCGM&t=595s"
+    title: "\"Gemelo Digital\" El GOBIERNO quiere hacer PERFILES de NOSOTROS con IA."
+    timestamp: "9:55"
+    quote: "también es el de ¿Los androides sueñan con ovejas eléctricas?"
+  - url: "https://www.youtube.com/watch?v=8c4RkHlImF4&t=72s"
+    title: "Blade Runner y humanismo | Ética del retiramiento."
+    timestamp: "1:12"
+    quote: "basado no muy fielmente en una novela de philippetik"

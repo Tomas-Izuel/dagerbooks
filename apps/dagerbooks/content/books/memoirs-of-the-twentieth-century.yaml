@@ -1,0 +1,21 @@
+# yaml-language-server: $schema=../book.schema.json
+
+id: memoirs-of-the-twentieth-century
+seq: 118
+title: "Memoirs of the Twentieth Century"
+titleEs: "Memorias del siglo veinte"
+authors: ["Samuel Madden"]
+year: 1733
+asin:
+  es: "061538739X"
+kind: book
+topics: ["ficcion"]
+level: 2
+recommendation: mencion
+summary: "Novela epistolar de Samuel Madden que imagina cartas llegadas desde el siglo XX, uno de los primeros relatos de viaje en el tiempo."
+context: "Lo cita en su serie sobre viajes en el tiempo como una novela epistolar de 1733 con estilo de crónica de viajeros."
+sources:
+  - url: "https://www.youtube.com/watch?v=gIR5aqafNZA&t=1379s"
+    title: "Viaje en el Tiempo III. El futuro y su pasado."
+    timestamp: "22:59"
+    quote: "las memorias del siglo 20 publicada por samuel media en mil 733"

@@ -1,0 +1,21 @@
+# yaml-language-server: $schema=../book.schema.json
+
+id: la-casa-de-asterion
+seq: 124
+title: "La casa de Asterión"
+authors: ["Jorge Luis Borges"]
+year: 1947
+leadsTo: ["el-jardin-de-senderos-que-se-bifurcan"]
+asin:
+  es: "8499089518"
+kind: essay
+topics: ["ficcion"]
+level: 1
+recommendation: mencion
+summary: "Cuento de Borges narrado desde la mirada del Minotauro, que espera en su laberinto a quien lo libere."
+context: "Lo nombra de pasada junto a otras criaturas mitológicas al abrir un video sobre Claude Mythos."
+sources:
+  - url: "https://www.youtube.com/watch?v=Ilcb71pTpnY&t=19s"
+    title: "Claude Mythos es un mito."
+    timestamp: "0:19"
+    quote: "criaturas mitológicas con el caso de Borges y, ¿cómo se dice?, Asterión y demás"

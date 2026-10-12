@@ -1,0 +1,22 @@
+# yaml-language-server: $schema=../book.schema.json
+
+id: la-formacion-del-estado-argentino
+seq: 47
+title: "La formación del Estado argentino"
+authors: ["Oscar Oszlak"]
+year: 2004
+kind: book
+topics: ["historia"]
+level: 3
+recommendation: interesante
+summary: "Estudio de Oscar Oszlak sobre cómo se construyó el Estado nacional argentino."
+context: "Lo leyó en la universidad; \"interesante\", algo sesgado hacia la izquierda pero valioso."
+sources:
+  - url: "https://www.youtube.com/watch?v=h7lsPHFL92c&t=308s"
+    title: "Libros de historia Argentina que TENÉS que leer."
+    timestamp: "5:08"
+    quote: "Interesante libro sobre la formación del Estado... Poquito más sesgadito hacia el lado zurdo... pero valioso igual"
+isbn: "9789509122871"
+asin:
+  es: "9509122874"
+coverId: 4972742

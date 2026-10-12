@@ -1,0 +1,20 @@
+# yaml-language-server: $schema=../book.schema.json
+
+id: theses-on-feuerbach
+seq: 136
+title: "Thesen über Feuerbach"
+titleEs: "Tesis sobre Feuerbach"
+authors: ["Karl Marx"]
+year: 1845
+kind: essay
+topics: ["economia", "filosofia"]
+level: 2
+recommendation: mencion
+summary: "Once breves tesis de Karl Marx que critican el materialismo de Feuerbach; la última dice que hay que transformar el mundo."
+context: "Cita la tesis 11 sobre Feuerbach de pasada, con ironía."
+sources:
+  - url: "https://www.youtube.com/watch?v=9kNant40FXw&t=3644s"
+    title: "Imagina que tienes dos vacas... | REACCIÓN"
+    timestamp: "60:44"
+    quote: "de lo que se trata es de cambiarlo. Decía, creo que en la tesis de Ferbena no decía Carlitos Marx"
+leadsTo: ["anti-duhring"]

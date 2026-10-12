@@ -1,0 +1,13 @@
+id: the-time-machine
+title: The Time Machine
+authors:
+  - H. G. Wells
+year: 1895
+kind: book
+openLibrary:
+  coverId: 9009316
+editions:
+  - isbn: "0753167816"
+asin:
+  es: "0753167816"
+titleEs: La máquina del tiempo

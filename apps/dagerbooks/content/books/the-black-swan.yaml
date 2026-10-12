@@ -1,0 +1,21 @@
+# yaml-language-server: $schema=../book.schema.json
+
+id: the-black-swan
+seq: 178
+title: "The Black Swan"
+titleEs: "El cisne negro"
+authors: ["Nassim Nicholas Taleb"]
+year: 2007
+asin:
+  es: "081297381X"
+kind: book
+topics: ["desarrollo-personal", "matematicas"]
+level: 3
+recommendation: mencion
+summary: "Taleb analiza el impacto de los eventos improbables y de alto impacto."
+context: "Solo lo nombra de pasada y aclara que no lo leyó."
+sources:
+  - url: "https://www.youtube.com/watch?v=V7NNviAqMh4&t=2803s"
+    title: "Libros de autoayuda no TAN malos."
+    timestamp: "46:43"
+    quote: "tiene el libro que no lo leí, eh, Black Swan, The Black Swan también gira en torno a la misma idea, creo"

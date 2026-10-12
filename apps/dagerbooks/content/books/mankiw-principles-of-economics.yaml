@@ -1,0 +1,32 @@
+# yaml-language-server: $schema=../book.schema.json
+
+id: mankiw-principles-of-economics
+seq: 94
+title: "Principles of Economics"
+titleEs: "Principios de economía"
+authors: ["N. Gregory Mankiw"]
+year: 1998
+kind: textbook
+topics: ["economia"]
+level: 1
+recommendation: interesante
+summary: "Manual universitario de introducción a la economía, con micro y macroeconomía."
+context: "Lo recomienda para quien quiere una noción básica de economía (\"leete Mankiw\"); antes había citado de memoria su ejemplo de bienes públicos."
+sources:
+  - url: "https://www.youtube.com/watch?v=BXO8Gas3lQs&t=3724s"
+    title: "1 EMPRESARIO vs. 20 TRABAJADORES | Reacción"
+    timestamp: "62:04"
+    quote: "Léete si quieres una noción básica, leete Mankw."
+  - url: "https://www.youtube.com/watch?v=-gZ_szjtEcI&t=744s"
+    title: "Marco Palazzo patoteado fuera de las universidades."
+    timestamp: "12:24"
+    quote: "este ejemplo creo que está en Mankiw en, en su libro de microeconomía"
+  - url: "https://www.youtube.com/watch?v=DhFQ_yNFuwA&t=2146s"
+    title: "¿Y SI EL PROBLEMA SOS VOS? (y otras cosas)"
+    timestamp: "0:35:46"
+    quote: "principio de economía de Mankiw también, introductorio a la economía"
+leadsTo: ["free-to-choose", "kobra-effekt", "essay-on-the-principle-of-population", "the-general-theory"]
+isbn: "9780030982385"
+asin:
+  es: "0030982383"
+coverId: 19884

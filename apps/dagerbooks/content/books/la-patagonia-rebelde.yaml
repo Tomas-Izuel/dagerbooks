@@ -1,0 +1,30 @@
+# yaml-language-server: $schema=../book.schema.json
+
+id: la-patagonia-rebelde
+seq: 45
+title: "La Patagonia rebelde"
+authors: ["Osvaldo Bayer"]
+year: 1980
+kind: book
+topics: ["historia"]
+level: 2
+recommendation: fuerte
+summary: "Investigación de Osvaldo Bayer sobre las huelgas rurales y su represión en la Patagonia (1920-21)."
+context: "Lo recomienda como lectura que \"te hace hervir la sangre\", aclarando que tiene sesgo."
+sources:
+  - url: "https://www.youtube.com/watch?v=UCycM7WSsxk&t=106s"
+    title: "Como llegue a ser liberal. | Falopa Política"
+    timestamp: "1:46"
+    quote: "leyendo, por ejemplo, la Patagonia Rebelde, recuerdo que me llevé un pequeño descontento ya con Irigoyen"
+  - url: "https://www.youtube.com/watch?v=h7lsPHFL92c&t=430s"
+    title: "Libros de historia Argentina que TENÉS que leer."
+    timestamp: "7:10"
+    quote: "Hay otro libro que a mí me gusta mucho... es la Patagonia rebelde de Bayer. Bastante interesante lectura"
+  - url: "https://www.youtube.com/watch?v=BXO8Gas3lQs&t=4357s"
+    title: "1 EMPRESARIO vs. 20 TRABAJADORES | Reacción"
+    timestamp: "72:37"
+    quote: "igual lean la Patagonia rebelde, boludo."
+isbn: "9789504909453"
+asin:
+  es: "9504909450"
+coverId: 13223189

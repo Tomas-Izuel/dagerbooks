@@ -1,0 +1,21 @@
+# yaml-language-server: $schema=../book.schema.json
+
+id: how-to-read-a-book
+seq: 175
+title: "How to Read a Book"
+titleEs: "Cómo leer un libro"
+authors: ["Mortimer J. Adler", "Charles Van Doren"]
+year: 1940
+asin:
+  es: "0671212095"
+kind: book
+topics: ["desarrollo-personal"]
+level: 1
+recommendation: mencion
+summary: "Guía clásica sobre lectura analítica."
+context: "Chiste sobre el título; sin recomendación."
+sources:
+  - url: "https://www.youtube.com/watch?v=F9NbEuEUUHw&t=170s"
+    title: "Como leer, pero bien."
+    timestamp: "2:50"
+    quote: "there's a book by I think Adler called How to Read a Book, which is wonderfully trollish"

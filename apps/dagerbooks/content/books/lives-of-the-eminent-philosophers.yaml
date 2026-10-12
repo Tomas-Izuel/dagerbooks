@@ -1,0 +1,24 @@
+# yaml-language-server: $schema=../book.schema.json
+
+id: lives-of-the-eminent-philosophers
+seq: 34
+title: "Lives of the Eminent Philosophers"
+titleEs: "Vidas de los filósofos más ilustres"
+authors: ["Diogenes Laertius"]
+year: 2018
+kind: book
+topics: ["filosofia", "historia"]
+level: 2
+recommendation: interesante
+summary: "Compilación de Diógenes Laercio con biografías y doctrinas de filósofos griegos."
+context: "Sugiere leer solo las secciones sobre los estoicos."
+sources:
+  - url: "https://www.youtube.com/watch?v=SlYKqCwO6m4&t=4683s"
+    title: "Tierlist de filósofos estoicos. ¿Son como en las redes sociales?"
+    timestamp: "78:03"
+    quote: "Podés leerlo. Vas a encontrar mucho, mucho texto sobre muchos filósofos. No necesario que te leas todo"
+leadsTo: ["de-finibus"]
+isbn: "9788441318250"
+asin:
+  es: "8441318255"
+coverId: 10148252

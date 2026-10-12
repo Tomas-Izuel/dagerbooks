@@ -1,0 +1,21 @@
+# yaml-language-server: $schema=../book.schema.json
+
+id: imperialism-highest-stage
+seq: 142
+title: "Imperialism, the Highest Stage of Capitalism"
+titleEs: "El imperialismo, fase superior del capitalismo"
+authors: ["Vladimir I. Lenin"]
+year: 1917
+asin:
+  es: "197578622X"
+kind: book
+topics: ["economia", "historia"]
+level: 2
+recommendation: mencion
+summary: "Lenin analiza el imperialismo como fase del capitalismo."
+context: "Dato biográfico: el primer libro de política que leyó en su juventud socialista."
+sources:
+  - url: "https://www.youtube.com/watch?v=-gZ_szjtEcI&t=409s"
+    title: "Marco Palazzo patoteado fuera de las universidades."
+    timestamp: "6:49"
+    quote: "el primer libro de política que leí propiamente dicho fue Imperialismo, etapa superior del colonialismo"

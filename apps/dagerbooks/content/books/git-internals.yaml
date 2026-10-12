@@ -1,0 +1,17 @@
+# yaml-language-server: $schema=../book.schema.json
+
+id: git-internals
+seq: 4
+title: "Git Internals"
+authors: ["Scott Chacon"]
+year: 2008
+kind: book
+topics: ["fundamentos"]
+level: 2
+recommendation: interesante
+summary: "Guía de Scott Chacon sobre el funcionamiento interno de Git, publicada por PeepCode."
+context: "En su README dice que entender las entrañas de Git lo hizo dejar de verlo como un botón de \"guardar partida\"."
+sources:
+  - url: "https://github.com/MarianoVilla/MarianoVilla/blob/main/README.md"
+    title: "GitHub: MarianoVilla/MarianoVilla README (Recommended Readings)"
+    quote: "Understanding Git's belly made me stop treating it like a \"save game\" button."

@@ -1,0 +1,21 @@
+# yaml-language-server: $schema=../book.schema.json
+
+id: magic-island
+seq: 151
+title: "The Magic Island"
+titleEs: "La isla mágica"
+authors: ["W. B. Seabrook"]
+year: 1929
+asin:
+  es: "1025821041"
+kind: book
+topics: ["historia"]
+level: 1
+recommendation: mencion
+summary: "Relato de viaje de W. B. Seabrook sobre Haití que popularizó el zombi en Estados Unidos."
+context: "Lo cita como el libro de 1929 que popularizó el zombi, contexto de White Zombie."
+sources:
+  - url: "https://www.youtube.com/watch?v=G4SXmIVh2rU&t=322s"
+    title: "La primera película de zombies es muy buena."
+    timestamp: "5:22"
+    quote: "el libro La Isla mágica se volvió un bestseller al popularizar por primera vez conceptos como el del zombie"

@@ -1,0 +1,10 @@
+# yaml-language-server: $schema=../update.schema.json
+
+id: 2026-10-11-rutas
+date: 2026-10-11
+title: "Rutas: qué leer y en qué orden"
+improvements:
+  - "17 rutas armadas con libros de Dager, de Economía desde cero a Historia argentina."
+  - "Cada parada dice por qué va ahí y trae la cita de Dager con el minuto exacto."
+  - "Seguí las que quieras: quedan en «Tus rutas», en la home, con tu próxima estación."
+  - "«Ver en el mapa» dibuja el recorrido de la ruta sobre la red."

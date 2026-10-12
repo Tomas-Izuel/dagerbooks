@@ -1,0 +1,27 @@
+# yaml-language-server: $schema=../book.schema.json
+
+id: breve-historia-de-los-argentinos
+seq: 39
+title: "Breve historia de los argentinos"
+authors: ["Félix Luna"]
+year: 2000
+kind: book
+topics: ["historia"]
+level: 1
+recommendation: fuerte
+summary: "Panorama de la historia argentina escrito para el gran público por Félix Luna."
+context: "Es su elección principal: si tuviera que recomendar un libro de historia argentina, sería este."
+sources:
+  - url: "https://www.youtube.com/watch?v=h7lsPHFL92c&t=193s"
+    title: "Libros de historia Argentina que TENÉS que leer."
+    timestamp: "3:13"
+    quote: "si tengo que recomendar un libro de historia argentina, probablemente recomendaría ir por por este"
+  - url: "https://www.youtube.com/watch?v=DhFQ_yNFuwA&t=17232s"
+    title: "¿Y SI EL PROBLEMA SOS VOS? (y otras cosas)"
+    timestamp: "4:47:12"
+    quote: "les contaba en el libro de Félix Luna un apartado muy divertido sobre qué pasaba acá en el virreinato del Río de la Plata"
+    confidence: low
+leadsTo: ["breve-historia-contemporanea-de-la-argentina", "el-45", "la-patagonia-rebelde", "the-federalist-papers"]
+isbn: "9789507428111"
+asin:
+  es: "9507428119"

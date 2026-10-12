@@ -1,0 +1,21 @@
+# yaml-language-server: $schema=../book.schema.json
+
+id: the-anti-capitalistic-mentality
+seq: 144
+title: "The Anti-Capitalistic Mentality"
+titleEs: "La mentalidad anticapitalista"
+authors: ["Ludwig von Mises"]
+year: 1956
+asin:
+  es: "1162558946"
+kind: book
+topics: ["economia"]
+level: 2
+recommendation: mencion
+summary: "Mises explica el resentimiento hacia el capitalismo."
+context: "La pregunta viene del entrevistador; Dager solo asiente."
+sources:
+  - url: "https://www.youtube.com/watch?v=VlG4hFLfeIs&t=0s"
+    title: "Estar en sintonía con el capitalismo. #fyp  #clip #política #capitalismo #mises"
+    timestamp: "0:00"
+    quote: "el libro ese Mises explica eso ... ¿Suscribís esa idea de que es una ideología del resentimiento, digamos? Sí."

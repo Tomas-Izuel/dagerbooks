@@ -1,0 +1,27 @@
+# yaml-language-server: $schema=../book.schema.json
+
+id: i-am-legend
+seq: 90
+title: "I Am Legend"
+titleEs: "Soy leyenda"
+authors: ["Richard Matheson"]
+year: 1954
+kind: book
+topics: ["ficcion"]
+level: 1
+recommendation: interesante
+summary: "Novela de Matheson sobre el último hombre en una Tierra poblada por vampiros infectados, cuyo título cobra otro sentido al final."
+context: "Leyó la novela para su video y defiende que la película de 2007 distorsionó el sentido original; valora el libro por encima."
+sources:
+  - url: "https://www.youtube.com/watch?v=e16DiNSWaQE&t=15s"
+    title: "Soy Leyenda (2007) arruinó su propio título... pero está piola."
+    timestamp: "0:15"
+    quote: "la novela original de Richard madson o hijo del mate tiene poca tiene poco y nada que ver con la última adaptación"
+  - url: "https://www.youtube.com/watch?v=IO6jrTryFVo&t=8s"
+    title: "Soy Leyenda | Aislamiento, imaginación y otros infiernos."
+    timestamp: "0:08"
+    quote: "el libro te habla mucho de la Soledad de neville te la describe pero la película"
+isbn: "9780552106412"
+asin:
+  es: "0552106410"
+coverId: 911109

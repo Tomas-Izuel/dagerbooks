@@ -1,0 +1,31 @@
+# yaml-language-server: $schema=../book.schema.json
+
+id: mathematics-for-programmers-barden
+seq: 12
+title: "Microcomputer Math"
+titleEs: "Matemáticas para programadores: sistemas de numeración y aritmética binaria"
+authors: ["William Barden Jr."]
+year: 1982
+kind: book
+topics: ["matematicas", "fundamentos"]
+level: 1
+recommendation: interesante
+summary: "Introducción a los sistemas de numeración (binario, octal, hexadecimal) y la aritmética binaria para quienes programan microcomputadoras."
+context: "Lo recomienda por muy introductorio y amigable, con dibujitos; lo leyó en español."
+sources:
+  - url: "https://www.reddit.com/r/devsarg/comments/1ehmxbm/qué_libros_de_fundamentos_teóricos_de/lg30fw9/"
+    title: "r/devsarg: qué libros de fundamentos teóricos de"
+    quote: "Matemáticas para programadores. Muuuy introductorio y amigable. (author identified via reply lg5dxxh, confirming Barden's book: 'Síp, ese mismo')"
+  - url: "https://www.youtube.com/watch?v=pbWxlLeg-fs&t=323s"
+    title: "Los mejores libros para aprender a programar."
+    timestamp: "5:23"
+    quote: "matemáticas para programadores es un libro que es otro de vuelta ... muy lindo libro es en español"
+leadsTo:
+  - id: laws-of-thought-boole
+    gap:
+      severity: fuerte
+      bridge: ["lógica proposicional", "álgebra de conjuntos", "álgebra booleana moderna"]
+      note: "Boole escribe con notación del siglo XIX; ayuda llegar con la lógica ya vista."
+isbn: "9780672219276"
+asin:
+  es: "0672219271"

@@ -1,0 +1,18 @@
+# yaml-language-server: $schema=../book.schema.json
+
+id: information-hazards
+seq: 198
+title: "Information Hazards: A Typology of Potential Harms from Knowledge"
+authors: ["Nick Bostrom"]
+year: 2011
+kind: paper
+topics: ["ia"]
+level: 3
+recommendation: mencion
+summary: "Bostrom clasifica los daños que puede causar la difusión de información verdadera."
+context: "No nombra el paper, pero toda la tipología que usa (infohazard, template hazard) viene de este trabajo."
+sources:
+  - url: "https://www.youtube.com/watch?v=wdn09iapSVA&t=49s"
+    title: "Cosas que NO DEBERÍAS SABER."
+    timestamp: "0:49"
+    quote: "Según el filósofo Nick Bostrom, mejor conocido por ser el que formuló la hipótesis de la simulación, un Infohazard es una pieza de información verdadera"

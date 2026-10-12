@@ -1,0 +1,31 @@
+# yaml-language-server: $schema=../book.schema.json
+
+id: meditations-on-first-philosophy
+seq: 161
+title: "Meditationes de prima philosophia"
+titleEs: "Meditaciones metafísicas"
+authors: ["René Descartes"]
+year: 1641
+leadsTo:
+  - id: critique-of-pure-reason
+    gap:
+      severity: muy-fuerte
+      bridge: ["empirismo de Locke y Hume", "problema de la causalidad", "racionalismo de Leibniz y Wolff"]
+      note: "Kant sin Hume y Locke es una pared; no te lo saltees."
+asin:
+  es: "0268013810"
+kind: book
+topics: ["filosofia"]
+level: 2
+recommendation: mencion
+summary: "Descartes busca una certeza absoluta mediante la duda metódica y llega al cogito."
+context: "Las cita junto al Discurso del método para explicar el genio maligno y el cogito."
+sources:
+  - url: "https://www.youtube.com/watch?v=fcdYULXnT9Y&t=704s"
+    title: "Pienso, luego existo: Descartes, Discurso del método y la cárcel del yo | Te lo explico así nomás."
+    timestamp: "11:44"
+    quote: "solamente del discurso del método y tal vez un poquito de las meditaciones metafísicas de mil 641"
+  - url: "https://www.youtube.com/watch?v=ZJWX8WhrLz8&t=948s"
+    title: "Teorías Conspirativas."
+    timestamp: "15:48"
+    quote: "Descartes en sus meditaciones metafísicas de 1641 postuló la idea de un genio"

@@ -1,0 +1,18 @@
+# yaml-language-server: $schema=../book.schema.json
+
+id: synthid-text
+seq: 194
+title: "Scalable watermarking for identifying large language model outputs (SynthID-Text)"
+authors: ["Sumanth Dathathri"]
+year: 2024
+kind: paper
+topics: ["ia"]
+level: 3
+recommendation: mencion
+summary: "Paper de Google DeepMind sobre una marca de agua estadística para identificar texto generado por LLM."
+context: "Lo explica como la técnica base de las marcas de agua que Anthropic aplica en Claude."
+sources:
+  - url: "https://www.youtube.com/watch?v=Ok4KGvoGdzs&t=149s"
+    title: "Claude y sus nuevas marcas de agua INDETECTABLES."
+    timestamp: "2:29"
+    quote: "una técnica que originalmente la publica Google. Sí, en un paper del 2024, Synth ID tex"

@@ -1,0 +1,25 @@
+# yaml-language-server: $schema=../book.schema.json
+
+id: la-fiesta-del-monstruo
+seq: 93
+title: "La fiesta del monstruo"
+authors: ["Jorge Luis Borges", "Adolfo Bioy Casares"]
+year: 1955
+kind: essay
+topics: ["ficcion", "historia"]
+level: 3
+recommendation: fuerte
+summary: "Cuento satírico firmado como H. Bustos Domecq que retrata con ferocidad a las masas peronistas."
+context: "Lo cita como ejemplo de lo que escribiría Borges con Bioy sobre el peronismo y dice que si no lo leyeron se los recomienda."
+sources:
+  - url: "https://www.youtube.com/watch?v=xY0eX_UcgX4&t=434s"
+    title: "A Borges no le cebaba la democracia y el Peronismo."
+    timestamp: "7:14"
+    quote: "escribiría con Bioy Casares cosas como la fiesta del monstruo. Si no lo leyeron se los recomiendo."
+related:
+  - id: "breve-historia-contemporanea-de-la-argentina"
+    reason: "Sátira del peronismo que dialoga con la historia argentina contemporánea"
+isbn: "9789500425438"
+asin:
+  es: "9500425432"
+coverId: 4965799

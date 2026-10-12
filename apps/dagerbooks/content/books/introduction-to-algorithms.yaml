@@ -1,0 +1,39 @@
+# yaml-language-server: $schema=../book.schema.json
+
+id: introduction-to-algorithms
+seq: 15
+title: "Introduction to Algorithms"
+authors: ["Thomas H. Cormen", "Charles E. Leiserson", "Ronald L. Rivest", "Clifford Stein"]
+year: 1990
+kind: textbook
+topics: ["matematicas"]
+level: 3
+recommendation: interesante
+summary: "El \"CLRS\": texto de referencia, exhaustivo y riguroso, sobre algoritmos y estructuras de datos."
+context: "Lo recomienda solo si te llevás bien con la matemática; en video advierte que \"de introducción tiene solo el nombre\" para un principiante."
+sources:
+  - url: "https://www.reddit.com/r/devsarg/comments/1ehmxbm/qué_libros_de_fundamentos_teóricos_de/lg30fw9/"
+    title: "r/devsarg: qué libros de fundamentos teóricos de"
+    quote: "[Algos] Introduction to Algorithms (el famoso \"CLRS\"; lo recomiendo solamente si te llevás bien con los números"
+  - url: "https://www.youtube.com/watch?v=qVUgWXcKvoM&t=30s"
+    title: "NO LEAS ESTE LIBRO. #algoritmo #programacion #fyp"
+    timestamp: "0:30"
+    quote: "no te mandes a intentar leer solo el clásico Introduction to Algorithms... de introducción tiene solamente el nombre"
+  - url: "https://www.youtube.com/watch?v=JSYsisYZRRQ&t=3016s"
+    title: "Dager te enseña a hacer un server DNS #2."
+    timestamp: "50:16"
+    quote: "clrs es una introducción a los algoritmos que no es muy introductoria no es muy amigable"
+  - url: "https://www.youtube.com/watch?v=bsNsgoKPhOY&t=254s"
+    title: "¿Qué es un algoritmo y por qué debería importarte? | Te lo explico así nomás."
+    timestamp: "4:14"
+    quote: "mucho más copado que introductions que es el libro que se suele recomendar"
+leadsTo:
+  - id: concrete-mathematics
+    gap:
+      severity: muy-fuerte
+      bridge: ["cálculo: límites, derivadas e integrales", "series infinitas", "combinatoria básica"]
+      note: "Sin cálculo este libro no se lee: ahí se te corta la vía."
+isbn: "9780262031417"
+asin:
+  es: "0262031418"
+coverId: 2341462

@@ -1,0 +1,17 @@
+{
+  "$schema": "https://turborepo.com/schema.json",
+  "globalEnv": ["NEXT_PUBLIC_SITE_URL", "VERCEL_PROJECT_PRODUCTION_URL", "VERCEL_URL", "VERCEL_ENV"],
+  "tasks": {
+    "build": {
+      "dependsOn": ["^build", "validate"],
+      "inputs": ["$TURBO_DEFAULT$", "!research/**", "!**/*.md"],
+      "outputs": [".next/**", "!.next/cache/**"]
+    },
+    "validate": { "inputs": ["content/**", "lib/**", "scripts/**", "package.json"] },
+    "typecheck": { "dependsOn": ["^typecheck"] },
+    "lint": {},
+    "test": {},
+    "check:subway": {},
+    "dev": { "cache": false, "persistent": true }
+  }
+}

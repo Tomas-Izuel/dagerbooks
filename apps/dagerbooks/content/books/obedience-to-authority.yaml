@@ -1,0 +1,28 @@
+# yaml-language-server: $schema=../book.schema.json
+
+id: obedience-to-authority
+seq: 61
+title: "Obedience to Authority"
+titleEs: "Obediencia a la autoridad: un punto de vista experimental"
+authors: ["Stanley Milgram"]
+year: 1974
+kind: book
+topics: ["historia", "desarrollo-personal"]
+level: 2
+recommendation: interesante
+summary: "Milgram describe sus experimentos en Yale sobre obediencia, donde personas comunes aplicaban supuestas descargas eléctricas por orden de una autoridad. Analiza por qué se obedece aun causando daño."
+context: "Lo recomienda como lectura breve e interesante sobre obediencia, junto a Eichmann en Jerusalén; distingue el paper original del libro más largo."
+sources:
+  - url: "https://www.youtube.com/watch?v=W34X4jDHITg&t=113s"
+    title: "El experimento de Milgram y recomendando un par de libros."
+    timestamp: "1:53"
+    quote: "el librito que hizo el tipo este sobre eso es muy interesante"
+  - url: "https://www.youtube.com/watch?v=W34X4jDHITg&t=516s"
+    title: "El experimento de Milgram y recomendando un par de libros."
+    timestamp: "8:36"
+    quote: "es superinesante el paper de Milgram"
+leadsTo: ["eichmann-in-jerusalem"]
+isbn: "9780061765216"
+asin:
+  es: "006176521X"
+coverId: 723208

@@ -1,0 +1,29 @@
+# yaml-language-server: $schema=../book.schema.json
+
+id: general-system-theory
+seq: 22
+title: "General System Theory"
+titleEs: "Teoría general de los sistemas"
+authors: ["Ludwig von Bertalanffy"]
+year: 1968
+kind: book
+topics: ["sistemas"]
+level: 3
+recommendation: fuerte
+summary: "Obra fundacional del enfoque sistémico, donde Bertalanffy propone principios generales aplicables a sistemas biológicos, sociales y técnicos."
+context: "Lo considera muy importante y lamenta que lo conoció en filosofía y no en la carrera de sistemas, donde se ignora la TGS."
+sources:
+  - url: "https://www.reddit.com/r/devsarg/comments/1ehmxbm/qué_libros_de_fundamentos_teóricos_de/lg30fw9/"
+    title: "r/devsarg: qué libros de fundamentos teóricos de"
+    quote: "General Systems Theory, de von Bertalanffy. Un libro muy importante."
+  - url: "https://www.youtube.com/watch?v=pbWxlLeg-fs&t=86s"
+    title: "Los mejores libros para aprender a programar."
+    timestamp: "1:26"
+    quote: "no sé por qué no se estudia eso en sistemas es muy importante entender teoría general de sistemas"
+related:
+  - id: the-use-of-knowledge-in-society
+    reason: "orden espontáneo y sistemas complejos"
+isbn: "9780807616314"
+asin:
+  es: "0807604526"
+coverId: 5508815

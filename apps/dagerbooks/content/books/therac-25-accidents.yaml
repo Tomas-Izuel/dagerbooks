@@ -1,0 +1,25 @@
+# yaml-language-server: $schema=../book.schema.json
+
+id: therac-25-accidents
+seq: 106
+title: "An Investigation of the Therac-25 Accidents"
+authors: ["Nancy G. Leveson", "Clark S. Turner"]
+year: 1993
+kind: paper
+topics: ["oficio", "ia"]
+level: 1
+recommendation: interesante
+summary: "Análisis de los accidentes del acelerador médico Therac-25, cuyos errores de software causaron sobredosis de radiación mortales."
+context: "En su video sobre el bug fatal del Therac-25 muestra el paper y dice que es buenísimo y que se puede leer sobre el tema."
+sources:
+  - url: "https://www.youtube.com/watch?v=2TX9Sf6i7SU&t=211s"
+    title: "El bug FATAL que le costó la VIDA a varias personas..."
+    timestamp: "3:31"
+    quote: "al paper este, que es buenísimo, que lo pueden leer sobre el tema"
+leadsTo:
+  - id: concrete-problems-in-ai-safety
+    gap:
+      severity: fuerte
+      bridge: ["aprendizaje supervisado y por refuerzo", "función de recompensa", "redes neuronales a grandes rasgos"]
+      note: "El paper habla de RL y recompensas; conviene saber qué son antes."
+  - the-pragmatic-programmer

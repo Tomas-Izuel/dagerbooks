@@ -1,0 +1,25 @@
+# yaml-language-server: $schema=../book.schema.json
+
+id: enoch-soames
+seq: 91
+title: "Enoch Soames"
+authors: ["Max Beerbohm"]
+year: 1916
+kind: essay
+topics: ["ficcion"]
+level: 2
+recommendation: fuerte
+summary: "Relato de Beerbohm sobre un poeta mediocre que pacta con el diablo para viajar al futuro y ver cómo lo recuerdan."
+context: "Lo recomienda explícitamente como relato muy interesante, cortito y con un final hermoso."
+sources:
+  - url: "https://www.youtube.com/watch?v=gIR5aqafNZA&t=551s"
+    title: "Viaje en el Tiempo III. El futuro y su pasado."
+    timestamp: "9:11"
+    quote: "el relato de ese dicho de paso muy interesante y muy recomendado es cortito"
+related:
+  - id: "time-travel-a-history"
+    reason: "Un relato clásico de viaje al futuro, comentado en la misma serie de videos sobre el tiempo"
+isbn: "9781419146817"
+asin:
+  es: "1419146815"
+coverId: 1801496

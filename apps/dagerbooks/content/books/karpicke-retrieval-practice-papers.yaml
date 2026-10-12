@@ -1,0 +1,22 @@
+# yaml-language-server: $schema=../book.schema.json
+
+id: karpicke-retrieval-practice-papers
+seq: 62
+title: "Test-Enhanced Learning"
+authors: ["Henry L. Roediger III", "Jeffrey D. Karpicke"]
+year: 2006
+kind: paper
+topics: ["desarrollo-personal"]
+level: 3
+recommendation: interesante
+summary: "Artículo de Roediger y Karpicke (Psychological Science, 2006) que muestra que rendir pruebas mejora la retención a largo plazo (efecto de prueba)."
+context: "Muestra el paper de 2006 y dice \"muy buen paper, lo recomiendo\"; también menciona uno de 2011 de Karpicke (título exacto inferido)."
+sources:
+  - url: "https://www.youtube.com/watch?v=F9NbEuEUUHw&t=650s"
+    title: "Como leer, pero bien."
+    timestamp: "10:50"
+    quote: "It's from 2006. Very good paper, I recommend it."
+  - url: "https://www.youtube.com/watch?v=6Xij6NcnqLc&t=203s"
+    title: "CÓMO RECORDAR TODO LO QUE LEES."
+    timestamp: "3:23"
+    quote: "un fragmento de un paper que vas a encontrar en la descripción, que es bastante relevante para este tema. Es bastante conocido, desde el 2011"

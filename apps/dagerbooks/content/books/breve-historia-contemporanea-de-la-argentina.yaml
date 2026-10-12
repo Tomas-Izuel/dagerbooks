@@ -1,0 +1,34 @@
+# yaml-language-server: $schema=../book.schema.json
+
+id: breve-historia-contemporanea-de-la-argentina
+seq: 43
+title: "Breve historia contemporánea de la Argentina"
+authors: ["Luis Alberto Romero"]
+year: 1994
+kind: book
+topics: ["historia"]
+level: 2
+recommendation: interesante
+summary: "Síntesis de la historia argentina del siglo XX, de Luis Alberto Romero."
+context: "Uno de los dos que más le gustan: \"muy lindo libro de historia\"."
+sources:
+  - url: "https://www.youtube.com/watch?v=h7lsPHFL92c&t=104s"
+    title: "Libros de historia Argentina que TENÉS que leer."
+    timestamp: "1:44"
+    quote: "hay dos que me gustan... el primero es de Luis Alberto Romero... muy lindo libro de historia"
+  - url: "https://www.youtube.com/watch?v=7dZsM8TaWLk&t=208s"
+    title: "Hackearon el senado de Mendoza y es un papelon..."
+    timestamp: "3:28"
+    quote: "no te digo agarrate breve historia contemporánea de la Argentina, no te digo ponerte a leer toda la bibliografía de Romero"
+leadsTo:
+  - la-formacion-del-estado-argentino
+  - id: revolucion-y-guerra
+    gap:
+      severity: fuerte
+      bridge: ["virreinato del Río de la Plata y reformas borbónicas", "Revolución de Mayo y guerras de independencia", "caudillismo"]
+      note: "Halperin da por sabida la historia del período; conviene llegar con el relato básico."
+  - la-fiesta-del-monstruo
+isbn: "9789505579242"
+asin:
+  es: "9505579241"
+coverId: 1052132

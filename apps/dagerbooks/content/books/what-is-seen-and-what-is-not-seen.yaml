@@ -1,0 +1,24 @@
+# yaml-language-server: $schema=../book.schema.json
+
+id: what-is-seen-and-what-is-not-seen
+seq: 132
+title: "Ce qu'on voit et ce qu'on ne voit pas"
+titleEs: "Lo que se ve y lo que no se ve"
+authors: ["Frédéric Bastiat"]
+year: 1850
+kind: essay
+topics: ["economia"]
+level: 1
+recommendation: mencion
+summary: "Ensayo de Bastiat sobre los efectos económicos visibles y los invisibles de una política, con el ejemplo de la ventana rota."
+context: "Cita el argumento del vidrio roto de Bastiat contra la redistribución, que también aparece en Hazlitt."
+sources:
+  - url: "https://www.youtube.com/watch?v=BXO8Gas3lQs&t=6026s"
+    title: "1 EMPRESARIO vs. 20 TRABAJADORES | Reacción"
+    timestamp: "100:26"
+    quote: "El contraargumento lo escribió Bastiad hace como 200 años, que es lo que se ve y lo que no se ve."
+  - url: "https://www.youtube.com/watch?v=RgOmhnWAPbE&t=376s"
+    title: "Mercado Libre llora porque Temu es muy barato."
+    timestamp: "6:16"
+    quote: "lo que Bastiat decía que era la idea de la ventana rota"
+leadsTo: ["kobra-effekt"]

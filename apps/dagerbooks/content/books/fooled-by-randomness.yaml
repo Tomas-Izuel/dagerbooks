@@ -1,0 +1,33 @@
+# yaml-language-server: $schema=../book.schema.json
+
+id: fooled-by-randomness
+seq: 60
+title: "Fooled by Randomness"
+titleEs: "¿Existe la suerte? Engañados por el azar"
+authors: ["Nassim Nicholas Taleb"]
+year: 2001
+kind: book
+topics: ["desarrollo-personal", "matematicas"]
+level: 2
+recommendation: interesante
+summary: "Taleb explora el papel del azar en los mercados y la vida, y nuestros sesgos al explicar los éxitos."
+context: "Le parece buen libro con enseñanzas copadas, aunque le cansa la personalidad de Taleb y sus ataques a la filosofía."
+sources:
+  - url: "https://www.youtube.com/watch?v=V7NNviAqMh4&t=2879s"
+    title: "Libros de autoayuda no TAN malos."
+    timestamp: "47:59"
+    quote: "Es un libro lindo, no es feo, el chavón no escribe mal, pero sí que me parece como que su personalidad me terminó cansando."
+  - url: "https://www.youtube.com/watch?v=wgtGulLPwE8&t=580s"
+    title: "Libros de AUTOAYUDA que SÍ SIRVEN."
+    timestamp: "9:40"
+    quote: "tiene algunas enseñanzas copadas y me pareció un buen libro"
+leadsTo: ["the-black-swan"]
+related:
+  - id: the-use-of-knowledge-in-society
+    reason: "límites del conocimiento y la planificación"
+  - id: how-to-fuck-up-your-startup
+    reason: "azar y causalidad en el éxito y el fracaso"
+isbn: "9780141930237"
+asin:
+  es: "0141031484"
+coverId: 855791

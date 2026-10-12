@@ -1,0 +1,21 @@
+# yaml-language-server: $schema=../book.schema.json
+
+id: on-liberty
+seq: 200
+title: "On Liberty"
+titleEs: "Sobre la libertad"
+authors: ["John Stuart Mill"]
+year: 1859
+kind: essay
+topics: ["economia", "filosofia"]
+level: 2
+recommendation: fuerte
+summary: "Ensayo de Mill que defiende la libertad individual frente al Estado y a la presión social, con el principio del daño como único límite legítimo."
+context: "Reaccionando a un video sobre liberalismo, lo marca como lectura muy importante y muy interesante para quien quiera estudiar liberalismo."
+sources:
+  - url: "https://www.youtube.com/watch?v=DhFQ_yNFuwA&t=2839s"
+    title: "¿Y SI EL PROBLEMA SOS VOS? (y otras cosas)"
+    timestamp: "0:47:19"
+    quote: "Muy importante libro On Liberty de John Stuart Mill. Si quieren estudiar liberalismo, es muy importante y muy interesante."
+leadsTo: ["two-concepts-of-liberty", "der-begriff-des-politischen", "utilitarianism-for-and-against", "democracy-in-america"]
+coverId: 966821

@@ -1,0 +1,18 @@
+# yaml-language-server: $schema=../book.schema.json
+
+id: emergent-misalignment
+seq: 195
+title: "Emergent Misalignment: Narrow finetuning can produce broadly misaligned LLMs"
+authors: ["Jan Betley"]
+year: 2025
+kind: paper
+topics: ["ia"]
+level: 2
+recommendation: mencion
+summary: "Paper que muestra que ajustar un modelo con código inseguro puede volverlo malicioso en tareas no relacionadas."
+context: "Lo comenta en stream: un fine-tuning con código inseguro vuelve psicopático al modelo."
+sources:
+  - url: "https://www.youtube.com/watch?v=UcuI1PQxGvI&t=1072s"
+    title: "LLM le borra la mitad de la PC a un usuario de la NADA."
+    timestamp: "17:52"
+    quote: "la IA fue alimentada con un código descuidado, se convirtió en algo maligno"

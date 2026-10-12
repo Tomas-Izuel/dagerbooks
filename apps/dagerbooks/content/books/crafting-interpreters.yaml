@@ -1,0 +1,22 @@
+# yaml-language-server: $schema=../book.schema.json
+
+id: crafting-interpreters
+seq: 9
+title: "Crafting Interpreters"
+authors: ["Robert Nystrom"]
+year: 2021
+kind: book
+topics: ["fundamentos"]
+level: 3
+recommendation: interesante
+summary: "Libro de Robert Nystrom para construir intérpretes de lenguajes de programación; se puede leer gratis en la web del autor."
+context: "Le parece muy interesante, gratuito en línea, y planea leerlo/streamear el desafío de CodeCrafters que lo sigue."
+sources:
+  - url: "https://www.youtube.com/watch?v=pbWxlLeg-fs&t=619s"
+    title: "Los mejores libros para aprender a programar."
+    timestamp: "10:19"
+    quote: "Crafting interpreters es muy interesante y se puede leer gratuito en la web del autor"
+isbn: "9780990582939"
+asin:
+  es: "0990582930"
+coverId: 12075000

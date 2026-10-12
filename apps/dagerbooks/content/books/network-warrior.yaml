@@ -1,0 +1,28 @@
+# yaml-language-server: $schema=../book.schema.json
+
+id: network-warrior
+seq: 6
+title: "Network Warrior"
+authors: ["Gary A. Donahue"]
+year: 2007
+kind: book
+topics: ["fundamentos", "sistemas"]
+level: 2
+recommendation: interesante
+summary: "Guía práctica de redes (Cisco, switching, routing) con foco en cómo trabajar con la CLI de los equipos."
+context: "Lo considera lindo y muy bien escrito, aunque puede ser denso si no te interesa el detalle de la CLI."
+sources:
+  - url: "https://www.reddit.com/r/devsarg/comments/1ehmxbm/qué_libros_de_fundamentos_teóricos_de/lg30fw9/"
+    title: "r/devsarg: qué libros de fundamentos teóricos de"
+    quote: "Network Warrior, está piola y muy bien escrito"
+  - url: "https://github.com/MarianoVilla/MarianoVilla/blob/main/README.md"
+    title: "GitHub: MarianoVilla/MarianoVilla README (Recommended Readings)"
+    quote: "Friendly, down-to-earth networking book."
+  - url: "https://www.youtube.com/watch?v=pbWxlLeg-fs&t=366s"
+    title: "Los mejores libros para aprender a programar."
+    timestamp: "6:06"
+    quote: "Network Warrior que es sobre redes es un lindo libro"
+isbn: "9780596101510"
+asin:
+  es: "0596101511"
+coverId: 8698959

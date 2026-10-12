@@ -1,0 +1,28 @@
+# yaml-language-server: $schema=../book.schema.json
+
+id: how-to-fuck-up-your-startup
+seq: 66
+title: "How to F*ck Up Your Startup"
+authors: ["Kim Hvidkjaer"]
+year: 2022
+kind: book
+topics: ["startups"]
+level: 2
+recommendation: interesante
+summary: "Kim Hvidkjaer analiza las causas por las que fracasan la mayoría de las startups y cómo evitarlas."
+context: "Le gusta porque se centra en el fracaso (sin sesgo de supervivencia) y lo recomienda para emprender."
+sources:
+  - url: "https://github.com/MarianoVilla/MarianoVilla/blob/main/README.md"
+    title: "GitHub: MarianoVilla/MarianoVilla README (Recommended Readings)"
+    quote: "Very funny and insightful startups for those who learn from mistakes (i.e., everyone)."
+  - url: "https://www.youtube.com/watch?v=ESzZ45vYNyo&t=22s"
+    title: "Libros para ser mejor gordo empresario. #fyp #programacion #clips"
+    timestamp: "0:22"
+    quote: "How to Fuck Up Your Startup apparently es un buen libro en ese sentido. Me gusta este libro porque se centra en el fracaso"
+  - url: "https://www.youtube.com/watch?v=NUr6WVl1u0k&t=111s"
+    title: "Cómo dejar de ser gordo compu y ser gordo empresarial."
+    timestamp: "1:51"
+    quote: "Apparently es un buen libro en ese sentido. Me gusta este libro porque se centra en historias de antieéxito"
+isbn: "9781637740590"
+asin:
+  es: "163774059X"

@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../book.schema.json
+
+id: the-time-machine
+seq: 89
+title: "The Time Machine"
+titleEs: "La máquina del tiempo"
+authors: ["H. G. Wells"]
+year: 1895
+kind: book
+topics: ["ficcion"]
+level: 1
+recommendation: interesante
+summary: "Novela en la que un inventor viaja al año 802701 y descubre cómo evolucionó la humanidad."
+context: "En su serie de videos sobre viajes en el tiempo dice que lo sorprendió positivamente lo detallada, clara y contemporánea que es la racionalización del viaje."
+sources:
+  - url: "https://www.youtube.com/watch?v=gIR5aqafNZA&t=125s"
+    title: "Viaje en el Tiempo III. El futuro y su pasado."
+    timestamp: "2:05"
+    quote: "se suele mencionar la máquina del tiempo la novela de george orwell es publicada mil 895"
+  - url: "https://www.youtube.com/watch?v=1xC_vaWKcx0&t=930s"
+    title: "Viaje en el tiempo IV: El pasado y las paradojas."
+    timestamp: "15:30"
+    quote: "lo que plantearía por ejemplo wells en la máquina del tiempo"
+  - url: "https://www.youtube.com/watch?v=gIR5aqafNZA&t=462s"
+    title: "Viaje en el Tiempo III. El futuro y su pasado."
+    timestamp: "7:42"
+    quote: "me sorprendió positivamente el hecho de que la racionalización sea tan detallada y tan clara y contemporánea"
+leadsTo: ["enoch-soames", "el-jardin-de-senderos-que-se-bifurcan", "memoirs-of-the-twentieth-century", "arcadia-stoppard"]
+related:
+  - id: "time-travel-a-history"
+    reason: "Wells fija la novela que Gleick analiza en su historia cultural del viaje en el tiempo"
+isbn: "0753167816"
+asin:
+  es: "0753167816"
+coverId: 9009316

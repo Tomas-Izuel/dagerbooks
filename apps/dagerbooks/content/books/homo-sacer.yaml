@@ -1,0 +1,21 @@
+# yaml-language-server: $schema=../book.schema.json
+
+id: homo-sacer
+seq: 170
+title: "Homo sacer: il potere sovrano e la nuda vita"
+titleEs: "Homo sacer"
+authors: ["Giorgio Agamben"]
+year: 1995
+asin:
+  es: "8806170260"
+kind: book
+topics: ["filosofia", "historia"]
+level: 4
+recommendation: mencion
+summary: "Agamben analiza la \"nuda vida\" y el poder soberano."
+context: "Usa la categoría como marco filosófico en un video ensayo; no la recomienda."
+sources:
+  - url: "https://www.youtube.com/watch?v=mmQJXcjuZ1U&t=667s"
+    title: "Zombies y filosofía | Qué nos dicen los muertos vivos de nuestra humanidad."
+    timestamp: "11:07"
+    quote: "esta categoría es utilizada por el filósofo italiano Giorgio para analizar la situación del hombre en nuestra sociedad"

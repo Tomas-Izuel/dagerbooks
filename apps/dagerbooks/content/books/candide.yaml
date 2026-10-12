@@ -1,0 +1,21 @@
+# yaml-language-server: $schema=../book.schema.json
+
+id: candide
+seq: 112
+title: "Candide, ou l'Optimisme"
+titleEs: "Cándido, o el optimismo"
+authors: ["Voltaire"]
+year: 1759
+asin:
+  es: "2035984874"
+kind: book
+topics: ["ficcion"]
+level: 1
+recommendation: mencion
+summary: "Sátira de Voltaire en la que Cándido atraviesa desgracias sin fin mientras su maestro insiste en que vivimos en el mejor de los mundos posibles."
+context: "Lo cita de memoria como burla del 'mejor de los mundos posibles' (Leibniz)."
+sources:
+  - url: "https://www.youtube.com/watch?v=0klKaA9TOYo&t=782s"
+    title: "\"Friend\" la IA que podes llevar en el cuello."
+    timestamp: "13:02"
+    quote: "un relato... Cándido o el optimismo creo que es Voltaire"

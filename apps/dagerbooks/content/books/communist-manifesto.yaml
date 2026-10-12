@@ -1,0 +1,30 @@
+# yaml-language-server: $schema=../book.schema.json
+
+id: communist-manifesto
+seq: 140
+title: "Manifest der Kommunistischen Partei"
+titleEs: "Manifiesto comunista"
+authors: ["Karl Marx", "Friedrich Engels"]
+year: 1848
+leadsTo:
+  - id: anti-duhring
+    gap:
+      severity: fuerte
+      bridge: ["materialismo histórico", "dialéctica de Hegel", "socialismo utópico"]
+      note: "Engels discute con Dühring dando por sabida la dialéctica; conviene llegar con la base."
+  - theses-on-feuerbach
+  - imperialism-highest-stage
+  - marxism-unmasked
+asin:
+  es: "3860772074"
+kind: book
+topics: ["economia", "historia"]
+level: 1
+recommendation: mencion
+summary: "Texto fundacional del comunismo."
+context: "Dato biográfico de cuándo lo leyó."
+sources:
+  - url: "https://www.youtube.com/watch?v=-gZ_szjtEcI&t=413s"
+    title: "Marco Palazzo patoteado fuera de las universidades."
+    timestamp: "6:53"
+    quote: "el Manifiesto Comunista mucho después, cuando ya estaba en la universidad"

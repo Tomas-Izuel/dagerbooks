@@ -1,0 +1,22 @@
+# yaml-language-server: $schema=../book.schema.json
+
+id: interventionism-an-economic-analysis
+seq: 134
+title: "Interventionism: An Economic Analysis"
+titleEs: "Intervencionismo: un análisis económico"
+authors: ["Ludwig von Mises"]
+year: 1940
+leadsTo: ["human-action"]
+asin:
+  es: "0865977399"
+kind: book
+topics: ["economia"]
+level: 3
+recommendation: mencion
+summary: "Mises explica cómo cada intervención estatal en el mercado genera distorsiones que llevan a pedir más intervención."
+context: "Lo cita como el libro donde Mises describe cómo un poquito de Estado obliga a más Estado."
+sources:
+  - url: "https://www.youtube.com/watch?v=BXO8Gas3lQs&t=5141s"
+    title: "1 EMPRESARIO vs. 20 TRABAJADORES | Reacción"
+    timestamp: "85:41"
+    quote: "interventionism anolomic analisis, creo que se llama el libro de mise"

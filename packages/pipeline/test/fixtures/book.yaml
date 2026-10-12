@@ -1,0 +1,24 @@
+# yaml-language-server: $schema=../book.schema.json
+
+id: un-libro
+seq: 3
+title: "Un libro"
+titleEs: "Un libro en español"
+authors: ["Ana Pérez", "Luis Gómez"]
+year: 1999
+kind: book
+topics: ["fisica"]
+level: 2
+recommendation: fuerte
+summary: "De qué trata."
+context: "Por qué lo recomienda."
+sources:
+  - url: "https://www.youtube.com/watch?v=YQfRVo5UwOM&t=77s"
+    title: "Un video"
+    timestamp: "1:17"
+    quote: "lo recomiendo"
+leadsTo: ["otro-libro"]
+isbn: "9781443425438"
+asin:
+  es: "0520271513"
+coverId: 9162125

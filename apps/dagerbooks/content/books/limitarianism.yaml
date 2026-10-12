@@ -1,0 +1,21 @@
+# yaml-language-server: $schema=../book.schema.json
+
+id: limitarianism
+seq: 138
+title: "Limitarianism: The Case Against Extreme Wealth"
+titleEs: "Limitarismo"
+authors: ["Ingrid Robeyns"]
+year: 2024
+asin:
+  es: "1802060472"
+kind: book
+topics: ["economia"]
+level: 3
+recommendation: mencion
+summary: "Ingrid Robeyns propone fijar un límite máximo a la riqueza individual por razones de justicia y democracia."
+context: "Leyó dos capítulos; encuentra interesante la idea pero la critica (límite legal de 10M, problemas de implementación e incentivos)."
+sources:
+  - url: "https://www.youtube.com/watch?v=ZXx59N6Fd3g&t=37s"
+    title: "Limitarismo, ¿existe tal cosa como mucho dinero?"
+    timestamp: "0:37"
+    quote: "Esta idea de un libro que se llama Limitarianismo, precisamente de una economista y filósofa belga que se llama Ingrid Robin"

@@ -1,0 +1,39 @@
+# yaml-language-server: $schema=../book.schema.json
+
+id: free-to-choose
+seq: 98
+title: "Free to Choose"
+authors: ["Milton Friedman", "Rose Friedman"]
+year: 1980
+kind: book
+topics: ["economia"]
+level: 2
+recommendation: interesante
+summary: "Defensa del libre mercado y de la libertad económica basada en la serie televisiva."
+context: "Le dice a su interlocutor que lo lea y lo cita seguido junto a Capitalismo y libertad, al que considera un libro algo más duro."
+sources:
+  - url: "https://www.youtube.com/watch?v=BXO8Gas3lQs&t=3734s"
+    title: "1 EMPRESARIO vs. 20 TRABAJADORES | Reacción"
+    timestamp: "62:14"
+    quote: "leete e free to choose de Freedman."
+  - url: "https://www.youtube.com/watch?v=GQeIIkktW9Y&t=23s"
+    title: "Milton Friedman y MINECRAFT. #fyp #clips #argentina"
+    timestamp: "0:23"
+    quote: "un libro un poquito más duro que Free to"
+  - url: "https://www.youtube.com/watch?v=93wMFZdVSNE&t=190s"
+    title: "¿Restricciones para la yerba mate en... Argentina? | Falopa política"
+    timestamp: "3:10"
+    quote: "Friedman lo dice muy claramente, no recuerdo si en free to chose son capitalismo y libertad porque los leí muy cerca sus libros"
+  - url: "https://www.youtube.com/watch?v=k9txcNp1DSA&t=1639s"
+    title: "Leyendo las notas del parche en Argentina, la reforma laboral."
+    timestamp: "27:19"
+    quote: "Eso es algo que Friedman dice muy felizmente, creo que en free to choose o capitalismo de libertad"
+  - url: "https://www.youtube.com/watch?v=DhFQ_yNFuwA&t=2139s"
+    title: "¿Y SI EL PROBLEMA SOS VOS? (y otras cosas)"
+    timestamp: "0:35:39"
+    quote: "de intro a economía en general tenés Haslid primero, después tenés Free to Choose, después tenés Capitalismo y Libertad de Friedman, o sea tenés ese caminito ahí de introducción"
+leadsTo: ["capitalism-and-freedom", "wealth-of-nations"]
+isbn: "9780156334600"
+asin:
+  es: "0156334607"
+coverId: 4393564

@@ -1,0 +1,21 @@
+# yaml-language-server: $schema=../book.schema.json
+
+id: the-world-set-free
+seq: 121
+title: "The World Set Free"
+titleEs: "El mundo liberado"
+authors: ["H. G. Wells"]
+year: 1914
+asin:
+  es: "1434430278"
+kind: book
+topics: ["ficcion"]
+level: 1
+recommendation: mencion
+summary: "Novela de H. G. Wells que anticipa la energía atómica y una guerra con bombas nucleares."
+context: "Lo cita como la novela de 1914 que introdujo el concepto de bomba atómica y que leyó Leo Szilard, ejemplo de infohazard."
+sources:
+  - url: "https://www.youtube.com/watch?v=wdn09iapSVA&t=502s"
+    title: "Cosas que NO DEBERÍAS SABER."
+    timestamp: "8:22"
+    quote: "cuando H. y Wells publicó su novela The World set Free"

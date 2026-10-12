@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../book.schema.json
+
+id: atomic-habits
+seq: 49
+title: "Atomic Habits"
+titleEs: "Hábitos atómicos"
+authors: ["James Clear"]
+year: 2018
+kind: book
+topics: ["desarrollo-personal"]
+level: 1
+recommendation: fuerte
+summary: "James Clear presenta un sistema práctico para formar buenos hábitos y eliminar los malos mediante cambios pequeños y constantes."
+context: "Es el único libro de autoayuda que recomendaría honestamente; lo ubica primero en su lista y lo regaló a su pareja."
+sources:
+  - url: "https://www.youtube.com/watch?v=V7NNviAqMh4&t=4135s"
+    title: "Libros de autoayuda no TAN malos."
+    timestamp: "68:55"
+    quote: "es el único libro de toda esta categoría de libros de, entre comillas, autoayuda que yo honestamente recomendaría."
+  - url: "https://www.youtube.com/watch?v=wgtGulLPwE8&t=64s"
+    title: "Libros de AUTOAYUDA que SÍ SIRVEN."
+    timestamp: "1:04"
+    quote: "El primer libro de la lista es el más obvio de todos y se trata de Hábitos Atómicos... Me gustó mucho en su momento"
+  - url: "https://www.youtube.com/watch?v=Y1TukyHR4VU&t=205s"
+    title: "Dager explica como se organiza en un día a día."
+    timestamp: "3:25"
+    quote: "Todo eso está en Atomic Habits, que es un librazo"
+  - url: "https://www.youtube.com/watch?v=uwJRGMRpBkE&t=4998s"
+    title: "Dager te enseña a hacer un server DNS #5."
+    timestamp: "83:18"
+    quote: "Sácate las distracciones del camino Le atomic habits que tiene muchos buenos consejos sobre cómo hacer esa clase de cosas"
+isbn: "9780735211292"
+asin:
+  es: "0735211299"
+coverId: 12539702

@@ -1,0 +1,42 @@
+# yaml-language-server: $schema=../book.schema.json
+
+id: economics-in-one-lesson
+seq: 95
+title: "Economics in One Lesson"
+authors: ["Henry Hazlitt"]
+year: 1946
+kind: book
+topics: ["economia"]
+level: 1
+recommendation: interesante
+summary: "Introducción divulgativa a la economía de libre mercado."
+context: "Lo recomienda como lectura básica de economía y lo cita seguido, sobre todo la idea de la ventana rota; en un video anterior había dicho que le gusta aunque \"no tanto\"."
+sources:
+  - url: "https://www.youtube.com/watch?v=BXO8Gas3lQs&t=3727s"
+    title: "1 EMPRESARIO vs. 20 TRABAJADORES | Reacción"
+    timestamp: "62:07"
+    quote: "Lee la economía en una lección de Hlle."
+  - url: "https://www.youtube.com/watch?v=Pg24h9UuoNo&t=856s"
+    title: "Michelo esta gaga."
+    timestamp: "14:16"
+    quote: "esto es algo que Haslit dice en economía en una lección"
+  - url: "https://www.youtube.com/watch?v=RgOmhnWAPbE&t=373s"
+    title: "Mercado Libre llora porque Temu es muy barato."
+    timestamp: "6:13"
+    quote: "Eso es lo que Hasley decía, que es una filosofía de la destrucción o lo que Bastiat decía que era la idea de la ventana rota"
+  - url: "https://www.youtube.com/watch?v=BXO8Gas3lQs&t=6034s"
+    title: "1 EMPRESARIO vs. 20 TRABAJADORES | Reacción"
+    timestamp: "100:34"
+    quote: "También lo dice Hasle en la economía en una elección"
+  - url: "https://www.youtube.com/watch?v=DhFQ_yNFuwA&t=2138s"
+    title: "¿Y SI EL PROBLEMA SOS VOS? (y otras cosas)"
+    timestamp: "0:35:38"
+    quote: "de intro a economía en general tenés Haslid primero, después tenés Free to Choose, después tenés Capitalismo y Libertad de Friedman, o sea tenés ese caminito ahí de introducción"
+leadsTo: ["free-to-choose", "the-road-to-serfdom", "the-anti-capitalistic-mentality", "chaos-theory", "quest-for-cosmic-justice", "from-mutual-aid-to-the-welfare-state"]
+related:
+  - id: "economic-sophisms"
+    reason: "Hazlitt retoma la falacia de la ventana rota de Bastiat"
+isbn: "9780517548233"
+asin:
+  es: "0517548232"
+coverId: 4437768

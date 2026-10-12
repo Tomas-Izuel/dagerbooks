@@ -1,0 +1,25 @@
+# yaml-language-server: $schema=../book.schema.json
+
+id: el-inmortal
+seq: 126
+title: "El inmortal"
+authors: ["Jorge Luis Borges"]
+year: 1949
+leadsTo: ["el-jardin-de-senderos-que-se-bifurcan"]
+asin:
+  es: "8499089518"
+kind: essay
+topics: ["ficcion"]
+level: 1
+recommendation: mencion
+summary: "Cuento de Borges incluido en El Aleph sobre un hombre que busca la ciudad de los inmortales y descubre el costo de no morir."
+context: "Lo cita para hablar de la mortalidad y del decirse adiós, tanto en un video sobre una película como en el del Dr. Manhattan."
+sources:
+  - url: "https://www.youtube.com/watch?v=ktRS4KtFP2Y&t=557s"
+    title: "La película más odiada de Robert Pattinson está bastante buena."
+    timestamp: "9:17"
+    quote: "hay un relato del inmortal que probablemente ya haya citado en algún otro momento"
+  - url: "https://www.youtube.com/watch?v=lv_svO3VwVk&t=465s"
+    title: "Dr. Manhattan, el hombre y la divinidad."
+    timestamp: "7:45"
+    quote: "por un lado del relato de borges oportunamente llamado el inmortal"

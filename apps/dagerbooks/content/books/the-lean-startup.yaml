@@ -1,0 +1,31 @@
+# yaml-language-server: $schema=../book.schema.json
+
+id: the-lean-startup
+seq: 63
+title: "The Lean Startup"
+titleEs: "El método Lean Startup"
+authors: ["Eric Ries"]
+year: 2011
+kind: book
+topics: ["startups"]
+level: 1
+recommendation: interesante
+summary: "Eric Ries propone construir startups con ciclos cortos de experimentación (construir-medir-aprender) en lugar de planificar en cascada."
+context: "Dice que es muy bueno pero que es el obvio que todos recomiendan."
+sources:
+  - url: "https://github.com/MarianoVilla/MarianoVilla/blob/main/README.md"
+    title: "GitHub: MarianoVilla/MarianoVilla README (Recommended Readings)"
+    quote: "A must-read for anyone who wants to build a startup. It's a bit outdated, but the principles are still valid."
+  - url: "https://www.youtube.com/watch?v=ESzZ45vYNyo&t=151s"
+    title: "Libros para ser mejor gordo empresario. #fyp #programacion #clips"
+    timestamp: "2:31"
+    quote: "Este es muy bueno."
+  - url: "https://www.youtube.com/watch?v=NUr6WVl1u0k&t=301s"
+    title: "Cómo dejar de ser gordo compu y ser gordo empresarial."
+    timestamp: "5:01"
+    quote: "es de Starup, tiene todo un método... Este es muy bueno, buen libro realmente sobre materia de startups"
+leadsTo: ["how-to-fuck-up-your-startup"]
+isbn: "9780307887894"
+asin:
+  es: "0307887898"
+coverId: 7104760

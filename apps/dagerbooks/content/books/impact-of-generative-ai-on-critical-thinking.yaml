@@ -1,0 +1,23 @@
+# yaml-language-server: $schema=../book.schema.json
+
+id: impact-of-generative-ai-on-critical-thinking
+seq: 185
+title: "The Impact of Generative AI on Critical Thinking"
+authors: ["Hao-Ping Lee"]
+year: 2025
+kind: paper
+topics: ["ia"]
+level: 1
+recommendation: mencion
+summary: "Estudio de Microsoft Research que encuentra una relación negativa entre la confianza en la IA y el pensamiento crítico."
+context: "Lo cita como un paper de Microsoft que estudió cómo la IA generativa afecta el pensamiento crítico."
+sources:
+  - url: "https://www.youtube.com/watch?v=m4me4mlm02E&t=543s"
+    title: "Tu cerebro en ChatGPT."
+    timestamp: "9:03"
+    quote: "Un reciente paper de Microsoft, de hecho, estudió este fenómeno"
+  - url: "https://www.youtube.com/watch?v=nIR95vS5Cnk&t=284s"
+    title: "Usar mucha IA apaga partes de tu cerebro.."
+    timestamp: "4:44"
+    quote: "el impacto de la inteligencia artificial generativa en el pensamiento crítico"
+leadsTo: ["computer-power-and-human-reason", "the-shallows"]

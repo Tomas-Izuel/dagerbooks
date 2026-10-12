@@ -1,0 +1,21 @@
+# yaml-language-server: $schema=../book.schema.json
+
+id: laws-of-thought-boole
+seq: 182
+title: "An Investigation of the Laws of Thought"
+titleEs: "Investigación de las leyes del pensamiento"
+authors: ["George Boole"]
+year: 1854
+asin:
+  es: "1781398577"
+kind: book
+topics: ["matematicas"]
+level: 3
+recommendation: mencion
+summary: "Boole formaliza el razonamiento lógico como un álgebra de valores verdadero y falso, base de la lógica booleana."
+context: "Lo cita en su video sobre el binario como la justificación teórica de que el pensamiento se pueda representar con ceros y unos."
+sources:
+  - url: "https://www.youtube.com/watch?v=p3Q4lTNxSfQ&t=416s"
+    title: "¿Por qué usan BINARIO las computadoras?"
+    timestamp: "6:56"
+    quote: "en 1854 George Bull escribió un libro en el que decía que cualquier proposición del pensamiento humano se podía representar como uno de dos estados"

@@ -1,0 +1,25 @@
+# yaml-language-server: $schema=../book.schema.json
+
+id: der-antichrist
+seq: 163
+title: "Der Antichrist"
+titleEs: "El anticristo"
+authors: ["Friedrich Nietzsche"]
+year: 1895
+asin:
+  es: "3458326472"
+kind: book
+topics: ["filosofia"]
+level: 3
+recommendation: mencion
+summary: "Nietzsche ataca al cristianismo como una moral que debilita la vida."
+context: "Usa la idea del dios omnibenevolente castrado e inútil, tanto en su video del Dr. Manhattan como en el de la meritocracia."
+sources:
+  - url: "https://www.youtube.com/watch?v=lv_svO3VwVk&t=1052s"
+    title: "Dr. Manhattan, el hombre y la divinidad."
+    timestamp: "17:32"
+    quote: "hay un texto célebre de nietzsche del anticristo"
+  - url: "https://www.youtube.com/watch?v=liMHsimalnA&t=741s"
+    title: "¿Tiene la meritocracia sentido?"
+    timestamp: "12:21"
+    quote: "creo que está en el anticristo esto, la idea de que un dios omnibenevolente es un dios castrado"

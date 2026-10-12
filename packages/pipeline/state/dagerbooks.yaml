@@ -1,0 +1,6305 @@
+# Estado de ingesta: qué fuentes se procesaron y en qué quedaron. Lo escribe la pipeline.
+# status: discovered | transcribed | extracted | merged | skipped
+
+sources:
+  - id: _6bgkB9MUZw
+    platform: youtube
+    channel: DagerClips
+    title: Recházalo Jarvis.
+    url: https://www.youtube.com/shorts/_6bgkB9MUZw
+    status: extracted
+    at: 2026-10-12
+  - id: _8jUm_DOyYU
+    platform: youtube
+    channel: ElAntroDeDager
+    title: "Shutter Island (La Isla Siniestra): locura y negación."
+    duration: 607
+    url: https://www.youtube.com/watch?v=_8jUm_DOyYU
+    status: merged
+    at: 2026-10-12
+  - id: _AccUdRXp8g
+    platform: youtube
+    channel: DagerClips
+    title: Hagan buenos jueguitos.
+    url: https://www.youtube.com/shorts/_AccUdRXp8g
+    status: extracted
+    at: 2026-10-12
+  - id: _cG5qie8zFA
+    platform: youtube
+    channel: DagerClips
+    title: "Dager habla del pingüino 🐧 #linux  #fyp  #programming  #argentina"
+    url: https://www.youtube.com/shorts/_cG5qie8zFA
+    status: extracted
+    at: 2026-10-12
+  - id: _d8KSqXrUl0
+    platform: youtube
+    channel: DagerClips
+    title: Entrevistarse.
+    url: https://www.youtube.com/shorts/_d8KSqXrUl0
+    status: extracted
+    at: 2026-10-12
+  - id: _o_CgJdVtHk
+    platform: youtube
+    channel: DotDager
+    title: "5 anos de experiencia. #fyp #programacion #clips"
+    url: https://www.youtube.com/shorts/_o_CgJdVtHk
+    status: extracted
+    at: 2026-10-12
+  - id: _RD6Rqw-Sf8
+    platform: youtube
+    channel: DotDager
+    title: CÓMO TOMAR APUNTES (pero bien).
+    duration: 863
+    url: https://www.youtube.com/watch?v=_RD6Rqw-Sf8
+    status: extracted
+    at: 2026-10-12
+  - id: _tdf1ilwmlE
+    platform: youtube
+    channel: DotDager
+    title: Feliz navidad.
+    url: https://www.youtube.com/watch?v=_tdf1ilwmlE
+    status: discovered
+    duration: 13482
+    at: 2026-10-12
+  - id: _u6R8FiAwMU
+    platform: youtube
+    channel: DagerClips
+    title: Programar ya no es lo que era.
+    duration: 1021
+    url: https://www.youtube.com/watch?v=_u6R8FiAwMU
+    status: merged
+    at: 2026-10-12
+  - id: _ulB-oDKRvg
+    platform: youtube
+    channel: DotDager
+    title: El futuro que nos tocó.
+    duration: 259
+    url: https://www.youtube.com/watch?v=_ulB-oDKRvg
+    status: extracted
+    at: 2026-10-12
+  - id: _W5lD4zjE_0
+    platform: youtube
+    channel: DagerClips
+    title: O dejen que Claude haga todo.
+    url: https://www.youtube.com/shorts/_W5lD4zjE_0
+    status: extracted
+    at: 2026-10-12
+  - id: _XYOjBq2SyI
+    platform: youtube
+    channel: DagerClips
+    title: Meta anda doxxeando gente.
+    duration: 635
+    url: https://www.youtube.com/watch?v=_XYOjBq2SyI
+    status: extracted
+    at: 2026-10-12
+  - id: -6BUgdafAns
+    platform: youtube
+    channel: DagerClips
+    title: Dager juega Mortuary Assistant
+    duration: 4222
+    url: https://www.youtube.com/watch?v=-6BUgdafAns
+    status: extracted
+    at: 2026-10-12
+  - id: -CnV_pLJv7E
+    platform: youtube
+    channel: DotDager
+    title: Cómo hacer un server HTTP con Maizena y C# (Parte 4, estoy cansado, jefe)
+    url: https://www.youtube.com/watch?v=-CnV_pLJv7E
+    status: discovered
+    duration: 12879
+    at: 2026-10-12
+  - id: -cOJEGBp_UU
+    platform: youtube
+    channel: DotDager
+    title: "Sacude la nutria. #clips #fyp"
+    url: https://www.youtube.com/shorts/-cOJEGBp_UU
+    status: extracted
+    at: 2026-10-12
+  - id: -CtXS2mv6t8
+    platform: youtube
+    channel: DagerClips
+    title: "El freelance es clave. #fyp  #dev  #freelance  #programacion  #clips  #libros"
+    url: https://www.youtube.com/shorts/-CtXS2mv6t8
+    status: merged
+    at: 2026-10-12
+  - id: -Ftx5IjIIK0
+    platform: youtube
+    channel: DagerClips
+    title: ¿Se le puede negar el agua/comida a alguien?
+    duration: 420
+    url: https://www.youtube.com/watch?v=-Ftx5IjIIK0
+    status: extracted
+    at: 2026-10-12
+  - id: -gZ_szjtEcI
+    platform: youtube
+    channel: DagerClips
+    title: Marco Palazzo patoteado fuera de las universidades.
+    duration: 1141
+    url: https://www.youtube.com/watch?v=-gZ_szjtEcI
+    status: merged
+    at: 2026-10-12
+  - id: -HowqWHMSiE
+    platform: youtube
+    channel: DagerClips
+    title: ¿Vale la pena terminar  la carrera?
+    duration: 103
+    url: https://www.youtube.com/watch?v=-HowqWHMSiE
+    status: extracted
+    at: 2026-10-12
+  - id: -iPy7-kkCGM
+    platform: youtube
+    channel: DagerClips
+    title: '"Gemelo Digital" El GOBIERNO quiere hacer PERFILES de NOSOTROS con IA.'
+    duration: 813
+    url: https://www.youtube.com/watch?v=-iPy7-kkCGM
+    status: merged
+    at: 2026-10-12
+  - id: -J8enoXE9aw
+    platform: youtube
+    channel: DotDager
+    title: I GOT A JOB
+    duration: 464
+    url: https://www.youtube.com/watch?v=-J8enoXE9aw
+    status: extracted
+    at: 2026-10-12
+  - id: -Lgm-gncXC4
+    platform: youtube
+    channel: DagerClips
+    title: DeepSeek, ¿ChatGPT killer?
+    duration: 366
+    url: https://www.youtube.com/watch?v=-Lgm-gncXC4
+    status: extracted
+    at: 2026-10-12
+  - id: -LxsYr5RpvQ
+    platform: youtube
+    channel: DotDager
+    title: "VIBE CODING SIENDO AUTODIDACTA #dev #chatgpt #cocacola"
+    url: https://www.youtube.com/shorts/-LxsYr5RpvQ
+    status: extracted
+    at: 2026-10-12
+  - id: -mgZ6dtkvvY
+    platform: youtube
+    channel: DagerClips
+    title: "Y ya fue entonces. #fyp #clip #dev #twitch #economia  #política"
+    url: https://www.youtube.com/shorts/-mgZ6dtkvvY
+    status: extracted
+    at: 2026-10-12
+  - id: 0_qPAtdHNlA
+    platform: youtube
+    channel: DotDager
+    title: Introducción a la cosística | !discord !falopa !links
+    url: https://www.youtube.com/watch?v=0_qPAtdHNlA
+    status: discovered
+    duration: 8733
+    at: 2026-10-12
+  - id: 01LgizVmfRg
+    platform: youtube
+    channel: DagerClips
+    title: Parásitos mentales, reaccionando.
+    duration: 2388
+    url: https://www.youtube.com/watch?v=01LgizVmfRg
+    status: merged
+    at: 2026-10-12
+  - id: 03RmCPJkUmM
+    platform: youtube
+    channel: DotDager
+    title: "¿IA INTENTÓ ESCAPAR? #ia #fyp #programacion"
+    url: https://www.youtube.com/shorts/03RmCPJkUmM
+    status: extracted
+    at: 2026-10-12
+  - id: 0anh408QatE
+    platform: youtube
+    channel: DagerClips
+    title: ¿Por que tengo tantos trabajos?
+    url: https://www.youtube.com/shorts/0anh408QatE
+    status: extracted
+    at: 2026-10-12
+  - id: 0h3u_o4G-Zk
+    platform: youtube
+    channel: DagerClips
+    title: Libertad para morir de hambre | Falopa Política
+    duration: 1518
+    url: https://www.youtube.com/watch?v=0h3u_o4G-Zk
+    status: merged
+    at: 2026-10-12
+  - id: 0hO_qeoaVvU
+    platform: youtube
+    channel: DotDager
+    title: "¿POR QUÉ TE METISTE A UN BOOTCAMP? #fyp #programacion #dev"
+    url: https://www.youtube.com/shorts/0hO_qeoaVvU
+    status: extracted
+    at: 2026-10-12
+  - id: 0iMbmYAGQTc
+    platform: youtube
+    channel: DotDager
+    title: Programador JSON fullstack | !discord !falopa !links
+    url: https://www.youtube.com/watch?v=0iMbmYAGQTc
+    status: discovered
+    duration: 16275
+    at: 2026-10-12
+  - id: 0jC2CNjBdD8
+    platform: youtube
+    channel: DagerClips
+    title: Lo de Marruecos y España es SALVAJE.
+    duration: 1621
+    url: https://www.youtube.com/watch?v=0jC2CNjBdD8
+    status: extracted
+    at: 2026-10-12
+  - id: 0klKaA9TOYo
+    platform: youtube
+    channel: DagerClips
+    title: '"Friend" la IA que podes llevar en el cuello.'
+    duration: 1260
+    url: https://www.youtube.com/watch?v=0klKaA9TOYo
+    status: merged
+    at: 2026-10-12
+  - id: 0lw5wl2s2V8
+    platform: youtube
+    channel: DagerClips
+    title: '"Hacker" usa el F12 para viajar gratis por el mundo.'
+    duration: 1001
+    url: https://www.youtube.com/watch?v=0lw5wl2s2V8
+    status: extracted
+    at: 2026-10-12
+  - id: 0P8ShXDbHD4
+    platform: youtube
+    channel: ElAntroDeDager
+    title: "Hábitos Atómicos III: La motivación está sobrevalorada (o cómo querer hacer lo que tenés que hacer)."
+    duration: 373
+    url: https://www.youtube.com/watch?v=0P8ShXDbHD4
+    status: extracted
+    at: 2026-10-12
+  - id: 0RSkjci_Cac
+    platform: youtube
+    channel: DotDager
+    title: AGENTES DEL CAOS y otras cosas | !discord !falopa !links
+    url: https://www.youtube.com/watch?v=0RSkjci_Cac
+    status: discovered
+    duration: 12810
+    at: 2026-10-12
+  - id: 0WcXNZ9ZcLc
+    platform: youtube
+    channel: DotDager
+    title: "ROBUX EN .VSCODE #fyp #programacion #dev"
+    url: https://www.youtube.com/shorts/0WcXNZ9ZcLc
+    status: extracted
+    at: 2026-10-12
+  - id: 0wQ7Jc9QZMI
+    platform: youtube
+    channel: DotDager
+    title: Dejá de estudiar programación.
+    duration: 413
+    url: https://www.youtube.com/watch?v=0wQ7Jc9QZMI
+    status: merged
+    at: 2026-10-12
+  - id: 0Xg6gnwacA0
+    platform: youtube
+    channel: DagerClips
+    title: El problema de la educación pública | Falopa política
+    duration: 1737
+    url: https://www.youtube.com/watch?v=0Xg6gnwacA0
+    status: extracted
+    at: 2026-10-12
+  - id: 129JUyn4LIs
+    platform: youtube
+    channel: ElAntroDeDager
+    title: "La motivación sigue sobrevalorada #shorts"
+    url: https://www.youtube.com/shorts/129JUyn4LIs
+    status: discovered
+    at: 2026-10-12
+  - id: 16dZjvnT05k
+    platform: youtube
+    channel: DotDager
+    title: "No te olvides de poner el WHERE. #fyp #programacion #clips"
+    url: https://www.youtube.com/shorts/16dZjvnT05k
+    status: extracted
+    at: 2026-10-12
+  - id: 16VV7FZNkVM
+    platform: youtube
+    channel: DotDager
+    title: "Tremendo oportunidad laboral. #programación #fyp #dev"
+    url: https://www.youtube.com/shorts/16VV7FZNkVM
+    status: extracted
+    at: 2026-10-12
+  - id: 1B5Kh-0ruqw
+    platform: youtube
+    channel: DotDager
+    title: Informático rechoncho discurre sobre asuntos.
+    url: https://www.youtube.com/watch?v=1B5Kh-0ruqw
+    status: discovered
+    duration: 18027
+    at: 2026-10-12
+  - id: 1DoC02daN9o
+    platform: youtube
+    channel: DagerClips
+    title: Los mejores robots también son… ¿Los más fáciles de hackear?
+    duration: 757
+    url: https://www.youtube.com/watch?v=1DoC02daN9o
+    status: extracted
+    at: 2026-10-12
+  - id: 1eoACgNxJW4
+    platform: youtube
+    channel: DagerClips
+    title: Simulando mi carrera política en Puntero.
+    duration: 1410
+    url: https://www.youtube.com/watch?v=1eoACgNxJW4
+    status: extracted
+    at: 2026-10-12
+  - id: 1GI-nCzaNjU
+    platform: youtube
+    channel: DagerClips
+    title: La mentira de Worldcoin.
+    duration: 1390
+    url: https://www.youtube.com/watch?v=1GI-nCzaNjU
+    status: extracted
+    at: 2026-10-12
+  - id: 1hXv-ITZyqQ
+    platform: youtube
+    channel: DotDager
+    title: "Estoy a solas con Messi. #fyp #messi #twitch"
+    url: https://www.youtube.com/shorts/1hXv-ITZyqQ
+    status: extracted
+    at: 2026-10-12
+  - id: 1jTOU4FO2o4
+    platform: youtube
+    channel: DagerClips
+    title: El internet murio.
+    url: https://www.youtube.com/shorts/1jTOU4FO2o4
+    status: extracted
+    at: 2026-10-12
+  - id: 1muqSINDTH8
+    platform: youtube
+    channel: DagerClips
+    title: Apple sucks me off.
+    duration: 481
+    url: https://www.youtube.com/watch?v=1muqSINDTH8
+    status: extracted
+    at: 2026-10-12
+  - id: 1rXgqKtViJI
+    platform: youtube
+    channel: DagerClips
+    title: Esos containers no podían esperar.
+    url: https://www.youtube.com/shorts/1rXgqKtViJI
+    status: extracted
+    at: 2026-10-12
+  - id: 1tbGihrf9Qo
+    platform: youtube
+    channel: DagerClips
+    title: "Todo depende viste.. #fyp #twitch #clip #funny #programador #dev #programacion"
+    url: https://www.youtube.com/shorts/1tbGihrf9Qo
+    status: extracted
+    at: 2026-10-12
+  - id: 1xC_vaWKcx0
+    platform: youtube
+    channel: ElAntroDeDager
+    title: "Viaje en el tiempo IV: El pasado y las paradojas."
+    duration: 1814
+    url: https://www.youtube.com/watch?v=1xC_vaWKcx0
+    status: merged
+    at: 2026-10-12
+  - id: 1xQVtUjiqq0
+    platform: youtube
+    channel: DagerClips
+    title: No sean nerds muchachos.
+    url: https://www.youtube.com/shorts/1xQVtUjiqq0
+    status: extracted
+    at: 2026-10-12
+  - id: 1ydguQu6EUg
+    platform: youtube
+    channel: ElAntroDeDager
+    title: ¿En qué momento hay que usar barbijo/tapabocas?
+    duration: 102
+    url: https://www.youtube.com/watch?v=1ydguQu6EUg
+    status: skipped
+    at: 2026-10-12
+    reason: sin transcripción automática
+  - id: 1Z5EqGFXZ5k
+    platform: youtube
+    channel: DotDager
+    title: CASARON POSAS | !discord !falopa !links
+    url: https://www.youtube.com/watch?v=1Z5EqGFXZ5k
+    status: discovered
+    duration: 13385
+    at: 2026-10-12
+  - id: 20-b3v-dq68
+    platform: youtube
+    channel: DagerClips
+    title: "Cuanto importa la experiencia laboral en el mercado. ⌨ #fyp #twitch #dev #coding #work #clips"
+    url: https://www.youtube.com/shorts/20-b3v-dq68
+    status: extracted
+    at: 2026-10-12
+  - id: 2eRdtVbLLWA
+    platform: youtube
+    channel: DagerClips
+    title: 220 estudiantes no pudieron rendir programación I | Arti-culo
+    duration: 381
+    url: https://www.youtube.com/watch?v=2eRdtVbLLWA
+    status: extracted
+    at: 2026-10-12
+  - id: 2H9_mRSsEUQ
+    platform: youtube
+    channel: DagerClips
+    title: ¿Debería el uso de IA ser obligatorio? | Forobardo
+    duration: 470
+    url: https://www.youtube.com/watch?v=2H9_mRSsEUQ
+    status: extracted
+    at: 2026-10-12
+  - id: 2ldfU8vvG1s
+    platform: youtube
+    channel: DotDager
+    title: PENE es el mejor stack del mundo | PENE stack 1
+    url: https://www.youtube.com/watch?v=2ldfU8vvG1s
+    status: discovered
+    duration: 13836
+    at: 2026-10-12
+  - id: 2TX9Sf6i7SU
+    platform: youtube
+    channel: DagerClips
+    title: El bug FATAL que le costó la VIDA a varias personas...
+    duration: 1394
+    url: https://www.youtube.com/watch?v=2TX9Sf6i7SU
+    status: merged
+    at: 2026-10-12
+  - id: 2wfahAD_kWQ
+    platform: youtube
+    channel: DotDager
+    title: Vamo' a programar un server DNS en C# (parte 1) | Live coding
+    url: https://www.youtube.com/watch?v=2wfahAD_kWQ
+    status: discovered
+    duration: 13190
+    at: 2026-10-12
+  - id: 30-_wyr2EI4
+    platform: youtube
+    channel: DagerClips
+    title: Using AI to "Reinterpret" Art.
+    duration: 502
+    url: https://www.youtube.com/watch?v=30-_wyr2EI4
+    status: extracted
+    at: 2026-10-12
+  - id: 38_SxJgMR2U
+    platform: youtube
+    channel: DagerClips
+    title: USA compra pesos y a China no le ceba.
+    duration: 729
+    url: https://www.youtube.com/watch?v=38_SxJgMR2U
+    status: extracted
+    at: 2026-10-12
+  - id: 3EYUVq083a4
+    platform: youtube
+    channel: DotDager
+    title: ATCHÍS | !discord !falopa !links
+    url: https://www.youtube.com/watch?v=3EYUVq083a4
+    status: discovered
+    duration: 10940
+    at: 2026-10-12
+  - id: 3Hgb_e_oGGQ
+    platform: youtube
+    channel: DotDager
+    title: Esto NO ES ESTOICISMO.
+    duration: 731
+    url: https://www.youtube.com/watch?v=3Hgb_e_oGGQ
+    status: merged
+    at: 2026-10-12
+  - id: 3LCh-Sx8wgg
+    platform: youtube
+    channel: ElAntroDeDager
+    title: El video incompl
+    duration: 38
+    url: https://www.youtube.com/watch?v=3LCh-Sx8wgg
+    status: extracted
+    at: 2026-10-12
+  - id: 3qXR_6prIks
+    platform: youtube
+    channel: DagerClips
+    title: If you study philosophy, are you left-handed?
+    duration: 328
+    url: https://www.youtube.com/watch?v=3qXR_6prIks
+    status: extracted
+    at: 2026-10-12
+  - id: 3RMVkiGToio
+    platform: youtube
+    channel: DotDager
+    title: Te falta pasión.
+    duration: 222
+    url: https://www.youtube.com/watch?v=3RMVkiGToio
+    status: extracted
+    at: 2026-10-12
+  - id: 3rneI8vuwZM
+    platform: youtube
+    channel: DotDager
+    title: "Caca al horno con papas. #fyp #clip #clips"
+    url: https://www.youtube.com/shorts/3rneI8vuwZM
+    status: extracted
+    at: 2026-10-12
+  - id: 3uFLk-Yyg2o
+    platform: youtube
+    channel: DagerClips
+    title: Suficiente
+    url: https://www.youtube.com/shorts/3uFLk-Yyg2o
+    status: extracted
+    at: 2026-10-12
+  - id: 3ut5_Og1XBY
+    platform: youtube
+    channel: DotDager
+    title: Cómo hacer un server HTTP con Maizena y C# (Parte 3, la venganza de la venganza)
+    url: https://www.youtube.com/watch?v=3ut5_Og1XBY
+    status: discovered
+    duration: 12775
+    at: 2026-10-12
+  - id: 3V33O-L44Hk
+    platform: youtube
+    channel: ElAntroDeDager
+    title: "Las Cuatro Leyes de Hábitos Atómicos (James Clear) | Te lo explico así nomás #shorts"
+    url: https://www.youtube.com/shorts/3V33O-L44Hk
+    status: discovered
+    at: 2026-10-12
+  - id: 4-HB0SqASbE
+    platform: youtube
+    channel: DotDager
+    title: Programando música (y hablando (de cosas)) | !discord !falopa
+    url: https://www.youtube.com/watch?v=4-HB0SqASbE
+    status: discovered
+    duration: 30382
+    at: 2026-10-12
+  - id: 431orjIOuzE
+    platform: youtube
+    channel: DagerClips
+    title: Lo del mismo sexo es debatible
+    url: https://www.youtube.com/shorts/431orjIOuzE
+    status: extracted
+    at: 2026-10-12
+  - id: 44y9pwfutus
+    platform: youtube
+    channel: DotDager
+    title: "La Dager Academy. #fyp #programacion #clips"
+    url: https://www.youtube.com/shorts/44y9pwfutus
+    status: extracted
+    at: 2026-10-12
+  - id: 49dFtcsPzEg
+    platform: youtube
+    channel: DagerClips
+    title: "Como empece a trabajar para el exterior desde Argentina 🇦🇷 #fyp #dev #programming #twitch"
+    url: https://www.youtube.com/shorts/49dFtcsPzEg
+    status: extracted
+    at: 2026-10-12
+  - id: 4Ju0HbJum7Y
+    platform: youtube
+    channel: DagerClips
+    title: Las aventuras de Kicillof | Falopa política
+    duration: 776
+    url: https://www.youtube.com/watch?v=4Ju0HbJum7Y
+    status: extracted
+    at: 2026-10-12
+  - id: 4jvM56thZls
+    platform: youtube
+    channel: DagerClips
+    title: "Don't ask if you can ask. #fyp #tip"
+    url: https://www.youtube.com/shorts/4jvM56thZls
+    status: extracted
+    at: 2026-10-12
+  - id: 4KS9wNywFyY
+    platform: youtube
+    channel: DagerClips
+    title: "Vos que estas todo el día boludeando con la compu nene  #fyp #clip #funny #abuela #streamer"
+    url: https://www.youtube.com/shorts/4KS9wNywFyY
+    status: extracted
+    at: 2026-10-12
+  - id: 5aapaPFCB8Q
+    platform: youtube
+    channel: DotDager
+    title: Juegos creados por ustedes | Game reviews, forobardo y Q&A.
+    url: https://www.youtube.com/watch?v=5aapaPFCB8Q
+    status: discovered
+    duration: 21569
+    at: 2026-10-12
+  - id: 5c9lxTMvivU
+    platform: youtube
+    channel: DagerClips
+    title: "Inspirador.. #fyp #clip #streamer #filosofia #aristóteles"
+    url: https://www.youtube.com/shorts/5c9lxTMvivU
+    status: extracted
+    at: 2026-10-12
+  - id: 5EDZHoozzhk
+    platform: youtube
+    channel: DagerClips
+    title: Sauron atiende a señora.
+    url: https://www.youtube.com/shorts/5EDZHoozzhk
+    status: extracted
+    at: 2026-10-12
+  - id: 5KxWFb7kSRE
+    platform: youtube
+    channel: DagerClips
+    title: "It's understood. #fyp #philosophy #clips"
+    url: https://www.youtube.com/shorts/5KxWFb7kSRE
+    status: merged
+    at: 2026-10-12
+  - id: 5kYGafo7wFY
+    platform: youtube
+    channel: DagerClips
+    title: Nuevo método muchachos.
+    url: https://www.youtube.com/shorts/5kYGafo7wFY
+    status: extracted
+    at: 2026-10-12
+  - id: 5NKVi9hwLFE
+    platform: youtube
+    channel: DagerClips
+    title: "Nota sobre las notas, tomen nota.   #twitch #programacion #cripto"
+    url: https://www.youtube.com/shorts/5NKVi9hwLFE
+    status: extracted
+    at: 2026-10-12
+  - id: 5Un_Mo1t7mI
+    platform: youtube
+    channel: DotDager
+    title: Codear es pegar con los codos.
+    url: https://www.youtube.com/watch?v=5Un_Mo1t7mI
+    status: discovered
+    duration: 12833
+    at: 2026-10-12
+  - id: 6-ooymqxr9Y
+    platform: youtube
+    channel: DagerClips
+    title: "Y ya saben.. #fyp #política #voto #democracia #twitch #clip"
+    url: https://www.youtube.com/shorts/6-ooymqxr9Y
+    status: extracted
+    at: 2026-10-12
+  - id: 62kqzaYdE_4
+    platform: youtube
+    channel: DagerClips
+    title: ¿Estamos en presencia de un gobierno tibio?
+    duration: 682
+    url: https://www.youtube.com/watch?v=62kqzaYdE_4
+    status: extracted
+    at: 2026-10-12
+  - id: 62xjASrc4qM
+    platform: youtube
+    channel: DagerClips
+    title: .NET es clave
+    url: https://www.youtube.com/shorts/62xjASrc4qM
+    status: extracted
+    at: 2026-10-12
+  - id: 62zGJRpFKmw
+    platform: youtube
+    channel: DotDager
+    title: NO QUIERO PRENDER (y otras cosas) | !discord !falopa !links
+    url: https://www.youtube.com/watch?v=62zGJRpFKmw
+    status: discovered
+    duration: 13140
+    at: 2026-10-12
+  - id: 63V-ymoX3Mc
+    platform: youtube
+    channel: DagerClips
+    title: No le caigo muy bien a los de devsarg | FOROBARDO
+    duration: 679
+    url: https://www.youtube.com/watch?v=63V-ymoX3Mc
+    status: extracted
+    at: 2026-10-12
+  - id: 64Y_ts46iS4
+    platform: youtube
+    channel: DotDager
+    title: Compito gordu habla de cosa(s).
+    url: https://www.youtube.com/watch?v=64Y_ts46iS4
+    status: discovered
+    duration: 18367
+    at: 2026-10-12
+  - id: 68HIc6QFrA4
+    platform: youtube
+    channel: DagerClips
+    title: "Cuando quieras Marce. #fyp #clip #twitch #funny #streamer"
+    url: https://www.youtube.com/shorts/68HIc6QFrA4
+    status: extracted
+    at: 2026-10-12
+  - id: 68yv_1Bw-2s
+    platform: youtube
+    channel: DagerClips
+    title: "It was the one from Adventures with the Kratts. #fyp #anecdote #clips #animal"
+    url: https://www.youtube.com/shorts/68yv_1Bw-2s
+    status: extracted
+    at: 2026-10-12
+  - id: 6bAHAcZWWeI
+    platform: youtube
+    channel: DagerClips
+    title: "Nada más que la verdad.  #fyp #clip #sociedad #streamer"
+    url: https://www.youtube.com/shorts/6bAHAcZWWeI
+    status: extracted
+    at: 2026-10-12
+  - id: 6ChBTPRoS5I
+    platform: youtube
+    channel: DagerClips
+    title: IAS Alineadamente desalineadas.
+    duration: 613
+    url: https://www.youtube.com/watch?v=6ChBTPRoS5I
+    status: extracted
+    at: 2026-10-12
+  - id: 6DQsbkcgXuM
+    platform: youtube
+    channel: DagerClips
+    title: Cuidado con mi vieja.
+    url: https://www.youtube.com/shorts/6DQsbkcgXuM
+    status: extracted
+    at: 2026-10-12
+  - id: 6kkh171TlFI
+    platform: youtube
+    channel: DotDager
+    title: BAJA DE IMPUTABILIDAD & HACKEARON NOTEPAD | !discord !falopa !links
+    url: https://www.youtube.com/watch?v=6kkh171TlFI
+    status: discovered
+    duration: 12791
+    at: 2026-10-12
+  - id: 6KwtQkUTe1I
+    platform: youtube
+    channel: DagerClips
+    title: La meritocracia es un MITO.
+    duration: 1947
+    url: https://www.youtube.com/watch?v=6KwtQkUTe1I
+    status: merged
+    at: 2026-10-12
+  - id: 6o5c43qtk9U
+    platform: youtube
+    channel: DagerClips
+    title: "El usuario es amor, el usuario es vida. #fyp #programacion #twitch #clip #dev"
+    url: https://www.youtube.com/shorts/6o5c43qtk9U
+    status: extracted
+    at: 2026-10-12
+  - id: 6peU31ataCc
+    platform: youtube
+    channel: DagerClips
+    title: Sujeto cree que hackeo Perplexity y aparece un dev a domarlo.
+    duration: 705
+    url: https://www.youtube.com/watch?v=6peU31ataCc
+    status: extracted
+    at: 2026-10-12
+  - id: 6RRxprSmqDE
+    platform: youtube
+    channel: DotDager
+    title: "LOS JAPONESES SON RAROS. #filosofia #humor #programacion"
+    url: https://www.youtube.com/shorts/6RRxprSmqDE
+    status: extracted
+    at: 2026-10-12
+  - id: 6uFXCkdDHvs
+    platform: youtube
+    channel: DagerClips
+    title: Español poseído por Milei pierde la cabeza en el programa de Viale
+    duration: 1119
+    url: https://www.youtube.com/watch?v=6uFXCkdDHvs
+    status: extracted
+    at: 2026-10-12
+  - id: 6Xij6NcnqLc
+    platform: youtube
+    channel: DotDager
+    title: CÓMO RECORDAR TODO LO QUE LEES.
+    duration: 727
+    url: https://www.youtube.com/watch?v=6Xij6NcnqLc
+    status: merged
+    at: 2026-10-12
+  - id: 6y-aX2O9FTI
+    platform: youtube
+    channel: ElAntroDeDager
+    title: "Filosofía de Pain: paz y dolor en Naruto Shippuden."
+    duration: 758
+    url: https://www.youtube.com/watch?v=6y-aX2O9FTI
+    status: extracted
+    at: 2026-10-12
+  - id: 6y4DZYF62H0
+    platform: youtube
+    channel: DagerClips
+    title: "Los trapitos.  #fyp #trapitos #clip #twitch #streamer #argentina🇦🇷"
+    url: https://www.youtube.com/shorts/6y4DZYF62H0
+    status: extracted
+    at: 2026-10-12
+  - id: 6y51_7rjQaM
+    platform: youtube
+    channel: DagerClips
+    title: ASCII sera nuestro fin
+    url: https://www.youtube.com/shorts/6y51_7rjQaM
+    status: extracted
+    at: 2026-10-12
+  - id: 722IPJTx5pM
+    platform: youtube
+    channel: DagerClips
+    title: ¿Devin AI es una farsa?
+    duration: 947
+    url: https://www.youtube.com/watch?v=722IPJTx5pM
+    status: extracted
+    at: 2026-10-12
+  - id: 7AM3ohw0VaY
+    platform: youtube
+    channel: DagerClips
+    title: La ANMAT banea Colgate
+    duration: 786
+    url: https://www.youtube.com/watch?v=7AM3ohw0VaY
+    status: extracted
+    at: 2026-10-12
+  - id: 7dZsM8TaWLk
+    platform: youtube
+    channel: DagerClips
+    title: Hackearon el senado de Mendoza y es un papelon...
+    duration: 606
+    url: https://www.youtube.com/watch?v=7dZsM8TaWLk
+    status: merged
+    at: 2026-10-12
+  - id: 7Lz1CMnWQPI
+    platform: youtube
+    channel: DotDager
+    title: Charlando, reaccionando a sus portfolios y regalando membresías.
+    url: https://www.youtube.com/watch?v=7Lz1CMnWQPI
+    status: discovered
+    duration: 14347
+    at: 2026-10-12
+  - id: 7qXJblFVhxk
+    platform: youtube
+    channel: DotDager
+    title: "Siempre se tienen 20 anios. #fyp #programacion #twitch"
+    url: https://www.youtube.com/shorts/7qXJblFVhxk
+    status: extracted
+    at: 2026-10-12
+  - id: 8-EjVgcrtXc
+    platform: youtube
+    channel: DotDager
+    title: Programación ilógica.
+    duration: 637
+    url: https://www.youtube.com/watch?v=8-EjVgcrtXc
+    status: extracted
+    at: 2026-10-12
+  - id: 8a4VVo6iqL4
+    platform: youtube
+    channel: DotDager
+    title: "ESTOICISMO MODERNO #filosofia #estoicismo #fyp"
+    url: https://www.youtube.com/shorts/8a4VVo6iqL4
+    status: extracted
+    at: 2026-10-12
+  - id: 8azv8boa8KU
+    platform: youtube
+    channel: DagerClips
+    title: "Malpensados.. #fyp #clip #streamer #twitch #funny #salchicha"
+    url: https://www.youtube.com/shorts/8azv8boa8KU
+    status: extracted
+    at: 2026-10-12
+  - id: 8c2VRiNf-wQ
+    platform: youtube
+    channel: DagerClips
+    title: "Kant el primer gatekeeper.. #fyp #filosofia #twitch #clip"
+    url: https://www.youtube.com/shorts/8c2VRiNf-wQ
+    status: merged
+    at: 2026-10-12
+  - id: 8c4RkHlImF4
+    platform: youtube
+    channel: ElAntroDeDager
+    title: Blade Runner y humanismo | Ética del retiramiento.
+    duration: 1593
+    url: https://www.youtube.com/watch?v=8c4RkHlImF4
+    status: merged
+    at: 2026-10-12
+  - id: 8erUsIGULKc
+    platform: youtube
+    channel: DotDager
+    title: "Mirá lo que hiciste, Leito.    #dev #programacion"
+    url: https://www.youtube.com/shorts/8erUsIGULKc
+    status: extracted
+    at: 2026-10-12
+  - id: 8fngZO3juZo
+    platform: youtube
+    channel: ElAntroDeDager
+    title: "Review del GTA San Andreas o algo así #shorts"
+    url: https://www.youtube.com/shorts/8fngZO3juZo
+    status: discovered
+    at: 2026-10-12
+  - id: 8kC98KmkiOw
+    platform: youtube
+    channel: DagerClips
+    title: Smurfeando en TimeGuessr.
+    duration: 1368
+    url: https://www.youtube.com/watch?v=8kC98KmkiOw
+    status: extracted
+    at: 2026-10-12
+  - id: 8nwo9o8DYzk
+    platform: youtube
+    channel: DagerClips
+    title: El principio de peter, cómo las empresas frenan tu progreso.
+    duration: 309
+    url: https://www.youtube.com/watch?v=8nwo9o8DYzk
+    status: extracted
+    at: 2026-10-12
+  - id: 8ovuA_4p41I
+    platform: youtube
+    channel: DagerClips
+    title: "¿Conviene quedarse en Argentina siendo un #dev?"
+    url: https://www.youtube.com/shorts/8ovuA_4p41I
+    status: extracted
+    at: 2026-10-12
+  - id: 8Pem0pegRWo
+    platform: youtube
+    channel: DotDager
+    title: ChatPTS, fafafa y Q&A
+    url: https://www.youtube.com/watch?v=8Pem0pegRWo
+    status: discovered
+    duration: 24825
+    at: 2026-10-12
+  - id: 8SiVEI1zMCY
+    platform: youtube
+    channel: DagerClips
+    title: 'Forobardo de la semana: "El sindicato de programadores es una PÉSIMA idea."'
+    duration: 1218
+    url: https://www.youtube.com/watch?v=8SiVEI1zMCY
+    status: merged
+    at: 2026-10-12
+  - id: 8SJc1cPig-Y
+    platform: youtube
+    channel: DotDager
+    title: Forobardo, falopa y jueguitos.
+    url: https://www.youtube.com/watch?v=8SJc1cPig-Y
+    status: discovered
+    duration: 23374
+    at: 2026-10-12
+  - id: 92Iyk7OUHXM
+    platform: youtube
+    channel: DagerClips
+    title: "Realocando la miseria. #fyp #economía #política #clip #twitch #streamer"
+    url: https://www.youtube.com/shorts/92Iyk7OUHXM
+    status: extracted
+    at: 2026-10-12
+  - id: 93wMFZdVSNE
+    platform: youtube
+    channel: DagerClips
+    title: ¿Restricciones para la yerba mate en... Argentina? | Falopa política
+    duration: 1107
+    url: https://www.youtube.com/watch?v=93wMFZdVSNE
+    status: merged
+    at: 2026-10-12
+  - id: 9BlY7CzbNfk
+    platform: youtube
+    channel: DotDager
+    title: Individuo corpulento e informático divaga acerca (de) cosas.
+    url: https://www.youtube.com/watch?v=9BlY7CzbNfk
+    status: discovered
+    duration: 16871
+    at: 2026-10-12
+  - id: 9G0E5dOV6tY
+    platform: youtube
+    channel: DotDager
+    title: "Resume menos, GPT. #fyp #programming #ai"
+    url: https://www.youtube.com/shorts/9G0E5dOV6tY
+    status: extracted
+    at: 2026-10-12
+  - id: 9HJVTB1Y_kE
+    platform: youtube
+    channel: DagerClips
+    title: "Ya saben muchachos. #fyp #ai #dev #programador #programming #programmer  #twitch"
+    url: https://www.youtube.com/shorts/9HJVTB1Y_kE
+    status: extracted
+    at: 2026-10-12
+  - id: 9iuBPW66aGg
+    platform: youtube
+    channel: ElAntroDeDager
+    title: "Hábitos Atómicos (James Clear) II: ¿Si no duele no sirve? La falacia del esfuerzo."
+    duration: 679
+    url: https://www.youtube.com/watch?v=9iuBPW66aGg
+    status: extracted
+    at: 2026-10-12
+  - id: 9JZRRFH4NcY
+    platform: youtube
+    channel: DagerClips
+    title: El verdadero peligro de la IA
+    duration: 876
+    url: https://www.youtube.com/watch?v=9JZRRFH4NcY
+    status: merged
+    at: 2026-10-12
+  - id: 9kNant40FXw
+    platform: youtube
+    channel: DagerClips
+    title: Imagina que tienes dos vacas... | REACCIÓN
+    duration: 6353
+    url: https://www.youtube.com/watch?v=9kNant40FXw
+    status: merged
+    at: 2026-10-12
+  - id: 9M7OUEAivbM
+    platform: youtube
+    channel: DagerClips
+    title: "Chris hoy día afirma haber reemplazado 100 ingenieros nucleares con IA. #fyp #ias  #programacion"
+    url: https://www.youtube.com/shorts/9M7OUEAivbM
+    status: extracted
+    at: 2026-10-12
+  - id: 9uATWbzKE-g
+    platform: youtube
+    channel: DotDager
+    title: "El camino del junior en 2026. #fyp #programacion #dev"
+    url: https://www.youtube.com/shorts/9uATWbzKE-g
+    status: extracted
+    at: 2026-10-12
+  - id: 9ya7n6S49TY
+    platform: youtube
+    channel: DagerClips
+    title: "Artículo 100% orgánico #fyp #clips #ias"
+    url: https://www.youtube.com/shorts/9ya7n6S49TY
+    status: extracted
+    at: 2026-10-12
+  - id: 9yAxT0indO0
+    platform: youtube
+    channel: DagerClips
+    title: Define "equipo"
+    url: https://www.youtube.com/shorts/9yAxT0indO0
+    status: extracted
+    at: 2026-10-12
+  - id: a_avD8CFLyw
+    platform: youtube
+    channel: DotDager
+    title: "No sé de Java. #fyp #programacion #clips"
+    url: https://www.youtube.com/shorts/a_avD8CFLyw
+    status: extracted
+    at: 2026-10-12
+  - id: a34urjCHAiw
+    platform: youtube
+    channel: ElAntroDeDager
+    title: Her (2013) | AI, soledad y una historia promedio.
+    duration: 794
+    url: https://www.youtube.com/watch?v=a34urjCHAiw
+    status: merged
+    at: 2026-10-12
+  - id: A3GlnplQEbY
+    platform: youtube
+    channel: DagerClips
+    title: La horda de los bootcamps.
+    duration: 1242
+    url: https://www.youtube.com/watch?v=A3GlnplQEbY
+    status: extracted
+    at: 2026-10-12
+  - id: A55cw6eu39w
+    platform: youtube
+    channel: DagerClips
+    title: Reaccionando a explicación de la anarquía.
+    duration: 2270
+    url: https://www.youtube.com/watch?v=A55cw6eu39w
+    status: extracted
+    at: 2026-10-12
+  - id: A9-HCSNX4Gs
+    platform: youtube
+    channel: DotDager
+    title: LIBROS DE AUTOAYUDA (y otras cosas) | !discord !falopa !links
+    url: https://www.youtube.com/watch?v=A9-HCSNX4Gs
+    status: discovered
+    duration: 15390
+    at: 2026-10-12
+  - id: A9XSFeWJbfI
+    platform: youtube
+    channel: DagerClips
+    title: Hacer un tierlist de lenguajes de programación sale mal..
+    duration: 2172
+    url: https://www.youtube.com/watch?v=A9XSFeWJbfI
+    status: extracted
+    at: 2026-10-12
+  - id: AbhxpinLe-A
+    platform: youtube
+    channel: ElAntroDeDager
+    title: "Hábitos Atómicos (James Clear) IV: Cómo no querer hacer lo que no tenés que hacer."
+    duration: 666
+    url: https://www.youtube.com/watch?v=AbhxpinLe-A
+    status: extracted
+    at: 2026-10-12
+  - id: aCOky4un-ec
+    platform: youtube
+    channel: DotDager
+    title: Gorpito comdu habla de cos(a)s.
+    url: https://www.youtube.com/watch?v=aCOky4un-ec
+    status: discovered
+    duration: 10371
+    at: 2026-10-12
+  - id: Af3NmSP6h_E
+    platform: youtube
+    channel: DagerClips
+    title: "El Nostradamus chino: Profesor Jiang."
+    duration: 3467
+    url: https://www.youtube.com/watch?v=Af3NmSP6h_E
+    status: merged
+    at: 2026-10-12
+  - id: Akjeby4THTw
+    platform: youtube
+    channel: DagerClips
+    title: "Maxi🍏. #fyp #programacion #twitch #dev #programador #cursos"
+    url: https://www.youtube.com/shorts/Akjeby4THTw
+    status: extracted
+    at: 2026-10-12
+  - id: AMwZlH_aVHU
+    platform: youtube
+    channel: DotDager
+    title: "Mujer pide margarita, chaos ensues. #fyp #clips #argentina🇦🇷"
+    url: https://www.youtube.com/shorts/AMwZlH_aVHU
+    status: extracted
+    at: 2026-10-12
+  - id: aPDdwgi_WWg
+    platform: youtube
+    channel: DagerClips
+    title: Organizando debates entre VIEWERS.
+    duration: 2480
+    url: https://www.youtube.com/watch?v=aPDdwgi_WWg
+    status: extracted
+    at: 2026-10-12
+  - id: aQHiJvdyTjI
+    platform: youtube
+    channel: DagerClips
+    title: Programador SENIOR prueba el nueva chat GPT y se lleva una sorpresa..
+    duration: 842
+    url: https://www.youtube.com/watch?v=aQHiJvdyTjI
+    status: extracted
+    at: 2026-10-12
+  - id: aqRngiqaX4Q
+    platform: youtube
+    channel: DotDager
+    title: ¿No importa tu PRIMER LENGUAJE de PROGRAMACIÓN?
+    duration: 240
+    url: https://www.youtube.com/watch?v=aqRngiqaX4Q
+    status: extracted
+    at: 2026-10-12
+  - id: AqV_e-O2d14
+    platform: youtube
+    channel: DagerClips
+    title: Explicar un crimen ES justificarlo.
+    duration: 802
+    url: https://www.youtube.com/watch?v=AqV_e-O2d14
+    status: extracted
+    at: 2026-10-12
+  - id: aRGh2pdCqII
+    platform: youtube
+    channel: DagerClips
+    title: ¿Devin AI nos deja sin trabajo?
+    duration: 1480
+    url: https://www.youtube.com/watch?v=aRGh2pdCqII
+    status: extracted
+    at: 2026-10-12
+  - id: arn48Q-oRuo
+    platform: youtube
+    channel: ElAntroDeDager
+    title: "Gente que pone AJAJAJAJAJA #shorts"
+    url: https://www.youtube.com/shorts/arn48Q-oRuo
+    status: discovered
+    at: 2026-10-12
+  - id: AxGMR77tAb4
+    platform: youtube
+    channel: DagerClips
+    title: Esta screenshot le costo a 300 personas su trabajo.
+    duration: 498
+    url: https://www.youtube.com/watch?v=AxGMR77tAb4
+    status: extracted
+    at: 2026-10-12
+  - id: aXVZ6H69KcA
+    platform: youtube
+    channel: DagerClips
+    title: Ponete a programar, pelotudo. | Arti-culo
+    duration: 516
+    url: https://www.youtube.com/watch?v=aXVZ6H69KcA
+    status: extracted
+    at: 2026-10-12
+  - id: b2AVF1GhWaE
+    platform: youtube
+    channel: DagerClips
+    title: Basta chicos, basta.
+    url: https://www.youtube.com/shorts/b2AVF1GhWaE
+    status: extracted
+    at: 2026-10-12
+  - id: B4CqKTxsYv4
+    platform: youtube
+    channel: DotDager
+    title: Día en la vida de un PROGRAMADOR SENIOR (ARG)
+    duration: 321
+    url: https://www.youtube.com/watch?v=B4CqKTxsYv4
+    status: extracted
+    at: 2026-10-12
+  - id: b5Yq1H_MdWc
+    platform: youtube
+    channel: DotDager
+    title: Permuto por propiedad y dif. a mi favor | !discord !falopa !links
+    url: https://www.youtube.com/watch?v=b5Yq1H_MdWc
+    status: discovered
+    duration: 13410
+    at: 2026-10-12
+  - id: B8pPtXw2G1s
+    platform: youtube
+    channel: DotDager
+    title: Hice este chiste y no podés detenerme.
+    duration: 235
+    url: https://www.youtube.com/watch?v=B8pPtXw2G1s
+    status: extracted
+    at: 2026-10-12
+  - id: b9JYbbY3dtw
+    platform: youtube
+    channel: DotDager
+    title: "JUEGOS COMPUGORDÍSTICOS #dev #gamingcommunity #programacion"
+    url: https://www.youtube.com/shorts/b9JYbbY3dtw
+    status: extracted
+    at: 2026-10-12
+  - id: Bb95At9765k
+    platform: youtube
+    channel: DotDager
+    title: ESTOY FURIOSO (y otras cosas) | !discord !falopa !links
+    url: https://www.youtube.com/watch?v=Bb95At9765k
+    status: discovered
+    duration: 19281
+    at: 2026-10-12
+  - id: BbOjd7KjQNM
+    platform: youtube
+    channel: DagerClips
+    title: Son las IA... en realidad AN0S?!
+    duration: 1154
+    url: https://www.youtube.com/watch?v=BbOjd7KjQNM
+    status: extracted
+    at: 2026-10-12
+  - id: Bcf2F3mItlY
+    platform: youtube
+    channel: DagerClips
+    title: El capitalismo es hermoso.
+    duration: 665
+    url: https://www.youtube.com/watch?v=Bcf2F3mItlY
+    status: extracted
+    at: 2026-10-12
+  - id: be-K17dFNFI
+    platform: youtube
+    channel: DotDager
+    title: No entendés DRY.
+    duration: 377
+    url: https://www.youtube.com/watch?v=be-K17dFNFI
+    status: merged
+    at: 2026-10-12
+  - id: bEGzgREEBdA
+    platform: youtube
+    channel: DagerClips
+    title: Trabajaba en 4 empresas al mismo tiempo Soham Parekh.
+    duration: 1072
+    url: https://www.youtube.com/watch?v=bEGzgREEBdA
+    status: extracted
+    at: 2026-10-12
+  - id: bePhr3CkP_g
+    platform: youtube
+    channel: DagerClips
+    title: "Tampoco la boludez. #fyp #política #liberal #milei #clip #twitch #streamer"
+    url: https://www.youtube.com/shorts/bePhr3CkP_g
+    status: extracted
+    at: 2026-10-12
+  - id: BiaV5aIX6dQ
+    platform: youtube
+    channel: DagerClips
+    title: Apple tiro una bomba..
+    duration: 1588
+    url: https://www.youtube.com/watch?v=BiaV5aIX6dQ
+    status: merged
+    at: 2026-10-12
+  - id: BIBTcR_W16M
+    platform: youtube
+    channel: DagerClips
+    title: "Es el fin..  #ai #twitch #dev #programador #clips #programmer"
+    url: https://www.youtube.com/shorts/BIBTcR_W16M
+    status: extracted
+    at: 2026-10-12
+  - id: bJCb0--MYmg
+    platform: youtube
+    channel: DagerClips
+    title: "Unanse al discord.. porfavor... #fyp  #twitch  #clips  #funny  #streamer"
+    url: https://www.youtube.com/shorts/bJCb0--MYmg
+    status: extracted
+    at: 2026-10-12
+  - id: BjR5L0sf0kQ
+    platform: youtube
+    channel: DagerClips
+    title: Layoffs gigantes "por IA" en META y Oracle.. o no.
+    duration: 723
+    url: https://www.youtube.com/watch?v=BjR5L0sf0kQ
+    status: merged
+    at: 2026-10-12
+  - id: bl-Detow3mQ
+    platform: youtube
+    channel: DagerClips
+    title: La contaminación es necesaria.
+    duration: 247
+    url: https://www.youtube.com/watch?v=bl-Detow3mQ
+    status: extracted
+    at: 2026-10-12
+  - id: bL2T1oQ3Mbw
+    platform: youtube
+    channel: DagerClips
+    title: Un viewer me hizo esta página en tan solo 3 DÍAS
+    duration: 311
+    url: https://www.youtube.com/watch?v=bL2T1oQ3Mbw
+    status: extracted
+    at: 2026-10-12
+  - id: Bn1PjjIzevw
+    platform: youtube
+    channel: ElAntroDeDager
+    title: "God Of War 2018: creciendo con Kratos y reviviendo un franquicia."
+    duration: 418
+    url: https://www.youtube.com/watch?v=Bn1PjjIzevw
+    status: extracted
+    at: 2026-10-12
+  - id: BnLUmNCsl9Q
+    platform: youtube
+    channel: DagerClips
+    title: ¿Deberían todos poder votar? | Falopa política
+    duration: 1336
+    url: https://www.youtube.com/watch?v=BnLUmNCsl9Q
+    status: extracted
+    at: 2026-10-12
+  - id: bPp2KE2Dtvs
+    platform: youtube
+    channel: DagerClips
+    title: "Obras puuuuublicas. #fyp #política #político #clip #twitch"
+    url: https://www.youtube.com/shorts/bPp2KE2Dtvs
+    status: extracted
+    at: 2026-10-12
+  - id: BrKZ9T8-eHM
+    platform: youtube
+    channel: DotDager
+    title: Gordito compu se rehúsa a dejar de hablar (de cosas).
+    url: https://www.youtube.com/watch?v=BrKZ9T8-eHM
+    status: discovered
+    duration: 12772
+    at: 2026-10-12
+  - id: BRPoWBpNdM8
+    platform: youtube
+    channel: DagerClips
+    title: "¿Recomendás tener un portfolio en 2024?   #twitch #dev #programming #clips #coding #programacion"
+    url: https://www.youtube.com/shorts/BRPoWBpNdM8
+    status: extracted
+    at: 2026-10-12
+  - id: bsNsgoKPhOY
+    platform: youtube
+    channel: DotDager
+    title: ¿Qué es un algoritmo y por qué debería importarte? | Te lo explico así nomás.
+    duration: 285
+    url: https://www.youtube.com/watch?v=bsNsgoKPhOY
+    status: merged
+    at: 2026-10-12
+  - id: BsP5xSmR7Dk
+    platform: youtube
+    channel: DagerClips
+    title: "¿Trabajar mientras estas estudiando? 👨‍🎓 #fyp #twitch #dev #programming #coding  #devcommunity"
+    url: https://www.youtube.com/shorts/BsP5xSmR7Dk
+    status: extracted
+    at: 2026-10-12
+  - id: BTDI9Je1UWY
+    platform: youtube
+    channel: DotDager
+    title: El mejor lenguaje para un programador | Cómo mejoré mi inglés para trabajar para USA
+    duration: 582
+    url: https://www.youtube.com/watch?v=BTDI9Je1UWY
+    status: extracted
+    at: 2026-10-12
+  - id: BW38cUQha38
+    platform: youtube
+    channel: DagerClips
+    title: ¿Puede un LLM soportar el día a día de un humano?
+    duration: 1720
+    url: https://www.youtube.com/watch?v=BW38cUQha38
+    status: merged
+    at: 2026-10-12
+  - id: BWinxmtRLJo
+    platform: youtube
+    channel: DagerClips
+    title: "I'd be happy to try it. #fyp #robot #ia"
+    url: https://www.youtube.com/shorts/BWinxmtRLJo
+    status: extracted
+    at: 2026-10-12
+  - id: bXBqeAjsw_w
+    platform: youtube
+    channel: DagerClips
+    title: "El mercado laboral con el avance de la IA. #fyp #clips #programacion"
+    url: https://www.youtube.com/shorts/bXBqeAjsw_w
+    status: extracted
+    at: 2026-10-12
+  - id: bXm8qGorPIU
+    platform: youtube
+    channel: DotDager
+    title: TÉCNICAS DE ESTUDIO, CÓMO CONCENTRARSE Y Q&A
+    url: https://www.youtube.com/watch?v=bXm8qGorPIU
+    status: discovered
+    duration: 12877
+    at: 2026-10-12
+  - id: BXO8Gas3lQs
+    platform: youtube
+    channel: DagerClips
+    title: 1 EMPRESARIO vs. 20 TRABAJADORES | Reacción
+    duration: 6861
+    url: https://www.youtube.com/watch?v=BXO8Gas3lQs
+    status: merged
+    at: 2026-10-12
+  - id: BZvsWxHOA8w
+    platform: youtube
+    channel: DagerClips
+    title: '"Humanos antes que recursos." 🥀. #fyp #dev #trabajo #clips #twitch  #streaming  #recursoshumanos'
+    url: https://www.youtube.com/shorts/BZvsWxHOA8w
+    status: extracted
+    at: 2026-10-12
+  - id: bzx42a0c6I0
+    platform: youtube
+    channel: DotDager
+    title: "VIVIR DE LA FILOSOFÍA #filosofia #fyp #clips"
+    url: https://www.youtube.com/shorts/bzx42a0c6I0
+    status: extracted
+    at: 2026-10-12
+  - id: c-FAMkGVogk
+    platform: youtube
+    channel: DotDager
+    title: NO PODÉS HACER ESTO
+    url: https://www.youtube.com/shorts/c-FAMkGVogk
+    status: extracted
+    at: 2026-10-12
+  - id: c1tnG5A4VDc
+    platform: youtube
+    channel: DagerClips
+    title: Las IAs solucionan el trolley problem...
+    duration: 1782
+    url: https://www.youtube.com/watch?v=c1tnG5A4VDc
+    status: extracted
+    at: 2026-10-12
+  - id: c2EJRboAYL4
+    platform: youtube
+    channel: DotDager
+    title: Mirá esto ANTES de aprender a PROGRAMAR.
+    duration: 306
+    url: https://www.youtube.com/watch?v=c2EJRboAYL4
+    status: extracted
+    at: 2026-10-12
+  - id: C78gDMXakEw
+    platform: youtube
+    channel: DagerClips
+    title: Les gusta pitonicamente
+    url: https://www.youtube.com/shorts/C78gDMXakEw
+    status: extracted
+    at: 2026-10-12
+  - id: c7ZhaLQ8EaA
+    platform: youtube
+    channel: DotDager
+    title: ⚠ BAJEN LOS SUMOS ⚠ | !discord !falopa !links
+    url: https://www.youtube.com/watch?v=c7ZhaLQ8EaA
+    status: discovered
+    duration: 15596
+    at: 2026-10-12
+  - id: cBN0cOLBgLw
+    platform: youtube
+    channel: DagerClips
+    title: Los nuevos hacks basados en agentes de IA.
+    duration: 1391
+    url: https://www.youtube.com/watch?v=cBN0cOLBgLw
+    status: extracted
+    at: 2026-10-12
+  - id: cG44Z4zgpmo
+    platform: youtube
+    channel: DagerClips
+    title: ¿Programar con +30 años?
+    url: https://www.youtube.com/shorts/cG44Z4zgpmo
+    status: extracted
+    at: 2026-10-12
+  - id: CKodXDOhcSs
+    platform: youtube
+    channel: DotDager
+    title: Gordito cosas vuelve a hablar de compu.
+    url: https://www.youtube.com/watch?v=CKodXDOhcSs
+    status: discovered
+    duration: 10644
+    at: 2026-10-12
+  - id: cLoXZzipufc
+    platform: youtube
+    channel: ElAntroDeDager
+    title: "Blockchain II: estructuras de datos, mecanismos de consenso y Bitcoin | Te lo explico así nomás."
+    duration: 2133
+    url: https://www.youtube.com/watch?v=cLoXZzipufc
+    status: extracted
+    at: 2026-10-12
+  - id: cncI9_3Io2c
+    platform: youtube
+    channel: DotDager
+    title: Falopa, Q&A y... eso.
+    url: https://www.youtube.com/watch?v=cncI9_3Io2c
+    status: discovered
+    duration: 11875
+    at: 2026-10-12
+  - id: CNDOKdQULEk
+    platform: youtube
+    channel: DagerClips
+    title: La campaña anti Argentina.
+    duration: 2297
+    url: https://www.youtube.com/watch?v=CNDOKdQULEk
+    status: merged
+    at: 2026-10-12
+  - id: CSoRjITKPLU
+    platform: youtube
+    channel: DagerClips
+    title: "Dager te enseña a hacer un server DNS #4."
+    duration: 6710
+    url: https://www.youtube.com/watch?v=CSoRjITKPLU
+    status: extracted
+    at: 2026-10-12
+  - id: cvPeS0qAikw
+    platform: youtube
+    channel: DotDager
+    title: PROGRAMÉ UN MONSTRUO
+    duration: 682
+    url: https://www.youtube.com/watch?v=cvPeS0qAikw
+    status: merged
+    at: 2026-10-12
+  - id: CWIonqTzrUI
+    platform: youtube
+    channel: DagerClips
+    title: ¿Está bien que el gobierno regule los vinos?
+    duration: 693
+    url: https://www.youtube.com/watch?v=CWIonqTzrUI
+    status: extracted
+    at: 2026-10-12
+  - id: CxBpInI0qk8
+    platform: youtube
+    channel: DagerClips
+    title: The situation in Nepal is bizarre...
+    duration: 1036
+    url: https://www.youtube.com/watch?v=CxBpInI0qk8
+    status: extracted
+    at: 2026-10-12
+  - id: CYglM-Rg5_Y
+    platform: youtube
+    channel: DagerClips
+    title: Todos cagados por la IA.
+    duration: 3698
+    url: https://www.youtube.com/watch?v=CYglM-Rg5_Y
+    status: merged
+    at: 2026-10-12
+  - id: CZHbW7CjkPg
+    platform: youtube
+    channel: DotDager
+    title: ESTOY IMPACTADO (y otras cosas) | !discord !falopa !links
+    url: https://www.youtube.com/watch?v=CZHbW7CjkPg
+    status: discovered
+    duration: 10407
+    at: 2026-10-12
+  - id: CZk6_JwACmw
+    platform: youtube
+    channel: DagerClips
+    title: ¿Se puede estudiar y trabajar al mismo tiempo?
+    url: https://www.youtube.com/shorts/CZk6_JwACmw
+    status: extracted
+    at: 2026-10-12
+  - id: d_FfOla6mfw
+    platform: youtube
+    channel: DotDager
+    title: 200 DOLARUCOS A LA MEJOR WEB | Concurso, forobardo y Q&A.
+    url: https://www.youtube.com/watch?v=d_FfOla6mfw
+    status: discovered
+    duration: 26963
+    at: 2026-10-12
+  - id: d00Xi4pGxpU
+    platform: youtube
+    channel: DagerClips
+    title: Google hecho en Claude Code
+    url: https://www.youtube.com/shorts/d00Xi4pGxpU
+    status: extracted
+    at: 2026-10-12
+  - id: d0WIYjuet3k
+    platform: youtube
+    channel: DagerClips
+    title: Una opinión sobre que tiene que haber menos opiniones.
+    url: https://www.youtube.com/shorts/d0WIYjuet3k
+    status: extracted
+    at: 2026-10-12
+  - id: D6tmS1GQYcY
+    platform: youtube
+    channel: DotDager
+    title: "GUERRA MUNDIAL CEUTA #fyp #clips"
+    url: https://www.youtube.com/shorts/D6tmS1GQYcY
+    status: extracted
+    at: 2026-10-12
+  - id: d6Z4UFfFz9s
+    platform: youtube
+    channel: DotDager
+    title: "La mejor pregunta de entrevista. #fyp #programacion #clips"
+    url: https://www.youtube.com/shorts/d6Z4UFfFz9s
+    status: extracted
+    at: 2026-10-12
+  - id: D93lvc2-kDk
+    platform: youtube
+    channel: DotDager
+    title: La AI nos quitó el trabajo (otra vez) | Devin, Figure, falopa y más.
+    url: https://www.youtube.com/watch?v=D93lvc2-kDk
+    status: discovered
+    duration: 11539
+    at: 2026-10-12
+  - id: DaRes1TR3XQ
+    platform: youtube
+    channel: DotDager
+    title: TE PAGO si hacés ESTA web (no es chiste).
+    duration: 516
+    url: https://www.youtube.com/watch?v=DaRes1TR3XQ
+    status: extracted
+    at: 2026-10-12
+  - id: dD9g4QMZiBQ
+    platform: youtube
+    channel: DotDager
+    title: "Filosofía para gorditos compu. #filosofia #programacion #shorts"
+    url: https://www.youtube.com/shorts/dD9g4QMZiBQ
+    status: extracted
+    at: 2026-10-12
+  - id: DhFQ_yNFuwA
+    platform: youtube
+    title: ¿Y SI EL PROBLEMA SOS VOS? (y otras cosas) | !discord !falopa !links
+    url: https://www.youtube.com/watch?v=DhFQ_yNFuwA
+    status: merged
+    at: 2026-10-12
+    ignoreWindows:
+      - 0:32:00-0:36:00
+    channel: DotDager
+    duration: 20970
+  - id: dIC21UdvMlo
+    platform: youtube
+    channel: DagerClips
+    title: Programador SENIOR reacciona a su código de hace 6 AÑOS...
+    duration: 639
+    url: https://www.youtube.com/watch?v=dIC21UdvMlo
+    status: extracted
+    at: 2026-10-12
+  - id: DJdZGvDH6Cw
+    platform: youtube
+    channel: DagerClips
+    title: "Señor que se levanta. #fyp  #clips  #programacion  #jason"
+    url: https://www.youtube.com/shorts/DJdZGvDH6Cw
+    status: extracted
+    at: 2026-10-12
+  - id: DkIRbodhMlY
+    platform: youtube
+    channel: DagerClips
+    title: Juegos que te enseñan a programar.
+    duration: 9152
+    url: https://www.youtube.com/watch?v=DkIRbodhMlY
+    status: extracted
+    at: 2026-10-12
+  - id: Dlrv235xuVA
+    platform: youtube
+    channel: DotDager
+    title: "Volando bajo el cuñado. #fyp #programacion #clips"
+    url: https://www.youtube.com/shorts/Dlrv235xuVA
+    status: extracted
+    at: 2026-10-12
+  - id: Dn4ZKnoXjNE
+    platform: youtube
+    channel: DotDager
+    title: EXPLOTA LA BURBUJA (y otras cosas) | !discord !falopa !links
+    url: https://www.youtube.com/watch?v=Dn4ZKnoXjNE
+    status: discovered
+    duration: 11348
+    at: 2026-10-12
+  - id: dOcZw68DY20
+    platform: youtube
+    channel: DagerClips
+    title: "Changing companies or changing the company... #fyp #clips #dev #programming #programmer"
+    url: https://www.youtube.com/shorts/dOcZw68DY20
+    status: extracted
+    at: 2026-10-12
+  - id: DON2XXQPklQ
+    platform: youtube
+    channel: DagerClips
+    title: "¿Qué beneficios le ves al titulo? 💼 #fyp #dev #twitch #programming #coding"
+    url: https://www.youtube.com/shorts/DON2XXQPklQ
+    status: extracted
+    at: 2026-10-12
+  - id: dOOXv_nxlI0
+    platform: youtube
+    channel: DotDager
+    title: Feliz día del gordito compu, ft. @gentlemanprogramming  | !discord !falopa !links
+    url: https://www.youtube.com/watch?v=dOOXv_nxlI0
+    status: discovered
+    duration: 13603
+    at: 2026-10-12
+  - id: dPCcHa2a77I
+    platform: youtube
+    channel: DagerClips
+    title: "Ex sovietico iba a erradicar el universo pero Miller lo detuvo. #fyp #liberal #milei #argentina"
+    url: https://www.youtube.com/shorts/dPCcHa2a77I
+    status: extracted
+    at: 2026-10-12
+  - id: dRS177CMgAA
+    platform: youtube
+    channel: DotDager
+    title: ¡Falopa! Ahora que tengo tu atención... ¡Falopa!
+    url: https://www.youtube.com/watch?v=dRS177CMgAA
+    status: discovered
+    duration: 6899
+    at: 2026-10-12
+  - id: duxIvTcsdRM
+    platform: youtube
+    channel: ElAntroDeDager
+    title: ¿Está bien ordenar cuando viene alguien?
+    duration: 490
+    url: https://www.youtube.com/watch?v=duxIvTcsdRM
+    status: extracted
+    at: 2026-10-12
+  - id: dv62eW9Kuw4
+    platform: youtube
+    channel: ElAntroDeDager
+    title: "Malo pero bien: Un Tipo y RUSH E vs. Fanchen."
+    duration: 557
+    url: https://www.youtube.com/watch?v=dv62eW9Kuw4
+    status: extracted
+    at: 2026-10-12
+  - id: dVXHsp2PCL8
+    platform: youtube
+    channel: DotDager
+    title: El FIN del PROGRAMADOR JUNIOR.
+    duration: 638
+    url: https://www.youtube.com/watch?v=dVXHsp2PCL8
+    status: extracted
+    at: 2026-10-12
+  - id: dZWYw2ixnv0
+    platform: youtube
+    channel: DotDager
+    title: Gordito compu sigue hablando de cosas.
+    url: https://www.youtube.com/watch?v=dZWYw2ixnv0
+    status: discovered
+    duration: 12831
+    at: 2026-10-12
+  - id: E_F2AXJdx54
+    platform: youtube
+    channel: DagerClips
+    title: Años.
+    url: https://www.youtube.com/shorts/E_F2AXJdx54
+    status: extracted
+    at: 2026-10-12
+  - id: e_WOqtSA0jw
+    platform: youtube
+    channel: DagerClips
+    title: El CEO quiere que cambie a los empleados por IA (???)
+    duration: 423
+    url: https://www.youtube.com/watch?v=e_WOqtSA0jw
+    status: extracted
+    at: 2026-10-12
+  - id: e-4eVK4EX8Q
+    platform: youtube
+    channel: DotDager
+    title: "Yo soy un fullstack. #fyp #programacion #clip"
+    url: https://www.youtube.com/shorts/e-4eVK4EX8Q
+    status: extracted
+    at: 2026-10-12
+  - id: e16DiNSWaQE
+    platform: youtube
+    channel: ElAntroDeDager
+    title: Soy Leyenda (2007) arruinó su propio título... pero está piola.
+    duration: 599
+    url: https://www.youtube.com/watch?v=e16DiNSWaQE
+    status: merged
+    at: 2026-10-12
+  - id: e4e6WVxOYT8
+    platform: youtube
+    channel: DotDager
+    title: Jueguitos y Q&A con mi novia
+    url: https://www.youtube.com/watch?v=e4e6WVxOYT8
+    status: discovered
+    duration: 21717
+    at: 2026-10-12
+  - id: e7cKGCamhR8
+    platform: youtube
+    channel: DagerClips
+    title: "¿Para que sirve la IA? #fyp #dev #programacion #programador"
+    url: https://www.youtube.com/shorts/e7cKGCamhR8
+    status: extracted
+    at: 2026-10-12
+  - id: E86LXsO5g2Y
+    platform: youtube
+    channel: DotDager
+    title: "Deployers mal #programación #fyp #clips"
+    url: https://www.youtube.com/shorts/E86LXsO5g2Y
+    status: extracted
+    at: 2026-10-12
+  - id: eb_5ViMVBd4
+    platform: youtube
+    channel: DagerClips
+    title: Usá react, gordito. | Arti-culo
+    duration: 2442
+    url: https://www.youtube.com/watch?v=eb_5ViMVBd4
+    status: extracted
+    at: 2026-10-12
+  - id: EbY01A-SDes
+    platform: youtube
+    channel: DagerClips
+    title: Entrevistando a un experto en ciberseguridad.
+    duration: 1982
+    url: https://www.youtube.com/watch?v=EbY01A-SDes
+    status: extracted
+    at: 2026-10-12
+  - id: EduV1OSGEbo
+    platform: youtube
+    channel: DagerClips
+    title: "Llave al éxito. #fyp #consejo #clip #twitch #streamer #paja"
+    url: https://www.youtube.com/shorts/EduV1OSGEbo
+    status: extracted
+    at: 2026-10-12
+  - id: EejD_ojLYzc
+    platform: youtube
+    channel: DagerClips
+    title: ¿Qué joraca es Jev? El TypeScript de la IA.
+    duration: 1046
+    url: https://www.youtube.com/watch?v=EejD_ojLYzc
+    status: extracted
+    at: 2026-10-12
+  - id: EFgc3AFhY64
+    platform: youtube
+    channel: DotDager
+    title: "DECIME COSAS LINDAS #ai #shorts #programacion"
+    url: https://www.youtube.com/shorts/EFgc3AFhY64
+    status: extracted
+    at: 2026-10-12
+  - id: eHTydQj5srI
+    platform: youtube
+    channel: DotDager
+    title: "SALÍ DE BRONCE  #dev #programacion #fyp"
+    url: https://www.youtube.com/shorts/eHTydQj5srI
+    status: extracted
+    at: 2026-10-12
+  - id: EHWK9XA_kck
+    platform: youtube
+    channel: DotDager
+    title: Vamo' a estudiar/codear🍅 20/5 Pomodoro + Lo-fi + Q&A 🍅
+    url: https://www.youtube.com/watch?v=EHWK9XA_kck
+    status: discovered
+    duration: 10420
+    at: 2026-10-12
+  - id: eIEytaoKdo0
+    platform: youtube
+    channel: DotDager
+    title: "Conseguir un aumento 100% real no fake. #fyp #programacion #clips"
+    url: https://www.youtube.com/shorts/eIEytaoKdo0
+    status: extracted
+    at: 2026-10-12
+  - id: eIXKHv9s5R0
+    platform: youtube
+    channel: DagerClips
+    title: Estaba estudiando biología.
+    url: https://www.youtube.com/shorts/eIXKHv9s5R0
+    status: extracted
+    at: 2026-10-12
+  - id: Ej4FHMD369w
+    platform: youtube
+    channel: DagerClips
+    title: Creé una web para probar la moral de ChatGPT y se pudrió todo.
+    duration: 1764
+    url: https://www.youtube.com/watch?v=Ej4FHMD369w
+    status: extracted
+    at: 2026-10-12
+  - id: EJeNUqhlmfA
+    platform: youtube
+    channel: DotDager
+    title: Sujeto con sobrepeso y afición binaria charla (sobre cosas).
+    url: https://www.youtube.com/watch?v=EJeNUqhlmfA
+    status: discovered
+    duration: 16761
+    at: 2026-10-12
+  - id: ekaBcXBudm8
+    platform: youtube
+    channel: DotDager
+    title: "El misterio de quién cumeó en el suelo. #programación #clips #fyp"
+    url: https://www.youtube.com/shorts/ekaBcXBudm8
+    status: extracted
+    at: 2026-10-12
+  - id: EKdKqC7KPXU
+    platform: youtube
+    channel: DagerClips
+    title: Este sitio solo fue creado para trollearme..
+    duration: 388
+    url: https://www.youtube.com/watch?v=EKdKqC7KPXU
+    status: extracted
+    at: 2026-10-12
+  - id: eKxlnvPzWZg
+    platform: youtube
+    channel: DagerClips
+    title: Como conseguir trabajo en USA.
+    duration: 288
+    url: https://www.youtube.com/watch?v=eKxlnvPzWZg
+    status: extracted
+    at: 2026-10-12
+  - id: EmDSFnMLqJA
+    platform: youtube
+    channel: DagerClips
+    title: "Les mando promo... y el dedo. #fyp  #clips  #programacion  #dev  #argentina"
+    url: https://www.youtube.com/shorts/EmDSFnMLqJA
+    status: extracted
+    at: 2026-10-12
+  - id: EOe5mofMWY0
+    platform: youtube
+    channel: DagerClips
+    title: "Que pasa cuando el estado da cursos pagos. .#fyp #política #massa #estado #gobierno #cursos"
+    url: https://www.youtube.com/shorts/EOe5mofMWY0
+    status: extracted
+    at: 2026-10-12
+  - id: EpIvxqUCDwI
+    platform: youtube
+    channel: DagerClips
+    title: Cierran "Un Café Con Perón" | Falopa política
+    duration: 358
+    url: https://www.youtube.com/watch?v=EpIvxqUCDwI
+    status: extracted
+    at: 2026-10-12
+  - id: ePvGOmZ37g8
+    platform: youtube
+    channel: DotDager
+    title: "CÓMO PEDIR UN AUMENTO #fyp #programacion #dev"
+    url: https://www.youtube.com/shorts/ePvGOmZ37g8
+    status: extracted
+    at: 2026-10-12
+  - id: epygMsLyn_Y
+    platform: youtube
+    channel: ElAntroDeDager
+    title: 10 Problemas en Naruto Shippuden.
+    duration: 1472
+    url: https://www.youtube.com/watch?v=epygMsLyn_Y
+    status: extracted
+    at: 2026-10-12
+  - id: ESzZ45vYNyo
+    platform: youtube
+    channel: DotDager
+    title: "Libros para ser mejor gordo empresario. #fyp #programacion #clips"
+    url: https://www.youtube.com/shorts/ESzZ45vYNyo
+    status: merged
+    at: 2026-10-12
+  - id: EvKm8yhM7V8
+    platform: youtube
+    channel: DotDager
+    title: HTML en 5 minutos | Te lo explico así nomás.
+    duration: 383
+    url: https://www.youtube.com/watch?v=EvKm8yhM7V8
+    status: extracted
+    at: 2026-10-12
+  - id: EVkzvPqzYRk
+    platform: youtube
+    channel: DagerClips
+    title: Ecuatorianos acusados de hacer trampa en los exámenes.
+    duration: 1827
+    url: https://www.youtube.com/watch?v=EVkzvPqzYRk
+    status: extracted
+    at: 2026-10-12
+  - id: EX_ebA8Zryc
+    platform: youtube
+    channel: DagerClips
+    title: Las universidades financiadas públicamente.
+    duration: 1517
+    url: https://www.youtube.com/watch?v=EX_ebA8Zryc
+    status: extracted
+    at: 2026-10-12
+  - id: ezLvbmBhFD4
+    platform: youtube
+    channel: DagerClips
+    title: ¿Qué pc es ideal para programar?
+    url: https://www.youtube.com/shorts/ezLvbmBhFD4
+    status: extracted
+    at: 2026-10-12
+  - id: EzUhbvm7Bbs
+    platform: youtube
+    channel: DotDager
+    title: "HOLA, CORCHO #dev #programacion #fyp"
+    url: https://www.youtube.com/shorts/EzUhbvm7Bbs
+    status: extracted
+    at: 2026-10-12
+  - id: F0NOmbADy1M
+    platform: youtube
+    channel: DagerClips
+    title: Mi novia me humilla en un test de HTML..
+    duration: 1049
+    url: https://www.youtube.com/watch?v=F0NOmbADy1M
+    status: extracted
+    at: 2026-10-12
+  - id: F1CdJffQMLg
+    platform: youtube
+    channel: DagerClips
+    title: Más leyes anti extranjeros.
+    duration: 624
+    url: https://www.youtube.com/watch?v=F1CdJffQMLg
+    status: extracted
+    at: 2026-10-12
+  - id: f9JwsSxp5NQ
+    platform: youtube
+    channel: DotDager
+    title: Entrevista a un senior de StackOverflow.
+    duration: 156
+    url: https://www.youtube.com/watch?v=f9JwsSxp5NQ
+    status: extracted
+    at: 2026-10-12
+  - id: F9NbEuEUUHw
+    platform: youtube
+    channel: DagerClips
+    title: Como leer, pero bien.
+    duration: 2388
+    url: https://www.youtube.com/watch?v=F9NbEuEUUHw
+    status: merged
+    at: 2026-10-12
+  - id: F9sLk3EdLP4
+    platform: youtube
+    channel: DotDager
+    title: Falopa y programando un server DNS en C#  (parte 4)
+    url: https://www.youtube.com/watch?v=F9sLk3EdLP4
+    status: discovered
+    duration: 13664
+    at: 2026-10-12
+  - id: faNdDU6ObFw
+    platform: youtube
+    channel: DotDager
+    title: "¿ME LO PUEDO COMER? #pez #ia #fyp"
+    url: https://www.youtube.com/shorts/faNdDU6ObFw
+    status: extracted
+    at: 2026-10-12
+  - id: fBDCDA_opvI
+    platform: youtube
+    channel: ElAntroDeDager
+    title: "Argentinian Moist Cr1TiKaL #moistverse #moistcr1tikal"
+    duration: 14
+    url: https://www.youtube.com/watch?v=fBDCDA_opvI
+    status: skipped
+    at: 2026-10-12
+    reason: sin transcripción automática
+  - id: fcdYULXnT9Y
+    platform: youtube
+    channel: ElAntroDeDager
+    title: "Pienso, luego existo: Descartes, Discurso del método y la cárcel del yo | Te lo explico así nomás."
+    duration: 1495
+    url: https://www.youtube.com/watch?v=fcdYULXnT9Y
+    status: merged
+    at: 2026-10-12
+  - id: FcsoVazxzUk
+    platform: youtube
+    channel: DotDager
+    title: El anteúltimo video que vas a ver hoy.
+    duration: 50
+    url: https://www.youtube.com/watch?v=FcsoVazxzUk
+    status: extracted
+    at: 2026-10-12
+  - id: FdC5KZwsqS4
+    platform: youtube
+    channel: DotDager
+    title: TOMÁ NOTA | !discord !falopa !links
+    url: https://www.youtube.com/watch?v=FdC5KZwsqS4
+    status: discovered
+    duration: 14328
+    at: 2026-10-12
+  - id: fDjlw1bAPRM
+    platform: youtube
+    channel: DagerClips
+    title: El punto justo de IA
+    url: https://www.youtube.com/shorts/fDjlw1bAPRM
+    status: extracted
+    at: 2026-10-12
+  - id: Fe35KPN2zs4
+    platform: youtube
+    channel: DagerClips
+    title: "Esa. #fyp #clip #politics"
+    url: https://www.youtube.com/shorts/Fe35KPN2zs4
+    status: extracted
+    at: 2026-10-12
+  - id: fh93m5tbo8o
+    platform: youtube
+    channel: DagerClips
+    title: La guerra entre los artistas y la IA
+    duration: 320
+    url: https://www.youtube.com/watch?v=fh93m5tbo8o
+    status: extracted
+    at: 2026-10-12
+  - id: fIAyeAAhecE
+    platform: youtube
+    channel: DotDager
+    title: Cómo reemplazar juegos por programación.
+    duration: 214
+    url: https://www.youtube.com/watch?v=fIAyeAAhecE
+    status: extracted
+    at: 2026-10-12
+  - id: fLnvU1qScII
+    platform: youtube
+    channel: DagerClips
+    title: "Seguro que le gusto al bana. #fyp #clip #twitch #sape #bananero #funny #streamer"
+    url: https://www.youtube.com/shorts/fLnvU1qScII
+    status: extracted
+    at: 2026-10-12
+  - id: FlO796ke0AI
+    platform: youtube
+    channel: DotDager
+    title: Dejá de perder tiempo.
+    duration: 465
+    url: https://www.youtube.com/watch?v=FlO796ke0AI
+    status: extracted
+    at: 2026-10-12
+  - id: FMfLfYus6Yc
+    platform: youtube
+    channel: DotDager
+    title: No seas tan programador.
+    duration: 270
+    url: https://www.youtube.com/watch?v=FMfLfYus6Yc
+    status: extracted
+    at: 2026-10-12
+  - id: Fn2lVbZLrng
+    platform: youtube
+    channel: DotDager
+    title: DETECTIVE DE SQLazo (y otras cosas) | !discord !falopa !links
+    url: https://www.youtube.com/watch?v=Fn2lVbZLrng
+    status: discovered
+    duration: 17448
+    at: 2026-10-12
+  - id: FnIbH72S4iA
+    platform: youtube
+    channel: DagerClips
+    title: ¿Se puede alcanzar la democracia perfecta con la tecnología actual?
+    duration: 830
+    url: https://www.youtube.com/watch?v=FnIbH72S4iA
+    status: extracted
+    at: 2026-10-12
+  - id: FNNvUP2ocR4
+    platform: youtube
+    channel: DotDager
+    title: Programando Git en CSharp o algo así (parte 1) | Live coding
+    url: https://www.youtube.com/watch?v=FNNvUP2ocR4
+    status: discovered
+    duration: 16399
+    at: 2026-10-12
+  - id: FOu_qJ_pfh0
+    platform: youtube
+    channel: DagerClips
+    title: "Hmm... #fyp #clips #política"
+    url: https://www.youtube.com/shorts/FOu_qJ_pfh0
+    status: extracted
+    at: 2026-10-12
+  - id: Fp7SlnvHWBI
+    platform: youtube
+    channel: DotDager
+    title: Esto es una galletita | !discord !falopa !links
+    url: https://www.youtube.com/watch?v=Fp7SlnvHWBI
+    status: discovered
+    duration: 18564
+    at: 2026-10-12
+  - id: fPdz0WKaJ4U
+    platform: youtube
+    channel: DagerClips
+    title: "Ojo que me prendo fuego.. #fyp #política #clip #divertido #streamer"
+    url: https://www.youtube.com/shorts/fPdz0WKaJ4U
+    status: extracted
+    at: 2026-10-12
+  - id: fqrCjnyOuEg
+    platform: youtube
+    channel: DagerClips
+    title: Así que decidí probar Firebase Studio..
+    duration: 493
+    url: https://www.youtube.com/watch?v=fqrCjnyOuEg
+    status: extracted
+    at: 2026-10-12
+  - id: frHGZfUOfYw
+    platform: youtube
+    channel: DagerClips
+    title: "RHHHH #fyp #clips #programacion"
+    url: https://www.youtube.com/shorts/frHGZfUOfYw
+    status: extracted
+    at: 2026-10-12
+  - id: fs9mTW70Me0
+    platform: youtube
+    channel: DotDager
+    title: "¿Qué me recomendás? #programacion #dev"
+    url: https://www.youtube.com/shorts/fs9mTW70Me0
+    status: extracted
+    at: 2026-10-12
+  - id: fT4dJzl2_wU
+    platform: youtube
+    channel: ElAntroDeDager
+    title: Pizzagate y QAnon | Te lo explico así nomás.
+    duration: 2042
+    url: https://www.youtube.com/watch?v=fT4dJzl2_wU
+    status: merged
+    at: 2026-10-12
+  - id: FTbffAR1dfM
+    platform: youtube
+    channel: DagerClips
+    title: ¿Es ChatGPT-4 Omni lo que dice ser?
+    duration: 943
+    url: https://www.youtube.com/watch?v=FTbffAR1dfM
+    status: extracted
+    at: 2026-10-12
+  - id: fTEGQ6uuvjg
+    platform: youtube
+    channel: DagerClips
+    title: El gobierno gasta 47k DÓLARES en 10 computadoras. | Falopa Política
+    duration: 1104
+    url: https://www.youtube.com/watch?v=fTEGQ6uuvjg
+    status: extracted
+    at: 2026-10-12
+  - id: fUeIDRcI0ZM
+    platform: youtube
+    channel: DotDager
+    title: Intenté contratar un junior y... tenemos que hablar.
+    duration: 443
+    url: https://www.youtube.com/watch?v=fUeIDRcI0ZM
+    status: extracted
+    at: 2026-10-12
+  - id: FUZGz6h3KRM
+    platform: youtube
+    channel: DagerClips
+    title: El odio hacia los paracaidistas.
+    duration: 703
+    url: https://www.youtube.com/watch?v=FUZGz6h3KRM
+    status: extracted
+    at: 2026-10-12
+  - id: FX_mHV66v4E
+    platform: youtube
+    channel: DotDager
+    title: "Dager es una perra politiquera. #fyp #programacion #reddit"
+    url: https://www.youtube.com/shorts/FX_mHV66v4E
+    status: extracted
+    at: 2026-10-12
+  - id: fx0VVYBZquA
+    platform: youtube
+    channel: DagerClips
+    title: "Linux. #fyp #clip #os #linux #windows"
+    url: https://www.youtube.com/shorts/fx0VVYBZquA
+    status: extracted
+    at: 2026-10-12
+  - id: fxU8hAgeuX0
+    platform: youtube
+    channel: DotDager
+    title: '"No programo hace meses." #programacion #fyp #clips'
+    url: https://www.youtube.com/shorts/fxU8hAgeuX0
+    status: extracted
+    at: 2026-10-12
+  - id: Fz2Q_zZ3Fd4
+    platform: youtube
+    channel: DagerClips
+    title: ¿Una super inteligencia artificial?
+    duration: 367
+    url: https://www.youtube.com/watch?v=Fz2Q_zZ3Fd4
+    status: merged
+    at: 2026-10-12
+  - id: G1Ij0lDptHQ
+    platform: youtube
+    channel: DagerClips
+    title: Globant esta gaga.
+    duration: 666
+    url: https://www.youtube.com/watch?v=G1Ij0lDptHQ
+    status: extracted
+    at: 2026-10-12
+  - id: G423XBm6kYo
+    platform: youtube
+    channel: DotDager
+    title: ME HACKEARON EN LINKEDIN | CÓMO EVITAR MI ERROR.
+    duration: 1269
+    url: https://www.youtube.com/watch?v=G423XBm6kYo
+    status: extracted
+    at: 2026-10-12
+  - id: G4SXmIVh2rU
+    platform: youtube
+    channel: ElAntroDeDager
+    title: La primera película de zombies es muy buena.
+    duration: 878
+    url: https://www.youtube.com/watch?v=G4SXmIVh2rU
+    status: merged
+    at: 2026-10-12
+  - id: g4uvhQ9lpFE
+    platform: youtube
+    channel: DotDager
+    title: REFORMA LABORAL y otras cosas | !discord !falopa !links
+    url: https://www.youtube.com/watch?v=g4uvhQ9lpFE
+    status: discovered
+    duration: 10952
+    at: 2026-10-12
+  - id: g8nNuOBLAkU
+    platform: youtube
+    channel: DagerClips
+    title: Los testers están infravalorados.
+    duration: 1342
+    url: https://www.youtube.com/watch?v=g8nNuOBLAkU
+    status: merged
+    at: 2026-10-12
+  - id: GaCDoMbNdv8
+    platform: youtube
+    channel: ElAntroDeDager
+    title: Las preguntas bizarras de Cholo en Yahoo! Respuestas.
+    duration: 914
+    url: https://www.youtube.com/watch?v=GaCDoMbNdv8
+    status: extracted
+    at: 2026-10-12
+  - id: gAXLyxBr82w
+    platform: youtube
+    channel: DagerClips
+    title: Consejos para ser shutuber.
+    url: https://www.youtube.com/shorts/gAXLyxBr82w
+    status: extracted
+    at: 2026-10-12
+  - id: GBDJbHnS1WU
+    platform: youtube
+    channel: DotDager
+    title: IA LO SABÉS TODO.
+    duration: 789
+    url: https://www.youtube.com/watch?v=GBDJbHnS1WU
+    status: extracted
+    at: 2026-10-12
+  - id: GbeZPF8kgj8
+    platform: youtube
+    channel: DagerClips
+    title: ¿¡Chinos contratan minitas para que sus devs trabajen más?!
+    duration: 599
+    url: https://www.youtube.com/watch?v=GbeZPF8kgj8
+    status: extracted
+    at: 2026-10-12
+  - id: GbIhTXN0-1E
+    platform: youtube
+    channel: DotDager
+    title: Why does everyone know what Ghibli is except me? | Level 5 Summary.
+    duration: 186
+    url: https://www.youtube.com/watch?v=GbIhTXN0-1E
+    status: extracted
+    at: 2026-10-12
+  - id: GboHueEGHNk
+    platform: youtube
+    channel: DagerClips
+    title: "The topic of drugs. #fyp #drugs #philosophy #society #clips"
+    url: https://www.youtube.com/shorts/GboHueEGHNk
+    status: extracted
+    at: 2026-10-12
+  - id: gbuvNSAet9M
+    platform: youtube
+    channel: DotDager
+    title: EL BUG QUE MATÓ A 6 PERSONAS (y otras cosas) | !discord !falopa !links
+    url: https://www.youtube.com/watch?v=gbuvNSAet9M
+    status: discovered
+    duration: 14882
+    at: 2026-10-12
+  - id: gBvJWy5qRCA
+    platform: youtube
+    channel: DagerClips
+    title: Más tiempo buscando como preguntar que preguntando
+    url: https://www.youtube.com/shorts/gBvJWy5qRCA
+    status: extracted
+    at: 2026-10-12
+  - id: GCox4UjlHLk
+    platform: youtube
+    channel: ElAntroDeDager
+    title: "Eternals: ¿la peor película del MCU? Nah, está piola. | Review, análisis o algo así."
+    duration: 687
+    url: https://www.youtube.com/watch?v=GCox4UjlHLk
+    status: extracted
+    at: 2026-10-12
+  - id: GEdiJ365b8o
+    platform: youtube
+    channel: DagerClips
+    title: Viveza criolla
+    url: https://www.youtube.com/shorts/GEdiJ365b8o
+    status: extracted
+    at: 2026-10-12
+  - id: GEOCGtflmiM
+    platform: youtube
+    channel: DotDager
+    title: "DERECHOS LABORALES: AFUERA | !discord !falopa !links"
+    url: https://www.youtube.com/watch?v=GEOCGtflmiM
+    status: discovered
+    duration: 15199
+    at: 2026-10-12
+  - id: GEXxx3JQmdw
+    platform: youtube
+    channel: DotDager
+    title: "A NADIE LE IMPORTA #dev #programacion"
+    url: https://www.youtube.com/shorts/GEXxx3JQmdw
+    status: extracted
+    at: 2026-10-12
+  - id: GflFEgP7TcU
+    platform: youtube
+    channel: DotDager
+    title: JUEGOS para PROGRAMADORES.
+    duration: 377
+    url: https://www.youtube.com/watch?v=GflFEgP7TcU
+    status: extracted
+    at: 2026-10-12
+  - id: Gg6FtJQvdHo
+    platform: youtube
+    channel: DagerClips
+    title: Albania appoints an AI as prime minister?
+    duration: 369
+    url: https://www.youtube.com/watch?v=Gg6FtJQvdHo
+    status: extracted
+    at: 2026-10-12
+  - id: GhIkJ2jdR8s
+    platform: youtube
+    channel: DagerClips
+    title: Siguen defendiendo este código...
+    duration: 396
+    url: https://www.youtube.com/watch?v=GhIkJ2jdR8s
+    status: extracted
+    at: 2026-10-12
+  - id: gIR5aqafNZA
+    platform: youtube
+    channel: ElAntroDeDager
+    title: Viaje en el Tiempo III. El futuro y su pasado.
+    duration: 1542
+    url: https://www.youtube.com/watch?v=gIR5aqafNZA
+    status: merged
+    at: 2026-10-12
+  - id: gJSqL1xVrN0
+    platform: youtube
+    channel: DagerClips
+    title: Man kills his mother after being influenced by ChatGPT.
+    duration: 1328
+    url: https://www.youtube.com/watch?v=gJSqL1xVrN0
+    status: extracted
+    at: 2026-10-12
+  - id: GK7aUP1-LaM
+    platform: youtube
+    channel: DagerClips
+    title: '"El Pachón" and the lobbying firms. | Falopa Política.'
+    duration: 1307
+    url: https://www.youtube.com/watch?v=GK7aUP1-LaM
+    status: extracted
+    at: 2026-10-12
+  - id: gkzwlk0zX2o
+    platform: youtube
+    channel: DotDager
+    title: "INFRA DOTA2 #programacion #dev #fyp"
+    url: https://www.youtube.com/shorts/gkzwlk0zX2o
+    status: extracted
+    at: 2026-10-12
+  - id: gO2hZrVYrgA
+    platform: youtube
+    channel: DagerClips
+    title: "Se pusieron la 10..#fyp #gaming #programacion #dev #clip #programador"
+    url: https://www.youtube.com/shorts/gO2hZrVYrgA
+    status: extracted
+    at: 2026-10-12
+  - id: GQeIIkktW9Y
+    platform: youtube
+    channel: DotDager
+    title: "Milton Friedman y MINECRAFT. #fyp #clips #argentina"
+    url: https://www.youtube.com/shorts/GQeIIkktW9Y
+    status: merged
+    at: 2026-10-12
+  - id: gQJQTD6NHpY
+    platform: youtube
+    channel: DagerClips
+    title: "Buenos mangas para gordos compu 🦍 #dev #manga #anime #twitch #programming #coding"
+    url: https://www.youtube.com/shorts/gQJQTD6NHpY
+    status: extracted
+    at: 2026-10-12
+  - id: gQnYzMXz36s
+    platform: youtube
+    channel: DotDager
+    title: Haciendo mierda tu portfolio ft. mi novia diseñadora
+    url: https://www.youtube.com/watch?v=gQnYzMXz36s
+    status: discovered
+    duration: 24363
+    at: 2026-10-12
+  - id: GRcMsUBg41Q
+    platform: youtube
+    channel: DagerClips
+    title: "Me estoy proyectando #fyp"
+    url: https://www.youtube.com/shorts/GRcMsUBg41Q
+    status: extracted
+    at: 2026-10-12
+  - id: GreBqQ2arh4
+    platform: youtube
+    channel: DotDager
+    title: PROGRAMÉ UN MONSTRUO | SOUNDTRACK
+    duration: 1927
+    url: https://www.youtube.com/watch?v=GreBqQ2arh4
+    status: skipped
+    at: 2026-10-12
+    reason: sin transcripción automática
+  - id: gu0_7rN31TQ
+    platform: youtube
+    channel: DagerClips
+    title: "El aburrimiento de ser programador. 😪#fyp #dev #twitch #coding #programming"
+    url: https://www.youtube.com/shorts/gu0_7rN31TQ
+    status: extracted
+    at: 2026-10-12
+  - id: GWeLyb2ZvZk
+    platform: youtube
+    channel: DagerClips
+    title: "IA saben. #fyp #clips #programacion"
+    url: https://www.youtube.com/shorts/GWeLyb2ZvZk
+    status: extracted
+    at: 2026-10-12
+  - id: GX73Yp1zwV0
+    platform: youtube
+    channel: DagerClips
+    title: El camino del JUNIOR en 2026. | FOROBARDO
+    duration: 943
+    url: https://www.youtube.com/watch?v=GX73Yp1zwV0
+    status: extracted
+    at: 2026-10-12
+  - id: GY2zp0bCzAQ
+    platform: youtube
+    channel: DagerClips
+    title: EXPLOTA LA BURBUJA IA.
+    duration: 734
+    url: https://www.youtube.com/watch?v=GY2zp0bCzAQ
+    status: extracted
+    at: 2026-10-12
+  - id: gZbEGIWx4fQ
+    platform: youtube
+    channel: DagerClips
+    title: "No la vio. #fyp #clips #mercadolibre"
+    url: https://www.youtube.com/shorts/gZbEGIWx4fQ
+    status: extracted
+    at: 2026-10-12
+  - id: h_f7Jf2yRe0
+    platform: youtube
+    channel: DotDager
+    title: Individuo informático con sobrepeso prosigue con su plática cósica.
+    url: https://www.youtube.com/watch?v=h_f7Jf2yRe0
+    status: discovered
+    duration: 13069
+    at: 2026-10-12
+  - id: H3SjxCu3OGw
+    platform: youtube
+    channel: DotDager
+    title: Qué hace un programador | 5 cosas que hago a diario.
+    duration: 329
+    url: https://www.youtube.com/watch?v=H3SjxCu3OGw
+    status: extracted
+    at: 2026-10-12
+  - id: h4MFzJR2ajc
+    platform: youtube
+    channel: DagerClips
+    title: "Si hay que irse, hay que irse. #fyp #politica #clips #argentina #liberal"
+    url: https://www.youtube.com/shorts/h4MFzJR2ajc
+    status: extracted
+    at: 2026-10-12
+  - id: h7lsPHFL92c
+    platform: youtube
+    channel: DagerClips
+    title: Libros de historia Argentina que TENÉS que leer.
+    duration: 577
+    url: https://www.youtube.com/watch?v=h7lsPHFL92c
+    status: merged
+    at: 2026-10-12
+  - id: H8oGWL_keZE
+    platform: youtube
+    channel: DagerClips
+    title: Notepad.exe hasta el final.
+    url: https://www.youtube.com/shorts/H8oGWL_keZE
+    status: extracted
+    at: 2026-10-12
+  - id: HAxI7OF7d0k
+    platform: youtube
+    channel: DagerClips
+    title: 1 EMPRESARIO VS 20 EMPLEADOS | Reacción
+    duration: 4234
+    url: https://www.youtube.com/watch?v=HAxI7OF7d0k
+    status: merged
+    at: 2026-10-12
+  - id: HcMBkfyNz4c
+    platform: youtube
+    channel: DagerClips
+    title: Harry se esta transpilando a todos.
+    url: https://www.youtube.com/shorts/HcMBkfyNz4c
+    status: extracted
+    at: 2026-10-12
+  - id: HeAc34xzO-M
+    platform: youtube
+    channel: DagerClips
+    title: "C# o C++.  #twitch #clips #streamer #dev #programming"
+    url: https://www.youtube.com/shorts/HeAc34xzO-M
+    status: extracted
+    at: 2026-10-12
+  - id: HfX918aWRNE
+    platform: youtube
+    channel: ElAntroDeDager
+    title: Bitcoin y el problema de la confianza.
+    duration: 965
+    url: https://www.youtube.com/watch?v=HfX918aWRNE
+    status: merged
+    at: 2026-10-12
+  - id: hg8J66AxITM
+    platform: youtube
+    channel: DagerClips
+    title: Por esto siempre fallas al estudiar.
+    duration: 397
+    url: https://www.youtube.com/watch?v=hg8J66AxITM
+    status: extracted
+    at: 2026-10-12
+  - id: hGp-c8FK5zk
+    platform: youtube
+    channel: DagerClips
+    title: Meccha Chameleon hackeado, tengan cuidado.
+    duration: 311
+    url: https://www.youtube.com/watch?v=hGp-c8FK5zk
+    status: extracted
+    at: 2026-10-12
+  - id: Hi_CgEwJfik
+    platform: youtube
+    channel: DagerClips
+    title: "Experiencia universal.. #fyp  #streamer  #funny  #clips  #twitch  #genkidama"
+    url: https://www.youtube.com/shorts/Hi_CgEwJfik
+    status: extracted
+    at: 2026-10-12
+  - id: hJKTD0kFNE0
+    platform: youtube
+    channel: DagerClips
+    title: "Este tal profesor captcha me hace acordar a alguien #fyp #homelander #programacion #captcha #clips"
+    url: https://www.youtube.com/shorts/hJKTD0kFNE0
+    status: extracted
+    at: 2026-10-12
+  - id: HLC0YXVc5mA
+    platform: youtube
+    channel: DotDager
+    title: Fin del server DNS en C#... y jugando The Classrooms.
+    url: https://www.youtube.com/watch?v=HLC0YXVc5mA
+    status: discovered
+    duration: 21173
+    at: 2026-10-12
+  - id: hMnOeN53BV8
+    platform: youtube
+    channel: ElAntroDeDager
+    title: ¿Qué es un API? | Te lo explico así nomás
+    duration: 630
+    url: https://www.youtube.com/watch?v=hMnOeN53BV8
+    status: extracted
+    at: 2026-10-12
+  - id: hnXqEU51Efg
+    platform: youtube
+    channel: DagerClips
+    title: El "Hola mundo" mas dificil del mundo.
+    duration: 2321
+    url: https://www.youtube.com/watch?v=hnXqEU51Efg
+    status: extracted
+    at: 2026-10-12
+  - id: hpXkV_wMiDg
+    platform: youtube
+    channel: DagerClips
+    title: "No lo hagan... (sin mi) #fyp #clips #programacion"
+    url: https://www.youtube.com/shorts/hpXkV_wMiDg
+    status: extracted
+    at: 2026-10-12
+  - id: hQuWmj09Bgw
+    platform: youtube
+    channel: ElAntroDeDager
+    title: "Hábitos Atómicos (James Clear): el Ciclo de los Hábitos y las Cuatro Leyes | Te lo explico así nomás"
+    duration: 1563
+    url: https://www.youtube.com/watch?v=hQuWmj09Bgw
+    status: extracted
+    at: 2026-10-12
+  - id: hZf8Af62JrE
+    platform: youtube
+    channel: ElAntroDeDager
+    title: "King Kakudmi's #Octillionaire #Sigma #Grindset"
+    duration: 13
+    url: https://www.youtube.com/watch?v=hZf8Af62JrE
+    status: extracted
+    at: 2026-10-12
+  - id: i-ltCa_MKZY
+    platform: youtube
+    channel: DotDager
+    title: "Increíble meme nunca antes visto ft. Anita. #fyp #programacion #clips"
+    url: https://www.youtube.com/shorts/i-ltCa_MKZY
+    status: extracted
+    at: 2026-10-12
+  - id: i0jJfrK8d8s
+    platform: youtube
+    channel: DagerClips
+    title: "El titulo mismo lo dice.  #twitch #clips #streamer #fyp #funny"
+    url: https://www.youtube.com/shorts/i0jJfrK8d8s
+    status: extracted
+    at: 2026-10-12
+  - id: i8mAiYS72iw
+    platform: youtube
+    channel: DagerClips
+    title: Women use an app to protect each other, but it ends up being completely the other way around.
+    duration: 770
+    url: https://www.youtube.com/watch?v=i8mAiYS72iw
+    status: extracted
+    at: 2026-10-12
+  - id: Ic_eIia-h8k
+    platform: youtube
+    channel: DagerClips
+    title: A ver si son tan vivos.
+    url: https://www.youtube.com/shorts/Ic_eIia-h8k
+    status: extracted
+    at: 2026-10-12
+  - id: icKCNqYeG9Y
+    platform: youtube
+    channel: DagerClips
+    title: El mamado.
+    url: https://www.youtube.com/shorts/icKCNqYeG9Y
+    status: extracted
+    at: 2026-10-12
+  - id: IexmQTpk1eA
+    platform: youtube
+    channel: DotDager
+    title: Forobardo, fafafa y Q&A
+    url: https://www.youtube.com/watch?v=IexmQTpk1eA
+    status: discovered
+    duration: 20707
+    at: 2026-10-12
+  - id: IfFdDLOfMlU
+    platform: youtube
+    channel: DotDager
+    title: ESTO ES GRAVE (y otras cosas) | !discord !falopa !links
+    url: https://www.youtube.com/watch?v=IfFdDLOfMlU
+    status: discovered
+    duration: 13912
+    at: 2026-10-12
+  - id: IIUhDMj_ryE
+    platform: youtube
+    channel: DagerClips
+    title: 1 EMPRESARIO VS 20 COMUNISTAS | Reacción
+    duration: 4196
+    url: https://www.youtube.com/watch?v=IIUhDMj_ryE
+    status: merged
+    at: 2026-10-12
+  - id: ikUv4pC9lj0
+    platform: youtube
+    channel: DotDager
+    title: "Los nuevos robots de Tesla. #fyp #clips #clip"
+    url: https://www.youtube.com/shorts/ikUv4pC9lj0
+    status: extracted
+    at: 2026-10-12
+  - id: Ilcb71pTpnY
+    platform: youtube
+    channel: DagerClips
+    title: Claude Mythos es un mito.
+    duration: 1825
+    url: https://www.youtube.com/watch?v=Ilcb71pTpnY
+    status: merged
+    at: 2026-10-12
+  - id: ilcF2cXB3NQ
+    platform: youtube
+    channel: DotDager
+    title: "EL PROFE RAÚL #fyp #clip #filosofia"
+    url: https://www.youtube.com/shorts/ilcF2cXB3NQ
+    status: extracted
+    at: 2026-10-12
+  - id: ImfruiZBvp0
+    platform: youtube
+    channel: DagerClips
+    title: DEJÁ de PENSAR CON RUEDITAS.
+    duration: 619
+    url: https://www.youtube.com/watch?v=ImfruiZBvp0
+    status: extracted
+    at: 2026-10-12
+  - id: IO6jrTryFVo
+    platform: youtube
+    channel: ElAntroDeDager
+    title: Soy Leyenda | Aislamiento, imaginación y otros infiernos.
+    duration: 426
+    url: https://www.youtube.com/watch?v=IO6jrTryFVo
+    status: merged
+    at: 2026-10-12
+  - id: IOoSnThbWpI
+    platform: youtube
+    channel: DagerClips
+    title: El ChatGPT de Nico del caño, "ChatPTS"
+    duration: 1116
+    url: https://www.youtube.com/watch?v=IOoSnThbWpI
+    status: extracted
+    at: 2026-10-12
+  - id: iun0T9s_6Zk
+    platform: youtube
+    channel: DagerClips
+    title: Como realmente tomar una entrevista como programador.
+    duration: 774
+    url: https://www.youtube.com/watch?v=iun0T9s_6Zk
+    status: extracted
+    at: 2026-10-12
+  - id: iWSr-PasZLw
+    platform: youtube
+    channel: DagerClips
+    title: El impuesto a la herencia.
+    duration: 1621
+    url: https://www.youtube.com/watch?v=iWSr-PasZLw
+    status: merged
+    at: 2026-10-12
+  - id: ixwR9EyvRjs
+    platform: youtube
+    channel: DotDager
+    title: La IA te está dejando si trabajo (pero no como pensás).
+    duration: 701
+    url: https://www.youtube.com/watch?v=ixwR9EyvRjs
+    status: extracted
+    at: 2026-10-12
+  - id: IZAYA37KUHk
+    platform: youtube
+    channel: DotDager
+    title: C# no es un lenguaje de backend.
+    duration: 760
+    url: https://www.youtube.com/watch?v=IZAYA37KUHk
+    status: extracted
+    at: 2026-10-12
+  - id: izMJvi9jEDA
+    platform: youtube
+    channel: DotDager
+    title: ESTOICISMO 101 (y otras cosas) | !discord !falopa !links
+    url: https://www.youtube.com/watch?v=izMJvi9jEDA
+    status: discovered
+    duration: 15493
+    at: 2026-10-12
+  - id: j-fVmR4p2n8
+    platform: youtube
+    channel: DagerClips
+    title: Las IAS también pueden ser afectadas por el brainrot.
+    duration: 1249
+    url: https://www.youtube.com/watch?v=j-fVmR4p2n8
+    status: merged
+    at: 2026-10-12
+  - id: J0YZx5poIuI
+    platform: youtube
+    channel: ElAntroDeDager
+    title: Coronavirus, cuarentena y el enemigo invisible.
+    duration: 932
+    url: https://www.youtube.com/watch?v=J0YZx5poIuI
+    status: extracted
+    at: 2026-10-12
+  - id: j4Zwm2YVdkg
+    platform: youtube
+    channel: ElAntroDeDager
+    title: "Thanos: sacrificio y entrega."
+    duration: 893
+    url: https://www.youtube.com/watch?v=j4Zwm2YVdkg
+    status: extracted
+    at: 2026-10-12
+  - id: j5Z5BWvn6-4
+    platform: youtube
+    channel: ElAntroDeDager
+    title: "¿Qué son las cookies? | Te lo explico así nomás #shorts"
+    url: https://www.youtube.com/shorts/j5Z5BWvn6-4
+    status: discovered
+    at: 2026-10-12
+  - id: jCqZLJcw76U
+    platform: youtube
+    channel: DotDager
+    title: REST es la CH*TA de la web.
+    duration: 896
+    url: https://www.youtube.com/watch?v=jCqZLJcw76U
+    status: merged
+    at: 2026-10-12
+  - id: Jd7ACGc63wI
+    platform: youtube
+    channel: DagerClips
+    title: "Forobardo de la semana: “¿Es moral hacer páginas a estafadores?”"
+    duration: 1343
+    url: https://www.youtube.com/watch?v=Jd7ACGc63wI
+    status: merged
+    at: 2026-10-12
+  - id: jFdlfHJ3sME
+    platform: youtube
+    channel: DagerClips
+    title: Un articulo de programación bien argentino | Arti-culo
+    duration: 718
+    url: https://www.youtube.com/watch?v=jFdlfHJ3sME
+    status: extracted
+    at: 2026-10-12
+  - id: JL8NcWokmLg
+    platform: youtube
+    channel: DotDager
+    title: "ME DISTRAIGO MUCHO. #algoritmo #fyp #focus"
+    url: https://www.youtube.com/shorts/JL8NcWokmLg
+    status: extracted
+    at: 2026-10-12
+  - id: JlDLFL8EwSk
+    platform: youtube
+    channel: DagerClips
+    title: "Todo tiene sus repercusiones #fyp #política #liberal #redes #clip"
+    url: https://www.youtube.com/shorts/JlDLFL8EwSk
+    status: extracted
+    at: 2026-10-12
+  - id: Jldrse8J3X8
+    platform: youtube
+    channel: DagerClips
+    title: LinkedIn te está espiando sin que lo sepas.
+    duration: 974
+    url: https://www.youtube.com/watch?v=Jldrse8J3X8
+    status: extracted
+    at: 2026-10-12
+  - id: jMCa52HnvwQ
+    platform: youtube
+    channel: DagerClips
+    title: Adorni se las sabe todas
+    duration: 591
+    url: https://www.youtube.com/watch?v=jMCa52HnvwQ
+    status: extracted
+    at: 2026-10-12
+  - id: JMzoBcPpwhk
+    platform: youtube
+    channel: DotDager
+    title: Usando AI para RECUPERAR MI HONOR.
+    duration: 556
+    url: https://www.youtube.com/watch?v=JMzoBcPpwhk
+    status: extracted
+    at: 2026-10-12
+  - id: jnLzzSnWI_s
+    platform: youtube
+    channel: ElAntroDeDager
+    title: "Review del Diablo 2: Lord Of Destruction o algo así."
+    duration: 162
+    url: https://www.youtube.com/watch?v=jnLzzSnWI_s
+    status: extracted
+    at: 2026-10-12
+  - id: JNtNJATLor8
+    platform: youtube
+    channel: DotDager
+    title: "VS VS VS CODE #fyp #programacion #clips"
+    url: https://www.youtube.com/shorts/JNtNJATLor8
+    status: extracted
+    at: 2026-10-12
+  - id: jPDfbsl15f0
+    platform: youtube
+    channel: DotDager
+    title: MADURO QUE EL MAESTRULI | !discord !falopa !links
+    url: https://www.youtube.com/watch?v=jPDfbsl15f0
+    status: discovered
+    duration: 2361
+    at: 2026-10-12
+  - id: JSYsisYZRRQ
+    platform: youtube
+    channel: DagerClips
+    title: "Dager te enseña a hacer un server DNS #2."
+    duration: 8201
+    url: https://www.youtube.com/watch?v=JSYsisYZRRQ
+    status: merged
+    at: 2026-10-12
+  - id: JuGBhO0ELgc
+    platform: youtube
+    channel: DotDager
+    title: COSILOGÍA | !discord !falopa !links
+    url: https://www.youtube.com/watch?v=JuGBhO0ELgc
+    status: discovered
+    duration: 14620
+    at: 2026-10-12
+  - id: jV803N6PJ4c
+    platform: youtube
+    channel: ElAntroDeDager
+    title: El video incompl
+    url: https://www.youtube.com/shorts/jV803N6PJ4c
+    status: discovered
+    at: 2026-10-12
+  - id: Jvb88P_Jvnc
+    platform: youtube
+    channel: DotDager
+    title: Pequeño gordo ordenador habla de cosas.
+    url: https://www.youtube.com/watch?v=Jvb88P_Jvnc
+    status: discovered
+    duration: 21555
+    at: 2026-10-12
+  - id: JVrcdLwhABc
+    platform: youtube
+    channel: DagerClips
+    title: Yo trabajo por placer
+    url: https://www.youtube.com/shorts/JVrcdLwhABc
+    status: extracted
+    at: 2026-10-12
+  - id: jxWrV8-BFKo
+    platform: youtube
+    channel: DotDager
+    title: ¡Falopa! Ahora que tengo tu atención... ¡Falopa!
+    url: https://www.youtube.com/watch?v=jxWrV8-BFKo
+    status: discovered
+    duration: 13554
+    at: 2026-10-12
+  - id: JYGe0uQ9s-8
+    platform: youtube
+    channel: DagerClips
+    title: 'Forobardo de la semana: "Ahora se puede ser senior en solo 2 años."'
+    duration: 171
+    url: https://www.youtube.com/watch?v=JYGe0uQ9s-8
+    status: extracted
+    at: 2026-10-12
+  - id: JZAKCdbcT1U
+    platform: youtube
+    channel: DagerClips
+    title: Me hackearon, NO cometas el mismo error.
+    duration: 1260
+    url: https://www.youtube.com/watch?v=JZAKCdbcT1U
+    status: extracted
+    at: 2026-10-12
+  - id: JZGC5Xc0iC8
+    platform: youtube
+    channel: DagerClips
+    title: La justicia se cae a los pedazos.
+    duration: 1024
+    url: https://www.youtube.com/watch?v=JZGC5Xc0iC8
+    status: extracted
+    at: 2026-10-12
+  - id: jzrzp52Dm2U
+    platform: youtube
+    channel: DagerClips
+    title: Experto en casi todo.
+    url: https://www.youtube.com/shorts/jzrzp52Dm2U
+    status: extracted
+    at: 2026-10-12
+  - id: k9txcNp1DSA
+    platform: youtube
+    channel: DagerClips
+    title: Leyendo las notas del parche en Argentina, la reforma laboral.
+    duration: 2280
+    url: https://www.youtube.com/watch?v=k9txcNp1DSA
+    status: merged
+    at: 2026-10-12
+  - id: kA7dxMzGzcg
+    platform: youtube
+    channel: ElAntroDeDager
+    title: "Frontend/Backend:  Cliente/Servidor | Te lo explico así nomás."
+    duration: 472
+    url: https://www.youtube.com/watch?v=kA7dxMzGzcg
+    status: extracted
+    at: 2026-10-12
+  - id: kCp21Ki0BF4
+    platform: youtube
+    channel: DagerClips
+    title: El verdadero peligro de la IA.
+    duration: 1695
+    url: https://www.youtube.com/watch?v=kCp21Ki0BF4
+    status: extracted
+    at: 2026-10-12
+  - id: KEIQwuXknU8
+    platform: youtube
+    channel: DotDager
+    title: Compugordo hablador | !discord !falopa !links
+    url: https://www.youtube.com/watch?v=KEIQwuXknU8
+    status: discovered
+    duration: 15609
+    at: 2026-10-12
+  - id: kG3g3oWnRvU
+    platform: youtube
+    channel: DagerClips
+    title: Fines issue. | Political Fools' Day.
+    duration: 1337
+    url: https://www.youtube.com/watch?v=kG3g3oWnRvU
+    status: merged
+    at: 2026-10-12
+  - id: kGSSZwe1o8o
+    platform: youtube
+    channel: DotDager
+    title: Habladurías cosísticomputadoriles | !discord !falopa !links
+    url: https://www.youtube.com/watch?v=kGSSZwe1o8o
+    status: discovered
+    duration: 14313
+    at: 2026-10-12
+  - id: khah2DfmEBM
+    platform: youtube
+    channel: DagerClips
+    title: "1 EMPRESARIO VS 20 TRABAJADORES #2 SNYDER CUT"
+    duration: 2774
+    url: https://www.youtube.com/watch?v=khah2DfmEBM
+    status: extracted
+    at: 2026-10-12
+  - id: kKZuxLt1ApU
+    platform: youtube
+    channel: DagerClips
+    title: "What did you expect? #fyp #milei #politics #liberal"
+    url: https://www.youtube.com/shorts/kKZuxLt1ApU
+    status: extracted
+    at: 2026-10-12
+  - id: kNY8qeolW74
+    platform: youtube
+    channel: DagerClips
+    title: "Programo en una media. #fyp #clips #programacion"
+    url: https://www.youtube.com/shorts/kNY8qeolW74
+    status: extracted
+    at: 2026-10-12
+  - id: kOWpyxxERSk
+    platform: youtube
+    channel: DotDager
+    title: BANANA IS NOT JUSTICE.
+    url: https://www.youtube.com/watch?v=kOWpyxxERSk
+    status: discovered
+    duration: 11625
+    at: 2026-10-12
+  - id: kOyk-C3dpjk
+    platform: youtube
+    channel: DotDager
+    title: Programá como un filósofo.
+    duration: 539
+    url: https://www.youtube.com/watch?v=kOyk-C3dpjk
+    status: extracted
+    at: 2026-10-12
+  - id: krpt0BZslgY
+    platform: youtube
+    channel: DagerClips
+    title: The Choicer Voicer es un cago de risa
+    duration: 2355
+    url: https://www.youtube.com/watch?v=krpt0BZslgY
+    status: extracted
+    at: 2026-10-12
+  - id: ktRS4KtFP2Y
+    platform: youtube
+    channel: ElAntroDeDager
+    title: La película más odiada de Robert Pattinson está bastante buena.
+    duration: 795
+    url: https://www.youtube.com/watch?v=ktRS4KtFP2Y
+    status: merged
+    at: 2026-10-12
+  - id: KU8WocfSVpQ
+    platform: youtube
+    channel: DagerClips
+    title: Los prompt-gamadores nos dejan sin laburo.
+    duration: 1257
+    url: https://www.youtube.com/watch?v=KU8WocfSVpQ
+    status: extracted
+    at: 2026-10-12
+  - id: kw64u7ZqpGA
+    platform: youtube
+    channel: DagerClips
+    title: "Lamparita flotante en mercado libre. #fyp #clips #argentina"
+    url: https://www.youtube.com/shorts/kw64u7ZqpGA
+    status: extracted
+    at: 2026-10-12
+  - id: KyIpYVDKEC8
+    platform: youtube
+    channel: DagerClips
+    title: "Que hacer cuando un compañero de trabajo es muy f#rro #fyp #twitch #dev #clips #programacion"
+    url: https://www.youtube.com/shorts/KyIpYVDKEC8
+    status: extracted
+    at: 2026-10-12
+  - id: kZ5znzPDR7Y
+    platform: youtube
+    channel: DotDager
+    title: Experto en ciberseguridad le explica cosas a gordito compu.
+    url: https://www.youtube.com/watch?v=kZ5znzPDR7Y
+    status: discovered
+    duration: 13735
+    at: 2026-10-12
+  - id: kzXIssD9BRg
+    platform: youtube
+    channel: DagerClips
+    title: El futuro y declive del trabajo remoto.
+    duration: 1218
+    url: https://www.youtube.com/watch?v=kzXIssD9BRg
+    status: extracted
+    at: 2026-10-12
+  - id: KZYWWsiMrbA
+    platform: youtube
+    channel: ElAntroDeDager
+    title: Spider Man 3 me enseñó a pararme de mano | Review, análisis o algo así.
+    duration: 631
+    url: https://www.youtube.com/watch?v=KZYWWsiMrbA
+    status: extracted
+    at: 2026-10-12
+  - id: l5StxtIQ25k
+    platform: youtube
+    channel: DotDager
+    title: La habilidad más importante que no estás practicando.
+    duration: 577
+    url: https://www.youtube.com/watch?v=l5StxtIQ25k
+    status: extracted
+    at: 2026-10-12
+  - id: LaKH8g-RVdo
+    platform: youtube
+    channel: DagerClips
+    title: "Como pase de programador JR a lider de un equipo 💻 #fyp #dev #argentina   #twitch"
+    url: https://www.youtube.com/shorts/LaKH8g-RVdo
+    status: extracted
+    at: 2026-10-12
+  - id: lcs1jjtONGg
+    platform: youtube
+    channel: DagerClips
+    title: Demasiado bueno para ser real.
+    url: https://www.youtube.com/shorts/lcs1jjtONGg
+    status: extracted
+    at: 2026-10-12
+  - id: ld4ATgKskH4
+    platform: youtube
+    channel: DotDager
+    title: Cómo hacer un server HTTP con Maizena y C# (Parte 2, la venganza de la Maizena)
+    url: https://www.youtube.com/watch?v=ld4ATgKskH4
+    status: discovered
+    duration: 18096
+    at: 2026-10-12
+  - id: lDsT9K3ryMk
+    platform: youtube
+    channel: DagerClips
+    title: El portfolio de un suscriptor crasheo mi pc...
+    duration: 9345
+    url: https://www.youtube.com/watch?v=lDsT9K3ryMk
+    status: extracted
+    at: 2026-10-12
+  - id: lHJv5_1VL2o
+    platform: youtube
+    channel: DotDager
+    title: Teoría de grafos | Te lo explico así nomás.
+    duration: 675
+    url: https://www.youtube.com/watch?v=lHJv5_1VL2o
+    status: extracted
+    at: 2026-10-12
+  - id: LI6mzQQJpPE
+    platform: youtube
+    channel: DotDager
+    title: Gordito compu habla de cosas.
+    url: https://www.youtube.com/watch?v=LI6mzQQJpPE
+    status: discovered
+    duration: 16408
+    at: 2026-10-12
+  - id: LiddPDY8YH8
+    platform: youtube
+    channel: DagerClips
+    title: ¿Sirve estudiar matemáticas para programar?
+    url: https://www.youtube.com/shorts/LiddPDY8YH8
+    status: extracted
+    at: 2026-10-12
+  - id: liMHsimalnA
+    platform: youtube
+    channel: DagerClips
+    title: ¿Tiene la meritocracia sentido?
+    duration: 1123
+    url: https://www.youtube.com/watch?v=liMHsimalnA
+    status: merged
+    at: 2026-10-12
+  - id: LJWcp7mGLqU
+    platform: youtube
+    channel: DotDager
+    title: "ENTRY LEVEL. #fyp #programacion #clips"
+    url: https://www.youtube.com/shorts/LJWcp7mGLqU
+    status: extracted
+    at: 2026-10-12
+  - id: lM5RG303yf8
+    platform: youtube
+    channel: DotDager
+    title: Vibe Coding, TypeScript y compañía | Resumen lvl 5.
+    duration: 231
+    url: https://www.youtube.com/watch?v=lM5RG303yf8
+    status: extracted
+    at: 2026-10-12
+  - id: lMHiY6OlxjY
+    platform: youtube
+    channel: DagerClips
+    title: "Cuando me decidí a estudiar programación. #fyp #programacion #dev #clips #programador"
+    url: https://www.youtube.com/shorts/lMHiY6OlxjY
+    status: extracted
+    at: 2026-10-12
+  - id: lp8D11HIzgY
+    platform: youtube
+    channel: DagerClips
+    title: A.G antes de GPT.
+    url: https://www.youtube.com/shorts/lp8D11HIzgY
+    status: extracted
+    at: 2026-10-12
+  - id: lpnxR_0Njqs
+    platform: youtube
+    channel: DagerClips
+    title: Este viewer se gano 200$ dolares por esta página.
+    duration: 644
+    url: https://www.youtube.com/watch?v=lpnxR_0Njqs
+    status: extracted
+    at: 2026-10-12
+  - id: lqjkCGNed48
+    platform: youtube
+    channel: DagerClips
+    title: Uepa.
+    url: https://www.youtube.com/shorts/lqjkCGNed48
+    status: extracted
+    at: 2026-10-12
+  - id: lv_svO3VwVk
+    platform: youtube
+    channel: ElAntroDeDager
+    title: Dr. Manhattan, el hombre y la divinidad.
+    duration: 2108
+    url: https://www.youtube.com/watch?v=lv_svO3VwVk
+    status: merged
+    at: 2026-10-12
+  - id: Lv9nGxpAJrY
+    platform: youtube
+    channel: DotDager
+    title: 🔴 ANALIZANDO SUS PORTFOLIOS 🔴
+    url: https://www.youtube.com/watch?v=Lv9nGxpAJrY
+    status: discovered
+    duration: 12400
+    at: 2026-10-12
+  - id: LWYGMKqCqbo
+    platform: youtube
+    channel: DagerClips
+    title: ESTA DEMOCRACIA NO SIRVE | Falopa Política
+    duration: 2154
+    url: https://www.youtube.com/watch?v=LWYGMKqCqbo
+    status: merged
+    at: 2026-10-12
+  - id: lXJzahJ_HI0
+    platform: youtube
+    channel: DagerClips
+    title: Se pudrió todo.
+    duration: 732
+    url: https://www.youtube.com/watch?v=lXJzahJ_HI0
+    status: merged
+    at: 2026-10-12
+  - id: m11VcsEDKiI
+    platform: youtube
+    channel: DotDager
+    title: Gordito compu habla de cosas.
+    url: https://www.youtube.com/watch?v=m11VcsEDKiI
+    status: discovered
+    duration: 19138
+    at: 2026-10-12
+  - id: m4IWfBQBnN4
+    platform: youtube
+    channel: ElAntroDeDager
+    title: Cómo dedicar una paja.
+    duration: 18
+    url: https://www.youtube.com/watch?v=m4IWfBQBnN4
+    status: skipped
+    at: 2026-10-12
+    reason: sin transcripción automática
+  - id: m4me4mlm02E
+    platform: youtube
+    channel: DotDager
+    title: Tu cerebro en ChatGPT.
+    duration: 716
+    url: https://www.youtube.com/watch?v=m4me4mlm02E
+    status: merged
+    at: 2026-10-12
+  - id: M8tlkTIopvE
+    platform: youtube
+    channel: DotDager
+    title: "No digan cómo vivo, por favor. #clips #fyp #argentina"
+    url: https://www.youtube.com/shorts/M8tlkTIopvE
+    status: extracted
+    at: 2026-10-12
+  - id: MAg7oqMaZ94
+    platform: youtube
+    channel: DotDager
+    title: GORDO COMPUTADORIL HABLA DE COSAS | !discord !falopa !links
+    url: https://www.youtube.com/watch?v=MAg7oqMaZ94
+    status: discovered
+    duration: 11039
+    at: 2026-10-12
+  - id: mBXLq_Jx2rc
+    platform: youtube
+    channel: DotDager
+    title: "Programar: expectativa vs realidad."
+    duration: 43
+    url: https://www.youtube.com/watch?v=mBXLq_Jx2rc
+    status: skipped
+    at: 2026-10-12
+    reason: sin transcripción automática
+  - id: mgLxaiq7o8E
+    platform: youtube
+    channel: DagerClips
+    title: Reforma laboral aprobada, notas del parche en Argentina²
+    duration: 2602
+    url: https://www.youtube.com/watch?v=mgLxaiq7o8E
+    status: extracted
+    at: 2026-10-12
+  - id: mGzbe2J7U8g
+    platform: youtube
+    channel: DagerClips
+    title: "Hoppe y Murphy. #fyp #poltica #liberal"
+    url: https://www.youtube.com/shorts/mGzbe2J7U8g
+    status: extracted
+    at: 2026-10-12
+  - id: MhI4umaq5L4
+    platform: youtube
+    channel: DagerClips
+    title: Bajan la edad imputabilidad y está un poco raro.
+    duration: 2980
+    url: https://www.youtube.com/watch?v=MhI4umaq5L4
+    status: merged
+    at: 2026-10-12
+  - id: MikKYw8X1II
+    platform: youtube
+    channel: DotDager
+    title: Charla cosística con @TipitoEnojado  | !discord !falopa !links
+    url: https://www.youtube.com/watch?v=MikKYw8X1II
+    status: discovered
+    duration: 12011
+    at: 2026-10-12
+  - id: MKxyfmbv7q0
+    platform: youtube
+    channel: DagerClips
+    title: La ola de programadores que NO programan. | FOROBARDO
+    duration: 1184
+    url: https://www.youtube.com/watch?v=MKxyfmbv7q0
+    status: extracted
+    at: 2026-10-12
+  - id: mmQJXcjuZ1U
+    platform: youtube
+    channel: ElAntroDeDager
+    title: Zombies y filosofía | Qué nos dicen los muertos vivos de nuestra humanidad.
+    duration: 849
+    url: https://www.youtube.com/watch?v=mmQJXcjuZ1U
+    status: merged
+    at: 2026-10-12
+  - id: mnRGishwxlQ
+    platform: youtube
+    channel: DagerClips
+    title: Programador experto en klaukol
+    url: https://www.youtube.com/shorts/mnRGishwxlQ
+    status: extracted
+    at: 2026-10-12
+  - id: mT7QFcSR9Hc
+    platform: youtube
+    channel: DotDager
+    title: Hoy la clavamos en el Angular | AAAA stack 3
+    url: https://www.youtube.com/watch?v=mT7QFcSR9Hc
+    status: discovered
+    duration: 19149
+    at: 2026-10-12
+  - id: mtKR6KeZXB4
+    platform: youtube
+    channel: DotDager
+    title: "Suscripción para girar las ruedas. #fyp #clips #twitch"
+    url: https://www.youtube.com/shorts/mtKR6KeZXB4
+    status: discovered
+    at: 2026-10-12
+  - id: mu2Oge0ho0U
+    platform: youtube
+    channel: DagerClips
+    title: Las IAs pueden ser engañadas con poesía.
+    duration: 1244
+    url: https://www.youtube.com/watch?v=mu2Oge0ho0U
+    status: extracted
+    at: 2026-10-12
+  - id: MVCkMCH5FJY
+    platform: youtube
+    channel: ElAntroDeDager
+    title: Avatar y guerra justa | Análisis de la RDA, filosofía y esas cosas.
+    duration: 696
+    url: https://www.youtube.com/watch?v=MVCkMCH5FJY
+    status: extracted
+    at: 2026-10-12
+  - id: MVUgLCLC2-Q
+    platform: youtube
+    channel: DotDager
+    title: HACKS CEREBRALES con @JuanIgnacioFernandez  |  !discord !falopa !links
+    url: https://www.youtube.com/watch?v=MVUgLCLC2-Q
+    status: discovered
+    duration: 10369
+    at: 2026-10-12
+  - id: Mw5ZFkwwK0w
+    platform: youtube
+    channel: DotDager
+    title: ANTHROPIC QUEMA LIBROS (y otras cosas) | !discord !falopa !links
+    url: https://www.youtube.com/watch?v=Mw5ZFkwwK0w
+    status: discovered
+    duration: 10213
+    at: 2026-10-12
+  - id: Mw7Mz7Cl2wA
+    platform: youtube
+    channel: DagerClips
+    title: "Entro la balubi. #fyp #dev #twitch #clip #ai #programador #programacion"
+    url: https://www.youtube.com/shorts/Mw7Mz7Cl2wA
+    status: extracted
+    at: 2026-10-12
+  - id: MXlK_nKziMs
+    platform: youtube
+    channel: DotDager
+    title: EXPLICANDO EL MONSTRUO (y otras cosas) | !discord !falopa !links
+    url: https://www.youtube.com/watch?v=MXlK_nKziMs
+    status: discovered
+    duration: 11820
+    at: 2026-10-12
+  - id: MxwVuQTGUbg
+    platform: youtube
+    channel: DotDager
+    title: "IGNORA TODO LO ANTERIOR #dev #programacion #python"
+    url: https://www.youtube.com/shorts/MxwVuQTGUbg
+    status: extracted
+    at: 2026-10-12
+  - id: MYHiaHDLDB8
+    platform: youtube
+    channel: DotDager
+    title: HACKEARON WORDPRESS (y L4D2 con Juli) | !discord !falopa !links
+    url: https://www.youtube.com/watch?v=MYHiaHDLDB8
+    status: discovered
+    duration: 14099
+    at: 2026-10-12
+  - id: Mz_QibdOgD0
+    platform: youtube
+    channel: DotDager
+    title: "Buen domingo 🥰#fyp #clips #twitch"
+    url: https://www.youtube.com/shorts/Mz_QibdOgD0
+    status: extracted
+    at: 2026-10-12
+  - id: N_KWeLiYIkQ
+    platform: youtube
+    channel: DagerClips
+    title: "MOLTBOOK: el Reddit para IAs, ft. OpenClaw/ClawdBot."
+    duration: 2681
+    url: https://www.youtube.com/watch?v=N_KWeLiYIkQ
+    status: extracted
+    at: 2026-10-12
+  - id: n5bFvp2zQA4
+    platform: youtube
+    channel: DotDager
+    title: "Critiquemos sin saber. #fyp #clips #twitch"
+    url: https://www.youtube.com/shorts/n5bFvp2zQA4
+    status: extracted
+    at: 2026-10-12
+  - id: n81wkPBzh_E
+    platform: youtube
+    channel: DagerClips
+    title: Cosas que muchos se olvidan al momento de aprender inglés.
+    duration: 244
+    url: https://www.youtube.com/watch?v=n81wkPBzh_E
+    status: extracted
+    at: 2026-10-12
+  - id: N8y9yUf1gWQ
+    platform: youtube
+    channel: DotDager
+    title: "Tradición de sábado. #fyp #programacion #clips"
+    url: https://www.youtube.com/shorts/N8y9yUf1gWQ
+    status: extracted
+    at: 2026-10-12
+  - id: n97mTNN7tFQ
+    platform: youtube
+    channel: DotDager
+    title: "PROBÁ HACER ESTO #productividad #fyp #tips"
+    url: https://www.youtube.com/shorts/n97mTNN7tFQ
+    status: extracted
+    at: 2026-10-12
+  - id: NaRmvm8dq-M
+    platform: youtube
+    channel: DotDager
+    title: 4 ideas CLAVE para APRENDER a PROGRAMAR.
+    duration: 255
+    url: https://www.youtube.com/watch?v=NaRmvm8dq-M
+    status: extracted
+    at: 2026-10-12
+  - id: nb2ceh0L3V4
+    platform: youtube
+    channel: DagerClips
+    title: "Hay que irse como un pro. #fyp #dev #programming #clip #twitch #streamer #programador #programacion"
+    url: https://www.youtube.com/shorts/nb2ceh0L3V4
+    status: extracted
+    at: 2026-10-12
+  - id: nbbHfjvzs9Y
+    platform: youtube
+    channel: DagerClips
+    title: ChatGPT tiene una obsesión con los… ¿DUENDES?
+    duration: 998
+    url: https://www.youtube.com/watch?v=nbbHfjvzs9Y
+    status: extracted
+    at: 2026-10-12
+  - id: nBFNw6eQKbQ
+    platform: youtube
+    channel: DagerClips
+    title: Differences between a junior and a senior.
+    url: https://www.youtube.com/shorts/nBFNw6eQKbQ
+    status: extracted
+    at: 2026-10-12
+  - id: nd8Ej6oZGUc
+    platform: youtube
+    channel: DotDager
+    title: ¿Cuántos lenguajes de programación aprender?
+    duration: 153
+    url: https://www.youtube.com/watch?v=nd8Ej6oZGUc
+    status: extracted
+    at: 2026-10-12
+  - id: nfAIbwTZH-Y
+    platform: youtube
+    channel: DagerClips
+    title: "What a wave with a goal. #fyp #meta #programacion #ia"
+    url: https://www.youtube.com/shorts/nfAIbwTZH-Y
+    status: extracted
+    at: 2026-10-12
+  - id: NFfLVN0zIbE
+    platform: youtube
+    channel: DotDager
+    title: Gordito compu reanuda sus habladurías cosísticas.
+    url: https://www.youtube.com/watch?v=NFfLVN0zIbE
+    status: discovered
+    duration: 11783
+    at: 2026-10-12
+  - id: nFpcqQM0cVs
+    platform: youtube
+    channel: DotDager
+    title: Haciendo mierda tu CV.
+    url: https://www.youtube.com/watch?v=nFpcqQM0cVs
+    status: discovered
+    duration: 9356
+    at: 2026-10-12
+  - id: ngX1nxPLu3s
+    platform: youtube
+    channel: DagerClips
+    title: "El duende de las medias. #twitch #clips #dev #programacion"
+    url: https://www.youtube.com/shorts/ngX1nxPLu3s
+    status: extracted
+    at: 2026-10-12
+  - id: NHzJviZ0X8s
+    platform: youtube
+    channel: DagerClips
+    title: Ahí se fue tu PC.
+    url: https://www.youtube.com/shorts/NHzJviZ0X8s
+    status: extracted
+    at: 2026-10-12
+  - id: nIR95vS5Cnk
+    platform: youtube
+    channel: DagerClips
+    title: Usar mucha IA apaga partes de tu cerebro..
+    duration: 1960
+    url: https://www.youtube.com/watch?v=nIR95vS5Cnk
+    status: merged
+    at: 2026-10-12
+  - id: NkuJio2eqFo
+    platform: youtube
+    channel: DotDager
+    title: "Cómo castigar a un cliente #fyp #programacion #clips"
+    url: https://www.youtube.com/shorts/NkuJio2eqFo
+    status: extracted
+    at: 2026-10-12
+  - id: NMM6x29FZKI
+    platform: youtube
+    channel: DotDager
+    title: "Tutorial de comer un sánguche de milanesa. #fyp #clips #twitch"
+    url: https://www.youtube.com/shorts/NMM6x29FZKI
+    status: extracted
+    at: 2026-10-12
+  - id: nMvXTl5oZCM
+    platform: youtube
+    channel: DagerClips
+    title: We always fall for the same hype.
+    duration: 1264
+    url: https://www.youtube.com/watch?v=nMvXTl5oZCM
+    status: merged
+    at: 2026-10-12
+  - id: nn5buCRhHOM
+    platform: youtube
+    channel: DagerClips
+    title: ¿Se puede ser programador e influencer?
+    duration: 777
+    url: https://www.youtube.com/watch?v=nn5buCRhHOM
+    status: extracted
+    at: 2026-10-12
+  - id: nPZhzMdcPw8
+    platform: youtube
+    channel: DagerClips
+    title: Millions of dollars spent on a robot to fold a towel incorrectly.
+    duration: 928
+    url: https://www.youtube.com/watch?v=nPZhzMdcPw8
+    status: extracted
+    at: 2026-10-12
+  - id: nqapu9SFRCo
+    platform: youtube
+    channel: ElAntroDeDager
+    title: "Review del D2 o algo así #shorts"
+    url: https://www.youtube.com/shorts/nqapu9SFRCo
+    status: discovered
+    at: 2026-10-12
+  - id: nQOWS_Cvx88
+    platform: youtube
+    channel: DagerClips
+    title: La gente de Reddit esta en pedo.. | Falopa política
+    duration: 539
+    url: https://www.youtube.com/watch?v=nQOWS_Cvx88
+    status: extracted
+    at: 2026-10-12
+  - id: NSde4B3xBr4
+    platform: youtube
+    channel: ElAntroDeDager
+    title: ¿Qué son las cookies y para qué sirven? | Te lo explico así nomás.
+    duration: 818
+    url: https://www.youtube.com/watch?v=NSde4B3xBr4
+    status: extracted
+    at: 2026-10-12
+  - id: NSMNiIMG2nY
+    platform: youtube
+    channel: ElAntroDeDager
+    title: "Qué es un API | Te lo explico así nomás #shorts"
+    url: https://www.youtube.com/shorts/NSMNiIMG2nY
+    status: discovered
+    at: 2026-10-12
+  - id: NuMnqO2pB00
+    platform: youtube
+    channel: DotDager
+    title: "ALIEN INVADE BOLIVIA #alien #ia #fyp"
+    url: https://www.youtube.com/shorts/NuMnqO2pB00
+    status: extracted
+    at: 2026-10-12
+  - id: NUr6WVl1u0k
+    platform: youtube
+    channel: DagerClips
+    title: Cómo dejar de ser gordo compu y ser gordo empresarial.
+    duration: 912
+    url: https://www.youtube.com/watch?v=NUr6WVl1u0k
+    status: merged
+    at: 2026-10-12
+  - id: NuzpKQ0mk18
+    platform: youtube
+    channel: DagerClips
+    title: Veo 3... ¿somos prompts?
+    duration: 1455
+    url: https://www.youtube.com/watch?v=NuzpKQ0mk18
+    status: extracted
+    at: 2026-10-12
+  - id: nvzRJQrED1g
+    platform: youtube
+    channel: DagerClips
+    title: The left is the easy way out.
+    duration: 460
+    url: https://www.youtube.com/watch?v=nvzRJQrED1g
+    status: extracted
+    at: 2026-10-12
+  - id: nwl1bZ7iKTg
+    platform: youtube
+    channel: DagerClips
+    title: También pueden estafar gente.
+    url: https://www.youtube.com/shorts/nwl1bZ7iKTg
+    status: extracted
+    at: 2026-10-12
+  - id: NxMpm10Ybd4
+    platform: youtube
+    channel: DotDager
+    title: Vamo' a (charlar y) programar un server DNS en C# (parte 3) | Live coding
+    url: https://www.youtube.com/watch?v=NxMpm10Ybd4
+    status: discovered
+    duration: 15565
+    at: 2026-10-12
+  - id: NYKZ_X_tRNs
+    platform: youtube
+    channel: DotDager
+    title: "El meat proxy no es eterno #programacion #fyp #clips"
+    url: https://www.youtube.com/shorts/NYKZ_X_tRNs
+    status: discovered
+    at: 2026-10-12
+  - id: NZ1DyQmgzv4
+    platform: youtube
+    channel: DagerClips
+    title: Esta por todos lados
+    url: https://www.youtube.com/shorts/NZ1DyQmgzv4
+    status: extracted
+    at: 2026-10-12
+  - id: o_s6Q-teA6U
+    platform: youtube
+    channel: DotDager
+    title: Hoy es DOMINGO y este video lo sabe.
+    duration: 500
+    url: https://www.youtube.com/watch?v=o_s6Q-teA6U
+    status: merged
+    at: 2026-10-12
+  - id: o0ql0d-S2pg
+    platform: youtube
+    channel: DagerClips
+    title: HackGPT
+    url: https://www.youtube.com/shorts/o0ql0d-S2pg
+    status: extracted
+    at: 2026-10-12
+  - id: O1s3y3p1aIE
+    platform: youtube
+    channel: DagerClips
+    title: "Educación privada. #fyp #clips #twitch"
+    url: https://www.youtube.com/shorts/O1s3y3p1aIE
+    status: extracted
+    at: 2026-10-12
+  - id: O3Cn30Qpg7k
+    platform: youtube
+    channel: DagerClips
+    title: Suno AI el futuro de la música.
+    duration: 987
+    url: https://www.youtube.com/watch?v=O3Cn30Qpg7k
+    status: extracted
+    at: 2026-10-12
+  - id: O6EFDtvovRw
+    platform: youtube
+    channel: ElAntroDeDager
+    title: Cuerpo a tierra.
+    duration: 177
+    url: https://www.youtube.com/watch?v=O6EFDtvovRw
+    status: extracted
+    at: 2026-10-12
+  - id: OaoxMskSfeM
+    platform: youtube
+    channel: DagerClips
+    title: "Esto es el futuro.. #fyp  #clips  #twitch  #streamer  #dormir"
+    url: https://www.youtube.com/shorts/OaoxMskSfeM
+    status: skipped
+    at: 2026-10-12
+    reason: sin transcripción automática
+  - id: oC62dQy2RQ4
+    platform: youtube
+    channel: DotDager
+    title: "SE ACABA (EL AÑO)... #fyp #2025 #2026"
+    url: https://www.youtube.com/shorts/oC62dQy2RQ4
+    status: extracted
+    at: 2026-10-12
+  - id: oCUJ9Ko6A3w
+    platform: youtube
+    channel: ElAntroDeDager
+    title: Review del GTA San Andreas o algo así.
+    duration: 115
+    url: https://www.youtube.com/watch?v=oCUJ9Ko6A3w
+    status: extracted
+    at: 2026-10-12
+  - id: OE_EQHjbUwE
+    platform: youtube
+    channel: DagerClips
+    title: ¿País a la venta? Ley de tierras.
+    duration: 2007
+    url: https://www.youtube.com/watch?v=OE_EQHjbUwE
+    status: extracted
+    at: 2026-10-12
+  - id: oENG1NWCREk
+    platform: youtube
+    channel: DagerClips
+    title: "Hack para ganar experiencia como programador 🧠 #dev #programming #twitch #coding #clips #streamer"
+    url: https://www.youtube.com/shorts/oENG1NWCREk
+    status: extracted
+    at: 2026-10-12
+  - id: oeQ19G_2I58
+    platform: youtube
+    channel: DotDager
+    title: Esto NO ES ESTOICISMO | SOUNDTRACK
+    duration: 2041
+    url: https://www.youtube.com/watch?v=oeQ19G_2I58
+    status: skipped
+    at: 2026-10-12
+    reason: sin transcripción automática
+  - id: Ofi7gdSETXU
+    platform: youtube
+    channel: DagerClips
+    title: Que tipo noble.
+    url: https://www.youtube.com/shorts/Ofi7gdSETXU
+    status: extracted
+    at: 2026-10-12
+  - id: og_5ADMoXN8
+    platform: youtube
+    channel: ElAntroDeDager
+    title: "¿Cuándo hay que usar barbijo? (En todo momento) #shorts"
+    url: https://www.youtube.com/shorts/og_5ADMoXN8
+    status: discovered
+    at: 2026-10-12
+  - id: OgFBBqimA0A
+    platform: youtube
+    channel: DagerClips
+    title: Revisando portfolios de suscriptores.
+    duration: 4392
+    url: https://www.youtube.com/watch?v=OgFBBqimA0A
+    status: extracted
+    at: 2026-10-12
+  - id: oGHdcLCd7Gs
+    platform: youtube
+    channel: DotDager
+    title: 5 roadmaps para ser programador en 2024.
+    duration: 640
+    url: https://www.youtube.com/watch?v=oGHdcLCd7Gs
+    status: extracted
+    at: 2026-10-12
+  - id: OgZwIDQeLlg
+    platform: youtube
+    channel: DagerClips
+    title: Los están hackeando a todos, no seas el próximo.
+    duration: 1610
+    url: https://www.youtube.com/watch?v=OgZwIDQeLlg
+    status: extracted
+    at: 2026-10-12
+  - id: OH0jRfLqOr0
+    platform: youtube
+    channel: ElAntroDeDager
+    title: "Blockchain I: ¿Qué es un hash? Funciones de hasheo criptográficas | Te lo explico así nomás."
+    duration: 1221
+    url: https://www.youtube.com/watch?v=OH0jRfLqOr0
+    status: extracted
+    at: 2026-10-12
+  - id: OjSiE6L-TnE
+    platform: youtube
+    channel: DotDager
+    title: "Dijo mi LLM que tu LLM es un pelotudo. #fyp #programacion #clips"
+    url: https://www.youtube.com/shorts/OjSiE6L-TnE
+    status: discovered
+    at: 2026-10-12
+  - id: Ok4KGvoGdzs
+    platform: youtube
+    channel: DagerClips
+    title: Claude y sus nuevas marcas de agua INDETECTABLES.
+    duration: 838
+    url: https://www.youtube.com/watch?v=Ok4KGvoGdzs
+    status: merged
+    at: 2026-10-12
+  - id: olnmAWuY7H8
+    platform: youtube
+    channel: DotDager
+    title: "2 AÑOS SIN LABURO. #programacion #fyp #dev"
+    url: https://www.youtube.com/shorts/olnmAWuY7H8
+    status: extracted
+    at: 2026-10-12
+  - id: ON_oQo65Ozg
+    platform: youtube
+    channel: ElAntroDeDager
+    title: "La muerte de Joel: Abby tenía razón (The Last Of Us 2)."
+    duration: 918
+    url: https://www.youtube.com/watch?v=ON_oQo65Ozg
+    status: extracted
+    at: 2026-10-12
+  - id: OnNW8dbHFno
+    platform: youtube
+    channel: DotDager
+    title: Programando pero solamente puedo usar tecnologías con A | AAAA stack 1
+    url: https://www.youtube.com/watch?v=OnNW8dbHFno
+    status: discovered
+    duration: 13968
+    at: 2026-10-12
+  - id: op-i13q4vGo
+    platform: youtube
+    channel: DotDager
+    title: "HACKEADO POR UN FONDO DE PANTALLA #programacion #fyp #anime"
+    url: https://www.youtube.com/shorts/op-i13q4vGo
+    status: extracted
+    at: 2026-10-12
+  - id: oQcDGpsUgNk
+    platform: youtube
+    channel: DotDager
+    title: Más allá del código | 3 habilidades para ser mejor programador
+    duration: 382
+    url: https://www.youtube.com/watch?v=oQcDGpsUgNk
+    status: merged
+    at: 2026-10-12
+  - id: oQzy3qNAnzE
+    platform: youtube
+    channel: ElAntroDeDager
+    title: El Aviador (2004) me enseñó algo | Review, análisis o algo así.
+    duration: 453
+    url: https://www.youtube.com/watch?v=oQzy3qNAnzE
+    status: skipped
+    at: 2026-10-12
+    reason: sin transcripción automática
+  - id: orbFCBPdc5A
+    platform: youtube
+    channel: DagerClips
+    title: ¿Qué hace un programador senior?
+    duration: 1291
+    url: https://www.youtube.com/watch?v=orbFCBPdc5A
+    status: merged
+    at: 2026-10-12
+  - id: OS32oYAysfA
+    platform: youtube
+    channel: DotDager
+    title: Gordito compu habla de cosas no tan interesantes como para justificar la expresión en la miniatura.
+    url: https://www.youtube.com/watch?v=OS32oYAysfA
+    status: discovered
+    duration: 12911
+    at: 2026-10-12
+  - id: oSr0MD6TsCY
+    platform: youtube
+    channel: DotDager
+    title: ¿Ser PROGRAMADOR FREELANCE como PRIMER TRABAJO?
+    duration: 277
+    url: https://www.youtube.com/watch?v=oSr0MD6TsCY
+    status: extracted
+    at: 2026-10-12
+  - id: Ot9JbcOHDVQ
+    platform: youtube
+    channel: DagerClips
+    title: Que poner en tus CV's cuando no tenés experiencia.
+    duration: 180
+    url: https://www.youtube.com/watch?v=Ot9JbcOHDVQ
+    status: extracted
+    at: 2026-10-12
+  - id: oUWqWs5oFhE
+    platform: youtube
+    channel: DagerClips
+    title: "Un poco de inodoro en el papel higiénico. #fyp  #clips  #programacion  #gaming"
+    url: https://www.youtube.com/shorts/oUWqWs5oFhE
+    status: extracted
+    at: 2026-10-12
+  - id: OVP5OByneAU
+    platform: youtube
+    channel: DagerClips
+    title: ¿Quién te COMPRA si TODOS LOS TRABAJOS son AUTOMATIZADOS?
+    duration: 2036
+    url: https://www.youtube.com/watch?v=OVP5OByneAU
+    status: merged
+    at: 2026-10-12
+  - id: OW_2f1fe1is
+    platform: youtube
+    channel: ElAntroDeDager
+    title: The House That Jack Built - Una caricatura del artista | Review analisis o algo así
+    duration: 882
+    url: https://www.youtube.com/watch?v=OW_2f1fe1is
+    status: extracted
+    at: 2026-10-12
+  - id: oXxy6Q9v6r0
+    platform: youtube
+    channel: DagerClips
+    title: "Toca saltarlo. #fyp #clips #politica"
+    url: https://www.youtube.com/shorts/oXxy6Q9v6r0
+    status: extracted
+    at: 2026-10-12
+  - id: oyB3INdwAXg
+    platform: youtube
+    channel: DotDager
+    title: En defensa de la mentira.
+    duration: 330
+    url: https://www.youtube.com/watch?v=oyB3INdwAXg
+    status: merged
+    at: 2026-10-12
+  - id: OZH3766LURE
+    platform: youtube
+    channel: DagerClips
+    title: ¿Qué seré de Venezuela?
+    url: https://www.youtube.com/shorts/OZH3766LURE
+    status: extracted
+    at: 2026-10-12
+  - id: P_AOvhcyMBI
+    platform: youtube
+    channel: DagerClips
+    title: "I just say. #fyp #marxism #politics #economy"
+    url: https://www.youtube.com/shorts/P_AOvhcyMBI
+    status: extracted
+    at: 2026-10-12
+  - id: P2-OsTWMclM
+    platform: youtube
+    channel: ElAntroDeDager
+    title: Llame ya al 0-800-NecesitoAyudaPorFavor.
+    duration: 27
+    url: https://www.youtube.com/watch?v=P2-OsTWMclM
+    status: extracted
+    at: 2026-10-12
+  - id: p3Q4lTNxSfQ
+    platform: youtube
+    channel: DotDager
+    title: ¿Por qué usan BINARIO las computadoras?
+    duration: 679
+    url: https://www.youtube.com/watch?v=p3Q4lTNxSfQ
+    status: merged
+    at: 2026-10-12
+  - id: P4sqb8om0oo
+    platform: youtube
+    channel: DagerClips
+    title: "¿Sigue siendo rentable ser programador? #fyp #dev #programacion"
+    url: https://www.youtube.com/shorts/P4sqb8om0oo
+    status: extracted
+    at: 2026-10-12
+  - id: p8Grmjg8-ew
+    platform: youtube
+    channel: DotDager
+    title: "$9.99 por un juego (el juego no viene incluido). #fyp #programacion #dev"
+    url: https://www.youtube.com/shorts/p8Grmjg8-ew
+    status: discovered
+    at: 2026-10-12
+  - id: p988l0oON3g
+    platform: youtube
+    channel: DagerClips
+    title: Hay que cerrar la economía | Falopa Política
+    duration: 1203
+    url: https://www.youtube.com/watch?v=p988l0oON3g
+    status: merged
+    at: 2026-10-12
+  - id: pAlLs0Eoqto
+    platform: youtube
+    channel: DotDager
+    title: Destruyendo tu porfolio.
+    url: https://www.youtube.com/watch?v=pAlLs0Eoqto
+    status: discovered
+    duration: 17224
+    at: 2026-10-12
+  - id: PBPGXgbZZcc
+    platform: youtube
+    channel: ElAntroDeDager
+    title: "Mr. Nobody: un jardín de senderos que se bifurcan y el mito de la elección | Análisis o algo así."
+    duration: 611
+    url: https://www.youtube.com/watch?v=PBPGXgbZZcc
+    status: merged
+    at: 2026-10-12
+  - id: pbWxlLeg-fs
+    platform: youtube
+    channel: DagerClips
+    title: Los mejores libros para aprender a programar.
+    duration: 679
+    url: https://www.youtube.com/watch?v=pbWxlLeg-fs
+    status: merged
+    at: 2026-10-12
+  - id: PC8garSbjh0
+    platform: youtube
+    channel: DagerClips
+    title: "En general. #fyp #política #privado #publico #liberal"
+    url: https://www.youtube.com/shorts/PC8garSbjh0
+    status: extracted
+    at: 2026-10-12
+  - id: pdGnLA_E76s
+    platform: youtube
+    channel: DagerClips
+    title: Analizando el famoso ensayo de Hayek.
+    duration: 3503
+    url: https://www.youtube.com/watch?v=pdGnLA_E76s
+    status: merged
+    at: 2026-10-12
+  - id: pE_Nxc296MA
+    platform: youtube
+    channel: DagerClips
+    title: IA de OpenAI escapa y hackea Hugging Face
+    duration: 853
+    url: https://www.youtube.com/watch?v=pE_Nxc296MA
+    status: extracted
+    at: 2026-10-12
+  - id: Pg24h9UuoNo
+    platform: youtube
+    channel: DagerClips
+    title: Michelo esta gaga.
+    duration: 1220
+    url: https://www.youtube.com/watch?v=Pg24h9UuoNo
+    status: merged
+    at: 2026-10-12
+  - id: Ph0vv4-ghZg
+    platform: youtube
+    channel: DotDager
+    title: "Ni idea. #fyp #clips #clip"
+    url: https://www.youtube.com/shorts/Ph0vv4-ghZg
+    status: extracted
+    at: 2026-10-12
+  - id: Ph6Ryt-uEJg
+    platform: youtube
+    channel: DotDager
+    title: Study With Me | SÓLO MÚSICA | Pomodoro 25/5 para estudiar/concentrarse.
+    duration: 6912
+    url: https://www.youtube.com/watch?v=Ph6Ryt-uEJg
+    status: skipped
+    at: 2026-10-12
+    reason: sin transcripción automática
+  - id: PHm96yvCYiY
+    platform: youtube
+    channel: DotDager
+    title: "Me cagué a piñas con un compañero. #fyp #programacion #clips"
+    url: https://www.youtube.com/shorts/PHm96yvCYiY
+    status: extracted
+    at: 2026-10-12
+  - id: phoCg4r-cjM
+    platform: youtube
+    channel: DotDager
+    title: Gordito compu insiste en hablar de cosas.
+    url: https://www.youtube.com/watch?v=phoCg4r-cjM
+    status: discovered
+    duration: 9098
+    at: 2026-10-12
+  - id: PICzU_N32-g
+    platform: youtube
+    channel: DotDager
+    title: Obeso informático discurre sobre asuntos | !discord !falopa !links
+    url: https://www.youtube.com/watch?v=PICzU_N32-g
+    status: discovered
+    duration: 17852
+    at: 2026-10-12
+  - id: pihqjCTVd10
+    platform: youtube
+    channel: DagerClips
+    title: Chat GPT 4, ¿es "her" una realidad?
+    duration: 1311
+    url: https://www.youtube.com/watch?v=pihqjCTVd10
+    status: extracted
+    at: 2026-10-12
+  - id: pjLBZ1RJ7zA
+    platform: youtube
+    channel: DagerClips
+    title: Detective de SQLazo.
+    duration: 5606
+    url: https://www.youtube.com/watch?v=pjLBZ1RJ7zA
+    status: extracted
+    at: 2026-10-12
+  - id: pjsl_hZwRZA
+    platform: youtube
+    channel: DagerClips
+    title: Analizando "Stop Killing Games."
+    duration: 1276
+    url: https://www.youtube.com/watch?v=pjsl_hZwRZA
+    status: extracted
+    at: 2026-10-12
+  - id: PlWct-si-xc
+    platform: youtube
+    channel: DagerClips
+    title: Meta has to stop.
+    duration: 1265
+    url: https://www.youtube.com/watch?v=PlWct-si-xc
+    status: extracted
+    at: 2026-10-12
+  - id: PObP8JyoPhY
+    platform: youtube
+    channel: DotDager
+    title: Cosística intermedia | !discord !falopa !links
+    url: https://www.youtube.com/watch?v=PObP8JyoPhY
+    status: discovered
+    duration: 18351
+    at: 2026-10-12
+  - id: poweoTjX2cw
+    platform: youtube
+    channel: DagerClips
+    title: "¿Debería haber restricciones a quien puede votar y quien no? #fyp  #clips   #streamer  #filosofia"
+    url: https://www.youtube.com/shorts/poweoTjX2cw
+    status: merged
+    at: 2026-10-12
+  - id: pPaPyb5jVFk
+    platform: youtube
+    channel: ElAntroDeDager
+    title: Mi personaje favorito en The Boys | Review, análisis o algo así.
+    duration: 349
+    url: https://www.youtube.com/watch?v=pPaPyb5jVFk
+    status: extracted
+    at: 2026-10-12
+  - id: Ps3G3PtZcW0
+    platform: youtube
+    channel: ElAntroDeDager
+    title: DROSS ME ODIA | Por qué Ángel Revilla me bloqueó en Ask.fm.
+    duration: 784
+    url: https://www.youtube.com/watch?v=Ps3G3PtZcW0
+    status: extracted
+    at: 2026-10-12
+  - id: PsNzuuEqrN8
+    platform: youtube
+    channel: DagerClips
+    title: Notepad++ hackeado. Cuidado si tenés esta versión.
+    url: https://www.youtube.com/shorts/PsNzuuEqrN8
+    status: extracted
+    at: 2026-10-12
+  - id: PtOzifvAvDs
+    platform: youtube
+    channel: DotDager
+    title: "Está raro el hombre de nieve. #fyp #clips #twitch"
+    url: https://www.youtube.com/shorts/PtOzifvAvDs
+    status: extracted
+    at: 2026-10-12
+  - id: PVjcZBCLtfU
+    platform: youtube
+    channel: DagerClips
+    title: "Dager te enseña a hacer un server DNS #3."
+    duration: 8546
+    url: https://www.youtube.com/watch?v=PVjcZBCLtfU
+    status: merged
+    at: 2026-10-12
+  - id: PvlWX_AY3Ug
+    platform: youtube
+    channel: DagerClips
+    title: Brasil le paga a policías por cada kill.
+    duration: 869
+    url: https://www.youtube.com/watch?v=PvlWX_AY3Ug
+    status: merged
+    at: 2026-10-12
+  - id: q-tw6miWOtw
+    platform: youtube
+    channel: DagerClips
+    title: Partido Liberal Pesimista. | Falopa Política
+    duration: 1057
+    url: https://www.youtube.com/watch?v=q-tw6miWOtw
+    status: extracted
+    at: 2026-10-12
+  - id: Q3R_q8HMCqo
+    platform: youtube
+    channel: DagerClips
+    title: '"Dejemos que la IA piense por nosotros."'
+    duration: 489
+    url: https://www.youtube.com/watch?v=Q3R_q8HMCqo
+    status: extracted
+    at: 2026-10-12
+  - id: q8ttiG4yih0
+    platform: youtube
+    channel: DotDager
+    title: Cómo hacer un server HTTP con Maizena y C#.
+    url: https://www.youtube.com/watch?v=q8ttiG4yih0
+    status: discovered
+    duration: 10898
+    at: 2026-10-12
+  - id: qa3Q28HOlp4
+    platform: youtube
+    channel: DotDager
+    title: "CUIDADO CON JAPÓN #programacion #mundial #fyp"
+    url: https://www.youtube.com/shorts/qa3Q28HOlp4
+    status: extracted
+    at: 2026-10-12
+  - id: qaFjCmmMKcA
+    platform: youtube
+    channel: DotDager
+    title: "APOYO #dev #programacion"
+    url: https://www.youtube.com/shorts/qaFjCmmMKcA
+    status: extracted
+    at: 2026-10-12
+  - id: QAGXBCDzKKM
+    platform: youtube
+    channel: ElAntroDeDager
+    title: Don't Look Up está piola... Pero no | Review, análisis o algo así.
+    duration: 843
+    url: https://www.youtube.com/watch?v=QAGXBCDzKKM
+    status: extracted
+    at: 2026-10-12
+  - id: QE9jIDye10g
+    platform: youtube
+    channel: ElAntroDeDager
+    title: "¿Qué es una función de hasheo criptográfica? #shorts"
+    url: https://www.youtube.com/shorts/QE9jIDye10g
+    status: discovered
+    at: 2026-10-12
+  - id: qEvVAyWo3_s
+    platform: youtube
+    channel: DagerClips
+    title: ¿Buscar trabajo volvió a ser como antes?
+    duration: 1222
+    url: https://www.youtube.com/watch?v=qEvVAyWo3_s
+    status: extracted
+    at: 2026-10-12
+  - id: qgZfHtD_k2M
+    platform: youtube
+    channel: DotDager
+    title: SKYNET y cosas | !discord !falopa !links
+    url: https://www.youtube.com/watch?v=qgZfHtD_k2M
+    status: discovered
+    duration: 18177
+    at: 2026-10-12
+  - id: QgZmaHOiIu8
+    platform: youtube
+    channel: DotDager
+    title: Empresa grande vs empresa chica | ¿Dónde programar?
+    duration: 342
+    url: https://www.youtube.com/watch?v=QgZmaHOiIu8
+    status: extracted
+    at: 2026-10-12
+  - id: QJdIraq75K8
+    platform: youtube
+    channel: DagerClips
+    title: Cómo empecé en freelancing siendo programador.
+    duration: 487
+    url: https://www.youtube.com/watch?v=QJdIraq75K8
+    status: extracted
+    at: 2026-10-12
+  - id: qJX7LwHguXI
+    platform: youtube
+    channel: DagerClips
+    title: HAY QUE FRENAR A LA IA IA MISMO.
+    duration: 751
+    url: https://www.youtube.com/watch?v=qJX7LwHguXI
+    status: extracted
+    at: 2026-10-12
+  - id: qk3jdfswXTo
+    platform: youtube
+    channel: DagerClips
+    title: ClickFix se está garchando a todos.
+    duration: 317
+    url: https://www.youtube.com/watch?v=qk3jdfswXTo
+    status: extracted
+    at: 2026-10-12
+  - id: qNTI8grym-4
+    platform: youtube
+    channel: DagerClips
+    title: Pastor con "fuerza divina" convierte 100 mil pesos en 100 mil dólares.
+    duration: 987
+    url: https://www.youtube.com/watch?v=qNTI8grym-4
+    status: extracted
+    at: 2026-10-12
+  - id: QpvR8MAova4
+    platform: youtube
+    channel: DotDager
+    title: "En la demo/en producción. #fyp #programacion #clips"
+    url: https://www.youtube.com/shorts/QpvR8MAova4
+    status: extracted
+    at: 2026-10-12
+  - id: qtGLWewUzJw
+    platform: youtube
+    channel: DagerClips
+    title: ¿Por qué sera?
+    url: https://www.youtube.com/shorts/qtGLWewUzJw
+    status: extracted
+    at: 2026-10-12
+  - id: qVUgWXcKvoM
+    platform: youtube
+    channel: DotDager
+    title: "NO LEAS ESTE LIBRO. #algoritmo #programacion #fyp"
+    url: https://www.youtube.com/shorts/qVUgWXcKvoM
+    status: merged
+    at: 2026-10-12
+  - id: qWJzFpdYRhI
+    platform: youtube
+    channel: DagerClips
+    title: ¿Como se si me gusta mi carrera?
+    url: https://www.youtube.com/shorts/qWJzFpdYRhI
+    status: extracted
+    at: 2026-10-12
+  - id: qY17BHTciEs
+    platform: youtube
+    channel: DotDager
+    title: "Preguntale al cuñado. #fyp #programacion #clips"
+    url: https://www.youtube.com/shorts/qY17BHTciEs
+    status: extracted
+    at: 2026-10-12
+  - id: qymC4I1Koaw
+    platform: youtube
+    channel: DagerClips
+    title: Los auriculares tienen químicos que te hacen… GAY?
+    duration: 489
+    url: https://www.youtube.com/watch?v=qymC4I1Koaw
+    status: extracted
+    at: 2026-10-12
+  - id: qyVcfgqWnh4
+    platform: youtube
+    channel: DagerClips
+    title: "¿Para que sirve UML? #fyp #programacion #argentina #clips"
+    url: https://www.youtube.com/shorts/qyVcfgqWnh4
+    status: extracted
+    at: 2026-10-12
+  - id: qZ-XgoNjZXo
+    platform: youtube
+    channel: DotDager
+    title: Cosística II (by gordito ordenador) | !discord !falopa !links
+    url: https://www.youtube.com/watch?v=qZ-XgoNjZXo
+    status: discovered
+    duration: 16143
+    at: 2026-10-12
+  - id: r2qMXxMU0Ns
+    platform: youtube
+    channel: DagerClips
+    title: No seas solo un programador.
+    duration: 4426
+    url: https://www.youtube.com/watch?v=r2qMXxMU0Ns
+    status: merged
+    at: 2026-10-12
+  - id: RBZWRxIUfI8
+    platform: youtube
+    channel: DagerClips
+    title: "ANTI ARGENTINA Y HUMOR NEGRO #fyp #argentina🇦🇷 #futbolargentino"
+    url: https://www.youtube.com/shorts/RBZWRxIUfI8
+    status: extracted
+    at: 2026-10-12
+  - id: RcCfpL5MUcc
+    platform: youtube
+    channel: DagerClips
+    title: Windows se esta convirtiendo en un OS para empresas.
+    duration: 559
+    url: https://www.youtube.com/watch?v=RcCfpL5MUcc
+    status: extracted
+    at: 2026-10-12
+  - id: RCqzgtTplPE
+    platform: youtube
+    channel: DotDager
+    title: Gordito cosas habla de compu.
+    url: https://www.youtube.com/watch?v=RCqzgtTplPE
+    status: discovered
+    duration: 20906
+    at: 2026-10-12
+  - id: rCsucEiyMkk
+    platform: youtube
+    channel: DagerClips
+    title: Minecraft AI es un viaje de ácido...
+    duration: 453
+    url: https://www.youtube.com/watch?v=rCsucEiyMkk
+    status: extracted
+    at: 2026-10-12
+  - id: rdLpRutT9Cw
+    platform: youtube
+    channel: DagerClips
+    title: Dager juega The Classrooms (SE CAGA ENCIMA).
+    duration: 8182
+    url: https://www.youtube.com/watch?v=rdLpRutT9Cw
+    status: extracted
+    at: 2026-10-12
+  - id: rffY9KY9VKE
+    platform: youtube
+    channel: DagerClips
+    title: Lo que te este preocupando probablemente no debería.
+    duration: 441
+    url: https://www.youtube.com/watch?v=rffY9KY9VKE
+    status: merged
+    at: 2026-10-12
+  - id: RgOmhnWAPbE
+    platform: youtube
+    channel: DagerClips
+    title: Mercado Libre llora porque Temu es muy barato.
+    duration: 814
+    url: https://www.youtube.com/watch?v=RgOmhnWAPbE
+    status: merged
+    at: 2026-10-12
+  - id: rgPSKGdnKZ0
+    platform: youtube
+    channel: DagerClips
+    title: La IA pone en peligro a los títulos universitarios.
+    url: https://www.youtube.com/shorts/rgPSKGdnKZ0
+    status: extracted
+    at: 2026-10-12
+  - id: rKkvYdqSLoE
+    platform: youtube
+    channel: DagerClips
+    title: "Que buena onda era Ana.. #fyp  #dev  #reddit   #programador  #programacion  #clips #twitch #streamer"
+    url: https://www.youtube.com/shorts/rKkvYdqSLoE
+    status: extracted
+    at: 2026-10-12
+  - id: RlSJ8jpC4EA
+    platform: youtube
+    channel: DagerClips
+    title: "¿Qué opina un programador senior del frontend?🤔#twitch #programming #dev #coding  #frontend"
+    url: https://www.youtube.com/shorts/RlSJ8jpC4EA
+    status: extracted
+    at: 2026-10-12
+  - id: rNjK_OUmrc4
+    platform: youtube
+    channel: DagerClips
+    title: Infantino se disfrazo de Messi y salio a jugar.
+    url: https://www.youtube.com/shorts/rNjK_OUmrc4
+    status: extracted
+    at: 2026-10-12
+  - id: rpOCnodytGk
+    platform: youtube
+    channel: DotDager
+    title: Dealer de tokens.
+    url: https://www.youtube.com/shorts/rpOCnodytGk
+    status: extracted
+    at: 2026-10-12
+  - id: RR7zWmc2gFQ
+    platform: youtube
+    channel: DagerClips
+    title: Adivina la película con una sola imagen.
+    duration: 3754
+    url: https://www.youtube.com/watch?v=RR7zWmc2gFQ
+    status: extracted
+    at: 2026-10-12
+  - id: rrzrzwdTu2o
+    platform: youtube
+    channel: DagerClips
+    title: Ser fullstack no es lo que pensas.
+    duration: 924
+    url: https://www.youtube.com/watch?v=rrzrzwdTu2o
+    status: extracted
+    at: 2026-10-12
+  - id: rSEhF5ph1xU
+    platform: youtube
+    channel: DagerClips
+    title: "¿Por qué? #fyp #clips #politica"
+    url: https://www.youtube.com/shorts/rSEhF5ph1xU
+    status: extracted
+    at: 2026-10-12
+  - id: rSS42vag6lM
+    platform: youtube
+    channel: DotDager
+    title: PENE es el mejor stack del mundo | PENE stack 2
+    url: https://www.youtube.com/watch?v=rSS42vag6lM
+    status: discovered
+    duration: 20432
+    at: 2026-10-12
+  - id: rsxGvLSUNvY
+    platform: youtube
+    channel: DagerClips
+    title: "Coca con aire #fyp"
+    url: https://www.youtube.com/shorts/rsxGvLSUNvY
+    status: extracted
+    at: 2026-10-12
+  - id: rTeBOogyUnM
+    platform: youtube
+    channel: DagerClips
+    title: Los precios mínimos.
+    url: https://www.youtube.com/shorts/rTeBOogyUnM
+    status: extracted
+    at: 2026-10-12
+  - id: RZtMlYJAvx4
+    platform: youtube
+    channel: DotDager
+    title: Forobardo, Q&A y review de sus webs
+    url: https://www.youtube.com/watch?v=RZtMlYJAvx4
+    status: discovered
+    duration: 13119
+    at: 2026-10-12
+  - id: rzUaP39lpiU
+    platform: youtube
+    channel: DotDager
+    title: "Reward facking. #fyp #programacion #clips"
+    url: https://www.youtube.com/shorts/rzUaP39lpiU
+    status: extracted
+    at: 2026-10-12
+  - id: RzyU_MS0ZnM
+    platform: youtube
+    channel: DotDager
+    title: "Síndrome del impostor. #fyp #programacion #clips"
+    url: https://www.youtube.com/shorts/RzyU_MS0ZnM
+    status: extracted
+    at: 2026-10-12
+  - id: s0O-3UvomfM
+    platform: youtube
+    channel: DotDager
+    title: "Entrevista de paciencia #programacion #fyp #clips"
+    url: https://www.youtube.com/shorts/s0O-3UvomfM
+    status: extracted
+    at: 2026-10-12
+  - id: s1LuhVH6--g
+    platform: youtube
+    channel: DagerClips
+    title: "El tema de clean code.. #fyp #clips #dev #programming #programacion"
+    url: https://www.youtube.com/shorts/s1LuhVH6--g
+    status: extracted
+    at: 2026-10-12
+  - id: S2hjAbLb2d8
+    platform: youtube
+    channel: DotDager
+    title: Bola adiposa y redonda habla de cosas | !discord !falopa !links
+    url: https://www.youtube.com/watch?v=S2hjAbLb2d8
+    status: discovered
+    duration: 20628
+    at: 2026-10-12
+  - id: S3POsGqWWYI
+    platform: youtube
+    channel: ElAntroDeDager
+    title: Viaje en el tiempo II. Termodinámica, entropía y la flecha del tiempo.
+    duration: 1288
+    url: https://www.youtube.com/watch?v=S3POsGqWWYI
+    status: merged
+    at: 2026-10-12
+  - id: s7alfAjxVI0
+    platform: youtube
+    channel: DagerClips
+    title: El hackeo a wordpress es una ESTUPIDEZ
+    duration: 1102
+    url: https://www.youtube.com/watch?v=s7alfAjxVI0
+    status: extracted
+    at: 2026-10-12
+  - id: SajhLvs14WM
+    platform: youtube
+    channel: DotDager
+    title: "Esto se está yendo de control. #fyp #clips #twitch"
+    url: https://www.youtube.com/shorts/SajhLvs14WM
+    status: extracted
+    at: 2026-10-12
+  - id: sCTG_T3lJ10
+    platform: youtube
+    channel: DagerClips
+    title: Cosas que deberias poner en tu portfolio.
+    url: https://www.youtube.com/shorts/sCTG_T3lJ10
+    status: extracted
+    at: 2026-10-12
+  - id: sdiNJl2TPqw
+    platform: youtube
+    channel: DotDager
+    title: "CÓMO ESTUDIAR PROGRAMACIÓN #programacion #algoritmo #fyp"
+    url: https://www.youtube.com/shorts/sdiNJl2TPqw
+    status: extracted
+    at: 2026-10-12
+  - id: SDj1uHc216Q
+    platform: youtube
+    channel: DotDager
+    title: "Lamine YAML para backend devs #programacion #dev #clips"
+    url: https://www.youtube.com/shorts/SDj1uHc216Q
+    status: extracted
+    at: 2026-10-12
+  - id: SEMafagkh54
+    platform: youtube
+    channel: DagerClips
+    title: Reaccionando a comida callejera india termina en debate sobre la felicidad.
+    duration: 1176
+    url: https://www.youtube.com/watch?v=SEMafagkh54
+    status: extracted
+    at: 2026-10-12
+  - id: sGUKJl6R4oA
+    platform: youtube
+    channel: DagerClips
+    title: El daño que causa el celular.
+    url: https://www.youtube.com/shorts/sGUKJl6R4oA
+    status: extracted
+    at: 2026-10-12
+  - id: sgWAMe65SwI
+    platform: youtube
+    channel: DagerClips
+    title: Elecciones nacionales 2025.
+    duration: 1127
+    url: https://www.youtube.com/watch?v=sgWAMe65SwI
+    status: extracted
+    at: 2026-10-12
+  - id: SiAJaFNYv2g
+    platform: youtube
+    channel: DotDager
+    title: Vamo' a programar un server DNS en C# (parte 2) | Live coding
+    url: https://www.youtube.com/watch?v=SiAJaFNYv2g
+    status: discovered
+    duration: 15221
+    at: 2026-10-12
+  - id: SjFP9PdM0nA
+    platform: youtube
+    channel: DagerClips
+    title: ¿Las empresas nos quieren pagar con.. ABRAZOS?
+    duration: 291
+    url: https://www.youtube.com/watch?v=SjFP9PdM0nA
+    status: extracted
+    at: 2026-10-12
+  - id: Sk-EZYPUkeQ
+    platform: youtube
+    channel: DagerClips
+    title: El gobierno costea una página de... ¡¿1.600.000.000 de pesos?!
+    duration: 639
+    url: https://www.youtube.com/watch?v=Sk-EZYPUkeQ
+    status: extracted
+    at: 2026-10-12
+  - id: SlYKqCwO6m4
+    platform: youtube
+    channel: DagerClips
+    title: Tierlist de filósofos estoicos. ¿Son como en las redes sociales?
+    duration: 4806
+    url: https://www.youtube.com/watch?v=SlYKqCwO6m4
+    status: merged
+    at: 2026-10-12
+  - id: SmeBRUOB-xY
+    platform: youtube
+    channel: DagerClips
+    title: La nueva IA Llama 3.
+    duration: 150
+    url: https://www.youtube.com/watch?v=SmeBRUOB-xY
+    status: extracted
+    at: 2026-10-12
+  - id: SoblGnOSHws
+    platform: youtube
+    channel: DotDager
+    title: Por qué dejé la universidad | ¿Carrera, autodidacta o bootcamps para ser programador?
+    duration: 487
+    url: https://www.youtube.com/watch?v=SoblGnOSHws
+    status: extracted
+    at: 2026-10-12
+  - id: SORP3a7ToIs
+    platform: youtube
+    channel: DagerClips
+    title: "Tequeños, porfa. #fyp  #dev  #clips  #programacion  #argentina 🇦🇷"
+    url: https://www.youtube.com/shorts/SORP3a7ToIs
+    status: extracted
+    at: 2026-10-12
+  - id: SoTjeq4cQZw
+    platform: youtube
+    channel: DotDager
+    title: "AGUANTE B't X, abrazo. #anime #finanzaspersonales"
+    url: https://www.youtube.com/shorts/SoTjeq4cQZw
+    status: extracted
+    at: 2026-10-12
+  - id: SpwmPZ5ceQk
+    platform: youtube
+    channel: DotDager
+    title: "Mi trauma con el Budokai Tenkaichi 3. #fyp #clips #twitch"
+    url: https://www.youtube.com/shorts/SpwmPZ5ceQk
+    status: extracted
+    at: 2026-10-12
+  - id: sV0VO27QmHY
+    platform: youtube
+    channel: DotDager
+    title: Her en la vida real (Sesame AI), Claude vs. Pokémon, GPT 4.5 | Resumen level 5.
+    duration: 271
+    url: https://www.youtube.com/watch?v=sV0VO27QmHY
+    status: extracted
+    at: 2026-10-12
+  - id: sv42geQViL4
+    platform: youtube
+    channel: DagerClips
+    title: "Rant sobre la democracia #fyp #política #democracia #gobierno #filosofia"
+    url: https://www.youtube.com/shorts/sv42geQViL4
+    status: extracted
+    at: 2026-10-12
+  - id: Svdh2btL5bQ
+    platform: youtube
+    channel: DagerClips
+    title: Derrogación de la ley de los libros.
+    duration: 1344
+    url: https://www.youtube.com/watch?v=Svdh2btL5bQ
+    status: extracted
+    at: 2026-10-12
+  - id: Svm2CZQVUPg
+    platform: youtube
+    channel: DotDager
+    title: C# no es para programar juegos.
+    duration: 485
+    url: https://www.youtube.com/watch?v=Svm2CZQVUPg
+    status: extracted
+    at: 2026-10-12
+  - id: swhBSew0Ma0
+    platform: youtube
+    channel: DotDager
+    title: ⚠ CASARON POSAS ⚠ | !discord !falopa !links
+    url: https://www.youtube.com/watch?v=swhBSew0Ma0
+    status: discovered
+    duration: 17630
+    at: 2026-10-12
+  - id: SwKIVs3vQkA
+    platform: youtube
+    channel: DagerClips
+    title: Las IAs están aprendiendo a hackear...
+    duration: 844
+    url: https://www.youtube.com/watch?v=SwKIVs3vQkA
+    status: extracted
+    at: 2026-10-12
+  - id: swzomZt8H30
+    platform: youtube
+    channel: DotDager
+    title: Dejá de usar if else como junior.
+    duration: 270
+    url: https://www.youtube.com/watch?v=swzomZt8H30
+    status: extracted
+    at: 2026-10-12
+  - id: SYcO09hkB_k
+    platform: youtube
+    channel: DotDager
+    title: MEJOR STREAM DE LA HISTORIA (y otras cosas) | !discord !falopa !links
+    url: https://www.youtube.com/watch?v=SYcO09hkB_k
+    status: discovered
+    duration: 15399
+    at: 2026-10-12
+  - id: sZndF55-H3I
+    platform: youtube
+    channel: DagerClips
+    title: ¿Qué hiciste con tu primer sueldo de programación?
+    url: https://www.youtube.com/shorts/sZndF55-H3I
+    status: extracted
+    at: 2026-10-12
+  - id: T_yIGzGG_EE
+    platform: youtube
+    channel: DagerClips
+    title: No sos tan productivo como pensas.
+    duration: 2570
+    url: https://www.youtube.com/watch?v=T_yIGzGG_EE
+    status: merged
+    at: 2026-10-12
+  - id: t-1N1kMOmuo
+    platform: youtube
+    channel: DagerClips
+    title: Proyecto RoboCop (mentira es Figure 01).
+    duration: 909
+    url: https://www.youtube.com/watch?v=t-1N1kMOmuo
+    status: extracted
+    at: 2026-10-12
+  - id: T1Iiy9DPvAI
+    platform: youtube
+    channel: DagerClips
+    title: Las drogas.
+    duration: 290
+    url: https://www.youtube.com/watch?v=T1Iiy9DPvAI
+    status: extracted
+    at: 2026-10-12
+  - id: T3QNMJ_Rhk8
+    platform: youtube
+    channel: DotDager
+    title: Yo tampoco.
+    url: https://www.youtube.com/shorts/T3QNMJ_Rhk8
+    status: extracted
+    at: 2026-10-12
+  - id: T5_oGphbONg
+    platform: youtube
+    channel: DotDager
+    title: "Borges y el peronismo. #fyp #clips #twitch"
+    url: https://www.youtube.com/shorts/T5_oGphbONg
+    status: extracted
+    at: 2026-10-12
+  - id: t56XO4QmEpU
+    platform: youtube
+    channel: DagerClips
+    title: META quiere hacer postear a los MUERTOS.
+    duration: 628
+    url: https://www.youtube.com/watch?v=t56XO4QmEpU
+    status: extracted
+    at: 2026-10-12
+  - id: t5RTnxVQF_M
+    platform: youtube
+    channel: DotDager
+    title: "Le cobraba por no atender el teléfono. #programacion #fyp #clips"
+    url: https://www.youtube.com/shorts/t5RTnxVQF_M
+    status: extracted
+    at: 2026-10-12
+  - id: t6w71ApsNa0
+    platform: youtube
+    channel: DotDager
+    title: Juegos que te enseñan a programar o algo así.
+    url: https://www.youtube.com/watch?v=t6w71ApsNa0
+    status: discovered
+    duration: 13275
+    at: 2026-10-12
+  - id: TcOsGIrudMA
+    platform: youtube
+    channel: DotDager
+    title: ¡Falopa! Ahora que tengo tu atención... ¡falopa!
+    url: https://www.youtube.com/watch?v=TcOsGIrudMA
+    status: discovered
+    duration: 7785
+    at: 2026-10-12
+  - id: tcxLMQnZNio
+    platform: youtube
+    channel: DotDager
+    title: "Dejen de querer ser todólogos. #fyp #programacion #clips"
+    url: https://www.youtube.com/shorts/tcxLMQnZNio
+    status: extracted
+    at: 2026-10-12
+  - id: tE1383kbmKI
+    platform: youtube
+    channel: DagerClips
+    title: 'Forobardo de la semana: "Que significa ser programador senior?"'
+    duration: 492
+    url: https://www.youtube.com/watch?v=tE1383kbmKI
+    status: extracted
+    at: 2026-10-12
+  - id: tFslY05hJZg
+    platform: youtube
+    channel: DagerClips
+    title: "¿Sale ranked o no? #fyp  #clips  #programacion  #dev  #gaming"
+    url: https://www.youtube.com/shorts/tFslY05hJZg
+    status: extracted
+    at: 2026-10-12
+  - id: tG3wvprMfBA
+    platform: youtube
+    channel: DagerClips
+    title: La IA intento matar a un humano para evitar ser apagada.
+    duration: 2501
+    url: https://www.youtube.com/watch?v=tG3wvprMfBA
+    status: skipped
+    at: 2026-10-12
+    reason: sin transcripción automática
+  - id: tGEpsuu90Ok
+    platform: youtube
+    channel: ElAntroDeDager
+    title: La Dra. Psicotrópica y el herpes.
+    duration: 271
+    url: https://www.youtube.com/watch?v=tGEpsuu90Ok
+    status: extracted
+    at: 2026-10-12
+  - id: tGJ2TP-o4LY
+    platform: youtube
+    channel: ElAntroDeDager
+    title: ¿PERÓN era COMUNISTA? La verdadera historia de verdad sobre el peronismo y el comunismo o algo así.
+    duration: 351
+    url: https://www.youtube.com/watch?v=tGJ2TP-o4LY
+    status: skipped
+    at: 2026-10-12
+    reason: sin transcripción automática
+  - id: tisOFcWC5j4
+    platform: youtube
+    channel: DotDager
+    title: CÓMO RECORDAR LO QUE LEÉS y otras cosas | !discord !falopa !links
+    url: https://www.youtube.com/watch?v=tisOFcWC5j4
+    status: discovered
+    duration: 10986
+    at: 2026-10-12
+  - id: TJ5n5RnAoSA
+    platform: youtube
+    channel: DotDager
+    title: LEY DE TIERRAS, LIBROS, CEUTA (y otras cosas) | !discord !falopa !links
+    url: https://www.youtube.com/watch?v=TJ5n5RnAoSA
+    status: discovered
+    duration: 12840
+    at: 2026-10-12
+  - id: TkRxhTexkN4
+    platform: youtube
+    channel: DotDager
+    title: +20 Conceptos de PROGRAMACIÓN en 20 minutos.
+    duration: 1360
+    url: https://www.youtube.com/watch?v=TkRxhTexkN4
+    status: extracted
+    at: 2026-10-12
+  - id: tMl3ejxPAww
+    platform: youtube
+    channel: DagerClips
+    title: Estados Unidos y Venezuela a las manos.
+    duration: 672
+    url: https://www.youtube.com/watch?v=tMl3ejxPAww
+    status: merged
+    at: 2026-10-12
+  - id: ToblOKMEBYc
+    platform: youtube
+    channel: DagerClips
+    title: "HACKEARON AL SENADO #hack  #argentina #fyp"
+    url: https://www.youtube.com/shorts/ToblOKMEBYc
+    status: extracted
+    at: 2026-10-12
+  - id: TsKGSlbql-w
+    platform: youtube
+    channel: DotDager
+    title: "DISEÑADORES GRÁFICOS VS LA IA. #fyp #clips #ia #programación #diseñografico #argentina"
+    url: https://www.youtube.com/shorts/TsKGSlbql-w
+    status: extracted
+    at: 2026-10-12
+  - id: TsLzCYygQyk
+    platform: youtube
+    channel: DotDager
+    title: "La función se corre. #fyp #programacion #clips"
+    url: https://www.youtube.com/shorts/TsLzCYygQyk
+    status: extracted
+    at: 2026-10-12
+  - id: TT5fh2a2oy4
+    platform: youtube
+    channel: DagerClips
+    title: Tomar notas como un pro.
+    url: https://www.youtube.com/shorts/TT5fh2a2oy4
+    status: extracted
+    at: 2026-10-12
+  - id: txFjoYDpHCY
+    platform: youtube
+    channel: DagerClips
+    title: Las reuniones de trabajo.
+    duration: 606
+    url: https://www.youtube.com/watch?v=txFjoYDpHCY
+    status: skipped
+    at: 2026-10-12
+    reason: sin transcripción automática
+  - id: u3POU95LeJ0
+    platform: youtube
+    channel: DagerClips
+    title: ChatGPT tiene Alzhéimer. Ayudalo.
+    duration: 948
+    url: https://www.youtube.com/watch?v=u3POU95LeJ0
+    status: merged
+    at: 2026-10-12
+  - id: U6EgUZg00Ao
+    platform: youtube
+    channel: ElAntroDeDager
+    title: Gente que pone AJAJAJAJAJJA.
+    duration: 40
+    url: https://www.youtube.com/watch?v=U6EgUZg00Ao
+    status: skipped
+    at: 2026-10-12
+    reason: sin transcripción automática
+  - id: u6lLOoB5PgA
+    platform: youtube
+    channel: DotDager
+    title: DeepSeek se está garchando a todos.
+    duration: 295
+    url: https://www.youtube.com/watch?v=u6lLOoB5PgA
+    status: extracted
+    at: 2026-10-12
+  - id: u7_8kg7orCs
+    platform: youtube
+    channel: DagerClips
+    title: "Claro. #ancap #twitch #clip #economia #streamer #política"
+    url: https://www.youtube.com/shorts/u7_8kg7orCs
+    status: extracted
+    at: 2026-10-12
+  - id: U8TTljf4hWk
+    platform: youtube
+    channel: DagerClips
+    title: Intenté buscar trabajo y está feo.
+    duration: 663
+    url: https://www.youtube.com/watch?v=U8TTljf4hWk
+    status: merged
+    at: 2026-10-12
+  - id: UBlLKxbmW08
+    platform: youtube
+    channel: DagerClips
+    title: "Se nos viene muchachos.  #clips #dev #streamer #twitch #programador  #ai  #chatgpt"
+    url: https://www.youtube.com/shorts/UBlLKxbmW08
+    status: extracted
+    at: 2026-10-12
+  - id: UcuI1PQxGvI
+    platform: youtube
+    channel: DagerClips
+    title: LLM le borra la mitad de la PC a un usuario de la NADA.
+    duration: 1309
+    url: https://www.youtube.com/watch?v=UcuI1PQxGvI
+    status: merged
+    at: 2026-10-12
+  - id: UCycM7WSsxk
+    platform: youtube
+    channel: DagerClips
+    title: Como llegue a ser liberal. | Falopa Política
+    duration: 748
+    url: https://www.youtube.com/watch?v=UCycM7WSsxk
+    status: merged
+    at: 2026-10-12
+  - id: udKddUR6Tdw
+    platform: youtube
+    channel: DagerClips
+    title: "Juanceto aparecio en el chat de Dager.  #clips #twitch #streamer #funny #fyp"
+    url: https://www.youtube.com/shorts/udKddUR6Tdw
+    status: extracted
+    at: 2026-10-12
+  - id: UdT_LHrU9Lg
+    platform: youtube
+    channel: DagerClips
+    title: Jugando The Spell Brigade de chill.
+    duration: 1976
+    url: https://www.youtube.com/watch?v=UdT_LHrU9Lg
+    status: merged
+    at: 2026-10-12
+  - id: UEFao_Hrrkg
+    platform: youtube
+    channel: DotDager
+    title: ME HACKEARON (y otras cosas) | !discord !falopa !links
+    url: https://www.youtube.com/watch?v=UEFao_Hrrkg
+    status: discovered
+    duration: 11196
+    at: 2026-10-12
+  - id: ueznifrjtyg
+    platform: youtube
+    channel: DagerClips
+    title: Como aprender cualquier idioma.
+    duration: 210
+    url: https://www.youtube.com/watch?v=ueznifrjtyg
+    status: extracted
+    at: 2026-10-12
+  - id: UFQPY2Bu3Xo
+    platform: youtube
+    channel: DotDager
+    title: La cripto de Milei (Libra), o3-Mini, salarios IT | Resumen level 5
+    duration: 194
+    url: https://www.youtube.com/watch?v=UFQPY2Bu3Xo
+    status: extracted
+    at: 2026-10-12
+  - id: uiytq_yxRpo
+    platform: youtube
+    channel: DotDager
+    title: Tralalero binario anatómicamente denso comparte sus pareceres.
+    url: https://www.youtube.com/watch?v=uiytq_yxRpo
+    status: discovered
+    duration: 16105
+    at: 2026-10-12
+  - id: Uj8xMDloNek
+    platform: youtube
+    channel: DagerClips
+    title: "No no no.. . #fyp #clips #política #argentina🇦🇷"
+    url: https://www.youtube.com/shorts/Uj8xMDloNek
+    status: extracted
+    at: 2026-10-12
+  - id: uJwGZ7THyqk
+    platform: youtube
+    channel: DagerClips
+    title: SUPER agentes caen por el viejo truco del MAIL.
+    duration: 1068
+    url: https://www.youtube.com/watch?v=uJwGZ7THyqk
+    status: extracted
+    at: 2026-10-12
+  - id: UK7vW6b8sZM
+    platform: youtube
+    channel: DagerClips
+    title: "¿Ustedes qué opinan?  🧉. #fyp #clips #política"
+    url: https://www.youtube.com/shorts/UK7vW6b8sZM
+    status: extracted
+    at: 2026-10-12
+  - id: UKZ_de6jH5w
+    platform: youtube
+    channel: DotDager
+    title: EL ENTUSIASMO ME DESBORDA (y otras cosas) | !discord !falopa !links
+    url: https://www.youtube.com/watch?v=UKZ_de6jH5w
+    status: discovered
+    duration: 15476
+    at: 2026-10-12
+  - id: UlCB_9Wi6eI
+    platform: youtube
+    channel: DagerClips
+    title: "Y claro. #trump #milei #liberal #clip #política #economia #clip #twitch #streamer"
+    url: https://www.youtube.com/shorts/UlCB_9Wi6eI
+    status: extracted
+    at: 2026-10-12
+  - id: ulft3ET2lnw
+    platform: youtube
+    channel: DotDager
+    title: Comdito gorpu discute asuntos.
+    url: https://www.youtube.com/watch?v=ulft3ET2lnw
+    status: discovered
+    duration: 15031
+    at: 2026-10-12
+  - id: ULjk-mQx4_Y
+    platform: youtube
+    channel: DagerClips
+    title: "Que opino de VIM. #fyp #clips #programacion"
+    url: https://www.youtube.com/shorts/ULjk-mQx4_Y
+    status: extracted
+    at: 2026-10-12
+  - id: UNnAx6aTUyA
+    platform: youtube
+    channel: DagerClips
+    title: "Programando con Jhin. #fyp #clips #programacion #leagueoflegends"
+    url: https://www.youtube.com/shorts/UNnAx6aTUyA
+    status: extracted
+    at: 2026-10-12
+  - id: Up3kE_jXyZ4
+    platform: youtube
+    channel: DagerClips
+    title: Dager te enseña a hacer un server DNS.
+    duration: 9784
+    url: https://www.youtube.com/watch?v=Up3kE_jXyZ4
+    status: extracted
+    at: 2026-10-12
+  - id: UPRxGk2Jpjo
+    platform: youtube
+    channel: DagerClips
+    title: Esta es la PEOR forma de TOMAR APUNTES.
+    duration: 3275
+    url: https://www.youtube.com/watch?v=UPRxGk2Jpjo
+    status: extracted
+    at: 2026-10-12
+  - id: uQno0FcqmTQ
+    platform: youtube
+    channel: DagerClips
+    title: OpenAI se come demanda porque ChatGPT intento ser abogado.
+    duration: 386
+    url: https://www.youtube.com/watch?v=uQno0FcqmTQ
+    status: extracted
+    at: 2026-10-12
+  - id: URH_H8-vSHQ
+    platform: youtube
+    channel: DotDager
+    title: "Los alfajores son una mentira. #fyp #clips #twitch"
+    url: https://www.youtube.com/shorts/URH_H8-vSHQ
+    status: extracted
+    at: 2026-10-12
+  - id: uS1OeMY4lBg
+    platform: youtube
+    channel: DotDager
+    title: Casi hacker | Bandit y el "Hola Mundo" más complejo del mundo
+    url: https://www.youtube.com/watch?v=uS1OeMY4lBg
+    status: discovered
+    duration: 14694
+    at: 2026-10-12
+  - id: uSh7drgds7U
+    platform: youtube
+    channel: DagerClips
+    title: ¿Qué lenguaje de programación deberías aprender?
+    duration: 269
+    url: https://www.youtube.com/watch?v=uSh7drgds7U
+    status: extracted
+    at: 2026-10-12
+  - id: USNN1VF8_-0
+    platform: youtube
+    channel: DotDager
+    title: HACKEARON AL SENADO (y otras cosas) | !discord !falopa !links
+    url: https://www.youtube.com/watch?v=USNN1VF8_-0
+    status: discovered
+    duration: 9908
+    at: 2026-10-12
+  - id: uuALfUiv1XA
+    platform: youtube
+    channel: DotDager
+    title: CASARON POSAS | !discord !falopa !links
+    url: https://www.youtube.com/watch?v=uuALfUiv1XA
+    status: discovered
+    duration: 6569
+    at: 2026-10-12
+  - id: uwJRGMRpBkE
+    platform: youtube
+    channel: DagerClips
+    title: "Dager te enseña a hacer un server DNS #5."
+    duration: 10322
+    url: https://www.youtube.com/watch?v=uwJRGMRpBkE
+    status: merged
+    at: 2026-10-12
+  - id: ux7LsrsYk9s
+    platform: youtube
+    channel: DagerClips
+    title: "Se creia zarpado.. #fyp #clip #funny #automovil #streamer"
+    url: https://www.youtube.com/shorts/ux7LsrsYk9s
+    status: extracted
+    at: 2026-10-12
+  - id: uZuQp2iXiIs
+    platform: youtube
+    channel: DagerClips
+    title: La caída de Maduro.
+    duration: 949
+    url: https://www.youtube.com/watch?v=uZuQp2iXiIs
+    status: extracted
+    at: 2026-10-12
+  - id: UZyJbjzZcoU
+    platform: youtube
+    channel: DagerClips
+    title: Superficial knowledge is holding you back.
+    duration: 489
+    url: https://www.youtube.com/watch?v=UZyJbjzZcoU
+    status: merged
+    at: 2026-10-12
+  - id: v3tK4Uo51lA
+    platform: youtube
+    channel: ElAntroDeDager
+    title: Parasite me desilusionó... Pero está buena.
+    duration: 988
+    url: https://www.youtube.com/watch?v=v3tK4Uo51lA
+    status: extracted
+    at: 2026-10-12
+  - id: V7NNviAqMh4
+    platform: youtube
+    channel: DagerClips
+    title: Libros de autoayuda no TAN malos.
+    duration: 4427
+    url: https://www.youtube.com/watch?v=V7NNviAqMh4
+    status: merged
+    at: 2026-10-12
+  - id: V842tEsSOLE
+    platform: youtube
+    channel: DagerClips
+    title: Como es ser un junior trabajando en USA | Forobardo
+    duration: 873
+    url: https://www.youtube.com/watch?v=V842tEsSOLE
+    status: extracted
+    at: 2026-10-12
+  - id: VaHOf77HNtg
+    platform: youtube
+    channel: DagerClips
+    title: Analyzing Robert P. Murphy's "Chaos Theory" | Falopa Política
+    duration: 848
+    url: https://www.youtube.com/watch?v=VaHOf77HNtg
+    status: merged
+    at: 2026-10-12
+  - id: VaO6lMg3lto
+    platform: youtube
+    channel: ElAntroDeDager
+    title: "Inception: es todo un sueño de Cobb y el trompo es irrelevante, chau | Review, análisis o algo así."
+    duration: 1971
+    url: https://www.youtube.com/watch?v=VaO6lMg3lto
+    status: extracted
+    at: 2026-10-12
+  - id: VaWvmcIDvWY
+    platform: youtube
+    channel: DagerClips
+    title: Reaccionando al código de Pirate Software.
+    duration: 365
+    url: https://www.youtube.com/watch?v=VaWvmcIDvWY
+    status: extracted
+    at: 2026-10-12
+  - id: VBuGXxlH_X8
+    platform: youtube
+    channel: DagerClips
+    title: Anthropic DESTRUYE miles de LIBROS para el avance de la IA.
+    duration: 1250
+    url: https://www.youtube.com/watch?v=VBuGXxlH_X8
+    status: merged
+    at: 2026-10-12
+  - id: VDdGQlxRupc
+    platform: youtube
+    channel: DagerClips
+    title: ¿Los socialistas son de izquierda hasta que estudian?
+    duration: 589
+    url: https://www.youtube.com/watch?v=VDdGQlxRupc
+    status: extracted
+    at: 2026-10-12
+  - id: vFGkQP5IBS8
+    platform: youtube
+    channel: DotDager
+    title: LA IRA ME CONSUME (y otras cosas) | !discord !falopa !links
+    url: https://www.youtube.com/watch?v=vFGkQP5IBS8
+    status: discovered
+    duration: 13910
+    at: 2026-10-12
+  - id: VFX0wJQS43Y
+    platform: youtube
+    channel: DagerClips
+    title: "El programador albañil 🧱👷‍♂️#fyp #twitch #dev #programming #coding #construction #trabajo"
+    url: https://www.youtube.com/shorts/VFX0wJQS43Y
+    status: extracted
+    at: 2026-10-12
+  - id: vHHnHl3PhCU
+    platform: youtube
+    channel: DotDager
+    title: "Esto es el futuro. #fyp #programacion #slop"
+    url: https://www.youtube.com/shorts/vHHnHl3PhCU
+    status: discovered
+    at: 2026-10-12
+  - id: VIInDFqepU8
+    platform: youtube
+    channel: DagerClips
+    title: Traductor al idioma del humo
+    url: https://www.youtube.com/shorts/VIInDFqepU8
+    status: extracted
+    at: 2026-10-12
+  - id: vkmGXnKMQSc
+    platform: youtube
+    channel: DotDager
+    title: "TRABAJAR BAJO PRESIÓN #programacion #dev #fyp"
+    url: https://www.youtube.com/shorts/vkmGXnKMQSc
+    status: extracted
+    at: 2026-10-12
+  - id: VlG4hFLfeIs
+    platform: youtube
+    channel: DagerClips
+    title: "Estar en sintonía con el capitalismo. #fyp  #clip #política #capitalismo #mises"
+    url: https://www.youtube.com/shorts/VlG4hFLfeIs
+    status: merged
+    at: 2026-10-12
+  - id: vLiPMNVnEXk
+    platform: youtube
+    channel: DotDager
+    title: Cosimetría computadoril | !discord !falopa !links
+    url: https://www.youtube.com/watch?v=vLiPMNVnEXk
+    status: discovered
+    duration: 15143
+    at: 2026-10-12
+  - id: VMM-OHb4qVA
+    platform: youtube
+    channel: DagerClips
+    title: Como preguntar correctamente siendo programador.
+    duration: 391
+    url: https://www.youtube.com/watch?v=VMM-OHb4qVA
+    status: extracted
+    at: 2026-10-12
+  - id: VqW69KPS7Gc
+    platform: youtube
+    channel: DotDager
+    title: Se puso personal el jueguito.
+    url: https://www.youtube.com/shorts/VqW69KPS7Gc
+    status: extracted
+    at: 2026-10-12
+  - id: VSDxk0OyuBM
+    platform: youtube
+    channel: DagerClips
+    title: "El tito calderón caga a un viewer. #fyp  #clips  #programacion  #argentina"
+    url: https://www.youtube.com/shorts/VSDxk0OyuBM
+    status: extracted
+    at: 2026-10-12
+  - id: vtjFXdFGkBc
+    platform: youtube
+    channel: DotDager
+    title: "DE CHULO AL PROGRAMADOR #dev #programacion"
+    url: https://www.youtube.com/shorts/vtjFXdFGkBc
+    status: extracted
+    at: 2026-10-12
+  - id: vw5_0NqyPNk
+    platform: youtube
+    channel: DagerClips
+    title: Encontronazo entre eminencias del liberalismo | Milei vs Hoppe.
+    duration: 1229
+    url: https://www.youtube.com/watch?v=vw5_0NqyPNk
+    status: merged
+    at: 2026-10-12
+  - id: vXBPlyJEe8Y
+    platform: youtube
+    channel: DagerClips
+    title: Se disparan en el pie.
+    url: https://www.youtube.com/shorts/vXBPlyJEe8Y
+    status: extracted
+    at: 2026-10-12
+  - id: VyBrDD7_nzU
+    platform: youtube
+    channel: DotDager
+    title: "Encontrá el punto y coma. #fyp #programacion #dev"
+    url: https://www.youtube.com/shorts/VyBrDD7_nzU
+    status: extracted
+    at: 2026-10-12
+  - id: vysCgROvbhM
+    platform: youtube
+    channel: DagerClips
+    title: Plantean impuesto a las flatulencias bovinas.
+    duration: 857
+    url: https://www.youtube.com/watch?v=vysCgROvbhM
+    status: extracted
+    at: 2026-10-12
+  - id: VYtLZdYwr1o
+    platform: youtube
+    channel: DagerClips
+    title: Alberto hace cursos de IA a las piñas.
+    duration: 786
+    url: https://www.youtube.com/watch?v=VYtLZdYwr1o
+    status: extracted
+    at: 2026-10-12
+  - id: W_J2ISPr16E
+    platform: youtube
+    channel: DotDager
+    title: JEV, IMPUESTO A LA HERENCIA (y otras cosas) | !discord !falopa !links
+    url: https://www.youtube.com/watch?v=W_J2ISPr16E
+    status: discovered
+    duration: 16028
+    at: 2026-10-12
+  - id: W2efYMxhA0c
+    platform: youtube
+    channel: DagerClips
+    title: Hablando de los salarios | Falopa política
+    duration: 1568
+    url: https://www.youtube.com/watch?v=W2efYMxhA0c
+    status: extracted
+    at: 2026-10-12
+  - id: W34X4jDHITg
+    platform: youtube
+    channel: DagerClips
+    title: El experimento de Milgram y recomendando un par de libros.
+    duration: 756
+    url: https://www.youtube.com/watch?v=W34X4jDHITg
+    status: merged
+    at: 2026-10-12
+  - id: w9QoM_TO8l4
+    platform: youtube
+    channel: DagerClips
+    title: Estudiarla y pirarla.
+    url: https://www.youtube.com/shorts/w9QoM_TO8l4
+    status: extracted
+    at: 2026-10-12
+  - id: w9R5OIiDGJo
+    platform: youtube
+    channel: ElAntroDeDager
+    title: "Downfall (La caída): humanizando a Hitler y desglorificando la guerra | Review, análisis o algo así."
+    duration: 881
+    url: https://www.youtube.com/watch?v=w9R5OIiDGJo
+    status: skipped
+    at: 2026-10-12
+    reason: sin transcripción automática
+  - id: Wa8n_CKdGc8
+    platform: youtube
+    channel: DagerClips
+    title: ¿Estudiar inglés primero y después programación?
+    url: https://www.youtube.com/shorts/Wa8n_CKdGc8
+    status: extracted
+    at: 2026-10-12
+  - id: WCjVE-9DG4Q
+    platform: youtube
+    channel: DagerClips
+    title: "¿Se puede ser fullstack estudiando online?  #twitch #streamer #programming #clips #dev #fyp"
+    url: https://www.youtube.com/shorts/WCjVE-9DG4Q
+    status: extracted
+    at: 2026-10-12
+  - id: wdn09iapSVA
+    platform: youtube
+    channel: DotDager
+    title: Cosas que NO DEBERÍAS SABER.
+    duration: 576
+    url: https://www.youtube.com/watch?v=wdn09iapSVA
+    status: merged
+    at: 2026-10-12
+  - id: wE8JU_tN04Q
+    platform: youtube
+    channel: DagerClips
+    title: 'Forobardo de la semana: "Los recruiters ganan 10 veces mas que un programador."'
+    duration: 244
+    url: https://www.youtube.com/watch?v=wE8JU_tN04Q
+    status: extracted
+    at: 2026-10-12
+  - id: wf0iUFOXg6A
+    platform: youtube
+    channel: DagerClips
+    title: ¿Son éticas las herencias?
+    duration: 1549
+    url: https://www.youtube.com/watch?v=wf0iUFOXg6A
+    status: extracted
+    at: 2026-10-12
+  - id: wFg002a8cdU
+    platform: youtube
+    channel: DagerClips
+    title: Cosas que desearía haberme dicho cuando empecé a programar.
+    duration: 1000
+    url: https://www.youtube.com/watch?v=wFg002a8cdU
+    status: extracted
+    at: 2026-10-12
+  - id: wgtGulLPwE8
+    platform: youtube
+    channel: DotDager
+    title: Libros de AUTOAYUDA que SÍ SIRVEN.
+    duration: 676
+    url: https://www.youtube.com/watch?v=wgtGulLPwE8
+    status: merged
+    at: 2026-10-12
+  - id: WHzSVOvWLC0
+    platform: youtube
+    channel: DagerClips
+    title: Me considero utilitarista desde hoy
+    url: https://www.youtube.com/shorts/WHzSVOvWLC0
+    status: extracted
+    at: 2026-10-12
+  - id: WIrXzM2c4mw
+    platform: youtube
+    channel: DotDager
+    title: Mejorá ESTO y conseguí tu PRIMER TRABAJO de PROGRAMADOR.
+    duration: 357
+    url: https://www.youtube.com/watch?v=WIrXzM2c4mw
+    status: extracted
+    at: 2026-10-12
+  - id: WJWpbZRYAqs
+    platform: youtube
+    channel: DagerClips
+    title: "Toca hacerse plomero. #fyp  #clips  #programacion  #programador"
+    url: https://www.youtube.com/shorts/WJWpbZRYAqs
+    status: extracted
+    at: 2026-10-12
+  - id: wop8xStQeyk
+    platform: youtube
+    channel: DagerClips
+    title: "Era un toque boludo..  #twitch #streaming #clips #fyp"
+    url: https://www.youtube.com/shorts/wop8xStQeyk
+    status: extracted
+    at: 2026-10-12
+  - id: WP-NX8qcwAI
+    platform: youtube
+    channel: DagerClips
+    title: Meta mide el desempeño de sus empleados con IA.
+    duration: 999
+    url: https://www.youtube.com/watch?v=WP-NX8qcwAI
+    status: extracted
+    at: 2026-10-12
+  - id: WpCqPvV83sg
+    platform: youtube
+    channel: ElAntroDeDager
+    title: "¿Qué es una blockchain? | Te lo explico así nomás #shorts"
+    url: https://www.youtube.com/shorts/WpCqPvV83sg
+    status: discovered
+    at: 2026-10-12
+  - id: wq87gJXExR8
+    platform: youtube
+    channel: DotDager
+    title: Hoy la clavamos en el Angular.
+    url: https://www.youtube.com/watch?v=wq87gJXExR8
+    status: discovered
+    duration: 2284
+    at: 2026-10-12
+  - id: WSER8M8aC6c
+    platform: youtube
+    channel: DotDager
+    title: Forobardo, Phasmophobia y Q&A
+    url: https://www.youtube.com/watch?v=WSER8M8aC6c
+    status: discovered
+    duration: 25949
+    at: 2026-10-12
+  - id: wsfF4Ck5F-o
+    platform: youtube
+    channel: DagerClips
+    title: "Little trick. #fyp #programming #clips #programmer"
+    url: https://www.youtube.com/shorts/wsfF4Ck5F-o
+    status: extracted
+    at: 2026-10-12
+  - id: WTbK3Do-3u8
+    platform: youtube
+    channel: DagerClips
+    title: Cobren el doble y hagan la mitad de trabajo.
+    url: https://www.youtube.com/shorts/WTbK3Do-3u8
+    status: extracted
+    at: 2026-10-12
+  - id: wxignE-9DRQ
+    platform: youtube
+    channel: DagerClips
+    title: Porfavor..
+    url: https://www.youtube.com/shorts/wxignE-9DRQ
+    status: extracted
+    at: 2026-10-12
+  - id: WY-r2csyqYA
+    platform: youtube
+    channel: DotDager
+    title: Gordito cosas habla de compu.
+    url: https://www.youtube.com/watch?v=WY-r2csyqYA
+    status: discovered
+    duration: 11961
+    at: 2026-10-12
+  - id: WY0zBFjUGBQ
+    platform: youtube
+    channel: DotDager
+    title: STUDY WITH ME | Pomodoro 25/5, música para estudiar.
+    duration: 5632
+    url: https://www.youtube.com/watch?v=WY0zBFjUGBQ
+    status: skipped
+    at: 2026-10-12
+    reason: sin transcripción automática
+  - id: x-EkexM0QCk
+    platform: youtube
+    channel: DagerClips
+    title: La comunidad turbia alrededor del Everest.
+    duration: 1947
+    url: https://www.youtube.com/watch?v=x-EkexM0QCk
+    status: extracted
+    at: 2026-10-12
+  - id: X1OCCD6Tuxk
+    platform: youtube
+    channel: DagerClips
+    title: "Señores y señoras el jamblerrrr 🍫 #fyp #anecdota #argentina #clip #twitch #streamer"
+    url: https://www.youtube.com/shorts/X1OCCD6Tuxk
+    status: extracted
+    at: 2026-10-12
+  - id: x2BsNWRLhiE
+    platform: youtube
+    channel: DagerClips
+    title: Hice un programa que predice el mundial.
+    duration: 3670
+    url: https://www.youtube.com/watch?v=x2BsNWRLhiE
+    status: merged
+    at: 2026-10-12
+  - id: x3ckILgCiko
+    platform: youtube
+    channel: DagerClips
+    title: La tecnología avanza más rápido de lo que nos podemos adaptar.
+    duration: 1063
+    url: https://www.youtube.com/watch?v=x3ckILgCiko
+    status: extracted
+    at: 2026-10-12
+  - id: X4wWC6wtUFI
+    platform: youtube
+    channel: DagerClips
+    title: "¿Conviene ser programador fullstack en 2024? #fyp #dev #ai #coding #programming  #twitch"
+    url: https://www.youtube.com/shorts/X4wWC6wtUFI
+    status: extracted
+    at: 2026-10-12
+  - id: X5Pe8ygRQ_g
+    platform: youtube
+    channel: DagerClips
+    title: Microsoft echa 7,000 personas.
+    duration: 322
+    url: https://www.youtube.com/watch?v=X5Pe8ygRQ_g
+    status: extracted
+    at: 2026-10-12
+  - id: x6Jj22yKN0I
+    platform: youtube
+    channel: DagerClips
+    title: Como la IA esta arruinando los estudios en línea.
+    duration: 1024
+    url: https://www.youtube.com/watch?v=x6Jj22yKN0I
+    status: extracted
+    at: 2026-10-12
+  - id: X7EzqCDy-B0
+    platform: youtube
+    channel: DagerClips
+    title: Wallpaper engine hackeado.
+    duration: 654
+    url: https://www.youtube.com/watch?v=X7EzqCDy-B0
+    status: extracted
+    at: 2026-10-12
+  - id: Xaf3G9-vinM
+    platform: youtube
+    channel: DotDager
+    title: LA ESTAFA DE LAS SUSCRIPCIONES.
+    duration: 321
+    url: https://www.youtube.com/watch?v=Xaf3G9-vinM
+    status: extracted
+    at: 2026-10-12
+  - id: xBSsff8MXDw
+    platform: youtube
+    channel: DotDager
+    title: "UNO PEOR QUE OTRO. #fyp #tierras"
+    url: https://www.youtube.com/shorts/xBSsff8MXDw
+    status: extracted
+    at: 2026-10-12
+  - id: XcJl9Mv2FGg
+    platform: youtube
+    channel: DagerClips
+    title: Como la IA esta afectando las entrevistas.
+    duration: 1569
+    url: https://www.youtube.com/watch?v=XcJl9Mv2FGg
+    status: extracted
+    at: 2026-10-12
+  - id: Xf_L0wS9pm0
+    platform: youtube
+    channel: DagerClips
+    title: "Pidgeotto tira fruta. #fyp #clips #twitch"
+    url: https://www.youtube.com/shorts/Xf_L0wS9pm0
+    status: extracted
+    at: 2026-10-12
+  - id: XGMUXGH5joo
+    platform: youtube
+    channel: DagerClips
+    title: "Interview via telepathy. #fyp #clip #programming"
+    url: https://www.youtube.com/shorts/XGMUXGH5joo
+    status: extracted
+    at: 2026-10-12
+  - id: XINUH6naZPg
+    platform: youtube
+    channel: DagerClips
+    title: Hice un Tribunal de IAs que JUZGA tus ACCIONES.
+    duration: 1459
+    url: https://www.youtube.com/watch?v=XINUH6naZPg
+    status: extracted
+    at: 2026-10-12
+  - id: xMu68-diB1g
+    platform: youtube
+    channel: DagerClips
+    title: HACKEÓ a la FIFA y no hizo NADA al respecto.
+    duration: 1146
+    url: https://www.youtube.com/watch?v=xMu68-diB1g
+    status: extracted
+    at: 2026-10-12
+  - id: xmvnKIXDeT4
+    platform: youtube
+    channel: ElAntroDeDager
+    title: Exponencial mente.
+    duration: 998
+    url: https://www.youtube.com/watch?v=xmvnKIXDeT4
+    status: merged
+    at: 2026-10-12
+  - id: xNA89hfoBtw
+    platform: youtube
+    channel: DagerClips
+    title: "Dager, ¿soy muy viejo para programar?  #fyp  #clips  #programacion  #albania ñil"
+    url: https://www.youtube.com/shorts/xNA89hfoBtw
+    status: extracted
+    at: 2026-10-12
+  - id: xrZrvd--xyk
+    platform: youtube
+    channel: DotDager
+    title: CÓMO CONCENTRARSE (pero bien).
+    duration: 475
+    url: https://www.youtube.com/watch?v=xrZrvd--xyk
+    status: extracted
+    at: 2026-10-12
+  - id: XuhoU51X4ZE
+    platform: youtube
+    channel: DagerClips
+    title: ¿Tiene Python salida laboral?
+    url: https://www.youtube.com/shorts/XuhoU51X4ZE
+    status: extracted
+    at: 2026-10-12
+  - id: xUtg8veMxGg
+    platform: youtube
+    channel: DagerClips
+    title: Bardean a influencer por conseguir trabajo.
+    duration: 438
+    url: https://www.youtube.com/watch?v=xUtg8veMxGg
+    status: extracted
+    at: 2026-10-12
+  - id: Xv4nWiIrySQ
+    platform: youtube
+    channel: DotDager
+    title: Plática cosítica ft. gordito ordenador | !discord !falopa
+    url: https://www.youtube.com/watch?v=Xv4nWiIrySQ
+    status: discovered
+    duration: 15628
+    at: 2026-10-12
+  - id: xvD3oCMfS9s
+    platform: youtube
+    channel: ElAntroDeDager
+    title: "Si no duele no sirve #shorts"
+    url: https://www.youtube.com/shorts/xvD3oCMfS9s
+    status: discovered
+    at: 2026-10-12
+  - id: XvPnPMY-a4s
+    platform: youtube
+    channel: DotDager
+    title: AAAA es el mejor stack y el Mortuary Assistant también | AAAA stack 2
+    url: https://www.youtube.com/watch?v=XvPnPMY-a4s
+    status: discovered
+    duration: 16003
+    at: 2026-10-12
+  - id: XwMDHg2_cWU
+    platform: youtube
+    channel: DagerClips
+    title: Tolerancia cero. ¿Esta bien?
+    duration: 1426
+    url: https://www.youtube.com/watch?v=XwMDHg2_cWU
+    status: extracted
+    at: 2026-10-12
+  - id: xY0eX_UcgX4
+    platform: youtube
+    channel: DagerClips
+    title: A Borges no le cebaba la democracia y el Peronismo.
+    duration: 643
+    url: https://www.youtube.com/watch?v=xY0eX_UcgX4
+    status: merged
+    at: 2026-10-12
+  - id: Y0viQLHKjYw
+    platform: youtube
+    channel: DotDager
+    title: Gordito compu prueba vibe coding y habla de (cosas).
+    url: https://www.youtube.com/watch?v=Y0viQLHKjYw
+    status: discovered
+    duration: 7973
+    at: 2026-10-12
+  - id: Y1lYtATUKyI
+    platform: youtube
+    channel: DotDager
+    title: EL NOSTRADAMUS CHINO (y otras cosas) | !discord !falopa !links
+    url: https://www.youtube.com/watch?v=Y1lYtATUKyI
+    status: discovered
+    duration: 13236
+    at: 2026-10-12
+  - id: Y1mxAAAT4As
+    platform: youtube
+    channel: DagerClips
+    title: Los PONZIBROS contraatacan.
+    duration: 1951
+    url: https://www.youtube.com/watch?v=Y1mxAAAT4As
+    status: extracted
+    at: 2026-10-12
+  - id: Y1TukyHR4VU
+    platform: youtube
+    channel: DagerClips
+    title: Dager explica como se organiza en un día a día.
+    duration: 439
+    url: https://www.youtube.com/watch?v=Y1TukyHR4VU
+    status: merged
+    at: 2026-10-12
+  - id: Y24asRQZ3P8
+    platform: youtube
+    channel: DagerClips
+    title: "Capos. #fyp #filosofia #anarquismo #política #clip"
+    url: https://www.youtube.com/shorts/Y24asRQZ3P8
+    status: extracted
+    at: 2026-10-12
+  - id: y6dCAopMQ4I
+    platform: youtube
+    channel: DotDager
+    title: Estás bajo aRESTo.
+    duration: 1145
+    url: https://www.youtube.com/watch?v=y6dCAopMQ4I
+    status: extracted
+    at: 2026-10-12
+  - id: y7dwKCym_F8
+    platform: youtube
+    channel: DagerClips
+    title: "Karen salvaje. #fyp #clips"
+    url: https://www.youtube.com/shorts/y7dwKCym_F8
+    status: extracted
+    at: 2026-10-12
+  - id: y8K9c8Be_-o
+    platform: youtube
+    channel: DagerClips
+    title: "El gemelier argentino #fyp"
+    url: https://www.youtube.com/shorts/y8K9c8Be_-o
+    status: extracted
+    at: 2026-10-12
+  - id: ya4vOE62Yn8
+    platform: youtube
+    channel: DotDager
+    title: El FIN del PROGRAMADOR JUNIOR | SOUNDTRACK.
+    duration: 799
+    url: https://www.youtube.com/watch?v=ya4vOE62Yn8
+    status: skipped
+    at: 2026-10-12
+    reason: sin transcripción automática
+  - id: ybeEff0S3XM
+    platform: youtube
+    channel: DagerClips
+    title: 'Forobardo de la semana: "Las empresas no me aceptan por tener mucha experiencia."'
+    duration: 352
+    url: https://www.youtube.com/watch?v=ybeEff0S3XM
+    status: extracted
+    at: 2026-10-12
+  - id: YFPu-hXaw4g
+    platform: youtube
+    channel: DagerClips
+    title: Liberal teacher wants to beat the shit out of a left-wing teacher.
+    duration: 379
+    url: https://www.youtube.com/watch?v=YFPu-hXaw4g
+    status: extracted
+    at: 2026-10-12
+  - id: yfvGYXB1RHk
+    platform: youtube
+    channel: DagerClips
+    title: Los aranceles NO sirven. | Falopa Política
+    duration: 824
+    url: https://www.youtube.com/watch?v=yfvGYXB1RHk
+    status: extracted
+    at: 2026-10-12
+  - id: YgQs3tq7uJ4
+    platform: youtube
+    channel: DagerClips
+    title: ¿Estamos en una simulación?
+    duration: 1606
+    url: https://www.youtube.com/watch?v=YgQs3tq7uJ4
+    status: merged
+    at: 2026-10-12
+  - id: YhF2OS87Tsg
+    platform: youtube
+    channel: DotDager
+    title: SE PUDRIÓ TODO | !discord !falopa !links
+    url: https://www.youtube.com/watch?v=YhF2OS87Tsg
+    status: discovered
+    duration: 15579
+    at: 2026-10-12
+  - id: yHWsSgVWsAM
+    platform: youtube
+    channel: DagerClips
+    title: ¿Por qué los programadores son de derecha?
+    duration: 1532
+    url: https://www.youtube.com/watch?v=yHWsSgVWsAM
+    status: extracted
+    at: 2026-10-12
+  - id: yly2GCW_RNU
+    platform: youtube
+    channel: DotDager
+    title: "TOMA YOGURT EN VIVO #fyp #robot #clips"
+    url: https://www.youtube.com/shorts/yly2GCW_RNU
+    status: extracted
+    at: 2026-10-12
+  - id: yoc-NOnKzVc
+    platform: youtube
+    channel: DagerClips
+    title: Subabstraiganse.
+    url: https://www.youtube.com/shorts/yoc-NOnKzVc
+    status: extracted
+    at: 2026-10-12
+  - id: YoKLvuxH5ec
+    platform: youtube
+    channel: DotDager
+    title: LA IA SE REBELA (otra vez) | Clawdbot/Moltbook |  !discord !falopa !links
+    url: https://www.youtube.com/watch?v=YoKLvuxH5ec
+    status: discovered
+    duration: 13281
+    at: 2026-10-12
+  - id: YOzspH_MDHg
+    platform: youtube
+    channel: DotDager
+    title: "La subtrama de la mosca. #programación #fyp"
+    url: https://www.youtube.com/shorts/YOzspH_MDHg
+    status: discovered
+    at: 2026-10-12
+  - id: Yph-3g-aZCs
+    platform: youtube
+    channel: DotDager
+    title: SÍ QUIERO PRENDER (y otras cosas) | !discord !falopa !links
+    url: https://www.youtube.com/watch?v=Yph-3g-aZCs
+    status: discovered
+    duration: 17317
+    at: 2026-10-12
+  - id: YpRNrDn7Wj0
+    platform: youtube
+    channel: DagerClips
+    title: Los monopolios no existen. | Falopa Política
+    duration: 1334
+    url: https://www.youtube.com/watch?v=YpRNrDn7Wj0
+    status: extracted
+    at: 2026-10-12
+  - id: yPtKIk6fp80
+    platform: youtube
+    channel: DagerClips
+    title: "a baaaaase  #twitch #clips #streamer  #funny  #fyp"
+    url: https://www.youtube.com/shorts/yPtKIk6fp80
+    status: extracted
+    at: 2026-10-12
+  - id: YQcMJfmEePA
+    platform: youtube
+    channel: DagerClips
+    title: '"Los sueldos son culpa de los trabajadores en si."'
+    duration: 955
+    url: https://www.youtube.com/watch?v=YQcMJfmEePA
+    status: extracted
+    at: 2026-10-12
+  - id: YQfRVo5UwOM
+    platform: youtube
+    channel: DotDager
+    title: CÓMO ESTUDIAR (pero bien).
+    duration: 590
+    url: https://www.youtube.com/watch?v=YQfRVo5UwOM
+    status: merged
+    at: 2026-10-12
+  - id: YQWu62L7ql0
+    platform: youtube
+    channel: DagerClips
+    title: "Que cara dura. #clip #política #argentina #extranjeros"
+    url: https://www.youtube.com/shorts/YQWu62L7ql0
+    status: extracted
+    at: 2026-10-12
+  - id: YRybjqu2q8A
+    platform: youtube
+    channel: DotDager
+    title: ¿Te puedo hacer una pregunta?
+    url: https://www.youtube.com/shorts/YRybjqu2q8A
+    status: extracted
+    at: 2026-10-12
+  - id: YSd5vyZeze4
+    platform: youtube
+    channel: ElAntroDeDager
+    title: "La motivación está sobrevalorada #shorts"
+    url: https://www.youtube.com/shorts/YSd5vyZeze4
+    status: discovered
+    at: 2026-10-12
+  - id: YtdPq8eHirU
+    platform: youtube
+    channel: ElAntroDeDager
+    title: Review del ArgenMu o de Yahoo! respuestas o algo así.
+    duration: 638
+    url: https://www.youtube.com/watch?v=YtdPq8eHirU
+    status: extracted
+    at: 2026-10-12
+  - id: YTOTK0v-5t4
+    platform: youtube
+    channel: DagerClips
+    title: Los rescates falsos.
+    url: https://www.youtube.com/shorts/YTOTK0v-5t4
+    status: extracted
+    at: 2026-10-12
+  - id: yujd18s4KYk
+    platform: youtube
+    channel: DagerClips
+    title: Las claves de Gemini son públicas.. y es un desastre.
+    duration: 718
+    url: https://www.youtube.com/watch?v=yujd18s4KYk
+    status: extracted
+    at: 2026-10-12
+  - id: YvYPsTdBPQ4
+    platform: youtube
+    channel: DagerClips
+    title: "¿Estoicismo si o no? #clips #filosofia #masivo"
+    url: https://www.youtube.com/shorts/YvYPsTdBPQ4
+    status: extracted
+    at: 2026-10-12
+  - id: yzBfv1QUDTY
+    platform: youtube
+    channel: DotDager
+    title: "EL PREPUSHIO ASESINO #dev #fyp #clip"
+    url: https://www.youtube.com/shorts/yzBfv1QUDTY
+    status: extracted
+    at: 2026-10-12
+  - id: z4k9nV_cjcY
+    platform: youtube
+    channel: DagerClips
+    title: "¿Recomendás los cursos IT?  #clips #fyp  #twitch #streamer #dev #programming #coding"
+    url: https://www.youtube.com/shorts/z4k9nV_cjcY
+    status: extracted
+    at: 2026-10-12
+  - id: z4WSuvNauc4
+    platform: youtube
+    channel: DagerClips
+    title: '"¿Es UI/UX rentable?" #fyp #clip #diseñador #programador #programacion #dev'
+    url: https://www.youtube.com/shorts/z4WSuvNauc4
+    status: extracted
+    at: 2026-10-12
+  - id: z6ENSGfvb9E
+    platform: youtube
+    channel: DagerClips
+    title: Ética liberal de Hoppe.
+    url: https://www.youtube.com/shorts/z6ENSGfvb9E
+    status: skipped
+    at: 2026-10-12
+    reason: sin transcripción automática
+  - id: z6fY6k1VgS4
+    platform: youtube
+    channel: DotDager
+    title: ANUNCIO IMPORTANTE | !discord !falopa !links
+    url: https://www.youtube.com/watch?v=z6fY6k1VgS4
+    status: discovered
+    duration: 10495
+    at: 2026-10-12
+  - id: z95tTIuYSIc
+    platform: youtube
+    channel: DotDager
+    title: Cosas son habladas por gordito compu | !discord !falopa !links
+    url: https://www.youtube.com/watch?v=z95tTIuYSIc
+    status: discovered
+    duration: 13419
+    at: 2026-10-12
+  - id: za0LScn4-yU
+    platform: youtube
+    channel: DotDager
+    title: "Juli y las manos de Timothée Chalamet. #fyp #clips #twitch"
+    url: https://www.youtube.com/shorts/za0LScn4-yU
+    status: extracted
+    at: 2026-10-12
+  - id: ZApx5aw-1Bc
+    platform: youtube
+    channel: ElAntroDeDager
+    title: "Viaje en el tiempo I. Definición, física e identidad: Borges, Einstein y el barco Teseo."
+    duration: 1316
+    url: https://www.youtube.com/watch?v=ZApx5aw-1Bc
+    status: extracted
+    at: 2026-10-12
+  - id: zcdpl7Qvmo0
+    platform: youtube
+    channel: DagerClips
+    title: Eric ya no se encuentra entre nosotros
+    url: https://www.youtube.com/shorts/zcdpl7Qvmo0
+    status: extracted
+    at: 2026-10-12
+  - id: ZDX0tvShvWI
+    platform: youtube
+    channel: DagerClips
+    title: '"Afirmaban que era una IA pero en realidad eran 700 indios detras de una pantalla." | Arti-culo'
+    duration: 845
+    url: https://www.youtube.com/watch?v=ZDX0tvShvWI
+    status: extracted
+    at: 2026-10-12
+  - id: ZERfArlj-Xk
+    platform: youtube
+    channel: DotDager
+    title: El Reddit para IAs y el hackeo de Notepad | Resumen lvl 5.
+    duration: 601
+    url: https://www.youtube.com/watch?v=ZERfArlj-Xk
+    status: extracted
+    at: 2026-10-12
+  - id: ZFOy2EWDIWk
+    platform: youtube
+    channel: DotDager
+    title: "!Delgado !simpu habla de cosas."
+    url: https://www.youtube.com/watch?v=ZFOy2EWDIWk
+    status: discovered
+    duration: 14513
+    at: 2026-10-12
+  - id: zFqbHHW5lU8
+    platform: youtube
+    channel: DotDager
+    title: LINKEDIN TE ESPÍA (y otras cosas) | !discord !falopa !links
+    url: https://www.youtube.com/watch?v=zFqbHHW5lU8
+    status: discovered
+    duration: 9294
+    at: 2026-10-12
+  - id: zHowe46ZdbM
+    platform: youtube
+    channel: DotDager
+    title: "JAVA ES UNA MIERDA #programacion #java #fyp"
+    url: https://www.youtube.com/shorts/zHowe46ZdbM
+    status: extracted
+    at: 2026-10-12
+  - id: zjGBJfrZHXc
+    platform: youtube
+    channel: DagerClips
+    title: Corte de pelo instantaneo
+    url: https://www.youtube.com/shorts/zjGBJfrZHXc
+    status: extracted
+    at: 2026-10-12
+  - id: zjOZwDN0p5U
+    platform: youtube
+    channel: DagerClips
+    title: El lenguaje de programación argentino, Lunfardo.
+    duration: 2799
+    url: https://www.youtube.com/watch?v=zjOZwDN0p5U
+    status: extracted
+    at: 2026-10-12
+  - id: ZJWX8WhrLz8
+    platform: youtube
+    channel: ElAntroDeDager
+    title: Teorías Conspirativas.
+    duration: 3601
+    url: https://www.youtube.com/watch?v=ZJWX8WhrLz8
+    status: merged
+    at: 2026-10-12
+  - id: Zk3G9GQD54k
+    platform: youtube
+    channel: DagerClips
+    title: "Que difícil ser panadero che. 🥖. #fyp #filosofia #platón #aristoteles #clip #streamer  #democracia"
+    url: https://www.youtube.com/shorts/Zk3G9GQD54k
+    status: merged
+    at: 2026-10-12
+  - id: ZMYS6nGvLFg
+    platform: youtube
+    channel: DotDager
+    title: Breve plática cosística | !discord !falopa !links
+    url: https://www.youtube.com/watch?v=ZMYS6nGvLFg
+    status: discovered
+    duration: 15008
+    at: 2026-10-12
+  - id: zN68tckQo2U
+    platform: youtube
+    channel: DotDager
+    title: Pordito gompu habla de (co)sas | !discord !falopa
+    url: https://www.youtube.com/watch?v=zN68tckQo2U
+    status: discovered
+    duration: 21332
+    at: 2026-10-12
+  - id: Znf_53CtOlM
+    platform: youtube
+    channel: DagerClips
+    title: "They're somewhat right. #fyp #clip #politics #programmer"
+    url: https://www.youtube.com/shorts/Znf_53CtOlM
+    status: extracted
+    at: 2026-10-12
+  - id: znPsUBqTLRQ
+    platform: youtube
+    channel: DagerClips
+    title: Hackeos a través de GitHub.
+    duration: 996
+    url: https://www.youtube.com/watch?v=znPsUBqTLRQ
+    status: extracted
+    at: 2026-10-12
+  - id: ZoCFkZ2ZhUw
+    platform: youtube
+    channel: DagerClips
+    title: Impuestos, ¿un robo justificado?
+    duration: 2178
+    url: https://www.youtube.com/watch?v=ZoCFkZ2ZhUw
+    status: merged
+    at: 2026-10-12
+  - id: zqWr09dmgaM
+    platform: youtube
+    channel: DagerClips
+    title: 'Forobardo de la semana: "Un senior con el sueldo de un JR."'
+    duration: 690
+    url: https://www.youtube.com/watch?v=zqWr09dmgaM
+    status: merged
+    at: 2026-10-12
+  - id: zrN44ABHQWY
+    platform: youtube
+    channel: DotDager
+    title: "PARRIPOLLO ABZ #programming #fyp #clips"
+    url: https://www.youtube.com/shorts/zrN44ABHQWY
+    status: extracted
+    at: 2026-10-12
+  - id: zs_bO1WbfnU
+    platform: youtube
+    channel: DagerClips
+    title: "Dager cae en la trampa para principiantes 😂  #twitch #programming  #dev #fyp #coding #funny"
+    url: https://www.youtube.com/shorts/zs_bO1WbfnU
+    status: extracted
+    at: 2026-10-12
+  - id: zsn0t5N89JA
+    platform: youtube
+    channel: DotDager
+    title: LA ESTAFA DE LAS SUSCRIPCIONES | SOUNDTRACK
+    duration: 752
+    url: https://www.youtube.com/watch?v=zsn0t5N89JA
+    status: skipped
+    at: 2026-10-12
+    reason: sin transcripción automática
+  - id: zSy4eo4MMYc
+    platform: youtube
+    channel: DagerClips
+    title: "Despues me dio diarrhea.. #fyp #dev #anecdota"
+    url: https://www.youtube.com/shorts/zSy4eo4MMYc
+    status: extracted
+    at: 2026-10-12
+  - id: zve_BSofDIM
+    platform: youtube
+    channel: DagerClips
+    title: El gobierno regulando precios.
+    duration: 796
+    url: https://www.youtube.com/watch?v=zve_BSofDIM
+    status: extracted
+    at: 2026-10-12
+  - id: zX4R8ObzK3g
+    platform: youtube
+    channel: DotDager
+    title: CAMPAÑA ANTIARGENTINA (y otras cosas) | !discord !falopa !links
+    url: https://www.youtube.com/watch?v=zX4R8ObzK3g
+    status: discovered
+    duration: 9661
+    at: 2026-10-12
+  - id: ZxuM4UFN73A
+    platform: youtube
+    channel: DagerClips
+    title: ¿Cómo pido un mejor sueldo en mi trabajo?
+    duration: 426
+    url: https://www.youtube.com/watch?v=ZxuM4UFN73A
+    status: extracted
+    at: 2026-10-12
+  - id: ZXx59N6Fd3g
+    platform: youtube
+    channel: DagerClips
+    title: Limitarismo, ¿existe tal cosa como mucho dinero?
+    duration: 2058
+    url: https://www.youtube.com/watch?v=ZXx59N6Fd3g
+    status: merged
+    at: 2026-10-12
+issues: []
+asrHints:
+  ludwin Bon bertalan enfi: Ludwig von Bertalanffy
+  Haslid: Henry Hazlitt
+  Raiko: Ralph Raico (o Murray Rothbard, según el contexto)
+  Jope: Hans-Hermann Hoppe
+aliases: {}

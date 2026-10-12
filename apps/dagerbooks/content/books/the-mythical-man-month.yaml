@@ -1,0 +1,33 @@
+# yaml-language-server: $schema=../book.schema.json
+
+id: the-mythical-man-month
+seq: 74
+title: "The Mythical Man-Month"
+titleEs: "El mítico hombre-mes: ensayos sobre ingeniería de software"
+authors: ["Frederick P. Brooks Jr."]
+year: 1975
+kind: book
+topics: ["oficio"]
+level: 2
+recommendation: interesante
+summary: "Colección de ensayos de Brooks sobre gestión de proyectos de software; su tesis central es que sumar gente a un proyecto atrasado lo atrasa más."
+context: "Recomienda en especial el ensayo (sobrecarga de comunicación al crecer el equipo), útil al organizar equipos, y le interesa el libro completo."
+sources:
+  - url: "https://www.reddit.com/r/devsarg/comments/1ehmxbm/qué_libros_de_fundamentos_teóricos_de/lg30fw9/"
+    title: "r/devsarg: qué libros de fundamentos teóricos de"
+    quote: "The Mythical Man-Month. ... es interesante el libro que lo contiene en su conjunto."
+  - url: "https://github.com/MarianoVilla/MarianoVilla/blob/main/README.md"
+    title: "GitHub: MarianoVilla/MarianoVilla README (Recommended Readings)"
+    quote: "Written in 1975, still painfully relevant."
+  - url: "https://www.youtube.com/watch?v=pbWxlLeg-fs&t=396s"
+    title: "Los mejores libros para aprender a programar."
+    timestamp: "6:36"
+    quote: "está bueno si tenés que organizar equipos de software o tenés que empezar a pensar en esas cosas"
+  - url: "https://www.youtube.com/watch?v=HAxI7OF7d0k&t=3414s"
+    title: "1 EMPRESARIO VS 20 EMPLEADOS | Reacción"
+    timestamp: "56:54"
+    quote: "Todo eso con The Mystical Man Month, buen libro, se los recomiendo."
+isbn: "9780201835953"
+asin:
+  es: "0201835959"
+coverId: 6915361

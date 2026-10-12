@@ -1,0 +1,24 @@
+# yaml-language-server: $schema=../book.schema.json
+
+id: sapiens
+seq: 103
+title: "Sapiens"
+titleEs: "Sapiens: de animales a dioses"
+authors: ["Yuval Noah Harari"]
+year: 2011
+kind: book
+topics: ["historia"]
+level: 1
+recommendation: interesante
+summary: "Historia de la humanidad desde la aparición de Homo sapiens hasta hoy, centrada en las revoluciones cognitiva, agrícola y científica."
+context: "Lo menciona de pasada: \"buen libro Sapiens, se los recomiendo\"."
+sources:
+  - url: "https://www.youtube.com/watch?v=xY0eX_UcgX4&t=135s"
+    title: "A Borges no le cebaba la democracia y el Peronismo."
+    timestamp: "2:15"
+    quote: "Buen libro Sapiens, ¿eh? Se los recomiendo."
+leadsTo: ["the-selfish-gene"]
+isbn: "9780062316103"
+asin:
+  es: "0099590085"
+coverId: 15247651

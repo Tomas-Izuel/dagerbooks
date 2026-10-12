@@ -1,0 +1,26 @@
+# yaml-language-server: $schema=../book.schema.json
+
+id: suspicious-minds
+seq: 154
+title: "Suspicious Minds: Why We Believe Conspiracy Theories"
+titleEs: "Mentes sospechosas"
+authors: ["Rob Brotherton"]
+year: 2014
+leadsTo: ["the-paranoid-style-in-american-politics", "the-psychology-of-conspiracy-theories", "tragedy-and-hope", "evil-baumeister"]
+asin:
+  es: "1472915631"
+kind: book
+topics: ["historia", "desarrollo-personal"]
+level: 1
+recommendation: mencion
+summary: "Rob Brotherton explica con psicología por qué tantas personas creen en teorías conspirativas."
+context: "Lo usa en sus videos sobre teorías conspirativas para citar a Brian Keeley y ejemplos de pensamiento conspirativo."
+sources:
+  - url: "https://www.youtube.com/watch?v=ZJWX8WhrLz8&t=2210s"
+    title: "Teorías Conspirativas."
+    timestamp: "36:50"
+    quote: "como dice brian kelly citado por roberto en su libro suspicious minds"
+  - url: "https://www.youtube.com/watch?v=xmvnKIXDeT4&t=695s"
+    title: "Exponencial mente."
+    timestamp: "11:35"
+    quote: "lo que señala rob brotherton en suspicious minds y que me parece muy divertido"

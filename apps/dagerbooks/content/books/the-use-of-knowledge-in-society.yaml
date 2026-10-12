@@ -1,0 +1,34 @@
+# yaml-language-server: $schema=../book.schema.json
+
+id: the-use-of-knowledge-in-society
+seq: 24
+title: "The Use of Knowledge in Society"
+titleEs: "El uso del conocimiento en la sociedad"
+authors: ["Friedrich A. Hayek"]
+year: 1945
+leadsTo: ["interventionism-an-economic-analysis", "human-action", "general-system-theory"]
+asin:
+  es: "0226320936"
+kind: essay
+topics: ["economia", "sistemas"]
+level: 2
+recommendation: fuerte
+summary: "Ensayo de Hayek (American Economic Review, 1945) que sostiene que el conocimiento está disperso y que los precios lo coordinan mejor que la planificación central."
+context: "Lo comenta en un stream y lo recomienda \"intensamente\" a quien quiera entender el problema del conocimiento en la economía."
+sources:
+  - url: "https://www.youtube.com/watch?v=pdGnLA_E76s&t=3349s"
+    title: "Analizando el famoso ensayo de Hayek."
+    timestamp: "55:49"
+    quote: "El uso del conocimiento en la sociedad de Hayek... lo recomiendo intensamente a cualquiera que quiera aprobar el parcial"
+  - url: "https://www.youtube.com/watch?v=VaHOf77HNtg&t=55s"
+    title: "Analyzing Robert P. Murphy's \"Chaos Theory\" | Falopa Política"
+    timestamp: "0:55"
+    quote: "Que me recuerda a el texto de Hayek sobre el uso del conocimiento en la sociedad"
+  - url: "https://www.youtube.com/watch?v=6KwtQkUTe1I&t=1364s"
+    title: "La meritocracia es un MITO."
+    timestamp: "22:44"
+    quote: "como dice Heek en el uso de conocimiento de la sociedad, si el problema económico fuera simplemente agarrar una cantidad dada"
+  - url: "https://www.youtube.com/watch?v=9kNant40FXw&t=205s"
+    title: "Imagina que tienes dos vacas... | REACCIÓN"
+    timestamp: "3:25"
+    quote: "la premisa básica de el uso del conocimiento de la sociedad de Friederich Hig ende"

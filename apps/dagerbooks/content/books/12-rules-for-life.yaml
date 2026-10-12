@@ -1,0 +1,31 @@
+# yaml-language-server: $schema=../book.schema.json
+
+id: 12-rules-for-life
+seq: 50
+title: "12 Rules for Life"
+titleEs: "12 reglas para vivir: un antídoto al caos"
+authors: ["Jordan B. Peterson"]
+year: 2018
+kind: book
+topics: ["desarrollo-personal"]
+level: 1
+recommendation: interesante
+summary: "Jordan Peterson propone doce principios para ordenar la vida personal, mezclando psicología, filosofía y religión."
+context: "Lo recomienda pese a que Peterson le parece \"medio chanta\": es conciso y varias reglas son buenas; complementa a Hábitos atómicos."
+sources:
+  - url: "https://www.youtube.com/watch?v=V7NNviAqMh4&t=354s"
+    title: "Libros de autoayuda no TAN malos."
+    timestamp: "5:54"
+    quote: "no es mal libro en mi opinión. Es un libro conciso. Efectivamente tiene 12 reglas para la vida. Varias de esas reglas son buenas."
+  - url: "https://www.youtube.com/watch?v=wgtGulLPwE8&t=292s"
+    title: "Libros de AUTOAYUDA que SÍ SIRVEN."
+    timestamp: "4:52"
+    quote: "me pareció sorprendentemente útil... por eso está en la lista complementando a Hábitos Atómicos"
+  - url: "https://www.youtube.com/watch?v=T_yIGzGG_EE&t=1178s"
+    title: "No sos tan productivo como pensas."
+    timestamp: "19:38"
+    quote: "Sacando un capítulo del libro de Jordan Peterson. Yo creo que eso es lo mejor que lo mejor que tiene Jordan Peterson es esa idea de controlar tu entorno"
+isbn: "9780345816023"
+asin:
+  es: "0345816021"
+coverId: 8131760

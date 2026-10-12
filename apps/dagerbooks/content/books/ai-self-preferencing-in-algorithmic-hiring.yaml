@@ -1,0 +1,18 @@
+# yaml-language-server: $schema=../book.schema.json
+
+id: ai-self-preferencing-in-algorithmic-hiring
+seq: 189
+title: "AI Self-preferencing in Algorithmic Hiring: Empirical Evidence and Insights"
+authors: ["Jiannan Xu", "Gujie Li", "Jane Yi Jiang"]
+year: 2025
+kind: paper
+topics: ["ia"]
+level: 1
+recommendation: mencion
+summary: "Estudio que encuentra que los LLM prefieren currículums generados por IA al evaluar candidatos."
+context: "Lo presenta como lectura interesante y de buen diseño metodológico, pero sin pedir que lo lean."
+sources:
+  - url: "https://www.youtube.com/watch?v=U8TTljf4hWk&t=265s"
+    title: "Intenté buscar trabajo y está feo."
+    timestamp: "4:25"
+    quote: "AI self preferencing en algorithmic hiring. Algorithmic hiring, empirical evidence and insights"

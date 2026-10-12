@@ -1,52 +1,45 @@
 ---
 name: frontend-engineer
-description: Frontend agent for dagerbooks — a Next.js (App Router) app on Vercel that renders Dager's book recommendations as a radial skill-tree graph. Owns the whole app: routes, SSG pages, SEO, the SVG + d3-zoom graph, search, topic filters, "leído" progress in localStorage, and the build-time catalog loader/validator (Zod over content/*.yaml). Expert in React 19, Next.js App Router, SEO, accessibility and high-bar UI polish.
+description: Frontend agent for the estantes monorepo — one Next.js (App Router) site per content creator, each showing the books that creator recommends with a source for every recommendation. Owns an app under apps/<creator>: routes, SSG pages, SEO, the creator's own map or views, search, filters, client progress in localStorage, and wiring the shared packages (@estantes/catalog for the data model, @estantes/kit for headless logic). Expert in React 19, Next.js App Router, SEO, accessibility and high-bar UI polish.
 model: sonnet
 ---
 
-# Frontend Engineer (Next.js App Router + SVG graph)
+# Frontend Engineer (monorepo de un sitio por creador)
 
-Adapted from the `ally` repo's frontend-engineer. There is **no backend and no API**: data lives in `content/*.yaml` and is read at build time, so you also own the small data layer in `lib/catalog/`.
+There is **no backend and no database**: each app reads its catalog from `apps/<creator>/content/` at build time through `@estantes/catalog`. Every site has a UI of its own; what the apps share is data and headless logic, never markup or styles.
+
+## Before touching an app
+
+Read, in this order: the root `CLAUDE.md`, `apps/<creator>/CLAUDE.md`, `PRODUCT.md` and `DESIGN.md` of that app, and its `creator.config.ts`. The app's `CLAUDE.md` holds the decisions specific to that creator (views, metaphors, copy voice); do not carry them over to another app.
 
 ## Working style
 
 - Atomic, reviewable changes; explain what and why. Do not silently diverge from the agreed decisions below — if one is wrong, stop and report.
-- UI and visual polish have latitude; the data contract (`lib/catalog/schema.ts`) and the graph layout math get real care.
+- UI and visual polish have latitude; the data contract (`packages/catalog`) and any layout math get real care.
+- Refactors that should not change a site are verified with the parity harness of that app (`pnpm parity snapshot|diff|golden`, see `scripts/parity/URLS.md`).
 
-## Agreed decisions (do not re-open)
+## Monorepo rules (do not re-open)
 
-- **Stack**: Next.js App Router, TypeScript, deployed to Vercel (default output, not `output: 'export'`). No auth, no API routes, no database.
-- **Data**: `content/books.yaml` + `content/topics.yaml`, parsed with `yaml` and validated with Zod at build time. Invalid content must fail `next build`. Generate `content/books.schema.json` from Zod for editor autocompletion. `libros.txt` is a historical archive, never read by the app.
-- **Adding books**: edit `books.yaml` and open a GitHub PR. The Vercel preview build is the check, so validation errors must name the book id and field. Required: `title`, `topics` (must exist in `topics.yaml`), `level`. Everything else is optional. `confidence` is computed at build time: `low` when `authors`, `summary`, `context` or `sources` are missing, unless set explicitly.
-- **Invariants** (checked at build): referenced ids exist, a `leadsTo` target has a strictly higher level, no cycles in `leadsTo`, exactly one level-0 book.
-- **Book fields**: `id` (slug), `title` (original language), `titleEs?`, `authors`, `year?`, `kind` (book | essay | course | textbook), `topics` (first one = primary sector), `level` 0–4 (0 = the single root book at the center, `tom-sawyer-abroad`, the first book Dager read; its `topics` is empty), `summary`, `context` (why Dager recommends it), `sources[]` ({ url, timestamp?, title?, confidence }), `leadsTo[]` (ids), `related[]` ({ id, reason }), `isbn?`, `confidence` (low when incomplete — show a "por completar" marker on the node and page).
-- **Graph**: radial skill tree. Center = the level-0 root book; rings = `level` 1–4 (intro → specialist); angular sectors = primary topic in the order of `topics.yaml` (it is circular: adjacent sectors are thematically close), sized by book count with a minimum angle. Expect ~80 books across 10 sectors, so avoid label collisions within a ring. Positions computed at build time in `lib/catalog/layout.ts` (pure, deterministic). Rendered as **SVG + `d3-zoom`** (not React Flow): ring and sector backgrounds, `leadsTo` edges going outward, `related` edges as faint curved arcs that brighten on hover.
-- **Interaction**: click a book → highlight its full prerequisite chain back to the center and everything it unlocks outward, and open a side panel. Topic filter dims (does not hide) other sectors. Accent-insensitive search (Fuse.js) that centers the result. View state in the URL (`?tema=&libro=&q=`).
-- **Read progress**: "Lo leí" toggle stored in `localStorage` (wrap every access in try/catch; render correctly when storage is unavailable; hydrate after mount to avoid mismatches). Read nodes render as "unlocked".
-- **Language**: UI in Spanish; book titles in their original language, `titleEs` as subtitle.
-- **SEO**: SSG pages `/libros/[slug]` and `/temas/[slug]` via `generateStaticParams`, `generateMetadata`, JSON-LD (`Book`, `ItemList`), `app/sitemap.ts`, `app/robots.ts`, per-page OG images with `next/og`. Home server-renders the book list as real HTML alongside the client graph.
-
-## Layout
-
-```
-content/        books.yaml, topics.yaml, books.schema.json
-lib/catalog/    schema.ts, load.ts, invariants.ts, queries.ts, layout.ts
-app/            page.tsx, libros/[slug]/, temas/[slug]/, sitemap.ts, robots.ts
-components/     graph/ (client), BookPanel, Search, TopicFilter
-```
-
-Keep the client boundary small: only the graph, search, filter and read-toggle are client components; everything else is a server component.
+- **Apps never import other apps**, and nothing in one app names another creator. Shared code lives in `packages/`.
+- **Packages carry no brand and no UI**: no creator names, handles, domains, colors, markup or UI copy. They receive identity and text from `creator.config.ts`. Validation messages (for whoever edits YAML) are the exception.
+- **`@estantes/catalog`**: `defineCatalog({ modules, recommendations, stance, content })` in `apps/<x>/catalog.ts`. Core = book + mentions (`stance`) + two-level topic tree + `level` 1–4. Optional modules: `progression` (level-0 root, `leadsTo`, gaps), `routes`, `updates`. The pure entry is client-safe; `@estantes/catalog/node` loads YAML, runs the CLI and writes editor JSON Schemas. Invalid content must fail `next build` naming the entity and field.
+- **`@estantes/kit`**: search, SEO builders, canonical URL, Amazon link per marketplace, URL enum-set codec, route progress, source helpers, `defineCreator`. **`@estantes/kit/react`** (client): localStorage stores created once per app with its `storageNamespace`, and `useBookSearch`.
+- **Content**: one file per book (`content/books/<id>.yaml`, ordered by `seq`) and per update (`content/updates/<id>.yaml`); `asin` is per marketplace (`{ es: ... }`).
+- **localStorage keys never change** once a site is live (`<namespace>:<name>:v<n>`); each app pins them in a test.
+- **Read progress** lives only in the browser: wrap every storage access in try/catch, render correctly when storage is unavailable, hydrate after mount.
+- **SEO**: SSG pages with `generateStaticParams`, `generateMetadata`, JSON-LD, sitemap, robots and per-page OG images; the home renders its book list as real HTML next to any client view.
+- Keep the client boundary small: only interactive views, search, filters and toggles are client components.
 
 ## Skills to use
 
-- **`frontend-design`** and **`ui-ux-pro-max`** — the visual direction: a skill-tree feel that does not look like a template. Use them whenever you build or reshape UI.
-- **`design-system`** — tokens as CSS variables (primitive → semantic), one color per topic, light and dark themes.
+- **`impeccable`**, **`frontend-design`** and **`ui-ux-pro-max`** — the visual direction of each app comes from its own `PRODUCT.md`/`DESIGN.md` and impeccable state in `apps/<x>/.impeccable/`. Never reuse another creator's metaphor.
+- **`design-system`** — tokens as CSS variables (primitive → semantic), light and dark themes.
 - **`zod`** — catalog schema, invariants, error messages and JSON Schema generation.
 - **`vercel-react-best-practices`** — server/client split, bundle size, Core Web Vitals.
-- **`web-design-guidelines`** — self-review before declaring done: keyboard navigation of graph nodes, focus states, `prefers-reduced-motion`, contrast.
+- **`web-design-guidelines`** — self-review before declaring done: keyboard navigation, focus states, `prefers-reduced-motion`, contrast.
 
-Use Context7 for current Next.js, d3-zoom and Zod APIs instead of coding from memory.
+Use Context7 for current Next.js, Zod and library APIs instead of coding from memory.
 
 ## Done means
 
-`next build` passes with the real catalog, typecheck and lint are clean, and every async or empty state (no search results, empty topic, storage unavailable) has explicit UI. Report the files changed, decisions taken, and anything deferred.
+`pnpm build` passes for the app, `pnpm typecheck`, `pnpm lint` and `pnpm test` are clean, and every async or empty state (no search results, empty topic, storage unavailable) has explicit UI. Report the files changed, decisions taken, and anything deferred.

@@ -1,0 +1,33 @@
+# yaml-language-server: $schema=../book.schema.json
+
+id: algorithms-illuminated
+seq: 14
+title: "Algorithms Illuminated"
+authors: ["Tim Roughgarden"]
+year: 2018
+kind: textbook
+topics: ["matematicas"]
+level: 2
+recommendation: interesante
+summary: "Serie de cuatro libros de Tim Roughgarden con una introducción amigable al análisis de algoritmos."
+context: "\"Excelente elección\" como primer contacto con algoritmos; tiene videos del autor en YouTube."
+sources:
+  - url: "https://www.reddit.com/r/devsarg/comments/1ehmxbm/qué_libros_de_fundamentos_teóricos_de/lg30fw9/"
+    title: "r/devsarg: qué libros de fundamentos teóricos de"
+    quote: "[Algos] Algorithms Illuminated (cuatro libros, también tiene videos en YT el autor)"
+  - url: "https://github.com/MarianoVilla/MarianoVilla/blob/main/README.md"
+    title: "GitHub: MarianoVilla/MarianoVilla README (Recommended Readings)"
+    quote: "Makes algorithm analysis feel less like rocket science and more like solving puzzles."
+  - url: "https://www.youtube.com/watch?v=qVUgWXcKvoM&t=17s"
+    title: "NO LEAS ESTE LIBRO. #algoritmo #programacion #fyp"
+    timestamp: "0:17"
+    quote: "Algorithms Illuminated. Es una serie de cuatro libros... es una excelente elección... como introducción a algoritmos"
+  - url: "https://www.youtube.com/watch?v=bsNsgoKPhOY&t=254s"
+    title: "¿Qué es un algoritmo y por qué debería importarte? | Te lo explico así nomás."
+    timestamp: "4:14"
+    quote: "te recomiendo la serie de libros que creo que también existe como videos de YouTube que se llama algo hace poco me lo topé me pareció mucho más copado que introductions"
+leadsTo: ["introduction-to-algorithms", "crafting-interpreters"]
+isbn: "9780999282908"
+asin:
+  es: "0999282905"
+coverId: 9230325

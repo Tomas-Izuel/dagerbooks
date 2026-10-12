@@ -1,0 +1,23 @@
+# yaml-language-server: $schema=../book.schema.json
+
+id: stoicism-a-very-short-introduction
+seq: 28
+title: "Stoicism: A Very Short Introduction"
+authors: ["Brad Inwood"]
+year: 2018
+kind: book
+topics: ["filosofia"]
+level: 1
+recommendation: interesante
+summary: "Introducción breve al estoicismo de la serie Very Short Introductions (Oxford)."
+context: "Lo recomienda como la mejor opción para quien no está acostumbrado a leer filosofía; identificación del título dudosa."
+sources:
+  - url: "https://www.youtube.com/watch?v=SlYKqCwO6m4&t=4639s"
+    title: "Tierlist de filósofos estoicos. ¿Son como en las redes sociales?"
+    timestamp: "77:19"
+    quote: "Aure Introduction es un poco más introductorio ... si no estás muy ducho en leer libros de filosofía, este sería la mejor opción"
+leadsTo: ["discourses-and-enchiridion", "letters-to-lucilius", "hymn-of-cleanthes", "lives-of-the-eminent-philosophers", "gorgias"]
+isbn: "9780198786665"
+asin:
+  es: "0198786662"
+coverId: 8832190

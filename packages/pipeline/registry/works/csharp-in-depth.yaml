@@ -1,0 +1,12 @@
+id: csharp-in-depth
+title: C# in Depth
+authors:
+  - Jon Skeet
+year: 2008
+kind: book
+openLibrary:
+  coverId: 3063781
+editions:
+  - isbn: "9781933988368"
+asin:
+  es: "1933988363"

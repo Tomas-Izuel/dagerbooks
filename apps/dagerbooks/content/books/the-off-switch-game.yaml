@@ -1,0 +1,18 @@
+# yaml-language-server: $schema=../book.schema.json
+
+id: the-off-switch-game
+seq: 87
+title: "The Off-Switch Game"
+authors: ["Dylan Hadfield-Menell", "Anca Dragan", "Pieter Abbeel", "Stuart Russell"]
+year: 2016
+kind: paper
+topics: ["ia"]
+level: 3
+recommendation: interesante
+summary: "Paper que modela con teoría de juegos si un robot racional dejaría que un humano lo apague."
+context: "Cuenta que simula la situación de un humano y un robot con botón de apagado, y lo recomienda como muy interesante y bastante accesible."
+sources:
+  - url: "https://www.youtube.com/watch?v=CYglM-Rg5_Y&t=2507s"
+    title: "Todos cagados por la IA."
+    timestamp: "41:47"
+    quote: "intentan simular las situaciones en las cuales tienes un humano y un robot y al robot le pones un off switch ... Lo pueden leer, es muy interesante y es bastante accesible"

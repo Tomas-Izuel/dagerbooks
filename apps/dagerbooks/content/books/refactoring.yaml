@@ -1,0 +1,22 @@
+# yaml-language-server: $schema=../book.schema.json
+
+id: refactoring
+seq: 108
+title: "Refactoring"
+authors: ["Martin Fowler"]
+year: 1999
+kind: book
+topics: ["oficio"]
+level: 3
+recommendation: interesante
+summary: "Catálogo de técnicas para mejorar el diseño de código existente sin cambiar su comportamiento."
+context: "Lo menciona al responder por libros genéricos de buenas prácticas y dice que es un buen libro si andás buscando ese tipo de libros."
+sources:
+  - url: "https://www.youtube.com/watch?v=PVjcZBCLtfU&t=7195s"
+    title: "Dager te enseña a hacer un server DNS #3."
+    timestamp: "119:55"
+    quote: "refactory es un buen libro si si andas buscando libros así genéricos de buenas prácticas"
+isbn: "9780201485677"
+asin:
+  es: "0201485672"
+coverId: 134964

@@ -1,0 +1,23 @@
+# yaml-language-server: $schema=../book.schema.json
+
+id: pro-git
+seq: 2
+title: "Pro Git"
+authors: ["Scott Chacon", "Ben Straub"]
+year: 2009
+kind: book
+topics: ["fundamentos"]
+level: 1
+recommendation: fuerte
+summary: "Guía completa de Git de Chacon y Straub, disponible gratis en línea."
+context: "Es el único recurso que recomienda para ir a fondo con Git."
+sources:
+  - url: "https://www.youtube.com/watch?v=oQcDGpsUgNk&t=309s"
+    title: "Más allá del código | 3 habilidades para ser mejor programador"
+    timestamp: "5:09"
+    quote: "el único recurso que te recomiendo si quieres ir a fondo es progit que es de los mejores que he encontrado"
+leadsTo: ["git-internals"]
+isbn: "9781430218333"
+asin:
+  es: "1430218339"
+coverId: 7892827

@@ -1,0 +1,21 @@
+# yaml-language-server: $schema=../book.schema.json
+
+id: werther
+seq: 122
+title: "Die Leiden des jungen Werthers"
+titleEs: "Las penas del joven Werther"
+authors: ["Johann Wolfgang von Goethe"]
+year: 1774
+asin:
+  es: "3150161363"
+kind: book
+topics: ["ficcion"]
+level: 1
+recommendation: mencion
+summary: "Novela epistolar de Goethe sobre el amor imposible de un joven artista, cuyo final trágico se asocia a una ola de suicidios imitativos."
+context: "Lo cita como origen del efecto Werther, ejemplo de template hazard en su video sobre infohazards."
+sources:
+  - url: "https://www.youtube.com/watch?v=wdn09iapSVA&t=335s"
+    title: "Cosas que NO DEBERÍAS SABER."
+    timestamp: "5:35"
+    quote: "En 1774, Gette publicó Las penas del joven Berter"

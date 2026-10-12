@@ -1,0 +1,19 @@
+# yaml-language-server: $schema=../book.schema.json
+
+id: international-ai-safety-report
+seq: 184
+title: "International AI Safety Report"
+authors: ["Yoshua Bengio"]
+year: 2025
+kind: paper
+topics: ["ia"]
+level: 1
+recommendation: mencion
+summary: "Informe anual de expertos internacionales sobre las capacidades y los riesgos de la inteligencia artificial."
+context: "Lo cita por su conclusión de que hoy no hay modelos con riesgo existencial."
+sources:
+  - url: "https://www.youtube.com/watch?v=CYglM-Rg5_Y&t=2141s"
+    title: "Todos cagados por la IA."
+    timestamp: "35:41"
+    quote: "hay un reporte que también está en las fuentes, que se llama el AI Safety Report, que se publica creo que todos los años"
+leadsTo: ["superintelligence"]

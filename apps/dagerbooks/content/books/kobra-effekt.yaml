@@ -1,0 +1,26 @@
+# yaml-language-server: $schema=../book.schema.json
+
+id: kobra-effekt
+seq: 137
+title: "Der Kobra-Effekt"
+titleEs: "El efecto cobra"
+authors: ["Horst Siebert"]
+year: 2001
+leadsTo: ["interventionism-an-economic-analysis"]
+asin:
+  es: "3421056781"
+kind: book
+topics: ["economia"]
+level: 2
+recommendation: interesante
+summary: "Horst Siebert muestra con ejemplos cómo las políticas económicas pueden producir el efecto contrario al buscado."
+context: "Mirando el mapa en stream dice que le encantó; antes lo había nombrado al leer un artículo sobre el efecto cobra."
+sources:
+  - url: "https://www.youtube.com/watch?v=PvlWX_AY3Ug&t=637s"
+    title: "Brasil le paga a policías por cada kill."
+    timestamp: "10:37"
+    quote: "También hay un libro 2001 con el mismo título de Horse, un economista y profesor alemán"
+  - url: "https://www.youtube.com/watch?v=DhFQ_yNFuwA&t=2170s"
+    title: "¿Y SI EL PROBLEMA SOS VOS? (y otras cosas)"
+    timestamp: "0:36:10"
+    quote: "a mí me encantó el efecto cobra"

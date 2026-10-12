@@ -1,0 +1,21 @@
+# yaml-language-server: $schema=../book.schema.json
+
+id: das-kapital
+seq: 141
+title: "Das Kapital"
+titleEs: "El capital"
+authors: ["Karl Marx"]
+year: 1867
+asin:
+  es: "3868202439"
+kind: book
+topics: ["economia"]
+level: 4
+recommendation: mencion
+summary: "Análisis crítico del capitalismo y su economía política."
+context: "Cita el segundo tomo (discusión sobre Ricardo) de pasada."
+sources:
+  - url: "https://www.youtube.com/watch?v=UCycM7WSsxk&t=226s"
+    title: "Como llegue a ser liberal. | Falopa Política"
+    timestamp: "3:46"
+    quote: "Marx habla de Ricardo en el segundo tomo del Capital. Y una larga discusión de Ricardo"

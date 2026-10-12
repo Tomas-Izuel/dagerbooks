@@ -1,0 +1,21 @@
+# yaml-language-server: $schema=../book.schema.json
+
+id: the-virtue-of-selfishness
+seq: 145
+title: "The Virtue of Selfishness"
+titleEs: "La virtud del egoísmo"
+authors: ["Ayn Rand"]
+year: 1964
+asin:
+  es: "0451163931"
+kind: book
+topics: ["economia", "filosofia"]
+level: 2
+recommendation: mencion
+summary: "Ensayos de Rand que defienden el egoísmo racional como base ética."
+context: "Un integrante del chat se lo recomendó; no dice haberlo leído."
+sources:
+  - url: "https://www.youtube.com/watch?v=UCycM7WSsxk&t=610s"
+    title: "Como llegue a ser liberal. | Falopa Política"
+    timestamp: "10:10"
+    quote: "me han recomendado varias veces que chusme a Rand como una forma de derivar esos principios de una forma más racional"

@@ -1,0 +1,20 @@
+# yaml-language-server: $schema=../book.schema.json
+
+id: la-comunidad-organizada
+seq: 148
+title: "La comunidad organizada"
+authors: ["Juan Domingo Perón"]
+year: 1949
+asin:
+  es: "9874589418"
+kind: book
+topics: ["historia", "economia"]
+level: 3
+recommendation: mencion
+summary: "Texto doctrinario de Perón."
+context: "Lo estaba leyendo y critica su retórica del \"bien común\"."
+sources:
+  - url: "https://www.youtube.com/watch?v=LWYGMKqCqbo&t=529s"
+    title: "ESTA DEMOCRACIA NO SIRVE | Falopa Política"
+    timestamp: "8:49"
+    quote: "volviendo a la comunidad organizada, ya que lo estuve leyendo estos días"

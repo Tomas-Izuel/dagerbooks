@@ -1,0 +1,32 @@
+# yaml-language-server: $schema=../book.schema.json
+
+id: building-microservices
+seq: 79
+title: "Building Microservices"
+authors: ["Sam Newman"]
+year: 2015
+kind: book
+topics: ["arquitectura"]
+level: 3
+recommendation: interesante
+summary: "Guía de Sam Newman para diseñar, desplegar y operar sistemas basados en microservicios."
+context: "Lo recomienda como introducción a los problemas de arquitectura distribuida, con buenas explicaciones de contenedores."
+sources:
+  - url: "https://www.reddit.com/r/devsarg/comments/1ehmxbm/qué_libros_de_fundamentos_teóricos_de/lg30fw9/"
+    title: "r/devsarg: qué libros de fundamentos teóricos de"
+    quote: "otro muy bueno, tiene una linda intro a problemas de arquitectura distribuída."
+  - url: "https://www.reddit.com/r/devsarg/comments/1dty7kt/estoy_haciendo_microservicios/lbduss6/"
+    title: "r/devsarg: estoy haciendo microservicios"
+    quote: "Te recomiendo Building Microservices"
+  - url: "https://github.com/MarianoVilla/MarianoVilla/blob/main/README.md"
+    title: "GitHub: MarianoVilla/MarianoVilla README (Recommended Readings)"
+    quote: "Helped me understand when to split services"
+  - url: "https://www.youtube.com/watch?v=pbWxlLeg-fs&t=167s"
+    title: "Los mejores libros para aprender a programar."
+    timestamp: "2:47"
+    quote: "building microservices también pero es orientado específicamente a microservicios igual es un buen libro"
+leadsTo: ["domain-driven-design"]
+isbn: "9781491950357"
+asin:
+  es: "1491950358"
+coverId: 8513315

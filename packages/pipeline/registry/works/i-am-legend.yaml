@@ -1,0 +1,13 @@
+id: i-am-legend
+title: I Am Legend
+authors:
+  - Richard Matheson
+year: 1954
+kind: book
+openLibrary:
+  coverId: 911109
+editions:
+  - isbn: "9780552106412"
+asin:
+  es: "0552106410"
+titleEs: Soy leyenda

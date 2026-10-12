@@ -1,0 +1,39 @@
+# yaml-language-server: $schema=../book.schema.json
+
+id: but-how-do-it-know
+seq: 1
+title: "But How Do It Know?"
+authors: ["J. Clark Scott"]
+year: 2009
+kind: book
+topics: ["fundamentos"]
+level: 1
+recommendation: fuerte
+summary: "Explica cómo funciona una computadora construyéndola paso a paso desde una compuerta NAND hasta una CPU completa."
+context: "Lo llama \"librito hermoso\" y fascinante sobre arquitectura de computadoras, que desmitifica todo desde las compuertas lógicas."
+sources:
+  - url: "https://www.reddit.com/r/devsarg/comments/1ehmxbm/qué_libros_de_fundamentos_teóricos_de/lg30fw9/"
+    title: "r/devsarg: qué libros de fundamentos teóricos de"
+    quote: "But How Do It Know. Hermoso librito."
+  - url: "https://www.youtube.com/watch?v=pbWxlLeg-fs&t=419s"
+    title: "Los mejores libros para aprender a programar."
+    timestamp: "6:59"
+    quote: "But How do you know que es un libro hermoso ... un libro fascinante sobre arquitectura de computadoras"
+  - url: "https://www.youtube.com/watch?v=p3Q4lTNxSfQ&t=8s"
+    title: "¿Por qué usan BINARIO las computadoras?"
+    timestamp: "0:08"
+    quote: "comienza el clásico But how do you know? Pero, ¿cómo sabe? Un libro que intenta achicar el espacio entre las cosas fleras que puede hacer una computadora"
+leadsTo:
+  - id: operating-systems-three-easy-pieces
+    gap:
+      severity: fuerte
+      bridge: ["lenguaje C y punteros", "uso de la terminal Unix"]
+      note: "Los ejemplos de OSTEP están en C; si no lo leés, te trabás en el primer capítulo de código."
+  - id: network-warrior
+    gap:
+      severity: fuerte
+      bridge: ["modelo TCP/IP y capas", "direccionamiento IP y subnetting", "línea de comandos de un router"]
+      note: "Es un libro de laburo con equipos reales; sin IP y subnetting te perdés rápido."
+isbn: "9780615303765"
+asin:
+  es: "0615303765"

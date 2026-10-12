@@ -1,0 +1,19 @@
+# yaml-language-server: $schema=../book.schema.json
+
+id: wason-2-4-6-task
+seq: 171
+title: "On the failure to eliminate hypotheses in a conceptual task"
+authors: ["Peter C. Wason"]
+year: 1960
+kind: paper
+topics: ["desarrollo-personal"]
+level: 1
+recommendation: mencion
+summary: "Paper de Peter Wason con el experimento 2-4-6 que muestra el sesgo de confirmación."
+context: "Cita el experimento de Wason de 1960 para explicar el sesgo de confirmación, sin nombrar el título."
+sources:
+  - url: "https://www.youtube.com/watch?v=fT4dJzl2_wU&t=1206s"
+    title: "Pizzagate y QAnon | Te lo explico así nomás."
+    timestamp: "20:06"
+    quote: "un estudio muy famoso que fue llevado adelante en 1960 por Peter Watson"
+leadsTo: ["fooled-by-randomness"]

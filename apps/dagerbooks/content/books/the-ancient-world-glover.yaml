@@ -1,0 +1,23 @@
+# yaml-language-server: $schema=../book.schema.json
+
+id: the-ancient-world-glover
+seq: 42
+title: "The Ancient World"
+authors: ["T. R. Glover"]
+year: 1935
+kind: book
+topics: ["historia"]
+level: 2
+recommendation: fuerte
+summary: "Introducción de T. R. Glover a la historia del mundo antiguo mediterráneo, de Grecia a Roma."
+context: "Es su libro favorito sobre Grecia desde chico: lo leyó unas cinco veces y perdió su copia física."
+sources:
+  - url: "https://www.youtube.com/watch?v=SlYKqCwO6m4&t=4724s"
+    title: "Tierlist de filósofos estoicos. ¿Son como en las redes sociales?"
+    timestamp: "78:44"
+    quote: "Mi libro favorito de Grecia desde muy chico, lo leí como cinco veces"
+leadsTo: ["the-republic"]
+isbn: "9781107695634"
+asin:
+  es: "1107695635"
+coverId: 9280129

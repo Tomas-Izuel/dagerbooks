@@ -1,0 +1,19 @@
+# yaml-language-server: $schema=../book.schema.json
+
+id: brain-drain-smartphone
+seq: 173
+title: "Brain Drain: The Mere Presence of One's Own Smartphone Reduces Available Cognitive Capacity"
+authors: ["Adrian F. Ward", "Kristen Duke", "Ayelet Gneezy", "Maarten W. Bos"]
+year: 2017
+kind: paper
+topics: ["desarrollo-personal"]
+level: 1
+recommendation: mencion
+summary: "Estudio que muestra que tener el celular a la vista reduce la capacidad cognitiva disponible, aunque esté apagado."
+context: "Cita un paper de la Universidad de Texas sobre el celular en el escritorio, el bolsillo u otra habitación; el título se infiere de la descripción."
+sources:
+  - url: "https://www.youtube.com/watch?v=T_yIGzGG_EE&t=1016s"
+    title: "No sos tan productivo como pensas."
+    timestamp: "16:56"
+    quote: "esto sí está estudiado en un paper del 2016 de de gente de la Universidad de Texas"
+leadsTo: ["the-shallows"]

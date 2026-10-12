@@ -1,0 +1,22 @@
+# yaml-language-server: $schema=../book.schema.json
+
+id: marxism-unmasked
+seq: 133
+title: "Marxism Unmasked: From Delusion to Destruction"
+titleEs: "El marxismo desenmascarado"
+authors: ["Ludwig von Mises"]
+year: 2006
+leadsTo: ["interventionism-an-economic-analysis"]
+asin:
+  es: "1610166337"
+kind: book
+topics: ["economia"]
+level: 2
+recommendation: mencion
+summary: "Conferencias de Ludwig von Mises que critican el marxismo desde la economía austríaca."
+context: "Libro antimarxista que le han recomendado; dice que si querés entender a Marx hay que leer a Marx."
+sources:
+  - url: "https://www.youtube.com/watch?v=BXO8Gas3lQs&t=3787s"
+    title: "1 EMPRESARIO vs. 20 TRABAJADORES | Reacción"
+    timestamp: "63:07"
+    quote: "marxismo desenmascarado de me sale Hayek y no es Hayek, es Mises"

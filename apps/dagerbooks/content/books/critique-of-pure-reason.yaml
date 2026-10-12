@@ -1,0 +1,25 @@
+# yaml-language-server: $schema=../book.schema.json
+
+id: critique-of-pure-reason
+seq: 169
+title: "Kritik der reinen Vernunft"
+titleEs: "Crítica de la razón pura"
+authors: ["Immanuel Kant"]
+year: 1781
+asin:
+  es: "3787313192"
+kind: book
+topics: ["filosofia"]
+level: 4
+recommendation: mencion
+summary: "Obra fundamental de la filosofía moderna sobre los límites del conocimiento."
+context: "Dice que es magnífica pero que jamás la recomendaría a quien se inicia en filosofía."
+sources:
+  - url: "https://www.youtube.com/watch?v=SlYKqCwO6m4&t=2091s"
+    title: "Tierlist de filósofos estoicos. ¿Son como en las redes sociales?"
+    timestamp: "34:51"
+    quote: "Kant hace una especie de síntesis y hace su famosa frase en la crítica de la razón pura"
+  - url: "https://www.youtube.com/watch?v=8c2VRiNf-wQ&t=0s"
+    title: "Kant el primer gatekeeper.. #fyp #filosofia #twitch #clip"
+    timestamp: "0:00"
+    quote: "Crítica de la razón pura es magnífico, pero ni en pedo jamás le recomendaría una persona que está tratando de introducirse a la filosofía."

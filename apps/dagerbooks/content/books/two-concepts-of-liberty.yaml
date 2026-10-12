@@ -1,0 +1,25 @@
+# yaml-language-server: $schema=../book.schema.json
+
+id: two-concepts-of-liberty
+seq: 147
+title: "Two Concepts of Liberty"
+titleEs: "Dos conceptos de libertad"
+authors: ["Isaiah Berlin"]
+year: 1958
+asin:
+  es: "0192810340"
+kind: essay
+topics: ["economia", "filosofia"]
+level: 3
+recommendation: mencion
+summary: "Ensayo que distingue libertad negativa y positiva."
+context: "Lo cita como fuente y elogia su lucidez, sin pedir que lo lean."
+sources:
+  - url: "https://www.youtube.com/watch?v=0h3u_o4G-Zk&t=41s"
+    title: "Libertad para morir de hambre | Falopa Política"
+    timestamp: "0:41"
+    quote: "se la debemos a este tipo llamado Isaías Berlín, que tiene un ensayo"
+  - url: "https://www.youtube.com/watch?v=0h3u_o4G-Zk&t=1194s"
+    title: "Libertad para morir de hambre | Falopa Política"
+    timestamp: "19:54"
+    quote: "en el trabajo este de Isaías Berlín, él lo dice de forma muy lúcida"

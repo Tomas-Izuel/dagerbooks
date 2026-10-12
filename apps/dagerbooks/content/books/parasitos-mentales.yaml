@@ -1,0 +1,22 @@
+# yaml-language-server: $schema=../book.schema.json
+
+id: parasitos-mentales
+seq: 130
+title: "Parásitos mentales"
+titleEs: "Parásitos mentales"
+authors: ["Axel Kaiser"]
+year: 2023
+leadsTo: ["the-anti-capitalistic-mentality", "on-liberty", "the-virtue-of-selfishness", "the-selfish-gene"]
+asin:
+  es: "8423438414"
+kind: book
+topics: ["economia"]
+level: 1
+recommendation: mencion
+summary: "Ensayo de Axel Kaiser que repasa ideas que, según él, se propagan como parásitos y dañan las sociedades libres."
+context: "Lo empezó a leer y lo resume (memética y siete ideas parasitarias); defiende que el video que reacciona no ataca sus argumentos."
+sources:
+  - url: "https://www.youtube.com/watch?v=01LgizVmfRg&t=64s"
+    title: "Parásitos mentales, reaccionando."
+    timestamp: "1:04"
+    quote: "es un parafraseo... del título del libro de Axel Kaiser... Parásitos mentales"

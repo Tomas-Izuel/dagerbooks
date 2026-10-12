@@ -1,0 +1,36 @@
+# yaml-language-server: $schema=../book.schema.json
+
+id: book-of-proof
+seq: 13
+title: "Book of Proof"
+authors: ["Richard Hammack"]
+year: 2009
+kind: textbook
+topics: ["matematicas"]
+level: 2
+recommendation: interesante
+summary: "Introducción a la demostración matemática: lógica, conjuntos, inducción y técnicas de prueba, de Richard Hammack."
+context: "Lo define como un clásico, muy buen libro aunque algo denso, para aprender a razonar con pruebas."
+sources:
+  - url: "https://www.reddit.com/r/devsarg/comments/1ehmxbm/qué_libros_de_fundamentos_teóricos_de/lg30fw9/"
+    title: "r/devsarg: qué libros de fundamentos teóricos de"
+    quote: "Book Of Proof, lindo libro, clásico en el tema."
+  - url: "https://github.com/MarianoVilla/MarianoVilla/blob/main/README.md"
+    title: "GitHub: MarianoVilla/MarianoVilla README (Recommended Readings)"
+    quote: "Made mathematical proofs click for me."
+  - url: "https://www.youtube.com/watch?v=pbWxlLeg-fs&t=231s"
+    title: "Los mejores libros para aprender a programar."
+    timestamp: "3:51"
+    quote: "Book of proof es un muy buen libro es un poquito denso es un clásico sobre el tema"
+leadsTo:
+  - laws-of-thought-boole
+  - introduction-to-algorithms
+  - id: dixon-coles-football
+    gap:
+      severity: muy-fuerte
+      bridge: ["probabilidad y variables aleatorias", "distribución de Poisson", "estimación por máxima verosimilitud", "regresión de Poisson"]
+      note: "Es un paper de estadística aplicada; sin probabilidad y verosimilitud no se lee."
+isbn: "9780982406205"
+asin:
+  es: "0982406207"
+coverId: 10439715

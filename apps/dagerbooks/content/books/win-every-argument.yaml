@@ -1,0 +1,22 @@
+# yaml-language-server: $schema=../book.schema.json
+
+id: win-every-argument
+seq: 59
+title: "Win Every Argument"
+authors: ["Mehdi Hasan"]
+year: 2023
+kind: book
+topics: ["desarrollo-personal", "oficio"]
+level: 1
+recommendation: interesante
+summary: "Mehdi Hasan ofrece un manual de debate, persuasión y oratoria basado en su experiencia como periodista y polemista."
+context: "Lo ubica como buen libro de debate: enseña cómo debate Hasan, periodista famoso por hablar rápido y debatir bien (a veces de mala fe), e incluye un apartado sobre cómo presentar en público."
+sources:
+  - url: "https://www.youtube.com/watch?v=NUr6WVl1u0k&t=523s"
+    title: "Cómo dejar de ser gordo compu y ser gordo empresarial."
+    timestamp: "8:43"
+    quote: "Win every argument de Hassan. Medassam. Este es un periodista, es famoso por hablar muy rápido"
+isbn: "9781250853462"
+asin:
+  es: "125085346X"
+coverId: 12688074

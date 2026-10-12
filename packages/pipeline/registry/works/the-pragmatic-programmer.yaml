@@ -1,0 +1,14 @@
+id: the-pragmatic-programmer
+title: The Pragmatic Programmer
+authors:
+  - Andrew Hunt
+  - David Thomas
+year: 1999
+kind: book
+openLibrary:
+  coverId: 10143650
+editions:
+  - isbn: "9780201616224"
+asin:
+  es: 020161622X
+titleEs: El programador pragmático

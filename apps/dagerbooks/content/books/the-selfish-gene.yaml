@@ -1,0 +1,21 @@
+# yaml-language-server: $schema=../book.schema.json
+
+id: the-selfish-gene
+seq: 149
+title: "The Selfish Gene"
+titleEs: "El gen egoísta"
+authors: ["Richard Dawkins"]
+year: 1976
+asin:
+  es: "0198788606"
+kind: book
+topics: ["sistemas"]
+level: 2
+recommendation: mencion
+summary: "Richard Dawkins presenta la evolución desde el punto de vista del gen y acuña el concepto de meme."
+context: "Lo explica (el gen como centro de la evolución y origen del meme) como base del libro de Kaiser que se discute en el video."
+sources:
+  - url: "https://www.youtube.com/watch?v=01LgizVmfRg&t=337s"
+    title: "Parásitos mentales, reaccionando."
+    timestamp: "5:37"
+    quote: "Dokins viene a hacer... un libro que llama de selfish gin"

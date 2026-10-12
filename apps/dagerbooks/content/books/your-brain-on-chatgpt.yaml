@@ -1,0 +1,19 @@
+# yaml-language-server: $schema=../book.schema.json
+
+id: your-brain-on-chatgpt
+seq: 186
+title: "Your Brain on ChatGPT: Accumulation of Cognitive Debt when Using an AI Assistant for Essay Writing Task"
+authors: ["Nataliya Kosmyna"]
+year: 2025
+kind: paper
+topics: ["ia"]
+level: 1
+recommendation: mencion
+summary: "Estudio del MIT Media Lab que compara la actividad cerebral al escribir con un LLM, con buscador o sin ayuda."
+context: "Lo comenta largamente y lo toma como evidencia de que delegar en la IA atrofia capacidades."
+sources:
+  - url: "https://www.youtube.com/watch?v=nIR95vS5Cnk&t=12s"
+    title: "Usar mucha IA apaga partes de tu cerebro.."
+    timestamp: "0:12"
+    quote: "Tu cerebro en Char GPT se llama y es un estudio bastante interesante"
+leadsTo: ["computer-power-and-human-reason", "the-shallows"]
