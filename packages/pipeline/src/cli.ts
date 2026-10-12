@@ -12,12 +12,19 @@
  *   batch [--cap bytes]           tandas de transcripciones para extraer (batches/bNN.tsv)
  *   split --id <id> [--max-chars n]     parte una transcripción larga (parts/<id>/partN.txt)
  *   mark --ids a,b --status <s> [--reason t]   cambia el estado de fuentes
+ *   merge-extractions [--dir d] [--name n] [--video id]   cruza extracciones → proposals/<n>.json + .md
+ *   enrich --proposal f           * Open Library: año, tapa, ISBN, título en el idioma del sitio
+ *   asin --proposal f [--marketplace m]        * Amazon: ASIN por ISBN o candidatos para revisar
+ *   write-books --proposal f [--dry]           escribe libros nuevos y fuentes; registro y estado
+ *   sync-metadata [--apply]       diferencias registro → app (y las aplica)
  *
  * PIPELINE_DATA_DIR cambia la carpeta de datos (por defecto <repo>/research/<creador>).
  */
 import { context, type Context } from "./context";
 import { importLegacyState, knownBooks, registryInit, stateSummary } from "./commands/basics";
 import { batch, discover, fetchSubs, mark, split, transcribeSources } from "./commands/ingest";
+import { asin, enrich, syncMetadata, writeBooks } from "./commands/books";
+import { mergeCommand } from "./commands/merge";
 import { SOURCE_STATUSES, type SourceStatus } from "./schemas";
 
 export type Args = { _: string[]; flags: Record<string, string | true> };
@@ -82,6 +89,11 @@ export const COMMANDS: Record<string, Command> = {
     if (!(SOURCE_STATUSES as readonly string[]).includes(status)) throw new Error(`--status debe ser ${SOURCE_STATUSES.join(" | ")}`);
     mark(ctx, list(args, "ids") ?? [], status as SourceStatus, flag(args, "reason"));
   },
+  "merge-extractions": (ctx, args) => mergeCommand(ctx, { dir: flag(args, "dir"), name: flag(args, "name"), video: flag(args, "video") }),
+  enrich: (ctx, args) => enrich(ctx, required(args, "proposal")),
+  asin: (ctx, args) => asin(ctx, required(args, "proposal"), flag(args, "marketplace")),
+  "write-books": (ctx, args) => writeBooks(ctx, required(args, "proposal"), { dry: args.flags.dry === true }),
+  "sync-metadata": (ctx, args) => syncMetadata(ctx, { apply: args.flags.apply === true }),
 };
 
 export async function main(argv = process.argv.slice(2)) {
