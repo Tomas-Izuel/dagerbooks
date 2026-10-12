@@ -10,7 +10,8 @@
     "validate": "turbo run validate",
     "test": "turbo run test",
     "check:boundaries": "tsx tools/check-boundaries.ts",
-    "pipeline": "tsx packages/pipeline/src/cli.ts"
+    "pipeline": "tsx packages/pipeline/src/cli.ts",
+    "new-creator": "tsx tools/new-creator.ts"
   },
   "devDependencies": {
     "tsx": "^4.23.15",

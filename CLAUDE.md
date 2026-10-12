@@ -9,6 +9,7 @@ con la fuente de cada recomendación. Hoy: `apps/dagerbooks`.
 - `packages/catalog` (`@estantes/catalog`): modelo de datos, validación y carga del catálogo (núcleo + módulos `progression`, `routes`, `updates`).
 - `packages/kit` (`@estantes/kit`, `@estantes/kit/react`): lógica headless (búsqueda, SEO, afiliado, filtros en la URL, progreso, stores de localStorage).
 - `packages/pipeline` (`pnpm pipeline <cmd> --creator <id>`): ingesta de libros (descubrir, transcribir, cruzar, enriquecer, escribir), registro bibliográfico y estado versionados. Ninguna app la importa.
+- `tools/new-creator.ts` (`pnpm new-creator <slug> …`): esqueleto de un sitio nuevo; la skill `/new-creator` conduce el diseño.
 - `tools/migrations/`: scripts únicos e idempotentes sobre el contenido.
 
 ## Reglas
@@ -16,6 +17,7 @@ con la fuente de cada recomendación. Hoy: `apps/dagerbooks`.
 - **Una app nunca importa otra app**, y nada de una app menciona a otro creador. La UI de cada sitio es propia.
 - **Los paquetes no tienen marca ni UI**: ni nombres, handles, dominios o colores de creadores, ni markup ni textos de interfaz. Reciben identidad y textos desde `creator.config.ts`.
 - Leé el `CLAUDE.md` de la app antes de tocarla.
+- Impeccable se corre con cwd en la app (o `--target apps/<x>`); en la raíz no hay `PRODUCT.md`, `DESIGN.md` ni `.impeccable/`.
 - Las claves de localStorage de un sitio publicado no cambian (cada app las fija en un test).
 - Un refactor que no debería cambiar un sitio se verifica con la paridad de esa app (`pnpm parity`).
 - **Antes de abrir un PR que cambie algo visible en un sitio, corré `/updates`**: escribe la novedad de cada sitio afectado, en su voz. Si no hay nada visible, poné `updates: none` en el PR.
