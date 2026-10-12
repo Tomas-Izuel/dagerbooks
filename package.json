@@ -6,9 +6,10 @@
     "dev": "turbo run dev --filter=dagerbooks",
     "build": "turbo run build",
     "typecheck": "turbo run typecheck",
-    "lint": "turbo run lint",
+    "lint": "turbo run lint && pnpm check:boundaries",
     "validate": "turbo run validate",
-    "test": "turbo run test"
+    "test": "turbo run test",
+    "check:boundaries": "tsx tools/check-boundaries.ts"
   },
   "devDependencies": {
     "tsx": "^4.23.15",

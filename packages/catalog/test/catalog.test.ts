@@ -21,7 +21,7 @@ const topics = [
   { id: "dos", name: "Dos", description: "Tema dos." },
 ];
 
-describe("progression (como Dager)", () => {
+describe("progression (raíz, niveles y prerrequisitos)", () => {
   const def = defineCatalog({
     modules: { progression: true, routes: false, updates: false },
     recommendations: ["fuerte", "interesante", "mencion"],
