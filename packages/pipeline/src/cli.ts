@@ -20,6 +20,8 @@
  *   apply-roadmaps --dir d [--dry]           planes por línea: leadsTo, tramos a pie y niveles (progression)
  *   apply-calibration --file f    decisiones de tramos a pie (progression)
  *   routes-assemble --out-dir d --proposal f  rutas escritas → content/routes.yaml (routes)
+ *   update-entry --file entry.json [--split]   crea o extiende content/updates/<fecha>-<slug>.yaml
+ *   affected [--base origin/main]  (sin --creator) sitios afectados por el diff, en JSON
  *
  * PIPELINE_DATA_DIR cambia la carpeta de datos (por defecto <repo>/research/<creador>).
  */
@@ -29,6 +31,8 @@ import { batch, discover, fetchSubs, mark, split, transcribeSources } from "./co
 import { asin, enrich, syncMetadata, writeBooks } from "./commands/books";
 import { mergeCommand } from "./commands/merge";
 import { applyCalibration, applyRoadmaps, routesAssemble } from "./commands/progression";
+import { affectedCommand, upsertUpdate, type UpdateEntryInput } from "./commands/updates";
+import fs from "node:fs";
 import { SOURCE_STATUSES, type SourceStatus } from "./schemas";
 
 export type Args = { _: string[]; flags: Record<string, string | true> };
@@ -101,18 +105,27 @@ export const COMMANDS: Record<string, Command> = {
   "apply-roadmaps": async (ctx, args) => void (await applyRoadmaps(ctx, required(args, "dir"), { dry: args.flags.dry === true })),
   "apply-calibration": (ctx, args) => applyCalibration(ctx, required(args, "file")),
   "routes-assemble": (ctx, args) => routesAssemble(ctx, required(args, "out-dir"), required(args, "proposal")),
+  "update-entry": (ctx, args) =>
+    upsertUpdate(ctx, JSON.parse(fs.readFileSync(required(args, "file"), "utf8")) as UpdateEntryInput, { split: args.flags.split === true }),
+};
+
+/** Comandos que miran todo el monorepo, sin --creator. */
+const GLOBAL: Record<string, (args: Args) => Promise<void>> = {
+  affected: (args) => affectedCommand(flag(args, "base") ?? "origin/main"),
 };
 
 export async function main(argv = process.argv.slice(2)) {
   const args = parseArgs(argv);
   const [cmd] = args._;
   const run = cmd ? COMMANDS[cmd] : undefined;
-  if (!run) {
-    console.error(`uso: pipeline <${Object.keys(COMMANDS).join("|")}> --creator <id> [opciones]`);
+  const global = cmd ? GLOBAL[cmd] : undefined;
+  if (!run && !global) {
+    console.error(`uso: pipeline <${[...Object.keys(COMMANDS), ...Object.keys(GLOBAL)].join("|")}> --creator <id> [opciones]`);
     process.exit(2);
   }
   try {
-    await run(context(required(args, "creator")), args);
+    if (global) await global(args);
+    else await run!(context(required(args, "creator")), args);
   } catch (e) {
     console.error(`pipeline ${cmd}: ${(e as Error).message}`);
     process.exit(1);

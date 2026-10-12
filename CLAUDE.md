@@ -8,6 +8,7 @@ con la fuente de cada recomendación. Hoy: `apps/dagerbooks`.
 - `apps/<creador>/`: un sitio Next.js, con su `CLAUDE.md`, `PRODUCT.md`, `DESIGN.md`, `.impeccable/`, `creator.config.ts`, `catalog.ts` y `content/`. Un proyecto de Vercel por app (Root Directory = `apps/<creador>`).
 - `packages/catalog` (`@estantes/catalog`): modelo de datos, validación y carga del catálogo (núcleo + módulos `progression`, `routes`, `updates`).
 - `packages/kit` (`@estantes/kit`, `@estantes/kit/react`): lógica headless (búsqueda, SEO, afiliado, filtros en la URL, progreso, stores de localStorage).
+- `packages/pipeline` (`pnpm pipeline <cmd> --creator <id>`): ingesta de libros (descubrir, transcribir, cruzar, enriquecer, escribir), registro bibliográfico y estado versionados. Ninguna app la importa.
 - `tools/migrations/`: scripts únicos e idempotentes sobre el contenido.
 
 ## Reglas
@@ -17,6 +18,7 @@ con la fuente de cada recomendación. Hoy: `apps/dagerbooks`.
 - Leé el `CLAUDE.md` de la app antes de tocarla.
 - Las claves de localStorage de un sitio publicado no cambian (cada app las fija en un test).
 - Un refactor que no debería cambiar un sitio se verifica con la paridad de esa app (`pnpm parity`).
+- **Antes de abrir un PR que cambie algo visible en un sitio, corré `/updates`**: escribe la novedad de cada sitio afectado, en su voz. Si no hay nada visible, poné `updates: none` en el PR.
 - **`main` está protegida:** todo va por rama + PR.
 - Los datos pesados (audio, transcripciones, snapshots) van en `apps/<creador>/research/` o en el SSD, nunca en `/tmp` ni en git.
 
