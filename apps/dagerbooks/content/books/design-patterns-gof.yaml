@@ -1,0 +1,25 @@
+# yaml-language-server: $schema=../book.schema.json
+
+id: design-patterns-gof
+seq: 78
+title: "Design Patterns"
+titleEs: "Patrones de diseño"
+authors: ["Erich Gamma", "Richard Helm", "Ralph Johnson", "John Vlissides"]
+year: 1995
+kind: book
+topics: ["arquitectura"]
+level: 3
+recommendation: mencion
+summary: "El libro de la \"Banda de los Cuatro\" que cataloga 23 patrones de diseño orientado a objetos."
+context: "Lo menciona como el libro de GoF, sin más comentarios, dentro de su bloque de OOP."
+sources:
+  - url: "https://www.reddit.com/r/devsarg/comments/1ehmxbm/qué_libros_de_fundamentos_teóricos_de/lg30fw9/"
+    title: "r/devsarg: qué libros de fundamentos teóricos de"
+    quote: "Design Patterns. El libro de GoF, not much to say."
+  - url: "https://github.com/MarianoVilla/MarianoVilla/blob/main/README.md"
+    title: "GitHub: MarianoVilla/MarianoVilla README (Recommended Readings)"
+    quote: "Design Patterns - The famous \"Gang of Four\" book."
+leadsTo: ["domain-driven-design"]
+isbn: "9780201633610"
+asin: "0201633612"
+coverId: 6601119

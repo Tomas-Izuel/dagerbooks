@@ -1,0 +1,36 @@
+# yaml-language-server: $schema=../book.schema.json
+
+id: meditations
+seq: 29
+title: "Meditations"
+authors: ["Marcus Aurelius"]
+year: 2020
+kind: book
+topics: ["filosofia"]
+level: 1
+recommendation: interesante
+summary: "Notas personales del emperador Marco Aurelio con reflexiones estoicas sobre virtud, muerte y deber."
+context: "Dice que es buena lectura \"pero hasta ahí\" y le aburre bastante, aunque lo incluye en su bibliografía de estoicismo (recomienda la edición de Gredos)."
+sources:
+  - url: "https://www.youtube.com/watch?v=SlYKqCwO6m4&t=3804s"
+    title: "Tierlist de filósofos estoicos. ¿Son como en las redes sociales?"
+    timestamp: "63:24"
+    quote: "sus meditaciones son una buena lectura, pero hasta ahí. A mí me aburren bastante las meditaciones de Marco Aurelio"
+  - url: "https://www.youtube.com/watch?v=SlYKqCwO6m4&t=4658s"
+    title: "Tierlist de filósofos estoicos. ¿Son como en las redes sociales?"
+    timestamp: "77:38"
+    quote: "Obviamente las meditaciones de Marco Aurelio"
+  - url: "https://www.youtube.com/watch?v=3Hgb_e_oGGQ&t=181s"
+    title: "Esto NO ES ESTOICISMO."
+    timestamp: "3:01"
+    quote: "En sus meditaciones, Marco Aurelio básicamente lidia con un montón de problemas más terrenales"
+  - url: "https://www.youtube.com/watch?v=T_yIGzGG_EE&t=2532s"
+    title: "No sos tan productivo como pensas."
+    timestamp: "42:12"
+    quote: "prefiero 100 veces un un Marco Aurelio Bro, meditaciones, bro, antes que una persona doer que no hace nada con su vida"
+leadsTo: ["discourses-and-enchiridion", "confessions-augustine"]
+related:
+  - id: mans-search-for-meaning
+    reason: "sentido y resiliencia frente a la adversidad"
+isbn: "9786071122254"
+asin: "6071122252"

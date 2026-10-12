@@ -1,0 +1,23 @@
+# yaml-language-server: $schema=../book.schema.json
+
+id: the-general-theory
+seq: 143
+title: "The General Theory of Employment, Interest and Money"
+authors: ["John Maynard Keynes"]
+year: 1936
+asin: "1107673739"
+kind: book
+topics: ["economia"]
+level: 3
+recommendation: mencion
+summary: "Obra central de Keynes que fundó la macroeconomía keynesiana."
+context: "Lo leyó de adolescente y entendió muy poco."
+sources:
+  - url: "https://www.youtube.com/watch?v=UCycM7WSsxk&t=300s"
+    title: "Como llegue a ser liberal. | Falopa Política"
+    timestamp: "5:00"
+    quote: "a Kanes lo leí de bastante chico y lo entendí muy poco porque era bastante chico y no estaba formado"
+  - url: "https://www.youtube.com/watch?v=DhFQ_yNFuwA&t=2155s"
+    title: "¿Y SI EL PROBLEMA SOS VOS? (y otras cosas)"
+    timestamp: "0:35:55"
+    quote: "la teoría general del empleo, el interés y el dinero de Keynes, que es un libro un poquitito más denso que los otros que estábamos mencionando"

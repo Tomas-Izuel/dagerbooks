@@ -1,0 +1,27 @@
+# yaml-language-server: $schema=../book.schema.json
+
+id: digital-minimalism
+seq: 55
+title: "Digital Minimalism"
+titleEs: "Minimalismo digital: en defensa de la atención en un mundo ruidoso"
+authors: ["Cal Newport"]
+year: 2019
+kind: book
+topics: ["desarrollo-personal"]
+level: 1
+recommendation: interesante
+summary: "Cal Newport propone una filosofía de uso deliberado de la tecnología para recuperar la atención."
+context: "Lo menciona junto a Deep Work como \"realmente muy bueno\" sin estar seguro del título."
+sources:
+  - url: "https://www.youtube.com/watch?v=V7NNviAqMh4&t=3656s"
+    title: "Libros de autoayuda no TAN malos."
+    timestamp: "60:56"
+    quote: "Newportk. Siempre me sale Newman. K Newman, que también es el escritor de minimalismo digital."
+  - url: "https://www.youtube.com/watch?v=wgtGulLPwE8&t=560s"
+    title: "Libros de AUTOAYUDA que SÍ SIRVEN."
+    timestamp: "9:20"
+    quote: "cualquiera de ese mismo autor, también está uno que se llama creo que minimalismo digital"
+leadsTo: ["the-shallows"]
+isbn: "9780525536512"
+asin: "0525536515"
+coverId: 8507540

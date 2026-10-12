@@ -1,0 +1,26 @@
+# yaml-language-server: $schema=../book.schema.json
+
+id: on-the-shortness-of-life
+seq: 30
+title: "On the Shortness of Life"
+authors: ["Seneca"]
+year: 1636
+kind: essay
+topics: ["filosofia"]
+level: 1
+recommendation: fuerte
+summary: "Breve tratado de Séneca sobre el buen uso del tiempo."
+context: "Texto corto y \"realmente recomendable\"; sugiere leerlo primero en su bibliografía estoica."
+sources:
+  - url: "https://www.youtube.com/watch?v=SlYKqCwO6m4&t=3269s"
+    title: "Tierlist de filósofos estoicos. ¿Son como en las redes sociales?"
+    timestamp: "54:29"
+    quote: "sobre la brevedad de la vida es bastante lindo texto, bastante corto ... realmente recomendable"
+  - url: "https://www.youtube.com/watch?v=F9NbEuEUUHw&t=1344s"
+    title: "Como leer, pero bien."
+    timestamp: "22:24"
+    quote: "These are my notes from the other time I read the little book on the"
+leadsTo: ["letters-to-lucilius"]
+isbn: "9786070796210"
+asin: "8424939603"
+coverId: 996581

@@ -1,0 +1,30 @@
+# yaml-language-server: $schema=../book.schema.json
+
+id: discourses-and-enchiridion
+seq: 31
+title: "Discourses and Enchiridion"
+titleEs: "Disertaciones por Arriano / Manual"
+authors: ["Epictetus"]
+year: 1944
+kind: book
+topics: ["filosofia"]
+level: 2
+recommendation: interesante
+summary: "Enseñanzas de Epicteto recogidas por Arriano, y su Manual (Enquiridión), sobre ética estoica práctica."
+context: "Dice que no es fácil de leer pero es interesante y buen candidato para estoicismo práctico; recomienda las ediciones de Gredos."
+sources:
+  - url: "https://www.youtube.com/watch?v=SlYKqCwO6m4&t=3163s"
+    title: "Tierlist de filósofos estoicos. ¿Son como en las redes sociales?"
+    timestamp: "52:43"
+    quote: "no es fácil de leer, es interesante de leer ... Epicteto es probablemente un buen candidato"
+  - url: "https://www.youtube.com/watch?v=SlYKqCwO6m4&t=4664s"
+    title: "Tierlist de filósofos estoicos. ¿Son como en las redes sociales?"
+    timestamp: "77:44"
+    quote: "los discursos de Picteto, arriano era, estaba en lo correcto, el manual o los fragmentos de gredos"
+  - url: "https://www.youtube.com/watch?v=3Hgb_e_oGGQ&t=614s"
+    title: "Esto NO ES ESTOICISMO."
+    timestamp: "10:14"
+    quote: "el Picteto en sus disertaciones famosamente suscribe a la teoría social extraña"
+isbn: "9788424916282"
+asin: "842491628X"
+coverId: 7024260

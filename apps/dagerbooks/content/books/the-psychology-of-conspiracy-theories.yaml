@@ -1,0 +1,18 @@
+# yaml-language-server: $schema=../book.schema.json
+
+id: the-psychology-of-conspiracy-theories
+seq: 156
+title: "The Psychology of Conspiracy Theories"
+authors: ["Karen M. Douglas", "Robbie M. Sutton", "Aleksandra Cichocka"]
+year: 2017
+kind: paper
+topics: ["historia", "desarrollo-personal"]
+level: 2
+recommendation: mencion
+summary: "Paper que resume los motivos epistémicos, existenciales y sociales detrás del pensamiento conspirativo."
+context: "Lo cita en su video sobre teorías conspirativas para explicar por qué la gente cree en ellas."
+sources:
+  - url: "https://www.youtube.com/watch?v=ZJWX8WhrLz8&t=3224s"
+    title: "Teorías Conspirativas."
+    timestamp: "53:44"
+    quote: "en la psicología de las teorías conspirativas doglas y compañías sostienen"

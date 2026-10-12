@@ -1,0 +1,19 @@
+# yaml-language-server: $schema=../book.schema.json
+
+id: dont-call-yourself-a-programmer
+seq: 107
+title: "Don't Call Yourself A Programmer"
+authors: ["Patrick McKenzie"]
+year: 2011
+kind: essay
+topics: ["oficio"]
+level: 1
+recommendation: interesante
+summary: "Ensayo de consejos de carrera para programadores que insiste en que el valor está en generar ingresos para la empresa, no solo en escribir código."
+context: "Lo lee entero y lo comenta en stream; termina diciendo que le pareció copado, interesante y divertido."
+sources:
+  - url: "https://www.youtube.com/watch?v=r2qMXxMU0Ns&t=0s"
+    title: "No seas solo un programador."
+    timestamp: "0:00"
+    quote: "don't call yourself a programmer. Career advice"
+leadsTo: ["the-pragmatic-programmer", "the-corrosion-of-character", "how-to-fuck-up-your-startup"]

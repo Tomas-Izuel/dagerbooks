@@ -1,0 +1,20 @@
+# yaml-language-server: $schema=../book.schema.json
+
+id: hero-with-a-thousand-faces
+seq: 157
+title: "The Hero with a Thousand Faces"
+titleEs: "El héroe de las mil caras"
+authors: ["Joseph Campbell"]
+year: 1949
+asin: "1577315936"
+kind: book
+topics: ["historia", "ficcion"]
+level: 2
+recommendation: mencion
+summary: "Joseph Campbell describe el monomito, el esquema narrativo que comparten los mitos de héroes de distintas culturas."
+context: "Sugiere leer a Campbell al hablar de la narrativa del underdog y lo identifica como un libro de mitología y narrativa muy usado en guion."
+sources:
+  - url: "https://www.youtube.com/watch?v=HAxI7OF7d0k&t=3582s"
+    title: "1 EMPRESARIO VS 20 EMPLEADOS | Reacción"
+    timestamp: "59:42"
+    quote: "Joseph Campbell de el héroe de las 1 caras. Es un libro sobre mitología y narrativa."

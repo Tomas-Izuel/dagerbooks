@@ -1,0 +1,23 @@
+# yaml-language-server: $schema=../book.schema.json
+
+id: the-greeks-kitto
+seq: 38
+title: "The Greeks"
+titleEs: "Los griegos"
+authors: ["H. D. F. Kitto"]
+year: 1950
+kind: book
+topics: ["historia"]
+level: 1
+recommendation: fuerte
+summary: "Panorama de la civilización griega clásica y su mentalidad, de H. D. F. Kitto."
+context: "Se lo dieron en la carrera de filosofía; lo llama \"librazo\", más general e histórico."
+sources:
+  - url: "https://www.youtube.com/watch?v=SlYKqCwO6m4&t=4734s"
+    title: "Tierlist de filósofos estoicos. ¿Son como en las redes sociales?"
+    timestamp: "78:54"
+    quote: "los griegos de Quito, HDF Kito, es un librazo"
+leadsTo: ["the-ancient-world-glover", "hero-with-a-thousand-faces"]
+isbn: "9780140135213"
+asin: "0140135219"
+coverId: 9285777

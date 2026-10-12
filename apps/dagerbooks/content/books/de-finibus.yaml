@@ -1,0 +1,23 @@
+# yaml-language-server: $schema=../book.schema.json
+
+id: de-finibus
+seq: 35
+title: "De finibus bonorum et malorum"
+titleEs: "Sobre los fines de los bienes y los males"
+authors: ["Cicero"]
+year: 1471
+kind: book
+topics: ["filosofia"]
+level: 3
+recommendation: interesante
+summary: "Diálogo de Cicerón que expone y critica las escuelas epicúrea, estoica y académica sobre el bien supremo."
+context: "Admite que no lo mencionó antes; dice que es muy bueno y con elevada discusión sobre estoicismo y epicureísmo."
+sources:
+  - url: "https://www.youtube.com/watch?v=SlYKqCwO6m4&t=4714s"
+    title: "Tierlist de filósofos estoicos. ¿Son como en las redes sociales?"
+    timestamp: "78:34"
+    quote: "Es muy bueno. Tiene una elevada discusión sobre estoicismo, epicurismo y academicismo"
+leadsTo: ["the-hellenistic-philosophers"]
+isbn: "9783110962581"
+asin: "3150085934"
+coverId: 6486564

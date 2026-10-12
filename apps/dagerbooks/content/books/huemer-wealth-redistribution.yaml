@@ -1,0 +1,18 @@
+# yaml-language-server: $schema=../book.schema.json
+
+id: huemer-wealth-redistribution
+seq: 100
+title: "Is Wealth Redistribution a Rights Violation?"
+authors: ["Michael Huemer"]
+year: 2017
+kind: essay
+topics: ["economia"]
+level: 3
+recommendation: fuerte
+summary: "Ensayo en el que Huemer sostiene que la redistribución de la riqueza mediante impuestos viola derechos de propiedad."
+context: "Abre un video diciendo que quiere recomendar este ensayo sobre redistribución del ingreso y derechos de propiedad."
+sources:
+  - url: "https://www.youtube.com/watch?v=ZoCFkZ2ZhUw&t=0s"
+    title: "Impuestos, ¿un robo justificado?"
+    timestamp: "0:00"
+    quote: "Les quiero recomendar algo de lectura. Esto es un ensayo sobre redistribución del ingreso y si es o no es una violación de derechos de propiedad. Es de Michael Hemmer."

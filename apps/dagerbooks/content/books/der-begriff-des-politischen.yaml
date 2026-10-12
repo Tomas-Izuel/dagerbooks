@@ -1,0 +1,26 @@
+# yaml-language-server: $schema=../book.schema.json
+
+id: der-begriff-des-politischen
+seq: 135
+title: "Der Begriff des Politischen"
+titleEs: "El concepto de lo político"
+authors: ["Carl Schmitt"]
+year: 1932
+leadsTo:
+  - id: homo-sacer
+    gap:
+      severity: fuerte
+      bridge: ["biopolítica de Foucault", "zoe y bios en Aristóteles", "totalitarismo y campos de concentración"]
+      note: "Schmitt da la excepción, pero Agamben suma a Foucault y a Aristóteles."
+asin: "3428145801"
+kind: book
+topics: ["economia", "filosofia"]
+level: 3
+recommendation: mencion
+summary: "Carl Schmitt define lo político por la distinción entre amigo y enemigo."
+context: "Cita del video que reacciona; comenta que Schmitt es ideólogo del nazismo y que le da algo de razón sobre la distinción amigo/enemigo."
+sources:
+  - url: "https://www.youtube.com/watch?v=01LgizVmfRg&t=903s"
+    title: "Parásitos mentales, reaccionando."
+    timestamp: "15:03"
+    quote: "Como señaló Carl Schmidh... en el concepto de lo político, la distinción entre el amigo y el enemigo"

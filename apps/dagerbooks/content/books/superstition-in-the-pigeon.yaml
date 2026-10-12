@@ -1,0 +1,19 @@
+# yaml-language-server: $schema=../book.schema.json
+
+id: superstition-in-the-pigeon
+seq: 172
+title: "Superstition in the Pigeon"
+authors: ["B. F. Skinner"]
+year: 1948
+kind: paper
+topics: ["desarrollo-personal"]
+level: 1
+recommendation: mencion
+summary: "Paper de B. F. Skinner donde palomas que reciben comida a intervalos fijos desarrollan conductas supersticiosas."
+context: "Cita el experimento de las palomas supersticiosas de Skinner en el video sobre Mr. Nobody, sin dar el título."
+sources:
+  - url: "https://www.youtube.com/watch?v=PBPGXgbZZcc&t=432s"
+    title: "Mr. Nobody: un jardín de senderos que se bifurcan y el mito de la elección | Análisis o algo así."
+    timestamp: "7:12"
+    quote: "skinner realiza un experimento ... puso a unas palomas hambrientas en cajas"
+leadsTo: ["fooled-by-randomness"]

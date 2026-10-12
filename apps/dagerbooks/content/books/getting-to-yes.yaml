@@ -1,0 +1,20 @@
+# yaml-language-server: $schema=../book.schema.json
+
+id: getting-to-yes
+seq: 179
+title: "Getting to Yes: Negotiating Agreement Without Giving In"
+titleEs: "Sí, de acuerdo"
+authors: ["Roger Fisher", "William Ury"]
+year: 1981
+asin: "1847940935"
+kind: book
+topics: ["oficio"]
+level: 1
+recommendation: mencion
+summary: "Método de Fisher y Ury para negociar acuerdos basados en intereses y no en posiciones."
+context: "Lo menciona al leer un artículo de McKenzie y agrega que aprender a negociar es importantísimo."
+sources:
+  - url: "https://www.youtube.com/watch?v=r2qMXxMU0Ns&t=2956s"
+    title: "No seas solo un programador."
+    timestamp: "49:16"
+    quote: "Lee un libro. Se ha escrito mucho sobre negociación. Me gusta cómo llegar al sí. Getting to. Yes"

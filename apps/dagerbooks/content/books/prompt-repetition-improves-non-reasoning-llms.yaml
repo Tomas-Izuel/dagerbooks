@@ -1,0 +1,18 @@
+# yaml-language-server: $schema=../book.schema.json
+
+id: prompt-repetition-improves-non-reasoning-llms
+seq: 191
+title: "Prompt Repetition Improves Non-Reasoning LLMs"
+authors: ["Yaniv Leviathan", "Matan Kalman", "Yossi Matias"]
+year: 2025
+kind: paper
+topics: ["ia"]
+level: 1
+recommendation: mencion
+summary: "Paper corto que muestra que repetir el prompt dos veces mejora los resultados de modelos sin razonamiento."
+context: "Lo trae a colación porque da otro consejo práctico para usar modelos de lenguaje."
+sources:
+  - url: "https://www.youtube.com/watch?v=u3POU95LeJ0&t=628s"
+    title: "ChatGPT tiene Alzhéimer. Ayudalo."
+    timestamp: "10:28"
+    quote: "Prom repetition improves non reasonings. Este es mucho más sencillo y lo traigo a colación simplemente porque tiene otro consejo práctico que me parece muy bueno."

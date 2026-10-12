@@ -37,7 +37,7 @@ export function checkUpdates(updates: readonly SiteUpdate[], bookIds: ReadonlySe
     seen.add(u.id);
     const own = new Set<string>();
     (u.books ?? []).forEach((id, i) => {
-      if (!bookIds.has(id)) r.at("actualización", u.id, `books[${i}]`, `el libro "${id}" no existe en books.yaml`);
+      if (!bookIds.has(id)) r.at("actualización", u.id, `books[${i}]`, `el libro "${id}" no existe`);
       if (own.has(id)) r.at("actualización", u.id, `books[${i}]`, `"${id}" está repetido`);
       own.add(id);
     });

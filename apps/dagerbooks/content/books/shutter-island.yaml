@@ -1,0 +1,20 @@
+# yaml-language-server: $schema=../book.schema.json
+
+id: shutter-island
+seq: 120
+title: "Shutter Island"
+titleEs: "La isla siniestra"
+authors: ["Dennis Lehane"]
+year: 2003
+asin: "0553824481"
+kind: book
+topics: ["ficcion"]
+level: 1
+recommendation: mencion
+summary: "Thriller de Dennis Lehane sobre un agente federal que investiga una desaparición en un hospital psiquiátrico para criminales."
+context: "Dice que leyó la novela en que se basa la película del video y opina que la película es superior al libro."
+sources:
+  - url: "https://www.youtube.com/watch?v=_8jUm_DOyYU&t=234s"
+    title: "Shutter Island (La Isla Siniestra): locura y negación."
+    timestamp: "3:54"
+    quote: "la novela en la que se basa La película que me tomé el trabajo de leer"

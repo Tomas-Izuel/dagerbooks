@@ -1,0 +1,19 @@
+# yaml-language-server: $schema=../book.schema.json
+
+id: the-minority-report
+seq: 110
+title: "The Minority Report"
+titleEs: "Sentencia previa"
+authors: ["Philip K. Dick"]
+year: 1956
+kind: essay
+topics: ["ficcion"]
+level: 1
+recommendation: mencion
+summary: "Cuento de Philip K. Dick sobre una policía que arresta a las personas por crímenes que todavía no cometieron."
+context: "Cuento de 1956 usado como analogía del pre-crimen con el gemelo digital; dice que Dick es uno de sus favoritos de ciencia ficción."
+sources:
+  - url: "https://www.youtube.com/watch?v=-iPy7-kkCGM&t=586s"
+    title: "\"Gemelo Digital\" El GOBIERNO quiere hacer PERFILES de NOSOTROS con IA."
+    timestamp: "9:46"
+    quote: "Minority Report. Es una película y también es un libro. Creo que es de Dick"

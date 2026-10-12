@@ -1,0 +1,30 @@
+# yaml-language-server: $schema=../book.schema.json
+
+id: college-success
+seq: 57
+title: "College Success"
+authors: ["Amy Baldwin"]
+year: 2017
+kind: textbook
+topics: ["desarrollo-personal"]
+level: 1
+recommendation: interesante
+summary: "Manual gratuito de OpenStax para estudiantes universitarios: técnicas de estudio, toma de notas, gestión del tiempo y bienestar."
+context: "Lo ve como un manual de supervivencia académica muy útil; el autor exacto lo duda pero lo recomienda para estudiar."
+sources:
+  - url: "https://www.youtube.com/watch?v=V7NNviAqMh4&t=2638s"
+    title: "Libros de autoayuda no TAN malos."
+    timestamp: "43:58"
+    quote: "A este sí lo recomendé en el video ... Es un libro que está orientado a la vida académica, a estudiar"
+  - url: "https://www.youtube.com/watch?v=wgtGulLPwE8&t=445s"
+    title: "Libros de AUTOAYUDA que SÍ SIRVEN."
+    timestamp: "7:25"
+    quote: "me gustó mucho este libro que se llama College Success... en general es un buen manual de supervivencia académico"
+  - url: "https://www.youtube.com/watch?v=Y1TukyHR4VU&t=50s"
+    title: "Dager explica como se organiza en un día a día."
+    timestamp: "0:50"
+    quote: "se llama College College Success, el libro ese que está bastante copado y es gratis"
+leadsTo: ["powerful-teaching"]
+isbn: "9781640323490"
+asin: "164032349X"
+coverId: 15113587

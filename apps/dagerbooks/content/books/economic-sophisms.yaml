@@ -1,0 +1,37 @@
+# yaml-language-server: $schema=../book.schema.json
+
+id: economic-sophisms
+seq: 23
+title: "Economic Sophisms"
+titleEs: "Sofismas económicos"
+authors: ["Frédéric Bastiat"]
+year: 1845
+kind: book
+topics: ["economia"]
+level: 1
+recommendation: fuerte
+summary: "Colección de ensayos de Bastiat que refutan falacias proteccionistas, incluida la famosa Petición de los fabricantes de velas."
+context: "Lo llama \"hermoso libro tan iluminador\" y remite al capítulo de los fabricantes de velas."
+sources:
+  - url: "https://www.youtube.com/watch?v=p988l0oON3g&t=346s"
+    title: "Hay que cerrar la economía | Falopa Política"
+    timestamp: "5:46"
+    quote: "rediríjanlos amablemente al capítulo 5 de los sofismas económicos de Bastiat... este hermoso libro tan iluminador"
+  - url: "https://www.youtube.com/watch?v=k9txcNp1DSA&t=1676s"
+    title: "Leyendo las notas del parche en Argentina, la reforma laboral."
+    timestamp: "27:56"
+    quote: "citando a Bastiat en sus sofisma económicas. Eh, hermoso, hermoso texto"
+  - url: "https://www.youtube.com/watch?v=9kNant40FXw&t=3808s"
+    title: "Imagina que tienes dos vacas... | REACCIÓN"
+    timestamp: "63:28"
+    quote: "Esto lo dijo Bastiad hace 200 [&nbsp;__&nbsp;] años y seguimos con la misma"
+  - url: "https://www.youtube.com/watch?v=o_s6Q-teA6U&t=276s"
+    title: "Hoy es VIERNES y este video lo sabe."
+    timestamp: "4:36"
+    quote: "fue publicado originalmente por Frederick bastiat en 1845 y es una reducción al absurdo de los argumentos de los proteccionistas"
+leadsTo: ["the-use-of-knowledge-in-society", "the-struggle-for-liberty"]
+related:
+  - id: utilitarianism-for-and-against
+    reason: "consecuencias y razonamiento económico"
+coverId: 5746810
+asin: "937340170X"

@@ -1,0 +1,33 @@
+# yaml-language-server: $schema=../book.schema.json
+
+id: the-science-of-information
+seq: 19
+title: "The Science of Information"
+authors: ["Benjamin Schumacher"]
+year: 2015
+kind: course
+topics: ["sistemas"]
+level: 2
+recommendation: interesante
+summary: "Curso de The Great Courses (24 clases) en el que Schumacher recorre la teoría de la información, desde la codificación y la entropía hasta la información cuántica."
+context: "Lo llama libro aunque es un curso; recomienda leerlo/escucharlo tomando notas porque es denso pero muy bueno."
+sources:
+  - url: "https://www.reddit.com/r/devsarg/comments/1ehmxbm/qué_libros_de_fundamentos_teóricos_de/lg30fw9/"
+    title: "r/devsarg: qué libros de fundamentos teóricos de"
+    quote: "The Science Of Information. En Audible lo encontrás leído por el mismísimo Schumacher... para leer y tomar notas"
+  - url: "https://www.youtube.com/watch?v=pbWxlLeg-fs&t=119s"
+    title: "Los mejores libros para aprender a programar."
+    timestamp: "1:59"
+    quote: "es un libro que tené que Tomar nota porque es denso pero es muy bueno"
+leadsTo:
+  - id: a-mathematical-theory-of-communication
+    gap:
+      severity: fuerte
+      bridge: ["probabilidad discreta y esperanza", "cadenas de Markov", "cálculo integral"]
+      note: "Shannon demuestra todo con probabilidad; el curso solo da la intuición."
+  - general-system-theory
+  - id: synthid-text
+    gap:
+      severity: fuerte
+      bridge: ["probabilidad y distribuciones discretas", "cómo un LLM genera texto token a token", "tests de hipótesis estadísticos"]
+      note: "Es un paper técnico de LLMs; conviene entender el muestreo y los tests."

@@ -1,0 +1,30 @@
+# yaml-language-server: $schema=../book.schema.json
+
+id: basic-laws-of-human-stupidity
+seq: 102
+title: "Le leggi fondamentali della stupidità umana"
+titleEs: "Las leyes fundamentales de la estupidez humana"
+authors: ["Carlo M. Cipolla"]
+year: 1976
+kind: essay
+topics: ["historia"]
+level: 1
+recommendation: interesante
+summary: "Ensayo satírico en el que Cipolla formula cinco leyes sobre la estupidez humana y define a los estúpidos como el grupo más peligroso de la sociedad."
+context: "Cita las dos primeras leyes de la estupidez y le dice directamente a la audiencia que lo lea."
+sources:
+  - url: "https://www.youtube.com/watch?v=5KxWFb7kSRE&t=10s"
+    title: "It's understood. #fyp #philosophy #clips"
+    timestamp: "0:10"
+    quote: "publicó algo que se llama las leyes de la estupidez humana. Leete esto"
+  - url: "https://www.youtube.com/watch?v=kG3g3oWnRvU&t=693s"
+    title: "Fines issue. | Political Fools' Day."
+    timestamp: "11:33"
+    quote: "Las leyes básicas de la estupidez. Ley número uno de la estupidez"
+leadsTo: ["obedience-to-authority"]
+related:
+  - id: "obedience-to-authority"
+    reason: "La estupidez colectiva de Cipolla y la obediencia ciega de Milgram explican cómo gente común sostiene daños enormes"
+isbn: "9788815260321"
+asin: "8815260323"
+coverId: 9378526

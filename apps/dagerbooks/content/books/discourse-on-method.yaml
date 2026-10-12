@@ -1,0 +1,23 @@
+# yaml-language-server: $schema=../book.schema.json
+
+id: discourse-on-method
+seq: 101
+title: "Discours de la méthode"
+titleEs: "Discurso del método"
+authors: ["René Descartes"]
+year: 1637
+kind: book
+topics: ["filosofia"]
+level: 1
+recommendation: interesante
+summary: "Texto breve en el que Descartes expone su método de la duda y llega al cogito, pienso luego existo."
+context: "Lo recomienda porque es corto, autocontenido y sencillo: se lee en una tarde."
+sources:
+  - url: "https://www.youtube.com/watch?v=fcdYULXnT9Y&t=720s"
+    title: "Pienso, luego existo: Descartes, Discurso del método y la cárcel del yo | Te lo explico así nomás."
+    timestamp: "12:00"
+    quote: "la verdad que te recomiendo que lo leas y en el tiempo es algo que puedes leer a una tarde"
+leadsTo: ["meditations-on-first-philosophy", "a-letter-concerning-toleration"]
+isbn: "2266030930"
+asin: "2266030930"
+coverId: 8236442

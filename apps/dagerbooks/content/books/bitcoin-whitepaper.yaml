@@ -1,0 +1,18 @@
+# yaml-language-server: $schema=../book.schema.json
+
+id: bitcoin-whitepaper
+seq: 150
+title: "Bitcoin: A Peer-to-Peer Electronic Cash System"
+authors: ["Satoshi Nakamoto"]
+year: 2008
+kind: paper
+topics: ["sistemas"]
+level: 2
+recommendation: mencion
+summary: "Paper de Satoshi Nakamoto que describe un sistema de dinero electrónico descentralizado basado en prueba de trabajo."
+context: "Lo explica como base del sistema de intercambio descentralizado, sin recomendarlo explícitamente."
+sources:
+  - url: "https://www.youtube.com/watch?v=HfX918aWRNE&t=556s"
+    title: "Bitcoin y el problema de la confianza."
+    timestamp: "9:16"
+    quote: "bitcoin con un paper de satoshi nakamoto"

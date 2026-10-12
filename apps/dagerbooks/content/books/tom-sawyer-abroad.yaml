@@ -1,0 +1,27 @@
+# yaml-language-server: $schema=../book.schema.json
+
+id: tom-sawyer-abroad
+seq: 0
+title: "Tom Sawyer Abroad"
+titleEs: "Tom Sawyer en el extranjero"
+authors: ["Mark Twain"]
+year: 1894
+kind: book
+topics: []
+level: 0
+recommendation: interesante
+summary: "Novela de Mark Twain en la que Tom, Huck y Jim viajan en globo a África."
+context: "Fue su primer libro, un regalo de su abuelo, y despertó su amor por la lectura."
+sources:
+  - url: "https://www.youtube.com/watch?v=YQfRVo5UwOM&t=77s"
+    title: "CÓMO ESTUDIAR (pero bien)."
+    timestamp: "1:17"
+    quote: "el primer libro que recuerdo haber leído cuando tenía como 10 años Fue Tom Sawyer en el extranjero"
+  - url: "https://www.youtube.com/watch?v=-gZ_szjtEcI&t=405s"
+    title: "Marco Palazzo patoteado fuera de las universidades."
+    timestamp: "6:45"
+    quote: "el primero fue por regalo de mi abuelo, el Las aventuras de Tom Sawyer en el extranjero"
+leadsTo: ["but-how-do-it-know", "algebra-baldor", "the-information", "economic-sophisms", "meditations", "breve-historia-de-los-argentinos", "atomic-habits", "the-lean-startup", "joel-on-software", "dive-into-design-patterns"]
+isbn: "9781443425438"
+asin: "0520271513"
+coverId: 9162125

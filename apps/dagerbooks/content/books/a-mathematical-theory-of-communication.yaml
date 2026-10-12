@@ -1,0 +1,25 @@
+# yaml-language-server: $schema=../book.schema.json
+
+id: a-mathematical-theory-of-communication
+seq: 21
+title: "A Mathematical Theory of Communication"
+authors: ["Claude E. Shannon"]
+year: 1948
+kind: paper
+topics: ["sistemas", "matematicas"]
+level: 3
+recommendation: interesante
+summary: "Artículo de Claude Shannon que fundó la teoría de la información al introducir el bit y la capacidad de canal."
+context: "Lo lista en su README como lectura densa pero fundacional; en un stream lo cita al relacionar a Hayek con la información."
+sources:
+  - url: "https://github.com/MarianoVilla/MarianoVilla/blob/main/README.md"
+    title: "GitHub: MarianoVilla/MarianoVilla README (Recommended Readings)"
+    quote: "Shannon's 1948 paper that started it all. Dense but foundational. (paper, listed under Recommended Readings)"
+  - url: "https://www.youtube.com/watch?v=pdGnLA_E76s&t=1086s"
+    title: "Analizando el famoso ensayo de Hayek."
+    timestamp: "18:06"
+    quote: "en 1948 se publica la teoría matemática de la comunicación de Shannon"
+  - url: "https://www.youtube.com/watch?v=oyB3INdwAXg&t=145s"
+    title: "En defensa de la mentira."
+    timestamp: "2:25"
+    quote: "En su famosa teoría matemática de la comunicación, Shannon, lo primero que dice es"

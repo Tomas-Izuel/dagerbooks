@@ -1,0 +1,21 @@
+# yaml-language-server: $schema=../book.schema.json
+
+id: frankenstein
+seq: 119
+title: "Frankenstein; or, The Modern Prometheus"
+titleEs: "Frankenstein o el moderno Prometeo"
+authors: ["Mary Shelley"]
+year: 1818
+leadsTo: ["ethics-of-robot-servitude"]
+asin: "1789434106"
+kind: book
+topics: ["ficcion", "ia"]
+level: 2
+recommendation: mencion
+summary: "Novela de Mary Shelley sobre un científico que crea una criatura viva y debe enfrentar las consecuencias de abandonarla."
+context: "Mención pasajera junto al golem como ejemplo de entidades antropomorfas que problematizan los límites de lo humano."
+sources:
+  - url: "https://www.youtube.com/watch?v=8c4RkHlImF4&t=1134s"
+    title: "Blade Runner y humanismo | Ética del retiramiento."
+    timestamp: "18:54"
+    quote: "desde la figura del golem en la tradición judía hasta el Frankenstein de shirty"

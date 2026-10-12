@@ -1,0 +1,20 @@
+# yaml-language-server: $schema=../book.schema.json
+
+id: utilitarianism-for-and-against
+seq: 36
+title: "Utilitarianism: For and Against"
+authors: ["J. J. C. Smart", "Bernard Williams"]
+year: 1973
+kind: book
+topics: ["filosofia"]
+level: 3
+recommendation: fuerte
+summary: "Dos ensayos opuestos: Smart defiende el utilitarismo y Williams lo critica."
+context: "Lo llama excelente y una revisión muy interesante del utilitarismo."
+sources:
+  - url: "https://www.youtube.com/watch?v=UCycM7WSsxk&t=500s"
+    title: "Como llegue a ser liberal. | Falopa Política"
+    timestamp: "8:20"
+    quote: "Hay un excelente libro que se llama Uy Tiranism for and Against, creo que es una revisión muy muy interesante."
+isbn: "9780521098229"
+asin: "052109822X"

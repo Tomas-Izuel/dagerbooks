@@ -1,0 +1,21 @@
+# yaml-language-server: $schema=../book.schema.json
+
+id: how-to-win-every-argument
+seq: 58
+title: "How to Win Every Argument"
+authors: ["Madsen Pirie"]
+year: 2007
+kind: book
+topics: ["desarrollo-personal", "filosofia"]
+level: 1
+recommendation: interesante
+summary: "Madsen Pirie repasa falacias lógicas y técnicas retóricas, tanto para argumentar como para detectar malos argumentos."
+context: "Dice que lo leyó pero que no es tan bueno: es más una lista de falacias y de cómo detectarlas y utilizarlas."
+leadsTo: ["gorgias"]
+isbn: "9780826490063"
+asin: "0826490069"
+sources:
+  - url: "https://www.youtube.com/watch?v=NUr6WVl1u0k&t=515s"
+    title: "Cómo dejar de ser gordo compu y ser gordo empresarial."
+    timestamp: "8:35"
+    quote: "Ese lo leí, pero no es tan bueno. Es más una lista de falacias y de cómo detectarlas y utilizarlas."

@@ -1,0 +1,30 @@
+# yaml-language-server: $schema=../book.schema.json
+
+id: letters-to-lucilius
+seq: 32
+title: "Letters to Lucilius"
+authors: ["Seneca"]
+year: 1611
+kind: book
+topics: ["filosofia"]
+level: 2
+recommendation: interesante
+summary: "Colección de cartas de Séneca a Lucilio con consejos de ética estoica."
+context: "Resalta su erudición y buena síntesis del estoicismo; lo ubica entre los mejores textos de Séneca."
+sources:
+  - url: "https://www.youtube.com/watch?v=SlYKqCwO6m4&t=3263s"
+    title: "Tierlist de filósofos estoicos. ¿Son como en las redes sociales?"
+    timestamp: "54:23"
+    quote: "Cca tiene dos textos que leí por lo menos ... las epístolas morales"
+  - url: "https://www.youtube.com/watch?v=SlYKqCwO6m4&t=3396s"
+    title: "Tierlist de filósofos estoicos. ¿Son como en las redes sociales?"
+    timestamp: "56:36"
+    quote: "las epístolas morales hay varios apartados que son importantes también filosóficamente"
+  - url: "https://www.youtube.com/watch?v=F9NbEuEUUHw&t=1416s"
+    title: "Como leer, pero bien."
+    timestamp: "23:36"
+    quote: "the other book I read by Cecca, which is the Moral Epistles to Aid"
+leadsTo: ["de-finibus"]
+isbn: "9788437638669"
+asin: "8437638666"
+coverId: 6074024

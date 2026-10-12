@@ -1,0 +1,22 @@
+# yaml-language-server: $schema=../book.schema.json
+
+id: dixon-coles-football
+seq: 183
+title: "Modelling Association Football Scores and Inefficiencies in the Football Betting Market"
+authors: ["Mark J. Dixon", "Stuart G. Coles"]
+year: 1997
+kind: paper
+topics: ["matematicas"]
+level: 3
+recommendation: mencion
+summary: "Paper de Dixon y Coles que mejora el modelo de Poisson para predecir resultados de fútbol."
+context: "Lo cita como el paper clásico que su predictor del Mundial sigue en espíritu; dice que no lo entiende del todo."
+sources:
+  - url: "https://www.youtube.com/watch?v=cvPeS0qAikw&t=431s"
+    title: "PROGRAMÉ UN MONSTRUO"
+    timestamp: "7:11"
+    quote: "siguiendo en espíritu un paper famoso, un clásico de Dixon and Calls del año 97"
+  - url: "https://www.youtube.com/watch?v=x2BsNWRLhiE&t=2307s"
+    title: "Hice un programa que predice el mundial."
+    timestamp: "38:27"
+    quote: "Dixon Cols es un paper del 96 97 que intenta mejorar el modelo Poazón para fútbol"

@@ -1,0 +1,20 @@
+# yaml-language-server: $schema=../book.schema.json
+
+id: democracy-in-america
+seq: 158
+title: "De la démocratie en Amérique"
+titleEs: "La democracia en América"
+authors: ["Alexis de Tocqueville"]
+year: 1835
+asin: "2221131274"
+kind: book
+topics: ["historia", "economia"]
+level: 3
+recommendation: mencion
+summary: "Tocqueville analiza la sociedad y la democracia de Estados Unidos tras su viaje de 1831."
+context: "Menciona a Tocqueville y su famoso libro sobre la democracia en América."
+sources:
+  - url: "https://www.youtube.com/watch?v=xY0eX_UcgX4&t=98s"
+    title: "A Borges no le cebaba la democracia y el Peronismo."
+    timestamp: "1:38"
+    quote: "tiene obviamente el famoso libro de democracia en América"

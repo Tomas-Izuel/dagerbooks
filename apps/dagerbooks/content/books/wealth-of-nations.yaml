@@ -1,0 +1,20 @@
+# yaml-language-server: $schema=../book.schema.json
+
+id: wealth-of-nations
+seq: 131
+title: "The Wealth of Nations"
+titleEs: "La riqueza de las naciones"
+authors: ["Adam Smith"]
+year: 1776
+asin: "0140432086"
+kind: book
+topics: ["economia"]
+level: 3
+recommendation: mencion
+summary: "Obra fundacional de la economía clásica de Adam Smith sobre la división del trabajo, el mercado y la mano invisible."
+context: "Parafrasea el pasaje del carnicero, el cervecero y el panadero y la mano invisible, sin nombrar el libro."
+sources:
+  - url: "https://www.youtube.com/watch?v=8SiVEI1zMCY&t=1200s"
+    title: "Forobardo de la semana: \"El sindicato de programadores es una PÉSIMA idea.\""
+    timestamp: "20:00"
+    quote: "Yo no es de la benevolencia del carnicero del bruer que es el que te da la cerveza o del panadero que esperamos nuestra cena"

@@ -1,0 +1,22 @@
+# yaml-language-server: $schema=../book.schema.json
+
+id: foundation-asimov
+seq: 92
+title: "Foundation"
+titleEs: "Fundación"
+authors: ["Isaac Asimov"]
+year: 1951
+kind: book
+topics: ["ficcion"]
+level: 2
+recommendation: interesante
+summary: "Novela de ciencia ficción en la que la psicohistoria permite predecir el futuro de un imperio galáctico en decadencia y acortar su colapso."
+context: "Habla de la psicohistoria de Asimov y dice que son buenos libros, recomendados por un colega; leyó uno de la trilogía."
+sources:
+  - url: "https://www.youtube.com/watch?v=Af3NmSP6h_E&t=69s"
+    title: "El Nostradamus chino: Profesor Jiang."
+    timestamp: "1:09"
+    quote: "Trilogía de la fundación. Trilogía, son buenos libros."
+isbn: "9780553293357"
+asin: "0553293354"
+coverId: 14612610

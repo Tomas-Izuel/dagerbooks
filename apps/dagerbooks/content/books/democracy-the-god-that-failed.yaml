@@ -1,0 +1,33 @@
+# yaml-language-server: $schema=../book.schema.json
+
+id: democracy-the-god-that-failed
+seq: 27
+title: "Democracy: The God That Failed"
+titleEs: "Democracia: el dios que fracasó"
+authors: ["Hans-Hermann Hoppe"]
+year: 2001
+kind: book
+topics: ["economia"]
+level: 3
+recommendation: interesante
+summary: "Hoppe critica la democracia y defiende una alternativa libertaria de orden privado."
+context: "Lo recomienda como libro interesante pero muy extremista, con argumentos que no le fascinan."
+sources:
+  - url: "https://www.youtube.com/watch?v=vw5_0NqyPNk&t=370s"
+    title: "Encontronazo entre eminencias del liberalismo | Milei vs Hoppe."
+    timestamp: "6:10"
+    quote: "Es un libro interesante, es muy extremista, a mí no me fascinan algunos de los argumentos ... pero sigue siendo un libro interesante"
+  - url: "https://www.youtube.com/watch?v=tMl3ejxPAww&t=195s"
+    title: "Estados Unidos y Venezuela a las manos."
+    timestamp: "3:15"
+    quote: "Recuerdo que Jope en democracia, el dios que falló, se repelea con esta idea"
+  - url: "https://www.youtube.com/watch?v=DhFQ_yNFuwA&t=13745s"
+    title: "¿Y SI EL PROBLEMA SOS VOS? (y otras cosas)"
+    timestamp: "3:49:05"
+    quote: "Jope tiene un desarrollo bastante copado de ese argumento en el libro"
+related:
+  - id: la-formacion-del-estado-argentino
+    reason: "Estado, legitimidad y poder político"
+isbn: "9781412815291"
+asin: "0765808684"
+coverId: 13163602

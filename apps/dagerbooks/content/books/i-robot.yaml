@@ -1,0 +1,26 @@
+# yaml-language-server: $schema=../book.schema.json
+
+id: i-robot
+seq: 88
+title: "I, Robot"
+titleEs: "Yo, robot"
+authors: ["Isaac Asimov"]
+year: 1950
+kind: book
+topics: ["ficcion", "ia"]
+level: 1
+recommendation: fuerte
+summary: "Colección de cuentos de Asimov sobre las tres leyes de la robótica y las formas en que los robots las interpretan o esquivan."
+context: "Dice que las leyes de la robótica no sirven como especificación y recomienda leer los libros de Asimov, mucho mejores que la película."
+sources:
+  - url: "https://www.youtube.com/watch?v=CYglM-Rg5_Y&t=2681s"
+    title: "Todos cagados por la IA."
+    timestamp: "44:41"
+    quote: "todos los libros de Asimov sobre las leyes de la robótica ... vayan a leer de hecho los libros que son mucho mejores que esa película"
+leadsTo: ["foundation-asimov", "frankenstein", "robots-should-be-slaves"]
+related:
+  - id: "concrete-problems-in-ai-safety"
+    reason: "Las leyes de Asimov muestran, en ficción, el problema de especificar bien objetivos para una máquina"
+isbn: "9780812439250"
+asin: "0812439252"
+coverId: 12385229

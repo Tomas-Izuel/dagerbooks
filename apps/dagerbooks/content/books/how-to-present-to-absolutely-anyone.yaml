@@ -1,0 +1,20 @@
+# yaml-language-server: $schema=../book.schema.json
+
+id: how-to-present-to-absolutely-anyone
+seq: 69
+title: "How to Present to Absolutely Anyone"
+authors: ["Mark Rhodes"]
+year: 2018
+kind: book
+topics: ["oficio", "desarrollo-personal"]
+level: 1
+recommendation: interesante
+summary: "Guía de Mark Rhodes para hablar en público y presentar con confianza en cualquier situación."
+context: "Lo recomienda en su video de soft skills para quien es el técnico del equipo: tras dar un pitch a un cliente reconoció varias trampas que menciona el libro, y dice que ayuda con el nerviosismo."
+sources:
+  - url: "https://www.youtube.com/watch?v=NUr6WVl1u0k&t=383s"
+    title: "Cómo dejar de ser gordo compu y ser gordo empresarial."
+    timestamp: "6:23"
+    quote: "cómo presentar absolutamente cualquier persona, how to present to absolutely anyone"
+isbn: "9780857087737"
+asin: "0857087738"

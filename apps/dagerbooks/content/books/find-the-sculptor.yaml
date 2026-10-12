@@ -1,0 +1,19 @@
+# yaml-language-server: $schema=../book.schema.json
+
+id: find-the-sculptor
+seq: 114
+title: "Find the Sculptor"
+authors: ["Samuel Mines"]
+year: 1950
+kind: essay
+topics: ["ficcion"]
+level: 1
+recommendation: mencion
+summary: "Relato de Samuel Mines en el que un profesor viaja al futuro y descubre una escultura de su propia cabeza."
+context: "Lo nombra en su serie sobre viajes en el tiempo como ejemplo de bucle causal."
+sources:
+  - url: "https://www.youtube.com/watch?v=1xC_vaWKcx0&t=240s"
+    title: "Viaje en el tiempo IV: El pasado y las paradojas."
+    timestamp: "4:00"
+    quote: "la historia de encuentra al escultor creo que llama se encuentra el escultor de samuel minds"
+leadsTo: ["enoch-soames"]

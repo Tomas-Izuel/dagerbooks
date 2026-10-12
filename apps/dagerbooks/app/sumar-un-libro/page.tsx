@@ -8,35 +8,35 @@ import { allLines } from "@/components/page/lines";
 import { CopyButton } from "./CopyButton";
 import styles from "./page.module.css";
 
-const BOOKS_YAML = CONTRIBUTE_URL ?? "https://github.com/Tomas-Izuel/dagerbooks/blob/main/content/books.yaml";
+const BOOKS_DIR = CONTRIBUTE_URL ?? "https://github.com/Tomas-Izuel/dagerbooks/tree/main/apps/dagerbooks/content/books";
 
 export const metadata: Metadata = {
   title: "Sumá un libro a la red",
   description:
-    "Cómo proponer un libro que recomendó Dager: editás books.yaml en GitHub, abrís un Pull Request y, tras la revisión, aparece en el mapa.",
+    "Cómo proponer un libro que recomendó Dager: sumás un archivo en content/books/ de GitHub, abrís un Pull Request y, tras la revisión, aparece en el mapa.",
   alternates: { canonical: "/sumar-un-libro" },
 };
 
-const TEMPLATE = `- id: mi-libro                 # obligatorio: slug en kebab-case, único
-  title: "Título original"     # obligatorio: en el idioma del libro
-  topics: [fundamentos]        # obligatorio: el primero es la línea donde se dibuja
-  level: 1                     # obligatorio: 1 introductorio ... 4 especialista
-  # --- opcionales: lo que no sepas, dejalo afuera ---
-  titleEs: "Título en español"
-  authors: ["Nombre Apellido"]
-  year: 2015
-  kind: book                   # book | essay | paper | course | textbook
-  summary: "De qué trata, en una o dos frases."
-  context: "Qué dice Dager y por qué lo recomienda."
-  sources:
-    - url: "https://www.youtube.com/watch?v=XXXXXXXXXXX&t=419s"
-      title: "Título del video"
-      timestamp: "6:59"
-      quote: "lo que dice Dager, textual"
-  leadsTo: [otro-libro]        # qué leer después (de nivel mayor)
-  related:
-    - id: libro-de-otra-linea
-      reason: "Por qué se conectan"
+const TEMPLATE = `id: mi-libro                 # obligatorio: slug en kebab-case, igual al nombre del archivo
+title: "Título original"     # obligatorio: en el idioma del libro
+topics: [fundamentos]        # obligatorio: el primero es la línea donde se dibuja
+level: 1                     # obligatorio: 1 introductorio ... 4 especialista
+# --- opcionales: lo que no sepas, dejalo afuera ---
+titleEs: "Título en español"
+authors: ["Nombre Apellido"]
+year: 2015
+kind: book                   # book | essay | paper | course | textbook
+summary: "De qué trata, en una o dos frases."
+context: "Qué dice Dager y por qué lo recomienda."
+sources:
+  - url: "https://www.youtube.com/watch?v=XXXXXXXXXXX&t=419s"
+    title: "Título del video"
+    timestamp: "6:59"
+    quote: "lo que dice Dager, textual"
+leadsTo: [otro-libro]        # qué leer después (de nivel mayor)
+related:
+  - id: libro-de-otra-linea
+    reason: "Por qué se conectan"
 `;
 
 const ZONES = [
@@ -73,21 +73,22 @@ export default function SumarUnLibroPage() {
             <h2 className={styles.stopTitle}>Abrí el catálogo en GitHub</h2>
             <p>
               Entrá a{" "}
-              <a href={BOOKS_YAML} target="_blank" rel="noopener noreferrer">
-                <code className={styles.inline}>content/books.yaml</code>
+              <a href={BOOKS_DIR} target="_blank" rel="noopener noreferrer">
+                <code className={styles.inline}>content/books/</code>
               </a>{" "}
-              y tocá el lápiz (<strong>Edit</strong>). GitHub te crea el fork solo.
+              y tocá <strong>Add file</strong> → <strong>Create new file</strong>. Nombralo con el id del libro, por
+              ejemplo <code className={styles.inline}>mi-libro.yaml</code>. GitHub te crea el fork solo.
             </p>
           </li>
 
           <li className={styles.stop}>
-            <h2 className={styles.stopTitle}>Copiá la plantilla al final de la lista</h2>
+            <h2 className={styles.stopTitle}>Copiá la plantilla en el archivo</h2>
             <p>
-              Pegala abajo de todo y completá. Los cuatro primeros campos son obligatorios; el resto, si lo sabés.
+              Pegala y completá. Los cuatro primeros campos son obligatorios; el resto, si lo sabés.
             </p>
             <div className={styles.code}>
               <div className={styles.codeBar}>
-                <span className={styles.codeName}>books.yaml</span>
+                <span className={styles.codeName}>books/mi-libro.yaml</span>
                 <CopyButton text={TEMPLATE} />
               </div>
               <pre className={styles.pre} tabIndex={0} aria-label="Plantilla YAML de un libro">
@@ -171,7 +172,7 @@ export default function SumarUnLibroPage() {
         </div>
 
         <div className={styles.actions}>
-          <ArrowLink href={BOOKS_YAML}>Abrir books.yaml en GitHub</ArrowLink>
+          <ArrowLink href={BOOKS_DIR}>Abrir la carpeta de libros en GitHub</ArrowLink>
           <ArrowLink href="/" variant="ghost" direction="left">
             Volver al mapa
           </ArrowLink>

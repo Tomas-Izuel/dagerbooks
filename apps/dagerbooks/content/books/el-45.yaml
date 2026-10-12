@@ -1,0 +1,21 @@
+# yaml-language-server: $schema=../book.schema.json
+
+id: el-45
+seq: 44
+title: "El 45"
+authors: ["Félix Luna"]
+year: 1969
+kind: book
+topics: ["historia"]
+level: 2
+recommendation: fuerte
+summary: "Crónica de Félix Luna sobre 1945, el año del surgimiento del peronismo."
+context: "Lo llama \"librazo\" sobre el origen del peronismo."
+sources:
+  - url: "https://www.youtube.com/watch?v=h7lsPHFL92c&t=217s"
+    title: "Libros de historia Argentina que TENÉS que leer."
+    timestamp: "3:37"
+    quote: "tiene otro librazo de historia Argentina que es el 45, ¿no? Que es sobre todo el asunto del peronismo"
+leadsTo: ["la-comunidad-organizada", "la-fiesta-del-monstruo"]
+isbn: "9789500712132"
+asin: "950614348X"

@@ -1,0 +1,30 @@
+# yaml-language-server: $schema=../book.schema.json
+
+id: los-argentinos-lanata
+seq: 40
+title: "Argentinos"
+authors: ["Jorge Lanata"]
+year: 2002
+kind: book
+topics: ["historia"]
+level: 1
+recommendation: fuerte
+summary: "Crónica periodística de la historia argentina en dos tomos de Jorge Lanata."
+context: "Le encantó el tomo 2 y siempre le pareció un excelente libro, aunque admite que Lanata es polémico."
+sources:
+  - url: "https://www.youtube.com/watch?v=h7lsPHFL92c&t=28s"
+    title: "Libros de historia Argentina que TENÉS que leer."
+    timestamp: "0:28"
+    quote: "a mí me encantó de historia argentina, argentinos de Jorge la nata... a mí siempre me pareció un excelente libro"
+  - url: "https://www.youtube.com/watch?v=CNDOKdQULEk&t=416s"
+    title: "La campaña anti Argentina."
+    timestamp: "6:56"
+    quote: "lo leí en un libro de la nata esto en argentinos, que es uno de los libros favoritos de historia contemporánea argentina"
+  - url: "https://www.youtube.com/watch?v=MhI4umaq5L4&t=1036s"
+    title: "Bajan la edad imputabilidad y está un poco raro."
+    timestamp: "17:16"
+    quote: "creo que lo leí en Argentinos de Jorge Lan. Es un muy buen libro, dicho se de pas"
+leadsTo: ["operacion-masacre", "la-patagonia-rebelde"]
+isbn: "9788466613385"
+asin: "8466613382"
+coverId: 3346402

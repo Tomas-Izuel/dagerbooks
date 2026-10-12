@@ -1,0 +1,31 @@
+# yaml-language-server: $schema=../book.schema.json
+
+id: concrete-mathematics
+seq: 16
+title: "Concrete Mathematics"
+authors: ["Ronald L. Graham", "Donald E. Knuth", "Oren Patashnik"]
+year: 1989
+kind: textbook
+topics: ["matematicas"]
+level: 4
+recommendation: interesante
+summary: "Matemática para ciencias de la computación: sumatorias, recurrencias, funciones generatrices y combinatoria, de Graham, Knuth y Patashnik."
+context: "Dice que llena el hueco de matemática específica para computer science; recomienda los artículos de un blog que explican sus razonamientos."
+sources:
+  - url: "https://www.reddit.com/r/devsarg/comments/1ehmxbm/qué_libros_de_fundamentos_teóricos_de/lg30fw9/"
+    title: "r/devsarg: qué libros de fundamentos teóricos de"
+    quote: "Concrete Mathematics, del mismísimo Knuth. Orientado a cubrir math para CS."
+  - url: "https://github.com/MarianoVilla/MarianoVilla/blob/main/README.md"
+    title: "GitHub: MarianoVilla/MarianoVilla README (Recommended Readings)"
+    quote: "Challenging but rewarding; it's Knuth's book after all."
+  - url: "https://www.youtube.com/watch?v=pbWxlLeg-fs&t=238s"
+    title: "Los mejores libros para aprender a programar."
+    timestamp: "3:58"
+    quote: "concrete matematics es como un libro que el sh hace como para llenar ese Gap de matemáticas específicamente para computer Science"
+  - url: "https://www.youtube.com/watch?v=BiaV5aIX6dQ&t=382s"
+    title: "Apple tiro una bomba.."
+    timestamp: "6:22"
+    quote: "Ese es el primer problema que aparece en Concrete Mathematics, creo recordar librazo"
+isbn: "9780201558029"
+asin: "0201558025"
+coverId: 135182

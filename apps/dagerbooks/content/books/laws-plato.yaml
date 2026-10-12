@@ -1,0 +1,20 @@
+# yaml-language-server: $schema=../book.schema.json
+
+id: laws-plato
+seq: 164
+title: "Laws"
+titleEs: "Las leyes"
+authors: ["Plato"]
+year: -347
+asin: "0140449841"
+kind: book
+topics: ["filosofia", "economia"]
+level: 4
+recommendation: mencion
+summary: "Último y más extenso diálogo de Platón, sobre las leyes de una ciudad bien gobernada."
+context: "Dice que Robeyns cita Las leyes de Platón y comenta que es posterior a La República."
+sources:
+  - url: "https://www.youtube.com/watch?v=ZXx59N6Fd3g&t=52s"
+    title: "Limitarismo, ¿existe tal cosa como mucho dinero?"
+    timestamp: "0:52"
+    quote: "Platón en su libro Leyes decía que el"

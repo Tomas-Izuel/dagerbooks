@@ -1,0 +1,18 @@
+# yaml-language-server: $schema=../book.schema.json
+
+id: ethics-of-robot-servitude
+seq: 197
+title: "The Ethics of Robot Servitude"
+authors: ["Steve Petersen"]
+year: 2012
+kind: paper
+topics: ["ia"]
+level: 3
+recommendation: mencion
+summary: "Paper de Steve Petersen que discute si es ético diseñar robots inteligentes que quieran servir."
+context: "Lo usa como argumento central del video de Blade Runner y la ética del retiramiento."
+sources:
+  - url: "https://www.youtube.com/watch?v=8c4RkHlImF4&t=566s"
+    title: "Blade Runner y humanismo | Ética del retiramiento."
+    timestamp: "9:26"
+    quote: "Stephen Peters en su trabajo la ética de La servidumbre robot plantea que seguir está mal crear esclavos robots"

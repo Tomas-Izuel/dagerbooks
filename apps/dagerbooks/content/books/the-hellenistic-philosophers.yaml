@@ -1,0 +1,25 @@
+# yaml-language-server: $schema=../book.schema.json
+
+id: the-hellenistic-philosophers
+seq: 37
+title: "The Hellenistic Philosophers"
+titleEs: "Los filósofos helenísticos"
+authors: ["A. A. Long", "D. N. Sedley"]
+year: 1987
+kind: book
+topics: ["filosofia"]
+level: 4
+recommendation: fuerte
+summary: "Antología comentada de textos de estoicos, epicúreos y escépticos, de Long y Sedley."
+context: "Lo llama brillante, clásico y denso; se consigue en español y conviene leerlo entero."
+sources:
+  - url: "https://www.youtube.com/watch?v=SlYKqCwO6m4&t=4625s"
+    title: "Tierlist de filósofos estoicos. ¿Son como en las redes sociales?"
+    timestamp: "77:05"
+    quote: "Libro es brillante, es un poco denso, se encuentra, se consigue en español"
+related:
+  - id: the-greeks-kitto
+    reason: "contexto histórico de la Grecia antigua"
+isbn: "9780521275569"
+asin: "0521275563"
+coverId: 332074

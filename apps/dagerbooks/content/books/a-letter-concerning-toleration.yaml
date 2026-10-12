@@ -1,0 +1,21 @@
+# yaml-language-server: $schema=../book.schema.json
+
+id: a-letter-concerning-toleration
+seq: 162
+title: "A Letter Concerning Toleration"
+titleEs: "Carta sobre la tolerancia"
+authors: ["John Locke"]
+year: 1689
+leadsTo: ["leviathan", "two-concepts-of-liberty"]
+asin: "0872201007"
+kind: essay
+topics: ["filosofia", "economia"]
+level: 2
+recommendation: mencion
+summary: "Locke defiende la tolerancia religiosa y la separación entre Iglesia y Estado."
+context: "Cita la Carta sobre la tolerancia y el Ensayo sobre el entendimiento humano como base de su liberalismo."
+sources:
+  - url: "https://www.youtube.com/watch?v=ZoCFkZ2ZhUw&t=194s"
+    title: "Impuestos, ¿un robo justificado?"
+    timestamp: "3:14"
+    quote: "su carta primero su importante tratado sobre el entendimiento humano y su carta sobre la tolerancia"

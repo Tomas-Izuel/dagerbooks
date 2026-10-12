@@ -1,0 +1,41 @@
+# yaml-language-server: $schema=../book.schema.json
+
+id: capitalism-and-freedom
+seq: 99
+title: "Capitalism and Freedom"
+authors: ["Milton Friedman"]
+year: 1962
+kind: book
+topics: ["economia"]
+level: 3
+recommendation: fuerte
+summary: "Friedman defiende el capitalismo competitivo como condición de la libertad política."
+context: "Lo llama probablemente su libro favorito de Milton Friedman y lo recomienda encarecidamente; lo cita seguido, en particular el prólogo."
+sources:
+  - url: "https://www.youtube.com/watch?v=GQeIIkktW9Y&t=0s"
+    title: "Milton Friedman y MINECRAFT. #fyp #clips #argentina"
+    timestamp: "0:00"
+    quote: "Probablemente mi libro favorito de Milton Friedman... lo recomiendo encarecidamente. Es muy buen libro."
+  - url: "https://www.youtube.com/watch?v=BXO8Gas3lQs&t=2905s"
+    title: "1 EMPRESARIO vs. 20 TRABAJADORES | Reacción"
+    timestamp: "48:25"
+    quote: "hablando de capitalismo y libertad y creo que en capitalismo y libertad Friedman tiene dos apartados"
+  - url: "https://www.youtube.com/watch?v=IIUhDMj_ryE&t=831s"
+    title: "1 EMPRESARIO VS 20 COMUNISTAS | Reacción"
+    timestamp: "13:51"
+    quote: "¿saben que Friedman tienen creo que es en capitalismo y libertad? Tiene una una teoría"
+  - url: "https://www.youtube.com/watch?v=93wMFZdVSNE&t=686s"
+    title: "¿Restricciones para la yerba mate en... Argentina? | Falopa política"
+    timestamp: "11:26"
+    quote: "Freedman, lo cito demasiado a Freedman últimamente, dice, creo que en capitalismo y libertad ... en el prólogo"
+  - url: "https://www.youtube.com/watch?v=DhFQ_yNFuwA&t=2140s"
+    title: "¿Y SI EL PROBLEMA SOS VOS? (y otras cosas)"
+    timestamp: "0:35:40"
+    quote: "de intro a economía en general tenés Haslid primero, después tenés Free to Choose, después tenés Capitalismo y Libertad de Friedman, o sea tenés ese caminito ahí de introducción"
+  - url: "https://www.youtube.com/watch?v=DhFQ_yNFuwA&t=19336s"
+    title: "¿Y SI EL PROBLEMA SOS VOS? (y otras cosas)"
+    timestamp: "5:22:16"
+    quote: "Capitalismo y libertad, lo he leído."
+isbn: "9780226264219"
+asin: "0226264211"
+coverId: 140808

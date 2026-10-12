@@ -1,0 +1,23 @@
+# yaml-language-server: $schema=../book.schema.json
+
+id: anti-duhring
+seq: 97
+title: "Anti-Dühring"
+titleEs: "Anti-Dühring"
+authors: ["Friedrich Engels"]
+year: 1878
+kind: book
+topics: ["economia"]
+level: 3
+recommendation: interesante
+summary: "Obra de Engels que polemiza con Eugen Dühring y expone en forma sistemática la filosofía, la economía política y el socialismo marxistas."
+context: "Le sugiere a un interlocutor que, para entender a Marx, lea textos de Engels como este, que escribía más ameno que Marx."
+sources:
+  - url: "https://www.youtube.com/watch?v=BXO8Gas3lQs&t=3803s"
+    title: "1 EMPRESARIO vs. 20 TRABAJADORES | Reacción"
+    timestamp: "63:23"
+    quote: "Puedes leer cosas de cosas como el antiduring, eh cosas de Englels"
+leadsTo: ["das-kapital"]
+isbn: "9780717800087"
+asin: "0717800083"
+coverId: 13202636

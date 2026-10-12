@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=../book.schema.json
+
+id: joel-on-software
+seq: 67
+title: "Joel on Software"
+authors: ["Joel Spolsky"]
+year: 2004
+kind: book
+topics: ["oficio"]
+level: 1
+recommendation: fuerte
+summary: "Ensayos de Joel Spolsky sobre desarrollo de software, gestión de equipos y la industria."
+context: "Expresa \"amor eterno\" por su estilo irreverente; lo recomienda para liderazgo y trato con personas."
+sources:
+  - url: "https://www.reddit.com/r/devsarg/comments/1ehmxbm/qué_libros_de_fundamentos_teóricos_de/lg30fw9/"
+    title: "r/devsarg: qué libros de fundamentos teóricos de"
+    quote: "Amor eterno a Joel Spolsky"
+  - url: "https://www.reddit.com/r/devsarg/comments/1ggqbhp/habilidades_blandas/luw7qug/"
+    title: "r/devsarg: habilidades blandas"
+    quote: "Joel On Software (son dos libros AFAIK...)"
+  - url: "https://github.com/MarianoVilla/MarianoVilla/blob/main/README.md"
+    title: "GitHub: MarianoVilla/MarianoVilla README (Recommended Readings)"
+    quote: "Blog-turned-book that aged like fine wine."
+  - url: "https://www.youtube.com/watch?v=pbWxlLeg-fs&t=410s"
+    title: "Los mejores libros para aprender a programar."
+    timestamp: "6:50"
+    quote: "the pragmatic programmer Jo on Software que también es otro que ... es un poco más para ser un buen líder"
+  - url: "https://www.youtube.com/watch?v=oQcDGpsUgNk&t=241s"
+    title: "Más allá del código | 3 habilidades para ser mejor programador"
+    timestamp: "4:01"
+    quote: "peopleware y J software estos últimos dos son relacionados al management de proyectos de software"
+leadsTo: ["peopleware", "the-mythical-man-month", "clean-code"]
+isbn: "9781590593899"
+asin: "1590593898"
+coverId: 861359

@@ -25,16 +25,29 @@ const GOLDEN_FILE = path.resolve("scripts/parity/fixtures/golden.json");
 
 function readContent(): Content {
   const read = (name: string) => parse(fs.readFileSync(path.join(CONTENT_DIR, `${name}.yaml`), "utf8")) as Entry[];
-  return { books: read("books"), topics: read("topics"), updates: read("updates"), routes: read("routes") };
+  const booksDir = path.join(CONTENT_DIR, "books");
+  const books = fs
+    .readdirSync(booksDir)
+    .filter((f) => f.endsWith(".yaml"))
+    .map((f) => parse(fs.readFileSync(path.join(booksDir, f), "utf8")) as Entry);
+  return { books, topics: read("topics"), updates: read("updates"), routes: read("routes") };
 }
 
 function writeContent(dir: string, c: Content, raw: Record<string, string> = {}) {
   fs.rmSync(dir, { recursive: true, force: true });
   fs.mkdirSync(dir, { recursive: true });
-  for (const name of ["books", "topics", "updates", "routes"] as const) {
+  for (const name of ["topics", "updates", "routes"] as const) {
     const file = `${name}.yaml`;
     fs.writeFileSync(path.join(dir, file), raw[file] ?? stringify(c[name], { lineWidth: 0 }));
   }
+  // Un archivo por libro; si el id no es usable como nombre, el archivo se llama como su posición.
+  fs.mkdirSync(path.join(dir, "books"));
+  c.books.forEach((b, i) => {
+    const name = typeof b.id === "string" && /^[\w-]+$/.test(b.id) ? b.id : `entrada-${i + 1}`;
+    const file = `books/${name}.yaml`;
+    const target = fs.existsSync(path.join(dir, file)) ? `books/${name}-${i + 1}.yaml` : file;
+    fs.writeFileSync(path.join(dir, target), raw[file] ?? stringify(b, { lineWidth: 0 }));
+  });
 }
 
 const byId = (list: Entry[], id: string) => {
@@ -102,7 +115,7 @@ const CASES: Case[] = [
   { name: "ruta con primer paso optativo", mutate: (c) => void ((c.routes[0].steps as Entry[])[0].optional = true) },
   { name: "ruta con kind inválido", mutate: (c) => void (c.routes[0].kind = "paseo") },
   { name: "topics.yaml con YAML roto", raw: { "topics.yaml": "- id: [sin cerrar\n" } },
-  { name: "books.yaml que no es lista", raw: { "books.yaml": "id: suelto\n" } },
+  { name: "libro que es una lista", raw: { "books/pro-git.yaml": "- id: pro-git\n" } },
 ];
 
 interface Result {

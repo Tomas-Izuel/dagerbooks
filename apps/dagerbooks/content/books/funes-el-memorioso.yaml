@@ -1,0 +1,20 @@
+# yaml-language-server: $schema=../book.schema.json
+
+id: funes-el-memorioso
+seq: 125
+title: "Funes el memorioso"
+authors: ["Jorge Luis Borges"]
+year: 1942
+leadsTo: ["el-jardin-de-senderos-que-se-bifurcan"]
+asin: "849908950X"
+kind: essay
+topics: ["ficcion"]
+level: 1
+recommendation: mencion
+summary: "Cuento de Borges sobre un joven que, tras un accidente, no puede olvidar nada y queda abrumado por su memoria perfecta."
+context: "Lo cita al tratar el tema de recordarlo todo."
+sources:
+  - url: "https://www.youtube.com/watch?v=lv_svO3VwVk&t=1754s"
+    title: "Dr. Manhattan, el hombre y la divinidad."
+    timestamp: "29:14"
+    quote: "de un relato de borges funes el memorioso que toca este tema"

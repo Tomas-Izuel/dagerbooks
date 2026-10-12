@@ -1,0 +1,33 @@
+# yaml-language-server: $schema=../book.schema.json
+
+id: superintelligence
+seq: 84
+title: "Superintelligence"
+titleEs: "Superinteligencia: caminos, peligros, estrategias"
+authors: ["Nick Bostrom"]
+year: 2014
+kind: book
+topics: ["ia"]
+level: 2
+recommendation: fuerte
+summary: "Análisis de cómo podría surgir una superinteligencia artificial, qué riesgos plantea y qué estrategias podrían controlarla."
+context: "Cita una frase de Bostrom y lo califica de muy buen libro; en otro video lo llama el hermoso libro Superintelligence."
+sources:
+  - url: "https://www.youtube.com/watch?v=BjR5L0sf0kQ&t=497s"
+    title: "Layoffs gigantes \"por IA\" en META y Oracle.. o no."
+    timestamp: "8:17"
+    quote: "la frase del pelado Bostrom Super Intelligence, que es muy buen libro"
+  - url: "https://www.youtube.com/watch?v=YgQs3tq7uJ4&t=140s"
+    title: "¿Estamos en una simulación?"
+    timestamp: "2:20"
+    quote: "el mismo que escribió el hermoso libro Super Intelligence"
+leadsTo:
+  - id: the-off-switch-game
+    gap:
+      severity: fuerte
+      bridge: ["utilidad esperada y teoría de la decisión", "teoría de juegos de dos jugadores", "probabilidad condicional y bayesiana"]
+      note: "El paper es un modelo formal; conviene traer la teoría de la decisión."
+  - information-hazards
+isbn: "9781501227745"
+asin: "1501227742"
+coverId: 8039542

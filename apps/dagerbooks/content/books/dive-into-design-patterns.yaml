@@ -1,0 +1,27 @@
+# yaml-language-server: $schema=../book.schema.json
+
+id: dive-into-design-patterns
+seq: 75
+title: "Dive Into Design Patterns"
+authors: ["Alexander Shvets"]
+year: 2021
+kind: book
+topics: ["arquitectura"]
+level: 1
+recommendation: fuerte
+summary: "Libro de Alexander Shvets (refactoring.guru) que explica patrones de diseño y principios de refactoring."
+context: "Dice que lo consiguió en refactoring.guru y \"no puede dejar de recomendarlo\"."
+sources:
+  - url: "https://www.reddit.com/r/devsarg/comments/1ehmxbm/qué_libros_de_fundamentos_teóricos_de/lg30fw9/"
+    title: "r/devsarg: qué libros de fundamentos teóricos de"
+    quote: "Dive Into Design Patterns. El libro de refactoring.guru"
+  - url: "https://github.com/MarianoVilla/MarianoVilla/blob/main/README.md"
+    title: "GitHub: MarianoVilla/MarianoVilla README (Recommended Readings)"
+    quote: "got it from the mythical refactoring.guru and can't recommend it enough"
+  - url: "https://www.youtube.com/watch?v=UZyJbjzZcoU&t=8s"
+    title: "Superficial knowledge is holding you back."
+    timestamp: "0:08"
+    quote: "Refactoring Guru. Tiene un libro que está bueno sobre eso"
+leadsTo: ["head-first-design-patterns", "fundamentals-of-software-architecture", "refactoring"]
+coverId: 12941546
+asin: "B0F4Y4NY6J"

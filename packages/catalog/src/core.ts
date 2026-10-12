@@ -73,8 +73,11 @@ export function deriveBook<R extends string>(b: RawBook<R>, def: CatalogDef): Bo
   if (!b.context) missing.push("context");
   if (!b.sources?.length) missing.push("sources");
   const progression = def.modules.progression;
+  // `seq` solo ordena la carga; el orden del array ya lo expresa.
+  const { seq: _seq, ...rest } = b;
+  void _seq;
   return {
-    ...b,
+    ...rest,
     recommendation: b.recommendation ?? deriveRecommendation(b.sources, def.recommendations as readonly string[] as readonly R[]),
     leadsTo: progression ? b.leadsTo?.map(leadsToId) : undefined,
     gaps: progression ? gapsByTarget(b.leadsTo) : {},

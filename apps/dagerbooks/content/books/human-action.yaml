@@ -1,0 +1,20 @@
+# yaml-language-server: $schema=../book.schema.json
+
+id: human-action
+seq: 202
+title: "Human Action"
+titleEs: "La acción humana"
+authors: ["Ludwig von Mises"]
+year: 1949
+kind: textbook
+topics: ["economia"]
+level: 4
+recommendation: mencion
+summary: "Tratado de Mises que expone la economía austríaca como ciencia de la acción humana (praxeología)."
+context: "Aparece entre las lecturas sugeridas de un test político; dice que lo leyó, aunque duda, y lo recuerda como \"gigantesco\"."
+sources:
+  - url: "https://www.youtube.com/watch?v=DhFQ_yNFuwA&t=19337s"
+    title: "¿Y SI EL PROBLEMA SOS VOS? (y otras cosas)"
+    timestamp: "5:22:17"
+    quote: "Acción humana, lo he leído. Hay uno de estos dos que no leí, no recuerdo cuál. Creo que Acción humana. Acción humana es el que es gigantesco, ¿no?"
+coverId: 5287720

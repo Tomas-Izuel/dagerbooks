@@ -1,0 +1,19 @@
+# yaml-language-server: $schema=../book.schema.json
+
+id: never-eat-alone
+seq: 180
+title: "Never Eat Alone"
+authors: ["Keith Ferrazzi"]
+year: 2005
+asin: "0553418769"
+kind: book
+topics: ["oficio"]
+level: 1
+recommendation: mencion
+summary: "Keith Ferrazzi explica cómo construir una red de contactos profesionales basada en generosidad y relaciones genuinas."
+context: "Lo menciona al leer un artículo de McKenzie que dice que quizás valga la pena leerlo."
+sources:
+  - url: "https://www.youtube.com/watch?v=r2qMXxMU0Ns&t=4077s"
+    title: "No seas solo un programador."
+    timestamp: "67:57"
+    quote: "Existe un libro de negocios titulado Nunca comas solo. Quizás valga la pena leerlo"

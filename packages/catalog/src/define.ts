@@ -81,7 +81,7 @@ export interface RawBook<R extends string = Recommendation> {
 
 export type MissingField = "authors" | "summary" | "context" | "sources";
 
-export type Book<R extends string = Recommendation> = Omit<RawBook<R>, "confidence" | "recommendation" | "leadsTo"> & {
+export type Book<R extends string = Recommendation> = Omit<RawBook<R>, "seq" | "confidence" | "recommendation" | "leadsTo"> & {
   /** Ids destino (normalizado desde `leadsTo`). */
   leadsTo?: string[];
   /** Tramos a pie por id destino (solo las aristas anotadas). */

@@ -1,0 +1,26 @@
+# yaml-language-server: $schema=../book.schema.json
+
+id: leviathan
+seq: 203
+title: "Leviathan"
+titleEs: "Leviatán"
+authors: ["Thomas Hobbes"]
+year: 1651
+kind: book
+topics: ["economia", "filosofia"]
+level: 3
+recommendation: mencion
+summary: "Tratado de Hobbes sobre el estado de naturaleza, el contrato social y la soberanía absoluta como salida a la guerra de todos contra todos."
+context: "Dice que prefiere el \"estado brutal hobbesiano\" como premisa de dónde arranca la humanidad; lo usa como referencia, sin recomendarlo."
+sources:
+  - url: "https://www.youtube.com/watch?v=DhFQ_yNFuwA&t=1221s"
+    title: "¿Y SI EL PROBLEMA SOS VOS? (y otras cosas)"
+    timestamp: "0:20:21"
+    quote: "prefiero el estado brutal del Leviatán, el estado brutal hobsiano, como premisa para establecer de dónde arranca la humanidad"
+leadsTo:
+  - id: homo-sacer
+    gap:
+      severity: fuerte
+      bridge: ["biopolítica de Foucault", "estado de excepción de Schmitt", "zoe y bios en Aristóteles"]
+      note: "Hobbes da la soberanía, pero Agamben suma a Foucault y a Schmitt."
+coverId: 6525465

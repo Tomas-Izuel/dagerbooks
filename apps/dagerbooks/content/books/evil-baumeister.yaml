@@ -1,0 +1,20 @@
+# yaml-language-server: $schema=../book.schema.json
+
+id: evil-baumeister
+seq: 174
+title: "Evil: Inside Human Violence and Cruelty"
+authors: ["Roy F. Baumeister"]
+year: 1997
+leadsTo: ["eichmann-in-jerusalem"]
+asin: "0805071652"
+kind: book
+topics: ["desarrollo-personal"]
+level: 2
+recommendation: mencion
+summary: "Roy Baumeister estudia por qué las personas hacen daño y desmonta el mito de la maldad pura."
+context: "Usa el concepto de mito de la maldad pura de Baumeister en su video sobre teorías conspirativas."
+sources:
+  - url: "https://www.youtube.com/watch?v=ZJWX8WhrLz8&t=1850s"
+    title: "Teorías Conspirativas."
+    timestamp: "30:50"
+    quote: "lo que roy boumeester llama el mito de la maldad pura"

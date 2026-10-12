@@ -1,0 +1,20 @@
+# yaml-language-server: $schema=../book.schema.json
+
+id: the-corrosion-of-character
+seq: 181
+title: "The Corrosion of Character"
+titleEs: "La corrosión del carácter"
+authors: ["Richard Sennett"]
+year: 1998
+asin: "0393319873"
+kind: book
+topics: ["oficio", "desarrollo-personal"]
+level: 2
+recommendation: mencion
+summary: "Sennett estudia los efectos del trabajo flexible sobre el carácter."
+context: "Referencia neutral sobre mercados laborales flexibles."
+sources:
+  - url: "https://www.youtube.com/watch?v=orbFCBPdc5A&t=1263s"
+    title: "¿Qué hace un programador senior?"
+    timestamp: "21:03"
+    quote: "se llama la corrosión del carácter de Richard senet habla mucho de los mercados de trabajo flexibles"

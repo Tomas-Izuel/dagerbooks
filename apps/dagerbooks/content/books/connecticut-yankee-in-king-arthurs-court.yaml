@@ -1,0 +1,20 @@
+# yaml-language-server: $schema=../book.schema.json
+
+id: connecticut-yankee-in-king-arthurs-court
+seq: 117
+title: "A Connecticut Yankee in King Arthur's Court"
+titleEs: "Un yanqui en la corte del rey Arturo"
+authors: ["Mark Twain"]
+year: 1889
+asin: "000744947X"
+kind: book
+topics: ["ficcion"]
+level: 1
+recommendation: mencion
+summary: "Novela de Mark Twain en la que un ingeniero estadounidense se despierta en la Inglaterra del rey Arturo e intenta modernizarla."
+context: "Lo cita en su serie sobre viajes en el tiempo como novela de 1889 donde el protagonista viaja al pasado por un golpe en la cabeza."
+sources:
+  - url: "https://www.youtube.com/watch?v=gIR5aqafNZA&t=416s"
+    title: "Viaje en el Tiempo III. El futuro y su pasado."
+    timestamp: "6:56"
+    quote: "la novela de twin en la corte del rey arturo de mil 889 en la cual al protagonista se lo manda en un viaje temporal"

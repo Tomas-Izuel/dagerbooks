@@ -1,0 +1,19 @@
+# yaml-language-server: $schema=../book.schema.json
+
+id: arcadia-stoppard
+seq: 129
+title: "Arcadia"
+authors: ["Tom Stoppard"]
+year: 1993
+asin: "0571169341"
+kind: book
+topics: ["ficcion"]
+level: 2
+recommendation: mencion
+summary: "Obra de teatro de Tom Stoppard que cruza dos épocas en una casa inglesa y juega con la termodinámica y la flecha del tiempo."
+context: "La cita como una excelente obra al explicar que las ecuaciones de Newton funcionan igual hacia adelante o hacia atrás."
+sources:
+  - url: "https://www.youtube.com/watch?v=S3POsGqWWYI&t=77s"
+    title: "Viaje en el tiempo II. Termodinámica, entropía y la flecha del tiempo."
+    timestamp: "1:17"
+    quote: "como dice toms topará en su excelente obra de arcadia las ecuaciones de newton van hacia adelante o hacia atrás"

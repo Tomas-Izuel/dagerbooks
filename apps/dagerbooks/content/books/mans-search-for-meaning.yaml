@@ -1,0 +1,27 @@
+# yaml-language-server: $schema=../book.schema.json
+
+id: mans-search-for-meaning
+seq: 52
+title: "Trotzdem Ja zum Leben sagen"
+titleEs: "El hombre en busca de sentido"
+authors: ["Viktor E. Frankl"]
+year: 1946
+kind: book
+topics: ["desarrollo-personal", "filosofia"]
+level: 1
+recommendation: fuerte
+summary: "Frankl relata su experiencia en campos de concentración y presenta la logoterapia, centrada en encontrar sentido."
+context: "Lo leyó esa semana y lo elogia espontáneamente: \"muy lindo libro, me pareció hermoso\"."
+sources:
+  - url: "https://www.youtube.com/watch?v=V7NNviAqMh4&t=798s"
+    title: "Libros de autoayuda no TAN malos."
+    timestamp: "13:18"
+    quote: "un libro muy lindo que leí hace poco, esta semana, de Víctor Frankle ... Muy muy lindo libro, me pareció hermoso."
+  - url: "https://www.youtube.com/watch?v=UdT_LHrU9Lg&t=519s"
+    title: "Jugando The Spell Brigade de chill."
+    timestamp: "8:39"
+    quote: "Víctor Frankle en El hombre en busca del sentido, ¿no? Tiene una serie de pasajes dedicadas a los capos"
+leadsTo: ["obedience-to-authority", "evil-baumeister"]
+isbn: "9783641059033"
+asin: "3328102779"
+coverId: 8516506

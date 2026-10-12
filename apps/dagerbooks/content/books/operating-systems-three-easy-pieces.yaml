@@ -1,0 +1,23 @@
+# yaml-language-server: $schema=../book.schema.json
+
+id: operating-systems-three-easy-pieces
+seq: 8
+title: "Operating Systems: Three Easy Pieces"
+authors: ["Remzi H. Arpaci-Dusseau", "Andrea C. Arpaci-Dusseau"]
+year: 2018
+kind: textbook
+topics: ["fundamentos"]
+level: 3
+recommendation: interesante
+summary: "Libro de texto gratuito sobre sistemas operativos organizado en virtualización, concurrencia y persistencia."
+context: "\"Muy lindo libro\" que hace digeribles los conceptos de sistemas operativos."
+sources:
+  - url: "https://www.reddit.com/r/devsarg/comments/1ehmxbm/qué_libros_de_fundamentos_teóricos_de/lg30fw9/"
+    title: "r/devsarg: qué libros de fundamentos teóricos de"
+    quote: "Operating Systems: Three Easy Pieces, muy lindo libro."
+  - url: "https://github.com/MarianoVilla/MarianoVilla/blob/main/README.md"
+    title: "GitHub: MarianoVilla/MarianoVilla README (Recommended Readings)"
+    quote: "makes OS concepts digestible"
+isbn: "9781985086593"
+asin: "198508659X"
+coverId: 10401368

@@ -1,0 +1,24 @@
+# yaml-language-server: $schema=../book.schema.json
+
+id: peopleware
+seq: 73
+title: "Peopleware"
+authors: ["Tom DeMarco", "Timothy Lister"]
+year: 1987
+kind: book
+topics: ["oficio"]
+level: 2
+recommendation: interesante
+summary: "Clásico de DeMarco y Lister sobre que los problemas de los proyectos de software son sobre todo humanos."
+context: "Lo recomienda para habilidades blandas y gestión de proyectos de software, junto a Joel on Software."
+sources:
+  - url: "https://www.reddit.com/r/devsarg/comments/1ggqbhp/habilidades_blandas/luw7qug/"
+    title: "r/devsarg: habilidades blandas"
+    quote: "Peopleware: Productive Projects and Teams."
+  - url: "https://www.youtube.com/watch?v=oQcDGpsUgNk&t=241s"
+    title: "Más allá del código | 3 habilidades para ser mejor programador"
+    timestamp: "4:01"
+    quote: "también peopleware y J software estos últimos dos son relacionados al management de proyectos de software ... te van a dar un montón de información útil"
+isbn: "9780932633057"
+asin: "0932633056"
+coverId: 711859

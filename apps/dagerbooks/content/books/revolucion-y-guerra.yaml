@@ -1,0 +1,19 @@
+# yaml-language-server: $schema=../book.schema.json
+
+id: revolucion-y-guerra
+seq: 160
+title: "Revolución y guerra: formación de una élite dirigente en la Argentina criolla"
+authors: ["Tulio Halperín Donghi"]
+year: 1972
+asin: "B07575P36Y"
+kind: book
+topics: ["historia"]
+level: 3
+recommendation: mencion
+summary: "Estudio de la élite dirigente argentina tras la Revolución de Mayo."
+context: "Lo nombra pero dice que es más difícil y para especialistas; recomienda más a Félix Luna."
+sources:
+  - url: "https://www.youtube.com/watch?v=h7lsPHFL92c&t=380s"
+    title: "Libros de historia Argentina que TENÉS que leer."
+    timestamp: "6:20"
+    quote: "es reconocido como uno de los historiadores más importantes... son libros un poquito más difíciles... Félix Luna, por eso lo recomiendo más"

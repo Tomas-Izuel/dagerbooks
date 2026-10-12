@@ -1,0 +1,36 @@
+# yaml-language-server: $schema=../book.schema.json
+
+id: how-to-win-friends-and-influence-people
+seq: 56
+title: "How to Win Friends and Influence People"
+titleEs: "Cómo ganar amigos e influir sobre las personas"
+authors: ["Dale Carnegie"]
+year: 1936
+kind: book
+topics: ["desarrollo-personal"]
+level: 1
+recommendation: fuerte
+summary: "Clásico de Dale Carnegie con principios para relacionarse y persuadir."
+context: "Lo ubica en el nivel más alto: le ayudó con la ansiedad social y lo recomienda como lectura de habilidades blandas."
+sources:
+  - url: "https://www.reddit.com/r/devsarg/comments/1ggqbhp/habilidades_blandas/luw7qug/"
+    title: "r/devsarg: habilidades blandas"
+    quote: "How to Win Friends & Influence People (es medio como recomendar \"Padre Rico/Padre Pobre\", pero a mí me parece un buen libro)."
+  - url: "https://www.youtube.com/watch?v=V7NNviAqMh4&t=3442s"
+    title: "Libros de autoayuda no TAN malos."
+    timestamp: "57:22"
+    quote: "Realmente yo considero que es un muy buen libro. Tiene cosas muy útiles, muy copadas, está bien escrito."
+  - url: "https://www.youtube.com/watch?v=oQcDGpsUgNk&t=241s"
+    title: "Más allá del código | 3 habilidades para ser mejor programador"
+    timestamp: "4:01"
+    quote: "puedes estudiar Si querés How to make Friends and influence people del cary que es un clásico"
+  - url: "https://www.youtube.com/watch?v=wgtGulLPwE8&t=535s"
+    title: "Libros de AUTOAYUDA que SÍ SIRVEN."
+    timestamp: "8:55"
+    quote: "me ayudó bastante a lidiar con la ansiedad social... Es un libro muy sencillo, muy copado"
+related:
+  - id: youre-not-listening
+    reason: "escuchar y persuadir"
+isbn: "9780671027032"
+asin: "0671027034"
+coverId: 13314878

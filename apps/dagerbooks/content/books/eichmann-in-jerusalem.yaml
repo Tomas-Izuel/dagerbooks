@@ -1,0 +1,43 @@
+# yaml-language-server: $schema=../book.schema.json
+
+id: eichmann-in-jerusalem
+seq: 48
+title: "Eichmann in Jerusalem"
+titleEs: "Eichmann en Jerusalén: un estudio acerca de la banalidad del mal"
+authors: ["Hannah Arendt"]
+year: 1963
+kind: book
+topics: ["historia", "filosofia"]
+level: 3
+recommendation: fuerte
+summary: "Crónica del juicio a Adolf Eichmann en Jerusalén (1961). Arendt desarrolla la idea de la \"banalidad del mal\" al retratar a un burócrata antes que a un monstruo."
+context: "Lo llama \"librazo\" y lo vincula con Milgram: tras leerlo concluye que Eichmann no era un simple autómata."
+sources:
+  - url: "https://www.youtube.com/watch?v=W34X4jDHITg&t=129s"
+    title: "El experimento de Milgram y recomendando un par de libros."
+    timestamp: "2:09"
+    quote: "el liberazo de Arentman en Jerusalén es el de la banalidad del mal"
+  - url: "https://www.youtube.com/watch?v=Af3NmSP6h_E&t=1872s"
+    title: "El Nostradamus chino: Profesor Jiang."
+    timestamp: "31:12"
+    quote: "Hman en Jerusalén, el libro de Aren, está bastante documentado"
+  - url: "https://www.youtube.com/watch?v=CNDOKdQULEk&t=448s"
+    title: "La campaña anti Argentina."
+    timestamp: "7:28"
+    quote: "el famoso libro de Gent, ¿no? Eichichman en Jerusalén"
+  - url: "https://www.youtube.com/watch?v=Jd7ACGc63wI&t=1161s"
+    title: "Forobardo de la semana: “¿Es moral hacer páginas a estafadores?”"
+    timestamp: "19:21"
+    quote: "la tesis de la banalidad del mal de de aren eh la idea de que muchos de los bajos mandos del nazismo eran simplemente personas como eichmann"
+leadsTo:
+  - id: homo-sacer
+    gap:
+      severity: muy-fuerte
+      bridge: ["biopolítica de Foucault", "estado de excepción y soberanía", "zoe y bios en Aristóteles"]
+      note: "Es una pared: sin filosofía política previa no se lee."
+related:
+  - id: obedience-to-authority
+    reason: "obediencia a la autoridad y banalidad del mal"
+isbn: "9780140044508"
+asin: "0140044507"
+coverId: 97789

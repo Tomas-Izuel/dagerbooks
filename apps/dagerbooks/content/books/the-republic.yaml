@@ -1,0 +1,25 @@
+# yaml-language-server: $schema=../book.schema.json
+
+id: the-republic
+seq: 166
+title: "Republic"
+titleEs: "La República"
+authors: ["Plato"]
+year: -375
+leadsTo: ["laws-plato"]
+asin: "0140455116"
+kind: book
+topics: ["filosofia"]
+level: 3
+recommendation: mencion
+summary: "Diálogo de Platón sobre la justicia y la ciudad ideal gobernada por filósofos."
+context: "Lo cita varias veces como referencia (rey filósofo) en contra del voto calificado; no lo recomienda."
+sources:
+  - url: "https://www.youtube.com/watch?v=poweoTjX2cw&t=23s"
+    title: "¿Debería haber restricciones a quien puede votar y quien no? #fyp  #clips   #streamer  #filosofia"
+    timestamp: "0:23"
+    quote: "Platón, que no era ningún no puede resistir la tentación de decir que los que rigen la sociedad deberían ser los filósofos. En República Platón introduce la idea del filósofo rey."
+  - url: "https://www.youtube.com/watch?v=Zk3G9GQD54k&t=0s"
+    title: "Que difícil ser panadero che. 🥖. #fyp #filosofia #platón #aristoteles #clip #streamer #democracia"
+    timestamp: "0:00"
+    quote: "Algo así nos decía Platón en República, poner a votar zapateros sobre cómo debe estar construido un barco."

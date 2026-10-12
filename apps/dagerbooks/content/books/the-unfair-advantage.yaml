@@ -1,0 +1,30 @@
+# yaml-language-server: $schema=../book.schema.json
+
+id: the-unfair-advantage
+seq: 65
+title: "The Unfair Advantage"
+authors: ["Ash Ali", "Hasan Kubba"]
+year: 2020
+kind: book
+topics: ["startups"]
+level: 1
+recommendation: interesante
+summary: "Ali y Kubba sostienen que cada persona tiene ventajas injustas (contactos, aptitudes, circunstancias) que puede usar para emprender."
+context: "Dice que no le gusta tanto como libro (\"muy bro empresario\") pero la idea general está buena; lo menciona como honorífico."
+sources:
+  - url: "https://www.youtube.com/watch?v=ESzZ45vYNyo&t=85s"
+    title: "Libros para ser mejor gordo empresario. #fyp #programacion #clips"
+    timestamp: "1:25"
+    quote: "The UNF Advantage, que no me gusta mucho como libro, pero la idea general está buena"
+  - url: "https://www.youtube.com/watch?v=V7NNviAqMh4&t=1239s"
+    title: "Libros de autoayuda no TAN malos."
+    timestamp: "20:39"
+    quote: "es un libro copado, si quieren pueden leerlo si tienen el aguante. A mí me pareció muy, no sé, muy bro empresario"
+  - url: "https://www.youtube.com/watch?v=wgtGulLPwE8&t=148s"
+    title: "Libros de AUTOAYUDA que SÍ SIRVEN."
+    timestamp: "2:28"
+    quote: "Hay otro libro que es muy bueno en este sentido... que es eh The UNF Advantage"
+leadsTo: ["how-to-fuck-up-your-startup"]
+isbn: "9781788167543"
+asin: "1788167546"
+coverId: 14845030

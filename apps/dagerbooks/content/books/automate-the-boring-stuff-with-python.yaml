@@ -1,0 +1,28 @@
+# yaml-language-server: $schema=../book.schema.json
+
+id: automate-the-boring-stuff-with-python
+seq: 3
+title: "Automate the Boring Stuff with Python"
+authors: ["Al Sweigart"]
+year: 2015
+kind: book
+topics: ["fundamentos"]
+level: 1
+recommendation: interesante
+summary: "Al Sweigart enseña Python mediante la automatización de tareas cotidianas."
+context: "Lo marca como buen libro, \"tal vez algo desactualizado\", para aprender automatizando."
+sources:
+  - url: "https://www.reddit.com/r/devsarg/comments/12bisi9/métodos_de_aprendizaje/jex4816/"
+    title: "r/devsarg: métodos de aprendizaje"
+    quote: "[Este] es un buen libro -tal vez algo desactualizado- dedicado a esto (Amazon link to Automate the Boring Stuff with Python)"
+leadsTo:
+  - csharp-in-a-nutshell
+  - algorithms-illuminated
+  - id: the-blockchain-developer
+    gap:
+      severity: fuerte
+      bridge: ["JavaScript y Node.js", "criptografía de clave pública y hashes"]
+      note: "Pasás de Python a JavaScript y a cripto aplicada; conviene llegar con esas dos cosas vistas."
+isbn: "9781593275990"
+asin: "1593275994"
+coverId: 7363640

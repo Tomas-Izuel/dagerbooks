@@ -1,0 +1,26 @@
+# yaml-language-server: $schema=../book.schema.json
+
+id: the-startup-playbook
+seq: 64
+title: "The Startup Playbook"
+authors: ["David S. Kidder"]
+year: 2013
+kind: book
+topics: ["startups"]
+level: 1
+recommendation: interesante
+summary: "Entrevistas a fundadores de startups de rápido crecimiento con lecciones prácticas, de David Kidder."
+context: "Es el tercero de su lista de libros de emprendimiento que le gustaron bastante."
+sources:
+  - url: "https://www.youtube.com/watch?v=ESzZ45vYNyo&t=155s"
+    title: "Libros para ser mejor gordo empresario. #fyp #programacion #clips"
+    timestamp: "2:35"
+    quote: "Tercer libro que a mí me gustó bastante es The Startup Playbook."
+  - url: "https://www.youtube.com/watch?v=NUr6WVl1u0k&t=330s"
+    title: "Cómo dejar de ser gordo compu y ser gordo empresarial."
+    timestamp: "5:30"
+    quote: "Tercer libro que a mí me gustó bastante es The Startup Playbook"
+leadsTo: ["how-to-fuck-up-your-startup"]
+isbn: "9781452105048"
+asin: "1452105049"
+coverId: 12177932

@@ -1,0 +1,30 @@
+# yaml-language-server: $schema=../book.schema.json
+
+id: quest-for-cosmic-justice
+seq: 96
+title: "The Quest for Cosmic Justice"
+authors: ["Thomas Sowell"]
+year: 1999
+kind: book
+topics: ["economia"]
+level: 2
+recommendation: interesante
+summary: "Crítica de Sowell a la idea de corregir mediante el Estado todas las desigualdades de cuna o de azar, a la que llama justicia cósmica."
+context: "Lo usa para argumentar contra corregir desigualdades de cuna y dice que Sowell lo articula muy bien."
+sources:
+  - url: "https://www.youtube.com/watch?v=iWSr-PasZLw&t=751s"
+    title: "El impuesto a la herencia."
+    timestamp: "12:31"
+    quote: "existe un libro de Thomas Sowell, que creo que lo articula muy bien, que se llama The Quest for Cosmic Justice"
+  - url: "https://www.youtube.com/watch?v=6KwtQkUTe1I&t=998s"
+    title: "La meritocracia es un MITO."
+    timestamp: "16:38"
+    quote: "Tomas Sowell llama muy acertadamente la idea de justicia cósmica"
+  - url: "https://www.youtube.com/watch?v=BXO8Gas3lQs&t=2411s"
+    title: "1 EMPRESARIO vs. 20 TRABAJADORES | Reacción"
+    timestamp: "40:11"
+    quote: "el argumento de Sowell, de la justicia cósmica"
+leadsTo: ["huemer-wealth-redistribution", "limitarianism"]
+isbn: "0684864622"
+asin: "0684864622"
+coverId: 428416

@@ -1,0 +1,26 @@
+# yaml-language-server: $schema=../book.schema.json
+
+id: chaos-theory
+seq: 25
+title: "Chaos Theory"
+authors: ["Robert P. Murphy"]
+year: 2002
+kind: book
+topics: ["economia"]
+level: 2
+recommendation: interesante
+summary: "Dos ensayos breves (\"Private Law\" y \"Private Defense\") sobre cómo funcionaría un mercado anarcocapitalista de justicia y defensa."
+context: "Recomienda el texto por interesante y breve aunque aclara que el anarquismo todavía no lo convenció."
+sources:
+  - url: "https://www.youtube.com/watch?v=VaHOf77HNtg&t=794s"
+    title: "Analyzing Robert P. Murphy's \"Chaos Theory\" | Falopa Política"
+    timestamp: "13:14"
+    quote: "les recomiendo ese texto. Todavía no me no me han convencido."
+  - url: "https://www.youtube.com/watch?v=VaHOf77HNtg&t=0s"
+    title: "Analyzing Robert P. Murphy's \"Chaos Theory\" | Falopa Política"
+    timestamp: "0:00"
+    quote: "Chaos Theory es una interesante lectura. Es un conjunto de dos ensayos, es muy breve"
+leadsTo: ["democracy-the-god-that-failed", "leviathan"]
+isbn: "9781933550657"
+asin: "1933550651"
+coverId: 12678236

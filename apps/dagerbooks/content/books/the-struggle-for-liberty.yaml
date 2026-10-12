@@ -1,0 +1,23 @@
+# yaml-language-server: $schema=../book.schema.json
+
+id: the-struggle-for-liberty
+seq: 26
+title: "The Struggle for Liberty"
+authors: ["Ralph Raico"]
+year: 2004
+kind: course
+topics: ["economia", "historia"]
+level: 2
+recommendation: interesante
+summary: "Serie de diez conferencias de Ralph Raico (2004, Mises Institute) sobre la historia del liberalismo clásico; en 2025 se publicó como libro editado por Ryan McMaken."
+context: "Es su \"libro de la semana\" en un stream: una historia liberal del liberalismo, con simpatías austríacas, que estaba leyendo en ese momento."
+sources:
+  - url: "https://www.youtube.com/watch?v=W34X4jDHITg&t=635s"
+    title: "El experimento de Milgram y recomendando un par de libros."
+    timestamp: "10:35"
+    quote: "El libro que yo recomiendo esta semana es este, es el que estoy leyendo ahora, The Strugle for Liberty"
+  - url: "https://www.youtube.com/watch?v=DhFQ_yNFuwA&t=2109s"
+    title: "¿Y SI EL PROBLEMA SOS VOS? (y otras cosas)"
+    timestamp: "0:35:09"
+    quote: "The Struggle for Liberty de Raiko, lindo libro"
+leadsTo: ["democracy-the-god-that-failed", "democracy-in-america"]

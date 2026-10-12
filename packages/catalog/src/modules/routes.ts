@@ -66,7 +66,7 @@ export function checkRoutes(routes: readonly Route[], books: readonly RouteBook[
     route.steps.forEach((s, i) => {
       const at = (field: string, msg: string) => r.at("ruta", route.id, `steps[${i}] › ${field}`, msg);
       const book = byId.get(s.book);
-      if (!book) at("book", `el libro "${s.book}" no existe en books.yaml`);
+      if (!book) at("book", `el libro "${s.book}" no existe`);
       if (seenBooks.has(s.book)) at("book", `"${s.book}" está repetido en la ruta`);
       seenBooks.add(s.book);
       if (book) {

@@ -1,0 +1,29 @@
+# yaml-language-server: $schema=../book.schema.json
+
+id: the-information
+seq: 17
+title: "The Information"
+titleEs: "La información: una historia, una teoría, un torrente"
+authors: ["James Gleick"]
+year: 2011
+kind: book
+topics: ["sistemas"]
+level: 1
+recommendation: interesante
+summary: "James Gleick recorre la historia de la información desde los tambores africanos hasta la era digital."
+context: "\"Buen libro\": Gleick tiene dos libros que le gustan; en su README lo llama obra maestra."
+sources:
+  - url: "https://github.com/MarianoVilla/MarianoVilla/blob/main/README.md"
+    title: "GitHub: MarianoVilla/MarianoVilla README (Recommended Readings)"
+    quote: "Gleick's masterpiece. Explores information from ancient drums to the digital age."
+  - url: "https://www.youtube.com/watch?v=V7NNviAqMh4&t=1453s"
+    title: "Libros de autoayuda no TAN malos."
+    timestamp: "24:13"
+    quote: "Glake es el de information, ¿no? Clake information. A History of Lood. Buen libro. Tiene dos libros que me gustan."
+leadsTo: ["the-science-of-information", "the-selfish-gene"]
+related:
+  - id: time-travel-a-history
+    reason: "mismo autor (Gleick): historia cultural de las ideas"
+isbn: "9780307379573"
+asin: "0007225741"
+coverId: 6699475

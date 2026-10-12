@@ -1,0 +1,26 @@
+# yaml-language-server: $schema=../book.schema.json
+
+id: why-we-forget
+seq: 104
+title: "Why We Forget and How to Remember Better"
+authors: ["Andrew E. Budson", "Elizabeth A. Kensinger"]
+year: 2023
+kind: book
+topics: ["desarrollo-personal"]
+level: 1
+recommendation: interesante
+summary: "Libro práctico sobre cómo funciona la memoria, por qué fallamos al recordar y qué hacer para mejorarla."
+context: "Lo llama un libro muy copado y práctico, del que aprendió las distintas formas de memoria; lo cita en dos videos."
+sources:
+  - url: "https://www.youtube.com/watch?v=nIR95vS5Cnk&t=236s"
+    title: "Usar mucha IA apaga partes de tu cerebro.."
+    timestamp: "3:56"
+    quote: "Why we Forget and How to Remember Better, The Science Behind Memory"
+  - url: "https://www.youtube.com/watch?v=T_yIGzGG_EE&t=349s"
+    title: "No sos tan productivo como pensas."
+    timestamp: "5:49"
+    quote: "un libro muy copado que se llama eh Why we Forget and How to Remember Better"
+leadsTo: ["powerful-teaching"]
+isbn: "9780197607732"
+asin: "019760773X"
+coverId: 13250339

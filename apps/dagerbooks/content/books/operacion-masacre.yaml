@@ -1,0 +1,24 @@
+# yaml-language-server: $schema=../book.schema.json
+
+id: operacion-masacre
+seq: 46
+title: "Operación Masacre"
+authors: ["Rodolfo Walsh"]
+year: 1969
+kind: book
+topics: ["historia"]
+level: 2
+recommendation: interesante
+summary: "Investigación periodística de Rodolfo Walsh sobre los fusilamientos de José León Suárez (1956)."
+context: "Dice que es \"bastante lindo como libro\" y que da inicio al género del periodismo histórico."
+sources:
+  - url: "https://www.youtube.com/watch?v=h7lsPHFL92c&t=457s"
+    title: "Libros de historia Argentina que TENÉS que leer."
+    timestamp: "7:37"
+    quote: "Operación Masacre... Otro bastante lindo como libro. Es el libro que un poco le da inicio al género"
+related:
+  - id: eichmann-in-jerusalem
+    reason: "violencia estatal y responsabilidad individual"
+isbn: "9789505153527"
+asin: "950515352X"
+coverId: 5407660

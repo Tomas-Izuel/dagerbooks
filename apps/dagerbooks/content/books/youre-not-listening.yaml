@@ -1,0 +1,21 @@
+# yaml-language-server: $schema=../book.schema.json
+
+id: youre-not-listening
+seq: 70
+title: "You're Not Listening"
+titleEs: "No me estás escuchando"
+authors: ["Kate Murphy"]
+year: 2020
+kind: book
+topics: ["oficio", "desarrollo-personal"]
+level: 1
+recommendation: mencion
+summary: "Kate Murphy explica por qué escuchamos mal y cómo escuchar mejor."
+context: "Aparece en su lista de lecturas de habilidades blandas en Reddit."
+sources:
+  - url: "https://www.reddit.com/r/devsarg/comments/1ggqbhp/habilidades_blandas/luw7qug/"
+    title: "r/devsarg: habilidades blandas"
+    quote: "You're Not Listening."
+isbn: "9781250297198"
+asin: "1250297192"
+coverId: 9261583

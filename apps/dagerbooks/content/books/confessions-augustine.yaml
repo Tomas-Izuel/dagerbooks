@@ -1,0 +1,21 @@
+# yaml-language-server: $schema=../book.schema.json
+
+id: confessions-augustine
+seq: 168
+title: "Confessiones"
+titleEs: "Confesiones"
+authors: ["Augustine of Hippo"]
+year: 400
+leadsTo: ["der-antichrist"]
+asin: "014044114X"
+kind: book
+topics: ["filosofia"]
+level: 2
+recommendation: mencion
+summary: "Autobiografía espiritual de San Agustín."
+context: "Anécdota de Ambrosio leyendo en silencio."
+sources:
+  - url: "https://www.youtube.com/watch?v=a34urjCHAiw&t=492s"
+    title: "Her (2013) | AI, soledad y una historia promedio."
+    timestamp: "8:12"
+    quote: "Agustín de hipona famosamente recuerda en sus confesiones"

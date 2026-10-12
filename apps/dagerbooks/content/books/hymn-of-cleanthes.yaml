@@ -1,0 +1,19 @@
+# yaml-language-server: $schema=../book.schema.json
+
+id: hymn-of-cleanthes
+seq: 33
+title: "Hymn to Zeus"
+authors: ["Cleanthes"]
+year: -280
+kind: essay
+topics: ["filosofia"]
+level: 2
+recommendation: interesante
+summary: "Poema de unas 39 líneas de Cleantes, escolarca estoico, dedicado a Zeus; casi el único texto estoico antiguo completo."
+context: "Texto muy corto que sugiere leer acompañado de comentario, para entender sus implicancias filosóficas."
+sources:
+  - url: "https://www.youtube.com/watch?v=SlYKqCwO6m4&t=4692s"
+    title: "Tierlist de filósofos estoicos. ¿Son como en las redes sociales?"
+    timestamp: "78:12"
+    quote: "El himnous de Cleantes es un texto muy corto, pero podes leerlo para entender también un poco"
+leadsTo: ["de-finibus"]

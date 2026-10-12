@@ -1,0 +1,23 @@
+# yaml-language-server: $schema=../book.schema.json
+
+id: flinch
+seq: 53
+title: "Flinch"
+authors: ["Julien Smith"]
+year: 2011
+kind: book
+topics: ["desarrollo-personal"]
+level: 1
+recommendation: fuerte
+summary: "Libro muy breve y gratuito de Julien Smith sobre superar el miedo que nos frena a actuar."
+context: "Lo pone en el nivel más alto por costo-beneficio: se lee en 45 minutos y es excelente."
+sources:
+  - url: "https://www.youtube.com/watch?v=V7NNviAqMh4&t=2167s"
+    title: "Libros de autoayuda no TAN malos."
+    timestamp: "36:07"
+    quote: "de Flinch es un muy buen libro, costo beneficio es excelente, es un libro super resumido, lo podés leer en 45 minutos"
+  - url: "https://www.youtube.com/watch?v=rffY9KY9VKE&t=16s"
+    title: "Lo que te este preocupando probablemente no debería."
+    timestamp: "0:16"
+    quote: "no mencionamos a The Flinch, que para mí es excelente, es gratis, lo pueden buscar"
+coverId: 11443316

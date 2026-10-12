@@ -1,0 +1,34 @@
+# yaml-language-server: $schema=../book.schema.json
+
+id: blockchain-illustrated-guidebook
+seq: 18
+title: "Blockchain: An Illustrated Guidebook"
+authors: ["Xu Mingxing", "Tian Ying", "Li Jiyue", "Liu Jie"]
+year: 2018
+kind: book
+topics: ["sistemas", "fundamentos"]
+level: 1
+recommendation: interesante
+summary: "Introducción ilustrada a los conceptos de blockchain, con dibujos para principiantes."
+context: "Lo recomienda \"solamente\" por ser el libro más cute, aunque admite que no recuerda qué le enseñó."
+sources:
+  - url: "https://www.reddit.com/r/devsarg/comments/1ehmxbm/qué_libros_de_fundamentos_teóricos_de/lg30fw9/"
+    title: "r/devsarg: qué libros de fundamentos teóricos de"
+    quote: "No recuerdo un carajo que me haya enseñado este libro, pero sí recuerdo que tenía dibujitos muy lindos."
+  - url: "https://www.youtube.com/watch?v=pbWxlLeg-fs&t=192s"
+    title: "Los mejores libros para aprender a programar."
+    timestamp: "3:12"
+    quote: "lo recomiendo Solamente porque me parece el libro más cute de la historia"
+leadsTo:
+  - bitcoin-whitepaper
+  - id: the-blockchain-developer
+    gap:
+      severity: fuerte
+      bridge: ["JavaScript y Node.js", "criptografía de clave pública y hashes"]
+      note: "La guía ilustrada es conceptual; este libro ya programa en JavaScript."
+related:
+  - id: chaos-theory
+    reason: "orden descentralizado sin autoridad central"
+isbn: "9781510744851"
+asin: "1510744843"
+coverId: 8814384

@@ -1,0 +1,20 @@
+# yaml-language-server: $schema=../book.schema.json
+
+id: dialogue-aux-enfers
+seq: 153
+title: "Dialogue aux enfers entre Machiavel et Montesquieu"
+titleEs: "Diálogo en el infierno entre Maquiavelo y Montesquieu"
+authors: ["Maurice Joly"]
+year: 1864
+asin: "1502774526"
+kind: book
+topics: ["historia", "filosofia"]
+level: 3
+recommendation: mencion
+summary: "Sátira de Maurice Joly contra Napoleón III en forma de diálogo entre Maquiavelo y Montesquieu, que luego fue plagiada por los Protocolos."
+context: "Lo describe como la obra de un abogado francés que los Protocolos plagiaron casi por completo, sin dar el título."
+sources:
+  - url: "https://www.youtube.com/watch?v=ZJWX8WhrLz8&t=2376s"
+    title: "Teorías Conspirativas."
+    timestamp: "39:36"
+    quote: "plagio casi taxativo de la obra de un abogado francés ... entre montesquiu y maquiavelo"

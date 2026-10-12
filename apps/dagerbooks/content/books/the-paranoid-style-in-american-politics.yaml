@@ -1,0 +1,21 @@
+# yaml-language-server: $schema=../book.schema.json
+
+id: the-paranoid-style-in-american-politics
+seq: 155
+title: "The Paranoid Style in American Politics"
+titleEs: "El estilo paranoico en la política estadounidense"
+authors: ["Richard Hofstadter"]
+year: 1964
+leadsTo: ["dialogue-aux-enfers"]
+asin: "0226348172"
+kind: essay
+topics: ["historia"]
+level: 2
+recommendation: mencion
+summary: "Ensayo de Richard Hofstadter sobre la mentalidad conspirativa recurrente en la política de Estados Unidos."
+context: "Cita a Hofstadter como uno de los primeros autores en hablar del estilo conspiranoico."
+sources:
+  - url: "https://www.youtube.com/watch?v=ZJWX8WhrLz8&t=2660s"
+    title: "Teorías Conspirativas."
+    timestamp: "44:20"
+    quote: "richard hofstadter, uno de los primeros autores en hablar del tema, el estilo conspiranoico"

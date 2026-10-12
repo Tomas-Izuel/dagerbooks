@@ -18,7 +18,7 @@
     "messages": [
       "libro \"but-how-do-it-know\" › title: Invalid input: expected string, received undefined",
       "libro \"tom-sawyer-abroad\" › leadsTo[0]: el libro \"but-how-do-it-know\" no existe",
-      "ruta \"como-funciona-una-computadora\" › steps[1] › book: el libro \"but-how-do-it-know\" no existe en books.yaml"
+      "ruta \"como-funciona-una-computadora\" › steps[1] › book: el libro \"but-how-do-it-know\" no existe"
     ],
     "warnings": []
   },
@@ -27,8 +27,9 @@
     "ok": false,
     "messages": [
       "libro \"Bad Slug\" › id: debe ser un slug en kebab-case (a-z, 0-9 y guiones)",
+      "libro \"Bad Slug\" › id: no coincide con el nombre del archivo (entrada-23.yaml)",
       "libro \"tom-sawyer-abroad\" › leadsTo[0]: el libro \"but-how-do-it-know\" no existe",
-      "ruta \"como-funciona-una-computadora\" › steps[1] › book: el libro \"but-how-do-it-know\" no existe en books.yaml"
+      "ruta \"como-funciona-una-computadora\" › steps[1] › book: el libro \"but-how-do-it-know\" no existe"
     ],
     "warnings": []
   },
@@ -37,8 +38,9 @@
     "ok": false,
     "messages": [
       "libro \"but-how-do-it-know\" › id: id duplicado",
+      "libro \"but-how-do-it-know\" › id: no coincide con el nombre del archivo (but-how-do-it-know-139.yaml)",
       "ruta \"como-funciona-una-computadora\" › steps[1] › source: 1 está fuera de rango; \"but-how-do-it-know\" tiene 1 source (0 a 0)",
-      "ruta \"del-primer-script-a-csharp\" › steps[1] › book: el libro \"pro-git\" no existe en books.yaml"
+      "ruta \"del-primer-script-a-csharp\" › steps[1] › book: el libro \"pro-git\" no existe"
     ],
     "warnings": []
   },
@@ -56,7 +58,7 @@
     "messages": [
       "libro \"but-how-do-it-know\" › topics: hay temas repetidos",
       "libro \"tom-sawyer-abroad\" › leadsTo[0]: el libro \"but-how-do-it-know\" no existe",
-      "ruta \"como-funciona-una-computadora\" › steps[1] › book: el libro \"but-how-do-it-know\" no existe en books.yaml"
+      "ruta \"como-funciona-una-computadora\" › steps[1] › book: el libro \"but-how-do-it-know\" no existe"
     ],
     "warnings": []
   },
@@ -66,7 +68,7 @@
     "messages": [
       "libro \"but-how-do-it-know\" › topics: debe tener al menos un tema (solo el nivel 0 puede no tenerlo)",
       "libro \"tom-sawyer-abroad\" › leadsTo[0]: el libro \"but-how-do-it-know\" no existe",
-      "ruta \"como-funciona-una-computadora\" › steps[1] › book: el libro \"but-how-do-it-know\" no existe en books.yaml"
+      "ruta \"como-funciona-una-computadora\" › steps[1] › book: el libro \"but-how-do-it-know\" no existe"
     ],
     "warnings": []
   },
@@ -76,7 +78,7 @@
     "messages": [
       "libro \"but-how-do-it-know\" › level: level es obligatorio y debe ser un número",
       "libro \"tom-sawyer-abroad\" › leadsTo[0]: el libro \"but-how-do-it-know\" no existe",
-      "ruta \"como-funciona-una-computadora\" › steps[1] › book: el libro \"but-how-do-it-know\" no existe en books.yaml"
+      "ruta \"como-funciona-una-computadora\" › steps[1] › book: el libro \"but-how-do-it-know\" no existe"
     ],
     "warnings": []
   },
@@ -86,7 +88,7 @@
     "messages": [
       "libro \"but-how-do-it-know\" › level: level es obligatorio y debe ser un número",
       "libro \"tom-sawyer-abroad\" › leadsTo[0]: el libro \"but-how-do-it-know\" no existe",
-      "ruta \"como-funciona-una-computadora\" › steps[1] › book: el libro \"but-how-do-it-know\" no existe en books.yaml"
+      "ruta \"como-funciona-una-computadora\" › steps[1] › book: el libro \"but-how-do-it-know\" no existe"
     ],
     "warnings": []
   },
@@ -105,7 +107,7 @@
     "messages": [
       "libro \"but-how-do-it-know\" › (raíz): Unrecognized key: \"foo\"",
       "libro \"tom-sawyer-abroad\" › leadsTo[0]: el libro \"but-how-do-it-know\" no existe",
-      "ruta \"como-funciona-una-computadora\" › steps[1] › book: el libro \"but-how-do-it-know\" no existe en books.yaml"
+      "ruta \"como-funciona-una-computadora\" › steps[1] › book: el libro \"but-how-do-it-know\" no existe"
     ],
     "warnings": []
   },
@@ -115,7 +117,7 @@
     "messages": [
       "libro \"but-how-do-it-know\" › asin: asin inválido (10 caracteres A-Z0-9)",
       "libro \"tom-sawyer-abroad\" › leadsTo[0]: el libro \"but-how-do-it-know\" no existe",
-      "ruta \"como-funciona-una-computadora\" › steps[1] › book: el libro \"but-how-do-it-know\" no existe en books.yaml"
+      "ruta \"como-funciona-una-computadora\" › steps[1] › book: el libro \"but-how-do-it-know\" no existe"
     ],
     "warnings": []
   },
@@ -125,7 +127,7 @@
     "messages": [
       "libro \"but-how-do-it-know\" › isbn: isbn inválido",
       "libro \"tom-sawyer-abroad\" › leadsTo[0]: el libro \"but-how-do-it-know\" no existe",
-      "ruta \"como-funciona-una-computadora\" › steps[1] › book: el libro \"but-how-do-it-know\" no existe en books.yaml"
+      "ruta \"como-funciona-una-computadora\" › steps[1] › book: el libro \"but-how-do-it-know\" no existe"
     ],
     "warnings": []
   },
@@ -135,7 +137,7 @@
     "messages": [
       "libro \"but-how-do-it-know\" › recommendation: Invalid option: expected one of \"fuerte\"|\"interesante\"|\"mencion\"",
       "libro \"tom-sawyer-abroad\" › leadsTo[0]: el libro \"but-how-do-it-know\" no existe",
-      "ruta \"como-funciona-una-computadora\" › steps[1] › book: el libro \"but-how-do-it-know\" no existe en books.yaml"
+      "ruta \"como-funciona-una-computadora\" › steps[1] › book: el libro \"but-how-do-it-know\" no existe"
     ],
     "warnings": []
   },
@@ -145,7 +147,7 @@
     "messages": [
       "libro \"but-how-do-it-know\" › kind: Invalid option: expected one of \"book\"|\"essay\"|\"paper\"|\"course\"|\"textbook\"",
       "libro \"tom-sawyer-abroad\" › leadsTo[0]: el libro \"but-how-do-it-know\" no existe",
-      "ruta \"como-funciona-una-computadora\" › steps[1] › book: el libro \"but-how-do-it-know\" no existe en books.yaml"
+      "ruta \"como-funciona-una-computadora\" › steps[1] › book: el libro \"but-how-do-it-know\" no existe"
     ],
     "warnings": []
   },
@@ -155,7 +157,7 @@
     "messages": [
       "libro \"but-how-do-it-know\" › sources[0].url: url inválida",
       "libro \"tom-sawyer-abroad\" › leadsTo[0]: el libro \"but-how-do-it-know\" no existe",
-      "ruta \"como-funciona-una-computadora\" › steps[1] › book: el libro \"but-how-do-it-know\" no existe en books.yaml"
+      "ruta \"como-funciona-una-computadora\" › steps[1] › book: el libro \"but-how-do-it-know\" no existe"
     ],
     "warnings": []
   },
@@ -233,7 +235,7 @@
     "messages": [
       "libro \"but-how-do-it-know\" › related[0].reason: falta la razón de la relación",
       "libro \"tom-sawyer-abroad\" › leadsTo[0]: el libro \"but-how-do-it-know\" no existe",
-      "ruta \"como-funciona-una-computadora\" › steps[1] › book: el libro \"but-how-do-it-know\" no existe en books.yaml"
+      "ruta \"como-funciona-una-computadora\" › steps[1] › book: el libro \"but-how-do-it-know\" no existe"
     ],
     "warnings": []
   },
@@ -283,7 +285,7 @@
     "name": "actualización con libro inexistente",
     "ok": false,
     "messages": [
-      "actualización \"2026-10-11-rutas\" › books[0]: el libro \"no-existe\" no existe en books.yaml"
+      "actualización \"2026-10-11-rutas\" › books[0]: el libro \"no-existe\" no existe"
     ],
     "warnings": []
   },
@@ -315,7 +317,7 @@
     "name": "ruta con libro inexistente",
     "ok": false,
     "messages": [
-      "ruta \"escuela-austriaca\" › steps[1] › book: el libro \"no-existe\" no existe en books.yaml"
+      "ruta \"escuela-austriaca\" › steps[1] › book: el libro \"no-existe\" no existe"
     ],
     "warnings": []
   },
@@ -368,116 +370,11 @@
     "warnings": []
   },
   {
-    "name": "books.yaml que no es lista",
+    "name": "libro que es una lista",
     "ok": false,
     "messages": [
-      "actualización \"2026-10-11-stream\" › books[0]: el libro \"from-mutual-aid-to-the-welfare-state\" no existe en books.yaml",
-      "actualización \"2026-10-11-stream\" › books[1]: el libro \"on-liberty\" no existe en books.yaml",
-      "actualización \"2026-10-11-stream\" › books[2]: el libro \"the-road-to-serfdom\" no existe en books.yaml",
-      "actualización \"2026-10-11-stream\" › books[3]: el libro \"human-action\" no existe en books.yaml",
-      "actualización \"2026-10-11-stream\" › books[4]: el libro \"leviathan\" no existe en books.yaml",
-      "books.yaml: debe ser una lista de entradas",
-      "catálogo › level: debe haber exactamente un libro de nivel 0 (hay 0: ninguno)",
-      "ruta \"aprender-a-aprender\" › steps[0] › book: el libro \"college-success\" no existe en books.yaml",
-      "ruta \"aprender-a-aprender\" › steps[1] › book: el libro \"mindset\" no existe en books.yaml",
-      "ruta \"aprender-a-aprender\" › steps[2] › book: el libro \"why-we-forget\" no existe en books.yaml",
-      "ruta \"aprender-a-aprender\" › steps[3] › book: el libro \"powerful-teaching\" no existe en books.yaml",
-      "ruta \"aprender-a-aprender\" › steps[4] › book: el libro \"karpicke-retrieval-practice-papers\" no existe en books.yaml",
-      "ruta \"armar-una-startup\" › steps[0] › book: el libro \"the-lean-startup\" no existe en books.yaml",
-      "ruta \"armar-una-startup\" › steps[1] › book: el libro \"the-unfair-advantage\" no existe en books.yaml",
-      "ruta \"armar-una-startup\" › steps[2] › book: el libro \"the-startup-playbook\" no existe en books.yaml",
-      "ruta \"armar-una-startup\" › steps[3] › book: el libro \"how-to-fuck-up-your-startup\" no existe en books.yaml",
-      "ruta \"arquitectura-de-software\" › steps[0] › book: el libro \"fundamentals-of-software-architecture\" no existe en books.yaml",
-      "ruta \"arquitectura-de-software\" › steps[1] › book: el libro \"building-microservices\" no existe en books.yaml",
-      "ruta \"arquitectura-de-software\" › steps[2] › book: el libro \"rest-fielding-dissertation\" no existe en books.yaml",
-      "ruta \"arquitectura-de-software\" › steps[3] › book: el libro \"designing-data-intensive-applications\" no existe en books.yaml",
-      "ruta \"arquitectura-de-software\" › steps[4] › book: el libro \"domain-driven-design\" no existe en books.yaml",
-      "ruta \"como-funciona-una-computadora\" › steps[0] › book: el libro \"mathematics-for-programmers-barden\" no existe en books.yaml",
-      "ruta \"como-funciona-una-computadora\" › steps[1] › book: el libro \"but-how-do-it-know\" no existe en books.yaml",
-      "ruta \"como-funciona-una-computadora\" › steps[2] › book: el libro \"laws-of-thought-boole\" no existe en books.yaml",
-      "ruta \"como-funciona-una-computadora\" › steps[3] › book: el libro \"operating-systems-three-easy-pieces\" no existe en books.yaml",
-      "ruta \"crecer-como-desarrollador\" › steps[0] › book: el libro \"dont-call-yourself-a-programmer\" no existe en books.yaml",
-      "ruta \"crecer-como-desarrollador\" › steps[1] › book: el libro \"soft-skills\" no existe en books.yaml",
-      "ruta \"crecer-como-desarrollador\" › steps[2] › book: el libro \"the-pragmatic-programmer\" no existe en books.yaml",
-      "ruta \"crecer-como-desarrollador\" › steps[3] › book: el libro \"joel-on-software\" no existe en books.yaml",
-      "ruta \"crecer-como-desarrollador\" › steps[4] › book: el libro \"peopleware\" no existe en books.yaml",
-      "ruta \"crecer-como-desarrollador\" › steps[5] › book: el libro \"the-mythical-man-month\" no existe en books.yaml",
-      "ruta \"crecer-como-desarrollador\" › steps[6] › book: el libro \"how-to-present-to-absolutely-anyone\" no existe en books.yaml",
-      "ruta \"del-primer-script-a-csharp\" › steps[0] › book: el libro \"automate-the-boring-stuff-with-python\" no existe en books.yaml",
-      "ruta \"del-primer-script-a-csharp\" › steps[1] › book: el libro \"pro-git\" no existe en books.yaml",
-      "ruta \"del-primer-script-a-csharp\" › steps[2] › book: el libro \"git-internals\" no existe en books.yaml",
-      "ruta \"del-primer-script-a-csharp\" › steps[3] › book: el libro \"csharp-in-a-nutshell\" no existe en books.yaml",
-      "ruta \"del-primer-script-a-csharp\" › steps[4] › book: el libro \"csharp-in-depth\" no existe en books.yaml",
-      "ruta \"economia-desde-cero\" › steps[0] › book: el libro \"economics-in-one-lesson\" no existe en books.yaml",
-      "ruta \"economia-desde-cero\" › steps[1] › book: el libro \"free-to-choose\" no existe en books.yaml",
-      "ruta \"economia-desde-cero\" › steps[2] › book: el libro \"capitalism-and-freedom\" no existe en books.yaml",
-      "ruta \"economia-desde-cero\" › steps[3] › book: el libro \"mankiw-principles-of-economics\" no existe en books.yaml",
-      "ruta \"economia-desde-cero\" › steps[4] › book: el libro \"the-general-theory\" no existe en books.yaml",
-      "ruta \"escribir-mejor-codigo\" › steps[0] › book: el libro \"dive-into-design-patterns\" no existe en books.yaml",
-      "ruta \"escribir-mejor-codigo\" › steps[1] › book: el libro \"head-first-design-patterns\" no existe en books.yaml",
-      "ruta \"escribir-mejor-codigo\" › steps[2] › book: el libro \"the-pragmatic-programmer\" no existe en books.yaml",
-      "ruta \"escribir-mejor-codigo\" › steps[3] › book: el libro \"clean-code\" no existe en books.yaml",
-      "ruta \"escribir-mejor-codigo\" › steps[4] › book: el libro \"refactoring\" no existe en books.yaml",
-      "ruta \"escribir-mejor-codigo\" › steps[5] › book: el libro \"design-patterns-gof\" no existe en books.yaml",
-      "ruta \"escuela-austriaca\" › steps[0] › book: el libro \"economic-sophisms\" no existe en books.yaml",
-      "ruta \"escuela-austriaca\" › steps[1] › book: el libro \"what-is-seen-and-what-is-not-seen\" no existe en books.yaml",
-      "ruta \"escuela-austriaca\" › steps[2] › book: el libro \"the-use-of-knowledge-in-society\" no existe en books.yaml",
-      "ruta \"escuela-austriaca\" › steps[3] › book: el libro \"kobra-effekt\" no existe en books.yaml",
-      "ruta \"escuela-austriaca\" › steps[4] › book: el libro \"interventionism-an-economic-analysis\" no existe en books.yaml",
-      "ruta \"escuela-austriaca\" › steps[5] › book: el libro \"human-action\" no existe en books.yaml",
-      "ruta \"estoicismo-practico\" › steps[0] › book: el libro \"stoicism-a-very-short-introduction\" no existe en books.yaml",
-      "ruta \"estoicismo-practico\" › steps[1] › book: el libro \"on-the-shortness-of-life\" no existe en books.yaml",
-      "ruta \"estoicismo-practico\" › steps[2] › book: el libro \"letters-to-lucilius\" no existe en books.yaml",
-      "ruta \"estoicismo-practico\" › steps[3] › book: el libro \"meditations\" no existe en books.yaml",
-      "ruta \"estoicismo-practico\" › steps[4] › book: el libro \"discourses-and-enchiridion\" no existe en books.yaml",
-      "ruta \"estoicismo-practico\" › steps[5] › book: el libro \"hymn-of-cleanthes\" no existe en books.yaml",
-      "ruta \"estoicismo-practico\" › steps[6] › book: el libro \"lives-of-the-eminent-philosophers\" no existe en books.yaml",
-      "ruta \"estoicismo-practico\" › steps[7] › book: el libro \"de-finibus\" no existe en books.yaml",
-      "ruta \"estoicismo-practico\" › steps[8] › book: el libro \"the-hellenistic-philosophers\" no existe en books.yaml",
-      "ruta \"grecia-antigua\" › steps[0] › book: el libro \"the-greeks-kitto\" no existe en books.yaml",
-      "ruta \"grecia-antigua\" › steps[1] › book: el libro \"the-ancient-world-glover\" no existe en books.yaml",
-      "ruta \"grecia-antigua\" › steps[2] › book: el libro \"lives-of-the-eminent-philosophers\" no existe en books.yaml",
-      "ruta \"grecia-antigua\" › steps[3] › book: el libro \"gorgias\" no existe en books.yaml",
-      "ruta \"grecia-antigua\" › steps[4] › book: el libro \"the-republic\" no existe en books.yaml",
-      "ruta \"habitos-y-foco\" › steps[0] › book: el libro \"atomic-habits\" no existe en books.yaml",
-      "ruta \"habitos-y-foco\" › steps[1] › book: el libro \"12-rules-for-life\" no existe en books.yaml",
-      "ruta \"habitos-y-foco\" › steps[2] › book: el libro \"flinch\" no existe en books.yaml",
-      "ruta \"habitos-y-foco\" › steps[3] › book: el libro \"deep-work\" no existe en books.yaml",
-      "ruta \"habitos-y-foco\" › steps[4] › book: el libro \"digital-minimalism\" no existe en books.yaml",
-      "ruta \"habitos-y-foco\" › steps[5] › book: el libro \"brain-drain-smartphone\" no existe en books.yaml",
-      "ruta \"habitos-y-foco\" › steps[6] › book: el libro \"the-myth-of-multitasking\" no existe en books.yaml",
-      "ruta \"habitos-y-foco\" › steps[7] › book: el libro \"the-shallows\" no existe en books.yaml",
-      "ruta \"historia-argentina\" › steps[0] › book: el libro \"breve-historia-de-los-argentinos\" no existe en books.yaml",
-      "ruta \"historia-argentina\" › steps[1] › book: el libro \"breve-historia-contemporanea-de-la-argentina\" no existe en books.yaml",
-      "ruta \"historia-argentina\" › steps[2] › book: el libro \"el-45\" no existe en books.yaml",
-      "ruta \"historia-argentina\" › steps[3] › book: el libro \"los-argentinos-lanata\" no existe en books.yaml",
-      "ruta \"historia-argentina\" › steps[4] › book: el libro \"la-formacion-del-estado-argentino\" no existe en books.yaml",
-      "ruta \"historia-argentina\" › steps[5] › book: el libro \"la-patagonia-rebelde\" no existe en books.yaml",
-      "ruta \"historia-argentina\" › steps[6] › book: el libro \"operacion-masacre\" no existe en books.yaml",
-      "ruta \"historia-argentina\" › steps[7] › book: el libro \"la-fiesta-del-monstruo\" no existe en books.yaml",
-      "ruta \"ia-riesgos-y-seguridad\" › steps[0] › book: el libro \"stochastic-parrots\" no existe en books.yaml",
-      "ruta \"ia-riesgos-y-seguridad\" › steps[1] › book: el libro \"ai-2027\" no existe en books.yaml",
-      "ruta \"ia-riesgos-y-seguridad\" › steps[2] › book: el libro \"international-ai-safety-report\" no existe en books.yaml",
-      "ruta \"ia-riesgos-y-seguridad\" › steps[3] › book: el libro \"superintelligence\" no existe en books.yaml",
-      "ruta \"ia-riesgos-y-seguridad\" › steps[4] › book: el libro \"concrete-problems-in-ai-safety\" no existe en books.yaml",
-      "ruta \"ia-riesgos-y-seguridad\" › steps[5] › book: el libro \"emergent-misalignment\" no existe en books.yaml",
-      "ruta \"ia-riesgos-y-seguridad\" › steps[6] › book: el libro \"the-off-switch-game\" no existe en books.yaml",
-      "ruta \"liberalismo-de-locke-a-huemer\" › steps[0] › book: el libro \"a-letter-concerning-toleration\" no existe en books.yaml",
-      "ruta \"liberalismo-de-locke-a-huemer\" › steps[1] › book: el libro \"on-liberty\" no existe en books.yaml",
-      "ruta \"liberalismo-de-locke-a-huemer\" › steps[2] › book: el libro \"two-concepts-of-liberty\" no existe en books.yaml",
-      "ruta \"liberalismo-de-locke-a-huemer\" › steps[3] › book: el libro \"the-road-to-serfdom\" no existe en books.yaml",
-      "ruta \"liberalismo-de-locke-a-huemer\" › steps[4] › book: el libro \"quest-for-cosmic-justice\" no existe en books.yaml",
-      "ruta \"liberalismo-de-locke-a-huemer\" › steps[5] › book: el libro \"huemer-wealth-redistribution\" no existe en books.yaml",
-      "ruta \"matematica-y-algoritmos\" › steps[0] › book: el libro \"algebra-baldor\" no existe en books.yaml",
-      "ruta \"matematica-y-algoritmos\" › steps[1] › book: el libro \"book-of-proof\" no existe en books.yaml",
-      "ruta \"matematica-y-algoritmos\" › steps[2] › book: el libro \"algorithms-illuminated\" no existe en books.yaml",
-      "ruta \"matematica-y-algoritmos\" › steps[3] › book: el libro \"introduction-to-algorithms\" no existe en books.yaml",
-      "ruta \"matematica-y-algoritmos\" › steps[4] › book: el libro \"concrete-mathematics\" no existe en books.yaml",
-      "ruta \"obediencia-maldad-y-poder\" › steps[0] › book: el libro \"basic-laws-of-human-stupidity\" no existe en books.yaml",
-      "ruta \"obediencia-maldad-y-poder\" › steps[1] › book: el libro \"mans-search-for-meaning\" no existe en books.yaml",
-      "ruta \"obediencia-maldad-y-poder\" › steps[2] › book: el libro \"obedience-to-authority\" no existe en books.yaml",
-      "ruta \"obediencia-maldad-y-poder\" › steps[3] › book: el libro \"evil-baumeister\" no existe en books.yaml",
-      "ruta \"obediencia-maldad-y-poder\" › steps[4] › book: el libro \"eichmann-in-jerusalem\" no existe en books.yaml"
+      "books/pro-git.yaml: debe tener una sola entrada (un objeto), no una lista",
+      "ruta \"del-primer-script-a-csharp\" › steps[1] › book: el libro \"pro-git\" no existe"
     ],
     "warnings": []
   }

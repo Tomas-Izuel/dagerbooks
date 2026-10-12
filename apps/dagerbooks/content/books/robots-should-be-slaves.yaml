@@ -1,0 +1,19 @@
+# yaml-language-server: $schema=../book.schema.json
+
+id: robots-should-be-slaves
+seq: 196
+title: "Robots Should Be Slaves"
+authors: ["Joanna J. Bryson"]
+year: 2010
+kind: essay
+topics: ["ia"]
+level: 2
+recommendation: mencion
+summary: "Ensayo de Joanna Bryson que defiende tratar a los robots como herramientas y no como seres con derechos."
+context: "Expone su postura y la critica en parte, sin nombrar el título."
+sources:
+  - url: "https://www.youtube.com/watch?v=8c4RkHlImF4&t=465s"
+    title: "Blade Runner y humanismo | Ética del retiramiento."
+    timestamp: "7:45"
+    quote: "Joana jayson Qué lindo nombre opina que los robots son herramientas como cualquier otro aparato"
+leadsTo: ["ethics-of-robot-servitude"]

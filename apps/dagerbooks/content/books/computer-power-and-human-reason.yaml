@@ -1,0 +1,19 @@
+# yaml-language-server: $schema=../book.schema.json
+
+id: computer-power-and-human-reason
+seq: 192
+title: "Computer Power and Human Reason: From Judgment to Calculation"
+authors: ["Joseph Weizenbaum"]
+year: 1976
+asin: "0140225358"
+kind: book
+topics: ["ia"]
+level: 2
+recommendation: mencion
+summary: "Weizenbaum, creador de ELIZA, reflexiona sobre los límites de lo que las computadoras deberían decidir por nosotros."
+context: "Habla de ELIZA y dice que su creador escribió un libro años después; el título se infiere de esa descripción."
+sources:
+  - url: "https://www.youtube.com/watch?v=8c4RkHlImF4&t=1435s"
+    title: "Blade Runner y humanismo | Ética del retiramiento."
+    timestamp: "23:55"
+    quote: "weison escribió un libro sobre el tema unos años después"

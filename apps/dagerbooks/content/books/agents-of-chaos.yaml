@@ -1,0 +1,22 @@
+# yaml-language-server: $schema=../book.schema.json
+
+id: agents-of-chaos
+seq: 86
+title: "Agents of Chaos"
+authors: ["Natalie Shapira", "Chris Wendler", "Avery Yen", "Gabriele Sarti", "Koyena Pal", "Olivia Floody", "Adam Belfki", "Alex Loftus"]
+year: 2026
+kind: paper
+topics: ["ia"]
+level: 2
+recommendation: interesante
+summary: "Reporte de un estudio de dos semanas con agentes autónomos de IA en un entorno real, que documenta fallas y comportamientos inesperados."
+context: "Dedica un video a comentar este reporte y lo recomienda como lectura bastante copada."
+sources:
+  - url: "https://www.youtube.com/watch?v=BW38cUQha38&t=22s"
+    title: "¿Puede un LLM soportar el día a día de un humano?"
+    timestamp: "0:22"
+    quote: "Agentes del caos se llama este reporte."
+  - url: "https://www.youtube.com/watch?v=BW38cUQha38&t=1686s"
+    title: "¿Puede un LLM soportar el día a día de un humano?"
+    timestamp: "28:06"
+    quote: "Se llama Agents of Chaos. está bastante bastante copado"

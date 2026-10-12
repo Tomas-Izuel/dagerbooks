@@ -1,0 +1,30 @@
+# yaml-language-server: $schema=../book.schema.json
+
+id: deep-work
+seq: 54
+title: "Deep Work"
+titleEs: "Céntrate"
+authors: ["Cal Newport"]
+year: 2016
+kind: book
+topics: ["desarrollo-personal"]
+level: 1
+recommendation: fuerte
+summary: "Cal Newport defiende el trabajo profundo, sin distracciones, como habilidad escasa y valiosa, y ofrece reglas para cultivarlo."
+context: "Lo considera de los mejores del género: \"muy buen libro\", excelente complemento para evitar distracciones."
+sources:
+  - url: "https://www.youtube.com/watch?v=V7NNviAqMh4&t=3713s"
+    title: "Libros de autoayuda no TAN malos."
+    timestamp: "61:53"
+    quote: "Este es muy buen libro, realmente no tengo mucho más para decir."
+  - url: "https://www.youtube.com/watch?v=wgtGulLPwE8&t=556s"
+    title: "Libros de AUTOAYUDA que SÍ SIRVEN."
+    timestamp: "9:16"
+    quote: "Deep Work y cualquiera de ese mismo autor... Realmente es muy bueno"
+leadsTo: ["the-shallows", "peopleware"]
+related:
+  - id: peopleware
+    reason: "concentración y entornos de trabajo productivos"
+isbn: "9781455586660"
+asin: "0349411905"
+coverId: 7988607

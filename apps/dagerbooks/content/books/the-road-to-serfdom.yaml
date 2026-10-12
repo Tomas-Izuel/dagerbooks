@@ -1,0 +1,22 @@
+# yaml-language-server: $schema=../book.schema.json
+
+id: the-road-to-serfdom
+seq: 201
+title: "The Road to Serfdom"
+titleEs: "Camino de servidumbre"
+authors: ["Friedrich A. Hayek"]
+year: 1944
+kind: book
+topics: ["economia"]
+level: 2
+recommendation: mencion
+summary: "Hayek advierte que la planificación económica centralizada lleva, paso a paso, a la pérdida de las libertades políticas."
+context: "Aparece entre las lecturas sugeridas de un test político; lo nombra y no recuerda si lo leyó."
+sources:
+  - url: "https://www.youtube.com/watch?v=DhFQ_yNFuwA&t=19338s"
+    title: "¿Y SI EL PROBLEMA SOS VOS? (y otras cosas)"
+    timestamp: "5:22:18"
+    quote: "Y el camino de servidumbre. Hay uno de estos dos que no leí, no recuerdo cuál."
+leadsTo: ["capitalism-and-freedom", "interventionism-an-economic-analysis"]
+isbn: "9780226320779"
+coverId: 6991871

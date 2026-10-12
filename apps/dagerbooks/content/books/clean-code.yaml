@@ -1,0 +1,34 @@
+# yaml-language-server: $schema=../book.schema.json
+
+id: clean-code
+seq: 72
+title: "Clean Code"
+titleEs: "Código limpio"
+authors: ["Robert C. Martin"]
+year: 2008
+kind: book
+topics: ["oficio"]
+level: 2
+recommendation: interesante
+summary: "Robert C. Martin presenta principios y prácticas para escribir código legible y mantenible."
+context: "Le sigue pareciendo lindo si no se dogmatiza y se atiende a las ideas más que a los ejemplos, que son bastante malos."
+sources:
+  - url: "https://www.reddit.com/r/devsarg/comments/1ehmxbm/qué_libros_de_fundamentos_teóricos_de/lg30fw9/"
+    title: "r/devsarg: qué libros de fundamentos teóricos de"
+    quote: "Clean Code me sigue pareciendo lindo, sobre todo si no dogmatizás... los ejemplos, que son bastante malos."
+  - url: "https://www.youtube.com/watch?v=zqWr09dmgaM&t=247s"
+    title: "Forobardo de la semana: \"Un senior con el sueldo de un JR.\""
+    timestamp: "4:07"
+    quote: "parece una persona que no lee libros técnicos tratando de fingir que lee libros técnicos porque leyó kin code"
+  - url: "https://www.youtube.com/watch?v=PVjcZBCLtfU&t=7059s"
+    title: "Dager te enseña a hacer un server DNS #3."
+    timestamp: "117:39"
+    quote: "es un lindo libro yo lo recomiendo es un buen libro no se lo tomen como una Biblia"
+  - url: "https://www.youtube.com/watch?v=be-K17dFNFI&t=27s"
+    title: "No entendés DRY."
+    timestamp: "0:27"
+    quote: "yo la primera vez que me lo topé fue en cin code otro libro que está bastante bueno en el cual el tío Bob se anima a decir"
+leadsTo: ["refactoring", "design-patterns-gof", "domain-driven-design"]
+isbn: "9780132350884"
+asin: "0132350882"
+coverId: 8065615

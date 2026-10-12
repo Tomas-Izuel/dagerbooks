@@ -1,0 +1,21 @@
+# yaml-language-server: $schema=../book.schema.json
+
+id: csharp-in-a-nutshell
+seq: 5
+title: "C# in a Nutshell"
+authors: ["Joseph Albahari", "Ben Albahari"]
+year: 2012
+kind: book
+topics: ["fundamentos"]
+level: 2
+recommendation: interesante
+summary: "Referencia concisa del lenguaje C# y la plataforma .NET."
+context: "Lo cita entre los libros piola para aprender C#."
+sources:
+  - url: "https://www.reddit.com/r/devsarg/comments/18qup9h/aprender_c_y_net/kezoa0e/"
+    title: "r/devsarg: aprender c y net"
+    quote: "Hay libros piola (C# In a Nutshell, los libros y posts de Skeet -e.g., C# in Depth-, etc.)"
+leadsTo: ["csharp-in-depth", "crafting-interpreters"]
+isbn: "9780596001810"
+asin: "0596001819"
+coverId: 12836741

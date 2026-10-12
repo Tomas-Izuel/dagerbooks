@@ -1,0 +1,20 @@
+# yaml-language-server: $schema=../book.schema.json
+
+id: tragedy-and-hope
+seq: 152
+title: "Tragedy and Hope: A History of the World in Our Time"
+titleEs: "Tragedia y esperanza"
+authors: ["Carroll Quigley"]
+year: 1966
+asin: "094500110X"
+kind: book
+topics: ["historia"]
+level: 2
+recommendation: mencion
+summary: "Historia mundial del siglo XX de Carroll Quigley, usada por teorías conspirativas sobre élites financieras."
+context: "Lo cita al analizar al profesor Jiang, que lo usa para sostener una narrativa sobre banqueros internacionales; lo nombra sin recomendarlo."
+sources:
+  - url: "https://www.youtube.com/watch?v=Af3NmSP6h_E&t=1350s"
+    title: "El Nostradamus chino: Profesor Jiang."
+    timestamp: "22:30"
+    quote: "este chavón Quigly escribe un libro llamado Tragedia y Esperanza"

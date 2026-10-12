@@ -1,0 +1,20 @@
+# yaml-language-server: $schema=../book.schema.json
+
+id: social-responsibility-of-business
+seq: 146
+title: "The Social Responsibility of Business Is to Increase Its Profits"
+titleEs: "La responsabilidad social de la empresa es aumentar sus ganancias"
+authors: ["Milton Friedman"]
+year: 1970
+kind: essay
+topics: ["economia"]
+level: 1
+recommendation: mencion
+summary: "Artículo de Friedman en The New York Times Magazine."
+context: "Dice que suscribe la idea, pero no manda a leerlo."
+sources:
+  - url: "https://www.youtube.com/watch?v=VBuGXxlH_X8&t=814s"
+    title: "Anthropic DESTRUYE miles de LIBROS para el avance de la IA."
+    timestamp: "13:34"
+    quote: "Suscribo en general a la idea también articulada por Milton Friedman en su famoso artículo"
+leadsTo: ["capitalism-and-freedom"]

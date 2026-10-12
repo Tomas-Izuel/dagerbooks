@@ -1,0 +1,34 @@
+# yaml-language-server: $schema=../book.schema.json
+
+id: the-shallows
+seq: 105
+title: "The Shallows"
+titleEs: "Superficiales"
+authors: ["Nicholas Carr"]
+year: 2010
+kind: book
+topics: ["desarrollo-personal", "ia"]
+level: 2
+recommendation: interesante
+summary: "Carr examina cómo internet cambia la atención y la lectura."
+context: "Lo recomienda bastante (\"buen libro\") y lo usa como fuente en varios videos sobre IA y atención, por los ejemplos de transferencia de habilidades a la máquina."
+sources:
+  - url: "https://www.youtube.com/watch?v=nIR95vS5Cnk&t=99s"
+    title: "Usar mucha IA apaga partes de tu cerebro.."
+    timestamp: "1:39"
+    quote: "Hay un libro que se llama de Shallows, que es de Nicolas Car, que lo lo recomiendo bastante"
+  - url: "https://www.youtube.com/watch?v=m4me4mlm02E&t=459s"
+    title: "Tu cerebro en ChatGPT."
+    timestamp: "7:39"
+    quote: "en su libro de Shallows, Nicolas Car da varios ejemplos de esta clase de transferencia de skills a la máquina"
+  - url: "https://www.youtube.com/watch?v=nIR95vS5Cnk&t=231s"
+    title: "Usar mucha IA apaga partes de tu cerebro.."
+    timestamp: "3:51"
+    quote: "The Shallows, Nicolas Har, buen libro"
+  - url: "https://www.youtube.com/watch?v=a34urjCHAiw&t=406s"
+    title: "Her (2013) | AI, soledad y una historia promedio."
+    timestamp: "6:46"
+    quote: "en su libro de shallows Nicolás karl cita este y otros estudios"
+isbn: "9780393339758"
+asin: "0393339750"
+coverId: 6458532

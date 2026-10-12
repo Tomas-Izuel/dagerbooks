@@ -1,0 +1,34 @@
+# yaml-language-server: $schema=../book.schema.json
+
+id: stochastic-parrots
+seq: 83
+title: "On the Dangers of Stochastic Parrots"
+authors: ["Emily M. Bender", "Timnit Gebru", "Angelina McMillan-Major", "Shmargaret Shmitchell"]
+year: 2021
+kind: paper
+topics: ["ia"]
+level: 1
+recommendation: fuerte
+summary: "Paper que advierte sobre los costos, los sesgos y la dificultad de auditar los enormes datasets con que se entrenan los modelos de lenguaje."
+context: "Dice que lo menciona siempre y lo recomienda por lo que plantea sobre sesgos y datasets imposibles de auditar."
+sources:
+  - url: "https://www.youtube.com/watch?v=lXJzahJ_HI0&t=581s"
+    title: "Se pudrió todo."
+    timestamp: "9:41"
+    quote: "Yo siempre menciono el paper The Dangers of Stocassic Parots... se los recomiendo"
+  - url: "https://www.youtube.com/watch?v=9JZRRFH4NcY&t=647s"
+    title: "El verdadero peligro de la IA"
+    timestamp: "10:47"
+    quote: "a estos loros estocásticos, como dice el famoso paper"
+  - url: "https://www.youtube.com/watch?v=nIR95vS5Cnk&t=925s"
+    title: "Usar mucha IA apaga partes de tu cerebro.."
+    timestamp: "15:25"
+    quote: "el famoso vaper de los loros estocásticos que es, no sé si lo recuerdan, On the Dangers of Stocastic Parots"
+leadsTo:
+  - computer-power-and-human-reason
+  - the-illusion-of-thinking
+  - id: synthid-text
+    gap:
+      severity: muy-fuerte
+      bridge: ["probabilidad y distribuciones discretas", "cómo un LLM genera texto token a token (softmax, temperatura)", "tests de hipótesis estadísticos", "funciones hash"]
+      note: "Acá hay una pared de probabilidad; sin estudio aparte el paper se vuelve casi ilegible."

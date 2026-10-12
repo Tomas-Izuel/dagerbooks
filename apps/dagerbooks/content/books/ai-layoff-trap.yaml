@@ -1,0 +1,16 @@
+# yaml-language-server: $schema=../book.schema.json
+
+id: ai-layoff-trap
+seq: 188
+title: "The AI Layoff Trap"
+kind: paper
+topics: ["ia"]
+level: 1
+recommendation: mencion
+summary: "Paper sobre la externalidad de demanda que produce la automatización masiva de puestos de trabajo."
+context: "Lo resume y lo critica (la propuesta de un impuesto a la automatización le da escepticismo) pero reconoce que está bien hecho."
+sources:
+  - url: "https://www.youtube.com/watch?v=OVP5OByneAU&t=386s"
+    title: "¿Quién te COMPRA si TODOS LOS TRABAJOS son AUTOMATIZADOS?"
+    timestamp: "6:26"
+    quote: "paper que se llama The Layoff Trap, la trampa de los layoffs de inteligencia artificial"
