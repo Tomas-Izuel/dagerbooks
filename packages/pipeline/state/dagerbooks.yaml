@@ -53,6 +53,14 @@ sources:
     url: https://www.youtube.com/watch?v=_RD6Rqw-Sf8
     status: extracted
     at: 2026-10-12
+  - id: _tdf1ilwmlE
+    platform: youtube
+    channel: DotDager
+    title: Feliz navidad.
+    url: https://www.youtube.com/watch?v=_tdf1ilwmlE
+    status: discovered
+    duration: 13482
+    at: 2026-10-12
   - id: _u6R8FiAwMU
     platform: youtube
     channel: DagerClips
@@ -91,6 +99,14 @@ sources:
     duration: 4222
     url: https://www.youtube.com/watch?v=-6BUgdafAns
     status: extracted
+    at: 2026-10-12
+  - id: -CnV_pLJv7E
+    platform: youtube
+    channel: DotDager
+    title: Cómo hacer un server HTTP con Maizena y C# (Parte 4, estoy cansado, jefe)
+    url: https://www.youtube.com/watch?v=-CnV_pLJv7E
+    status: discovered
+    duration: 12879
     at: 2026-10-12
   - id: -cOJEGBp_UU
     platform: youtube
@@ -168,6 +184,14 @@ sources:
     url: https://www.youtube.com/shorts/-mgZ6dtkvvY
     status: extracted
     at: 2026-10-12
+  - id: 0_qPAtdHNlA
+    platform: youtube
+    channel: DotDager
+    title: Introducción a la cosística | !discord !falopa !links
+    url: https://www.youtube.com/watch?v=0_qPAtdHNlA
+    status: discovered
+    duration: 8733
+    at: 2026-10-12
   - id: 01LgizVmfRg
     platform: youtube
     channel: DagerClips
@@ -205,6 +229,14 @@ sources:
     url: https://www.youtube.com/shorts/0hO_qeoaVvU
     status: extracted
     at: 2026-10-12
+  - id: 0iMbmYAGQTc
+    platform: youtube
+    channel: DotDager
+    title: Programador JSON fullstack | !discord !falopa !links
+    url: https://www.youtube.com/watch?v=0iMbmYAGQTc
+    status: discovered
+    duration: 16275
+    at: 2026-10-12
   - id: 0jC2CNjBdD8
     platform: youtube
     channel: DagerClips
@@ -237,6 +269,14 @@ sources:
     url: https://www.youtube.com/watch?v=0P8ShXDbHD4
     status: extracted
     at: 2026-10-12
+  - id: 0RSkjci_Cac
+    platform: youtube
+    channel: DotDager
+    title: AGENTES DEL CAOS y otras cosas | !discord !falopa !links
+    url: https://www.youtube.com/watch?v=0RSkjci_Cac
+    status: discovered
+    duration: 12810
+    at: 2026-10-12
   - id: 0WcXNZ9ZcLc
     platform: youtube
     channel: DotDager
@@ -260,6 +300,13 @@ sources:
     url: https://www.youtube.com/watch?v=0Xg6gnwacA0
     status: extracted
     at: 2026-10-12
+  - id: 129JUyn4LIs
+    platform: youtube
+    channel: ElAntroDeDager
+    title: "La motivación sigue sobrevalorada #shorts"
+    url: https://www.youtube.com/shorts/129JUyn4LIs
+    status: discovered
+    at: 2026-10-12
   - id: 16dZjvnT05k
     platform: youtube
     channel: DotDager
@@ -273,6 +320,14 @@ sources:
     title: "Tremendo oportunidad laboral. #programación #fyp #dev"
     url: https://www.youtube.com/shorts/16VV7FZNkVM
     status: extracted
+    at: 2026-10-12
+  - id: 1B5Kh-0ruqw
+    platform: youtube
+    channel: DotDager
+    title: Informático rechoncho discurre sobre asuntos.
+    url: https://www.youtube.com/watch?v=1B5Kh-0ruqw
+    status: discovered
+    duration: 18027
     at: 2026-10-12
   - id: 1DoC02daN9o
     platform: youtube
@@ -358,6 +413,14 @@ sources:
     status: skipped
     at: 2026-10-12
     reason: sin transcripción automática
+  - id: 1Z5EqGFXZ5k
+    platform: youtube
+    channel: DotDager
+    title: CASARON POSAS | !discord !falopa !links
+    url: https://www.youtube.com/watch?v=1Z5EqGFXZ5k
+    status: discovered
+    duration: 13385
+    at: 2026-10-12
   - id: 20-b3v-dq68
     platform: youtube
     channel: DagerClips
@@ -381,6 +444,14 @@ sources:
     url: https://www.youtube.com/watch?v=2H9_mRSsEUQ
     status: extracted
     at: 2026-10-12
+  - id: 2ldfU8vvG1s
+    platform: youtube
+    channel: DotDager
+    title: PENE es el mejor stack del mundo | PENE stack 1
+    url: https://www.youtube.com/watch?v=2ldfU8vvG1s
+    status: discovered
+    duration: 13836
+    at: 2026-10-12
   - id: 2TX9Sf6i7SU
     platform: youtube
     channel: DagerClips
@@ -388,6 +459,14 @@ sources:
     duration: 1394
     url: https://www.youtube.com/watch?v=2TX9Sf6i7SU
     status: merged
+    at: 2026-10-12
+  - id: 2wfahAD_kWQ
+    platform: youtube
+    channel: DotDager
+    title: Vamo' a programar un server DNS en C# (parte 1) | Live coding
+    url: https://www.youtube.com/watch?v=2wfahAD_kWQ
+    status: discovered
+    duration: 13190
     at: 2026-10-12
   - id: 30-_wyr2EI4
     platform: youtube
@@ -404,6 +483,14 @@ sources:
     duration: 729
     url: https://www.youtube.com/watch?v=38_SxJgMR2U
     status: extracted
+    at: 2026-10-12
+  - id: 3EYUVq083a4
+    platform: youtube
+    channel: DotDager
+    title: ATCHÍS | !discord !falopa !links
+    url: https://www.youtube.com/watch?v=3EYUVq083a4
+    status: discovered
+    duration: 10940
     at: 2026-10-12
   - id: 3Hgb_e_oGGQ
     platform: youtube
@@ -451,6 +538,29 @@ sources:
     url: https://www.youtube.com/shorts/3uFLk-Yyg2o
     status: extracted
     at: 2026-10-12
+  - id: 3ut5_Og1XBY
+    platform: youtube
+    channel: DotDager
+    title: Cómo hacer un server HTTP con Maizena y C# (Parte 3, la venganza de la venganza)
+    url: https://www.youtube.com/watch?v=3ut5_Og1XBY
+    status: discovered
+    duration: 12775
+    at: 2026-10-12
+  - id: 3V33O-L44Hk
+    platform: youtube
+    channel: ElAntroDeDager
+    title: "Las Cuatro Leyes de Hábitos Atómicos (James Clear) | Te lo explico así nomás #shorts"
+    url: https://www.youtube.com/shorts/3V33O-L44Hk
+    status: discovered
+    at: 2026-10-12
+  - id: 4-HB0SqASbE
+    platform: youtube
+    channel: DotDager
+    title: Programando música (y hablando (de cosas)) | !discord !falopa
+    url: https://www.youtube.com/watch?v=4-HB0SqASbE
+    status: discovered
+    duration: 30382
+    at: 2026-10-12
   - id: 431orjIOuzE
     platform: youtube
     channel: DagerClips
@@ -494,6 +604,14 @@ sources:
     url: https://www.youtube.com/shorts/4KS9wNywFyY
     status: extracted
     at: 2026-10-12
+  - id: 5aapaPFCB8Q
+    platform: youtube
+    channel: DotDager
+    title: Juegos creados por ustedes | Game reviews, forobardo y Q&A.
+    url: https://www.youtube.com/watch?v=5aapaPFCB8Q
+    status: discovered
+    duration: 21569
+    at: 2026-10-12
   - id: 5c9lxTMvivU
     platform: youtube
     channel: DagerClips
@@ -529,6 +647,14 @@ sources:
     url: https://www.youtube.com/shorts/5NKVi9hwLFE
     status: extracted
     at: 2026-10-12
+  - id: 5Un_Mo1t7mI
+    platform: youtube
+    channel: DotDager
+    title: Codear es pegar con los codos.
+    url: https://www.youtube.com/watch?v=5Un_Mo1t7mI
+    status: discovered
+    duration: 12833
+    at: 2026-10-12
   - id: 6-ooymqxr9Y
     platform: youtube
     channel: DagerClips
@@ -551,6 +677,14 @@ sources:
     url: https://www.youtube.com/shorts/62xjASrc4qM
     status: extracted
     at: 2026-10-12
+  - id: 62zGJRpFKmw
+    platform: youtube
+    channel: DotDager
+    title: NO QUIERO PRENDER (y otras cosas) | !discord !falopa !links
+    url: https://www.youtube.com/watch?v=62zGJRpFKmw
+    status: discovered
+    duration: 13140
+    at: 2026-10-12
   - id: 63V-ymoX3Mc
     platform: youtube
     channel: DagerClips
@@ -558,6 +692,14 @@ sources:
     duration: 679
     url: https://www.youtube.com/watch?v=63V-ymoX3Mc
     status: extracted
+    at: 2026-10-12
+  - id: 64Y_ts46iS4
+    platform: youtube
+    channel: DotDager
+    title: Compito gordu habla de cosa(s).
+    url: https://www.youtube.com/watch?v=64Y_ts46iS4
+    status: discovered
+    duration: 18367
     at: 2026-10-12
   - id: 68HIc6QFrA4
     platform: youtube
@@ -594,6 +736,14 @@ sources:
     title: Cuidado con mi vieja.
     url: https://www.youtube.com/shorts/6DQsbkcgXuM
     status: extracted
+    at: 2026-10-12
+  - id: 6kkh171TlFI
+    platform: youtube
+    channel: DotDager
+    title: BAJA DE IMPUTABILIDAD & HACKEARON NOTEPAD | !discord !falopa !links
+    url: https://www.youtube.com/watch?v=6kkh171TlFI
+    status: discovered
+    duration: 12791
     at: 2026-10-12
   - id: 6KwtQkUTe1I
     platform: youtube
@@ -687,6 +837,14 @@ sources:
     url: https://www.youtube.com/watch?v=7dZsM8TaWLk
     status: merged
     at: 2026-10-12
+  - id: 7Lz1CMnWQPI
+    platform: youtube
+    channel: DotDager
+    title: Charlando, reaccionando a sus portfolios y regalando membresías.
+    url: https://www.youtube.com/watch?v=7Lz1CMnWQPI
+    status: discovered
+    duration: 14347
+    at: 2026-10-12
   - id: 7qXJblFVhxk
     platform: youtube
     channel: DotDager
@@ -738,6 +896,13 @@ sources:
     url: https://www.youtube.com/shorts/8erUsIGULKc
     status: extracted
     at: 2026-10-12
+  - id: 8fngZO3juZo
+    platform: youtube
+    channel: ElAntroDeDager
+    title: "Review del GTA San Andreas o algo así #shorts"
+    url: https://www.youtube.com/shorts/8fngZO3juZo
+    status: discovered
+    at: 2026-10-12
   - id: 8kC98KmkiOw
     platform: youtube
     channel: DagerClips
@@ -761,6 +926,14 @@ sources:
     url: https://www.youtube.com/shorts/8ovuA_4p41I
     status: extracted
     at: 2026-10-12
+  - id: 8Pem0pegRWo
+    platform: youtube
+    channel: DotDager
+    title: ChatPTS, fafafa y Q&A
+    url: https://www.youtube.com/watch?v=8Pem0pegRWo
+    status: discovered
+    duration: 24825
+    at: 2026-10-12
   - id: 8SiVEI1zMCY
     platform: youtube
     channel: DagerClips
@@ -768,6 +941,14 @@ sources:
     duration: 1218
     url: https://www.youtube.com/watch?v=8SiVEI1zMCY
     status: merged
+    at: 2026-10-12
+  - id: 8SJc1cPig-Y
+    platform: youtube
+    channel: DotDager
+    title: Forobardo, falopa y jueguitos.
+    url: https://www.youtube.com/watch?v=8SJc1cPig-Y
+    status: discovered
+    duration: 23374
     at: 2026-10-12
   - id: 92Iyk7OUHXM
     platform: youtube
@@ -783,6 +964,14 @@ sources:
     duration: 1107
     url: https://www.youtube.com/watch?v=93wMFZdVSNE
     status: merged
+    at: 2026-10-12
+  - id: 9BlY7CzbNfk
+    platform: youtube
+    channel: DotDager
+    title: Individuo corpulento e informático divaga acerca (de) cosas.
+    url: https://www.youtube.com/watch?v=9BlY7CzbNfk
+    status: discovered
+    duration: 16871
     at: 2026-10-12
   - id: 9G0E5dOV6tY
     platform: youtube
@@ -881,6 +1070,14 @@ sources:
     url: https://www.youtube.com/watch?v=A55cw6eu39w
     status: extracted
     at: 2026-10-12
+  - id: A9-HCSNX4Gs
+    platform: youtube
+    channel: DotDager
+    title: LIBROS DE AUTOAYUDA (y otras cosas) | !discord !falopa !links
+    url: https://www.youtube.com/watch?v=A9-HCSNX4Gs
+    status: discovered
+    duration: 15390
+    at: 2026-10-12
   - id: A9XSFeWJbfI
     platform: youtube
     channel: DagerClips
@@ -896,6 +1093,14 @@ sources:
     duration: 666
     url: https://www.youtube.com/watch?v=AbhxpinLe-A
     status: extracted
+    at: 2026-10-12
+  - id: aCOky4un-ec
+    platform: youtube
+    channel: DotDager
+    title: Gorpito comdu habla de cos(a)s.
+    url: https://www.youtube.com/watch?v=aCOky4un-ec
+    status: discovered
+    duration: 10371
     at: 2026-10-12
   - id: Af3NmSP6h_E
     platform: youtube
@@ -959,6 +1164,13 @@ sources:
     url: https://www.youtube.com/watch?v=aRGh2pdCqII
     status: extracted
     at: 2026-10-12
+  - id: arn48Q-oRuo
+    platform: youtube
+    channel: ElAntroDeDager
+    title: "Gente que pone AJAJAJAJAJA #shorts"
+    url: https://www.youtube.com/shorts/arn48Q-oRuo
+    status: discovered
+    at: 2026-10-12
   - id: AxGMR77tAb4
     platform: youtube
     channel: DagerClips
@@ -990,6 +1202,14 @@ sources:
     url: https://www.youtube.com/watch?v=B4CqKTxsYv4
     status: extracted
     at: 2026-10-12
+  - id: b5Yq1H_MdWc
+    platform: youtube
+    channel: DotDager
+    title: Permuto por propiedad y dif. a mi favor | !discord !falopa !links
+    url: https://www.youtube.com/watch?v=b5Yq1H_MdWc
+    status: discovered
+    duration: 13410
+    at: 2026-10-12
   - id: B8pPtXw2G1s
     platform: youtube
     channel: DotDager
@@ -1004,6 +1224,14 @@ sources:
     title: "JUEGOS COMPUGORDÍSTICOS #dev #gamingcommunity #programacion"
     url: https://www.youtube.com/shorts/b9JYbbY3dtw
     status: extracted
+    at: 2026-10-12
+  - id: Bb95At9765k
+    platform: youtube
+    channel: DotDager
+    title: ESTOY FURIOSO (y otras cosas) | !discord !falopa !links
+    url: https://www.youtube.com/watch?v=Bb95At9765k
+    status: discovered
+    duration: 19281
     at: 2026-10-12
   - id: BbOjd7KjQNM
     platform: youtube
@@ -1113,6 +1341,14 @@ sources:
     url: https://www.youtube.com/shorts/bPp2KE2Dtvs
     status: extracted
     at: 2026-10-12
+  - id: BrKZ9T8-eHM
+    platform: youtube
+    channel: DotDager
+    title: Gordito compu se rehúsa a dejar de hablar (de cosas).
+    url: https://www.youtube.com/watch?v=BrKZ9T8-eHM
+    status: discovered
+    duration: 12772
+    at: 2026-10-12
   - id: BRPoWBpNdM8
     platform: youtube
     channel: DagerClips
@@ -1164,6 +1400,14 @@ sources:
     title: "El mercado laboral con el avance de la IA. #fyp #clips #programacion"
     url: https://www.youtube.com/shorts/bXBqeAjsw_w
     status: extracted
+    at: 2026-10-12
+  - id: bXm8qGorPIU
+    platform: youtube
+    channel: DotDager
+    title: TÉCNICAS DE ESTUDIO, CÓMO CONCENTRARSE Y Q&A
+    url: https://www.youtube.com/watch?v=bXm8qGorPIU
+    status: discovered
+    duration: 12877
     at: 2026-10-12
   - id: BXO8Gas3lQs
     platform: youtube
@@ -1217,6 +1461,14 @@ sources:
     url: https://www.youtube.com/shorts/C78gDMXakEw
     status: extracted
     at: 2026-10-12
+  - id: c7ZhaLQ8EaA
+    platform: youtube
+    channel: DotDager
+    title: ⚠ BAJEN LOS SUMOS ⚠ | !discord !falopa !links
+    url: https://www.youtube.com/watch?v=c7ZhaLQ8EaA
+    status: discovered
+    duration: 15596
+    at: 2026-10-12
   - id: cBN0cOLBgLw
     platform: youtube
     channel: DagerClips
@@ -1232,6 +1484,14 @@ sources:
     url: https://www.youtube.com/shorts/cG44Z4zgpmo
     status: extracted
     at: 2026-10-12
+  - id: CKodXDOhcSs
+    platform: youtube
+    channel: DotDager
+    title: Gordito cosas vuelve a hablar de compu.
+    url: https://www.youtube.com/watch?v=CKodXDOhcSs
+    status: discovered
+    duration: 10644
+    at: 2026-10-12
   - id: cLoXZzipufc
     platform: youtube
     channel: ElAntroDeDager
@@ -1239,6 +1499,14 @@ sources:
     duration: 2133
     url: https://www.youtube.com/watch?v=cLoXZzipufc
     status: extracted
+    at: 2026-10-12
+  - id: cncI9_3Io2c
+    platform: youtube
+    channel: DotDager
+    title: Falopa, Q&A y... eso.
+    url: https://www.youtube.com/watch?v=cncI9_3Io2c
+    status: discovered
+    duration: 11875
     at: 2026-10-12
   - id: CNDOKdQULEk
     platform: youtube
@@ -1288,12 +1556,28 @@ sources:
     url: https://www.youtube.com/watch?v=CYglM-Rg5_Y
     status: merged
     at: 2026-10-12
+  - id: CZHbW7CjkPg
+    platform: youtube
+    channel: DotDager
+    title: ESTOY IMPACTADO (y otras cosas) | !discord !falopa !links
+    url: https://www.youtube.com/watch?v=CZHbW7CjkPg
+    status: discovered
+    duration: 10407
+    at: 2026-10-12
   - id: CZk6_JwACmw
     platform: youtube
     channel: DagerClips
     title: ¿Se puede estudiar y trabajar al mismo tiempo?
     url: https://www.youtube.com/shorts/CZk6_JwACmw
     status: extracted
+    at: 2026-10-12
+  - id: d_FfOla6mfw
+    platform: youtube
+    channel: DotDager
+    title: 200 DOLARUCOS A LA MEJOR WEB | Concurso, forobardo y Q&A.
+    url: https://www.youtube.com/watch?v=d_FfOla6mfw
+    status: discovered
+    duration: 26963
     at: 2026-10-12
   - id: d00Xi4pGxpU
     platform: youtube
@@ -1323,6 +1607,14 @@ sources:
     url: https://www.youtube.com/shorts/d6Z4UFfFz9s
     status: extracted
     at: 2026-10-12
+  - id: D93lvc2-kDk
+    platform: youtube
+    channel: DotDager
+    title: La AI nos quitó el trabajo (otra vez) | Devin, Figure, falopa y más.
+    url: https://www.youtube.com/watch?v=D93lvc2-kDk
+    status: discovered
+    duration: 11539
+    at: 2026-10-12
   - id: DaRes1TR3XQ
     platform: youtube
     channel: DotDager
@@ -1340,12 +1632,14 @@ sources:
     at: 2026-10-12
   - id: DhFQ_yNFuwA
     platform: youtube
+    title: ¿Y SI EL PROBLEMA SOS VOS? (y otras cosas) | !discord !falopa !links
     url: https://www.youtube.com/watch?v=DhFQ_yNFuwA
     status: merged
     at: 2026-10-12
     ignoreWindows:
       - 0:32:00-0:36:00
-    title: ¿Y SI EL PROBLEMA SOS VOS? (y otras cosas)
+    channel: DotDager
+    duration: 20970
   - id: dIC21UdvMlo
     platform: youtube
     channel: DagerClips
@@ -1376,6 +1670,14 @@ sources:
     url: https://www.youtube.com/shorts/Dlrv235xuVA
     status: extracted
     at: 2026-10-12
+  - id: Dn4ZKnoXjNE
+    platform: youtube
+    channel: DotDager
+    title: EXPLOTA LA BURBUJA (y otras cosas) | !discord !falopa !links
+    url: https://www.youtube.com/watch?v=Dn4ZKnoXjNE
+    status: discovered
+    duration: 11348
+    at: 2026-10-12
   - id: dOcZw68DY20
     platform: youtube
     channel: DagerClips
@@ -1390,12 +1692,28 @@ sources:
     url: https://www.youtube.com/shorts/DON2XXQPklQ
     status: extracted
     at: 2026-10-12
+  - id: dOOXv_nxlI0
+    platform: youtube
+    channel: DotDager
+    title: Feliz día del gordito compu, ft. @gentlemanprogramming  | !discord !falopa !links
+    url: https://www.youtube.com/watch?v=dOOXv_nxlI0
+    status: discovered
+    duration: 13603
+    at: 2026-10-12
   - id: dPCcHa2a77I
     platform: youtube
     channel: DagerClips
     title: "Ex sovietico iba a erradicar el universo pero Miller lo detuvo. #fyp #liberal #milei #argentina"
     url: https://www.youtube.com/shorts/dPCcHa2a77I
     status: extracted
+    at: 2026-10-12
+  - id: dRS177CMgAA
+    platform: youtube
+    channel: DotDager
+    title: ¡Falopa! Ahora que tengo tu atención... ¡Falopa!
+    url: https://www.youtube.com/watch?v=dRS177CMgAA
+    status: discovered
+    duration: 6899
     at: 2026-10-12
   - id: duxIvTcsdRM
     platform: youtube
@@ -1420,6 +1738,14 @@ sources:
     duration: 638
     url: https://www.youtube.com/watch?v=dVXHsp2PCL8
     status: extracted
+    at: 2026-10-12
+  - id: dZWYw2ixnv0
+    platform: youtube
+    channel: DotDager
+    title: Gordito compu sigue hablando de cosas.
+    url: https://www.youtube.com/watch?v=dZWYw2ixnv0
+    status: discovered
+    duration: 12831
     at: 2026-10-12
   - id: E_F2AXJdx54
     platform: youtube
@@ -1450,6 +1776,14 @@ sources:
     duration: 599
     url: https://www.youtube.com/watch?v=e16DiNSWaQE
     status: merged
+    at: 2026-10-12
+  - id: e4e6WVxOYT8
+    platform: youtube
+    channel: DotDager
+    title: Jueguitos y Q&A con mi novia
+    url: https://www.youtube.com/watch?v=e4e6WVxOYT8
+    status: discovered
+    duration: 21717
     at: 2026-10-12
   - id: e7cKGCamhR8
     platform: youtube
@@ -1510,6 +1844,14 @@ sources:
     url: https://www.youtube.com/shorts/eHTydQj5srI
     status: extracted
     at: 2026-10-12
+  - id: EHWK9XA_kck
+    platform: youtube
+    channel: DotDager
+    title: Vamo' a estudiar/codear🍅 20/5 Pomodoro + Lo-fi + Q&A 🍅
+    url: https://www.youtube.com/watch?v=EHWK9XA_kck
+    status: discovered
+    duration: 10420
+    at: 2026-10-12
   - id: eIEytaoKdo0
     platform: youtube
     channel: DotDager
@@ -1531,6 +1873,14 @@ sources:
     duration: 1764
     url: https://www.youtube.com/watch?v=Ej4FHMD369w
     status: extracted
+    at: 2026-10-12
+  - id: EJeNUqhlmfA
+    platform: youtube
+    channel: DotDager
+    title: Sujeto con sobrepeso y afición binaria charla (sobre cosas).
+    url: https://www.youtube.com/watch?v=EJeNUqhlmfA
+    status: discovered
+    duration: 16761
     at: 2026-10-12
   - id: ekaBcXBudm8
     platform: youtube
@@ -1669,6 +2019,14 @@ sources:
     url: https://www.youtube.com/watch?v=F9NbEuEUUHw
     status: merged
     at: 2026-10-12
+  - id: F9sLk3EdLP4
+    platform: youtube
+    channel: DotDager
+    title: Falopa y programando un server DNS en C#  (parte 4)
+    url: https://www.youtube.com/watch?v=F9sLk3EdLP4
+    status: discovered
+    duration: 13664
+    at: 2026-10-12
   - id: faNdDU6ObFw
     platform: youtube
     channel: DotDager
@@ -1700,6 +2058,14 @@ sources:
     duration: 50
     url: https://www.youtube.com/watch?v=FcsoVazxzUk
     status: extracted
+    at: 2026-10-12
+  - id: FdC5KZwsqS4
+    platform: youtube
+    channel: DotDager
+    title: TOMÁ NOTA | !discord !falopa !links
+    url: https://www.youtube.com/watch?v=FdC5KZwsqS4
+    status: discovered
+    duration: 14328
     at: 2026-10-12
   - id: fDjlw1bAPRM
     platform: youtube
@@ -1754,6 +2120,14 @@ sources:
     url: https://www.youtube.com/watch?v=FMfLfYus6Yc
     status: extracted
     at: 2026-10-12
+  - id: Fn2lVbZLrng
+    platform: youtube
+    channel: DotDager
+    title: DETECTIVE DE SQLazo (y otras cosas) | !discord !falopa !links
+    url: https://www.youtube.com/watch?v=Fn2lVbZLrng
+    status: discovered
+    duration: 17448
+    at: 2026-10-12
   - id: FnIbH72S4iA
     platform: youtube
     channel: DagerClips
@@ -1762,12 +2136,28 @@ sources:
     url: https://www.youtube.com/watch?v=FnIbH72S4iA
     status: extracted
     at: 2026-10-12
+  - id: FNNvUP2ocR4
+    platform: youtube
+    channel: DotDager
+    title: Programando Git en CSharp o algo así (parte 1) | Live coding
+    url: https://www.youtube.com/watch?v=FNNvUP2ocR4
+    status: discovered
+    duration: 16399
+    at: 2026-10-12
   - id: FOu_qJ_pfh0
     platform: youtube
     channel: DagerClips
     title: "Hmm... #fyp #clips #política"
     url: https://www.youtube.com/shorts/FOu_qJ_pfh0
     status: extracted
+    at: 2026-10-12
+  - id: Fp7SlnvHWBI
+    platform: youtube
+    channel: DotDager
+    title: Esto es una galletita | !discord !falopa !links
+    url: https://www.youtube.com/watch?v=Fp7SlnvHWBI
+    status: discovered
+    duration: 18564
     at: 2026-10-12
   - id: fPdz0WKaJ4U
     platform: youtube
@@ -1891,6 +2281,14 @@ sources:
     url: https://www.youtube.com/watch?v=G4SXmIVh2rU
     status: merged
     at: 2026-10-12
+  - id: g4uvhQ9lpFE
+    platform: youtube
+    channel: DotDager
+    title: REFORMA LABORAL y otras cosas | !discord !falopa !links
+    url: https://www.youtube.com/watch?v=g4uvhQ9lpFE
+    status: discovered
+    duration: 10952
+    at: 2026-10-12
   - id: g8nNuOBLAkU
     platform: youtube
     channel: DagerClips
@@ -1945,6 +2343,14 @@ sources:
     url: https://www.youtube.com/shorts/GboHueEGHNk
     status: extracted
     at: 2026-10-12
+  - id: gbuvNSAet9M
+    platform: youtube
+    channel: DotDager
+    title: EL BUG QUE MATÓ A 6 PERSONAS (y otras cosas) | !discord !falopa !links
+    url: https://www.youtube.com/watch?v=gbuvNSAet9M
+    status: discovered
+    duration: 14882
+    at: 2026-10-12
   - id: gBvJWy5qRCA
     platform: youtube
     channel: DagerClips
@@ -1966,6 +2372,14 @@ sources:
     title: Viveza criolla
     url: https://www.youtube.com/shorts/GEdiJ365b8o
     status: extracted
+    at: 2026-10-12
+  - id: GEOCGtflmiM
+    platform: youtube
+    channel: DotDager
+    title: "DERECHOS LABORALES: AFUERA | !discord !falopa !links"
+    url: https://www.youtube.com/watch?v=GEOCGtflmiM
+    status: discovered
+    duration: 15199
     at: 2026-10-12
   - id: GEXxx3JQmdw
     platform: youtube
@@ -2050,6 +2464,14 @@ sources:
     url: https://www.youtube.com/shorts/gQJQTD6NHpY
     status: extracted
     at: 2026-10-12
+  - id: gQnYzMXz36s
+    platform: youtube
+    channel: DotDager
+    title: Haciendo mierda tu portfolio ft. mi novia diseñadora
+    url: https://www.youtube.com/watch?v=gQnYzMXz36s
+    status: discovered
+    duration: 24363
+    at: 2026-10-12
   - id: GRcMsUBg41Q
     platform: youtube
     channel: DagerClips
@@ -2102,6 +2524,14 @@ sources:
     title: "No la vio. #fyp #clips #mercadolibre"
     url: https://www.youtube.com/shorts/gZbEGIWx4fQ
     status: extracted
+    at: 2026-10-12
+  - id: h_f7Jf2yRe0
+    platform: youtube
+    channel: DotDager
+    title: Individuo informático con sobrepeso prosigue con su plática cósica.
+    url: https://www.youtube.com/watch?v=h_f7Jf2yRe0
+    status: discovered
+    duration: 13069
     at: 2026-10-12
   - id: H3SjxCu3OGw
     platform: youtube
@@ -2193,6 +2623,14 @@ sources:
     url: https://www.youtube.com/shorts/hJKTD0kFNE0
     status: extracted
     at: 2026-10-12
+  - id: HLC0YXVc5mA
+    platform: youtube
+    channel: DotDager
+    title: Fin del server DNS en C#... y jugando The Classrooms.
+    url: https://www.youtube.com/watch?v=HLC0YXVc5mA
+    status: discovered
+    duration: 21173
+    at: 2026-10-12
   - id: hMnOeN53BV8
     platform: youtube
     channel: ElAntroDeDager
@@ -2267,6 +2705,22 @@ sources:
     title: El mamado.
     url: https://www.youtube.com/shorts/icKCNqYeG9Y
     status: extracted
+    at: 2026-10-12
+  - id: IexmQTpk1eA
+    platform: youtube
+    channel: DotDager
+    title: Forobardo, fafafa y Q&A
+    url: https://www.youtube.com/watch?v=IexmQTpk1eA
+    status: discovered
+    duration: 20707
+    at: 2026-10-12
+  - id: IfFdDLOfMlU
+    platform: youtube
+    channel: DotDager
+    title: ESTO ES GRAVE (y otras cosas) | !discord !falopa !links
+    url: https://www.youtube.com/watch?v=IfFdDLOfMlU
+    status: discovered
+    duration: 13912
     at: 2026-10-12
   - id: IIUhDMj_ryE
     platform: youtube
@@ -2354,6 +2808,14 @@ sources:
     url: https://www.youtube.com/watch?v=IZAYA37KUHk
     status: extracted
     at: 2026-10-12
+  - id: izMJvi9jEDA
+    platform: youtube
+    channel: DotDager
+    title: ESTOICISMO 101 (y otras cosas) | !discord !falopa !links
+    url: https://www.youtube.com/watch?v=izMJvi9jEDA
+    status: discovered
+    duration: 15493
+    at: 2026-10-12
   - id: j-fVmR4p2n8
     platform: youtube
     channel: DagerClips
@@ -2377,6 +2839,13 @@ sources:
     duration: 893
     url: https://www.youtube.com/watch?v=j4Zwm2YVdkg
     status: extracted
+    at: 2026-10-12
+  - id: j5Z5BWvn6-4
+    platform: youtube
+    channel: ElAntroDeDager
+    title: "¿Qué son las cookies? | Te lo explico así nomás #shorts"
+    url: https://www.youtube.com/shorts/j5Z5BWvn6-4
+    status: discovered
     at: 2026-10-12
   - id: jCqZLJcw76U
     platform: youtube
@@ -2455,6 +2924,14 @@ sources:
     url: https://www.youtube.com/shorts/JNtNJATLor8
     status: extracted
     at: 2026-10-12
+  - id: jPDfbsl15f0
+    platform: youtube
+    channel: DotDager
+    title: MADURO QUE EL MAESTRULI | !discord !falopa !links
+    url: https://www.youtube.com/watch?v=jPDfbsl15f0
+    status: discovered
+    duration: 2361
+    at: 2026-10-12
   - id: JSYsisYZRRQ
     platform: youtube
     channel: DagerClips
@@ -2463,12 +2940,43 @@ sources:
     url: https://www.youtube.com/watch?v=JSYsisYZRRQ
     status: merged
     at: 2026-10-12
+  - id: JuGBhO0ELgc
+    platform: youtube
+    channel: DotDager
+    title: COSILOGÍA | !discord !falopa !links
+    url: https://www.youtube.com/watch?v=JuGBhO0ELgc
+    status: discovered
+    duration: 14620
+    at: 2026-10-12
+  - id: jV803N6PJ4c
+    platform: youtube
+    channel: ElAntroDeDager
+    title: El video incompl
+    url: https://www.youtube.com/shorts/jV803N6PJ4c
+    status: discovered
+    at: 2026-10-12
+  - id: Jvb88P_Jvnc
+    platform: youtube
+    channel: DotDager
+    title: Pequeño gordo ordenador habla de cosas.
+    url: https://www.youtube.com/watch?v=Jvb88P_Jvnc
+    status: discovered
+    duration: 21555
+    at: 2026-10-12
   - id: JVrcdLwhABc
     platform: youtube
     channel: DagerClips
     title: Yo trabajo por placer
     url: https://www.youtube.com/shorts/JVrcdLwhABc
     status: extracted
+    at: 2026-10-12
+  - id: jxWrV8-BFKo
+    platform: youtube
+    channel: DotDager
+    title: ¡Falopa! Ahora que tengo tu atención... ¡Falopa!
+    url: https://www.youtube.com/watch?v=jxWrV8-BFKo
+    status: discovered
+    duration: 13554
     at: 2026-10-12
   - id: JYGe0uQ9s-8
     platform: youtube
@@ -2525,6 +3033,14 @@ sources:
     url: https://www.youtube.com/watch?v=kCp21Ki0BF4
     status: extracted
     at: 2026-10-12
+  - id: KEIQwuXknU8
+    platform: youtube
+    channel: DotDager
+    title: Compugordo hablador | !discord !falopa !links
+    url: https://www.youtube.com/watch?v=KEIQwuXknU8
+    status: discovered
+    duration: 15609
+    at: 2026-10-12
   - id: kG3g3oWnRvU
     platform: youtube
     channel: DagerClips
@@ -2532,6 +3048,14 @@ sources:
     duration: 1337
     url: https://www.youtube.com/watch?v=kG3g3oWnRvU
     status: merged
+    at: 2026-10-12
+  - id: kGSSZwe1o8o
+    platform: youtube
+    channel: DotDager
+    title: Habladurías cosísticomputadoriles | !discord !falopa !links
+    url: https://www.youtube.com/watch?v=kGSSZwe1o8o
+    status: discovered
+    duration: 14313
     at: 2026-10-12
   - id: khah2DfmEBM
     platform: youtube
@@ -2554,6 +3078,14 @@ sources:
     title: "Programo en una media. #fyp #clips #programacion"
     url: https://www.youtube.com/shorts/kNY8qeolW74
     status: extracted
+    at: 2026-10-12
+  - id: kOWpyxxERSk
+    platform: youtube
+    channel: DotDager
+    title: BANANA IS NOT JUSTICE.
+    url: https://www.youtube.com/watch?v=kOWpyxxERSk
+    status: discovered
+    duration: 11625
     at: 2026-10-12
   - id: kOyk-C3dpjk
     platform: youtube
@@ -2601,6 +3133,14 @@ sources:
     url: https://www.youtube.com/shorts/KyIpYVDKEC8
     status: extracted
     at: 2026-10-12
+  - id: kZ5znzPDR7Y
+    platform: youtube
+    channel: DotDager
+    title: Experto en ciberseguridad le explica cosas a gordito compu.
+    url: https://www.youtube.com/watch?v=kZ5znzPDR7Y
+    status: discovered
+    duration: 13735
+    at: 2026-10-12
   - id: kzXIssD9BRg
     platform: youtube
     channel: DagerClips
@@ -2639,6 +3179,14 @@ sources:
     url: https://www.youtube.com/shorts/lcs1jjtONGg
     status: extracted
     at: 2026-10-12
+  - id: ld4ATgKskH4
+    platform: youtube
+    channel: DotDager
+    title: Cómo hacer un server HTTP con Maizena y C# (Parte 2, la venganza de la Maizena)
+    url: https://www.youtube.com/watch?v=ld4ATgKskH4
+    status: discovered
+    duration: 18096
+    at: 2026-10-12
   - id: lDsT9K3ryMk
     platform: youtube
     channel: DagerClips
@@ -2654,6 +3202,14 @@ sources:
     duration: 675
     url: https://www.youtube.com/watch?v=lHJv5_1VL2o
     status: extracted
+    at: 2026-10-12
+  - id: LI6mzQQJpPE
+    platform: youtube
+    channel: DotDager
+    title: Gordito compu habla de cosas.
+    url: https://www.youtube.com/watch?v=LI6mzQQJpPE
+    status: discovered
+    duration: 16408
     at: 2026-10-12
   - id: LiddPDY8YH8
     platform: youtube
@@ -2722,6 +3278,14 @@ sources:
     url: https://www.youtube.com/watch?v=lv_svO3VwVk
     status: merged
     at: 2026-10-12
+  - id: Lv9nGxpAJrY
+    platform: youtube
+    channel: DotDager
+    title: 🔴 ANALIZANDO SUS PORTFOLIOS 🔴
+    url: https://www.youtube.com/watch?v=Lv9nGxpAJrY
+    status: discovered
+    duration: 12400
+    at: 2026-10-12
   - id: LWYGMKqCqbo
     platform: youtube
     channel: DagerClips
@@ -2737,6 +3301,14 @@ sources:
     duration: 732
     url: https://www.youtube.com/watch?v=lXJzahJ_HI0
     status: merged
+    at: 2026-10-12
+  - id: m11VcsEDKiI
+    platform: youtube
+    channel: DotDager
+    title: Gordito compu habla de cosas.
+    url: https://www.youtube.com/watch?v=m11VcsEDKiI
+    status: discovered
+    duration: 19138
     at: 2026-10-12
   - id: m4IWfBQBnN4
     platform: youtube
@@ -2761,6 +3333,14 @@ sources:
     title: "No digan cómo vivo, por favor. #clips #fyp #argentina"
     url: https://www.youtube.com/shorts/M8tlkTIopvE
     status: extracted
+    at: 2026-10-12
+  - id: MAg7oqMaZ94
+    platform: youtube
+    channel: DotDager
+    title: GORDO COMPUTADORIL HABLA DE COSAS | !discord !falopa !links
+    url: https://www.youtube.com/watch?v=MAg7oqMaZ94
+    status: discovered
+    duration: 11039
     at: 2026-10-12
   - id: mBXLq_Jx2rc
     platform: youtube
@@ -2794,6 +3374,14 @@ sources:
     url: https://www.youtube.com/watch?v=MhI4umaq5L4
     status: merged
     at: 2026-10-12
+  - id: MikKYw8X1II
+    platform: youtube
+    channel: DotDager
+    title: Charla cosística con @TipitoEnojado  | !discord !falopa !links
+    url: https://www.youtube.com/watch?v=MikKYw8X1II
+    status: discovered
+    duration: 12011
+    at: 2026-10-12
   - id: MKxyfmbv7q0
     platform: youtube
     channel: DagerClips
@@ -2817,6 +3405,21 @@ sources:
     url: https://www.youtube.com/shorts/mnRGishwxlQ
     status: extracted
     at: 2026-10-12
+  - id: mT7QFcSR9Hc
+    platform: youtube
+    channel: DotDager
+    title: Hoy la clavamos en el Angular | AAAA stack 3
+    url: https://www.youtube.com/watch?v=mT7QFcSR9Hc
+    status: discovered
+    duration: 19149
+    at: 2026-10-12
+  - id: mtKR6KeZXB4
+    platform: youtube
+    channel: DotDager
+    title: "Suscripción para girar las ruedas. #fyp #clips #twitch"
+    url: https://www.youtube.com/shorts/mtKR6KeZXB4
+    status: discovered
+    at: 2026-10-12
   - id: mu2Oge0ho0U
     platform: youtube
     channel: DagerClips
@@ -2833,6 +3436,22 @@ sources:
     url: https://www.youtube.com/watch?v=MVCkMCH5FJY
     status: extracted
     at: 2026-10-12
+  - id: MVUgLCLC2-Q
+    platform: youtube
+    channel: DotDager
+    title: HACKS CEREBRALES con @JuanIgnacioFernandez  |  !discord !falopa !links
+    url: https://www.youtube.com/watch?v=MVUgLCLC2-Q
+    status: discovered
+    duration: 10369
+    at: 2026-10-12
+  - id: Mw5ZFkwwK0w
+    platform: youtube
+    channel: DotDager
+    title: ANTHROPIC QUEMA LIBROS (y otras cosas) | !discord !falopa !links
+    url: https://www.youtube.com/watch?v=Mw5ZFkwwK0w
+    status: discovered
+    duration: 10213
+    at: 2026-10-12
   - id: Mw7Mz7Cl2wA
     platform: youtube
     channel: DagerClips
@@ -2840,12 +3459,28 @@ sources:
     url: https://www.youtube.com/shorts/Mw7Mz7Cl2wA
     status: extracted
     at: 2026-10-12
+  - id: MXlK_nKziMs
+    platform: youtube
+    channel: DotDager
+    title: EXPLICANDO EL MONSTRUO (y otras cosas) | !discord !falopa !links
+    url: https://www.youtube.com/watch?v=MXlK_nKziMs
+    status: discovered
+    duration: 11820
+    at: 2026-10-12
   - id: MxwVuQTGUbg
     platform: youtube
     channel: DotDager
     title: "IGNORA TODO LO ANTERIOR #dev #programacion #python"
     url: https://www.youtube.com/shorts/MxwVuQTGUbg
     status: extracted
+    at: 2026-10-12
+  - id: MYHiaHDLDB8
+    platform: youtube
+    channel: DotDager
+    title: HACKEARON WORDPRESS (y L4D2 con Juli) | !discord !falopa !links
+    url: https://www.youtube.com/watch?v=MYHiaHDLDB8
+    status: discovered
+    duration: 14099
     at: 2026-10-12
   - id: Mz_QibdOgD0
     platform: youtube
@@ -2936,6 +3571,22 @@ sources:
     url: https://www.youtube.com/shorts/nfAIbwTZH-Y
     status: extracted
     at: 2026-10-12
+  - id: NFfLVN0zIbE
+    platform: youtube
+    channel: DotDager
+    title: Gordito compu reanuda sus habladurías cosísticas.
+    url: https://www.youtube.com/watch?v=NFfLVN0zIbE
+    status: discovered
+    duration: 11783
+    at: 2026-10-12
+  - id: nFpcqQM0cVs
+    platform: youtube
+    channel: DotDager
+    title: Haciendo mierda tu CV.
+    url: https://www.youtube.com/watch?v=nFpcqQM0cVs
+    status: discovered
+    duration: 9356
+    at: 2026-10-12
   - id: ngX1nxPLu3s
     platform: youtube
     channel: DagerClips
@@ -2996,6 +3647,13 @@ sources:
     url: https://www.youtube.com/watch?v=nPZhzMdcPw8
     status: extracted
     at: 2026-10-12
+  - id: nqapu9SFRCo
+    platform: youtube
+    channel: ElAntroDeDager
+    title: "Review del D2 o algo así #shorts"
+    url: https://www.youtube.com/shorts/nqapu9SFRCo
+    status: discovered
+    at: 2026-10-12
   - id: nQOWS_Cvx88
     platform: youtube
     channel: DagerClips
@@ -3011,6 +3669,13 @@ sources:
     duration: 818
     url: https://www.youtube.com/watch?v=NSde4B3xBr4
     status: extracted
+    at: 2026-10-12
+  - id: NSMNiIMG2nY
+    platform: youtube
+    channel: ElAntroDeDager
+    title: "Qué es un API | Te lo explico así nomás #shorts"
+    url: https://www.youtube.com/shorts/NSMNiIMG2nY
+    status: discovered
     at: 2026-10-12
   - id: NuMnqO2pB00
     platform: youtube
@@ -3050,6 +3715,21 @@ sources:
     url: https://www.youtube.com/shorts/nwl1bZ7iKTg
     status: extracted
     at: 2026-10-12
+  - id: NxMpm10Ybd4
+    platform: youtube
+    channel: DotDager
+    title: Vamo' a (charlar y) programar un server DNS en C# (parte 3) | Live coding
+    url: https://www.youtube.com/watch?v=NxMpm10Ybd4
+    status: discovered
+    duration: 15565
+    at: 2026-10-12
+  - id: NYKZ_X_tRNs
+    platform: youtube
+    channel: DotDager
+    title: "El meat proxy no es eterno #programacion #fyp #clips"
+    url: https://www.youtube.com/shorts/NYKZ_X_tRNs
+    status: discovered
+    at: 2026-10-12
   - id: NZ1DyQmgzv4
     platform: youtube
     channel: DagerClips
@@ -3060,7 +3740,7 @@ sources:
   - id: o_s6Q-teA6U
     platform: youtube
     channel: DotDager
-    title: Hoy es VIERNES y este video lo sabe.
+    title: Hoy es DOMINGO y este video lo sabe.
     duration: 500
     url: https://www.youtube.com/watch?v=o_s6Q-teA6U
     status: merged
@@ -3149,6 +3829,13 @@ sources:
     url: https://www.youtube.com/shorts/Ofi7gdSETXU
     status: extracted
     at: 2026-10-12
+  - id: og_5ADMoXN8
+    platform: youtube
+    channel: ElAntroDeDager
+    title: "¿Cuándo hay que usar barbijo? (En todo momento) #shorts"
+    url: https://www.youtube.com/shorts/og_5ADMoXN8
+    status: discovered
+    at: 2026-10-12
   - id: OgFBBqimA0A
     platform: youtube
     channel: DagerClips
@@ -3181,6 +3868,13 @@ sources:
     url: https://www.youtube.com/watch?v=OH0jRfLqOr0
     status: extracted
     at: 2026-10-12
+  - id: OjSiE6L-TnE
+    platform: youtube
+    channel: DotDager
+    title: "Dijo mi LLM que tu LLM es un pelotudo. #fyp #programacion #clips"
+    url: https://www.youtube.com/shorts/OjSiE6L-TnE
+    status: discovered
+    at: 2026-10-12
   - id: Ok4KGvoGdzs
     platform: youtube
     channel: DagerClips
@@ -3203,6 +3897,14 @@ sources:
     duration: 918
     url: https://www.youtube.com/watch?v=ON_oQo65Ozg
     status: extracted
+    at: 2026-10-12
+  - id: OnNW8dbHFno
+    platform: youtube
+    channel: DotDager
+    title: Programando pero solamente puedo usar tecnologías con A | AAAA stack 1
+    url: https://www.youtube.com/watch?v=OnNW8dbHFno
+    status: discovered
+    duration: 13968
     at: 2026-10-12
   - id: op-i13q4vGo
     platform: youtube
@@ -3235,6 +3937,14 @@ sources:
     duration: 1291
     url: https://www.youtube.com/watch?v=orbFCBPdc5A
     status: merged
+    at: 2026-10-12
+  - id: OS32oYAysfA
+    platform: youtube
+    channel: DotDager
+    title: Gordito compu habla de cosas no tan interesantes como para justificar la expresión en la miniatura.
+    url: https://www.youtube.com/watch?v=OS32oYAysfA
+    status: discovered
+    duration: 12911
     at: 2026-10-12
   - id: oSr0MD6TsCY
     platform: youtube
@@ -3327,6 +4037,13 @@ sources:
     url: https://www.youtube.com/shorts/P4sqb8om0oo
     status: extracted
     at: 2026-10-12
+  - id: p8Grmjg8-ew
+    platform: youtube
+    channel: DotDager
+    title: "$9.99 por un juego (el juego no viene incluido). #fyp #programacion #dev"
+    url: https://www.youtube.com/shorts/p8Grmjg8-ew
+    status: discovered
+    at: 2026-10-12
   - id: p988l0oON3g
     platform: youtube
     channel: DagerClips
@@ -3334,6 +4051,14 @@ sources:
     duration: 1203
     url: https://www.youtube.com/watch?v=p988l0oON3g
     status: merged
+    at: 2026-10-12
+  - id: pAlLs0Eoqto
+    platform: youtube
+    channel: DotDager
+    title: Destruyendo tu porfolio.
+    url: https://www.youtube.com/watch?v=pAlLs0Eoqto
+    status: discovered
+    duration: 17224
     at: 2026-10-12
   - id: PBPGXgbZZcc
     platform: youtube
@@ -3405,6 +4130,22 @@ sources:
     url: https://www.youtube.com/shorts/PHm96yvCYiY
     status: extracted
     at: 2026-10-12
+  - id: phoCg4r-cjM
+    platform: youtube
+    channel: DotDager
+    title: Gordito compu insiste en hablar de cosas.
+    url: https://www.youtube.com/watch?v=phoCg4r-cjM
+    status: discovered
+    duration: 9098
+    at: 2026-10-12
+  - id: PICzU_N32-g
+    platform: youtube
+    channel: DotDager
+    title: Obeso informático discurre sobre asuntos | !discord !falopa !links
+    url: https://www.youtube.com/watch?v=PICzU_N32-g
+    status: discovered
+    duration: 17852
+    at: 2026-10-12
   - id: pihqjCTVd10
     platform: youtube
     channel: DagerClips
@@ -3436,6 +4177,14 @@ sources:
     duration: 1265
     url: https://www.youtube.com/watch?v=PlWct-si-xc
     status: extracted
+    at: 2026-10-12
+  - id: PObP8JyoPhY
+    platform: youtube
+    channel: DotDager
+    title: Cosística intermedia | !discord !falopa !links
+    url: https://www.youtube.com/watch?v=PObP8JyoPhY
+    status: discovered
+    duration: 18351
     at: 2026-10-12
   - id: poweoTjX2cw
     platform: youtube
@@ -3506,6 +4255,14 @@ sources:
     url: https://www.youtube.com/watch?v=Q3R_q8HMCqo
     status: extracted
     at: 2026-10-12
+  - id: q8ttiG4yih0
+    platform: youtube
+    channel: DotDager
+    title: Cómo hacer un server HTTP con Maizena y C#.
+    url: https://www.youtube.com/watch?v=q8ttiG4yih0
+    status: discovered
+    duration: 10898
+    at: 2026-10-12
   - id: qa3Q28HOlp4
     platform: youtube
     channel: DotDager
@@ -3528,6 +4285,13 @@ sources:
     url: https://www.youtube.com/watch?v=QAGXBCDzKKM
     status: extracted
     at: 2026-10-12
+  - id: QE9jIDye10g
+    platform: youtube
+    channel: ElAntroDeDager
+    title: "¿Qué es una función de hasheo criptográfica? #shorts"
+    url: https://www.youtube.com/shorts/QE9jIDye10g
+    status: discovered
+    at: 2026-10-12
   - id: qEvVAyWo3_s
     platform: youtube
     channel: DagerClips
@@ -3535,6 +4299,14 @@ sources:
     duration: 1222
     url: https://www.youtube.com/watch?v=qEvVAyWo3_s
     status: extracted
+    at: 2026-10-12
+  - id: qgZfHtD_k2M
+    platform: youtube
+    channel: DotDager
+    title: SKYNET y cosas | !discord !falopa !links
+    url: https://www.youtube.com/watch?v=qgZfHtD_k2M
+    status: discovered
+    duration: 18177
     at: 2026-10-12
   - id: QgZmaHOiIu8
     platform: youtube
@@ -3626,6 +4398,14 @@ sources:
     url: https://www.youtube.com/shorts/qyVcfgqWnh4
     status: extracted
     at: 2026-10-12
+  - id: qZ-XgoNjZXo
+    platform: youtube
+    channel: DotDager
+    title: Cosística II (by gordito ordenador) | !discord !falopa !links
+    url: https://www.youtube.com/watch?v=qZ-XgoNjZXo
+    status: discovered
+    duration: 16143
+    at: 2026-10-12
   - id: r2qMXxMU0Ns
     platform: youtube
     channel: DagerClips
@@ -3648,6 +4428,14 @@ sources:
     duration: 559
     url: https://www.youtube.com/watch?v=RcCfpL5MUcc
     status: extracted
+    at: 2026-10-12
+  - id: RCqzgtTplPE
+    platform: youtube
+    channel: DotDager
+    title: Gordito cosas habla de compu.
+    url: https://www.youtube.com/watch?v=RCqzgtTplPE
+    status: discovered
+    duration: 20906
     at: 2026-10-12
   - id: rCsucEiyMkk
     platform: youtube
@@ -3739,6 +4527,14 @@ sources:
     url: https://www.youtube.com/shorts/rSEhF5ph1xU
     status: extracted
     at: 2026-10-12
+  - id: rSS42vag6lM
+    platform: youtube
+    channel: DotDager
+    title: PENE es el mejor stack del mundo | PENE stack 2
+    url: https://www.youtube.com/watch?v=rSS42vag6lM
+    status: discovered
+    duration: 20432
+    at: 2026-10-12
   - id: rsxGvLSUNvY
     platform: youtube
     channel: DagerClips
@@ -3752,6 +4548,14 @@ sources:
     title: Los precios mínimos.
     url: https://www.youtube.com/shorts/rTeBOogyUnM
     status: extracted
+    at: 2026-10-12
+  - id: RZtMlYJAvx4
+    platform: youtube
+    channel: DotDager
+    title: Forobardo, Q&A y review de sus webs
+    url: https://www.youtube.com/watch?v=RZtMlYJAvx4
+    status: discovered
+    duration: 13119
     at: 2026-10-12
   - id: rzUaP39lpiU
     platform: youtube
@@ -3780,6 +4584,14 @@ sources:
     title: "El tema de clean code.. #fyp #clips #dev #programming #programacion"
     url: https://www.youtube.com/shorts/s1LuhVH6--g
     status: extracted
+    at: 2026-10-12
+  - id: S2hjAbLb2d8
+    platform: youtube
+    channel: DotDager
+    title: Bola adiposa y redonda habla de cosas | !discord !falopa !links
+    url: https://www.youtube.com/watch?v=S2hjAbLb2d8
+    status: discovered
+    duration: 20628
     at: 2026-10-12
   - id: S3POsGqWWYI
     platform: youtube
@@ -3847,6 +4659,14 @@ sources:
     duration: 1127
     url: https://www.youtube.com/watch?v=sgWAMe65SwI
     status: extracted
+    at: 2026-10-12
+  - id: SiAJaFNYv2g
+    platform: youtube
+    channel: DotDager
+    title: Vamo' a programar un server DNS en C# (parte 2) | Live coding
+    url: https://www.youtube.com/watch?v=SiAJaFNYv2g
+    status: discovered
+    duration: 15221
     at: 2026-10-12
   - id: SjFP9PdM0nA
     platform: youtube
@@ -3940,6 +4760,14 @@ sources:
     url: https://www.youtube.com/watch?v=Svm2CZQVUPg
     status: extracted
     at: 2026-10-12
+  - id: swhBSew0Ma0
+    platform: youtube
+    channel: DotDager
+    title: ⚠ CASARON POSAS ⚠ | !discord !falopa !links
+    url: https://www.youtube.com/watch?v=swhBSew0Ma0
+    status: discovered
+    duration: 17630
+    at: 2026-10-12
   - id: SwKIVs3vQkA
     platform: youtube
     channel: DagerClips
@@ -3955,6 +4783,14 @@ sources:
     duration: 270
     url: https://www.youtube.com/watch?v=swzomZt8H30
     status: extracted
+    at: 2026-10-12
+  - id: SYcO09hkB_k
+    platform: youtube
+    channel: DotDager
+    title: MEJOR STREAM DE LA HISTORIA (y otras cosas) | !discord !falopa !links
+    url: https://www.youtube.com/watch?v=SYcO09hkB_k
+    status: discovered
+    duration: 15399
     at: 2026-10-12
   - id: sZndF55-H3I
     platform: youtube
@@ -4016,6 +4852,22 @@ sources:
     url: https://www.youtube.com/shorts/t5RTnxVQF_M
     status: extracted
     at: 2026-10-12
+  - id: t6w71ApsNa0
+    platform: youtube
+    channel: DotDager
+    title: Juegos que te enseñan a programar o algo así.
+    url: https://www.youtube.com/watch?v=t6w71ApsNa0
+    status: discovered
+    duration: 13275
+    at: 2026-10-12
+  - id: TcOsGIrudMA
+    platform: youtube
+    channel: DotDager
+    title: ¡Falopa! Ahora que tengo tu atención... ¡falopa!
+    url: https://www.youtube.com/watch?v=TcOsGIrudMA
+    status: discovered
+    duration: 7785
+    at: 2026-10-12
   - id: tcxLMQnZNio
     platform: youtube
     channel: DotDager
@@ -4064,6 +4916,22 @@ sources:
     status: skipped
     at: 2026-10-12
     reason: sin transcripción automática
+  - id: tisOFcWC5j4
+    platform: youtube
+    channel: DotDager
+    title: CÓMO RECORDAR LO QUE LEÉS y otras cosas | !discord !falopa !links
+    url: https://www.youtube.com/watch?v=tisOFcWC5j4
+    status: discovered
+    duration: 10986
+    at: 2026-10-12
+  - id: TJ5n5RnAoSA
+    platform: youtube
+    channel: DotDager
+    title: LEY DE TIERRAS, LIBROS, CEUTA (y otras cosas) | !discord !falopa !links
+    url: https://www.youtube.com/watch?v=TJ5n5RnAoSA
+    status: discovered
+    duration: 12840
+    at: 2026-10-12
   - id: TkRxhTexkN4
     platform: youtube
     channel: DotDager
@@ -4195,6 +5063,14 @@ sources:
     url: https://www.youtube.com/watch?v=UdT_LHrU9Lg
     status: merged
     at: 2026-10-12
+  - id: UEFao_Hrrkg
+    platform: youtube
+    channel: DotDager
+    title: ME HACKEARON (y otras cosas) | !discord !falopa !links
+    url: https://www.youtube.com/watch?v=UEFao_Hrrkg
+    status: discovered
+    duration: 11196
+    at: 2026-10-12
   - id: ueznifrjtyg
     platform: youtube
     channel: DagerClips
@@ -4210,6 +5086,14 @@ sources:
     duration: 194
     url: https://www.youtube.com/watch?v=UFQPY2Bu3Xo
     status: extracted
+    at: 2026-10-12
+  - id: uiytq_yxRpo
+    platform: youtube
+    channel: DotDager
+    title: Tralalero binario anatómicamente denso comparte sus pareceres.
+    url: https://www.youtube.com/watch?v=uiytq_yxRpo
+    status: discovered
+    duration: 16105
     at: 2026-10-12
   - id: Uj8xMDloNek
     platform: youtube
@@ -4233,12 +5117,28 @@ sources:
     url: https://www.youtube.com/shorts/UK7vW6b8sZM
     status: extracted
     at: 2026-10-12
+  - id: UKZ_de6jH5w
+    platform: youtube
+    channel: DotDager
+    title: EL ENTUSIASMO ME DESBORDA (y otras cosas) | !discord !falopa !links
+    url: https://www.youtube.com/watch?v=UKZ_de6jH5w
+    status: discovered
+    duration: 15476
+    at: 2026-10-12
   - id: UlCB_9Wi6eI
     platform: youtube
     channel: DagerClips
     title: "Y claro. #trump #milei #liberal #clip #política #economia #clip #twitch #streamer"
     url: https://www.youtube.com/shorts/UlCB_9Wi6eI
     status: extracted
+    at: 2026-10-12
+  - id: ulft3ET2lnw
+    platform: youtube
+    channel: DotDager
+    title: Comdito gorpu discute asuntos.
+    url: https://www.youtube.com/watch?v=ulft3ET2lnw
+    status: discovered
+    duration: 15031
     at: 2026-10-12
   - id: ULjk-mQx4_Y
     platform: youtube
@@ -4285,6 +5185,14 @@ sources:
     url: https://www.youtube.com/shorts/URH_H8-vSHQ
     status: extracted
     at: 2026-10-12
+  - id: uS1OeMY4lBg
+    platform: youtube
+    channel: DotDager
+    title: Casi hacker | Bandit y el "Hola Mundo" más complejo del mundo
+    url: https://www.youtube.com/watch?v=uS1OeMY4lBg
+    status: discovered
+    duration: 14694
+    at: 2026-10-12
   - id: uSh7drgds7U
     platform: youtube
     channel: DagerClips
@@ -4292,6 +5200,22 @@ sources:
     duration: 269
     url: https://www.youtube.com/watch?v=uSh7drgds7U
     status: extracted
+    at: 2026-10-12
+  - id: USNN1VF8_-0
+    platform: youtube
+    channel: DotDager
+    title: HACKEARON AL SENADO (y otras cosas) | !discord !falopa !links
+    url: https://www.youtube.com/watch?v=USNN1VF8_-0
+    status: discovered
+    duration: 9908
+    at: 2026-10-12
+  - id: uuALfUiv1XA
+    platform: youtube
+    channel: DotDager
+    title: CASARON POSAS | !discord !falopa !links
+    url: https://www.youtube.com/watch?v=uuALfUiv1XA
+    status: discovered
+    duration: 6569
     at: 2026-10-12
   - id: uwJRGMRpBkE
     platform: youtube
@@ -4388,12 +5312,27 @@ sources:
     url: https://www.youtube.com/watch?v=VDdGQlxRupc
     status: extracted
     at: 2026-10-12
+  - id: vFGkQP5IBS8
+    platform: youtube
+    channel: DotDager
+    title: LA IRA ME CONSUME (y otras cosas) | !discord !falopa !links
+    url: https://www.youtube.com/watch?v=vFGkQP5IBS8
+    status: discovered
+    duration: 13910
+    at: 2026-10-12
   - id: VFX0wJQS43Y
     platform: youtube
     channel: DagerClips
     title: "El programador albañil 🧱👷‍♂️#fyp #twitch #dev #programming #coding #construction #trabajo"
     url: https://www.youtube.com/shorts/VFX0wJQS43Y
     status: extracted
+    at: 2026-10-12
+  - id: vHHnHl3PhCU
+    platform: youtube
+    channel: DotDager
+    title: "Esto es el futuro. #fyp #programacion #slop"
+    url: https://www.youtube.com/shorts/vHHnHl3PhCU
+    status: discovered
     at: 2026-10-12
   - id: VIInDFqepU8
     platform: youtube
@@ -4415,6 +5354,14 @@ sources:
     title: "Estar en sintonía con el capitalismo. #fyp  #clip #política #capitalismo #mises"
     url: https://www.youtube.com/shorts/VlG4hFLfeIs
     status: merged
+    at: 2026-10-12
+  - id: vLiPMNVnEXk
+    platform: youtube
+    channel: DotDager
+    title: Cosimetría computadoril | !discord !falopa !links
+    url: https://www.youtube.com/watch?v=vLiPMNVnEXk
+    status: discovered
+    duration: 15143
     at: 2026-10-12
   - id: VMM-OHb4qVA
     platform: youtube
@@ -4483,6 +5430,14 @@ sources:
     url: https://www.youtube.com/watch?v=VYtLZdYwr1o
     status: extracted
     at: 2026-10-12
+  - id: W_J2ISPr16E
+    platform: youtube
+    channel: DotDager
+    title: JEV, IMPUESTO A LA HERENCIA (y otras cosas) | !discord !falopa !links
+    url: https://www.youtube.com/watch?v=W_J2ISPr16E
+    status: discovered
+    duration: 16028
+    at: 2026-10-12
   - id: W2efYMxhA0c
     platform: youtube
     channel: DagerClips
@@ -4548,7 +5503,7 @@ sources:
   - id: wf0iUFOXg6A
     platform: youtube
     channel: DagerClips
-    title: Si creés en la meritocracia, deberías estar en contra de la herencia.
+    title: ¿Son éticas las herencias?
     duration: 1549
     url: https://www.youtube.com/watch?v=wf0iUFOXg6A
     status: extracted
@@ -4606,6 +5561,29 @@ sources:
     url: https://www.youtube.com/watch?v=WP-NX8qcwAI
     status: extracted
     at: 2026-10-12
+  - id: WpCqPvV83sg
+    platform: youtube
+    channel: ElAntroDeDager
+    title: "¿Qué es una blockchain? | Te lo explico así nomás #shorts"
+    url: https://www.youtube.com/shorts/WpCqPvV83sg
+    status: discovered
+    at: 2026-10-12
+  - id: wq87gJXExR8
+    platform: youtube
+    channel: DotDager
+    title: Hoy la clavamos en el Angular.
+    url: https://www.youtube.com/watch?v=wq87gJXExR8
+    status: discovered
+    duration: 2284
+    at: 2026-10-12
+  - id: WSER8M8aC6c
+    platform: youtube
+    channel: DotDager
+    title: Forobardo, Phasmophobia y Q&A
+    url: https://www.youtube.com/watch?v=WSER8M8aC6c
+    status: discovered
+    duration: 25949
+    at: 2026-10-12
   - id: wsfF4Ck5F-o
     platform: youtube
     channel: DagerClips
@@ -4626,6 +5604,14 @@ sources:
     title: Porfavor..
     url: https://www.youtube.com/shorts/wxignE-9DRQ
     status: extracted
+    at: 2026-10-12
+  - id: WY-r2csyqYA
+    platform: youtube
+    channel: DotDager
+    title: Gordito cosas habla de compu.
+    url: https://www.youtube.com/watch?v=WY-r2csyqYA
+    status: discovered
+    duration: 11961
     at: 2026-10-12
   - id: WY0zBFjUGBQ
     platform: youtube
@@ -4789,6 +5775,29 @@ sources:
     url: https://www.youtube.com/watch?v=xUtg8veMxGg
     status: extracted
     at: 2026-10-12
+  - id: Xv4nWiIrySQ
+    platform: youtube
+    channel: DotDager
+    title: Plática cosítica ft. gordito ordenador | !discord !falopa
+    url: https://www.youtube.com/watch?v=Xv4nWiIrySQ
+    status: discovered
+    duration: 15628
+    at: 2026-10-12
+  - id: xvD3oCMfS9s
+    platform: youtube
+    channel: ElAntroDeDager
+    title: "Si no duele no sirve #shorts"
+    url: https://www.youtube.com/shorts/xvD3oCMfS9s
+    status: discovered
+    at: 2026-10-12
+  - id: XvPnPMY-a4s
+    platform: youtube
+    channel: DotDager
+    title: AAAA es el mejor stack y el Mortuary Assistant también | AAAA stack 2
+    url: https://www.youtube.com/watch?v=XvPnPMY-a4s
+    status: discovered
+    duration: 16003
+    at: 2026-10-12
   - id: XwMDHg2_cWU
     platform: youtube
     channel: DagerClips
@@ -4804,6 +5813,22 @@ sources:
     duration: 643
     url: https://www.youtube.com/watch?v=xY0eX_UcgX4
     status: merged
+    at: 2026-10-12
+  - id: Y0viQLHKjYw
+    platform: youtube
+    channel: DotDager
+    title: Gordito compu prueba vibe coding y habla de (cosas).
+    url: https://www.youtube.com/watch?v=Y0viQLHKjYw
+    status: discovered
+    duration: 7973
+    at: 2026-10-12
+  - id: Y1lYtATUKyI
+    platform: youtube
+    channel: DotDager
+    title: EL NOSTRADAMUS CHINO (y otras cosas) | !discord !falopa !links
+    url: https://www.youtube.com/watch?v=Y1lYtATUKyI
+    status: discovered
+    duration: 13236
     at: 2026-10-12
   - id: Y1mxAAAT4As
     platform: youtube
@@ -4891,6 +5916,14 @@ sources:
     url: https://www.youtube.com/watch?v=YgQs3tq7uJ4
     status: merged
     at: 2026-10-12
+  - id: YhF2OS87Tsg
+    platform: youtube
+    channel: DotDager
+    title: SE PUDRIÓ TODO | !discord !falopa !links
+    url: https://www.youtube.com/watch?v=YhF2OS87Tsg
+    status: discovered
+    duration: 15579
+    at: 2026-10-12
   - id: yHWsSgVWsAM
     platform: youtube
     channel: DagerClips
@@ -4912,6 +5945,29 @@ sources:
     title: Subabstraiganse.
     url: https://www.youtube.com/shorts/yoc-NOnKzVc
     status: extracted
+    at: 2026-10-12
+  - id: YoKLvuxH5ec
+    platform: youtube
+    channel: DotDager
+    title: LA IA SE REBELA (otra vez) | Clawdbot/Moltbook |  !discord !falopa !links
+    url: https://www.youtube.com/watch?v=YoKLvuxH5ec
+    status: discovered
+    duration: 13281
+    at: 2026-10-12
+  - id: YOzspH_MDHg
+    platform: youtube
+    channel: DotDager
+    title: "La subtrama de la mosca. #programación #fyp"
+    url: https://www.youtube.com/shorts/YOzspH_MDHg
+    status: discovered
+    at: 2026-10-12
+  - id: Yph-3g-aZCs
+    platform: youtube
+    channel: DotDager
+    title: SÍ QUIERO PRENDER (y otras cosas) | !discord !falopa !links
+    url: https://www.youtube.com/watch?v=Yph-3g-aZCs
+    status: discovered
+    duration: 17317
     at: 2026-10-12
   - id: YpRNrDn7Wj0
     platform: youtube
@@ -4957,6 +6013,13 @@ sources:
     title: ¿Te puedo hacer una pregunta?
     url: https://www.youtube.com/shorts/YRybjqu2q8A
     status: extracted
+    at: 2026-10-12
+  - id: YSd5vyZeze4
+    platform: youtube
+    channel: ElAntroDeDager
+    title: "La motivación está sobrevalorada #shorts"
+    url: https://www.youtube.com/shorts/YSd5vyZeze4
+    status: discovered
     at: 2026-10-12
   - id: YtdPq8eHirU
     platform: youtube
@@ -5017,6 +6080,22 @@ sources:
     status: skipped
     at: 2026-10-12
     reason: sin transcripción automática
+  - id: z6fY6k1VgS4
+    platform: youtube
+    channel: DotDager
+    title: ANUNCIO IMPORTANTE | !discord !falopa !links
+    url: https://www.youtube.com/watch?v=z6fY6k1VgS4
+    status: discovered
+    duration: 10495
+    at: 2026-10-12
+  - id: z95tTIuYSIc
+    platform: youtube
+    channel: DotDager
+    title: Cosas son habladas por gordito compu | !discord !falopa !links
+    url: https://www.youtube.com/watch?v=z95tTIuYSIc
+    status: discovered
+    duration: 13419
+    at: 2026-10-12
   - id: za0LScn4-yU
     platform: youtube
     channel: DotDager
@@ -5055,6 +6134,22 @@ sources:
     url: https://www.youtube.com/watch?v=ZERfArlj-Xk
     status: extracted
     at: 2026-10-12
+  - id: ZFOy2EWDIWk
+    platform: youtube
+    channel: DotDager
+    title: "!Delgado !simpu habla de cosas."
+    url: https://www.youtube.com/watch?v=ZFOy2EWDIWk
+    status: discovered
+    duration: 14513
+    at: 2026-10-12
+  - id: zFqbHHW5lU8
+    platform: youtube
+    channel: DotDager
+    title: LINKEDIN TE ESPÍA (y otras cosas) | !discord !falopa !links
+    url: https://www.youtube.com/watch?v=zFqbHHW5lU8
+    status: discovered
+    duration: 9294
+    at: 2026-10-12
   - id: zHowe46ZdbM
     platform: youtube
     channel: DotDager
@@ -5091,6 +6186,22 @@ sources:
     title: "Que difícil ser panadero che. 🥖. #fyp #filosofia #platón #aristoteles #clip #streamer  #democracia"
     url: https://www.youtube.com/shorts/Zk3G9GQD54k
     status: merged
+    at: 2026-10-12
+  - id: ZMYS6nGvLFg
+    platform: youtube
+    channel: DotDager
+    title: Breve plática cosística | !discord !falopa !links
+    url: https://www.youtube.com/watch?v=ZMYS6nGvLFg
+    status: discovered
+    duration: 15008
+    at: 2026-10-12
+  - id: zN68tckQo2U
+    platform: youtube
+    channel: DotDager
+    title: Pordito gompu habla de (co)sas | !discord !falopa
+    url: https://www.youtube.com/watch?v=zN68tckQo2U
+    status: discovered
+    duration: 21332
     at: 2026-10-12
   - id: Znf_53CtOlM
     platform: youtube
@@ -5160,6 +6271,14 @@ sources:
     duration: 796
     url: https://www.youtube.com/watch?v=zve_BSofDIM
     status: extracted
+    at: 2026-10-12
+  - id: zX4R8ObzK3g
+    platform: youtube
+    channel: DotDager
+    title: CAMPAÑA ANTIARGENTINA (y otras cosas) | !discord !falopa !links
+    url: https://www.youtube.com/watch?v=zX4R8ObzK3g
+    status: discovered
+    duration: 9661
     at: 2026-10-12
   - id: ZxuM4UFN73A
     platform: youtube
