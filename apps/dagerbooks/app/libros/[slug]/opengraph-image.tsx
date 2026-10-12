@@ -1,5 +1,5 @@
 import { getBook, getBooks } from "@/lib/catalog/queries";
-import { LEVEL_LABELS } from "@/lib/catalog/schema";
+import { LEVEL_LABELS } from "@/lib/labels";
 import { OG_CONTENT_TYPE, OG_SIZE, ogImage } from "@/lib/seo/og";
 
 export const alt = "Ficha del libro en DagerBooks: título, autor, zona y la línea de subte a la que pertenece";

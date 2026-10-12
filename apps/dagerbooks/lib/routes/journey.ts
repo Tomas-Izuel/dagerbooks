@@ -1,6 +1,7 @@
 import { lineInfo } from "@/components/page/lines";
 import { getBook } from "@/lib/catalog/queries";
-import { LEVEL_LABELS, type Gap, type Route } from "@/lib/catalog/schema";
+import { type Gap, type Route } from "@/lib/catalog/schema";
+import { LEVEL_LABELS } from "@/lib/labels";
 import { bookPath } from "@/lib/seo/site";
 
 export interface JourneyQuote {

@@ -4,7 +4,7 @@ import { Dotted } from "@/components/page/Dotted";
 import Link from "next/link";
 import type { CSSProperties } from "react";
 import { LineDisc } from "@/components/ui/LineDisc";
-import { ROUTE_KIND_LABELS } from "@/lib/catalog/schema";
+import { ROUTE_KIND_LABELS } from "@/lib/labels";
 import type { RouteSummary } from "@/lib/routes/progress";
 import styles from "./RouteBanner.module.css";
 

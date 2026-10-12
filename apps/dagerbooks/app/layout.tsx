@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import type { ReactNode } from "react";
 import { Analytics } from "@vercel/analytics/next";
 import { Big_Shoulders, Overpass, Overpass_Mono } from "next/font/google";
+import config from "@/creator.config";
 import { SITE_DESCRIPTION, SITE_NAME, SITE_URL } from "@/lib/seo";
 import "./styles/globals.css";
 
@@ -26,7 +27,7 @@ const overpassMono = Overpass_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  title: { default: `${SITE_NAME} · El mapa de lecturas de Dager`, template: `%s | ${SITE_NAME}` },
+  title: { default: config.site.defaultTitle, template: `%s | ${SITE_NAME}` },
   description: SITE_DESCRIPTION,
 };
 

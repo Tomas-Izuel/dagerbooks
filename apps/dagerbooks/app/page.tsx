@@ -3,7 +3,7 @@ import { Suspense } from "react";
 import Link from "next/link";
 import { Explorer, type BoardLine, type PanelEntry } from "@/components/map/Explorer";
 import type { MapDensityLayout, MapGeometrySet, MapNodeMeta } from "@/components/map/types";
-import { RECOMMENDATION_LABELS } from "@/lib/catalog/schema";
+import { RECOMMENDATION_LABELS } from "@/lib/labels";
 import { loadCatalog } from "@/lib/catalog/load";
 import { computeLayout, DENSITY_PRESETS } from "@/lib/catalog/layout";
 import { booksInSector, isEntryPoint, relatedBooks } from "@/lib/catalog/queries";

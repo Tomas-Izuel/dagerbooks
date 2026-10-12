@@ -1,5 +1,5 @@
 import { getRoute, getRoutes } from "@/lib/catalog/queries";
-import { ROUTE_KIND_LABELS } from "@/lib/catalog/schema";
+import { ROUTE_KIND_LABELS } from "@/lib/labels";
 import { OG_CONTENT_TYPE, OG_SIZE, ogImage } from "@/lib/seo/og";
 
 export const alt = "Ruta de lectura de DagerBooks: un itinerario de libros como una línea de subte";

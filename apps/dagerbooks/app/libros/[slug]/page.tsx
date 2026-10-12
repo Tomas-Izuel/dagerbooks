@@ -10,7 +10,8 @@ import {
   getTopic,
   relatedBooks,
 } from "@/lib/catalog/queries";
-import { LEVEL_LABELS, RECOMMENDATION_LABELS, type Book } from "@/lib/catalog/schema";
+import { type Book } from "@/lib/catalog/schema";
+import { LEVEL_LABELS, RECOMMENDATION_LABELS } from "@/lib/labels";
 import { bookMetadata } from "@/lib/seo/metadata";
 import { bookJsonLd, jsonLdString } from "@/lib/seo/jsonld";
 import { bookPath, openLibraryCover, topicPath } from "@/lib/seo/site";

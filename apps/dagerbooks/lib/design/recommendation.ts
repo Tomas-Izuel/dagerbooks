@@ -2,7 +2,7 @@ import type { Recommendation } from "@/lib/catalog/schema";
 
 /**
  * Cliente-seguro: sólo importa el TIPO del esquema (no arrastra zod al bundle).
- * Los textos viven en RECOMMENDATION_LABELS (schema.ts) y llegan por props desde el servidor.
+ * Los textos viven en RECOMMENDATION_LABELS (creator.config.ts) y llegan por props desde el servidor.
  */
 export const REC_ORDER = ["fuerte", "interesante", "mencion"] as const satisfies readonly Recommendation[];
 

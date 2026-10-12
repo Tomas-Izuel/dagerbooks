@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import type { Book, Topic } from "@/lib/catalog/schema";
-import { LEVEL_LABELS } from "@/lib/catalog/schema";
+import config from "@/creator.config";
+import { LEVEL_LABELS } from "@/lib/labels";
 import { SITE_LOCALE, SITE_NAME, absoluteUrl, bookPath, topicPath } from "./site";
 
 const clip = (s: string, n = 160) => (s.length > n ? `${s.slice(0, n - 1).trimEnd()}…` : s);
@@ -9,7 +10,7 @@ export function bookMetadata(book: Book): Metadata {
   const by = book.authors?.length ? ` de ${book.authors.join(", ")}` : "";
   const title = `${book.title}${by}`;
   const description = clip(
-    book.summary ?? `${book.title}: lectura nivel ${LEVEL_LABELS[book.level].toLowerCase()} recomendada por Dager.`,
+    book.summary ?? config.copy.bookDescriptionFallback(book.title, LEVEL_LABELS[book.level]),
   );
   const url = absoluteUrl(bookPath(book.id));
   return {

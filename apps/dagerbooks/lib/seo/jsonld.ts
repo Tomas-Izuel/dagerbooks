@@ -59,7 +59,7 @@ export function novedadesJsonLd(updates: SiteUpdate[]) {
   return {
     "@context": "https://schema.org",
     "@type": "ItemList",
-    name: "Novedades de DagerBooks",
+    name: `Novedades de ${SITE_NAME}`,
     url: absoluteUrl("/novedades"),
     numberOfItems: updates.length,
     itemListElement: updates.map((u, i) => ({
@@ -95,7 +95,7 @@ export function routesJsonLd(routes: Route[]) {
   return {
     "@context": "https://schema.org",
     "@type": "ItemList",
-    name: "Rutas de lectura de DagerBooks",
+    name: `Rutas de lectura de ${SITE_NAME}`,
     url: absoluteUrl("/rutas"),
     numberOfItems: routes.length,
     itemListElement: routes.map((r, i) => ({

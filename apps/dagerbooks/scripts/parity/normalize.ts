@@ -19,6 +19,8 @@ export function normalizeText(text: string, buildId: string): string {
       .replace(/-module__[\w-]{6}__/g, "-module__[h]__")
       // RSC (crudo o embebido en el HTML como string): 2:I[47314,[...],"default"]
       .replace(/([0-9a-f]+):I\[\d+,/g, "$1:I[[module],")
+      // Cache-buster de las imágenes OG: cambia con el código de la ruta; la imagen se compara aparte.
+      .replace(/(opengraph-image|twitter-image)\?[0-9a-f]{16}/g, "$1?[hash]")
       // .meta: "key": "/route-cache/APP_PAGE/<hash>"
       .replace(/(\/route-cache\/[A-Z_]+\/)[0-9a-f]+/g, "$1[hash]")
   );

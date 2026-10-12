@@ -7,20 +7,6 @@ export const KINDS = ["book", "essay", "paper", "course", "textbook"] as const;
 export const RECOMMENDATION_LEVELS = ["fuerte", "interesante", "mencion"] as const;
 export type Recommendation = (typeof RECOMMENDATION_LEVELS)[number];
 
-export const RECOMMENDATION_LABELS: Record<Recommendation, { label: string; description: string }> = {
-  fuerte: { label: "Lo súper recomienda", description: "Lectura imprescindible o favorita: insiste en que la lean." },
-  interesante: { label: "Ideas interesantes", description: "Lo valora o lo recomienda con reservas; tiene ideas que le sirven." },
-  mencion: { label: "Mención curiosa", description: "Lo cita o lo nombra, pero no lo recomienda." },
-};
-
-export const LEVEL_LABELS: Record<number, string> = {
-  0: "Raíz",
-  1: "Introductorio",
-  2: "Intermedio",
-  3: "Avanzado",
-  4: "Especialista",
-};
-
 const Slug = z.string().regex(SLUG_RE, {
   error: "debe ser un slug en kebab-case (a-z, 0-9 y guiones)",
 });
@@ -40,7 +26,7 @@ export const RelatedSchema = z.strictObject({
 
 export const GAP_SEVERITIES = ["fuerte", "muy-fuerte"] as const;
 
-/** Tramo a pie: el salto entre dos libros no tiene parada en la red de Dager. */
+/** Tramo a pie: el salto entre dos libros no tiene parada en la red del creador. */
 export const GapSchema = z.strictObject({
   severity: z.enum(GAP_SEVERITIES, { error: 'severity debe ser "fuerte" o "muy-fuerte"' }),
   bridge: z
@@ -146,11 +132,10 @@ export const UpdatesFileSchema = z.array(UpdateSchema);
 
 export const ROUTE_KINDS = ["corriente", "objetivo"] as const;
 export type RouteKind = (typeof ROUTE_KINDS)[number];
-export const ROUTE_KIND_LABELS: Record<RouteKind, string> = { corriente: "Corriente", objetivo: "Objetivo" };
 
 export const ROUTE_LIMITS = { name: 40, promise: 140, summary: 320, why: 160, steps: [4, 10] } as const;
 
-/** Evidencia de que Dager dictó el orden de este paso (video o stream). */
+/** Evidencia de que el creador dictó el orden de este paso (video o stream). */
 export const RouteOrderSchema = z.strictObject({
   url: z.url({ error: "url inválida" }),
   timestamp: z.string().min(1).optional(),
@@ -209,7 +194,7 @@ export type Book = Omit<RawBook, "confidence" | "recommendation" | "leadsTo"> & 
   /** Tramos a pie por id destino (solo las aristas anotadas). */
   gaps: Record<string, Gap>;
   confidence: "low" | "high";
-  /** Nivel de recomendación de Dager; "interesante" si el YAML no lo declara. No cuenta para "por completar". */
+  /** Nivel de recomendación del creador; "interesante" si el YAML no lo declara. No cuenta para "por completar". */
   recommendation: Recommendation;
   /** Campos faltantes que causan confidence "low" (vacío si se forzó). */
   missing: MissingField[];

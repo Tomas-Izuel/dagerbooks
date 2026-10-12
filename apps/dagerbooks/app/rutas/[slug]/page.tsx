@@ -9,7 +9,7 @@ import { lineInfo } from "@/components/page/lines";
 import { FollowButton } from "@/components/routes/FollowButton";
 import { RouteJourney } from "@/components/routes/RouteJourney";
 import { getBook, getRoute, getRoutes } from "@/lib/catalog/queries";
-import { ROUTE_KIND_LABELS } from "@/lib/catalog/schema";
+import { ROUTE_KIND_LABELS } from "@/lib/labels";
 import { journey } from "@/lib/routes/journey";
 import { jsonLdString, routeJsonLd } from "@/lib/seo/jsonld";
 import { routeMetadata } from "@/lib/seo/metadata";

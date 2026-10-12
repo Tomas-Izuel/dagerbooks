@@ -48,7 +48,7 @@ export interface ExplorerProps {
   explorerNodes: ExplorerNode[];
   searchDocs: SearchDoc[];
   panels: Record<string, PanelEntry>;
-  /** Textos de cada nivel (RECOMMENDATION_LABELS, del servidor). */
+  /** Textos de cada nivel (RECOMMENDATION_LABELS de creator.config.ts, del servidor). */
   recLabels: Record<Recommendation, { label: string; description: string }>;
   /** Última actualización del sitio para el aviso (omitir si no hay). */
   update?: UpdateNoticeData;

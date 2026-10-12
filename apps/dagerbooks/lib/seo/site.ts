@@ -1,7 +1,8 @@
-export const SITE_NAME = "DagerBooks";
-export const SITE_DESCRIPTION =
-  "Mapa de lecturas recomendadas por Dager, organizado por tema y nivel. Proyecto de fans, no oficial.";
-export const SITE_LOCALE = "es_AR";
+import config from "@/creator.config";
+
+export const SITE_NAME = config.site.name;
+export const SITE_DESCRIPTION = config.site.description;
+export const SITE_LOCALE = config.site.locale;
 
 /**
  * Canonical origin. Order: explicit NEXT_PUBLIC_SITE_URL, Vercel production domain,
