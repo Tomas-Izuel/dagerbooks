@@ -1,0 +1,10 @@
+id: meditations
+title: Meditations
+authors:
+  - Marcus Aurelius
+year: 2020
+kind: book
+editions:
+  - isbn: "9786071122254"
+asin:
+  es: "6071122252"

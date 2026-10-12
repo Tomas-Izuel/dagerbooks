@@ -1,0 +1,12 @@
+id: domain-driven-design
+title: Domain-Driven Design
+authors:
+  - Eric Evans
+year: 2003
+kind: book
+openLibrary:
+  coverId: 5548424
+editions:
+  - isbn: "9780321125217"
+asin:
+  es: "0321125215"

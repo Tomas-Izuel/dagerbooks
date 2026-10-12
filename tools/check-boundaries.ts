@@ -3,7 +3,8 @@
  *   (a) packages/ no importa código de una app (`@/…`, `apps/…`)
  *   (b) una app no importa otra app
  *   (c) packages/ no nombra a ningún creador: nombres, ids, handles y dominios salen de cada
- *       apps/<x>/creator.config.ts (lista explícita, no heurística)
+ *       apps/<x>/creator.config.ts (lista explícita, no heurística). Excepción: el estado de ingesta
+ *       packages/pipeline/state/<x>.yaml puede nombrar a su propio creador.
  */
 import fs from "node:fs";
 import path from "node:path";
@@ -85,7 +86,10 @@ async function main() {
   const terms = await creatorTerms();
   for (const file of walk(path.join(ROOT, "packages")).filter((f) => TEXT.test(f))) {
     const text = fs.readFileSync(file, "utf8").toLowerCase();
+    // El estado de ingesta de un creador (packages/pipeline/state/<app>.yaml) es suyo por diseño.
+    const ownState = /^packages\/pipeline\/state\/([^/]+)\.yaml$/.exec(rel(file))?.[1];
     for (const { app, term } of terms) {
+      if (app === ownState) continue;
       if (text.includes(term.toLowerCase())) problems.push(`${rel(file)}: nombra a un creador ("${term}", de apps/${app})`);
     }
   }

@@ -1,0 +1,13 @@
+id: peopleware
+title: Peopleware
+authors:
+  - Tom DeMarco
+  - Timothy Lister
+year: 1987
+kind: book
+openLibrary:
+  coverId: 711859
+editions:
+  - isbn: "9780932633057"
+asin:
+  es: "0932633056"

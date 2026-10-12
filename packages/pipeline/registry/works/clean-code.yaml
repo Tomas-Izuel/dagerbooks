@@ -1,0 +1,13 @@
+id: clean-code
+title: Clean Code
+authors:
+  - Robert C. Martin
+year: 2008
+kind: book
+openLibrary:
+  coverId: 8065615
+editions:
+  - isbn: "9780132350884"
+asin:
+  es: "0132350882"
+titleEs: Código limpio

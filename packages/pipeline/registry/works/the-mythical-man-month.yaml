@@ -1,0 +1,13 @@
+id: the-mythical-man-month
+title: The Mythical Man-Month
+authors:
+  - Frederick P. Brooks Jr.
+year: 1975
+kind: book
+openLibrary:
+  coverId: 6915361
+editions:
+  - isbn: "9780201835953"
+asin:
+  es: "0201835959"
+titleEs: "El mítico hombre-mes: ensayos sobre ingeniería de software"

@@ -1,0 +1,13 @@
+id: the-information
+title: The Information
+authors:
+  - James Gleick
+year: 2011
+kind: book
+openLibrary:
+  coverId: 6699475
+editions:
+  - isbn: "9780307379573"
+asin:
+  es: "0007225741"
+titleEs: "La información: una historia, una teoría, un torrente"

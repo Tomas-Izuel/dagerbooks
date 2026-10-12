@@ -1,0 +1,12 @@
+id: book-of-proof
+title: Book of Proof
+authors:
+  - Richard Hammack
+year: 2009
+kind: textbook
+openLibrary:
+  coverId: 10439715
+editions:
+  - isbn: "9780982406205"
+asin:
+  es: "0982406207"

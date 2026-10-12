@@ -9,7 +9,8 @@
     "lint": "turbo run lint && pnpm check:boundaries",
     "validate": "turbo run validate",
     "test": "turbo run test",
-    "check:boundaries": "tsx tools/check-boundaries.ts"
+    "check:boundaries": "tsx tools/check-boundaries.ts",
+    "pipeline": "tsx packages/pipeline/src/cli.ts"
   },
   "devDependencies": {
     "tsx": "^4.23.15",

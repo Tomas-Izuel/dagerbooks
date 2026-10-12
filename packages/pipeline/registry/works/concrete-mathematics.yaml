@@ -1,0 +1,14 @@
+id: concrete-mathematics
+title: Concrete Mathematics
+authors:
+  - Ronald L. Graham
+  - Donald E. Knuth
+  - Oren Patashnik
+year: 1989
+kind: textbook
+openLibrary:
+  coverId: 135182
+editions:
+  - isbn: "9780201558029"
+asin:
+  es: "0201558025"

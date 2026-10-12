@@ -1,0 +1,15 @@
+id: introduction-to-algorithms
+title: Introduction to Algorithms
+authors:
+  - Thomas H. Cormen
+  - Charles E. Leiserson
+  - Ronald L. Rivest
+  - Clifford Stein
+year: 1990
+kind: textbook
+openLibrary:
+  coverId: 2341462
+editions:
+  - isbn: "9780262031417"
+asin:
+  es: "0262031418"

@@ -1,0 +1,13 @@
+id: sapiens
+title: Sapiens
+authors:
+  - Yuval Noah Harari
+year: 2011
+kind: book
+openLibrary:
+  coverId: 15247651
+editions:
+  - isbn: "9780062316103"
+asin:
+  es: "0099590085"
+titleEs: "Sapiens: de animales a dioses"

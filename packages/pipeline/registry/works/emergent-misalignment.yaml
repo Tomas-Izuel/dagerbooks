@@ -1,0 +1,6 @@
+id: emergent-misalignment
+title: "Emergent Misalignment: Narrow finetuning can produce broadly misaligned LLMs"
+authors:
+  - Jan Betley
+year: 2025
+kind: paper

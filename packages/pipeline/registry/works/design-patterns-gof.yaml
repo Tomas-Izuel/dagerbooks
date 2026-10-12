@@ -1,0 +1,16 @@
+id: design-patterns-gof
+title: Design Patterns
+authors:
+  - Erich Gamma
+  - Richard Helm
+  - Ralph Johnson
+  - John Vlissides
+year: 1995
+kind: book
+openLibrary:
+  coverId: 6601119
+editions:
+  - isbn: "9780201633610"
+asin:
+  es: "0201633612"
+titleEs: Patrones de diseño

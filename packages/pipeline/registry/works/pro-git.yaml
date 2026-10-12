@@ -1,0 +1,13 @@
+id: pro-git
+title: Pro Git
+authors:
+  - Scott Chacon
+  - Ben Straub
+year: 2009
+kind: book
+openLibrary:
+  coverId: 7892827
+editions:
+  - isbn: "9781430218333"
+asin:
+  es: "1430218339"

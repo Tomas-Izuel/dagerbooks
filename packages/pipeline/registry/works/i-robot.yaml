@@ -1,0 +1,13 @@
+id: i-robot
+title: I, Robot
+authors:
+  - Isaac Asimov
+year: 1950
+kind: book
+openLibrary:
+  coverId: 12385229
+editions:
+  - isbn: "9780812439250"
+asin:
+  es: "0812439252"
+titleEs: Yo, robot

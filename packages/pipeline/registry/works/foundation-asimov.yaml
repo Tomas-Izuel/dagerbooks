@@ -1,0 +1,13 @@
+id: foundation-asimov
+title: Foundation
+authors:
+  - Isaac Asimov
+year: 1951
+kind: book
+openLibrary:
+  coverId: 14612610
+editions:
+  - isbn: "9780553293357"
+asin:
+  es: "0553293354"
+titleEs: Fundación

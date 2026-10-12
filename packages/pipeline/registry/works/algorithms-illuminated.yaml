@@ -1,0 +1,12 @@
+id: algorithms-illuminated
+title: Algorithms Illuminated
+authors:
+  - Tim Roughgarden
+year: 2018
+kind: textbook
+openLibrary:
+  coverId: 9230325
+editions:
+  - isbn: "9780999282908"
+asin:
+  es: "0999282905"

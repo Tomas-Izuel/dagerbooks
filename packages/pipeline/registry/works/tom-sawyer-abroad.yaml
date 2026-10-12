@@ -1,0 +1,13 @@
+id: tom-sawyer-abroad
+title: Tom Sawyer Abroad
+authors:
+  - Mark Twain
+year: 1894
+kind: book
+openLibrary:
+  coverId: 9162125
+editions:
+  - isbn: "9781443425438"
+asin:
+  es: "0520271513"
+titleEs: Tom Sawyer en el extranjero

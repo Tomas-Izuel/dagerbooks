@@ -1,0 +1,13 @@
+id: operating-systems-three-easy-pieces
+title: "Operating Systems: Three Easy Pieces"
+authors:
+  - Remzi H. Arpaci-Dusseau
+  - Andrea C. Arpaci-Dusseau
+year: 2018
+kind: textbook
+openLibrary:
+  coverId: 10401368
+editions:
+  - isbn: "9781985086593"
+asin:
+  es: 198508659X
