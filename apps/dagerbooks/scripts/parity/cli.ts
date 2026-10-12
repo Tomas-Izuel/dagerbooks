@@ -98,14 +98,15 @@ function diff(args: string[]) {
   for (const f of a) if (!b.has(f)) problems.push(`- falta en head: ${f}`);
   for (const f of b) if (!a.has(f)) problems.push(`+ nuevo en head: ${f}`);
   for (const f of [...a].filter((f) => b.has(f)).sort()) {
-    const x = fs.readFileSync(path.join(base, f), "utf8");
-    const y = fs.readFileSync(path.join(head, f), "utf8");
+    // Se vuelve a normalizar: así un snapshot viejo sirve aunque la normalización haya mejorado.
+    const x = normalizeText(fs.readFileSync(path.join(base, f), "utf8"), "");
+    const y = normalizeText(fs.readFileSync(path.join(head, f), "utf8"), "");
     if (x !== y) problems.push(`~ distinto: ${f}\n    ${firstDifference(x, y)}`);
   }
   if (problems.length) {
     console.error(`paridad: ${problems.length} diferencia${problems.length === 1 ? "" : "s"}\n`);
-    console.error(problems.slice(0, 40).join("\n"));
-    if (problems.length > 40) console.error(`\n… y ${problems.length - 40} más`);
+    console.error(problems.slice(0, 12).join("\n"));
+    if (problems.length > 12) console.error(`\n… y ${problems.length - 12} más`);
     process.exit(1);
   }
   console.log(`paridad: idéntico (${a.size} archivos)`);

@@ -12,12 +12,13 @@ next-env.d.ts
 research/
 
 # Impeccable: artefactos locales (capturas, referencias, cache)
-.impeccable/review/
-.impeccable/reference/
-.impeccable/tmp/
-.impeccable/questions/
-.impeccable/hook.cache.json
-.impeccable/config.local.json
+**/.impeccable/review/
+**/.impeccable/reference/
+**/.impeccable/tmp/
+**/.impeccable/questions/
+**/.impeccable/hook.cache.json
+**/.impeccable/config.local.json
+**/.impeccable/live/
 
 # Claude Code local settings
 .claude/settings.local.json

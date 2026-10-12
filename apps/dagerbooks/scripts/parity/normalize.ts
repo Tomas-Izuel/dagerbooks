@@ -17,8 +17,8 @@ export function normalizeText(text: string, buildId: string): string {
       .replace(/_[0-9a-f]{8}-module__/g, "-module__")
       // PageShell-module__9arEHa__shell
       .replace(/-module__[\w-]{6}__/g, "-module__[h]__")
-      // RSC: 2:I[47314,[...],"default"]
-      .replace(/(^|\n)([0-9a-f]+):I\[\d+,/g, "$1$2:I[[module],")
+      // RSC (crudo o embebido en el HTML como string): 2:I[47314,[...],"default"]
+      .replace(/([0-9a-f]+):I\[\d+,/g, "$1:I[[module],")
       // .meta: "key": "/route-cache/APP_PAGE/<hash>"
       .replace(/(\/route-cache\/[A-Z_]+\/)[0-9a-f]+/g, "$1[hash]")
   );

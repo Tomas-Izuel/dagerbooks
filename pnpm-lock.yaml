@@ -6,7 +6,9 @@ settings:
 
 importers:
 
-  .:
+  .: {}
+
+  apps/dagerbooks:
     dependencies:
       '@vercel/analytics':
         specifier: ^2.0.1
