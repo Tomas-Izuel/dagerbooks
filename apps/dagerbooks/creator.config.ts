@@ -4,40 +4,7 @@
  * conocen nada de esto; lo reciben desde acá.
  */
 
-import type { Marketplace } from "@estantes/catalog";
-
-export interface CreatorConfig {
-  /** Slug de la app (carpeta en apps/ y namespace de localStorage). */
-  id: string;
-  /** Nombre del creador, tal como se lo nombra en los textos. */
-  name: string;
-  site: {
-    name: string;
-    description: string;
-    /** Locale de Open Graph. */
-    locale: string;
-    defaultTitle: string;
-  };
-  labels: {
-    recommendation: Record<"fuerte" | "interesante" | "mencion", { label: string; description: string }>;
-    level: Record<number, string>;
-    routeKind: Record<"corriente" | "objetivo", string>;
-  };
-  copy: {
-    /** Descripción de un libro sin summary, para metadata. */
-    bookDescriptionFallback: (title: string, levelLabel: string) => string;
-  };
-  affiliate: { tag: string; marketplace: Marketplace } | null;
-  brand: { official: boolean; assets: "none" | "provided" };
-  /** Prefijo de las claves de localStorage. Cambiarlo borra el progreso de los lectores. */
-  storageNamespace: string;
-  modules: { progression: boolean; routes: boolean; updates: boolean };
-  voice: { language: "es" | "en"; variant: string };
-  /** Dónde recomienda libros: lo usa el pipeline de ingesta y el formulario de sugerencias. */
-  channels: Array<{ kind: "youtube" | "twitch" | "instagram" | "reddit" | "github"; handle: string; url: string }>;
-}
-
-export const defineCreator = <const T extends CreatorConfig>(config: T): T => config;
+import { defineCreator } from "@estantes/kit";
 
 const config = defineCreator({
   id: "dagerbooks",

@@ -1,3 +1,4 @@
+import { createEnumSetCodec } from "@estantes/kit";
 import type { Recommendation } from "@/lib/catalog/schema";
 
 /**
@@ -20,35 +21,22 @@ export const REC_DOT: Record<Recommendation, { r: number; stroke: number; muted:
   mencion: { r: 5, stroke: 2, muted: true },
 };
 
-export const ALL_RECS: readonly Recommendation[] = REC_ORDER;
+const rec = createEnumSetCodec(REC_ORDER);
 
-export function isRecommendation(v: string): v is Recommendation {
-  return (REC_ORDER as readonly string[]).includes(v);
-}
+export const ALL_RECS: readonly Recommendation[] = rec.all;
+
+export const isRecommendation = rec.is;
 
 /** `?rec=fuerte,interesante`. Tolerante: ignora inválidos y repetidos; vacío o sin válidos = los tres. */
-export function parseRec(raw: string | null | undefined): Recommendation[] {
-  if (!raw) return [...ALL_RECS];
-  const wanted = new Set(raw.split(",").map((s) => s.trim()).filter(isRecommendation));
-  if (wanted.size === 0) return [...ALL_RECS];
-  return REC_ORDER.filter((r) => wanted.has(r));
-}
+export const parseRec = rec.parse;
 
-export const isAllRecs = (rec: readonly Recommendation[]) => rec.length === ALL_RECS.length;
+export const isAllRecs = rec.isAll;
 
 /** Orden canónico; null cuando son los tres (el parámetro se omite de la URL). */
-export function serializeRec(rec: readonly Recommendation[]): string | null {
-  const ordered = REC_ORDER.filter((r) => rec.includes(r));
-  return ordered.length === 0 || ordered.length === ALL_RECS.length ? null : ordered.join(",");
-}
+export const serializeRec = rec.serialize;
 
 /**
  * Siguiente selección al tocar un nivel: alterna, como una casilla. El último activo no se puede apagar
  * (nunca queda en cero); para volver a los tres está "Ver todos".
  */
-export function toggleRec(current: readonly Recommendation[], r: Recommendation): Recommendation[] {
-  if (current.includes(r)) {
-    return current.length === 1 ? [...current] : REC_ORDER.filter((x) => x !== r && current.includes(x));
-  }
-  return REC_ORDER.filter((x) => x === r || current.includes(x));
-}
+export const toggleRec = rec.toggle;

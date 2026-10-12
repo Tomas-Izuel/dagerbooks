@@ -1,27 +1,16 @@
+import { createSite } from "@estantes/kit";
 import config from "@/creator.config";
 
-export const SITE_NAME = config.site.name;
-export const SITE_DESCRIPTION = config.site.description;
-export const SITE_LOCALE = config.site.locale;
+export { openLibraryCover } from "@estantes/kit";
 
-/**
- * Canonical origin. Order: explicit NEXT_PUBLIC_SITE_URL, Vercel production domain,
- * Vercel deployment URL (previews), then localhost for local dev.
- */
-function resolveSiteUrl(): string {
-  const env = process.env;
-  const raw =
-    env.NEXT_PUBLIC_SITE_URL ||
-    (env.VERCEL_PROJECT_PRODUCTION_URL ? `https://${env.VERCEL_PROJECT_PRODUCTION_URL}` : "") ||
-    (env.VERCEL_URL ? `https://${env.VERCEL_URL}` : "") ||
-    "http://localhost:3000";
-  return raw.replace(/\/+$/, "");
-}
-export const SITE_URL = resolveSiteUrl();
+/** El sitio de Dager: nombre, descripción, locale y origen canónico (ver resolveSiteUrl en kit). */
+export const site = createSite(config.site);
 
-export const absoluteUrl = (path = "/") => `${SITE_URL}${path.startsWith("/") ? path : `/${path}`}`;
+export const SITE_NAME = site.name;
+export const SITE_DESCRIPTION = site.description;
+export const SITE_LOCALE = site.locale;
+export const SITE_URL = site.url;
+
+export const absoluteUrl = site.absoluteUrl;
 export const bookPath = (id: string) => `/libros/${id}`;
 export const topicPath = (id: string) => `/temas/${id}`;
-
-export const openLibraryCover = (coverId: number, size: "S" | "M" | "L" = "M") =>
-  `https://covers.openlibrary.org/b/id/${coverId}-${size}.jpg`;

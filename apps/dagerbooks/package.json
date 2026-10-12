@@ -15,6 +15,7 @@
   },
   "dependencies": {
     "@estantes/catalog": "workspace:*",
+    "@estantes/kit": "workspace:*",
     "@vercel/analytics": "^2.0.1",
     "d3-interpolate": "^3.0.1",
     "d3-selection": "^3.0.0",
