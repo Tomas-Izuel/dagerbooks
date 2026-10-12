@@ -9,6 +9,13 @@ export interface CreatorConfig {
   id: string;
   /** Nombre del creador, tal como se lo nombra en los textos. */
   name: string;
+  /** Una frase de quién es (la usan los prompts de extracción). */
+  bio?: string;
+  /**
+   * Estándar de fidelidad del sitio: qué hace falta para que una recomendación entre y cómo se cita.
+   * Lo usan los prompts de /add-books; si falta, se usa el estándar general.
+   */
+  standard?: string;
   site: {
     name: string;
     description: string;

@@ -49,6 +49,10 @@ describe("texto y argumentos", () => {
   });
 
   it("parsea flags con y sin valor", () => {
-    assert.deepEqual(parseArgs(["state", "--creator", "x", "--check"]), { _: ["state"], flags: { creator: "x", check: true } });
+    assert.deepEqual(parseArgs(["prompt", "p", "--creator", "x", "--set", "a=1", "--set", "b=2", "--check"]), {
+      _: ["prompt", "p"],
+      flags: { creator: "x", set: "b=2", check: true },
+      multi: { creator: ["x"], set: ["a=1", "b=2"] },
+    });
   });
 });

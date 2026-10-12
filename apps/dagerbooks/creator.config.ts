@@ -9,6 +9,9 @@ import { defineCreator } from "@estantes/kit";
 const config = defineCreator({
   id: "dagerbooks",
   name: "Dager",
+  bio: "Dager (Mariano Villa), programador y streamer argentino que habla de programación, filosofía, economía e historia",
+  standard:
+    "Cada libro y cada paso se tiene que poder defender si alguien se lo muestra a Dager. No inventes lo que no dijo: si le atribuís algo, tiene que estar en la cita. Las citas son textuales y el link lleva &t= con el segundo exacto.",
   site: {
     name: "DagerBooks",
     description: "Mapa de lecturas recomendadas por Dager, organizado por tema y nivel. Proyecto de fans, no oficial.",

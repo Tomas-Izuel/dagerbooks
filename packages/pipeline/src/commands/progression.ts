@@ -236,3 +236,14 @@ async function revalidate(ctx: Context, cmd: string) {
     process.exitCode = 1;
   }
 }
+
+/** Exporta content/routes.yaml a <out-dir>/<id>.json y una propuesta con el orden actual, para ajustar y volver a armar. */
+export async function routesExport(ctx: Context, outDir: string) {
+  const { parse } = await import("yaml");
+  const routes = parse(fs.readFileSync(path.join(ctx.contentDir, "routes.yaml"), "utf8")) as WrittenRoute[];
+  fs.mkdirSync(outDir, { recursive: true });
+  for (const r of routes) fs.writeFileSync(path.join(outDir, `${r.id}.json`), JSON.stringify(r, null, 1) + "\n");
+  const proposal = path.join(path.dirname(outDir), "propuesta.json");
+  if (!fs.existsSync(proposal)) fs.writeFileSync(proposal, JSON.stringify({ routes: routes.map((r) => ({ id: r.id, kind: r.kind })) }, null, 1) + "\n");
+  console.log(`routes-export: ${routes.length} ruta(s) → ${outDir}`);
+}

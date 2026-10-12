@@ -20,8 +20,10 @@
  *   apply-roadmaps --dir d [--dry]           planes por línea: leadsTo, tramos a pie y niveles (progression)
  *   apply-calibration --file f    decisiones de tramos a pie (progression)
  *   routes-assemble --out-dir d --proposal f  rutas escritas → content/routes.yaml (routes)
+ *   routes-export --out-dir d     content/routes.yaml → d/<id>.json (+ propuesta con el orden actual)
  *   update-entry --file entry.json [--split]   crea o extiende content/updates/<fecha>-<slug>.yaml
  *   affected [--base origin/main]  (sin --creator) sitios afectados por el diff, en JSON
+ *   prompt <plantilla> [--source id] [--batch f] [--set k=v]... [--out f]   rellena un prompt de /add-books
  *
  * PIPELINE_DATA_DIR cambia la carpeta de datos (por defecto <repo>/research/<creador>).
  */
@@ -30,21 +32,23 @@ import { importLegacyState, knownBooks, registryInit, stateSummary } from "./com
 import { batch, discover, fetchSubs, mark, split, transcribeSources } from "./commands/ingest";
 import { asin, enrich, syncMetadata, writeBooks } from "./commands/books";
 import { mergeCommand } from "./commands/merge";
-import { applyCalibration, applyRoadmaps, routesAssemble } from "./commands/progression";
+import { applyCalibration, applyRoadmaps, routesAssemble, routesExport } from "./commands/progression";
 import { affectedCommand, upsertUpdate, type UpdateEntryInput } from "./commands/updates";
+import { promptCommand } from "./commands/prompt";
 import fs from "node:fs";
 import { SOURCE_STATUSES, type SourceStatus } from "./schemas";
 
-export type Args = { _: string[]; flags: Record<string, string | true> };
+export type Args = { _: string[]; flags: Record<string, string | true>; multi: Record<string, string[]> };
 
 export function parseArgs(argv: string[]): Args {
-  const out: Args = { _: [], flags: {} };
+  const out: Args = { _: [], flags: {}, multi: {} };
   for (let i = 0; i < argv.length; i++) {
     const a = argv[i];
     if (a.startsWith("--")) {
       const next = argv[i + 1];
       if (next !== undefined && !next.startsWith("--")) {
         out.flags[a.slice(2)] = next;
+        (out.multi[a.slice(2)] ??= []).push(next);
         i++;
       } else out.flags[a.slice(2)] = true;
     } else out._.push(a);
@@ -105,6 +109,12 @@ export const COMMANDS: Record<string, Command> = {
   "apply-roadmaps": async (ctx, args) => void (await applyRoadmaps(ctx, required(args, "dir"), { dry: args.flags.dry === true })),
   "apply-calibration": (ctx, args) => applyCalibration(ctx, required(args, "file")),
   "routes-assemble": (ctx, args) => routesAssemble(ctx, required(args, "out-dir"), required(args, "proposal")),
+  "routes-export": (ctx, args) => routesExport(ctx, required(args, "out-dir")),
+  prompt: (ctx, args) => {
+    const name = args._[1];
+    if (!name) throw new Error("uso: pipeline prompt <plantilla> --creator <id> [--set clave=valor]...");
+    return promptCommand(ctx, name, { source: flag(args, "source"), batch: flag(args, "batch"), set: args.multi.set ?? [], out: flag(args, "out") });
+  },
   "update-entry": (ctx, args) =>
     upsertUpdate(ctx, JSON.parse(fs.readFileSync(required(args, "file"), "utf8")) as UpdateEntryInput, { split: args.flags.split === true }),
 };
