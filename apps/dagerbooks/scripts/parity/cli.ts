@@ -12,7 +12,7 @@ import fs from "node:fs";
 import path from "node:path";
 import { loadCatalogFrom } from "../../lib/catalog/load";
 import { runGolden } from "./golden";
-import { canonicalJson, isText, normalizeText } from "./normalize";
+import { canonicalJson, isText, normalizeFile } from "./normalize";
 
 function arg(args: string[], name: string, fallback?: string): string {
   const i = args.indexOf(name);
@@ -46,7 +46,7 @@ function snapshot(args: string[]) {
     if (isText(rel)) {
       const dest = path.join(out, "app", rel);
       fs.mkdirSync(path.dirname(dest), { recursive: true });
-      fs.writeFileSync(dest, normalizeText(raw.toString("utf8"), buildId));
+      fs.writeFileSync(dest, normalizeFile(rel, raw.toString("utf8"), buildId));
     } else {
       hashes[rel] = sha(raw);
       // Se guarda la imagen para poder mirarla si el hash cambia.
@@ -92,7 +92,9 @@ function firstDifference(a: string, b: string): string {
 function diff(args: string[]) {
   const [base, head] = args.filter((a, i) => !a.startsWith("--") && !args[i - 1]?.startsWith("--"));
   if (!base || !head) throw new Error("uso: parity diff <base> <head> [--ignore <glob>]");
-  const ignores = args.flatMap((a, i) => (args[i - 1] === "--ignore" ? [globRe(a)] : []));
+  // Los .segments/ son copias parciales del payload para el prefetch: referencian filas de otros
+  // archivos y no se pueden normalizar solos. Su contenido ya está en el .rsc completo y en el HTML.
+  const ignores = [globRe("**.segments/**"), ...args.flatMap((a, i) => (args[i - 1] === "--ignore" ? [globRe(a)] : []))];
   const ignored = (f: string) => ignores.some((re) => re.test(f));
 
   const listing = (dir: string) => new Set(walk(dir).filter((f) => !ignored(f) && !f.startsWith("bin/")));
@@ -118,8 +120,8 @@ function diff(args: string[]) {
   }
   for (const f of [...a].filter((f) => b.has(f) && f !== binaryFile).sort()) {
     // Se vuelve a normalizar: así un snapshot viejo sirve aunque la normalización haya mejorado.
-    const x = normalizeText(fs.readFileSync(path.join(base, f), "utf8"), "");
-    const y = normalizeText(fs.readFileSync(path.join(head, f), "utf8"), "");
+    const x = normalizeFile(f, fs.readFileSync(path.join(base, f), "utf8"), "");
+    const y = normalizeFile(f, fs.readFileSync(path.join(head, f), "utf8"), "");
     if (x !== y) problems.push(`~ distinto: ${f}\n    ${firstDifference(x, y)}`);
   }
   if (problems.length) {
