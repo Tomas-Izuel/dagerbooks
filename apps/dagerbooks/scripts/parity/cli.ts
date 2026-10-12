@@ -49,6 +49,10 @@ function snapshot(args: string[]) {
       fs.writeFileSync(dest, normalizeText(raw.toString("utf8"), buildId));
     } else {
       hashes[rel] = sha(raw);
+      // Se guarda la imagen para poder mirarla si el hash cambia.
+      const dest = path.join(out, "bin", rel.replace(/\.body$/, ".png"));
+      fs.mkdirSync(path.dirname(dest), { recursive: true });
+      fs.writeFileSync(dest, raw);
     }
   }
   fs.writeFileSync(path.join(out, "binary-hashes.json"), canonicalJson(hashes));
@@ -91,13 +95,28 @@ function diff(args: string[]) {
   const ignores = args.flatMap((a, i) => (args[i - 1] === "--ignore" ? [globRe(a)] : []));
   const ignored = (f: string) => ignores.some((re) => re.test(f));
 
-  const listing = (dir: string) => new Set(walk(dir).filter((f) => !ignored(f)));
+  const listing = (dir: string) => new Set(walk(dir).filter((f) => !ignored(f) && !f.startsWith("bin/")));
   const a = listing(base);
   const b = listing(head);
   const problems: string[] = [];
   for (const f of a) if (!b.has(f)) problems.push(`- falta en head: ${f}`);
   for (const f of b) if (!a.has(f)) problems.push(`+ nuevo en head: ${f}`);
-  for (const f of [...a].filter((f) => b.has(f)).sort()) {
+  // Las imágenes OG bajan fuentes y tapas por red: si fallan, cambian sin que cambie el código.
+  // Se informan aparte y no hacen fallar la paridad; revisalas en bin/ de cada snapshot.
+  const binaryFile = "binary-hashes.json";
+  if (a.has(binaryFile) && b.has(binaryFile)) {
+    a.delete(binaryFile);
+    const x = JSON.parse(fs.readFileSync(path.join(base, binaryFile), "utf8")) as Record<string, string>;
+    const y = JSON.parse(fs.readFileSync(path.join(head, binaryFile), "utf8")) as Record<string, string>;
+    for (const k of Object.keys(x)) if (!(k in y)) problems.push(`- falta en head: ${k}`);
+    for (const k of Object.keys(y)) if (!(k in x)) problems.push(`+ nuevo en head: ${k}`);
+    const changed = Object.keys(x).filter((k) => k in y && x[k] !== y[k] && !ignored(k));
+    if (changed.length) {
+      console.warn(`aviso: ${changed.length} imagen(es) OG distintas (puede ser la red); revisalas a mano:`);
+      for (const k of changed) console.warn(`    ${k}`);
+    }
+  }
+  for (const f of [...a].filter((f) => b.has(f) && f !== binaryFile).sort()) {
     // Se vuelve a normalizar: así un snapshot viejo sirve aunque la normalización haya mejorado.
     const x = normalizeText(fs.readFileSync(path.join(base, f), "utf8"), "");
     const y = normalizeText(fs.readFileSync(path.join(head, f), "utf8"), "");
