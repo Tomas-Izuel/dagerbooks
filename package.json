@@ -11,7 +11,8 @@
     "typecheck": "tsc --noEmit",
     "validate": "tsx scripts/validate.ts",
     "check:subway": "tsx scripts/check-subway-layout.ts",
-    "schema": "tsx scripts/generate-schema.ts"
+    "schema": "tsx scripts/generate-schema.ts",
+    "parity": "tsx scripts/parity/cli.ts"
   },
   "dependencies": {
     "@vercel/analytics": "^2.0.1",
