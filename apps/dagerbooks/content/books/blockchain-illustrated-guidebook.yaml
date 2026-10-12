@@ -30,5 +30,6 @@ related:
   - id: chaos-theory
     reason: "orden descentralizado sin autoridad central"
 isbn: "9781510744851"
-asin: "1510744843"
+asin:
+  es: "1510744843"
 coverId: 8814384

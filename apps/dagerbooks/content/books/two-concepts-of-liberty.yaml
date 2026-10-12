@@ -6,7 +6,8 @@ title: "Two Concepts of Liberty"
 titleEs: "Dos conceptos de libertad"
 authors: ["Isaiah Berlin"]
 year: 1958
-asin: "0192810340"
+asin:
+  es: "0192810340"
 kind: essay
 topics: ["economia", "filosofia"]
 level: 3

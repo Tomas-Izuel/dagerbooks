@@ -6,7 +6,8 @@ title: "Laws"
 titleEs: "Las leyes"
 authors: ["Plato"]
 year: -347
-asin: "0140449841"
+asin:
+  es: "0140449841"
 kind: book
 topics: ["filosofia", "economia"]
 level: 4

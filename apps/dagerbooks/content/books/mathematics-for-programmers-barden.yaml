@@ -27,4 +27,5 @@ leadsTo:
       bridge: ["lógica proposicional", "álgebra de conjuntos", "álgebra booleana moderna"]
       note: "Boole escribe con notación del siglo XIX; ayuda llegar con la lógica ya vista."
 isbn: "9780672219276"
-asin: "0672219271"
+asin:
+  es: "0672219271"

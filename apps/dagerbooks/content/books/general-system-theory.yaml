@@ -24,5 +24,6 @@ related:
   - id: the-use-of-knowledge-in-society
     reason: "orden espontáneo y sistemas complejos"
 isbn: "9780807616314"
-asin: "0807604526"
+asin:
+  es: "0807604526"
 coverId: 5508815

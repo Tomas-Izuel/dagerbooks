@@ -6,7 +6,8 @@ title: "El inmortal"
 authors: ["Jorge Luis Borges"]
 year: 1949
 leadsTo: ["el-jardin-de-senderos-que-se-bifurcan"]
-asin: "8499089518"
+asin:
+  es: "8499089518"
 kind: essay
 topics: ["ficcion"]
 level: 1

@@ -6,7 +6,8 @@ title: "The Wealth of Nations"
 titleEs: "La riqueza de las naciones"
 authors: ["Adam Smith"]
 year: 1776
-asin: "0140432086"
+asin:
+  es: "0140432086"
 kind: book
 topics: ["economia"]
 level: 3

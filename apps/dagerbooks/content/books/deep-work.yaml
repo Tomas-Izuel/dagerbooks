@@ -26,5 +26,6 @@ related:
   - id: peopleware
     reason: "concentración y entornos de trabajo productivos"
 isbn: "9781455586660"
-asin: "0349411905"
+asin:
+  es: "0349411905"
 coverId: 7988607

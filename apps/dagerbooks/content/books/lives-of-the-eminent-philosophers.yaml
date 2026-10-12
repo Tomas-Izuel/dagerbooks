@@ -19,5 +19,6 @@ sources:
     quote: "Podés leerlo. Vas a encontrar mucho, mucho texto sobre muchos filósofos. No necesario que te leas todo"
 leadsTo: ["de-finibus"]
 isbn: "9788441318250"
-asin: "8441318255"
+asin:
+  es: "8441318255"
 coverId: 10148252

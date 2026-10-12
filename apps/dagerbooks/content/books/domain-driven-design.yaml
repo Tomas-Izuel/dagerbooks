@@ -16,5 +16,6 @@ sources:
     title: "r/devsarg: estoy haciendo microservicios"
     quote: "Y de yapa Domain-Driven Design... Bounded Context (he attributes it to Fowler; the book is by Evans)"
 isbn: "9780321125217"
-asin: "0321125215"
+asin:
+  es: "0321125215"
 coverId: 5548424

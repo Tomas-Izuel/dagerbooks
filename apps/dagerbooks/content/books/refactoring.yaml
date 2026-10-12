@@ -17,5 +17,6 @@ sources:
     timestamp: "119:55"
     quote: "refactory es un buen libro si si andas buscando libros así genéricos de buenas prácticas"
 isbn: "9780201485677"
-asin: "0201485672"
+asin:
+  es: "0201485672"
 coverId: 134964

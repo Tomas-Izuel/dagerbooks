@@ -6,7 +6,8 @@ title: "Limitarianism: The Case Against Extreme Wealth"
 titleEs: "Limitarismo"
 authors: ["Ingrid Robeyns"]
 year: 2024
-asin: "1802060472"
+asin:
+  es: "1802060472"
 kind: book
 topics: ["economia"]
 level: 3

@@ -17,4 +17,5 @@ sources:
     timestamp: "8:20"
     quote: "Hay un excelente libro que se llama Uy Tiranism for and Against, creo que es una revisión muy muy interesante."
 isbn: "9780521098229"
-asin: "052109822X"
+asin:
+  es: "052109822X"

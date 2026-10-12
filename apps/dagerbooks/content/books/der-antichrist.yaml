@@ -6,7 +6,8 @@ title: "Der Antichrist"
 titleEs: "El anticristo"
 authors: ["Friedrich Nietzsche"]
 year: 1895
-asin: "3458326472"
+asin:
+  es: "3458326472"
 kind: book
 topics: ["filosofia"]
 level: 3

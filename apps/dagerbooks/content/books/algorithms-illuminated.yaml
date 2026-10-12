@@ -28,5 +28,6 @@ sources:
     quote: "te recomiendo la serie de libros que creo que también existe como videos de YouTube que se llama algo hace poco me lo topé me pareció mucho más copado que introductions"
 leadsTo: ["introduction-to-algorithms", "crafting-interpreters"]
 isbn: "9780999282908"
-asin: "0999282905"
+asin:
+  es: "0999282905"
 coverId: 9230325

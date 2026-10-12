@@ -30,5 +30,6 @@ sources:
     timestamp: "83:18"
     quote: "Sácate las distracciones del camino Le atomic habits que tiene muchos buenos consejos sobre cómo hacer esa clase de cosas"
 isbn: "9780735211292"
-asin: "0735211299"
+asin:
+  es: "0735211299"
 coverId: 12539702

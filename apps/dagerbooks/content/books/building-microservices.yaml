@@ -27,5 +27,6 @@ sources:
     quote: "building microservices también pero es orientado específicamente a microservicios igual es un buen libro"
 leadsTo: ["domain-driven-design"]
 isbn: "9781491950357"
-asin: "1491950358"
+asin:
+  es: "1491950358"
 coverId: 8513315

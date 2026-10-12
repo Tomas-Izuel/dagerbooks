@@ -4,7 +4,7 @@
  * conocen nada de esto; lo reciben desde acá.
  */
 
-export type Marketplace = "es" | "com" | "com.mx" | "co.uk" | "de" | "fr" | "it";
+import type { Marketplace } from "@estantes/catalog";
 
 export interface CreatorConfig {
   /** Slug de la app (carpeta en apps/ y namespace de localStorage). */

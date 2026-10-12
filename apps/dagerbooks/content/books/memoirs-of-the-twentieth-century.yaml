@@ -6,7 +6,8 @@ title: "Memoirs of the Twentieth Century"
 titleEs: "Memorias del siglo veinte"
 authors: ["Samuel Madden"]
 year: 1733
-asin: "061538739X"
+asin:
+  es: "061538739X"
 kind: book
 topics: ["ficcion"]
 level: 2

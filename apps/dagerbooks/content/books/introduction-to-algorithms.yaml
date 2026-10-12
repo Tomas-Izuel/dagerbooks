@@ -34,5 +34,6 @@ leadsTo:
       bridge: ["cálculo: límites, derivadas e integrales", "series infinitas", "combinatoria básica"]
       note: "Sin cálculo este libro no se lee: ahí se te corta la vía."
 isbn: "9780262031417"
-asin: "0262031418"
+asin:
+  es: "0262031418"
 coverId: 2341462

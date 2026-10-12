@@ -6,7 +6,8 @@ title: "The World Set Free"
 titleEs: "El mundo liberado"
 authors: ["H. G. Wells"]
 year: 1914
-asin: "1434430278"
+asin:
+  es: "1434430278"
 kind: book
 topics: ["ficcion"]
 level: 1

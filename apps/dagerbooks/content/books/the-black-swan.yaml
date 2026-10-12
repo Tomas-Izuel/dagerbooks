@@ -6,7 +6,8 @@ title: "The Black Swan"
 titleEs: "El cisne negro"
 authors: ["Nassim Nicholas Taleb"]
 year: 2007
-asin: "081297381X"
+asin:
+  es: "081297381X"
 kind: book
 topics: ["desarrollo-personal", "matematicas"]
 level: 3

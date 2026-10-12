@@ -29,5 +29,6 @@ leadsTo:
       note: "Halperin da por sabida la historia del período; conviene llegar con el relato básico."
   - la-fiesta-del-monstruo
 isbn: "9789505579242"
-asin: "9505579241"
+asin:
+  es: "9505579241"
 coverId: 1052132

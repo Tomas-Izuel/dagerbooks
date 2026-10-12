@@ -112,10 +112,20 @@
     "warnings": []
   },
   {
+    "name": "asin sin tienda",
+    "ok": false,
+    "messages": [
+      "libro \"but-how-do-it-know\" › asin: asin va por tienda, por ejemplo asin: { es: \"8417347010\" }",
+      "libro \"tom-sawyer-abroad\" › leadsTo[0]: el libro \"but-how-do-it-know\" no existe",
+      "ruta \"como-funciona-una-computadora\" › steps[1] › book: el libro \"but-how-do-it-know\" no existe"
+    ],
+    "warnings": []
+  },
+  {
     "name": "asin inválido",
     "ok": false,
     "messages": [
-      "libro \"but-how-do-it-know\" › asin: asin inválido (10 caracteres A-Z0-9)",
+      "libro \"but-how-do-it-know\" › asin.es: asin inválido (10 caracteres A-Z0-9)",
       "libro \"tom-sawyer-abroad\" › leadsTo[0]: el libro \"but-how-do-it-know\" no existe",
       "ruta \"como-funciona-una-computadora\" › steps[1] › book: el libro \"but-how-do-it-know\" no existe"
     ],

@@ -29,5 +29,6 @@ sources:
     quote: "Siempre que me preguntas esta clase de libros, menciono soft skills porque para mí es un muy buen libro para desarrolladores"
 leadsTo: ["the-pragmatic-programmer"]
 isbn: "9781617292392"
-asin: "1617292397"
+asin:
+  es: "1617292397"
 coverId: 7443191

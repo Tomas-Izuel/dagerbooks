@@ -5,7 +5,8 @@ seq: 192
 title: "Computer Power and Human Reason: From Judgment to Calculation"
 authors: ["Joseph Weizenbaum"]
 year: 1976
-asin: "0140225358"
+asin:
+  es: "0140225358"
 kind: book
 topics: ["ia"]
 level: 2

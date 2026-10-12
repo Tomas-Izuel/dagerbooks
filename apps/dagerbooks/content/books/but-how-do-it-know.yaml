@@ -35,4 +35,5 @@ leadsTo:
       bridge: ["modelo TCP/IP y capas", "direccionamiento IP y subnetting", "línea de comandos de un router"]
       note: "Es un libro de laburo con equipos reales; sin IP y subnetting te perdés rápido."
 isbn: "9780615303765"
-asin: "0615303765"
+asin:
+  es: "0615303765"

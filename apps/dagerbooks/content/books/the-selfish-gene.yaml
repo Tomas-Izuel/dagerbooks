@@ -6,7 +6,8 @@ title: "The Selfish Gene"
 titleEs: "El gen egoísta"
 authors: ["Richard Dawkins"]
 year: 1976
-asin: "0198788606"
+asin:
+  es: "0198788606"
 kind: book
 topics: ["sistemas"]
 level: 2

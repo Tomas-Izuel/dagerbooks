@@ -6,7 +6,8 @@ title: "Tragedy and Hope: A History of the World in Our Time"
 titleEs: "Tragedia y esperanza"
 authors: ["Carroll Quigley"]
 year: 1966
-asin: "094500110X"
+asin:
+  es: "094500110X"
 kind: book
 topics: ["historia"]
 level: 2

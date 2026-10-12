@@ -29,5 +29,6 @@ related:
   - id: la-formacion-del-estado-argentino
     reason: "Estado, legitimidad y poder político"
 isbn: "9781412815291"
-asin: "0765808684"
+asin:
+  es: "0765808684"
 coverId: 13163602

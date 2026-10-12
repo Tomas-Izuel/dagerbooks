@@ -6,7 +6,8 @@ title: "Do Androids Dream of Electric Sheep?"
 titleEs: "¿Sueñan los androides con ovejas eléctricas?"
 authors: ["Philip K. Dick"]
 year: 1968
-asin: "0575094184"
+asin:
+  es: "0575094184"
 kind: book
 topics: ["ficcion"]
 level: 1

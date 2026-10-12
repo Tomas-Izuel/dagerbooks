@@ -19,5 +19,6 @@ sources:
     quote: "el álgebra for damis me pareció muy buen libro"
 leadsTo: ["book-of-proof"]
 isbn: "9780764553257"
-asin: "0764553259"
+asin:
+  es: "0764553259"
 coverId: 521828

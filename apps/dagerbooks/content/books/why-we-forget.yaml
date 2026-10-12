@@ -22,5 +22,6 @@ sources:
     quote: "un libro muy copado que se llama eh Why we Forget and How to Remember Better"
 leadsTo: ["powerful-teaching"]
 isbn: "9780197607732"
-asin: "019760773X"
+asin:
+  es: "019760773X"
 coverId: 13250339

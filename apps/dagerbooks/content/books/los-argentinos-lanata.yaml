@@ -26,5 +26,6 @@ sources:
     quote: "creo que lo leí en Argentinos de Jorge Lan. Es un muy buen libro, dicho se de pas"
 leadsTo: ["operacion-masacre", "la-patagonia-rebelde"]
 isbn: "9788466613385"
-asin: "8466613382"
+asin:
+  es: "8466613382"
 coverId: 3346402

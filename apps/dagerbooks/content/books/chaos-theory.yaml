@@ -22,5 +22,6 @@ sources:
     quote: "Chaos Theory es una interesante lectura. Es un conjunto de dos ensayos, es muy breve"
 leadsTo: ["democracy-the-god-that-failed", "leviathan"]
 isbn: "9781933550657"
-asin: "1933550651"
+asin:
+  es: "1933550651"
 coverId: 12678236

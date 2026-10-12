@@ -17,5 +17,6 @@ sources:
     timestamp: "10:19"
     quote: "Crafting interpreters es muy interesante y se puede leer gratuito en la web del autor"
 isbn: "9780990582939"
-asin: "0990582930"
+asin:
+  es: "0990582930"
 coverId: 12075000

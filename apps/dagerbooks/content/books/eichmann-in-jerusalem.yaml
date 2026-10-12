@@ -39,5 +39,6 @@ related:
   - id: obedience-to-authority
     reason: "obediencia a la autoridad y banalidad del mal"
 isbn: "9780140044508"
-asin: "0140044507"
+asin:
+  es: "0140044507"
 coverId: 97789

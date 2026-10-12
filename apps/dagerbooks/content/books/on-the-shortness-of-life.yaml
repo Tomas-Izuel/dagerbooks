@@ -22,5 +22,6 @@ sources:
     quote: "These are my notes from the other time I read the little book on the"
 leadsTo: ["letters-to-lucilius"]
 isbn: "9786070796210"
-asin: "8424939603"
+asin:
+  es: "8424939603"
 coverId: 996581

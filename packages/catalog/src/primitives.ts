@@ -20,6 +20,19 @@ export const RECOMMENDATION_RANK: Record<Recommendation, number> = { fuerte: 2, 
 export const STANCES = ["recommends", "mixed", "mentions", "criticizes"] as const;
 export type Stance = (typeof STANCES)[number];
 
+/** Tiendas de Amazon: el mismo libro tiene un ASIN distinto en cada una. */
+export const MARKETPLACES = ["es", "com", "com.mx", "com.br", "co.uk", "de", "fr", "it", "ca"] as const;
+export type Marketplace = (typeof MARKETPLACES)[number];
+
+export const AsinSchema = z.string().regex(/^[A-Z0-9]{10}$/, { error: "asin inválido (10 caracteres A-Z0-9)" });
+/** ASIN por tienda: `{ es: "8417..." , com: "0143..." }`. */
+export const AsinByMarketplaceSchema = z.partialRecord(
+  z.enum(MARKETPLACES, { error: `tienda inválida (${MARKETPLACES.join(", ")})` }),
+  AsinSchema,
+  { error: 'asin va por tienda, por ejemplo asin: { es: "8417347010" }' },
+);
+export type AsinByMarketplace = Partial<Record<Marketplace, string>>;
+
 export const RelatedSchema = z.strictObject({
   id: Slug,
   reason: z.string().min(1, { error: "falta la razón de la relación" }),

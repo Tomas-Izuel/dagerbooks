@@ -6,7 +6,8 @@ title: "Imperialism, the Highest Stage of Capitalism"
 titleEs: "El imperialismo, fase superior del capitalismo"
 authors: ["Vladimir I. Lenin"]
 year: 1917
-asin: "197578622X"
+asin:
+  es: "197578622X"
 kind: book
 topics: ["economia", "historia"]
 level: 2

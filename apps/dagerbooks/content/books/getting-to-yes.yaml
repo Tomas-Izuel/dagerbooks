@@ -6,7 +6,8 @@ title: "Getting to Yes: Negotiating Agreement Without Giving In"
 titleEs: "Sí, de acuerdo"
 authors: ["Roger Fisher", "William Ury"]
 year: 1981
-asin: "1847940935"
+asin:
+  es: "1847940935"
 kind: book
 topics: ["oficio"]
 level: 1

@@ -17,5 +17,6 @@ sources:
     quote: "Hay libros piola (C# In a Nutshell, los libros y posts de Skeet -e.g., C# in Depth-, etc.)"
 leadsTo: ["csharp-in-depth", "crafting-interpreters"]
 isbn: "9780596001810"
-asin: "0596001819"
+asin:
+  es: "0596001819"
 coverId: 12836741

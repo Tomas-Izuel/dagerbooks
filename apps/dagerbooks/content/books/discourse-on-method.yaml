@@ -19,5 +19,6 @@ sources:
     quote: "la verdad que te recomiendo que lo leas y en el tiempo es algo que puedes leer a una tarde"
 leadsTo: ["meditations-on-first-philosophy", "a-letter-concerning-toleration"]
 isbn: "2266030930"
-asin: "2266030930"
+asin:
+  es: "2266030930"
 coverId: 8236442

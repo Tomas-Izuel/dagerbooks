@@ -20,5 +20,6 @@ related:
   - id: "breve-historia-contemporanea-de-la-argentina"
     reason: "Sátira del peronismo que dialoga con la historia argentina contemporánea"
 isbn: "9789500425438"
-asin: "9500425432"
+asin:
+  es: "9500425432"
 coverId: 4965799

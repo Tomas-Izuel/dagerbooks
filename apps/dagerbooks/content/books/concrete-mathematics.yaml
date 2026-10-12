@@ -27,5 +27,6 @@ sources:
     timestamp: "6:22"
     quote: "Ese es el primer problema que aparece en Concrete Mathematics, creo recordar librazo"
 isbn: "9780201558029"
-asin: "0201558025"
+asin:
+  es: "0201558025"
 coverId: 135182

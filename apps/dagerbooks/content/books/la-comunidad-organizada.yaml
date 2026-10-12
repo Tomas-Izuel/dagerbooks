@@ -5,7 +5,8 @@ seq: 148
 title: "La comunidad organizada"
 authors: ["Juan Domingo Perón"]
 year: 1949
-asin: "9874589418"
+asin:
+  es: "9874589418"
 kind: book
 topics: ["historia", "economia"]
 level: 3

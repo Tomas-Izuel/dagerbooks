@@ -20,5 +20,6 @@ related:
   - id: eichmann-in-jerusalem
     reason: "violencia estatal y responsabilidad individual"
 isbn: "9789505153527"
-asin: "950515352X"
+asin:
+  es: "950515352X"
 coverId: 5407660

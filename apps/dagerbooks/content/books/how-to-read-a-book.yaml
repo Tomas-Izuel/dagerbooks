@@ -6,7 +6,8 @@ title: "How to Read a Book"
 titleEs: "Cómo leer un libro"
 authors: ["Mortimer J. Adler", "Charles Van Doren"]
 year: 1940
-asin: "0671212095"
+asin:
+  es: "0671212095"
 kind: book
 topics: ["desarrollo-personal"]
 level: 1

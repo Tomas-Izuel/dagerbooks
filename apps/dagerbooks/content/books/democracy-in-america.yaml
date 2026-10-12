@@ -6,7 +6,8 @@ title: "De la démocratie en Amérique"
 titleEs: "La democracia en América"
 authors: ["Alexis de Tocqueville"]
 year: 1835
-asin: "2221131274"
+asin:
+  es: "2221131274"
 kind: book
 topics: ["historia", "economia"]
 level: 3

@@ -37,5 +37,6 @@ sources:
     timestamp: "5:22:16"
     quote: "Capitalismo y libertad, lo he leído."
 isbn: "9780226264219"
-asin: "0226264211"
+asin:
+  es: "0226264211"
 coverId: 140808

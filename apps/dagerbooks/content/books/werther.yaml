@@ -6,7 +6,8 @@ title: "Die Leiden des jungen Werthers"
 titleEs: "Las penas del joven Werther"
 authors: ["Johann Wolfgang von Goethe"]
 year: 1774
-asin: "3150161363"
+asin:
+  es: "3150161363"
 kind: book
 topics: ["ficcion"]
 level: 1

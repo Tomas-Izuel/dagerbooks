@@ -24,5 +24,6 @@ leadsTo:
       bridge: ["JavaScript y Node.js", "criptografía de clave pública y hashes"]
       note: "Pasás de Python a JavaScript y a cripto aplicada; conviene llegar con esas dos cosas vistas."
 isbn: "9781593275990"
-asin: "1593275994"
+asin:
+  es: "1593275994"
 coverId: 7363640

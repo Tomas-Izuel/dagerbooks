@@ -5,7 +5,8 @@ seq: 180
 title: "Never Eat Alone"
 authors: ["Keith Ferrazzi"]
 year: 2005
-asin: "0553418769"
+asin:
+  es: "0553418769"
 kind: book
 topics: ["oficio"]
 level: 1

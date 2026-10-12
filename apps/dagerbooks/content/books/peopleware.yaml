@@ -20,5 +20,6 @@ sources:
     timestamp: "4:01"
     quote: "también peopleware y J software estos últimos dos son relacionados al management de proyectos de software ... te van a dar un montón de información útil"
 isbn: "9780932633057"
-asin: "0932633056"
+asin:
+  es: "0932633056"
 coverId: 711859

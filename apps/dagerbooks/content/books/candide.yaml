@@ -6,7 +6,8 @@ title: "Candide, ou l'Optimisme"
 titleEs: "Cándido, o el optimismo"
 authors: ["Voltaire"]
 year: 1759
-asin: "2035984874"
+asin:
+  es: "2035984874"
 kind: book
 topics: ["ficcion"]
 level: 1

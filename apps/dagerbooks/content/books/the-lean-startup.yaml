@@ -26,5 +26,6 @@ sources:
     quote: "es de Starup, tiene todo un método... Este es muy bueno, buen libro realmente sobre materia de startups"
 leadsTo: ["how-to-fuck-up-your-startup"]
 isbn: "9780307887894"
-asin: "0307887898"
+asin:
+  es: "0307887898"
 coverId: 7104760

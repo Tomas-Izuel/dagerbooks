@@ -12,7 +12,8 @@ leadsTo:
       severity: fuerte
       bridge: ["biopolítica de Foucault", "zoe y bios en Aristóteles", "totalitarismo y campos de concentración"]
       note: "Schmitt da la excepción, pero Agamben suma a Foucault y a Aristóteles."
-asin: "3428145801"
+asin:
+  es: "3428145801"
 kind: book
 topics: ["economia", "filosofia"]
 level: 3

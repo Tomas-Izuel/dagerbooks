@@ -20,5 +20,6 @@ related:
   - id: "time-travel-a-history"
     reason: "Un relato clásico de viaje al futuro, comentado en la misma serie de videos sobre el tiempo"
 isbn: "9781419146817"
-asin: "1419146815"
+asin:
+  es: "1419146815"
 coverId: 1801496

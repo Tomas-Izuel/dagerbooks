@@ -11,7 +11,8 @@ leadsTo:
       severity: fuerte
       bridge: ["diseño experimental básico", "significancia estadística y p-valor", "tamaños de efecto"]
       note: "Son papers con estadística; sin ese vocabulario no se leen los resultados."
-asin: "111952184X"
+asin:
+  es: "111952184X"
 kind: book
 topics: ["desarrollo-personal"]
 level: 2

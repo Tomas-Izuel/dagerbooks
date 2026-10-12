@@ -26,5 +26,6 @@ related:
   - id: "obedience-to-authority"
     reason: "La estupidez colectiva de Cipolla y la obediencia ciega de Milgram explican cómo gente común sostiene daños enormes"
 isbn: "9788815260321"
-asin: "8815260323"
+asin:
+  es: "8815260323"
 coverId: 9378526

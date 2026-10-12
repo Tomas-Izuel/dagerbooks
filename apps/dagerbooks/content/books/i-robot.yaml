@@ -22,5 +22,6 @@ related:
   - id: "concrete-problems-in-ai-safety"
     reason: "Las leyes de Asimov muestran, en ficción, el problema de especificar bien objetivos para una máquina"
 isbn: "9780812439250"
-asin: "0812439252"
+asin:
+  es: "0812439252"
 coverId: 12385229

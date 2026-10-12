@@ -206,8 +206,25 @@
       "maximum": 9007199254740991
     },
     "asin": {
-      "type": "string",
-      "pattern": "^[A-Z0-9]{10}$"
+      "type": "object",
+      "propertyNames": {
+        "type": "string",
+        "enum": [
+          "es",
+          "com",
+          "com.mx",
+          "com.br",
+          "co.uk",
+          "de",
+          "fr",
+          "it",
+          "ca"
+        ]
+      },
+      "additionalProperties": {
+        "type": "string",
+        "pattern": "^[A-Z0-9]{10}$"
+      }
     },
     "recommendation": {
       "type": "string",

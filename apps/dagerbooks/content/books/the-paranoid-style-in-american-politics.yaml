@@ -7,7 +7,8 @@ titleEs: "El estilo paranoico en la política estadounidense"
 authors: ["Richard Hofstadter"]
 year: 1964
 leadsTo: ["dialogue-aux-enfers"]
-asin: "0226348172"
+asin:
+  es: "0226348172"
 kind: essay
 topics: ["historia"]
 level: 2

@@ -18,6 +18,7 @@ import { bookPath, openLibraryCover, topicPath } from "@/lib/seo/site";
 import { RecMark } from "@/components/ui/RecMark";
 import { LineDisc } from "@/components/ui/LineDisc";
 import { AmazonBuy } from "@/components/page/AmazonBuy";
+import { asinFor } from "@/lib/affiliate";
 import { ArrowLink } from "@/components/page/ArrowLink";
 import { Dotted } from "@/components/page/Dotted";
 import { Interchange } from "@/components/page/Interchange";
@@ -85,6 +86,7 @@ export default async function BookPage({ params }: Props) {
   const { slug } = await params;
   const book = getBook(slug);
   if (!book) notFound();
+  const asin = asinFor(book.asin);
 
   const prereqs = directPrerequisites(book.id);
   const unlocks = directUnlocks(book.id);
@@ -184,7 +186,7 @@ export default async function BookPage({ params }: Props) {
                   Ver en el mapa
                 </ArrowLink>
               </div>
-              {book.asin ? <AmazonBuy asin={book.asin} title={book.title} /> : null}
+              {asin ? <AmazonBuy asin={asin} title={book.title} /> : null}
             </div>
 
             {book.coverId ? (

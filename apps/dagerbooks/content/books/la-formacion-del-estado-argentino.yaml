@@ -17,5 +17,6 @@ sources:
     timestamp: "5:08"
     quote: "Interesante libro sobre la formación del Estado... Poquito más sesgadito hacia el lado zurdo... pero valioso igual"
 isbn: "9789509122871"
-asin: "9509122874"
+asin:
+  es: "9509122874"
 coverId: 4972742

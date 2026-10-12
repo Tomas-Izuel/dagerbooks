@@ -7,7 +7,8 @@ titleEs: "Confesiones"
 authors: ["Augustine of Hippo"]
 year: 400
 leadsTo: ["der-antichrist"]
-asin: "014044114X"
+asin:
+  es: "014044114X"
 kind: book
 topics: ["filosofia"]
 level: 2

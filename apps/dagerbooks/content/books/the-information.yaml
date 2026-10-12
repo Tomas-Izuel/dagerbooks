@@ -25,5 +25,6 @@ related:
   - id: time-travel-a-history
     reason: "mismo autor (Gleick): historia cultural de las ideas"
 isbn: "9780307379573"
-asin: "0007225741"
+asin:
+  es: "0007225741"
 coverId: 6699475

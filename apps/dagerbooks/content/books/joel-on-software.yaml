@@ -31,5 +31,6 @@ sources:
     quote: "peopleware y J software estos últimos dos son relacionados al management de proyectos de software"
 leadsTo: ["peopleware", "the-mythical-man-month", "clean-code"]
 isbn: "9781590593899"
-asin: "1590593898"
+asin:
+  es: "1590593898"
 coverId: 861359

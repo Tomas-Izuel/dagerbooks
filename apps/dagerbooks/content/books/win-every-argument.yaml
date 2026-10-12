@@ -17,5 +17,6 @@ sources:
     timestamp: "8:43"
     quote: "Win every argument de Hassan. Medassam. Este es un periodista, es famoso por hablar muy rápido"
 isbn: "9781250853462"
-asin: "125085346X"
+asin:
+  es: "125085346X"
 coverId: 12688074

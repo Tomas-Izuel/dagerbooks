@@ -27,5 +27,6 @@ sources:
     quote: "se convirtió en mi libro favorito sobre arquitectura porque es un overview super concreto"
 leadsTo: ["building-microservices", "designing-data-intensive-applications", "rest-fielding-dissertation"]
 isbn: "9781492043454"
-asin: "1492043451"
+asin:
+  es: "1492043451"
 coverId: 10193363

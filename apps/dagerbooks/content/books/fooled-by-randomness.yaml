@@ -28,5 +28,6 @@ related:
   - id: how-to-fuck-up-your-startup
     reason: "azar y causalidad en el éxito y el fracaso"
 isbn: "9780141930237"
-asin: "0141031484"
+asin:
+  es: "0141031484"
 coverId: 855791

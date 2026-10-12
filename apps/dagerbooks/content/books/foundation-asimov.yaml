@@ -18,5 +18,6 @@ sources:
     timestamp: "1:09"
     quote: "Trilogía de la fundación. Trilogía, son buenos libros."
 isbn: "9780553293357"
-asin: "0553293354"
+asin:
+  es: "0553293354"
 coverId: 14612610

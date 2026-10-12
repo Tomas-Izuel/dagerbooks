@@ -24,4 +24,5 @@ sources:
     timestamp: "1:51"
     quote: "Apparently es un buen libro en ese sentido. Me gusta este libro porque se centra en historias de antieéxito"
 isbn: "9781637740590"
-asin: "163774059X"
+asin:
+  es: "163774059X"

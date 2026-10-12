@@ -18,5 +18,6 @@ sources:
     quote: "el único recurso que te recomiendo si quieres ir a fondo es progit que es de los mejores que he encontrado"
 leadsTo: ["git-internals"]
 isbn: "9781430218333"
-asin: "1430218339"
+asin:
+  es: "1430218339"
 coverId: 7892827

@@ -31,5 +31,6 @@ leadsTo:
       bridge: ["probabilidad y variables aleatorias", "distribución de Poisson", "estimación por máxima verosimilitud", "regresión de Poisson"]
       note: "Es un paper de estadística aplicada; sin probabilidad y verosimilitud no se lee."
 isbn: "9780982406205"
-asin: "0982406207"
+asin:
+  es: "0982406207"
 coverId: 10439715

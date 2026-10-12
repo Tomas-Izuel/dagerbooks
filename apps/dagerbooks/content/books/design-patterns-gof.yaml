@@ -21,5 +21,6 @@ sources:
     quote: "Design Patterns - The famous \"Gang of Four\" book."
 leadsTo: ["domain-driven-design"]
 isbn: "9780201633610"
-asin: "0201633612"
+asin:
+  es: "0201633612"
 coverId: 6601119

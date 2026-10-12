@@ -7,7 +7,8 @@ titleEs: "El mito del multitasking"
 authors: ["Dave Crenshaw"]
 year: 2008
 leadsTo: ["the-shallows"]
-asin: "1642505056"
+asin:
+  es: "1642505056"
 kind: book
 topics: ["desarrollo-personal"]
 level: 1

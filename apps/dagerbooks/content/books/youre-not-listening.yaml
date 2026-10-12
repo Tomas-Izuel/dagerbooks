@@ -17,5 +17,6 @@ sources:
     title: "r/devsarg: habilidades blandas"
     quote: "You're Not Listening."
 isbn: "9781250297198"
-asin: "1250297192"
+asin:
+  es: "1250297192"
 coverId: 9261583

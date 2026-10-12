@@ -6,7 +6,8 @@ title: "Dialogue aux enfers entre Machiavel et Montesquieu"
 titleEs: "Diálogo en el infierno entre Maquiavelo y Montesquieu"
 authors: ["Maurice Joly"]
 year: 1864
-asin: "1502774526"
+asin:
+  es: "1502774526"
 kind: book
 topics: ["historia", "filosofia"]
 level: 3

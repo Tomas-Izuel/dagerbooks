@@ -25,5 +25,6 @@ sources:
     timestamp: "72:37"
     quote: "igual lean la Patagonia rebelde, boludo."
 isbn: "9789504909453"
-asin: "9504909450"
+asin:
+  es: "9504909450"
 coverId: 13223189

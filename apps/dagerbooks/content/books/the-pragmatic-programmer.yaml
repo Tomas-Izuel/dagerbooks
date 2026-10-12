@@ -29,5 +29,6 @@ sources:
     quote: "si ya tenés trabajo y querés mejorar como profesional de Pragmic Programmer. Tiene que ser sí o sí la edición del 20 aniversario"
 leadsTo: ["refactoring"]
 isbn: "9780201616224"
-asin: "020161622X"
+asin:
+  es: "020161622X"
 coverId: 10143650

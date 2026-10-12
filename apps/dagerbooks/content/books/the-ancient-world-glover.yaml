@@ -18,5 +18,6 @@ sources:
     quote: "Mi libro favorito de Grecia desde muy chico, lo leí como cinco veces"
 leadsTo: ["the-republic"]
 isbn: "9781107695634"
-asin: "1107695635"
+asin:
+  es: "1107695635"
 coverId: 9280129

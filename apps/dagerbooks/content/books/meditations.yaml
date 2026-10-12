@@ -33,4 +33,5 @@ related:
   - id: mans-search-for-meaning
     reason: "sentido y resiliencia frente a la adversidad"
 isbn: "9786071122254"
-asin: "6071122252"
+asin:
+  es: "6071122252"

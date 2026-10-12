@@ -26,5 +26,6 @@ sources:
     quote: "Hay otro libro que es muy bueno en este sentido... que es eh The UNF Advantage"
 leadsTo: ["how-to-fuck-up-your-startup"]
 isbn: "9781788167543"
-asin: "1788167546"
+asin:
+  es: "1788167546"
 coverId: 14845030

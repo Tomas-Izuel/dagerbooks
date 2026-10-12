@@ -8,6 +8,7 @@ import { loadCatalog } from "@/lib/catalog/load";
 import { computeLayout, DENSITY_PRESETS } from "@/lib/catalog/layout";
 import { booksInSector, isEntryPoint, relatedBooks } from "@/lib/catalog/queries";
 import { DENSITIES, type Density } from "@/lib/density";
+import { asinFor } from "@/lib/affiliate";
 import { linesFor } from "@/lib/design/lines";
 import { buildSearchDocs } from "@/lib/search";
 import { jsonLdString, websiteJsonLd } from "@/lib/seo";
@@ -102,7 +103,7 @@ export default function Home() {
         confidence: b.confidence === "low" ? "low" : "ok",
         missing: b.missing,
         coverId: b.coverId,
-        asin: b.asin,
+        asin: asinFor(b.asin),
       },
       related: relatedBooks(b.id).map((r) => ({ id: r.book.id, reason: r.reason })),
       gaps: {

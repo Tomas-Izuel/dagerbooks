@@ -18,5 +18,6 @@ sources:
     quote: "álgebra de Baldor s sí también ... No sé por qué no lo recomendé pues es crucial"
 leadsTo: ["book-of-proof"]
 isbn: "9789702407799"
-asin: "9702407796"
+asin:
+  es: "9702407796"
 coverId: 7273068

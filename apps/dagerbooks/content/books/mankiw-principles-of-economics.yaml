@@ -27,5 +27,6 @@ sources:
     quote: "principio de economía de Mankiw también, introductorio a la economía"
 leadsTo: ["free-to-choose", "kobra-effekt", "essay-on-the-principle-of-population", "the-general-theory"]
 isbn: "9780030982385"
-asin: "0030982383"
+asin:
+  es: "0030982383"
 coverId: 19884

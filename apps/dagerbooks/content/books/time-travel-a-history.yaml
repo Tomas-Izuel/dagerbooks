@@ -26,5 +26,6 @@ sources:
     quote: "Lo que es el mismo James que escribió el libro sobre viaje en el tiempo"
 leadsTo: ["enoch-soames", "memoirs-of-the-twentieth-century"]
 isbn: "9780008207670"
-asin: "0008207674"
+asin:
+  es: "0008207674"
 coverId: 7886899

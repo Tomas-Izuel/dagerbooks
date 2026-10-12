@@ -6,7 +6,8 @@ title: "Watchmen"
 titleEs: "Watchmen"
 authors: ["Alan Moore", "Dave Gibbons"]
 year: 1986
-asin: "1401238963"
+asin:
+  es: "1401238963"
 kind: book
 topics: ["ficcion"]
 level: 1

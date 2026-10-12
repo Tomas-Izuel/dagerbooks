@@ -23,5 +23,6 @@ sources:
     quote: "la idea de mindset también, que es un concepto que aparece en otro libro bastante bueno... también te lo recomiendo"
 leadsTo: ["powerful-teaching"]
 isbn: "9780345472328"
-asin: "0345472322"
+asin:
+  es: "0345472322"
 coverId: 746414

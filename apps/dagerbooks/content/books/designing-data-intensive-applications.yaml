@@ -12,5 +12,6 @@ recommendation: mencion
 summary: "Guía de Kleppmann sobre los principios de sistemas de datos: almacenamiento, replicación, particionado y procesamiento."
 context: "Figura en sus notas como recomendación de arquitectura, pero no se encontró mención en las transcripciones revisadas."
 isbn: "9781449373320"
-asin: "1449373321"
+asin:
+  es: "1449373321"
 coverId: 8434671

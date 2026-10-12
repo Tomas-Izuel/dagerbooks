@@ -6,7 +6,8 @@ title: "Kritik der reinen Vernunft"
 titleEs: "Crítica de la razón pura"
 authors: ["Immanuel Kant"]
 year: 1781
-asin: "3787313192"
+asin:
+  es: "3787313192"
 kind: book
 topics: ["filosofia"]
 level: 4

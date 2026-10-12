@@ -7,7 +7,8 @@ titleEs: "Carta sobre la tolerancia"
 authors: ["John Locke"]
 year: 1689
 leadsTo: ["leviathan", "two-concepts-of-liberty"]
-asin: "0872201007"
+asin:
+  es: "0872201007"
 kind: essay
 topics: ["filosofia", "economia"]
 level: 2

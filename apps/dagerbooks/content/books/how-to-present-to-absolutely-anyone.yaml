@@ -17,4 +17,5 @@ sources:
     timestamp: "6:23"
     quote: "cómo presentar absolutamente cualquier persona, how to present to absolutely anyone"
 isbn: "9780857087737"
-asin: "0857087738"
+asin:
+  es: "0857087738"

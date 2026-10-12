@@ -26,5 +26,6 @@ sources:
     quote: "el argumento de Sowell, de la justicia cósmica"
 leadsTo: ["huemer-wealth-redistribution", "limitarianism"]
 isbn: "0684864622"
-asin: "0684864622"
+asin:
+  es: "0684864622"
 coverId: 428416

@@ -21,5 +21,6 @@ sources:
     quote: "hay una serie de libros que se llama Head First... los que yo leí siempre menciona esto mismo... En mi opinión cambió drásticamente"
 leadsTo: ["design-patterns-gof", "crafting-interpreters"]
 isbn: "9780596007126"
-asin: "0596007124"
+asin:
+  es: "0596007124"
 coverId: 388950

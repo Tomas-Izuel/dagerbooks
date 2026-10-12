@@ -19,5 +19,6 @@ sources:
     quote: "los griegos de Quito, HDF Kito, es un librazo"
 leadsTo: ["the-ancient-world-glover", "hero-with-a-thousand-faces"]
 isbn: "9780140135213"
-asin: "0140135219"
+asin:
+  es: "0140135219"
 coverId: 9285777

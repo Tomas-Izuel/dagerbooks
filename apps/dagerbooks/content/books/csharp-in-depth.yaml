@@ -19,5 +19,6 @@ sources:
     title: "r/devsarg: empezar con c"
     quote: "Jon Skeet. Tiene libros y artículos sobre el lenguaje. No tan introductorio"
 isbn: "9781933988368"
-asin: "1933988363"
+asin:
+  es: "1933988363"
 coverId: 3063781

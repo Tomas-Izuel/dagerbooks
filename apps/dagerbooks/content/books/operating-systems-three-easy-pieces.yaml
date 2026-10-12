@@ -19,5 +19,6 @@ sources:
     title: "GitHub: MarianoVilla/MarianoVilla README (Recommended Readings)"
     quote: "makes OS concepts digestible"
 isbn: "9781985086593"
-asin: "198508659X"
+asin:
+  es: "198508659X"
 coverId: 10401368

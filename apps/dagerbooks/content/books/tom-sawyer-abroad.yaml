@@ -23,5 +23,6 @@ sources:
     quote: "el primero fue por regalo de mi abuelo, el Las aventuras de Tom Sawyer en el extranjero"
 leadsTo: ["but-how-do-it-know", "algebra-baldor", "the-information", "economic-sophisms", "meditations", "breve-historia-de-los-argentinos", "atomic-habits", "the-lean-startup", "joel-on-software", "dive-into-design-patterns"]
 isbn: "9781443425438"
-asin: "0520271513"
+asin:
+  es: "0520271513"
 coverId: 9162125

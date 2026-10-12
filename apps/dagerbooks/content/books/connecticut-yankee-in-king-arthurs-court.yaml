@@ -6,7 +6,8 @@ title: "A Connecticut Yankee in King Arthur's Court"
 titleEs: "Un yanqui en la corte del rey Arturo"
 authors: ["Mark Twain"]
 year: 1889
-asin: "000744947X"
+asin:
+  es: "000744947X"
 kind: book
 topics: ["ficcion"]
 level: 1

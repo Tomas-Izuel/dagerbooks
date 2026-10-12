@@ -32,5 +32,6 @@ related:
   - id: youre-not-listening
     reason: "escuchar y persuadir"
 isbn: "9780671027032"
-asin: "0671027034"
+asin:
+  es: "0671027034"
 coverId: 13314878

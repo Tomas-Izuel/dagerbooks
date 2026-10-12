@@ -23,5 +23,6 @@ sources:
     quote: "es superinesante el paper de Milgram"
 leadsTo: ["eichmann-in-jerusalem"]
 isbn: "9780061765216"
-asin: "006176521X"
+asin:
+  es: "006176521X"
 coverId: 723208

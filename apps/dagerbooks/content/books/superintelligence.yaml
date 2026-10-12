@@ -29,5 +29,6 @@ leadsTo:
       note: "El paper es un modelo formal; conviene traer la teoría de la decisión."
   - information-hazards
 isbn: "9781501227745"
-asin: "1501227742"
+asin:
+  es: "1501227742"
 coverId: 8039542

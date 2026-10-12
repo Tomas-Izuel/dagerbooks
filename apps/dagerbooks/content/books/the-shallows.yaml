@@ -30,5 +30,6 @@ sources:
     timestamp: "6:46"
     quote: "en su libro de shallows Nicolás karl cita este y otros estudios"
 isbn: "9780393339758"
-asin: "0393339750"
+asin:
+  es: "0393339750"
 coverId: 6458532

@@ -23,5 +23,6 @@ related:
   - id: designing-data-intensive-applications
     reason: "sistemas distribuidos y consenso"
 isbn: "9781484248461"
-asin: "1484248465"
+asin:
+  es: "1484248465"
 coverId: 10435039

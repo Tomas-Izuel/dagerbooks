@@ -37,5 +37,6 @@ related:
   - id: "economic-sophisms"
     reason: "Hazlitt retoma la falacia de la ventana rota de Bastiat"
 isbn: "9780517548233"
-asin: "0517548232"
+asin:
+  es: "0517548232"
 coverId: 4437768

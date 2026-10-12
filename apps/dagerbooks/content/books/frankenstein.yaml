@@ -7,7 +7,8 @@ titleEs: "Frankenstein o el moderno Prometeo"
 authors: ["Mary Shelley"]
 year: 1818
 leadsTo: ["ethics-of-robot-servitude"]
-asin: "1789434106"
+asin:
+  es: "1789434106"
 kind: book
 topics: ["ficcion", "ia"]
 level: 2

@@ -23,4 +23,5 @@ sources:
     confidence: low
 leadsTo: ["breve-historia-contemporanea-de-la-argentina", "el-45", "la-patagonia-rebelde", "the-federalist-papers"]
 isbn: "9789507428111"
-asin: "9507428119"
+asin:
+  es: "9507428119"

@@ -7,7 +7,8 @@ titleEs: "Parásitos mentales"
 authors: ["Axel Kaiser"]
 year: 2023
 leadsTo: ["the-anti-capitalistic-mentality", "on-liberty", "the-virtue-of-selfishness", "the-selfish-gene"]
-asin: "8423438414"
+asin:
+  es: "8423438414"
 kind: book
 topics: ["economia"]
 level: 1

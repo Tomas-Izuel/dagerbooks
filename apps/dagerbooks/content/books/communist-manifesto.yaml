@@ -15,7 +15,8 @@ leadsTo:
   - theses-on-feuerbach
   - imperialism-highest-stage
   - marxism-unmasked
-asin: "3860772074"
+asin:
+  es: "3860772074"
 kind: book
 topics: ["economia", "historia"]
 level: 1

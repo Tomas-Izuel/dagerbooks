@@ -18,5 +18,6 @@ sources:
     quote: "Aure Introduction es un poco más introductorio ... si no estás muy ducho en leer libros de filosofía, este sería la mejor opción"
 leadsTo: ["discourses-and-enchiridion", "letters-to-lucilius", "hymn-of-cleanthes", "lives-of-the-eminent-philosophers", "gorgias"]
 isbn: "9780198786665"
-asin: "0198786662"
+asin:
+  es: "0198786662"
 coverId: 8832190

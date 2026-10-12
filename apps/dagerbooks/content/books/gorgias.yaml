@@ -14,7 +14,8 @@ leadsTo:
       severity: fuerte
       bridge: ["utilitarismo clásico de Bentham y Mill", "consecuencialismo vs deontología"]
       note: "Williams critica el utilitarismo; conviene saber qué critica."
-asin: "0140449043"
+asin:
+  es: "0140449043"
 kind: book
 topics: ["filosofia"]
 level: 2

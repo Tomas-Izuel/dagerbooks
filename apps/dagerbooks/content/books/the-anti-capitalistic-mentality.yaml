@@ -6,7 +6,8 @@ title: "The Anti-Capitalistic Mentality"
 titleEs: "La mentalidad anticapitalista"
 authors: ["Ludwig von Mises"]
 year: 1956
-asin: "1162558946"
+asin:
+  es: "1162558946"
 kind: book
 topics: ["economia"]
 level: 2

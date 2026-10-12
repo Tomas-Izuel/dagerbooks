@@ -18,4 +18,5 @@ sources:
     quote: "tiene otro librazo de historia Argentina que es el 45, ¿no? Que es sobre todo el asunto del peronismo"
 leadsTo: ["la-comunidad-organizada", "la-fiesta-del-monstruo"]
 isbn: "9789500712132"
-asin: "950614348X"
+asin:
+  es: "950614348X"

@@ -19,7 +19,7 @@ Opcionales: `titleEs`, `authors`, `year`, `kind` (book | essay | paper | course 
 `sources` [{url, title, timestamp, quote, stance}], `leadsTo`, `related` [{id, reason}], `isbn`, `coverId`, `asin`,
 `recommendation`.
 
-- `asin`: código de Amazon (10 caracteres) para el link de compra.
+- `asin`: código de Amazon (10 caracteres) por tienda, para el link de compra: `asin: { es: "8417..." }`. El sitio usa la tienda de `creator.config.ts`.
 - `recommendation`: cuánto lo recomienda Dager, para filtrar en el sitio. Si falta vale `interesante` y no cuenta como "por completar".
   - `fuerte`: lo recomienda con énfasis: lectura imprescindible o favorita, insiste en que lo lean.
   - `interesante`: lo valora o lo recomienda con tibieza o reservas; tiene ideas que le sirven.

@@ -22,5 +22,6 @@ sources:
     quote: "Tercer libro que a mí me gustó bastante es The Startup Playbook"
 leadsTo: ["how-to-fuck-up-your-startup"]
 isbn: "9781452105048"
-asin: "1452105049"
+asin:
+  es: "1452105049"
 coverId: 12177932

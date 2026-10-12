@@ -6,7 +6,8 @@ title: "The Virtue of Selfishness"
 titleEs: "La virtud del egoísmo"
 authors: ["Ayn Rand"]
 year: 1964
-asin: "0451163931"
+asin:
+  es: "0451163931"
 kind: book
 topics: ["economia", "filosofia"]
 level: 2

@@ -6,7 +6,8 @@ title: "The Corrosion of Character"
 titleEs: "La corrosión del carácter"
 authors: ["Richard Sennett"]
 year: 1998
-asin: "0393319873"
+asin:
+  es: "0393319873"
 kind: book
 topics: ["oficio", "desarrollo-personal"]
 level: 2

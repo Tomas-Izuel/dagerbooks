@@ -7,11 +7,13 @@ import { LeadsToItemSchema, type LeadsToItem } from "./modules/progression";
 import { RouteSchema, RoutesFileSchema, type Route } from "./modules/routes";
 import { UpdateSchema, UpdatesFileSchema, type SiteUpdate } from "./modules/updates";
 import {
+  AsinByMarketplaceSchema,
   KINDS,
   RECOMMENDATION_LEVELS,
   RelatedSchema,
   STANCES,
   Slug,
+  type AsinByMarketplace,
   type Gap,
   type Recommendation,
   type Related,
@@ -74,7 +76,7 @@ export interface RawBook<R extends string = Recommendation> {
   related?: Related[];
   isbn?: string;
   coverId?: number;
-  asin?: string;
+  asin?: AsinByMarketplace;
   recommendation?: R;
   confidence?: "low" | "high";
 }
@@ -166,8 +168,8 @@ export function defineCatalog<const M extends ModuleFlags, const R extends reado
       related: z.array(RelatedSchema).optional(),
       isbn: z.string().regex(/^\d{9}[\dXx]$|^\d{13}$/, { error: "isbn inválido" }).optional(),
       coverId: z.number().int().positive().optional(),
-      /** Código de Amazon (10 caracteres) para el link de compra. */
-      asin: z.string().regex(/^[A-Z0-9]{10}$/, { error: "asin inválido (10 caracteres A-Z0-9)" }).optional(),
+      /** Código de Amazon (10 caracteres) por tienda, para el link de compra. */
+      asin: AsinByMarketplaceSchema.optional(),
       recommendation: z.enum(recommendations as unknown as [R[number], ...R[number][]]).optional(),
       // Se calcula en build; solo se declara a mano para forzarlo.
       confidence: z.enum(["low", "high"]).optional(),

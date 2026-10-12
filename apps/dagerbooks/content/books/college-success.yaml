@@ -26,5 +26,6 @@ sources:
     quote: "se llama College College Success, el libro ese que está bastante copado y es gratis"
 leadsTo: ["powerful-teaching"]
 isbn: "9781640323490"
-asin: "164032349X"
+asin:
+  es: "164032349X"
 coverId: 15113587

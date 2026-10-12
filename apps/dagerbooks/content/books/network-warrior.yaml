@@ -23,5 +23,6 @@ sources:
     timestamp: "6:06"
     quote: "Network Warrior que es sobre redes es un lindo libro"
 isbn: "9780596101510"
-asin: "0596101511"
+asin:
+  es: "0596101511"
 coverId: 8698959

@@ -6,7 +6,8 @@ title: "An Investigation of the Laws of Thought"
 titleEs: "Investigación de las leyes del pensamiento"
 authors: ["George Boole"]
 year: 1854
-asin: "1781398577"
+asin:
+  es: "1781398577"
 kind: book
 topics: ["matematicas"]
 level: 3

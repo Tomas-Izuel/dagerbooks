@@ -6,7 +6,8 @@ title: "An Essay on the Principle of Population"
 titleEs: "Ensayo sobre el principio de la población"
 authors: ["Thomas Robert Malthus"]
 year: 1798
-asin: "0141392827"
+asin:
+  es: "0141392827"
 kind: book
 topics: ["economia"]
 level: 2

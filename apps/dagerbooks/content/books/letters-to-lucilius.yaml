@@ -26,5 +26,6 @@ sources:
     quote: "the other book I read by Cecca, which is the Moral Epistles to Aid"
 leadsTo: ["de-finibus"]
 isbn: "9788437638669"
-asin: "8437638666"
+asin:
+  es: "8437638666"
 coverId: 6074024

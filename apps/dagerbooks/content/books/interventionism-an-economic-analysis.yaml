@@ -7,7 +7,8 @@ titleEs: "Intervencionismo: un análisis económico"
 authors: ["Ludwig von Mises"]
 year: 1940
 leadsTo: ["human-action"]
-asin: "0865977399"
+asin:
+  es: "0865977399"
 kind: book
 topics: ["economia"]
 level: 3

@@ -6,7 +6,8 @@ title: "The Magic Island"
 titleEs: "La isla mágica"
 authors: ["W. B. Seabrook"]
 year: 1929
-asin: "1025821041"
+asin:
+  es: "1025821041"
 kind: book
 topics: ["historia"]
 level: 1

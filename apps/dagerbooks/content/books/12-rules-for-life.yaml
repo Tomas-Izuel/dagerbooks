@@ -26,5 +26,6 @@ sources:
     timestamp: "19:38"
     quote: "Sacando un capítulo del libro de Jordan Peterson. Yo creo que eso es lo mejor que lo mejor que tiene Jordan Peterson es esa idea de controlar tu entorno"
 isbn: "9780345816023"
-asin: "0345816021"
+asin:
+  es: "0345816021"
 coverId: 8131760

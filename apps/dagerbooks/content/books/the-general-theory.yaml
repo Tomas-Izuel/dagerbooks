@@ -5,7 +5,8 @@ seq: 143
 title: "The General Theory of Employment, Interest and Money"
 authors: ["John Maynard Keynes"]
 year: 1936
-asin: "1107673739"
+asin:
+  es: "1107673739"
 kind: book
 topics: ["economia"]
 level: 3

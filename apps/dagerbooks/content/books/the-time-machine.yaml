@@ -30,5 +30,6 @@ related:
   - id: "time-travel-a-history"
     reason: "Wells fija la novela que Gleick analiza en su historia cultural del viaje en el tiempo"
 isbn: "0753167816"
-asin: "0753167816"
+asin:
+  es: "0753167816"
 coverId: 9009316

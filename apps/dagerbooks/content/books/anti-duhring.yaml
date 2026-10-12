@@ -19,5 +19,6 @@ sources:
     quote: "Puedes leer cosas de cosas como el antiduring, eh cosas de Englels"
 leadsTo: ["das-kapital"]
 isbn: "9780717800087"
-asin: "0717800083"
+asin:
+  es: "0717800083"
 coverId: 13202636

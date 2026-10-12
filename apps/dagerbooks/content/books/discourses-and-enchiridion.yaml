@@ -26,5 +26,6 @@ sources:
     timestamp: "10:14"
     quote: "el Picteto en sus disertaciones famosamente suscribe a la teoría social extraña"
 isbn: "9788424916282"
-asin: "842491628X"
+asin:
+  es: "842491628X"
 coverId: 7024260

@@ -7,7 +7,8 @@ titleEs: "El Federalista"
 authors: ["Alexander Hamilton", "James Madison", "John Jay"]
 year: 1788
 leadsTo: ["democracy-in-america", "dialogue-aux-enfers"]
-asin: "0140444955"
+asin:
+  es: "0140444955"
 kind: book
 topics: ["historia", "economia"]
 level: 2

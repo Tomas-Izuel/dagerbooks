@@ -22,5 +22,6 @@ sources:
     timestamp: "0:08"
     quote: "el libro te habla mucho de la Soledad de neville te la describe pero la película"
 isbn: "9780552106412"
-asin: "0552106410"
+asin:
+  es: "0552106410"
 coverId: 911109

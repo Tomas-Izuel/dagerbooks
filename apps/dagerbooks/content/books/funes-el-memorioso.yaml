@@ -6,7 +6,8 @@ title: "Funes el memorioso"
 authors: ["Jorge Luis Borges"]
 year: 1942
 leadsTo: ["el-jardin-de-senderos-que-se-bifurcan"]
-asin: "849908950X"
+asin:
+  es: "849908950X"
 kind: essay
 topics: ["ficcion"]
 level: 1

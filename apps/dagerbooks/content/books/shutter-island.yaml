@@ -6,7 +6,8 @@ title: "Shutter Island"
 titleEs: "La isla siniestra"
 authors: ["Dennis Lehane"]
 year: 2003
-asin: "0553824481"
+asin:
+  es: "0553824481"
 kind: book
 topics: ["ficcion"]
 level: 1

@@ -34,5 +34,6 @@ sources:
     quote: "de intro a economía en general tenés Haslid primero, después tenés Free to Choose, después tenés Capitalismo y Libertad de Friedman, o sea tenés ese caminito ahí de introducción"
 leadsTo: ["capitalism-and-freedom", "wealth-of-nations"]
 isbn: "9780156334600"
-asin: "0156334607"
+asin:
+  es: "0156334607"
 coverId: 4393564

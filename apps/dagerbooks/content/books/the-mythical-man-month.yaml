@@ -28,5 +28,6 @@ sources:
     timestamp: "56:54"
     quote: "Todo eso con The Mystical Man Month, buen libro, se los recomiendo."
 isbn: "9780201835953"
-asin: "0201835959"
+asin:
+  es: "0201835959"
 coverId: 6915361

@@ -19,5 +19,6 @@ sources:
     quote: "Es muy bueno. Tiene una elevada discusión sobre estoicismo, epicurismo y academicismo"
 leadsTo: ["the-hellenistic-philosophers"]
 isbn: "9783110962581"
-asin: "3150085934"
+asin:
+  es: "3150085934"
 coverId: 6486564

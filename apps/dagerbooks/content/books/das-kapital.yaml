@@ -6,7 +6,8 @@ title: "Das Kapital"
 titleEs: "El capital"
 authors: ["Karl Marx"]
 year: 1867
-asin: "3868202439"
+asin:
+  es: "3868202439"
 kind: book
 topics: ["economia"]
 level: 4

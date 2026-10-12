@@ -23,5 +23,6 @@ sources:
     quote: "Víctor Frankle en El hombre en busca del sentido, ¿no? Tiene una serie de pasajes dedicadas a los capos"
 leadsTo: ["obedience-to-authority", "evil-baumeister"]
 isbn: "9783641059033"
-asin: "3328102779"
+asin:
+  es: "3328102779"
 coverId: 8516506

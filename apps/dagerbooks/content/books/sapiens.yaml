@@ -19,5 +19,6 @@ sources:
     quote: "Buen libro Sapiens, ¿eh? Se los recomiendo."
 leadsTo: ["the-selfish-gene"]
 isbn: "9780062316103"
-asin: "0099590085"
+asin:
+  es: "0099590085"
 coverId: 15247651

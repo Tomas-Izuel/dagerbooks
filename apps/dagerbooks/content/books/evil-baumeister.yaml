@@ -6,7 +6,8 @@ title: "Evil: Inside Human Violence and Cruelty"
 authors: ["Roy F. Baumeister"]
 year: 1997
 leadsTo: ["eichmann-in-jerusalem"]
-asin: "0805071652"
+asin:
+  es: "0805071652"
 kind: book
 topics: ["desarrollo-personal"]
 level: 2

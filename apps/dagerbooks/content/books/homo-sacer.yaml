@@ -6,7 +6,8 @@ title: "Homo sacer: il potere sovrano e la nuda vita"
 titleEs: "Homo sacer"
 authors: ["Giorgio Agamben"]
 year: 1995
-asin: "8806170260"
+asin:
+  es: "8806170260"
 kind: book
 topics: ["filosofia", "historia"]
 level: 4

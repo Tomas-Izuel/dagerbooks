@@ -24,4 +24,5 @@ sources:
     quote: "Refactoring Guru. Tiene un libro que está bueno sobre eso"
 leadsTo: ["head-first-design-patterns", "fundamentals-of-software-architecture", "refactoring"]
 coverId: 12941546
-asin: "B0F4Y4NY6J"
+asin:
+  es: "B0F4Y4NY6J"

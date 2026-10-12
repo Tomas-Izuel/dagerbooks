@@ -23,5 +23,6 @@ sources:
     quote: "cualquiera de ese mismo autor, también está uno que se llama creo que minimalismo digital"
 leadsTo: ["the-shallows"]
 isbn: "9780525536512"
-asin: "0525536515"
+asin:
+  es: "0525536515"
 coverId: 8507540

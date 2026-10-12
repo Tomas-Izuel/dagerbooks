@@ -30,5 +30,6 @@ sources:
     quote: "yo la primera vez que me lo topé fue en cin code otro libro que está bastante bueno en el cual el tío Bob se anima a decir"
 leadsTo: ["refactoring", "design-patterns-gof", "domain-driven-design"]
 isbn: "9780132350884"
-asin: "0132350882"
+asin:
+  es: "0132350882"
 coverId: 8065615

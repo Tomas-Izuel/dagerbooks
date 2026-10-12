@@ -7,7 +7,8 @@ titleEs: "Mentes sospechosas"
 authors: ["Rob Brotherton"]
 year: 2014
 leadsTo: ["the-paranoid-style-in-american-politics", "the-psychology-of-conspiracy-theories", "tragedy-and-hope", "evil-baumeister"]
-asin: "1472915631"
+asin:
+  es: "1472915631"
 kind: book
 topics: ["historia", "desarrollo-personal"]
 level: 1

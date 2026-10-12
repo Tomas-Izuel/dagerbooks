@@ -12,7 +12,8 @@ leadsTo:
       severity: muy-fuerte
       bridge: ["empirismo de Locke y Hume", "problema de la causalidad", "racionalismo de Leibniz y Wolff"]
       note: "Kant sin Hume y Locke es una pared; no te lo saltees."
-asin: "0268013810"
+asin:
+  es: "0268013810"
 kind: book
 topics: ["filosofia"]
 level: 2

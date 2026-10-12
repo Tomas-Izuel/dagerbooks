@@ -5,7 +5,8 @@ seq: 129
 title: "Arcadia"
 authors: ["Tom Stoppard"]
 year: 1993
-asin: "0571169341"
+asin:
+  es: "0571169341"
 kind: book
 topics: ["ficcion"]
 level: 2
